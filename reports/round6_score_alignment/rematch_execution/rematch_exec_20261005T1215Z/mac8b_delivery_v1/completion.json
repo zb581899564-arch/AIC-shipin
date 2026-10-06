@@ -1,0 +1,9 @@
+{
+  "stage": "STOP_MAC8B_DELIVERY",
+  "utc": "2026-10-06T23:29:08.493638+08:00",
+  "pid": 1289898,
+  "uploaded": false,
+  "failure_type": "RuntimeError",
+  "failure": "GPU gate failed: rematch_MAC8B_v1_dev_dev_01",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v1/controller.py\", line 55, in main\n    run_gpu('dev','dev',HERE/'dev',14400,100000000)\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v1/controller.py\", line 41, in run_gpu\n    require(result.returncode==0 and resource['status']=='completed' and resource['exit_code']==0 and resource['stop_reason'] is None,'GPU gate failed: '+name)\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v1/runtime.py\", line 19, in require\n    if not ok: raise RuntimeError(message)\nRuntimeError: GPU gate failed: rematch_MAC8B_v1_dev_dev_01\n"
+}

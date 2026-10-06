@@ -1,0 +1,9 @@
+# 固定开发比较完成，非测试接续运行
+
+Linux8B 训练3620/227、全冻结与最终adapter重载PASS，训练报告实际回传且SHA61230deef516877615720b6725d40fad3f054bacced54f85859381f2d397eed6和原冻结admission一致。
+
+固定104视频/96来源组、112窗各臂一次比较完毕：BASE8B来源组宏F1 0.3426182206，SFT8B 0.6850031671，配对增量0.3423849465，10000来源组bootstrap seed20261006、95%区间[0.2589075960,0.4246593239]。视频宏F1分别0.3471742517/0.6777229641，弱正例recall分别0.5098485380/0.7180029595。BASE解析失败36/112，SFT解析失败0/112；两臂推理失败0，无空输出。停止项均false，因此PASS_FROZEN_WEAK_DEV_GATE。
+
+指标为WEAK_TEACHER_AGREEMENT_INTERNAL_SPEC_REIMPLEMENTATION，格式差异贡献包含在比较中，不证明完整真值语义或官方提分。100confirm和比赛内容未用于该比较。最终checkpoint只评一次，不用本结果调阈值/提示词/训练轮数。
+
+单次控制器已接受开发门；下一阶段为8非测试源的新8B时间/空间完整链和独立strict package，成功后自动426复赛。工程运行与包交付尚未完成；查看latest、completion、delivery_completion。运行中51绑定文件禁止编辑/launcher禁止重复。Mac full和原33.81 A包保持。

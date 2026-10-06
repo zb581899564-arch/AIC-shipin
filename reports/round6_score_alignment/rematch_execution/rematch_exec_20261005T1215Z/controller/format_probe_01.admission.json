@@ -1,0 +1,50 @@
+{
+  "phase": "probe",
+  "recovery_variant": "A_FORMAT_CONSTRAINED_RECOVERY_V1",
+  "variant": "A_NATIVE_PTS_COMPAT_V1",
+  "stage": "A_PTS_NONTEST_E2E",
+  "authorized": true,
+  "user_authorization": "2026-10-06 user explicitly instructed solve the failures and complete candidate",
+  "admitted_utc": "2026-10-05T16:52:12.008853+00:00",
+  "manifest_path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/baseline_pts_v4/nontest_registry_01/clean_manifest_v2.json",
+  "manifest_sha256": "ba34a284183e8a079054ffe811d7ec096e6b47c94e6edf812a37fd11b92d8dd7",
+  "clock_registry_path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/baseline_pts_v4/nontest_registry_01/clock_registry.json",
+  "clock_registry_sha256": "7f57785312c94b1658cb002b2432d09b318ae2943e3297a0c45536d1bd8cd3ea",
+  "source_lock_sha256": "86fc0da7cf631a2afe33c54fb5b66246bba88adfd95c1d8ce80ccbf73522d70d",
+  "recovery_source_hashes": {
+    "inference.py": "dc9f7f759976e2e972697a4a84914a73018a7374f310dbc01d56e677f39b83ec",
+    "constrained_json.py": "9282153980ef098f3f0457e9352d605dc9c50c681ccdbc27f2f9174774ff258d"
+  },
+  "recovery_controller_lock_sha256": "257168c3c6834f07299014012cae1c3cf283afeea72c501fc23da9029abf687c",
+  "run_dir": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/baseline_a_format_recovery_v1/probe_01",
+  "allowed_stages": [
+    "temporal"
+  ],
+  "resource_preflight_pass": true,
+  "shared_gpu_queue_approved": true,
+  "disk_peak_within_80gib": true,
+  "budget_runner_required": true,
+  "space_inference_admitted": false,
+  "planned_output_bytes": 67108864,
+  "single_job_max_seconds": 1800,
+  "capacity_reason": "ten fixed non-test generation cases; no semantic labels or test inputs",
+  "scheduling": null,
+  "original_successes_must_be_unchanged": true,
+  "posthoc_clipping_or_deleting_or_empty": false,
+  "prompt_or_model_or_space_threshold_changed": false,
+  "formal_C_training_admitted": false,
+  "competition_upload_authorized": false,
+  "live_resources": {
+    "work_bytes": 50204581888,
+    "free_bytes": 231111409664,
+    "compute": ""
+  },
+  "synthetic_processor_pass": true,
+  "synthetic_decoder_pass": true,
+  "synthetic_processor_evidence_path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/baseline_a_pts_v1/real_processor_04/processor_receipt.json",
+  "synthetic_processor_evidence_sha256": "f559bd944ba2caef84fdbdb5e012d205071a2f74e569e400741526b48a8daf3b",
+  "synthetic_decoder_evidence_path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/baseline_a_pts_v1/real_decoder_02/decoder_test_receipt.json",
+  "synthetic_decoder_evidence_sha256": "72a4deae958eb10fe3a7556e16f41c554b1022ba7e6bd615230c537f129a6460",
+  "non_test_e2e_pass": true,
+  "non_test_evidence_sha256": "49fffea38f8297de28165db49511ec1e4bce8dbefeda4bc04c2fe26722ab3145"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "aic_dense_formal_admission_v1",
+  "scope": "FORMAL_C_TRAIN_ONLY",
+  "run_id": "SUPERVISOR_MUST_FREEZE_A_NEW_FORMAL_RUN_ID",
+  "formal_c_bce_admitted": false,
+  "reason": "CURRENT DATA GATE STOP: no trustworthy negative semantics/complete observation/rematch use basis",
+  "run_config_sha256": null,
+  "data_gate": {"path": null, "sha256": null},
+  "training_manifest": {"split": "train", "path": null, "sha256": null},
+  "frozen_train_manifest": {
+    "split": "train",
+    "path": null,
+    "sha256": "ef427866153a9601be01b6e12356951c2fb56730525b0d7b7c353651c2930ddf"
+  },
+  "source_isolation_certificate": {"path": null, "sha256": null},
+  "engineering_gate": {"path": null, "sha256": null}
+}

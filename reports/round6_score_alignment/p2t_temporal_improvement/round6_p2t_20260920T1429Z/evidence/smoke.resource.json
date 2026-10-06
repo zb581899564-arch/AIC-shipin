@@ -1,0 +1,38 @@
+{
+  "name": "r6p2t_smoke_20260920t1429z",
+  "command": [
+    "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+    "-B",
+    "/home/inspur/aic_video_work/round6_score_alignment/p2t_temporal_improvement/round6_p2t_20260920T1429Z/code/remote_train_p2t.py",
+    "--manifest",
+    "/home/inspur/aic_video_work/round6_score_alignment/p2t_temporal_improvement/round6_p2t_20260920T1429Z/inputs/smoke_temporal.jsonl",
+    "--out-dir",
+    "/home/inspur/aic_video_work/round6_score_alignment/p2t_temporal_improvement/round6_p2t_20260920T1429Z/runs/smoke",
+    "--epochs",
+    "20",
+    "--max-steps",
+    "20",
+    "--lr",
+    "5e-5",
+    "--grad-accum",
+    "16",
+    "--seed",
+    "20260920"
+  ],
+  "started_utc": "2026-09-20T06:38:38.345318+00:00",
+  "runner_pid": 2811286,
+  "reserved_seconds": 1500,
+  "teardown_reserve_seconds": 120,
+  "prior_charged_seconds": 52205.09670561459,
+  "disk_before": {
+    "free_bytes": 152047874048,
+    "work_bytes": 40810516480
+  },
+  "child_pid": 2811290,
+  "finished_utc": "2026-09-20T06:55:18.098905+00:00",
+  "charged_seconds": 999.7536847530864,
+  "exit_code": 0,
+  "stop_reason": null,
+  "sampled_peak_memory_mib": 11750,
+  "status": "completed"
+}

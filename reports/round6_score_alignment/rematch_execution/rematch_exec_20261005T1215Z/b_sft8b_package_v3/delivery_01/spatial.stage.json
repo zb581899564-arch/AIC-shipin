@@ -1,0 +1,23 @@
+{
+  "status": "PASS_SAME_FRAME_NATIVE_8B_SPACE",
+  "rows": 13947,
+  "invalid": 0,
+  "manifest_sha256": "ceb91ee9434ce3de6a55abf727e613b83368b547d3be3d1e71b46414c2f019f8",
+  "requests_sha256": "fbf24e254b05907bdf0da9d5247aecbb71f750b79286c55d38102b03e29d9c0a",
+  "output_sha256": "db70b01c507e7790010570f9e6660aa5be315795fa93ca2a7f96cf6e89650ba2",
+  "wall_seconds": 8494.898746198975,
+  "measured_seconds_per_anchor": 0.6051481672979807,
+  "base_hash": {
+    "sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+    "parameters": 8767123696,
+    "method": "sorted canonical names and all unique frozen parameter bytes"
+  },
+  "spatial_base_parameters": 8767123696,
+  "complete_pipeline_parameters": 8782459120,
+  "shared_base_counted_once": true,
+  "temporal_adapter_enabled": false,
+  "weak_roi_inputs_used": 0,
+  "old_test_boxes_used": 0,
+  "silent_fallbacks": 0,
+  "uploaded": false
+}

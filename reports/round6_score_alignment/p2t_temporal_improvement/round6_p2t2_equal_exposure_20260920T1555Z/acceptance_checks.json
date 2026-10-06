@@ -1,0 +1,25 @@
+{
+  "status": "P2T2_ACCEPT_BASE_GATE_DEV_ONLY",
+  "checks": {
+    "train_rows_370": true,
+    "train_source_groups_335": true,
+    "epochs_5": true,
+    "optimizer_steps_120": true,
+    "examples_seen_1850": true,
+    "all_logged_losses_finite": true,
+    "vision_frozen": true,
+    "base_frozen": true,
+    "adapter_hash_matches_report": true,
+    "adapter_reload_proven_by_dev_inference": true,
+    "dev_manifest_hash_frozen": true,
+    "dev_rows_82_unique": true,
+    "dev_invalid_retained": true,
+    "dev_valid_rate_1": true,
+    "gate_all_checks_pass": true,
+    "bootstrap_draws_10000_seed_frozen": true,
+    "train_job_completed": true,
+    "dev_job_completed": true
+  },
+  "failed": [],
+  "evidence_limit": "WEAK_TEACHER development evidence; not an official score, blind holdout, or test-set authorization."
+}

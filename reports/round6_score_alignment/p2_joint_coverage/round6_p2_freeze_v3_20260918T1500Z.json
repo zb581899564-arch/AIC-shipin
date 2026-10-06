@@ -1,0 +1,180 @@
+{
+  "schema": "aic6_p2_partial_dev_freeze_v3",
+  "run_id": "round6_p2_freeze_v3_20260918T1500Z",
+  "status": "PARTIAL_DEV_EVIDENCE_FROZEN",
+  "delivery_status": "NOT_DELIVERABLE_BUDGET",
+  "official_status": "NOT_OFFICIAL_SCORE",
+  "code_files": {
+    "aic6/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "aic6/cli.py": "c9ca0cc11641f486b43d26860b4c34cd656bd5668b91e16db04af95908f0eca6",
+    "aic6/compose.py": "aaf267583f1aa88eb1cdd9e0e09438a708d4773dfe10a0a879e0b2ee2e7dc98c",
+    "aic6/coverage.py": "6918df88ea79af7321acb958235e5a878a3a638b1e89644bf687e3e86bfcc0b4",
+    "aic6/provenance.py": "bd0277bbf6cf6e6605d66ad3bbd92a6494a1074984bc6c3eab1ac2b634b855d3",
+    "aic6/scoring.py": "34ea6d198acba95a8651d687be84ccbc2281039083a560fa122ec42c101d84c9",
+    "aic6/segments.py": "464697b7d5a21e6d7d54ef30227e667d42d0faa9ce86e91f4c308c1e58c199b3",
+    "aic6/subset.py": "34bc3926f745630624123d1d5f64538b551ead3eba35eedc933474e943637696",
+    "aic6/timebase.py": "d3b285c440201e4e5f4bb6ca698bafe3a66883c9dca316920e414c350d8c59b4",
+    "remote_infer_gaps.py": "883d7969d4ddee9705f4a641f8cc2a875fdf999fbab22575f998680bc9afb4ca",
+    "remote_infer_gaps_v2.py": "907a53bd53c9723016d4f0d7aa3bfdd66da8f6ca3de1927dced4dd97e9fe625f",
+    "run_freeze.py": "dfb82bfda0505bfc0f596db7f83c0c9d458f7dcaccd1c82f8b062541fb888777",
+    "run_freeze_v3.py": "bd141895b3ed6db83e982425f5496e22e626a80a2b4689cb6ee2daa08393eec7",
+    "run_m1_coverage_audit.py": "67382911bc5bfdbdca6270b6c93bc9a6d60076271684003996b0dd8d54f306f8",
+    "run_m2a_sim_cpu.py": "bfefb5958721582c445ac488e61e7deb6ad32f660db3bfd1923d8cefcd175225",
+    "run_m2b_boundary.py": "123cd70bebae291f870494c7586a9877bf0c6ce82d476e449a8065600d7cf0a8",
+    "run_m2d_real_compose.py": "1b5b350a5d395b1f8328e0060885bc99e17844d26a3812ec4f11c12370ba2a9e",
+    "run_m2f_real_compose_v2.py": "86cf596c6db7fdf591ddf49c3654c51a14fe3a96d8744149c4d2ca74f3d2e4de",
+    "run_m3_paired.py": "192de4895fbb3b03cef3970d7e631a06bc21306b59d96cde2380aec271f4f418",
+    "run_subset_replay.py": "2c2e66e8afdd637291732b710435414f76e91b6f81eb8a7c11f6a22ba673027b",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/test_coverage.py": "f91bb9b9039d6024cae9cbf759a591c2f51d8948fe49884ac9758bd16bd70e82",
+    "tests/test_subset.py": "fc48e8d6e92bab3a053d1ce264198aac3de6132e10a91a1d586e14068185fac6"
+  },
+  "protected_inputs": {
+    "round5_predictions": {
+      "path": "submissions/round5_s2_temporal_20260917/predictions.jsonl",
+      "observed_sha256": "f8f026a69c8f9fa676dd31a6ffcd375569842c59f4cb6fdcd8d4ced5d86cf3ef",
+      "expected_sha256": "f8f026a69c8f9fa676dd31a6ffcd375569842c59f4cb6fdcd8d4ced5d86cf3ef",
+      "matches": true
+    },
+    "round5_zip": {
+      "path": "submissions/round5_s2_temporal_20260917/aic-round5-s2-temporal-20260917.zip",
+      "observed_sha256": "e5df99b8c3d32ec6d495ef1aada2b869478f307884ebeedca3df76def36c3584",
+      "expected_sha256": "e5df99b8c3d32ec6d495ef1aada2b869478f307884ebeedca3df76def36c3584",
+      "matches": true
+    },
+    "round5_temporal_raw": {
+      "path": "reports/temporal_round5/evidence/temporal_raw_v1.jsonl",
+      "observed_sha256": "3bc0fc59af87fc8542793e4419889b4cdf86a63c56e9c02c7ea19fdb1109cf72",
+      "expected_sha256": "3bc0fc59af87fc8542793e4419889b4cdf86a63c56e9c02c7ea19fdb1109cf72",
+      "matches": true
+    },
+    "spatial_base_lora_reader": {
+      "path": "submissions/qwen3vl_lora_reader_20260912/predictions.jsonl",
+      "observed_sha256": "a81a711878ffcd68db84dba4b530c4c051cd10cd82b1b4929f35bd06853ef471",
+      "expected_sha256": "a81a711878ffcd68db84dba4b530c4c051cd10cd82b1b4929f35bd06853ef471",
+      "matches": true
+    },
+    "test_metadata_index": {
+      "path": "reports/round6_score_alignment/phase0/evidence/supervisor_test_metadata.json",
+      "observed_sha256": "7f38d3f7f29b7fc5d91a9762ecfea00e6fc84b583bf11b439ba4a853bf1ec428",
+      "expected_sha256": "7f38d3f7f29b7fc5d91a9762ecfea00e6fc84b583bf11b439ba4a853bf1ec428",
+      "matches": true
+    },
+    "weak_dev_pilot_freeze": {
+      "path": "reports/round6_score_alignment/weak_dev_pilot/freeze_record.json",
+      "observed_sha256": "4596a51705341237aa34a9c6d505a6aa4a75aa8668d472ea047ae7cbf38a8d3e",
+      "expected_sha256": "4596a51705341237aa34a9c6d505a6aa4a75aa8668d472ea047ae7cbf38a8d3e",
+      "matches": true
+    },
+    "weak_dev_pilot_dev_frames": {
+      "path": "reports/round6_score_alignment/weak_dev_pilot/dev_frames.jsonl",
+      "observed_sha256": "711fd3c8d0c960957bd519c13654e0f38f53296cda83cc2edb2f182982551c84",
+      "expected_sha256": "711fd3c8d0c960957bd519c13654e0f38f53296cda83cc2edb2f182982551c84",
+      "matches": true
+    },
+    "weak_dev_pilot_dev_temporal": {
+      "path": "reports/round6_score_alignment/weak_dev_pilot/dev_temporal.jsonl",
+      "observed_sha256": "242a3a0475f6c5b66cd2a25deef88f3b477f3f6ea5f4d22984c1a12830d3bd3c",
+      "expected_sha256": "242a3a0475f6c5b66cd2a25deef88f3b477f3f6ea5f4d22984c1a12830d3bd3c",
+      "matches": true
+    },
+    "weak_dev_pilot_temporal_s2": {
+      "path": "reports/round6_score_alignment/weak_dev_pilot/temporal_S2.jsonl",
+      "observed_sha256": "ca51e6d49e2394dcef28dc1b651e9803646ae8921a97e6f669632cc082e73903",
+      "expected_sha256": "ca51e6d49e2394dcef28dc1b651e9803646ae8921a97e6f669632cc082e73903",
+      "matches": true
+    },
+    "weak_dev_pilot_p1_predictions": {
+      "path": "reports/round6_score_alignment/weak_dev_pilot/p1_predictions.jsonl",
+      "observed_sha256": "cc2778747c0a7bdab88bea70fabe6dab181c75850bc5cd53936b386dbb4a61d3",
+      "expected_sha256": "cc2778747c0a7bdab88bea70fabe6dab181c75850bc5cd53936b386dbb4a61d3",
+      "matches": true
+    }
+  },
+  "evidence_artifacts": {
+    "control_quality_v2.json": "6a254747e06562bc0106b78c2586d55583e14ab0326d30ace0183cc52e4680fa",
+    "gap_predictions.jsonl": "730b12da750185fe7a60242d2ed520aa806c5a404653a1b43a40f0ce12a9926f",
+    "gap_predictions.run.json": "f88517721d4994e0038f08e6aa3b1682242a3b0d7989e6d385a13d8d79d0f748",
+    "gap_predictions_v2_subset.jsonl": "1dae13b7a5550fefd6edf6d6597de84e9e25fe405112f0cd63d82606ead8603f",
+    "gap_predictions_v2_subset.run.json": "eaa8a6d75e76e6adff9448804747a2035002cf5fbdd798a825040c4a53e3ffa6",
+    "gpu_ledger_addendum_20260918.jsonl": "09f1fa037915366762cc751ed720d004134a8921630a09e988c1fbef8a684d4c",
+    "infer_gaps.log": "32ff09b9f420fa590cc633a26cd0d040e6fb338f1685b15adf8431d78e243835",
+    "infer_gaps_v2.log": "dc84c9d1521efd9d89714c3e36a2b66b26d294a50c6f5d35bb6320fb022b2079",
+    "p2_infer_requests.jsonl": "300b972da31d94548af8ddb55d5a2b28289ca6525803f8bea173745450cb8701",
+    "p2_infer_requests_v2_source_grid.jsonl": "cefffbc9d92d31f5d3f2b464fe44a39272b9499d46e6f4e2342a5d5efa684a02",
+    "p2_infer_requests_v2_subset.jsonl": "99753afd4459ad7390d9157151d650518c7964ceb208489787f68b0395f5d305",
+    "REPORT.md": "faa48ed753746dd1d60e2f4a716e39e8655417e7f876eb6c0fc33c57a599713a",
+    "REPORT_V2.md": "b92de00623965f9c0b3cc21d1b44fe2796be9a127e46756961bd659dd68f722a",
+    "round6_p2_freeze_20260918T1130Z.json": "e2b3c683f50a4c5abb91e0711ca963f2d0411bd7c9bbf19e07437adaae91df12",
+    "round6_p2_freeze_v2_20260918T0310Z.json": "7a12dedee0c48afdd0b389b6e150b622aca872342dd914239b893b881a92fc10",
+    "round6_p2_m1_fix2_20260918T0230Z.json": "c942f639d47bfff032885898768d785204777dbf824727d3bfe95452abbb4879",
+    "round6_p2_m1_fix2_20260918T0230Z.manifest.json": "8e81977e34ddb5b6def0a108267f1e2a224e298d5a55b86e62f83c2a33381f08",
+    "round6_p2_m2a_20260918T0735Z.json": "c0427b59bcf958a0e064548fd241015d8be200e6ddede5b34e7ca447855795f9",
+    "round6_p2_m2a_20260918T0735Z.sim_predictions.jsonl": "1daeb22a4e2d43954024aab586344f773b84cc7cb17d4b4063260398c545c3b3",
+    "round6_p2_m2b_fix2_20260918T0230Z.json": "78c16e91f576dd837c1d29fdb48ff2c167f39248bd2d8a8245fef16e7a6db383",
+    "round6_p2_m2f_20260918T0200Z.json": "822ed8a8a22cf18bc25d9e91238fc1d60b00bc9b365a3c379de9116f9fbd5a43",
+    "round6_p2_m2f_20260918T0200Z.real_composed_predictions.jsonl": "5126e074d38b51ffdf3d404c43b82289f82d55d96e75466860b3c2e5d1c53e0f",
+    "round6_p2_m3_20260918T0955Z.json": "9f882b21abec80b66f137c67602143a905010fe863ce199d6d7ea1e373dea7c1",
+    "round6_p2_m3b_20260918T0215Z.json": "7429022c0badac4afb03eab066480b75744138e47dff9ce414ec39e54bd5b142",
+    "SUPERVISOR_REVIEW_20260918.md": "d160089e73d375120335daed727a179f4be9a3ca272fb71e9504cb351601b628",
+    "SUPERVISOR_REVIEW_V2_20260918.md": "fd9d6cb33b2b376e485da98a6a16197030de028ef697cba945a60d953f1c0cf7"
+  },
+  "checks_dir": "reports/round6_score_alignment/p2_joint_coverage/round6_p2_freeze_v3_20260918T1500Z_checks",
+  "verification": {
+    "unit_tests": {
+      "tests_run": 38,
+      "failures": 0,
+      "errors": 0,
+      "ok": true,
+      "output_tail": "----------------------------------------------------------------------\nRan 38 tests in 0.002s\n\nOK\n"
+    },
+    "subset_replay": {
+      "script": "run_subset_replay.py",
+      "exit_code": 0,
+      "stdout_tail": "{\n  \"byte_exact\": true,\n  \"regenerated_sha256\": \"99753afd4459ad7390d9157151d650518c7964ceb208489787f68b0395f5d305\",\n  \"historical_sha256\": \"99753afd4459ad7390d9157151d650518c7964ceb208489787f68b0395f5d305\",\n  \"seed\": 20260918,\n  \"sampled_gaps\": 6000,\n  \"selection_rule\": \"Python random.Random(seed).sample over ordered NEEDS_INFERENCE rows; retain all CONTROL_SAME_FRAME rows; preserve original row order and bytes\"\n}\n",
+      "stderr_tail": ""
+    },
+    "m1_coverage": {
+      "script": "run_m1_coverage_audit.py",
+      "exit_code": 0,
+      "stdout_tail": "OK: wrote G:\\ai\\AIC视频\\reports\\round6_score_alignment\\p2_joint_coverage\\round6_p2_freeze_v3_20260918T1500Z_checks\\round6_p2_freeze_v3_20260918T1500Z_m1.json\n{\n \"SAME_FRAME\": 37184,\n \"SHOT_NEAREST\": 0,\n \"NEEDS_INFERENCE\": 3200,\n \"UNRESOLVABLE\": 0,\n \"n_selected\": 40384,\n \"videos_with_needs_inference\": 47,\n \"videos_fully_resolved_no_shots\": 127,\n \"videos_fully_resolved_single_declared_shot\": 160\n}\n{\n \"n_copied\": 3200,\n \"n_over_30_frames\": 2747,\n \"n_over_300_frames\": 1948,\n \"n_crossing_declared_shot_boundary\": 0\n}\n",
+      "stderr_tail": ""
+    },
+    "m2b_boundary": {
+      "script": "run_m2b_boundary.py",
+      "exit_code": 0,
+      "stdout_tail": "OK: {'total': 16, 'pass': 16, 'fail': 0}\n",
+      "stderr_tail": ""
+    },
+    "m2f_source_grid": {
+      "script": "run_m2f_real_compose_v2.py",
+      "exit_code": 0,
+      "stdout_tail": "NOT_DELIVERABLE_BUDGET: wrote G:\\ai\\AIC视频\\reports\\round6_score_alignment\\p2_joint_coverage\\round6_p2_freeze_v3_20260918T1500Z_checks\\round6_p2_freeze_v3_20260918T1500Z_m2f.json\n{\n \"selection_totals\": {\n  \"selected_source_frames\": 13777,\n  \"videos_with_selection\": 82\n },\n \"composition\": {\n  \"path\": \"reports/round6_score_alignment/p2_joint_coverage/round6_p2_freeze_v3_20260918T1500Z_checks/round6_p2_freeze_v3_20260918T1500Z_m2f.real_composed_predictions.jsonl\",\n  \"sha256\": \"5126e074d38b51ffdf3d404c43b82289f82d55d96e75466860b3c2e5d1c53e0f\",\n  \"n_boxes\": 6186,\n  \"source_counts\": {\n   \"REAL_INFERENCE\": 6000,\n   \"WEAK_ROI_SAME_FRAME\": 186,\n   \"NOT_INFERRED_BUDGET\": 7591,\n   \"INVALID_INFERENCE\": 0\n  },\n  \"strict_validation_ok\": true,\n  \"n_issue_codes\": 0,\n  \"issues_first_10\": []\n },\n \"budget_subset\": {\n  \"subset_frames\": 6186,\n  \"full_selection_frames\": 13777,\n  \"subset_seed\": 20260918,\n  \"note\": \"subset bounded by the remaining P2 GPU budget (seed-frozen sample)\"\n }\n}\n",
+      "stderr_tail": ""
+    },
+    "v2_composition_replay": {
+      "byte_exact": true,
+      "replayed_sha256": "5126e074d38b51ffdf3d404c43b82289f82d55d96e75466860b3c2e5d1c53e0f",
+      "historical_sha256": "5126e074d38b51ffdf3d404c43b82289f82d55d96e75466860b3c2e5d1c53e0f",
+      "replay_report_sha256": "974a9a5a0e09c2d5a9463f389a12dfddd5507e6c88426460224f3bf5681be0c7",
+      "format_valid": true,
+      "selection_complete": false,
+      "deployable": false,
+      "delivery_status": "NOT_DELIVERABLE_BUDGET",
+      "selected_source_frames": 13777,
+      "composed_boxes": 6186,
+      "source_counts": {
+        "REAL_INFERENCE": 6000,
+        "WEAK_ROI_SAME_FRAME": 186,
+        "NOT_INFERRED_BUDGET": 7591,
+        "INVALID_INFERENCE": 0
+      }
+    },
+    "historical_m3_excluded": "run_m3_paired.py uses v1's incorrect clip-grid inference output; it is intentionally not a v3 verification gate"
+  },
+  "pinned_input_problems": [],
+  "protected_input_problems": [],
+  "historical_evidence_unchanged": true,
+  "python": "3.11.7",
+  "elapsed_seconds": 1.594
+}

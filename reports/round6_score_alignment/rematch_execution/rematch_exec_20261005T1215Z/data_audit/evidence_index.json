@@ -1,0 +1,17 @@
+{
+  "schema": "aic_rematch_c_data_semantics_evidence_v1",
+  "entries": [
+    {"claim": "主案C无可解释负监督则停止正式BCE，不换4B绕过", "path": "reports/round6_score_alignment/rematch_discussion/aic_video_rematch_20261005T1044Z/final-decision.md", "line_start": 25, "line_end": 37, "evidence_class": "CURRENT_STAGE_CONTRACT"},
+    {"claim": "R7输入构建器仅搬运clip范围与已选时间段及弱教师身份", "path": "reports/round6_score_alignment/r7_temporal_pool/round7_temporal_pool_20260921T090903Z/code/build_candidates.py", "line_start": 47, "line_end": 103, "evidence_class": "SOURCE_CODE"},
+    {"claim": "R7段数筛选合同限制1–5段", "path": "reports/round6_score_alignment/r7_temporal_pool/round7_temporal_pool_20260921T090903Z/code/r7_core.py", "line_start": 20, "line_end": 39, "evidence_class": "SOURCE_CODE"},
+    {"claim": "后续模型query-free入口要求1–5段且拒绝空，不等于教师prompt", "path": "reports/round6_score_alignment/r7_temporal_pool/round7_temporal_pool_20260921T090903Z/code/temporal_common.py", "line_start": 13, "line_end": 37, "evidence_class": "DOWNSTREAM_SOURCE_CODE_NOT_TEACHER_CONTRACT"},
+    {"claim": "704train/104dev实际输入hash与组数核验，组交集0，808允许行解析", "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/data_audit/teacher_semantics_summary.json", "line_start": 2, "line_end": 15, "evidence_class": "CURRENT_CPU_AUDIT"},
+    {"claim": "未选范围UNKNOWN及已证负语义/观察数量0", "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/data_audit/teacher_semantics_summary.json", "line_start": 106, "line_end": 144, "evidence_class": "CURRENT_CPU_AUDIT_WITH_EXPLICIT_UNKNOWN"},
+    {"claim": "稠密分数存在，750个末端零confidence点，prompt/真实观察/结束原因缺失", "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/data_audit/generation_record_summary.json", "line_start": 3, "line_end": 25, "evidence_class": "CURRENT_RAW_ALLOWED_ROWS_CPU_AUDIT"},
+    {"claim": "808行许可证空，统一QVHighlights/prompt版本和生成指纹，覆盖仅自述", "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/data_audit/generation_record_summary.json", "line_start": 26, "line_end": 83, "evidence_class": "CURRENT_RAW_ALLOWED_ROWS_METADATA_AUDIT"},
+    {"claim": "历史下载来源记录", "path": "improvement/round3_supervisor/label_origin_audit.json", "line_start": 188, "line_end": 194, "evidence_class": "HISTORICAL_DOWNLOAD_LOG_EXTRACT"},
+    {"claim": "既有本地弱研究使用边界，非再分发/逐项许可证明", "path": "reports/round6_score_alignment/p2r_reference_gate/round6_p2r_20260919T154701Z/source_and_usage_audit.json", "line_start": 7, "line_end": 10, "evidence_class": "HISTORICAL_USE_BOUNDARY_RECORD"},
+    {"claim": "有界既有registry不含已准入query-free时间桥接，P1b无标注/GNMC空间参考/其余未准入", "path": "reports/round6_score_alignment/p2r_reference_gate/round6_p2r_20260919T154701Z/source_and_usage_audit.json", "line_start": 13, "line_end": 34, "evidence_class": "BOUNDED_EXISTING_REGISTRY_CHECK"},
+    {"claim": "本地 exact-key 源码/配置/文档检索未找到教师生成器", "search_keys": ["seed_temporal_compact_v2_20260812", "annotator_config_sha256", "prompt_fingerprint", "timeline_coverage", "highlight_score"], "include_globs": ["*.py", "*.yaml", "*.yml", "*.toml", "*.md"], "excluded": ["site-packages", "node_modules", "rematch_discussion", "rematch_execution", "rematch_intake", "confirm*", "holdout*"], "matched_paths": ["reports/orarl_round4/REPORT.md", "reports/orarl_round4/scripts/freeze_r4.py", "tmp_orarl_round1/REPORT4.md", "tmp_orarl_round1/freeze_r4.py"], "evidence_class": "BOUNDED_CURRENT_LOCAL_SOURCE_SEARCH"}
+  ]
+}

@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>AIC P1b pilot annotation v2 (offline)</title>
+<style>
+ :root { --bg:#14161a; --panel:#1d2026; --line:#2c313a; --fg:#e8eaee; --muted:#9aa3b2;
+         --accent:#4da3ff; --warn:#ffb020; --ok:#3ddc84; --bad:#ff5f56; }
+ * { box-sizing:border-box; }
+ body { margin:0; background:var(--bg); color:var(--fg);
+        font:13.5px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans CJK SC",sans-serif; }
+ header { padding:8px 12px; background:var(--panel); border-bottom:1px solid var(--line);
+          display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+ h1 { font-size:14px; margin:0 8px 0 0; font-weight:600; }
+ .badge { font-size:11.5px; padding:1px 7px; border-radius:10px; border:1px solid var(--line); color:var(--muted); }
+ .badge.ok { color:var(--ok); border-color:#245c3d; }
+ .badge.bad { color:var(--bad); border-color:#5c2424; }
+ .badge.warn { color:var(--warn); border-color:#5c4a24; }
+ main { display:grid; grid-template-columns: 260px 1fr 420px; gap:10px; padding:10px; align-items:start; }
+ .panel { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:9px; }
+ .panel h2 { font-size:12px; margin:0 0 7px; color:var(--muted); font-weight:600;
+             text-transform:uppercase; letter-spacing:.04em; }
+ .samplebtn { display:block; width:100%; text-align:left; margin:3px 0; padding:6px 8px;
+              background:#232830; color:var(--fg); border:1px solid var(--line); border-radius:6px; cursor:pointer; }
+ .samplebtn.active { border-color:var(--accent); background:#1b2c42; }
+ .samplebtn small { color:var(--muted); display:block; }
+ .stage { position:relative; display:block; width:100%; }
+ video, img.still { width:100%; background:#000; border-radius:6px; display:block; }
+ img.still { display:none; }
+ .overlay { position:absolute; border:2px solid var(--accent); background:rgba(77,163,255,.18);
+            cursor:move; display:none; }
+ .overlay .handle { position:absolute; right:-6px; bottom:-6px; width:13px; height:13px;
+                    background:var(--accent); cursor:nwse-resize; }
+ .row { display:flex; gap:6px; align-items:center; margin:5px 0; flex-wrap:wrap; }
+ label { color:var(--muted); font-size:12px; }
+ input[type=number], input[type=text], textarea, select {
+   background:#12151a; color:var(--fg); border:1px solid var(--line); border-radius:4px; padding:4px 6px; }
+ input[type=number] { width:78px; }
+ textarea { width:100%; min-height:44px; }
+ button { background:#2b313b; color:var(--fg); border:1px solid var(--line); border-radius:4px;
+          padding:4px 8px; cursor:pointer; }
+ button:hover { border-color:var(--accent); }
+ button.primary { background:#1f4d7a; border-color:var(--accent); }
+ button.danger { background:#4a2323; border-color:#7a2f2f; }
+ table { width:100%; border-collapse:collapse; font-size:12px; }
+ th, td { border-bottom:1px solid var(--line); padding:3px 4px; text-align:left; }
+ .kv { font-size:11.5px; color:var(--muted); }
+ .kv b { color:var(--fg); }
+ .pill { display:inline-block; padding:1px 6px; border-radius:9px; font-size:11px; border:1px solid var(--line); }
+ .pill.UNANNOTATED { color:var(--muted); }
+ .pill.HAS_HIGHLIGHT { color:var(--ok); border-color:#245c3d; }
+ .pill.NO_HIGHLIGHT { color:var(--warn); border-color:#5c4a24; }
+ .pill.UNCERTAIN { color:var(--bad); border-color:#5c2424; }
+ pre { background:#12151a; border:1px solid var(--line); border-radius:6px; padding:7px;
+       max-height:200px; overflow:auto; font-size:11px; white-space:pre-wrap; }
+ .problems { color:var(--bad); font-size:12px; }
+ .warnings { color:var(--warn); font-size:12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>AIC P1b 试点标注 v2</h1>
+  <span class="badge" id="coreBadge">core —</span>
+  <span class="badge" id="serverBadge">精确帧服务 —</span>
+  <span class="badge" id="dirtyBadge">未保存 —</span>
+  <span class="kv">离线页面；不联网（精确帧服务只监听本机回环）。未标注 ≠ 空。</span>
+</header>
+
+<main>
+  <section class="panel">
+    <h2>样本（8 来源组）</h2>
+    <div id="sampleList"></div>
+    <div class="kv" id="sampleMeta"></div>
+    <h2 style="margin-top:10px">草稿</h2>
+    <div class="row">
+      <button id="exportDraft">导出草稿</button>
+      <button id="restoreAutosave">恢复自动草稿</button>
+    </div>
+    <div class="row">
+      <label>导入草稿</label><input type="file" id="importDraftFile" accept=".json">
+    </div>
+    <div class="kv" id="draftStatus"></div>
+  </section>
+
+  <section class="panel">
+    <h2>粗定位（视频）</h2>
+    <div class="stage" id="videoStage">
+      <video id="video" controls preload="metadata"></video>
+      <div class="overlay" id="overlay"><div class="handle" id="handle"></div></div>
+    </div>
+    <div class="row">
+      <span class="kv">currentTime <b id="tNow">0.000</b> s（浏览器时间，仅供粗定位）</span>
+      <button id="useEstimate">用当前时间估算帧号</button>
+    </div>
+    <h2 style="margin-top:8px">精确帧（本机 CPU 解码静态图）</h2>
+    <div class="row">
+      <label>帧号</label><input type="number" id="frameInput" value="0" min="0">
+      <button id="fetchExact" class="primary">取精确帧</button>
+      <button id="stepBack10">-10</button><button id="stepBack1">-1</button>
+      <button id="stepFwd1">+1</button><button id="stepFwd10">+10</button>
+    </div>
+    <div class="stage" id="stillStage">
+      <img class="still" id="still" alt="decoded frame">
+    </div>
+    <div class="kv" id="frameInfo"></div>
+    <div class="row">
+      <label>目标比例</label><span class="pill" id="ratioPill"></span>
+      <span class="kv">最大合法裁剪 <b id="maxCrop"></b></span>
+      <span class="kv" id="scaleInfo"></span>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>标注</h2>
+    <div class="row">
+      <label>状态</label>
+      <select id="status">
+        <option value="UNANNOTATED">未标注（默认）</option>
+        <option value="HAS_HIGHLIGHT">有高光</option>
+        <option value="NO_HIGHLIGHT">确认无高光</option>
+        <option value="UNCERTAIN">不确定</option>
+      </select>
+      <label><input type="checkbox" id="confirmNoHighlight"> 我确认整段没有值得保留的高光</label>
+    </div>
+
+    <h2 style="margin-top:8px">时间区间 [start, end_exclusive)</h2>
+    <div class="row">
+      <label>起始帧</label><input type="number" id="intStart" min="0">
+      <label>最后保留帧</label><input type="number" id="intLast" min="0">
+      <button id="setStartHere">起点=当前帧</button>
+      <button id="setLastHere">末帧=当前帧</button>
+      <button id="addInterval" class="primary">添加区间</button>
+    </div>
+    <div class="kv">导出写入 <code>start_frame</code> 与 <code>end_frame_exclusive</code>（= 最后保留帧 + 1），
+      允许覆盖最后一帧（end = N）。</div>
+    <table id="intervalTable"><thead><tr><th>#</th><th>起帧</th><th>末帧</th><th>end_excl</th><th>起s</th><th>止s</th><th>起点定位</th><th>终点定位</th><th></th></tr></thead><tbody></tbody></table>
+
+    <h2 style="margin-top:8px">稀疏构图关键帧 [x, y, w]</h2>
+    <div class="row">
+      <label>x</label><input type="number" id="bx" value="0">
+      <label>y</label><input type="number" id="by" value="0">
+      <label>w</label><input type="number" id="bw" value="100">
+      <button id="showBox">显示/编辑框</button>
+      <button id="clampBox">约束到合法范围</button>
+      <button id="addKeyframe" class="primary">以当前帧添加关键帧</button>
+    </div>
+    <div class="kv">框高度按 h = w·th/tw 推导；在画面上拖动框可移动，拖右下角方块改变宽度。显示比例见中栏。</div>
+    <table id="kfTable"><thead><tr><th>帧</th><th>x</th><th>y</th><th>w</th><th>h(推导)</th><th>定位</th><th></th></tr></thead><tbody></tbody></table>
+
+    <h2 style="margin-top:8px">身份与不确定性</h2>
+    <div class="row"><label>标注者</label><input type="text" id="annotator" placeholder="必填，需为真实执行者"></div>
+    <div class="row"><label>复核者</label><input type="text" id="reviewer" placeholder="未复核则留空"></div>
+    <div class="row"><textarea id="notes" placeholder="不确定性/说明"></textarea></div>
+
+    <div class="row">
+      <button class="primary" id="exportReference">导出参考 JSON</button>
+      <button id="exportAll">导出全部已标注参考</button>
+      <button id="copyJson">复制本样本 JSON</button>
+      <button class="danger" id="resetOne">清空本样本标注</button>
+    </div>
+    <div class="kv" id="exportHint"></div>
+    <div class="problems" id="notice"></div>
+    <div class="problems" id="exportProblems"></div>
+    <div class="warnings" id="exportWarnings"></div>
+    <pre id="preview"></pre>
+    <pre id="lastDownload" style="display:none"></pre>
+    <pre id="lastRefusal" style="display:none"></pre>
+  </section>
+</main>
+
+<script src="annotation_core.js"></script>
+<script>
+const CORE = window.AnnotationCore;
+const MANIFEST = __MANIFEST__;
+const SERVER = __SERVER__;
+const AUTOSAVE_KEY = "p1b_annotation_draft_v2";
+
+const state = { current: 0, annotations: {}, dirty: false, still: null, serverOk: false,
+                boxVisible: false, requestVersion: 0, stillUrl: null,
+                endpointSelection: { start: null, last: null }, frameMethod: "manual_frame_input" };
+
+function blank() {
+  return { status: "UNANNOTATED", confirm_no_highlight: false, intervals: null, keyframes: null,
+           annotator: "", reviewer: null, notes: "" };
+}
+function ann(sample) {
+  if (!state.annotations[sample.sample_id]) state.annotations[sample.sample_id] = blank();
+  return state.annotations[sample.sample_id];
+}
+function cur() { return MANIFEST.samples[state.current]; }
+function el(id) { return document.getElementById(id); }
+function markDirty() {
+  state.dirty = true;
+  el("dirtyBadge").textContent = "未保存改动";
+  el("dirtyBadge").className = "badge warn";
+  autosave();
+}
+
+// ---------------------------------------------------------------- provenance
+function estimateProvenance(frame, method, opts) {
+  opts = opts || {};
+  const exact = (method === "decoded_frame");
+  const p = { method: method, frame: frame, estimated_error_frames: exact ? 0 : null };
+  if (opts.derived) p.derived = opts.derived;
+  if (method === "decoded_frame" && verifiedStillFor(frame)) {
+    p.decoded_index = state.still.index;
+    p.decoded_pts_sec = state.still.pts_sec;
+    p.time_base_sec = state.still.time_base;
+    p.image_sha256 = state.still.sha256;
+    p.sample_id = state.still.sample_id;
+    p.media_sha256 = state.still.media_sha256;
+    p.request_version = state.still.request_version;
+  }
+  if (method === "pts_sample" && opts.pts_sample_index !== undefined) {
+    p.pts_sample_index = opts.pts_sample_index;
+  }
+  if (method === "browser_seek") {
+    p.verified = false;
+    p.note = "浏览器 currentTime 定位，未与解码帧核对；误差未知（null）";
+  }
+  if (method === "manual_frame_input") p.note = "手工输入帧号，未与解码帧核对";
+  return p;
+}
+
+function invalidateStill() {
+  state.requestVersion++;
+  state.still = null;
+  el("still").style.display = "none";
+  el("still").removeAttribute("src");
+  if (state.stillUrl) URL.revokeObjectURL(state.stillUrl);
+  state.stillUrl = null;
+  drawBox();
+}
+function verifiedStillFor(frame) {
+  const s = cur(), v = state.still, image = el("still");
+  return !!v && v.frame === frame && v.index === frame &&
+    v.sample_id === s.sample_id && v.media_sha256 === s.sha256_local &&
+    v.request_version === state.requestVersion && frameValue() === frame &&
+    image.style.display === "block" && image.complete && image.naturalWidth > 0 &&
+    image.src === state.stillUrl && v.browser_hash === v.sha256;
+}
+
+// ---------------------------------------------------------------- frame I/O
+async function serverHealth() {
+  if (!SERVER) { state.serverOk = false; return false; }
+  try {
+    const r = await fetch(SERVER + "/health", { cache: "no-store" });
+    const j = r.ok ? await r.json() : { ok: false };
+    state.serverOk = !!j.ok;
+  } catch (e) { state.serverOk = false; }
+  el("serverBadge").textContent = state.serverOk ? "精确帧服务 已连接" : "精确帧服务 未连接";
+  el("serverBadge").className = "badge " + (state.serverOk ? "ok" : "bad");
+  return state.serverOk;
+}
+
+async function fetchExactFrame(frame) {
+  if (frame !== frameValue()) setFrame(frame, "manual_frame_input");
+  invalidateStill();
+  const s = cur(), version = state.requestVersion;
+  const current = () => version === state.requestVersion && cur().sample_id === s.sample_id &&
+                        cur().sha256_local === s.sha256_local && frameValue() === frame;
+  const fail = message => { if (current()) el("frameInfo").textContent = message; return null; };
+  if (!state.serverOk && !(await serverHealth())) {
+    return fail("精确帧服务不可用：只能用估算定位（误差记 null）");
+  }
+  if (!current()) return null;
+  let info, buf, browserHash, url;
+  try {
+    const q = `sample=${encodeURIComponent(s.sample_id)}&frame=${frame}`;
+    const infoResponse = await fetch(`${SERVER}/frameinfo?${q}`, { cache: "no-store" });
+    if (!infoResponse.ok) throw new Error(`frameinfo HTTP ${infoResponse.status}`);
+    info = await infoResponse.json();
+    if (!current()) return null;
+    if (info.error) throw new Error(info.error);
+    if (info.sample_id !== s.sample_id || info.media_sha256 !== s.sha256_local ||
+        info.index !== frame || !Number.isFinite(info.pts_sec) ||
+        !/^[0-9a-f]{64}$/.test(info.sha256 || "")) throw new Error("帧或媒体身份不一致");
+    const imageResponse = await fetch(`${SERVER}/frame?${q}`, { cache: "no-store" });
+    if (!imageResponse.ok) throw new Error(`image HTTP ${imageResponse.status}`);
+    buf = await imageResponse.arrayBuffer();
+    if (!current()) return null;
+    const digest = await crypto.subtle.digest("SHA-256", buf);
+    browserHash = [...new Uint8Array(digest)].map(b => b.toString(16).padStart(2, "0")).join("");
+    if (browserHash !== info.sha256) throw new Error("图像字节哈希不一致");
+    url = URL.createObjectURL(new Blob([buf], { type: "image/jpeg" }));
+    const image = new Image();
+    await new Promise((resolve, reject) => {
+      image.onload = resolve;
+      image.onerror = () => reject(new Error("图像加载失败"));
+      image.src = url;
+      if (image.complete) image.naturalWidth > 0 ? resolve() : reject(new Error("图像加载失败"));
+    });
+    if (!current()) { URL.revokeObjectURL(url); return null; }
+    image.id = "still";
+    image.className = "still";
+    image.style.display = "block";
+    el("still").replaceWith(image);
+  } catch (e) {
+    if (url) URL.revokeObjectURL(url);
+    if (current()) {
+      invalidateStill();
+      el("frameInfo").textContent = "取帧失败：" + e.message;
+    }
+    return null;
+  }
+  state.stillUrl = url;
+  state.still = { frame: frame, index: info.index, pts_sec: info.pts_sec,
+                  time_base: info.time_base_sec, sha256: info.sha256, browser_hash: browserHash,
+                  width: info.width, height: info.height, sample_id: s.sample_id,
+                  media_sha256: s.sha256_local, request_version: version };
+  el("frameInfo").textContent =
+    `解码帧 index=${info.index} pts=${info.pts_sec}s time_base=${info.time_base_sec} ` +
+    `sha256=${String(info.sha256).slice(0, 12)}… 浏览器收到同一字节=${browserHash === info.sha256} ` +
+    `(${info.width}x${info.height})`;
+  drawBox();
+  return state.still;
+}
+
+function frameValue() { return parseInt(el("frameInput").value || "0", 10); }
+
+function setFrame(value, method) {
+  const s = cur();
+  invalidateStill();
+  const f = Math.max(0, Math.min(s.n_frames - 1, value));
+  el("frameInput").value = f;
+  state.frameMethod = method;
+  if (method === "browser_seek") el("video").currentTime = f / s.fps;
+  el("frameInfo").textContent = `当前帧号 ${f}（定位方式：${method}` +
+    (method === "decoded_frame" ? "" : "，未经解码核对，误差未知") + "）";
+  return f;
+}
+
+function provenanceForFrame(frame, derivedNote) {
+  if (verifiedStillFor(frame)) {
+    return estimateProvenance(frame, "decoded_frame", { derived: derivedNote });
+  }
+  return estimateProvenance(frame,
+    state.frameMethod === "browser_seek" ? "browser_seek" : "manual_frame_input",
+    { derived: derivedNote });
+}
+function currentProvenance(derivedNote) { return provenanceForFrame(frameValue(), derivedNote); }
+
+// ---------------------------------------------------------------- box editing
+function boxTarget() {
+  return el("still").style.display === "block" ? el("still") : el("video");
+}
+function displayScale() {
+  const s = cur();
+  const t = boxTarget();
+  const w = t.clientWidth || t.getBoundingClientRect().width || s.source_width;
+  return w / s.source_width;
+}
+function boxValues() {
+  return [parseFloat(el("bx").value), parseFloat(el("by").value), parseFloat(el("bw").value)];
+}
+function setBoxValues(box) {
+  el("bx").value = box[0]; el("by").value = box[1]; el("bw").value = box[2];
+  drawBox();
+}
+function updateScaleInfo() {
+  const scale = displayScale();
+  el("scaleInfo").textContent = `显示比例 ${scale.toFixed(3)}（显示 1px = 源 ${(1 / scale).toFixed(2)}px）`;
+}
+function drawBox() {
+  const s = cur();
+  const box = CORE.clampBox(boxValues(), s);
+  const scale = displayScale();
+  const overlay = el("overlay");
+  overlay.style.display = state.boxVisible ? "block" : "none";
+  overlay.style.left = (box[0] * scale) + "px";
+  overlay.style.top = (box[1] * scale) + "px";
+  overlay.style.width = (box[2] * scale) + "px";
+  overlay.style.height = (CORE.boxHeight(box[2], s) * scale) + "px";
+  overlay.dataset.sourceBox = JSON.stringify(box);
+  updateScaleInfo();
+  return box;
+}
+function applyBox(box) {
+  const s = cur();
+  const clamped = CORE.clampBox(box, s);
+  setBoxValues(clamped);
+  markDirty();
+  return clamped;
+}
+function initDrag() {
+  const overlay = el("overlay"), handle = el("handle");
+  let mode = null, start = null;
+  function onDown(e, kind) {
+    e.preventDefault();
+    const box = CORE.clampBox(boxValues(), cur());
+    mode = kind; start = { x: e.clientX, y: e.clientY, box: box };
+    document.addEventListener("mousemove", onMove);
+    document.addEventListener("mouseup", onUp);
+  }
+  function onMove(e) {
+    if (!mode || !start) return;
+    const scale = displayScale() || 1;
+    const dx = (e.clientX - start.x) / scale;
+    const dy = (e.clientY - start.y) / scale;
+    if (mode === "move") applyBox([start.box[0] + dx, start.box[1] + dy, start.box[2]]);
+    else applyBox([start.box[0], start.box[1], start.box[2] + dx]);
+  }
+  function onUp() {
+    mode = null; start = null;
+    document.removeEventListener("mousemove", onMove);
+    document.removeEventListener("mouseup", onUp);
+  }
+  overlay.addEventListener("mousedown", e => { if (e.target !== handle) onDown(e, "move"); });
+  handle.addEventListener("mousedown", e => onDown(e, "resize"));
+}
+
+// ---------------------------------------------------------------- rendering
+function renderSampleList() {
+  const list = el("sampleList");
+  list.innerHTML = "";
+  MANIFEST.samples.forEach((s, i) => {
+    const b = document.createElement("button");
+    b.className = "samplebtn" + (i === state.current ? " active" : "");
+    b.dataset.sampleId = s.sample_id;
+    const a = ann(s);
+    b.innerHTML = `<b>${s.sample_id}</b> ${s.source_group}<small>` +
+      `${s.source_width}x${s.source_height} · ${s.fps.toFixed(3)} fps · ${s.n_frames} 帧 · ` +
+      `目标 ${s.target_ratio_wh[0]}:${s.target_ratio_wh[1]} · ` +
+      `<span class="pill ${a.status}">${a.status}</span></small>`;
+    b.onclick = () => { switchSample(i); };
+    list.appendChild(b);
+  });
+}
+
+function switchSample(index) {
+  invalidateStill();
+  state.current = index;
+  state.endpointSelection = { start: null, last: null };
+  const s = cur();
+  el("video").currentTime = 0;
+  el("video").src = s.media_rel_path;
+  el("video").load();
+  el("frameInput").value = 0;
+  state.frameMethod = "manual_frame_input";
+  const a = ann(s);
+  el("status").value = a.status;
+  el("confirmNoHighlight").checked = !!a.confirm_no_highlight;
+  el("annotator").value = a.annotator || "";
+  el("reviewer").value = a.reviewer || "";
+  el("notes").value = a.notes || "";
+  el("ratioPill").textContent = s.target_ratio_wh[0] + ":" + s.target_ratio_wh[1];
+  el("maxCrop").textContent =
+    `宽 ${s.max_legal_crop.max_width} × 高 ${s.max_legal_crop.max_height}（源 ${s.source_width}x${s.source_height}）`;
+  el("bw").max = Math.floor(s.max_legal_crop.max_width);
+  el("frameInput").max = s.n_frames - 1;
+  el("intStart").max = s.n_frames - 1;
+  el("intLast").max = s.n_frames - 1;
+  el("bx").value = 0; el("by").value = 0;
+  el("bw").value = Math.floor(s.max_legal_crop.max_width);
+  el("intStart").value = 0;
+  el("intLast").value = Math.min(9, s.n_frames - 1);
+  state.boxVisible = false;
+  el("frameInfo").textContent = "已切换样本：帧号、显示框与精确帧均已重置";
+  renderTables(); renderSampleList(); renderMeta(); updatePreview(); drawBox();
+}
+
+function renderMeta() {
+  const s = cur();
+  el("sampleMeta").innerHTML = `<b>${s.sample_id}</b> ${s.file_name}<br>` +
+    `sha256 ${s.sha256_local.slice(0, 16)}…<br>${s.duration_sec.toFixed(3)} s · ` +
+    `${s.pts.cfr_within_1us ? "CFR（容器 PTS）" : "非 CFR"}`;
+}
+
+function provLabel(p) {
+  if (!p) return "—";
+  const m = { decoded_frame: "精确帧", pts_sample: "PTS采样帧", browser_seek: "浏览器估算",
+              manual_frame_input: "手工输入" }[p.method] || p.method;
+  return m + (p.estimated_error_frames === 0 ? "" : "（误差未知）");
+}
+
+function renderTables() {
+  const s = cur(), a = ann(s);
+  const it = document.querySelector("#intervalTable tbody");
+  const kt = document.querySelector("#kfTable tbody");
+  it.innerHTML = ""; kt.innerHTML = "";
+  (a.intervals || []).forEach((iv, i) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td>${i + 1}</td><td>${iv.start_frame}</td><td>${iv.end_frame_exclusive - 1}</td>` +
+      `<td>${iv.end_frame_exclusive}</td><td>${CORE.timeFromFrame(iv.start_frame, s).toFixed(3)}</td>` +
+      `<td>${CORE.timeFromFrame(iv.end_frame_exclusive, s).toFixed(3)}</td>` +
+      `<td>${provLabel(iv.start_provenance)}</td><td>${provLabel(iv.end_provenance)}</td>`;
+    const td = document.createElement("td");
+    const del = document.createElement("button");
+    del.textContent = "删除";
+    del.onclick = () => { a.intervals.splice(i, 1); markDirty(); renderTables(); updatePreview(); };
+    td.appendChild(del); tr.appendChild(td); it.appendChild(tr);
+  });
+  (a.keyframes || []).forEach((kf, i) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td>${kf.frame}</td><td>${kf.box_xyw[0]}</td><td>${kf.box_xyw[1]}</td><td>${kf.box_xyw[2]}</td>` +
+      `<td>${CORE.boxHeight(kf.box_xyw[2], s).toFixed(2)}</td><td>${provLabel(kf.provenance)}</td>`;
+    const td = document.createElement("td");
+    const del = document.createElement("button");
+    del.textContent = "删除";
+    del.onclick = () => { a.keyframes.splice(i, 1); markDirty(); renderTables(); updatePreview(); };
+    td.appendChild(del); tr.appendChild(td); kt.appendChild(tr);
+  });
+}
+
+function currentPayload() { return CORE.buildExport(cur(), ann(cur()), { run_id: MANIFEST.run_id }); }
+
+function updatePreview() {
+  const payload = currentPayload();
+  el("preview").textContent = JSON.stringify(payload, null, 2);
+  el("exportHint").textContent = "模式：" + payload.reference_derivation.mode + " — " +
+    payload.reference_derivation.reason;
+  el("exportProblems").textContent = payload.validation.problems.length
+    ? "校验问题：" + payload.validation.problems.join("；") : "";
+  el("exportWarnings").textContent = payload.validation.warnings.length
+    ? "提示：" + payload.validation.warnings.join("；") : "";
+  el("coreBadge").textContent = "core " + CORE.CORE_VERSION +
+    "（" + (payload.validation.valid ? "校验通过" : "校验未通过") + "）";
+  el("coreBadge").className = "badge " + (payload.validation.valid ? "ok" : "bad");
+}
+
+// ---------------------------------------------------------------- drafts
+function autosave() {
+  try {
+    const draft = CORE.buildDraft(MANIFEST, state.annotations, { run_id: MANIFEST.run_id });
+    localStorage.setItem(AUTOSAVE_KEY, JSON.stringify(draft));
+    el("draftStatus").textContent = "自动草稿已更新 " + draft.created_utc;
+    el("draftStatus").className = "kv";
+  } catch (e) { el("draftStatus").textContent = "自动草稿失败：" + e.message; }
+}
+function draftReport(text, ok) {
+  el("draftStatus").textContent = text;
+  el("draftStatus").className = ok ? "kv" : "problems";
+}
+function applyDraft(draft) {
+  const verdict = CORE.validateDraft(draft, MANIFEST);
+  if (!verdict.valid) { draftReport("草稿被拒绝：" + verdict.problems.join("；"), false); return false; }
+  const next = JSON.parse(JSON.stringify(state.annotations));
+  draft.annotations.forEach(entry => {
+    if (entry.annotation !== null) next[entry.sample_id] = entry.annotation;
+  });
+  state.annotations = next;
+  state.dirty = true;
+  renderSampleList(); switchSample(state.current);
+  draftReport("草稿已恢复：" + draft.annotations.filter(a => a.annotation).length + " 条标注", true);
+  return true;
+}
+function notice(text, isError) {
+  const node = el("notice");
+  node.textContent = text || "";
+  node.className = isError ? "problems" : "warnings";
+}
+function download(name, text, hookId) {
+  // Debug text is not evidence that the browser actually wrote a file.
+  el(hookId || "lastDownload").textContent = JSON.stringify({ name: name, text: text });
+  const blob = new Blob([text], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = name;
+  document.body.appendChild(a);
+  a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 60000);
+}
+
+// ---------------------------------------------------------------- events
+el("video").addEventListener("timeupdate", () => { el("tNow").textContent = el("video").currentTime.toFixed(3); });
+el("video").addEventListener("seeked", () => { el("tNow").textContent = el("video").currentTime.toFixed(3); });
+el("frameInput").addEventListener("change", () => {
+  const f = setFrame(frameValue(), "manual_frame_input");
+  el("frameInfo").textContent = `帧号手工设为 ${f}；若需精确关键帧请点击“取精确帧”`;
+});
+el("fetchExact").onclick = async () => { await fetchExactFrame(frameValue()); };
+el("stepBack10").onclick = () => setFrame(frameValue() - 10, "browser_seek");
+el("stepBack1").onclick = () => setFrame(frameValue() - 1, "browser_seek");
+el("stepFwd1").onclick = () => setFrame(frameValue() + 1, "browser_seek");
+el("stepFwd10").onclick = () => setFrame(frameValue() + 10, "browser_seek");
+el("useEstimate").onclick = () => {
+  const s = cur();
+  const f = Math.max(0, Math.min(s.n_frames - 1, Math.round(el("video").currentTime * s.fps)));
+  invalidateStill();
+  el("frameInput").value = f;
+  state.frameMethod = "browser_seek";
+  el("frameInfo").textContent = `估算帧号 ${f}（浏览器时间，误差未知，记为 null）`;
+};
+el("status").onchange = e => {
+  const a = ann(cur());
+  a.status = e.target.value;
+  if (a.status !== "NO_HIGHLIGHT") a.confirm_no_highlight = false;
+  el("confirmNoHighlight").checked = !!a.confirm_no_highlight;
+  markDirty(); renderSampleList(); updatePreview();
+};
+el("confirmNoHighlight").onchange = e => {
+  ann(cur()).confirm_no_highlight = e.target.checked; markDirty(); updatePreview();
+};
+["annotator", "reviewer", "notes"].forEach(id => {
+  el(id).oninput = e => {
+    const a = ann(cur());
+    if (id === "annotator") a.annotator = e.target.value;
+    if (id === "reviewer") a.reviewer = e.target.value;
+    if (id === "notes") a.notes = e.target.value;
+    state.dirty = true; updatePreview();
+  };
+});
+el("showBox").onclick = () => {
+  state.boxVisible = !state.boxVisible;
+  if (state.boxVisible && !CORE.isFiniteNumber(parseFloat(el("bw").value))) {
+    el("bw").value = Math.floor(cur().max_legal_crop.max_width);
+  }
+  drawBox();
+  notice(state.boxVisible ? "框已显示：可拖动移动，拖右下角改变宽度" : "框已隐藏（数值仍在）", false);
+};
+el("clampBox").onclick = () => applyBox(boxValues());
+["bx", "by", "bw"].forEach(id => { el(id).oninput = () => { drawBox(); }; });
+el("intStart").oninput = () => { state.endpointSelection.start = null; };
+el("intLast").oninput = () => { state.endpointSelection.last = null; };
+el("setStartHere").onclick = () => {
+  el("intStart").value = frameValue();
+  state.endpointSelection.start = { sample_id: cur().sample_id, frame: frameValue(),
+                                    provenance: currentProvenance() };
+};
+el("setLastHere").onclick = () => {
+  el("intLast").value = frameValue();
+  state.endpointSelection.last = { sample_id: cur().sample_id, frame: frameValue(),
+                                   provenance: currentProvenance() };
+};
+el("addInterval").onclick = () => {
+  const s = cur(), a = ann(s);
+  const start = parseInt(el("intStart").value || "0", 10);
+  const last = parseInt(el("intLast").value || "0", 10);
+  if (!(last >= start)) { notice("最后保留帧必须 >= 起始帧", true); return; }
+  const endExclusive = last + 1;
+  if (!(start >= 0 && endExclusive <= s.n_frames)) {
+    notice(`要求 0 <= start < end_exclusive <= ${s.n_frames}`, true); return;
+  }
+  a.intervals = a.intervals || [];
+  const endpoint = (which, f, derived) => {
+    const saved = state.endpointSelection[which];
+    const p = saved && saved.sample_id === s.sample_id && saved.frame === f
+      ? Object.assign({}, saved.provenance) : estimateProvenance(f, "manual_frame_input");
+    if (derived) p.derived = derived;
+    return p;
+  };
+  a.intervals.push({
+    start_frame: start, end_frame_exclusive: endExclusive,
+    start_provenance: endpoint("start", start),
+    end_provenance: endpoint("last", last, "end_frame_exclusive = last_kept_frame + 1") });
+  markDirty(); renderTables(); updatePreview();
+};
+el("addKeyframe").onclick = () => {
+  const s = cur(), a = ann(s);
+  const box = applyBox(boxValues());
+  const problems = CORE.boxProblems(box, s, "keyframe");
+  if (problems.length) { notice(problems.join("\n"), true); return; }
+  a.keyframes = a.keyframes || [];
+  a.keyframes.push({ frame: frameValue(), box_xyw: box, provenance: currentProvenance() });
+  markDirty(); renderTables(); updatePreview();
+};
+el("exportReference").onclick = () => {
+  const payload = currentPayload();
+  if (!payload.validation.valid) {
+    el("lastRefusal").textContent = JSON.stringify({ reason: "validation_failed",
+      problems: payload.validation.problems }, null, 1);
+    notice("校验未通过，拒绝导出参考：\n" + payload.validation.problems.join("\n"), true);
+    return;
+  }
+  if (!payload.exportable_as_reference) {
+    el("lastRefusal").textContent = JSON.stringify(
+      { reason: payload.reference_derivation.mode, problems: [] }, null, 1);
+    notice("该状态不产生可消费参考：" + payload.reference_derivation.reason + "\n（草稿导出不受影响）", true);
+    return;
+  }
+  download(cur().sample_id + "_annotation_v2.json", JSON.stringify(payload, null, 2));
+};
+el("exportAll").onclick = () => {
+  const exports = [], blocked = [];
+  MANIFEST.samples.forEach(s => {
+    const payload = CORE.buildExport(s, ann(s), { run_id: MANIFEST.run_id });
+    if (payload.exportable_as_reference && payload.validation.valid) exports.push(payload);
+    else if (payload.annotation_status !== "UNANNOTATED") {
+      blocked.push({ sample_id: s.sample_id, mode: payload.reference_derivation.mode,
+                     problems: payload.validation.problems });
+    }
+  });
+  download("p1b_references_export.json", JSON.stringify(
+    { schema: "p1b_reference_bundle_v2", run_id: MANIFEST.run_id, exports: exports,
+      blocked: blocked }, null, 2));
+};
+el("copyJson").onclick = () => navigator.clipboard.writeText(JSON.stringify(currentPayload(), null, 2));
+el("resetOne").onclick = () => {
+  if (confirm("清空 " + cur().sample_id + " 的标注？")) {
+    state.annotations[cur().sample_id] = blank(); markDirty(); switchSample(state.current);
+  }
+};
+el("exportDraft").onclick = () => {
+  const draft = CORE.buildDraft(MANIFEST, state.annotations, { run_id: MANIFEST.run_id });
+  download("p1b_draft.json", JSON.stringify(draft, null, 2), "lastDownload");
+  draftReport("草稿已导出（含 " + draft.annotations.filter(a => a.annotation).length + " 条）", true);
+};
+el("restoreAutosave").onclick = () => {
+  const raw = localStorage.getItem(AUTOSAVE_KEY);
+  if (!raw) { draftReport("没有自动草稿", false); return; }
+  if (state.dirty && !confirm("当前存在未保存改动，恢复自动草稿会覆盖它们，继续？")) return;
+  try { applyDraft(JSON.parse(raw)); } catch (e) { draftReport("草稿解析失败：" + e.message, false); }
+};
+el("importDraftFile").onchange = ev => {
+  const file = ev.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    let draft;
+    try { draft = JSON.parse(reader.result); }
+    catch (e) { draftReport("草稿解析失败：" + e.message, false); return; }
+    if (state.dirty && !confirm("当前存在未保存改动，导入草稿会覆盖它们，继续？")) return;
+    applyDraft(draft);
+  };
+  reader.readAsText(file);
+};
+window.addEventListener("beforeunload", e => {
+  if (state.dirty) { e.preventDefault(); e.returnValue = "有未保存的标注改动"; return e.returnValue; }
+});
+
+// test/debug hook (documented in README_annotation.md; used by the E2E driver)
+window.__annotator = {
+  CORE: CORE, MANIFEST: MANIFEST, serverHealth: () => serverHealth(),
+  state: () => JSON.parse(JSON.stringify({ current: state.current, dirty: state.dirty,
+      annotations: state.annotations, still: state.still, serverOk: state.serverOk })),
+  currentSample: () => cur(),
+  switchSample: i => switchSample(i),
+  setFrame: (f, m) => setFrame(f, m || "manual_frame_input"),
+  fetchExactFrame: f => fetchExactFrame(f),
+  addInterval: (start, last) => { el("intStart").value = start; el("intLast").value = last;
+                                  el("addInterval").click(); },
+  addKeyframe: () => el("addKeyframe").click(),
+  boxValues: () => boxValues(),
+  setBox: b => applyBox(b),
+  overlayStyle: () => { const o = el("overlay");
+    return { display: o.style.display, left: o.style.left, top: o.style.top,
+             width: o.style.width, height: o.style.height, sourceBox: o.dataset.sourceBox }; },
+  exportReference: () => { el("lastDownload").textContent = ""; el("exportReference").click();
+                           return el("lastDownload").textContent; },
+  exportDraft: () => { el("lastDownload").textContent = ""; el("exportDraft").click();
+                       return el("lastDownload").textContent; },
+  lastRefusal: () => el("lastRefusal").textContent,
+  notice: () => el("notice").textContent,
+  applyDraft: d => applyDraft(d),
+  restoreAutosave: () => { el("restoreAutosave").click(); return el("draftStatus").textContent; },
+  preview: () => el("preview").textContent,
+  setStatus: (s, confirmNo) => { el("status").value = s;
+    el("status").dispatchEvent(new Event("change"));
+    el("confirmNoHighlight").checked = !!confirmNo;
+    el("confirmNoHighlight").dispatchEvent(new Event("change")); },
+  setIdentity: (a, r) => { el("annotator").value = a;
+                           el("annotator").dispatchEvent(new Event("input"));
+                           el("reviewer").value = r || "";
+                           el("reviewer").dispatchEvent(new Event("input")); },
+  tableCounts: () => ({ intervals: document.querySelectorAll("#intervalTable tbody tr").length,
+                        keyframes: document.querySelectorAll("#kfTable tbody tr").length }),
+  dragBox: (dxDisplay, dyDisplay) => {
+    el("overlay").dispatchEvent(new MouseEvent("mousedown", { bubbles: true, clientX: 100, clientY: 100 }));
+    document.dispatchEvent(new MouseEvent("mousemove", { bubbles: true,
+      clientX: 100 + dxDisplay, clientY: 100 + dyDisplay }));
+    document.dispatchEvent(new MouseEvent("mouseup", { bubbles: true, clientX: 100 + dxDisplay,
+      clientY: 100 + dyDisplay }));
+    return el("overlay").dataset.sourceBox;
+  },
+  resizeBox: (dxDisplay) => {
+    el("handle").dispatchEvent(new MouseEvent("mousedown", { bubbles: true, clientX: 100, clientY: 100 }));
+    document.dispatchEvent(new MouseEvent("mousemove", { bubbles: true, clientX: 100 + dxDisplay,
+      clientY: 100 }));
+    document.dispatchEvent(new MouseEvent("mouseup", { bubbles: true, clientX: 100 + dxDisplay,
+      clientY: 100 }));
+    return el("overlay").dataset.sourceBox;
+  },
+};
+
+// ---------------------------------------------------------------- boot
+initDrag();
+renderSampleList();
+renderMeta();
+switchSample(0);
+serverHealth().then(ok => {
+  if (ok) el("frameInfo").textContent = "精确帧服务已连接，可点“取精确帧”";
+});
+document.title = "AIC P1b pilot annotation v2 ready";
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "name": "rematch_c_engineering_probe_02",
+  "command": [
+    "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+    "-B",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/dense_head/probe_8b.py",
+    "--model-dir",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/models/Qwen3-VL-8B-Instruct",
+    "--model-receipt",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/model_download_v2_status.json",
+    "--out-dir",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/dense_head/probe8b_02",
+    "--engineering-only",
+    "--updates",
+    "3"
+  ],
+  "started_utc": "2026-10-05T13:04:29.013386+00:00",
+  "runner_pid": 3129434,
+  "reserved_seconds": 1800,
+  "teardown_reserve_seconds": 120,
+  "prior_charged_seconds": 73323.93132934906,
+  "gpu_time_mode": "UNLIMITED",
+  "max_total_gpu_seconds": null,
+  "resource_policy_sha256": "74f15dc694428d5d421d58c6d790560ee6e8d86fc8847db6625b14fbeb38e8c6",
+  "disk_before": {
+    "free_bytes": 231154057216,
+    "work_bytes": 50086322176
+  },
+  "planned_output_bytes": 268435456,
+  "capacity_reason": "8B rank16 synthetic probe: ~64MB adapter and head plus JSON evidence, no base checkpoint copy",
+  "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+  "runner_source_sha256": "0cddca5f85a2a885ee2ac50e9193819b58dead39b6b561a30cb1c97f192ca961",
+  "child_pid": 3129438,
+  "finished_utc": "2026-10-05T13:07:12.121969+00:00",
+  "charged_seconds": 163.10868497891352,
+  "exit_code": 0,
+  "stop_reason": null,
+  "sampled_peak_memory_mib": 18766,
+  "status": "completed",
+  "disk_after": {
+    "free_bytes": 231089836032,
+    "work_bytes": 50150387712
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "aic_non_test_cost_geometry_v1",
+  "videos": 8,
+  "A_measured_temporal_windows": 8,
+  "A_measured_temporal_wall_seconds": 23.839902142994106,
+  "A_measured_temporal_peak_mib": 9871.55,
+  "production_media_seconds": 8472.2,
+  "production_window_count": 521,
+  "production_source_count": 426,
+  "estimation_warning": "4B baseline short engineering windows do not establish 8B 32s gradient cost; model load and decode are included in old A walltime",
+  "C_cost_fixed_scope": "one non-test source [0,32), 64 frames, 16 query cells, synthetic labels only",
+  "C_semantic_admission": false
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "aic_dense_cost_admission_v1",
+  "scope": "ONE_FIXED_REAL_NONTEST_32S_SYNTHETIC_COST_ONLY",
+  "cost_probe_admitted": true,
+  "formal_c_bce_admitted": false,
+  "semantic_labels_read": false,
+  "contest_media_read": false,
+  "config_sha256": "4f0c01871569f0b7818c627af81c9c8fd076cff4d18a9675699d0ec6221fc636",
+  "engineering_gate": {
+    "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/dense_head/probe8b_02/probe_report.json",
+    "sha256": "456228d1ce68daef6963c32bfc5c96022763790e7af81cee45834806fc9809bf"
+  },
+  "authorization_basis": "Supervisor delegated one fixed source-relative [0,32) 64-frame 16-query 3-update real non-test cost probe; synthetic labels only; formal BCE STOP remains",
+  "resource_entry": "controller/gpu_run.py; supervisor live no-conflict/capacity check and common lock/ledger; no fixed free-VRAM gate",
+  "stop_conditions": [
+    "Any PTS/frame/byte/query/runtime/parameter/freeze/restoration mismatch",
+    "OOM or nonfinite/missing gradients: fail, preserve report, no smaller recipe retry",
+    "1800-second job limit; unique output; no checkpoint or formal candidate"
+  ]
+}

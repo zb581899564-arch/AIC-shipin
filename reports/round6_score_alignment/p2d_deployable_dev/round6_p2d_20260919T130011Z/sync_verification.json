@@ -1,0 +1,14 @@
+{
+  "schema": "aic6_p2d_sync_verification_v1",
+  "run_id": "round6_p2d_20260919T130011Z",
+  "scope": "all 11 code files, 25 evidence files in final_freeze.json, plus final_freeze.json itself",
+  "local_files": 37,
+  "remote_files": 37,
+  "hashes_checked": 37,
+  "mismatches": 0,
+  "remote_root": "/home/inspur/aic_video_work",
+  "remote_stage_root": "/home/inspur/aic_video_work/round6_score_alignment/p2d_deployable_dev",
+  "first_freeze_sha256": "b5507131bf25deff8c0ab0d5189a3bc831e53d145c9bf3c8428da6734a57a356",
+  "status": "PASS_REMOTE_LOCAL_SHA256_SYNC",
+  "note": "Evidence paths under the local reports/round6_score_alignment tree map to the permitted remote round6_score_alignment/p2d_deployable_dev run directory; filenames and bytes are identical."
+}

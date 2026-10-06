@@ -1,0 +1,28 @@
+{
+  "status": "PASS_JOINT_ENGINEERING",
+  "official_status": "NOT_OFFICIAL_SCORE",
+  "selected_sha256": "b3ff9bb58c76782efe1fadf57315e9764184e70eb5c762816d97754ccd12503e",
+  "shots_sha256": "268c03bf5ed0ddbee5212aa76ea7ce193e45e6ae9e51d170192e4bc0eb5be744",
+  "anchors_sha256": "fa0e09c9f7ff4570d19b710e60da3928d3ecce8ce8afb5c6f1e9e55189f512a9",
+  "anchor_output_sha256": "244339479a194f627cabe7450301ec111d576bbefe78af8f6721b67c76572e61",
+  "predictions_sha256": "3aadab519a38c8c532013fd4f06c7c3aa63e996a71d170af2c6318eaaff0c326",
+  "provenance_sha256": "1ea2d03078c517ed9c61d8172e5d1f3433191d8d72b7ea6f70b90b4f111b547e",
+  "videos": 8,
+  "selected_frames": 396,
+  "composed_frames": 396,
+  "anchor_calls": 68,
+  "call_reduction": 0.8282828282828283,
+  "shots": 14,
+  "missing": 0,
+  "extra": 0,
+  "illegal": 0,
+  "cross_shot_reuse": 0,
+  "silent_fallbacks": 0,
+  "weak_roi_inputs_used": 0,
+  "old_test_boxes_used": 0,
+  "source_counts": {
+    "QWEN_ANCHOR_SAME_FRAME": 68,
+    "SHOT_LINEAR_INTERPOLATION": 328
+  },
+  "violations": []
+}

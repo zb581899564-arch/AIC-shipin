@@ -1,0 +1,25 @@
+{
+  "status": "STOP_KEEP_BASE",
+  "metric_status": "WEAK_TEACHER_DIAGNOSTIC_NOT_OFFICIAL_SCORE",
+  "checks": {
+    "group_macro_f1_gain_at_least_0_03": false,
+    "paired_ci95_lower_bound_above_zero": false,
+    "valid_rate_not_lower_than_base": true
+  },
+  "base_group_macro_f1": 0.4462191807208869,
+  "fresh_group_macro_f1": 0.46535596620964786,
+  "fresh_minus_base": {
+    "mean": 0.019136785488760952,
+    "ci95": [
+      -0.06464286710532564,
+      0.10564128747401214
+    ],
+    "source_groups": 74,
+    "seed": 20260920,
+    "draws": 10000
+  },
+  "base_valid_rate": 0.9024390243902439,
+  "fresh_valid_rate": 0.926829268292683,
+  "interpretation": "This selects the temporal component for further non-test engineering only; it is not an official-score claim or test-set authorization.",
+  "diagnostics_sha256": "88bc2ca31998184700471d0e9d7c14135f77a9f5efdedfd0258f4c323e210e75"
+}

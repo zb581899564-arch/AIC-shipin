@@ -1,0 +1,69 @@
+{
+  "status": "completed",
+  "candidate_order": [
+    "windowed",
+    "multi"
+  ],
+  "accepted_in_dev_order": [
+    "multi"
+  ],
+  "selected": "multi",
+  "holdout_used": true,
+  "holdout_tuning": false,
+  "training_used": false,
+  "official_aic_score": null,
+  "results": {
+    "single": {
+      "kind": "internal_query_conditioned_diagnostic",
+      "official_aic_score": null,
+      "count": 100,
+      "empty_count": 26,
+      "metrics": {
+        "f1": 45.08904673910852,
+        "precision": 53.98033956386749,
+        "recall": 47.505529513567105,
+        "mean_gt_best_window_iou": 34.55792398451668,
+        "saliency_f1": 39.78765318795347
+      },
+      "policy": "single",
+      "wall_seconds": 332.2701408781577,
+      "reference_sha256": "ecf13785fd6214c308cf7d9c0d0410263bf37de46bbf47cdf6428b77e46aaf79",
+      "predictions_sha256": "714beebf5baada10c3f0f8106d4e6c52bd9c6e045d03a1b0531825412ceb1725"
+    },
+    "windowed": {
+      "policy": "windowed",
+      "status": "diagnostic_rejected",
+      "reason": "non-success prediction qvh_9660: invalid",
+      "accepted_holdout": false
+    },
+    "multi": {
+      "kind": "internal_query_conditioned_diagnostic",
+      "official_aic_score": null,
+      "count": 100,
+      "empty_count": 8,
+      "metrics": {
+        "f1": 50.868019296935515,
+        "precision": 65.04859810436837,
+        "recall": 51.89673497758238,
+        "mean_gt_best_window_iou": 37.72824034516476,
+        "saliency_f1": 46.54091140036635
+      },
+      "policy": "multi",
+      "wall_seconds": 332.7961752768606,
+      "reference_sha256": "ecf13785fd6214c308cf7d9c0d0410263bf37de46bbf47cdf6428b77e46aaf79",
+      "predictions_sha256": "4c106aba1e3c32905b8942af68b194c42f188659325d659a04d8c464ce037d11",
+      "comparison": {
+        "delta_f1_pp": 5.778972557826997,
+        "source_groups": 33,
+        "bootstrap_draws": 10000,
+        "seed": 42,
+        "ci95_pp": [
+          0.03912846928006782,
+          10.951274986194255
+        ],
+        "eligible_dev": true
+      },
+      "accepted_holdout": true
+    }
+  }
+}

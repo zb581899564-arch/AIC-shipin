@@ -1,0 +1,32 @@
+{
+  "schema": "aic6_p2d_next_stage_decision_v1",
+  "run_id": "round6_p2d_20260919T130011Z",
+  "engineering_answer": "YES: the fixed eight-source, 276-frame development slice ran end-to-end with complete deployable same-frame spatial outputs.",
+  "cost_answer": "212.0172 charged GPU seconds (0.0589 h), 9070 MiB monitored peak, 141166 remote bytes added by the GPU run.",
+  "quality_answer": "NOT DETERMINABLE beyond sparse weak diagnostics: only 11 frames in six source groups have coincident 9:16 weak ROI labels, and there is no eligible 16:9 quality reference.",
+  "priority": [
+    {
+      "rank": 1,
+      "direction": "BUILD_CREDIBLE_COMPOSITION_REFERENCE",
+      "basis": "Engineering is complete, while quality evidence is the binding gate. Existing P1b 16:9 media are identity-traceable but unannotated and lack a per-video licence grant in the project audit."
+    },
+    {
+      "rank": 2,
+      "direction": "TEMPORAL_ENDPOINT_REFINEMENT_AFTER_REFERENCE_GATE",
+      "basis": "On this fixed slice, weak temporal macro F1 is 0.4653, two of eight videos have zero temporal overlap, and comparable ordered endpoints have 1.222 s mean and 4.0133 s maximum absolute error."
+    },
+    {
+      "rank": 3,
+      "direction": "KEEP_UNFINETUNED_QWEN_SPATIAL_AS_BASELINE",
+      "basis": "The spatial arm is complete and its six-group sparse weak mean IoU is 0.8614 versus 0.7338 for center, but the sample is too sparse for a model-selection claim. The prior 16-source space LoRA regressed and remains stopped."
+    }
+  ],
+  "not_authorized": [
+    "expand to all 82 dev videos",
+    "open the 64-row holdout",
+    "run competition test videos",
+    "train or fine-tune",
+    "package or upload a submission"
+  ],
+  "stage_status": "STOP_WAIT_SUPERVISOR_ACCEPTANCE"
+}

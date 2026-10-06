@@ -1,0 +1,16 @@
+{
+  "scope": "MAC_8B_128_LOWRES_INTERVAL_SFT_NONTEST",
+  "runner_pid": 77509,
+  "source_lock_sha256": "fbb48910afe94eb8ab6aa50db1a2eb3174cab2d4c264be65c8aec6205e46dd0a",
+  "started_utc": "2026-10-06T07:18:42.616476+00:00",
+  "quality_claim": false,
+  "dev_evaluated": false,
+  "test_inference_started": false,
+  "uploaded": false,
+  "status": "STOP_MAC_PIPELINE",
+  "failure_type": "AdmissionRejected",
+  "failure": "Mac probe failed; no automatic retry/full continuation",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/choubk/codex-workspace/projects/aic-video/mac_sft8b_128_lowres_20261006T0720Z/finish_mac.py\", line 170, in main\n    probe=phase('probe',config,args.expected_lock,config['probe_max_seconds'],linux,total_planned)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/choubk/codex-workspace/projects/aic-video/mac_sft8b_128_lowres_20261006T0720Z/finish_mac.py\", line 125, in phase\n    require(reason is None and exit_code==0,'Mac '+phase_name+' failed; no automatic retry/full continuation')\n  File \"/Users/choubk/codex-workspace/projects/aic-video/mac_sft8b_128_lowres_20261006T0720Z/sft_contract.py\", line 25, in require\n    if not condition: raise AdmissionRejected(message)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nsft_contract.AdmissionRejected: Mac probe failed; no automatic retry/full continuation\n",
+  "full_training_completed": false,
+  "finished_utc": "2026-10-06T07:19:32.021198+00:00"
+}

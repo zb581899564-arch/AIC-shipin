@@ -1,0 +1,26 @@
+{
+  "name": "r6weak_temporal_base",
+  "command": [
+    "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+    "/home/inspur/aic_video_work/round6_score_alignment/weak_dev_pilot/remote_temporal_baselines.py",
+    "BASE",
+    "/home/inspur/aic_video_work/round6_score_alignment/weak_dev_pilot/dev_temporal.jsonl",
+    "/home/inspur/aic_video_work/round6_score_alignment/weak_dev_pilot/temporal_BASE.jsonl"
+  ],
+  "started_utc": "2026-09-17T15:13:14.222079+00:00",
+  "runner_pid": 906610,
+  "reserved_seconds": 1200,
+  "teardown_reserve_seconds": 120,
+  "prior_charged_seconds": 51144.717719952576,
+  "disk_before": {
+    "free_bytes": 152819466240,
+    "work_bytes": 40750280704
+  },
+  "child_pid": 906614,
+  "finished_utc": "2026-09-17T15:17:16.652945+00:00",
+  "charged_seconds": 242.43096183473244,
+  "exit_code": 0,
+  "stop_reason": null,
+  "sampled_peak_memory_mib": 11106,
+  "status": "completed"
+}

@@ -1,0 +1,119 @@
+{
+  "status": "MATCH",
+  "items": [
+    {
+      "remote_path": "code/remote_infer_p2t.py",
+      "remote_sha256": "21273f29fac30c43b5ed2405c3a9813c4dce43dd88061072b15eac228034c8dc",
+      "local_path": "reports/round6_score_alignment/p2t_temporal_improvement/round6_p2t2_equal_exposure_20260920T1555Z/code/remote_infer_p2t.py",
+      "local_sha256": "21273f29fac30c43b5ed2405c3a9813c4dce43dd88061072b15eac228034c8dc",
+      "match": true
+    },
+    {
+      "remote_path": "code/remote_train_p2t.py",
+      "remote_sha256": "b22983570dcd6b6dcf0dff8dc8d896dc0aa81834cb813577cdc757a698c432a1",
+      "local_path": "reports/round6_score_alignment/p2t_temporal_improvement/round6_p2t2_equal_exposure_20260920T1555Z/code/remote_train_p2t.py",
+      "local_sha256": "b22983570dcd6b6dcf0dff8dc8d896dc0aa81834cb813577cdc757a698c432a1",
+      "match": true
+    },
+    {
+      "remote_path": "code/temporal_common.py",
+      "remote_sha256": "bb8f47896e20e069e9ddf992d94488132ccbee46dc850a2658851f4aa52946b4",
+      "local_path": "reports/round6_score_alignment/p2t_temporal_improvement/round6_p2t2_equal_exposure_20260920T1555Z/code/temporal_common.py",
+      "local_sha256": "bb8f47896e20e069e9ddf992d94488132ccbee46dc850a2658851f4aa52946b4",
+      "match": true
+    },
+    {
+      "remote_path": "inputs/dev_temporal.jsonl",
+      "remote_sha256": "88813a6d106b0f5c43b8121c29f7eaa94cbc9aa9328260b50e31485247031018",
+      "local_path": "reports/round6_score_alignment/p2t_temporal_improvement/round6_p2t2_equal_exposure_20260920T1555Z/inputs/dev_temporal.jsonl",
+      "local_sha256": "88813a6d106b0f5c43b8121c29f7eaa94cbc9aa9328260b50e31485247031018",
+      "match": true
+    },
+    {
+      "remote_path": "inputs/protocol.json",
+      "remote_sha256": "9130934e66a19c40cbc3d940831cccace83bcaf4059714654bd09a90b405f015",
+      "local_path": "reports/round6_score_alignment/p2t_temporal_improvement/round6_p2t2_equal_exposure_20260920T1555Z/inputs/protocol.json",
+      "local_sha256": "9130934e66a19c40cbc3d940831cccace83bcaf4059714654bd09a90b405f015",
+      "match": true
+    },
+    {
+      "remote_path": "inputs/train_temporal.jsonl",
+      "remote_sha256": "fa839715ff32880096538b7f386f14ca8479138825c69bf8ddd69ff710ec41ec",
+      "local_path": "reports/round6_score_alignment/p2t_temporal_improvement/round6_p2t2_equal_exposure_20260920T1555Z/inputs/train_temporal.jsonl",
+      "local_sha256": "fa839715ff32880096538b7f386f14ca8479138825c69bf8ddd69ff710ec41ec",
+      "match": true
+    },
+    {
+      "remote_path": "outputs/dev82_equal120.jsonl",
+      "remote_sha256": "2a771477b44354f32d10f44d9958565e05f450cc5d8a74546215fa768d59510e",
+      "local_path": "reports/round6_score_alignment/p2t_temporal_improvement/round6_p2t2_equal_exposure_20260920T1555Z/outputs/dev82_equal120.jsonl",
+      "local_sha256": "2a771477b44354f32d10f44d9958565e05f450cc5d8a74546215fa768d59510e",
+      "match": true
+    },
+    {
+      "remote_path": "outputs/dev82_equal120.jsonl.run.json",
+      "remote_sha256": "b65469ed1ce75b699680d223b69f4c382ab3b0cb034990e1a2ec06b5c4e2bb1d",
+      "local_path": "reports/round6_score_alignment/p2t_temporal_improvement/round6_p2t2_equal_exposure_20260920T1555Z/outputs/dev82_equal120.jsonl.run.json",
+      "local_sha256": "b65469ed1ce75b699680d223b69f4c382ab3b0cb034990e1a2ec06b5c4e2bb1d",
+      "match": true
+    },
+    {
+      "remote_path": "runs/full_epochs5/adapter/adapter_config.json",
+      "remote_sha256": "3c26b5c7e48a54f8a68d37b8092da3bf011d48315c0e067ef5b0062171acaecf",
+      "local_path": "reports/round6_score_alignment/p2t_temporal_improvement/round6_p2t2_equal_exposure_20260920T1555Z/runs/full_epochs5/adapter/adapter_config.json",
+      "local_sha256": "3c26b5c7e48a54f8a68d37b8092da3bf011d48315c0e067ef5b0062171acaecf",
+      "match": true
+    },
+    {
+      "remote_path": "runs/full_epochs5/adapter/adapter_model.safetensors",
+      "remote_sha256": "c9bf3754a05a42d69ee8c4d11f56c41346d927094fd643863f0cb55626b8e6a0",
+      "local_path": "reports/round6_score_alignment/p2t_temporal_improvement/round6_p2t2_equal_exposure_20260920T1555Z/runs/full_epochs5/adapter/adapter_model.safetensors",
+      "local_sha256": "c9bf3754a05a42d69ee8c4d11f56c41346d927094fd643863f0cb55626b8e6a0",
+      "match": true
+    },
+    {
+      "remote_path": "runs/full_epochs5/adapter/README.md",
+      "remote_sha256": "f8ba0639d29fc1b07b01023089d6c5da7859f8d9aa790e97910322c6f5b70289",
+      "local_path": "reports/round6_score_alignment/p2t_temporal_improvement/round6_p2t2_equal_exposure_20260920T1555Z/runs/full_epochs5/adapter/README.md",
+      "local_sha256": "f8ba0639d29fc1b07b01023089d6c5da7859f8d9aa790e97910322c6f5b70289",
+      "match": true
+    },
+    {
+      "remote_path": "runs/full_epochs5/train_report.json",
+      "remote_sha256": "87eebbe468779d0272b99cb770f23e0ea807a34555df50ff8fb615d5ff0e9a00",
+      "local_path": "reports/round6_score_alignment/p2t_temporal_improvement/round6_p2t2_equal_exposure_20260920T1555Z/runs/full_epochs5/train_report.json",
+      "local_sha256": "87eebbe468779d0272b99cb770f23e0ea807a34555df50ff8fb615d5ff0e9a00",
+      "match": true
+    },
+    {
+      "remote_path": "r6p2t2_equal120_train_20260920t1555z.resource.json",
+      "remote_sha256": "2121eb2ff30f1461c615c59dfb05cfcd306c7c7aa82d88f92fdb889ac7d39b35",
+      "local_path": "reports/round6_score_alignment/p2t_temporal_improvement/round6_p2t2_equal_exposure_20260920T1555Z/evidence/r6p2t2_equal120_train_20260920t1555z.resource.json",
+      "local_sha256": "2121eb2ff30f1461c615c59dfb05cfcd306c7c7aa82d88f92fdb889ac7d39b35",
+      "match": true
+    },
+    {
+      "remote_path": "r6p2t2_equal120_train_20260920t1555z.log",
+      "remote_sha256": "7d7bdca04d7d8f1ed1e6257d1bc229ee21d0d08405536d8853d63bcb10f462ee",
+      "local_path": "reports/round6_score_alignment/p2t_temporal_improvement/round6_p2t2_equal_exposure_20260920T1555Z/evidence/r6p2t2_equal120_train_20260920t1555z.log",
+      "local_sha256": "7d7bdca04d7d8f1ed1e6257d1bc229ee21d0d08405536d8853d63bcb10f462ee",
+      "match": true
+    },
+    {
+      "remote_path": "r6p2t2_equal120_dev82_20260920t1555z.resource.json",
+      "remote_sha256": "57317984d46673fad645ffbd68104358e975d4b6af6a4bc4cc8fd1519166c875",
+      "local_path": "reports/round6_score_alignment/p2t_temporal_improvement/round6_p2t2_equal_exposure_20260920T1555Z/evidence/r6p2t2_equal120_dev82_20260920t1555z.resource.json",
+      "local_sha256": "57317984d46673fad645ffbd68104358e975d4b6af6a4bc4cc8fd1519166c875",
+      "match": true
+    },
+    {
+      "remote_path": "r6p2t2_equal120_dev82_20260920t1555z.log",
+      "remote_sha256": "608065fef2a41c7b15a011dd7332e6f893bcaf8d61314f748629088deecf5179",
+      "local_path": "reports/round6_score_alignment/p2t_temporal_improvement/round6_p2t2_equal_exposure_20260920T1555Z/evidence/r6p2t2_equal120_dev82_20260920t1555z.log",
+      "local_sha256": "608065fef2a41c7b15a011dd7332e6f893bcaf8d61314f748629088deecf5179",
+      "match": true
+    }
+  ],
+  "matched": 16,
+  "total": 16
+}

@@ -1,0 +1,29 @@
+{
+  "status": "P2J_ENGINEERING_ACCEPTED_DEV_ONLY",
+  "checks": {
+    "cpu_tests_25_passed": true,
+    "calibration_gate_passed": true,
+    "calibration_call_reduction_at_least_0_80": true,
+    "calibration_group_macro_iou_at_least_0_90": true,
+    "anchor_requests_68_unique": true,
+    "anchor_inference_68_valid": true,
+    "anchor_decode_identity_exact": true,
+    "joint_engineering_passed": true,
+    "all_396_selected_frames_composed": true,
+    "provenance_unique": true,
+    "all_boxes_legal": true,
+    "interpolation_bounded_to_8": true,
+    "no_cross_shot_or_fallback": true,
+    "no_weak_or_old_test_boxes": true,
+    "strict_loader_passed": true,
+    "call_reduction_at_least_0_80": true,
+    "native_16x9_ratio_bug_reproduced_and_fixed": true,
+    "9x16_outputs_byte_identical_after_ratio_fix": true,
+    "resource_job_completed": true,
+    "gpu_charge_within_0_25h": true
+  },
+  "passed": 20,
+  "total": 20,
+  "failed": [],
+  "evidence_limit": "Non-test engineering fidelity and format evidence only; not ground truth or an official-score claim."
+}

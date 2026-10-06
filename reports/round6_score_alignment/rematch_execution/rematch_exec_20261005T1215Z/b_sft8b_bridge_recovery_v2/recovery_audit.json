@@ -1,0 +1,15 @@
+{
+  "ssh_wall_timeout_seconds": 120,
+  "linux_controller_unchanged": 915410,
+  "utc": "2026-10-06T12:56:55.7365370Z",
+  "helper_sha256": "CC40B4EFEE7A7D8E3514363F4D1A83C526E114600AC7B496AE4EE5D4155A7778",
+  "old_pid": 52676,
+  "deadline_days": 3,
+  "script_sha256": "7E591505A5AB333AFDB9B7A8ACBDE7651FB39A5A1506B74663289D216E53C57D",
+  "original_v3_bound_source_modified": false,
+  "nontransport_errors": "STOP",
+  "transport_retry_seconds": 30,
+  "old_failure": "Mac live identity unavailable after bounded ssh child52612 timeout",
+  "old_process_alive": false,
+  "route": "scp -J macmini"
+}

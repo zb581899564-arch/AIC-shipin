@@ -1,0 +1,34 @@
+{
+  "schema": "aic_temporal_sft8b_admission_v1",
+  "scope": "TEMPORAL_8B_SFT_SMOKE_NONTEST",
+  "authorized": true,
+  "registered_route": "TEMPORAL_8B_INTERVAL_SFT",
+  "training_authorized_by_user": true,
+  "training_authorization_evidence": {
+    "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_v1/training_authorization_B_SMOKE.json",
+    "sha256": "80af40f8fdac6af405229763a6fc1acff6e1f8809f22e191a4c54cbccee39dbf"
+  },
+  "config_sha256": "c6684ba5d381f3e370d1a6036d8dcfffc442d0bac1f90b7a5ab258ed95a7036d",
+  "train_manifest_sha256": "0754fdcfaa01eb4027b5c845c25af2abacc705a89f0cb695ebb5293f29385266",
+  "r7_train_registry_sha256": "71552f64ccdb125ca11a451baf5b8a22491d51d73db1a42e0ce1a545262d1cd4",
+  "model_receipt_sha256": "ab3e30b18dc54ceb7cb90b07194eff30449db75653483da5b213807137d8da70",
+  "source_code_sha256": {
+    "train_sft.py": "b3e291aad6240c55e6366f5d8138269e5f184f196f4ba989f5a586321ba3f506",
+    "sft_contract.py": "c2e762e7deca7cbc15d6d2b158e5251eeb25141b5cf5b02b8996042619c3414d"
+  },
+  "resource_preflight_pass": true,
+  "shared_gpu_queue_approved": true,
+  "disk_peak_within_80gib": true,
+  "budget_runner_required": true,
+  "formal_c_bce_admitted": false,
+  "A_completed_evidence_sha256": "d8aa5561f72acfbbf4c693ab5b9bb327f89b64f1030546ec9750ab86a7185b7e",
+  "planned_output_bytes": 177209344,
+  "live_resource": {
+    "work_bytes": 50362806272,
+    "free_bytes": 230897700864
+  },
+  "main_registration_entry_sha256": "af8420584e345084501de8849e3742f5ea91ff28c2eae523b11780e2052d4b16",
+  "previous_queue_completion_sha256": "8bee871f2e2e6016b2d2988ec3efe66b38bcaa648103dba1ee708fdd077ad82b",
+  "previous_queue_failure_preserved": true,
+  "unchanged_B_smoke_recipe": true
+}

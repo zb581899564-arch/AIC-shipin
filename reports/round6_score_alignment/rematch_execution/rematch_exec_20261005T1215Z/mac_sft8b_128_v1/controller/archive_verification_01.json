@@ -1,0 +1,163 @@
+{
+  "status": "PASS_INDEPENDENT_LINUX_ARCHIVED_MAC_SOURCE_SHA256",
+  "files": 31,
+  "source_lock_sha256": "5b80284ffdd372725ac02088098f7378d63ab013698d71aa353297a48f327257",
+  "all_sha256_match": true,
+  "results": [
+    {
+      "name": "assets_manifest.json",
+      "sha256": "88d159b085d4842e7f9660738b9d4a632c9d579544bc43ded335d17ca0acc488",
+      "bytes": 223945
+    },
+    {
+      "name": "authorization.json",
+      "sha256": "719044421efe8f5c3baa28136b566ef384b35c3efa431ab2d1b291103c79a036",
+      "bytes": 716
+    },
+    {
+      "name": "config.json",
+      "sha256": "12b26c9a622747c83a49ccf835fc497f6943b157dae433cf32098d39dd92b73f",
+      "bytes": 1013
+    },
+    {
+      "name": "environment_final_freeze.txt",
+      "sha256": "f66b34417adb442152bb5f07c9bb3ae76797671ab99fc50e067c7aa7591666c6",
+      "bytes": 499
+    },
+    {
+      "name": "preparation_receipt.json",
+      "sha256": "5fc6058e83eda30832218e758a6d6b4b83a39897ed4573803520a0fb0fdad0e3",
+      "bytes": 1334
+    },
+    {
+      "name": "linux_capacity_snapshot.json",
+      "sha256": "939b5b6fb3bc5b96e076f6ba4d9c3b0f272c4937f70ad1af7c19483369245cd7",
+      "bytes": 657
+    },
+    {
+      "name": "model_receipt.json",
+      "sha256": "94042994ce3ac55709e903eb910e60c683ba782e477060f204372cacbba3b219",
+      "bytes": 2658
+    },
+    {
+      "name": "original_train.jsonl",
+      "sha256": "ef427866153a9601be01b6e12356951c2fb56730525b0d7b7c353651c2930ddf",
+      "bytes": 761627
+    },
+    {
+      "name": "r7_train_registry.json",
+      "sha256": "71552f64ccdb125ca11a451baf5b8a22491d51d73db1a42e0ce1a545262d1cd4",
+      "bytes": 766632
+    },
+    {
+      "name": "full_train.jsonl",
+      "sha256": "124801624736f960d15074ad65840d4e2850dcb7d8d5d3b16a2cb54e7eee4bc0",
+      "bytes": 510892
+    },
+    {
+      "name": "smoke_train.jsonl",
+      "sha256": "0754fdcfaa01eb4027b5c845c25af2abacc705a89f0cb695ebb5293f29385266",
+      "bytes": 12029
+    },
+    {
+      "name": "probe_train.jsonl",
+      "sha256": "37a9143f0a1a544a6111eab4efe21a6ea7c2f84b7d6b2dd9f6c66ffeb167d7ce",
+      "bytes": 14269
+    },
+    {
+      "name": "source_map.json",
+      "sha256": "3c7431ebc0748aab146a5b33bcb839e6b0587b21e9acb6d006e7b31cc19a0b2a",
+      "bytes": 158185
+    },
+    {
+      "name": "sft_contract.py",
+      "sha256": "c2e762e7deca7cbc15d6d2b158e5251eeb25141b5cf5b02b8996042619c3414d",
+      "bytes": 19501
+    },
+    {
+      "name": "row_contract.py",
+      "sha256": "9447dfe87e6fa30dea930b7cf7aa4543eb3a1777f7486a5ae5cc0f747e9a8c14",
+      "bytes": 5237
+    },
+    {
+      "name": "train_sft.py",
+      "sha256": "b3e291aad6240c55e6366f5d8138269e5f184f196f4ba989f5a586321ba3f506",
+      "bytes": 20362
+    },
+    {
+      "name": "temporal_common.py",
+      "sha256": "bb8f47896e20e069e9ddf992d94488132ccbee46dc850a2658851f4aa52946b4",
+      "bytes": 8859
+    },
+    {
+      "name": "hash_helpers.py",
+      "sha256": "ae86d3727eb769e2f5f16600816ff143eb4dbb9c21d9bdc71ec951aa5dde97ee",
+      "bytes": 1271
+    },
+    {
+      "name": "mac_inputs.py",
+      "sha256": "a6a5c58cf981a5936ccd127864decee38bec81bec83d968ec8170c5d376818de",
+      "bytes": 4169
+    },
+    {
+      "name": "mac_contract.py",
+      "sha256": "99747266c76ec96c64692b6399ee4c0175ea9b19fb54f583e19a192fe5d219a3",
+      "bytes": 5547
+    },
+    {
+      "name": "train_mac.py",
+      "sha256": "d500690fdb00a46830358c441706206e56290467ad459881667b89b518c6a0a1",
+      "bytes": 14002
+    },
+    {
+      "name": "test_mac_cpu.py",
+      "sha256": "7e6746b7ceb0db4f96041d14d94e796ce2a0ff69c2c8b829ab9b914976e6004d",
+      "bytes": 6209
+    },
+    {
+      "name": "phase_gate.py",
+      "sha256": "f1d7865bea6e5b73eb275bda4b9a2517d63907f77cc6a5140d6cb3ae5b8a86cc",
+      "bytes": 2314
+    },
+    {
+      "name": "test_phase_gate.py",
+      "sha256": "c70fb990017983d6f3d029d42407bdbd8543a9f6ac1696fef1a3e7446b6dbac1",
+      "bytes": 2217
+    },
+    {
+      "name": "finish_mac.py",
+      "sha256": "4ea575a81903a69fbd540bbeb115d10b006c4a1339410809ba095cbc283362fb",
+      "bytes": 11123
+    },
+    {
+      "name": "seal_mac.py",
+      "sha256": "18bba9f9ad3eeac38f2991032ebfbafb67be7c8dd1652c4133b392cd10f06a49",
+      "bytes": 1525
+    },
+    {
+      "name": "status_mac.py",
+      "sha256": "4976059b6a4c8d346487b211d620518f529e5e77bce6ec2e220f9eae1de641fa",
+      "bytes": 1279
+    },
+    {
+      "name": "record_preflight.py",
+      "sha256": "54cc3958b6bfee5c958cb50ceee6457eceef3e7d59fe0108dc6cf18bc6f4d903",
+      "bytes": 2354
+    },
+    {
+      "name": "launch_owned_mac.py",
+      "sha256": "a42afdc66e2f3fa1f2378a2b9ae5a55525836a038f54d33fc2f9e424381e1b9e",
+      "bytes": 1091
+    },
+    {
+      "name": "asset_http_receiver.py",
+      "sha256": "3983e6e2d261cd23b570622a6e8adea454eaa0686b14bf5e2974438801863301",
+      "bytes": 3717
+    },
+    {
+      "name": "PROTOCOL.md",
+      "sha256": "366680d3e01da664da924413d04901a9f4d7ea2ec8d746e5e28dde54cf6ba0cd",
+      "bytes": 4602
+    }
+  ]
+}

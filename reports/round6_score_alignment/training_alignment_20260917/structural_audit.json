@@ -1,0 +1,263 @@
+{
+  "input_label_sha256": "7177731fb7af99e8581c0ec071d116cdb9e6652a6b2b355cd8100364a004c629",
+  "mapping_rows_sha256": "a07a1ba0ea89e820311989b523ca85c87b65cb7b6381f8ff97d597e9994732fc",
+  "counts": {
+    "crop_keyframe_entries": 9041,
+    "roi_entries": 98242,
+    "roi_rows_exact_segment_frame_coverage": 624,
+    "rows": 987,
+    "rows_with_keyframes": 624,
+    "rows_with_rois": 624,
+    "rows_with_segments": 987,
+    "segment_entries": 1417,
+    "split_train": 887,
+    "split_val": 100,
+    "status_missing": 75,
+    "status_missing_with_rois": 47,
+    "status_time_uncertain": 92,
+    "status_time_uncertain_with_rois": 0,
+    "status_usable": 820,
+    "status_usable_with_rois": 577,
+    "target_9_16": 987,
+    "usable_crop_keyframe_entries": 8369
+  },
+  "roi_width_top": [
+    [
+      169,
+      98242
+    ]
+  ],
+  "roi_height_top": [
+    [
+      300,
+      98242
+    ]
+  ],
+  "mapped_source_frame_out_of_range_count": 0,
+  "mapped_source_frame_out_of_range_first_30": [],
+  "mapped_source_frame_duplicate_rows_count": 58,
+  "mapped_source_frame_duplicate_rows_first_30": [
+    12,
+    14,
+    63,
+    80,
+    91,
+    100,
+    116,
+    127,
+    132,
+    134,
+    148,
+    161,
+    162,
+    175,
+    257,
+    298,
+    343,
+    350,
+    356,
+    380,
+    382,
+    385,
+    392,
+    414,
+    418,
+    457,
+    462,
+    479,
+    480,
+    494
+  ],
+  "youtube_groups": 863,
+  "youtube_groups_crossing_original_train_val": 26,
+  "cross_split_youtube_groups": [
+    {
+      "youtube_id": "-e_TnS4fh7Y",
+      "row_indices": [
+        270,
+        509
+      ]
+    },
+    {
+      "youtube_id": "5YgYDR4xBqY",
+      "row_indices": [
+        404,
+        684
+      ]
+    },
+    {
+      "youtube_id": "7PKEbzSNwts",
+      "row_indices": [
+        281,
+        419
+      ]
+    },
+    {
+      "youtube_id": "9Xzrtwiint4",
+      "row_indices": [
+        103,
+        589,
+        935
+      ]
+    },
+    {
+      "youtube_id": "Aa7o08i2wKg",
+      "row_indices": [
+        43,
+        428
+      ]
+    },
+    {
+      "youtube_id": "HL60CCu_R44",
+      "row_indices": [
+        99,
+        169
+      ]
+    },
+    {
+      "youtube_id": "I6aMNiONm3I",
+      "row_indices": [
+        764,
+        893
+      ]
+    },
+    {
+      "youtube_id": "LPRwcq_K1qU",
+      "row_indices": [
+        471,
+        663
+      ]
+    },
+    {
+      "youtube_id": "LRLAgQZIe6w",
+      "row_indices": [
+        307,
+        631
+      ]
+    },
+    {
+      "youtube_id": "MBw7R9wKYbU",
+      "row_indices": [
+        17,
+        151
+      ]
+    },
+    {
+      "youtube_id": "NJpmjlwthHY",
+      "row_indices": [
+        737,
+        863
+      ]
+    },
+    {
+      "youtube_id": "T0ijy2Nrefw",
+      "row_indices": [
+        68,
+        906
+      ]
+    },
+    {
+      "youtube_id": "TbCWfBDAsGk",
+      "row_indices": [
+        413,
+        711
+      ]
+    },
+    {
+      "youtube_id": "YVVefQ5X2R8",
+      "row_indices": [
+        56,
+        119
+      ]
+    },
+    {
+      "youtube_id": "_dL1_68nwtw",
+      "row_indices": [
+        140,
+        242
+      ]
+    },
+    {
+      "youtube_id": "bJZ-FTeG7D8",
+      "row_indices": [
+        137,
+        909
+      ]
+    },
+    {
+      "youtube_id": "dsmZngVgytA",
+      "row_indices": [
+        360,
+        510
+      ]
+    },
+    {
+      "youtube_id": "jBZnY21JbiY",
+      "row_indices": [
+        577,
+        985
+      ]
+    },
+    {
+      "youtube_id": "k8e_fsm9ynI",
+      "row_indices": [
+        112,
+        318
+      ]
+    },
+    {
+      "youtube_id": "nK1-FNE3P-U",
+      "row_indices": [
+        158,
+        365,
+        592
+      ]
+    },
+    {
+      "youtube_id": "psNjHIpXxEs",
+      "row_indices": [
+        311,
+        897
+      ]
+    },
+    {
+      "youtube_id": "tb6Br2F4KQM",
+      "row_indices": [
+        123,
+        359
+      ]
+    },
+    {
+      "youtube_id": "v6391WY0pZE",
+      "row_indices": [
+        250,
+        758
+      ]
+    },
+    {
+      "youtube_id": "wUgPzvcKK5c",
+      "row_indices": [
+        414,
+        848
+      ]
+    },
+    {
+      "youtube_id": "xCf2LGLi8Lc",
+      "row_indices": [
+        205,
+        686
+      ]
+    },
+    {
+      "youtube_id": "yITWrNLEGLE",
+      "row_indices": [
+        422,
+        875
+      ]
+    }
+  ],
+  "n_problems": 0,
+  "problems_first_100": [],
+  "selected": 12,
+  "selection_rule": "sha256(video_id) smallest per clip-start stratum; distinct youtube_id; 4 per stratum; first/mid/last ROI"
+}

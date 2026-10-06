@@ -1,0 +1,32 @@
+{
+  "status": "PASS_BOTH_ENDS_SHA256",
+  "checked_utc": "2026-10-06T03:38:54.2305529Z",
+  "scope": "current delivered A and running B documents",
+  "files": [
+    {
+      "sha256": "4b54c25875ad56f0d49e083de9293475c0c294ca5cb43a019436c27a4d5b4918",
+      "path": "REPORT.md"
+    },
+    {
+      "sha256": "9b482094b2368d903ea9044908807599c9012262e6d4e57add358686e4a3fc5e",
+      "path": "CONTINUE.md"
+    },
+    {
+      "sha256": "3e8cb201d497460247a270b2a748218fc20f843aebc775e2b1cd52a96ebbdd8e",
+      "path": "controller/execution_status.json"
+    },
+    {
+      "sha256": "d380cee57416eb64cb9c4a967566831379cbe2ffa07cebb7f4c78e9faa1b64f7",
+      "path": "controller/spatial_identity_delivery_completion_01.json"
+    },
+    {
+      "sha256": "258f57561b25d3be7a5697e5c88e9198d816a4a6477641c6b7207ffae16e71cf",
+      "path": "controller/spatial_identity_prelaunch_failure_01.json"
+    },
+    {
+      "sha256": "79b24329886c10ee234292ad9cdb59709b6657efd18ccf5006faca67c4fc6da9",
+      "path": "controller/sft8b_smoke02_live_01.json"
+    }
+  ],
+  "transfer_route": "scp -J macmini"
+}

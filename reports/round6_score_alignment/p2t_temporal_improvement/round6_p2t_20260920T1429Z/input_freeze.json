@@ -1,0 +1,54 @@
+{
+  "run_id": "round6_p2t_20260920T1429Z",
+  "status": "FROZEN_BEFORE_NEW_MODEL_OUTPUT",
+  "label_status": "WEAK_TEACHER_NOT_OFFICIAL_GROUND_TRUTH",
+  "split_rows": {
+    "train": 372,
+    "dev": 82,
+    "holdout": 64
+  },
+  "split_groups": {
+    "train": 337,
+    "dev": 74,
+    "holdout": 58
+  },
+  "valid_temporal_rows": {
+    "train": 370,
+    "dev": 82
+  },
+  "temporal_exclusions": [
+    {
+      "split": "train",
+      "video_id": "qvh_000553_9x16",
+      "row_index": 545,
+      "reasons": [
+        "nonpositive_or_negative_segment"
+      ]
+    },
+    {
+      "split": "train",
+      "video_id": "qvh_000961_9x16",
+      "row_index": 947,
+      "reasons": [
+        "nonpositive_or_negative_segment"
+      ]
+    }
+  ],
+  "train_dev_group_overlap": 0,
+  "holdout_policy": "64-row holdout remains closed; not used for selection or evaluation",
+  "competition_test_policy": "not read, inferred, packaged, or uploaded in P2-T",
+  "source_hashes": {
+    "weak_split_manifest": "d5b6fa803fbd50e2d150bc75ebda3c46bd7fecb50a620388554b47671cc7a096",
+    "label_source_copy": "7177731fb7af99e8581c0ec071d116cdb9e6652a6b2b355cd8100364a004c629",
+    "old_dev_temporal": "242a3a0475f6c5b66cd2a25deef88f3b477f3f6ea5f4d22984c1a12830d3bd3c",
+    "old_base_predictions": "c78d030be35265b6548db572de5c67a5a76f5289e5c92a810cb17a62fbb1fb3e",
+    "old_s2_predictions": "ca51e6d49e2394dcef28dc1b651e9803646ae8921a97e6f669632cc082e73903"
+  },
+  "derived_hashes": {
+    "train_temporal.jsonl": "fa839715ff32880096538b7f386f14ca8479138825c69bf8ddd69ff710ec41ec",
+    "dev_temporal.jsonl": "88813a6d106b0f5c43b8121c29f7eaa94cbc9aa9328260b50e31485247031018",
+    "smoke_temporal.jsonl": "5c9996007e104a276b67601267754957b2557544e519059b15dbe06f30b05874",
+    "temporal_exclusions.json": "effe05b260e417a795b33bcf74801d734f0e531e76a27f9769231a38ae99e1b0"
+  },
+  "smoke_rule": "sha256(video_id) order; first row from each of 16 unique train youtube_id"
+}

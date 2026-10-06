@@ -1,0 +1,38 @@
+{
+  "name": "rematch_format_probe_01",
+  "command": [
+    "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+    "-B",
+    "-u",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/execute_format_recovery_stage.py",
+    "--admission",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/format_probe_01.admission.json"
+  ],
+  "started_utc": "2026-10-05T16:52:22.210729+00:00",
+  "runner_pid": 3397053,
+  "reserved_seconds": 1800,
+  "teardown_reserve_seconds": 120,
+  "prior_charged_seconds": 76579.46366991987,
+  "gpu_time_mode": "UNLIMITED",
+  "max_total_gpu_seconds": null,
+  "resource_policy_sha256": "74f15dc694428d5d421d58c6d790560ee6e8d86fc8847db6625b14fbeb38e8c6",
+  "disk_before": {
+    "free_bytes": 231111397376,
+    "work_bytes": 50204590080
+  },
+  "planned_output_bytes": 67108864,
+  "capacity_reason": "ten fixed non-test generation cases; no semantic labels or test inputs",
+  "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+  "runner_source_sha256": "0cddca5f85a2a885ee2ac50e9193819b58dead39b6b561a30cb1c97f192ca961",
+  "child_pid": 3397057,
+  "finished_utc": "2026-10-05T16:53:23.458760+00:00",
+  "charged_seconds": 61.24813702516258,
+  "exit_code": 0,
+  "stop_reason": null,
+  "sampled_peak_memory_mib": 10886,
+  "status": "completed",
+  "disk_after": {
+    "free_bytes": 231111278592,
+    "work_bytes": 50204655616
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "schema": "p1b_resource_usage_v1",
+  "run_id": "round6_p1b_20260917T0615Z",
+  "gpu": {
+    "used": false,
+    "note": "GPU 0; no model was loaded and no inference ran"
+  },
+  "local_disk": {
+    "budget_bytes": 2147483648,
+    "media_bytes": 91460057,
+    "media_files": 8,
+    "code_and_reports_bytes": 578088,
+    "total_bytes": 92038145,
+    "within_budget": true
+  },
+  "remote": {
+    "host_alias": "aic-inspur-home",
+    "writes_performed": 0,
+    "bytes_streamed_to_local": 91460057,
+    "note": "only read-only commands; the corpus was streamed for the 8 selected files"
+  },
+  "cpu_seconds_registered": {
+    "remote_inventory_and_probe": 13,
+    "local_media_analysis": 20.8,
+    "tool_validation_and_builders": 3,
+    "note": "hand-added wall-clock measurements from the commands in this round; budget is 20 minutes"
+  },
+  "network_operations": [
+    {
+      "op": "ssh inventory / sampling",
+      "timeout_sec": 600,
+      "result": "ok"
+    },
+    {
+      "op": "ssh ffprobe+sha256 of 8 files",
+      "timeout_sec": 900,
+      "result": "ok"
+    },
+    {
+      "op": "ssh log reading (bddownload/unzip)",
+      "timeout_sec": 300,
+      "result": "ok"
+    },
+    {
+      "op": "ssh copy of 8 files (cat over ssh)",
+      "timeout_sec": 300,
+      "result": "ok, 8/8 sha256 match"
+    },
+    {
+      "op": "ssh 818-row cardinality audit",
+      "timeout_sec": 300,
+      "result": "ok"
+    },
+    {
+      "op": "public internet",
+      "result": "not used: no page, dataset or model was downloaded"
+    }
+  ],
+  "headless_browser_render": {
+    "used": true,
+    "note": "Chrome --headless=new, local file:// only"
+  },
+  "artifacts": {
+    "code": [
+      {
+        "path": "round6_score_alignment/p1b/annotate.html",
+        "bytes": 59268,
+        "sha256": "22271d1c9ae2287eabe8c5fd4f8d1d961e71d11091d29d1e66f8ac693f92aea7"
+      },
+      {
+        "path": "round6_score_alignment/p1b/build_phase1b_reports.py",
+        "bytes": 11480,
+        "sha256": "8ad011d50f86bc73e5926512f0b221bf5070133572bfb5a0d8ae94963845796c"
+      },
+      {
+        "path": "round6_score_alignment/p1b/build_pilot_package.py",
+        "bytes": 33199,
+        "sha256": "030e7826852cc8062aebf4c36e2bf4f8f347c358b40d38bde4aa37f12c8fa74d"
+      },
+      {
+        "path": "round6_score_alignment/p1b/copy_local.sh",
+        "bytes": 4729,
+        "sha256": "75e49cbc32d065f1e793307825559a2948ad848d0622de65c46026f60e776450"
+      },
+      {
+        "path": "round6_score_alignment/p1b/fingerprints.json",
+        "bytes": 13377,
+        "sha256": "1c02bb67375ef07391a8938480c4cbcaaa8d1da50252bdd0d519bf7062a56f1d"
+      },
+      {
+        "path": "round6_score_alignment/p1b/inventory_raw.json",
+        "bytes": 3879,
+        "sha256": "715cc4d61fe8ae18bec68053f0f867ff43dc858f5a351722aa479f2e50d153eb"
+      },
+      {
+        "path": "round6_score_alignment/p1b/make_synthetic_media.py",
+        "bytes": 2064,
+        "sha256": "def17807be464dd1d39cde8218f8a25624214cf2e38bec32f4ad9b02542f40d5"
+      },
+      {
+        "path": "round6_score_alignment/p1b/media_analysis.py",
+        "bytes": 10669,
+        "sha256": "9968c270dc4bc4600ee27d926b7d6e226a32121edc6f8b504aa5489d18512809"
+      },
+      {
+        "path": "round6_score_alignment/p1b/pilot_manifest.json",
+        "bytes": 50858,
+        "sha256": "e3f49ce8a13bf55e2142cc297a767c3e9ff7af73bea784656c41281917d55ec2"
+      },
+      {
+        "path": "round6_score_alignment/p1b/README_annotation.md",
+        "bytes": 3708,
+        "sha256": "31a382c369e56e0ef6d70502fae42fe1bcc0d0b256b182be67bdf32ed45f1559"
+      },
+      {
+        "path": "round6_score_alignment/p1b/remote_cardinality_audit.py",
+        "bytes": 4708,
+        "sha256": "92d4ec64fd49903172a2e3f979a8ea3a76b2419dd0547a1b03b04ac48256f81a"
+      },
+      {
+        "path": "round6_score_alignment/p1b/remote_inventory.py",
+        "bytes": 6469,
+        "sha256": "3eb3516f1258e3b6489a3cb600f989c7733c943a60d94783c1e396f2b98d2e09"
+      },
+      {
+        "path": "round6_score_alignment/p1b/remote_probe_frozen.py",
+        "bytes": 3821,
+        "sha256": "589cca4718be5f785b3629d5bf905378120eacef5c7d4f73d6ea6f7c2b277688"
+      },
+      {
+        "path": "round6_score_alignment/p1b/remote_probe_raw.json",
+        "bytes": 7016,
+        "sha256": "be00474aa794184b8a5cccb9ea7aa89b4f29f3a88744fd8f88c26af748a212ad"
+      },
+      {
+        "path": "round6_score_alignment/p1b/rendered_dom.html",
+        "bytes": 62642,
+        "sha256": "cacc3e8a797c28871569c8f50a6880a2d03beff86198b1624b2226b112b80ba6"
+      },
+      {
+        "path": "round6_score_alignment/p1b/validate_exports.py",
+        "bytes": 22171,
+        "sha256": "61d7dcfefbf617404a213ce6592ed488aff26cd90a8c8218891d9057a082a1cd"
+      }
+    ],
+    "reports": [
+      {
+        "path": "reports/round6_score_alignment/phase1b/annotation_protocol.md",
+        "bytes": 5624,
+        "sha256": "2028ce9b3a4716009a26b1dfc01ebcb1d70c119b16e036c0b09b3189dcb47bd2"
+      },
+      {
+        "path": "reports/round6_score_alignment/phase1b/media_verification.json",
+        "bytes": 31612,
+        "sha256": "964f74e09593ec2e4757d342cc75be75e492c912b52afce8040cc1e0237f979d"
+      },
+      {
+        "path": "reports/round6_score_alignment/phase1b/REPORT.md",
+        "bytes": 15211,
+        "sha256": "0b67873131f20e527ae42eb09258a6f332521b4a8d0afb8b2f80abd5cf4d2260"
+      },
+      {
+        "path": "reports/round6_score_alignment/phase1b/RESOURCE_USAGE.json",
+        "bytes": 7079,
+        "sha256": "29651ef22c6f218e0ecbe39f53dda0b25017aaa068fb2743716a5ce654928a57"
+      },
+      {
+        "path": "reports/round6_score_alignment/phase1b/selection_manifest.json",
+        "bytes": 13623,
+        "sha256": "e44dc4621534ef9720c8237041438b21bba70aeead65377e82a3538aff33ac6e"
+      },
+      {
+        "path": "reports/round6_score_alignment/phase1b/source_and_license_audit.json",
+        "bytes": 15342,
+        "sha256": "640f3514c8f833786982c9a9d48fdfc6cd9dee7ad5b3204ff31874a2fd339411"
+      },
+      {
+        "path": "reports/round6_score_alignment/phase1b/tool_validation.json",
+        "bytes": 11242,
+        "sha256": "0ccf79c0525639e84cbf7c4cbfbbf5db3f571b4f8708081ce08098abfae6f82a"
+      },
+      {
+        "path": "reports/round6_score_alignment/phase1b/training_cardinality_audit.json",
+        "bytes": 3023,
+        "sha256": "acff8c7d5f093bbc9a29997b748b99f6447c6893cf122bba12c34054a4da830e"
+      }
+    ],
+    "ui_render": [
+      {
+        "path": "reports/round6_score_alignment/phase1b/ui_render/annotate_p01.png",
+        "bytes": 174159,
+        "sha256": "d6def837824ca7a48157d7c5f3f5b102aff0d3fab13aa9b63814e9f51e179923"
+      },
+      {
+        "path": "reports/round6_score_alignment/phase1b/ui_render/render_evidence.json",
+        "bytes": 1115,
+        "sha256": "91dd429971d3c2e2a6fb782c18daaee45cc9dcc86f9a0a718855cd6e273febe9"
+      }
+    ]
+  }
+}

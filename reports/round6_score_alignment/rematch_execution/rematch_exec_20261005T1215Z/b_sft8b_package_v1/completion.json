@@ -1,0 +1,9 @@
+{
+  "stage": "STOP_B8B_PACKAGE_CONTINUATION",
+  "utc": "2026-10-06T17:29:46.139061+08:00",
+  "pid": 879854,
+  "uploaded": false,
+  "failure_type": "ValueError",
+  "failure": "Invalid isoformat string: '2026-10-06T09:29:22.6018689+00:00'",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_sft8b_package_v1/controller.py\", line 70, in main\n    run_gpu('temporal','nontest',nontest,3600,30000000)\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_sft8b_package_v1/controller.py\", line 33, in run_gpu\n    evidence=capacity(planned)\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_sft8b_package_v1/controller.py\", line 20, in capacity\n    age=time.time()-dt.datetime.fromisoformat(mac['utc'].replace('Z','+00:00')).timestamp()\nValueError: Invalid isoformat string: '2026-10-06T09:29:22.6018689+00:00'\n"
+}

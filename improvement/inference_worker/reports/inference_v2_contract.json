@@ -1,0 +1,69 @@
+{
+  "generated_at": "2026-09-10",
+  "status": "constrained_cpu_accepted_awaiting_supervisor_gpu_smoke",
+  "latest_report": "/home/inspur/aic_video_work/reports/inference_v2_constrained_json.json",
+  "entrypoint": "python -m inference_v2.baseline_v2",
+  "shared_api": {
+    "prompt": "inference_v2.temporal.build_temporal_prompt(query, policy='multi', duration_sec=None)",
+    "encode": "inference_v2.qwen_io.encode_qwen3vl_messages(processor, messages, device=None, image_patch_size=16)",
+    "generate": "inference_v2.qwen_io.generate_temporal(model, processor, messages, max_new_tokens=256)",
+    "infer": "inference_v2.qwen_io.infer_temporal_policy(model, processor, video_path, policy=..., query=..., duration_sec=...)"
+  },
+  "interval_contract": {
+    "seconds": "half-open [start_sec,end_sec)",
+    "frames": "original-media [start_frame,end_frame_exclusive)",
+    "status": ["ok", "valid_empty", "invalid"]
+  },
+  "processor_contract": {
+    "return_video_metadata": true,
+    "video_metadata_separated_from_tensor": true,
+    "do_sample_frames": false,
+    "metadata_missing": "fail_closed",
+    "token_truncation": false,
+    "window_processor_timestamps": "clip_local",
+    "sampling_retains_source_timestamps": true
+  },
+  "source_sha256": {
+    "inference_v2/baseline_v2.py": "be00177024135ba10bb4bad36c39ee3dd6502eef3494810a4b8e49008f04a9d9",
+    "inference_v2/qwen_io.py": "2e501be2c5bc99f1dab4efe9f71491f42c6732f26df1d5bc912cba2ea89a70f3",
+    "inference_v2/temporal.py": "74b3a611731b70ae724db9ec360e195b4de32edc2fe393c7dada58d0277f54b3",
+    "inference/baseline_qwen3vl.py": "a522244712831e7fddc605bce73b083851b7353dac1ceb2a9e4f41b948733631"
+  },
+  "prompt_sha256": {
+    "single_generic": "d134294d7c1bd8e32714f9a4d8f9bb26e6f6b94db3f1a8c47685de1c37dd98af",
+    "multi_generic": "25680d6f20a6244560c65665ad8de5c6fd0c4206ee02c1daf9006a6b3a5f94c0",
+    "windowed_generic": "149ebfc22f49e82b06ed672849b8e01acb7b811297de614e19fe8c12525a09e7",
+    "single_query_template": "b988bc709ade4e98b8b6b907f8650c331305a77ad34d0d630865fccd17fd7fda",
+    "multi_query_template": "cb7ef0c818f8aedb2cb28ac145bb0e218b78b05cc7473af48c8710b06a607b8b",
+    "windowed_query_template": "a15f98b5c09f9912910705745778007ff983d3f223644ce7d3d571e575ac43c2",
+    "multi_query_150s": "83e10374c7e665952f493109beff3aeabe80b83c5876de7486c4ae7b0f00fe4b",
+    "windowed_query_30s": "54a34f7c3093db955029f80524ad0ab778b3f8227b758c48c489e5e46c7017d2"
+  },
+  "verification": {
+    "remote_cpu_tests": {"passed": 19, "failed": 0, "skipped": 0},
+    "real_media_processor_probe": {
+      "passed": 6,
+      "gpu_used": false,
+      "report": "/home/inspur/aic_video_work/reports/inference_v2_processor_probe.json",
+      "full_video_sampled_frames": 64,
+      "full_video_input_tokens_range": [4232, 4237],
+      "window_sampled_frames": 58,
+      "window_input_tokens_range": [3825, 3830],
+      "window_local_timestamp_range_sec": [0.0, 29.946583333333333]
+    },
+    "supervisor_gpu_preview_after_prompt_fix": {
+      "passed": 3,
+      "invalid": 0,
+      "policy": "multi",
+      "query_aware": true,
+      "temporal_only": true,
+      "stage1_total_sec": 8.704394404776394,
+      "peak_vram_mib_max": 9570.4296875,
+      "log": "/home/inspur/aic_video_work/improvement_round1/v2_multi_preview3_r2.log",
+      "predictions": "/home/inspur/aic_video_work/improvement_round1/multi_preview3_r2.jsonl",
+      "raw": "/home/inspur/aic_video_work/improvement_round1/multi_preview3_r2_raw.jsonl"
+    },
+    "gpu_started_by_this_worker": false
+  },
+  "bounded_smoke_command": "cd /home/inspur/aic_video_work && /home/inspur/aic_video_work/env/qwen3vl/bin/python -m inference_v2.baseline_v2 --index data_qvh_v2/preview_3_dev.jsonl --temporal-only --query-aware --temporal-policy multi --constrained-json --num-videos 1 --temporal-out runs/inference_v2_query_smoke/temporal_predictions.jsonl --raw-out runs/inference_v2_query_smoke/raw.jsonl"
+}

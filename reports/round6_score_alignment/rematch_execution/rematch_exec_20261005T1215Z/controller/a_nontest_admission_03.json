@@ -1,0 +1,20 @@
+{
+  "stage": "A_NONTEST_E2E",
+  "authorized": true,
+  "user_authorization": "2026-10-05 execute the discussed plan and prepare Linux training",
+  "manifest_sha256": "7b3e187451eb15f80647b4441a4a41f030f4be1438a95ef5b7982a53554f153a",
+  "run_dir": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/baseline_a/nontest_e2e_03",
+  "resource_preflight_pass": true,
+  "resource_evidence": "controller/resource_before.json; live conflict/capacity check repeated by gpu_run.py under the shared lock",
+  "shared_gpu_queue_approved": true,
+  "disk_peak_within_80gib": true,
+  "planned_output_bytes": 268435456,
+  "capacity_basis": "8-source regression, approx 396 selected frames and 68 sparse anchors from frozen historical count; JSONL, logs and ZIP only, no new video/model copy or frame dump",
+  "budget_runner_required": true,
+  "runner": "controller/gpu_run.py using existing common gpu.lock and append-only GPU ledger",
+  "frozen_config": "baseline_a/config_a.json",
+  "legal_empty_supported": false,
+  "scope": "new production-entry regression on frozen non-test eight sources only; no quality selection, test inference or upload",
+  "data_use_basis": "previously authorized non-test engineering slice and current execute-the-plan instruction; no raw-media redistribution",
+  "source_license_disclosure": "historical source-level use basis remains incomplete; reproduction report must disclose, no new dataset or raw-media publication"
+}

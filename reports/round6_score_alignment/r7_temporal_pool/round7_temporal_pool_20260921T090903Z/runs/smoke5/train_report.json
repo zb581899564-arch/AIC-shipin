@@ -1,0 +1,68 @@
+{
+  "status": "R7_TRAINING_COMPLETED_WEAK_TEACHER_ONLY",
+  "manifest": "/home/inspur/aic_video_work/round6_score_alignment/r7_temporal_pool/round7_temporal_pool_20260921T090903Z/inputs/smoke_temporal.jsonl",
+  "manifest_sha256": "faca879e7c177a6f9fd5fc9193cfa6e016922f98850a62bef442831fb4716940",
+  "rows": 16,
+  "source_groups": 16,
+  "epochs_requested": 5,
+  "epochs_completed": 5,
+  "max_steps": 5,
+  "optimizer_steps": 5,
+  "examples_seen": 80,
+  "stop_reason": "max_steps_5",
+  "lr": 5e-05,
+  "grad_accum": 16,
+  "seed": 20260921,
+  "lora": {
+    "rank": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj"
+    ]
+  },
+  "trainable_params": 11796480,
+  "vision_frozen": true,
+  "base_frozen": true,
+  "loss_finite": true,
+  "loss_log": [
+    {
+      "epoch": 0,
+      "optimizer_step": 1,
+      "loss": 1.502627,
+      "elapsed_seconds": 47.222
+    },
+    {
+      "epoch": 1,
+      "optimizer_step": 2,
+      "loss": 3.653363,
+      "elapsed_seconds": 96.325
+    },
+    {
+      "epoch": 2,
+      "optimizer_step": 3,
+      "loss": 3.354894,
+      "elapsed_seconds": 147.15
+    },
+    {
+      "epoch": 3,
+      "optimizer_step": 4,
+      "loss": 3.285283,
+      "elapsed_seconds": 198.786
+    },
+    {
+      "epoch": 4,
+      "optimizer_step": 5,
+      "loss": 2.604115,
+      "elapsed_seconds": 250.772
+    }
+  ],
+  "wall_seconds": 251.364,
+  "peak_memory_allocated_mib": 11015.31,
+  "adapter_model_sha256": "bc50dc215ee908148945d33624708c93ac6193b447ebc88e4ac3e4d978a4e206",
+  "adapter_reload_succeeded": true,
+  "environment": "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python"
+}

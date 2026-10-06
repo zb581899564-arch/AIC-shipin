@@ -1,0 +1,18 @@
+{
+  "status": "PASS_CURRENT_STOP_BEFORE_RUNTIME",
+  "expected_exit_code": 1,
+  "actual_exit_code": 1,
+  "actual_cli_report": {
+    "status": "REJECTED_FORMAL_ADMISSION_OR_CONTRACT",
+    "started_runtime": false,
+    "scope": "train only; no dev/confirm/test inference or quality evaluation",
+    "failure": "STOP: formal_c_bce_admitted must be explicitly true",
+    "wall_seconds": 6.0603953897953033e-05
+  },
+  "framework_import_attempts": [],
+  "frameworks_imported": false,
+  "training_source_sha256": "e26396b400832216937ae39ad799cf49b4fbdff7ebf856610b34daf37d15bd38",
+  "gpu_used": false,
+  "models_run": false,
+  "media_decoded": false
+}

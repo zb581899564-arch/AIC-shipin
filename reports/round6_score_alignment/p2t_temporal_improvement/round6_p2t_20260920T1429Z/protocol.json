@@ -1,0 +1,41 @@
+{
+  "run_id": "round6_p2t_20260920T1429Z",
+  "frozen_before_new_model_output": true,
+  "objective": "Improve weak-teacher temporal localization on a source-disjoint 82-row dev split while keeping the unfine-tuned Qwen spatial model frozen",
+  "metric_status": "WEAK_TEACHER_DIAGNOSTIC_NOT_OFFICIAL_SCORE",
+  "data": {
+    "train": "370 valid temporal rows from the frozen 372-row train split; 335 source groups after excluding two zero-length-label rows",
+    "dev": "82 rows / 74 source groups; evaluated once after full training",
+    "holdout": "64 rows remain closed and are not used",
+    "competition_test": "not read, inferred, packaged, or uploaded"
+  },
+  "model": {
+    "base": "Qwen3-VL-4B-Instruct",
+    "spatial_policy": "keep unfine-tuned Qwen spatial baseline; no spatial training",
+    "temporal_lora": {
+      "fresh_from_base": true,
+      "vision_frozen": true,
+      "base_frozen": true,
+      "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj"],
+      "rank": 16,
+      "alpha": 32,
+      "dropout": 0.05,
+      "learning_rate": 0.00005,
+      "batch_size": 1,
+      "gradient_accumulation": 16,
+      "precision": "BF16"
+    }
+  },
+  "gates": {
+    "smoke": "16 independent train sources, exactly 20 optimizer steps; finite loss, zero skipped rows, adapter saved, and one-row new-process reload inference valid",
+    "full": "only after smoke passes; exactly one epoch over 370 valid train rows",
+    "dev_acceptance": "group-macro weak F1 improves by at least 0.03 versus frozen BASE, paired 10000-draw source-group bootstrap lower bound > 0, and valid rate is not lower than BASE",
+    "failure": "keep BASE temporal output and stop; never use OLD_S2 exposure-contaminated metrics as the acceptance gate"
+  },
+  "resource_limit": {
+    "p2t_gpu_hours": 2.0,
+    "p2t_disk_gib": 4.0,
+    "project_gpu_hours": 24.0,
+    "project_disk_gib": 80.0
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "p1b_fix_resource_usage_v1",
+  "run_id": "round6_p1b_fix_20260917T1630Z",
+  "gpu": {
+    "used": false,
+    "note": "GPU 0; no model loaded, no inference, no training"
+  },
+  "remote": {
+    "used": false,
+    "note": "no SSH, no download, no install in this round"
+  },
+  "local_disk": {
+    "budget_bytes": 524288000,
+    "media_bytes_unchanged": 91460057,
+    "synthetic_test_media_bytes": 61167,
+    "tool_bytes": 92024825,
+    "report_bytes": 687718,
+    "new_bytes_this_round": 1252486,
+    "within_budget": true
+  },
+  "cpu": {
+    "e2e_and_case_runs_seconds": null,
+    "note": "measured per command by the runner; total wall clock for the validation run was about 20 seconds, far below the 20 minute budget"
+  },
+  "browser": {
+    "chrome_headless_runs": 2,
+    "downloads_intercepted": false,
+    "note": "the page's download payload is captured through the DOM evidence hook; headless downloads would need a CDP client"
+  },
+  "synthetic_data_registered_separately": {
+    "files": [
+      "round6_score_alignment/p1b/synthetic/synthetic_marked.mp4",
+      "round6_score_alignment/p1b/synthetic/synthetic_pilot.mp4"
+    ],
+    "purpose": "tool verification only; never a diagnostic sample"
+  }
+}

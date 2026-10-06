@@ -1,0 +1,25 @@
+{
+  "video_records": 426,
+  "prediction_frames": 101985,
+  "issues": [],
+  "official_status": "NOT_SCORED_NOT_UPLOADED",
+  "legal_empty_supported": false,
+  "weak_roi_inputs_used": 0,
+  "old_test_boxes_used": 0,
+  "silent_fallbacks": 0,
+  "zip_sha256": "86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54",
+  "predictions_sha256": "52e40886c0b5bc05d92ce65fc6a8ea25ab745a0ed2b40649cee433fcba78cb0e",
+  "zip_bytes": 310902,
+  "archive_names": [
+    "predictions.jsonl"
+  ],
+  "uploaded": false,
+  "status": "PASS_COMPLETE_8B_PACKAGE_NOT_SCORED_NOT_UPLOADED",
+  "scope": "rematch",
+  "candidate": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_sft8b_package_v3/rematch_01/candidate_B_8B.zip",
+  "complete_pipeline_parameters": 8782459120,
+  "shared_base_counted_once": true,
+  "spatial_base": "SAME_PINNED_8B_WITHOUT_TEMPORAL_LORA",
+  "model_identity_from_test_content": false,
+  "source_lock_sha256": "d1e8ac83dd07ba895f0fb90dd1ce49289585efda8955dd6faa524223a035c2bf"
+}

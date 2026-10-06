@@ -1,0 +1,37 @@
+{
+  "version": "round5_takeover_policy_v2",
+  "registered_before_formal_training": "2026-09-16",
+  "frozen_data": {
+    "train_sha256": "e54e217864ca3dd707556704a0b8c4a168808159f1e3caa04d1f1fcef97ca9cb",
+    "dev_sha256": "e5d2113c1e30415dd2f76eb8870b25ad5341283e83c18f26fddc280d8398895e",
+    "holdout_sha256": "e2c8d0cf0838c3188fb1e1a98d27d633b8e551c577f3b7d7bb5d39090d7ad193"
+  },
+  "selection": {
+    "metric": "WEAK_TEACHER temporal union F1",
+    "unit": "youtube_id",
+    "invalid_prediction_score": 0,
+    "dev_candidates": ["T2_ORARL_TEMPORAL", "S1_FRESH", "S2_WARM"],
+    "non_model_controls": ["FULL_CLIP", "CENTER_70_PERCENT", "CENTER_80_PERCENT"],
+    "min_valid_rate": 1.0,
+    "min_absolute_f1_gain_over_best_of_T1_and_controls": 0.03,
+    "min_group_bootstrap_ci95_lower_bound": 0.0,
+    "min_circular_shift_ci95_lower_bound": 0.0,
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20260916,
+    "max_epochs": 3,
+    "holdout_attempts": 1,
+    "holdout_not_used_for_model_selection": true
+  },
+  "training": {
+    "S1_FRESH_lr": 0.00005,
+    "S2_WARM_lr": 0.00002,
+    "batch_size": 1,
+    "gradient_accumulation": 16,
+    "bf16": true,
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "max_gpu_hours_this_round": 6,
+    "max_new_disk_gib": 10
+  }
+}

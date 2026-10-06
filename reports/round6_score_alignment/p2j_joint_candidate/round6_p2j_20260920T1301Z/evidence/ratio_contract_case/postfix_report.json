@@ -1,0 +1,28 @@
+{
+  "status": "PASS_JOINT_ENGINEERING",
+  "official_status": "NOT_OFFICIAL_SCORE",
+  "selected_sha256": "e6e6cf2757ffdcda7375a3c2b328e0e4240aa9608e41bddd8536a7186fa5baca",
+  "shots_sha256": "4a6e5255e74c7c60ca980f6f00d786f624306f3adfdb968e3f697255e4d784ed",
+  "anchors_sha256": "5112ac1aec33f3feac8fbb4b4d078af3f31c7e6c345fa5d2a9477f54f5a0e85d",
+  "anchor_output_sha256": "7cb2a49dbbbf2a957a08c73142f4aea7c148bda099cc6ff062c353010f3b38e2",
+  "predictions_sha256": "679646d602a4b57b186bf8e6ba89d43ca8651187e3a2387bf8f2d5249301bcdd",
+  "provenance_sha256": "728ac1ddbbe5199ff04493e0742937ac5f814105eb939d1083c25f89e22feb50",
+  "videos": 1,
+  "selected_frames": 2,
+  "composed_frames": 2,
+  "anchor_calls": 2,
+  "call_reduction": 0.0,
+  "shots": 1,
+  "missing": 0,
+  "extra": 0,
+  "illegal": 0,
+  "cross_shot_reuse": 0,
+  "silent_fallbacks": 0,
+  "weak_roi_inputs_used": 0,
+  "old_test_boxes_used": 0,
+  "source_counts": {
+    "QWEN_ANCHOR_SAME_FRAME": 2,
+    "SHOT_LINEAR_INTERPOLATION": 0
+  },
+  "violations": []
+}

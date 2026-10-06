@@ -1,0 +1,30 @@
+{
+  "adapter_sha256": "c9bf3754a05a42d69ee8c4d11f56c41346d927094fd643863f0cb55626b8e6a0",
+  "base_production_source_lock_sha256": "86fc0da7cf631a2afe33c54fb5b66246bba88adfd95c1d8ce80ccbf73522d70d",
+  "cases": 5,
+  "failures": 0,
+  "frozen_config_sha256": "137a60e3efae567794105bac8d2fcb4288c7d1b289ab4ad1d0a81e2ba11c5414",
+  "labels_used": false,
+  "manifest_sha256": "ceb91ee9434ce3de6a55abf727e613b83368b547d3be3d1e71b46414c2f019f8",
+  "mode": "recover",
+  "official_quality_claim": false,
+  "original_successful_window_reruns": 0,
+  "original_temporal_sha256": "2790809c4defd2988dba5a44ed659b436ab78efe942b6f2f1d0f118ab92071c9",
+  "output_sha256": "b816935d6e81f81878c84573b7938382d5659bdfb6c36af5f81551e54d2ac8b7",
+  "posthoc_segment_rewrite": false,
+  "prompt_sha256": "6294dddea26e8ba8ea4d516c2ff39333dbd9a511b4ddc1d9ccb4db3cb9153ea8",
+  "recovered_windows": 5,
+  "remaining_invalid_windows": 0,
+  "source_hashes": {
+    "constrained_json.py": "9282153980ef098f3f0457e9352d605dc9c50c681ccdbc27f2f9174774ff258d",
+    "inference.py": "dc9f7f759976e2e972697a4a84914a73018a7374f310dbc01d56e677f39b83ec"
+  },
+  "status": "PASS_FIVE_PARSE_FAILURE_REGENERATIONS",
+  "successful_windows_unchanged": 516,
+  "tokenizer_receipt_sha256": "97c02dd4e86d5b374e724b46c0b951e99825acdcc862023df34ef162e566b303",
+  "total_videos": 426,
+  "total_windows": 521,
+  "uploaded": false,
+  "variant": "A_FORMAT_CONSTRAINED_RECOVERY_V1",
+  "wall_seconds": 46.367724580690265
+}

@@ -1,0 +1,379 @@
+{
+  "schema": "p1b_tool_validation_v1",
+  "manifest": "round6_score_alignment/p1b/pilot_manifest.json",
+  "rules_mirror": "derive()/validate_export() mirror buildExport() in annotate.html",
+  "cases": [
+    {
+      "case": "T1_unannotated_is_not_empty",
+      "expected_mode": "NOT_EXPORTABLE",
+      "got_mode": "NOT_EXPORTABLE",
+      "expected_valid": true,
+      "got_valid": true,
+      "pass": true,
+      "problems": []
+    },
+    {
+      "case": "T2_no_highlight_without_confirmation",
+      "expected_mode": "NOT_EXPORTABLE",
+      "got_mode": "NOT_EXPORTABLE",
+      "expected_valid": false,
+      "got_valid": false,
+      "pass": true,
+      "problems": [
+        "NO_HIGHLIGHT without the explicit confirmation flag"
+      ]
+    },
+    {
+      "case": "T3_no_highlight_confirmed_exports_empty_gt",
+      "expected_mode": "NO_HIGHLIGHT_EMPTY_GT",
+      "got_mode": "NO_HIGHLIGHT_EMPTY_GT",
+      "expected_valid": true,
+      "got_valid": true,
+      "pass": true,
+      "problems": []
+    },
+    {
+      "case": "T4_sparse_keyframes_export_sparse",
+      "expected_mode": "SPARSE_KEYFRAME_GT",
+      "got_mode": "SPARSE_KEYFRAME_GT",
+      "expected_valid": true,
+      "got_valid": true,
+      "pass": true,
+      "problems": []
+    },
+    {
+      "case": "T5_intervals_without_keyframes_is_temporal_only",
+      "expected_mode": "TEMPORAL_ONLY",
+      "got_mode": "TEMPORAL_ONLY",
+      "expected_valid": true,
+      "got_valid": true,
+      "pass": true,
+      "problems": []
+    },
+    {
+      "case": "T6_box_out_of_bounds_is_rejected",
+      "expected_mode": "SPARSE_KEYFRAME_GT",
+      "got_mode": "SPARSE_KEYFRAME_GT",
+      "expected_valid": false,
+      "got_valid": false,
+      "pass": true,
+      "problems": [
+        "keyframe 0: box [1000,0,320] with derived h=180.00 leaves 534x300"
+      ]
+    },
+    {
+      "case": "T7_width_above_max_legal_is_rejected",
+      "expected_mode": "SPARSE_KEYFRAME_GT",
+      "got_mode": "SPARSE_KEYFRAME_GT",
+      "expected_valid": false,
+      "got_valid": false,
+      "pass": true,
+      "problems": [
+        "keyframe 0: w=534 exceeds the max legal width 533.3333",
+        "keyframe 0: box [0,0,534] with derived h=300.38 leaves 534x300"
+      ]
+    },
+    {
+      "case": "T8_estimated_time_mismatch_is_flagged",
+      "expected_mode": "SPARSE_KEYFRAME_GT",
+      "got_mode": "SPARSE_KEYFRAME_GT",
+      "expected_valid": false,
+      "got_valid": false,
+      "pass": true,
+      "problems": [
+        "interval 0: start_sec=0.0 deviates 10.00 frames from 0.417083",
+        "interval 0: end_sec=1.0 deviates 3.98 frames from 0.834167"
+      ]
+    },
+    {
+      "case": "T9_missing_annotator_is_rejected",
+      "expected_mode": "SPARSE_KEYFRAME_GT",
+      "got_mode": "SPARSE_KEYFRAME_GT",
+      "expected_valid": false,
+      "got_valid": false,
+      "pass": true,
+      "problems": [
+        "an exportable annotation must record an annotator"
+      ]
+    },
+    {
+      "case": "T10_uncertain_is_not_exported",
+      "expected_mode": "NOT_EXPORTABLE",
+      "got_mode": "NOT_EXPORTABLE",
+      "expected_valid": true,
+      "got_valid": true,
+      "pass": true,
+      "problems": []
+    }
+  ],
+  "all_cases_pass": true,
+  "case_details": {
+    "T1_unannotated_is_not_empty": {
+      "sample_id": "P01",
+      "valid": true,
+      "problems": [],
+      "derived_mode": "NOT_EXPORTABLE",
+      "derived_reason": "尚未标注；未标注不等于空参考",
+      "max_time_mapping_error_frames": 0.0,
+      "reference": null
+    },
+    "T2_no_highlight_without_confirmation": {
+      "sample_id": "P01",
+      "valid": false,
+      "problems": [
+        "NO_HIGHLIGHT without the explicit confirmation flag"
+      ],
+      "derived_mode": "NOT_EXPORTABLE",
+      "derived_reason": "无高光需标注者显式确认",
+      "max_time_mapping_error_frames": 0.0,
+      "reference": null
+    },
+    "T3_no_highlight_confirmed_exports_empty_gt": {
+      "sample_id": "P01",
+      "valid": true,
+      "problems": [],
+      "derived_mode": "NO_HIGHLIGHT_EMPTY_GT",
+      "derived_reason": "标注者确认整段无高光：空帧集合（coverage=full, frames=[]）",
+      "max_time_mapping_error_frames": 0.0,
+      "reference": {
+        "coverage": "full",
+        "videos": [
+          {
+            "video_id": "P01",
+            "coverage": "full",
+            "frames": []
+          }
+        ]
+      }
+    },
+    "T4_sparse_keyframes_export_sparse": {
+      "sample_id": "P01",
+      "valid": true,
+      "problems": [],
+      "derived_mode": "SPARSE_KEYFRAME_GT",
+      "derived_reason": "稀疏构图关键帧：coverage=sparse",
+      "max_time_mapping_error_frames": 0.0,
+      "reference": {
+        "coverage": "sparse",
+        "videos": [
+          {
+            "video_id": "P01",
+            "coverage": "sparse",
+            "frames": [
+              {
+                "frame": 12,
+                "box_xyw": [
+                  0,
+                  0,
+                  320
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "T5_intervals_without_keyframes_is_temporal_only": {
+      "sample_id": "P01",
+      "valid": true,
+      "problems": [],
+      "derived_mode": "TEMPORAL_ONLY",
+      "derived_reason": "只有时间区间、没有构图关键帧：仅可做时间诊断",
+      "max_time_mapping_error_frames": 0.0,
+      "reference": null
+    },
+    "T6_box_out_of_bounds_is_rejected": {
+      "sample_id": "P01",
+      "valid": false,
+      "problems": [
+        "keyframe 0: box [1000,0,320] with derived h=180.00 leaves 534x300"
+      ],
+      "derived_mode": "SPARSE_KEYFRAME_GT",
+      "derived_reason": "稀疏构图关键帧：coverage=sparse",
+      "max_time_mapping_error_frames": 0.0,
+      "reference": {
+        "coverage": "sparse",
+        "videos": [
+          {
+            "video_id": "P01",
+            "coverage": "sparse",
+            "frames": [
+              {
+                "frame": 1,
+                "box_xyw": [
+                  1000,
+                  0,
+                  320
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "T7_width_above_max_legal_is_rejected": {
+      "sample_id": "P01",
+      "valid": false,
+      "problems": [
+        "keyframe 0: w=534 exceeds the max legal width 533.3333",
+        "keyframe 0: box [0,0,534] with derived h=300.38 leaves 534x300"
+      ],
+      "derived_mode": "SPARSE_KEYFRAME_GT",
+      "derived_reason": "稀疏构图关键帧：coverage=sparse",
+      "max_time_mapping_error_frames": 0.0,
+      "reference": {
+        "coverage": "sparse",
+        "videos": [
+          {
+            "video_id": "P01",
+            "coverage": "sparse",
+            "frames": [
+              {
+                "frame": 1,
+                "box_xyw": [
+                  0,
+                  0,
+                  534
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "T8_estimated_time_mismatch_is_flagged": {
+      "sample_id": "P01",
+      "valid": false,
+      "problems": [
+        "interval 0: start_sec=0.0 deviates 10.00 frames from 0.417083",
+        "interval 0: end_sec=1.0 deviates 3.98 frames from 0.834167"
+      ],
+      "derived_mode": "SPARSE_KEYFRAME_GT",
+      "derived_reason": "稀疏构图关键帧：coverage=sparse",
+      "max_time_mapping_error_frames": 10.0,
+      "reference": {
+        "coverage": "sparse",
+        "videos": [
+          {
+            "video_id": "P01",
+            "coverage": "sparse",
+            "frames": [
+              {
+                "frame": 12,
+                "box_xyw": [
+                  0,
+                  0,
+                  320
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "T9_missing_annotator_is_rejected": {
+      "sample_id": "P01",
+      "valid": false,
+      "problems": [
+        "an exportable annotation must record an annotator"
+      ],
+      "derived_mode": "SPARSE_KEYFRAME_GT",
+      "derived_reason": "稀疏构图关键帧：coverage=sparse",
+      "max_time_mapping_error_frames": 0.0,
+      "reference": {
+        "coverage": "sparse",
+        "videos": [
+          {
+            "video_id": "P01",
+            "coverage": "sparse",
+            "frames": [
+              {
+                "frame": 1,
+                "box_xyw": [
+                  0,
+                  0,
+                  320
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "T10_uncertain_is_not_exported": {
+      "sample_id": "P01",
+      "valid": true,
+      "problems": [],
+      "derived_mode": "NOT_EXPORTABLE",
+      "derived_reason": "标注者标记为不确定",
+      "max_time_mapping_error_frames": 0.0,
+      "reference": null
+    }
+  },
+  "p1a_integration": {
+    "confirmed_no_highlight_through_p1a": {
+      "status": "OK",
+      "score": 100.0,
+      "score_present": true,
+      "expected": "OK with score 100 (both empty)"
+    },
+    "sparse_keyframes_through_p1a": {
+      "status": "SPARSE_DIAGNOSTIC",
+      "score": null,
+      "score_present": false,
+      "expected": "SPARSE_DIAGNOSTIC with score null"
+    },
+    "incomplete_full_reference_is_refused": {
+      "note": "derived from a bundle where P02 is still UNANNOTATED; a full reference that omits P02 must not be scored (missing coverage), never treated as empty GT",
+      "universe": [
+        "P01",
+        "P02"
+      ],
+      "p1a_result": {
+        "status": "NOT_COMPUTABLE",
+        "score": null,
+        "score_present": false
+      }
+    },
+    "unannotated_video_in_sparse_bundle_yields_no_score": {
+      "note": "P02 carries no annotated frames; the sparse branch must not invent a score",
+      "universe": [
+        "P01",
+        "P02"
+      ],
+      "p1a_result": {
+        "status": "SPARSE_DIAGNOSTIC",
+        "score": null,
+        "score_present": false
+      }
+    }
+  },
+  "static_html_checks": {
+    "bytes": 58825,
+    "contains_manifest": true,
+    "samples_embedded": 8,
+    "no_network_apis": true,
+    "no_remote_subresources": true,
+    "forbidden_tokens_found": [],
+    "url_strings_in_embedded_data_only": 8,
+    "url_strings_note": "URLs appear only as recorded provenance text inside the embedded manifest JSON; the page issues no request",
+    "media_srcs_are_relative": true,
+    "has_status_selector": true,
+    "has_confirm_checkbox": true,
+    "has_pts_samples": true,
+    "has_ratio_constraint": true,
+    "exports_only_annotated": true,
+    "reviewer_not_autofilled": true
+  },
+  "synthetic_media": {
+    "schema": "p1b_synthetic_media_v1",
+    "file_name": "synthetic_pilot.mp4",
+    "width": 160,
+    "height": 120,
+    "fps": 10,
+    "n_frames": 60,
+    "purpose": "tool testing only; never a diagnostic sample",
+    "bytes": 7560
+  },
+  "ui_rendering_evidence": "see REPORT.md (browser/UI rendering status)"
+}

@@ -1,0 +1,90 @@
+{
+  "schema": "round6_phase0_resource_reconciliation_v1",
+  "run_id": "round6_p0_20260917T0155Z",
+  "observed_utc": "2026-09-17T01:55Z",
+  "host": {
+    "ssh_alias": "aic-inspur-home",
+    "hostname": "inspur-NP5570M5",
+    "connection": "OK (read-only commands only; no settings, drivers or network changed; no private key read)"
+  },
+  "p0_usage": {
+    "gpu_seconds_charged_by_this_audit": 0,
+    "model_or_video_downloads": 0,
+    "installs": 0,
+    "remote_writes": 0,
+    "local_bytes_added": 71000,
+    "note": "P0 is CPU-only per ROADMAP section 6; all remote commands were read-only"
+  },
+  "active_jobs": {
+    "active_gpu_job_json_present": false,
+    "gpu_compute_processes": 0,
+    "training_or_inference_processes": 0,
+    "claimed_unknown_processes": "none claimed, none killed",
+    "status": "IDLE"
+  },
+  "gpu": {
+    "index": 0,
+    "name": "NVIDIA RTX 6000 Ada Generation",
+    "memory_used_mib": 180,
+    "memory_total_mib": 46068,
+    "utilization_pct": 0
+  },
+  "disk": {
+    "filesystem": "/dev/sda2 mounted at /",
+    "filesystem_available_bytes_df": 143000000000,
+    "filesystem_available_human": "143G",
+    "filesystem_available_semantics": "rounded by df -h; the exact byte value is the ledger figure below",
+    "ledger_free_bytes_last_job": 153239597056,
+    "ledger_work_bytes_last_job": 40676560896,
+    "work_root_human": "38G (du -sh /home/inspur/aic_video_work)",
+    "temporal_round5_bytes": 603000000,
+    "temporal_round5_bytes_note": "du -sh = 575M"
+  },
+  "budget_caps": {
+    "source": "improvement/supervisor/campaign_state.json and AGENTS.md:45",
+    "max_total_gpu_seconds": 86400,
+    "max_total_gpu_hours": 24,
+    "max_work_directory_bytes": 85899345920,
+    "max_work_directory_gib": 80,
+    "min_free_disk_bytes": 85899345920,
+    "min_free_disk_gib": 80,
+    "round5_self_imposed_gpu_hours": 6,
+    "round5_self_imposed_new_disk_gib": 10
+  },
+  "gpu_ledger": {
+    "path": "remote:/home/inspur/aic_video_work/improvement_round1/gpu_ledger.jsonl",
+    "rows": 68,
+    "charged_seconds_sum": 43762.9487,
+    "charged_hours_sum": 12.1564,
+    "carried_in_conservative_prior_seconds": 7200,
+    "cumulative_seconds": 50962.9487,
+    "cumulative_hours": 14.1564,
+    "cumulative_basis": "sum(charged_seconds) + first row prior_charged_seconds; equals the last row's prior_charged_seconds + charged_seconds",
+    "remaining_seconds_vs_24h": 35437.0513,
+    "remaining_hours_vs_24h": 9.8436,
+    "non_completed_rows": 13,
+    "round5_era": {
+      "filter": "started_utc >= 2026-09-16",
+      "rows": 39,
+      "charged_seconds_sum": 15477.5257,
+      "charged_hours_sum": 4.2993,
+      "within_round5_self_cap_6h": true
+    },
+    "largest_single_charge_seconds": 12058.93039420899
+  },
+  "balance": {
+    "gpu_hours_remaining": 9.8436,
+    "gpu_hours_remaining_level": "L1_CONFIRMED_BY_DIRECT_ARTIFACT",
+    "work_root_bytes_remaining_vs_80gib": 45222785024,
+    "work_root_gib_remaining_vs_80gib": 42.12,
+    "filesystem_free_gib_vs_80gib_floor": 63.0,
+    "p1_gpu_requirement": 0,
+    "p1_gpu_requirement_source": "ROADMAP.md:118 (P0/P1 basic audit: GPU 0)"
+  },
+  "unknowns": {
+    "work_directory_cap_semantics": "UNKNOWN whether the 80 GiB cap counts the whole work root or only the increment since project start; round-4 report used the whole-work-root reading, which this file follows",
+    "exact_free_bytes_at_audit_time": "UNKNOWN (only df rounded + last-ledger-row byte count available)",
+    "gpu_hours_beyond_24h_reconciliation": "UNKNOWN whether the 24 h cap is a hard project-wide ceiling or re-negotiable; ROADMAP.md:118 says the historical 24 h cap stays in force",
+    "official_score_for_round5_candidate": null
+  }
+}

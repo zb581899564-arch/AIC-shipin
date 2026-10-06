@@ -1,0 +1,12 @@
+{
+  "version": "round5_takeover_interval_calibration_v1",
+  "registered_after_s1_epoch1_dev_before_grid_or_holdout": "2026-09-17",
+  "reason": "S1 dev predictions retain 49.57% of a clip on average versus 42.00% in accepted dev weak labels; test whether a modest fixed interval shrink improves paired dev F1.",
+  "scope": "Postprocessing only, on the single arm/checkpoint selected by the original dev procedure. No prompt, parser, split, model, or evaluation metric change.",
+  "factors": [1.0, 0.9, 0.8, 0.7],
+  "transform": "Multiply each interval's duration by factor around its midpoint; keep the midpoint and segment count unchanged.",
+  "decision": "Select the highest dev mean WEAK_TEACHER temporal F1 among factors; adopt a factor below 1 only if its mean gain versus factor 1 is at least 0.01 and the 80-source-group paired bootstrap 95% lower bound is above 0. Otherwise retain factor 1.",
+  "bootstrap": {"unit": "youtube_id", "replicates": 10000, "seed": 20260917},
+  "holdout_use": "Exactly one evaluation of the selected factor; never choose or revise the factor from holdout results.",
+  "test_use": "Apply the selected factor mechanically to each locally inferred interval before converting to source frame indices; no manual review."
+}

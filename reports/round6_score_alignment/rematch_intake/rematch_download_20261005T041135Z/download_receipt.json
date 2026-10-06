@@ -1,0 +1,26 @@
+{
+  "run_id": "rematch_download_20261005T041135Z",
+  "status": "DOWNLOADING",
+  "source_share": "https://pan.baidu.com/s/1YMlt4imRxxlPByvMqgSn0g?pwd=sg5y",
+  "expected_bytes": 4776172626,
+  "linux_host": "inspur-NP5570M5",
+  "remote_run_dir": "/home/inspur/aic_video_work/round6_score_alignment/rematch_intake/rematch_download_20261005T041135Z",
+  "wrapper_pid": 2635265,
+  "download_pid": 2635266,
+  "worker_sha256": "94d0cf9ba0f5fb606d9b8e8503bd3dc4cc93b8b56e9ddd2fa9aed4cec5426292",
+  "last_verified_received_bytes_approx": 1950351,
+  "last_verified_remote_updated_utc": "2026-10-05T04:13:25.338630+00:00",
+  "automation_id": "aic",
+  "check_interval_minutes": 30,
+  "share_probe": "transfer returned 文件重复 without overwrite; matching saved file metadata found",
+  "disk_before_free_bytes": 81116999680,
+  "transfer_route": "Mac mini verified online; worker deployment routed through ssh -J macmini; archive network download occurs directly on Linux",
+  "completion_requirements": [
+    "exact cloud byte count",
+    "full SHA-256",
+    "ZIP CRC pass",
+    "safe member paths"
+  ],
+  "scope": "archive download and integrity/member metadata only",
+  "execution_note": "Initial wrapper compile failed before starting a download; corrected wrapper compiled and both process identities were verified."
+}

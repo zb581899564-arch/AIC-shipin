@@ -1,0 +1,58 @@
+{
+  "stage": "dev",
+  "status": "STOP_KEEP_P2T2",
+  "metric_status": "MODEL_UNSEEN_FIXED_WEAK_DIAGNOSTIC_NOT_OFFICIAL_SCORE",
+  "required_f1_gain": 0.03,
+  "checks": {
+    "f1_gain": false,
+    "bootstrap_lower_above_zero": false,
+    "recall_not_below_base_or_p2t2": false,
+    "precision_drop_at_most_0_03": true,
+    "valid_rate_1": true,
+    "zero_overlap_not_increased": true,
+    "required_slices_not_degraded": true
+  },
+  "r7_minus_p2t2": {
+    "mean": -0.0018345024105979617,
+    "ci95": [
+      -0.04263191191317002,
+      0.0387714534392256
+    ],
+    "source_groups": 96,
+    "draws": 10000,
+    "seed": 20260921
+  },
+  "arms": {
+    "BASE": {
+      "videos": 104,
+      "source_groups": 96,
+      "group_macro_f1": 0.44488049417513525,
+      "group_macro_precision": 0.4447644078764437,
+      "group_macro_recall": 0.5811333500911332,
+      "valid_rate": 0.8269230769230769,
+      "zero_overlap_videos": 22,
+      "pred_duration_ratio_median": 1.223698203913407
+    },
+    "P2T2": {
+      "videos": 104,
+      "source_groups": 96,
+      "group_macro_f1": 0.6269357371721404,
+      "group_macro_precision": 0.6544963339419139,
+      "group_macro_recall": 0.7079803014826233,
+      "valid_rate": 1,
+      "zero_overlap_videos": 8,
+      "pred_duration_ratio_median": 1.0274479618741914
+    },
+    "R7": {
+      "videos": 104,
+      "source_groups": 96,
+      "group_macro_f1": 0.6251012347615423,
+      "group_macro_precision": 0.6915906825774351,
+      "group_macro_recall": 0.6728816541182382,
+      "valid_rate": 1,
+      "zero_overlap_videos": 8,
+      "pred_duration_ratio_median": 1.0004
+    }
+  },
+  "diagnostics_sha256": "8ca35b1c69fe118e49b3a488f63e4f4f9a926cfd19d70165085f548f1e088957"
+}

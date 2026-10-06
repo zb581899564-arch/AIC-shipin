@@ -1,0 +1,85 @@
+{
+  "status": "completed",
+  "results": {
+    "single": {
+      "kind": "internal_query_conditioned_diagnostic",
+      "official_aic_score": null,
+      "count": 100,
+      "empty_count": 27,
+      "metrics": {
+        "f1": 38.25432575299514,
+        "precision": 44.22047451866311,
+        "recall": 42.77017813678166,
+        "mean_gt_best_window_iou": 26.62765370889946,
+        "saliency_f1": 35.58206754648129
+      },
+      "policy": "single",
+      "wall_seconds": 332.18936714413576,
+      "reference_sha256": "2a3a983cfa0680971806261dc2fc3b84c5a2115072fdac73ba14a2727954d955",
+      "predictions_sha256": "b5bc6d4b339fe2228ce4d520b055f754e3a00ed304cd52a948790c1961e31192"
+    },
+    "multi": {
+      "kind": "internal_query_conditioned_diagnostic",
+      "official_aic_score": null,
+      "count": 100,
+      "empty_count": 11,
+      "metrics": {
+        "f1": 44.58326019897926,
+        "precision": 53.44344186101257,
+        "recall": 44.049331678971406,
+        "mean_gt_best_window_iou": 32.46565581870203,
+        "saliency_f1": 39.786487785793085
+      },
+      "policy": "multi",
+      "wall_seconds": 332.21749036503024,
+      "reference_sha256": "2a3a983cfa0680971806261dc2fc3b84c5a2115072fdac73ba14a2727954d955",
+      "predictions_sha256": "3bcf2edcad4a49eb1c044561d4b55e3c8d069e4c4ccbc92db6ad340c8c28a1b7",
+      "comparison": {
+        "delta_f1_pp": 6.3289344459841175,
+        "source_groups": 34,
+        "bootstrap_draws": 10000,
+        "seed": 42,
+        "ci95_pp": [
+          0.23347595460996254,
+          12.844145819875855
+        ],
+        "eligible_dev": true
+      }
+    },
+    "windowed": {
+      "kind": "internal_query_conditioned_diagnostic",
+      "official_aic_score": null,
+      "count": 100,
+      "empty_count": 0,
+      "metrics": {
+        "f1": 67.51254455937753,
+        "precision": 69.18396068721962,
+        "recall": 75.17024547668974,
+        "mean_gt_best_window_iou": 54.34319328738433,
+        "saliency_f1": 60.65563828158831
+      },
+      "policy": "windowed",
+      "wall_seconds": 1086.2554759511258,
+      "reference_sha256": "2a3a983cfa0680971806261dc2fc3b84c5a2115072fdac73ba14a2727954d955",
+      "predictions_sha256": "230887094a88dcf0c822935eb3a922b6d268b69b6d6d42e38ab2e94456196b9a",
+      "comparison": {
+        "delta_f1_pp": 29.258218806382388,
+        "source_groups": 34,
+        "bootstrap_draws": 10000,
+        "seed": 42,
+        "ci95_pp": [
+          23.15318344032204,
+          35.53521748798276
+        ],
+        "eligible_dev": true
+      }
+    }
+  },
+  "qualified": [
+    "windowed",
+    "multi"
+  ],
+  "holdout_used": false,
+  "official_score": null,
+  "training_used": false
+}

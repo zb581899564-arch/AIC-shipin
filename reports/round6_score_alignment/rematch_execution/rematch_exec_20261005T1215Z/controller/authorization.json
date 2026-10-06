@@ -1,0 +1,22 @@
+{
+  "run_id": "rematch_exec_20261005T1215Z",
+  "authorized_date": "2026-10-05",
+  "user_instruction": "那现在按照这个计划开始安排任务执行，并且让linux准备开训",
+  "plan": "reports/round6_score_alignment/rematch_discussion/aic_video_rematch_20261005T1044Z/final-decision.md",
+  "scope": ["non-test supervision audit", "8B pinned model preparation", "dense temporal implementation", "actual bounded engineering updates", "baseline A non-test regression", "formal C only after evidence gates", "complete rematch baseline generation after input contract and regression"],
+  "competition_upload_authorized": false,
+  "frozen_outer_split": {"train": 704, "dev": 104, "confirm": 100},
+  "confirm_labels_may_be_read": false,
+  "gpu_time_mode": "UNLIMITED",
+  "ledger_initial_offset_seconds": 7200,
+  "added_disk_cap_bytes": 85899345920,
+  "remote_root": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z",
+  "transport": "Mac mini verified online; scp -J macmini, strict host checking preserved",
+  "assignments": {
+    "controller": "Linux assets, transport, downloads, admission, GPU queue, validation",
+    "data_gate": "data_audit only: observation, negative semantics, permission",
+    "dense_impl": "dense_head only: implementation and CPU engineering tests",
+    "baseline_prepare": "baseline_a only: frozen baseline adaptation and input contract"
+  },
+  "stop_conditions": ["unknown negative supervision blocks formal BCE", "unknown input contract blocks test inference", "foreign resource conflict stops or queues owned GPU jobs", "parameter total above 9B", "missing/duplicate/invalid prediction blocks candidate", "never silently convert inference failure to legal empty"]
+}

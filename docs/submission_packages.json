@@ -1,0 +1,100 @@
+[
+  {
+    "id": "initial-baseline-41.09",
+    "stage": "初赛",
+    "official_score": 41.09,
+    "scheme": "未微调Qwen3-VL单片段基线",
+    "package": "submissions/qwen3vl_baseline_20260910/baseline_qwen3vl_20260910.zip",
+    "zip_sha256": "2f8fe8620c81240cb41f3183ed9815e9fb303ab4e6cdee81a8559777baad7517",
+    "zip_bytes": 191501,
+    "evidence": "submissions/qwen3vl_baseline_20260910/score_history.jsonl",
+    "crc": "PASS",
+    "archive_members": [
+      "predictions.jsonl"
+    ]
+  },
+  {
+    "id": "initial-multi-41.22",
+    "stage": "初赛",
+    "official_score": 41.22,
+    "scheme": "未微调Qwen3-VL多片段reader",
+    "package": "submissions/qwen3vl_multi_reader_20260910/aic-qwen3vl-multi-20260910.zip",
+    "zip_sha256": "6df46d39044e88ca5c41cc7b3af08e20256aadb5f1b3b23cf4aebab9e17a56f2",
+    "zip_bytes": 196663,
+    "evidence": "submissions/qwen3vl_multi_reader_20260910/score_history.jsonl",
+    "crc": "PASS",
+    "archive_members": [
+      "predictions.jsonl"
+    ]
+  },
+  {
+    "id": "initial-lora-43.48",
+    "stage": "初赛",
+    "official_score": 43.48,
+    "scheme": "历史Qwen3-VL LoRA reader",
+    "package": "submissions/qwen3vl_lora_reader_20260912/aic-qwen3vl-lora-reader-20260912.zip",
+    "zip_sha256": "60188e903a5130a22592b2356f971a89abb33896d6e8fa043e3a5a005518ae9b",
+    "zip_bytes": 256242,
+    "evidence": "submissions/qwen3vl_lora_reader_20260912/submission_record.json",
+    "crc": "PASS",
+    "archive_members": [
+      "predictions.jsonl"
+    ]
+  },
+  {
+    "id": "initial-round5-unscored",
+    "stage": "初赛",
+    "official_score": null,
+    "scheme": "Round5 S2 temporal候选；上传记录为阻塞，无已确认新成绩",
+    "package": "submissions/round5_s2_temporal_20260917/aic-round5-s2-temporal-20260917.zip",
+    "zip_sha256": "e5df99b8c3d32ec6d495ef1aada2b869478f307884ebeedca3df76def36c3584",
+    "zip_bytes": 153764,
+    "evidence": "submissions/round5_s2_temporal_20260917/submission_attempt.json",
+    "crc": "PASS",
+    "archive_members": [
+      "predictions.jsonl"
+    ]
+  },
+  {
+    "id": "initial-p2final-43.94",
+    "stage": "初赛",
+    "official_score": 43.94,
+    "scheme": "P2-T2时间LoRA + 未微调Qwen镜头内稀疏空间锚点",
+    "package": "submissions/round6_p2t2_qwen_sparse_20260920/round6_p2t2_qwen_sparse_candidate.zip",
+    "zip_sha256": "31a3739c243303f3a3cf121f219c0092eae54ebe47084078e44a0070f65b3e8d",
+    "zip_bytes": 128938,
+    "evidence": "submissions/round6_p2t2_qwen_sparse_20260920/submission_record.json",
+    "crc": "PASS",
+    "archive_members": [
+      "predictions.jsonl"
+    ]
+  },
+  {
+    "id": "rematch-4b-33.81",
+    "stage": "复赛",
+    "official_score": 33.81,
+    "scheme": "A：4B/P2-T2 + native PTS兼容、受约束JSON、帧身份恢复",
+    "package": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/delivery_A_SPATIAL_IDENTITY_01/recover_01/candidate_A_PTS.zip",
+    "zip_sha256": "5b8a186eefc2d162d65f76267979b57a6fbb94ea64fd26461f13270acb66e313",
+    "zip_bytes": 266448,
+    "evidence": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/official_score_A_33_81_20261006.json",
+    "crc": "PASS",
+    "archive_members": [
+      "predictions.jsonl"
+    ]
+  },
+  {
+    "id": "rematch-linux8b-37.63",
+    "stage": "复赛",
+    "official_score": 37.63,
+    "scheme": "B：Linux 8B区间JSON SFT最终5轮模型 + 同8B无adapter空间链；v3推理上下文修复",
+    "package": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_sft8b_package_v3/delivery_01/candidate_B_8B.zip",
+    "zip_sha256": "86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54",
+    "zip_bytes": 310902,
+    "evidence": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/official_score_B_LINUX_37_63_20261006.json",
+    "crc": "PASS",
+    "archive_members": [
+      "predictions.jsonl"
+    ]
+  }
+]

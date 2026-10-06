@@ -1,0 +1,80 @@
+{
+  "state": "COMPLETE_VERIFIED",
+  "size": 4776172626,
+  "sha256": "8e4aa94f19c4e495952300ae19d37019fea4d2cbb3237120934c6b8d546c28e3",
+  "independent_sha256_matches": true,
+  "hash_seconds": 11.665,
+  "completed_utc": "2026-10-05T06:09:47.419133+00:00",
+  "crc_ok": true,
+  "unsafe_entries": 0,
+  "cloud_md5_untrusted": true,
+  "cloud_md5_matches": false,
+  "local_md5": "f6e980f5f27c10ac3031cb596df2828a",
+  "member_count": 1712,
+  "directory_count": 3,
+  "macosx_file_count": 856,
+  "ds_store_count": 1,
+  "substantive_extension_counts": {
+    ".mp4": 426,
+    ".jsonl": 426
+  },
+  "video_file_count": 426,
+  "jsonl_file_count": 426,
+  "video_jsonl_stems_match": true,
+  "other_substantive_members": [],
+  "zip_names_utf8_recovered_for_display": 1712,
+  "metadata_sample": [
+    {
+      "name": "复赛-基于视频大模型的通用视频高光剪辑/video/222.mp4",
+      "bytes": 21083876
+    },
+    {
+      "name": "复赛-基于视频大模型的通用视频高光剪辑/video/236.mp4",
+      "bytes": 20833246
+    },
+    {
+      "name": "复赛-基于视频大模型的通用视频高光剪辑/video/168.mp4",
+      "bytes": 822182
+    }
+  ],
+  "jsonl_contents_read": false,
+  "media_decoded": false,
+  "run_small_files": [
+    "worker_v3.sha256",
+    "launch.json",
+    "launch_v2.json",
+    "job_spec_v3.json",
+    "worker.sha256",
+    "job_spec_v2.json",
+    "worker_v2.sha256",
+    "download_worker_v2.py",
+    "singlethread_reconfiguration.json",
+    "svip_reconfiguration.json",
+    "download_worker.py",
+    "job_spec.json",
+    "download_worker_v3.py",
+    "status_before_svip.json",
+    "launch_v1.json",
+    "archive_inventory.json",
+    "status_before_singlethread.json",
+    "status.json"
+  ],
+  "project_gpu_processes": "",
+  "run_id": "rematch_download_20261005T041135Z",
+  "archive_path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_intake/rematch_download_20261005T041135Z/archive/复赛-基于视频大模型的通用视频高光剪辑.zip",
+  "completed_asia_taipei": "2026-10-05 14:09:47 UTC+8",
+  "integrity_status": "COMPLETE_VERIFIED",
+  "cloud_md5_untrusted_value": "dc1fe9ede4c0f91d2aabdb3cae1b339e",
+  "cloud_md5_caveat": "BaiduPCS-Go cloud metadata explicitly described this MD5 as potentially incorrect. It differs from the actual local MD5. Exact expected byte count, full independent local SHA-256 agreement and ZIP CRC pass are confirmed; upstream cryptographic identity is not established by this MD5.",
+  "description_or_readme_filename_detected": false,
+  "standalone_index_filename_detected": false,
+  "evaluator_or_script_filename_detected": false,
+  "jsonl_semantics": "UNKNOWN_CONTENT_NOT_READ",
+  "filename_encoding_note": "Existing Python zipfile inventory displays CP437-decoded UTF-8 bytes because of archive filename metadata. Re-encoding CP437 then decoding UTF-8 recovers all 1712 display names; ZIP and original inventory remain unchanged. Future extraction must handle names explicitly.",
+  "verification_scope": "Archive hashes, generic ZIP CRC integrity verification, member names and sizes only. No media decoding, JSONL content reading, archive script execution, training, inference or submission.",
+  "worker_sha256": "fbf56d271c3d185a4d0a43252640d79c1b93a39cc842afbbc68118be55f51e90",
+  "evidence_sync_transport": "scp -J macmini",
+  "evidence_sync_files_checked": 18,
+  "evidence_sync_hash_mismatches": 0,
+  "evidence_sync_details": "completion_sync_verification.json"
+}

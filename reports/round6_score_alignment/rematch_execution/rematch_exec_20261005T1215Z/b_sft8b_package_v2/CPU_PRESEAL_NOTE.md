@@ -1,0 +1,1 @@
+CPU首次测试已通过新增语法/顺序ordinal的9项，但调用旧30项合同的测试脚本未在Linux旧目录部署，报missing file。未开启模型/复赛推理，尚未seal。改为在新版本cpu_reference目录保存原脚本、辅助fixtures、原source_lock字节副本，通过明确PYTHONPATH访问原生产实现；旧baseline目录只读，测试临时文件限定新目录。保留首次错误为预seal部署证据，不回写任何运行锁。

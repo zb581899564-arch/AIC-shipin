@@ -1,0 +1,258 @@
+{
+  "run_id": "round6_p1a_fix_20260917T0510Z",
+  "spec_version": "aic_round6_p1a_internal_spec_v1",
+  "created_utc": "2026-09-17T04:50:17Z",
+  "official_status": "INTERNAL_SPEC_REIMPLEMENTATION",
+  "not_the_official_evaluator": true,
+  "environment": {
+    "python": "3.11.7 | packaged by Anaconda, Inc. | (main, Dec 15 2023, 18:05:47) [MSC v.1916 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "sources": {
+    "spec_version": "aic_round6_p1a_internal_spec_v1",
+    "evaluator_sources": {
+      "schema.py": "0236f98731919e2675a6eb827453f3c20bb63d38f459fd6b1ddf0f813200f5a9",
+      "internal_metric.py": "41ec9ecf274c5a2e140bb4d84a3803d9a3bfa3d41e65323f466a296896d92317",
+      "__init__.py": "3b8123792150de4656a7f5ff60725979286757ff20a58018edb6986483b91140",
+      "README.md": "4878fc1960e10aad56251996df5fd792a1d4ad9c8d1e3b11df8c2a6830cd5c80",
+      "validate_predictions.py": "f34003df8638aa3a6b22a466c22bc2415b4387b6e1fd89a774e33ef5cdc1d980"
+    },
+    "protected_inputs": {
+      "round5_predictions": {
+        "path": "submissions/round5_s2_temporal_20260917/predictions.jsonl",
+        "sha256": "f8f026a69c8f9fa676dd31a6ffcd375569842c59f4cb6fdcd8d4ced5d86cf3ef"
+      },
+      "round5_zip": {
+        "path": "submissions/round5_s2_temporal_20260917/aic-round5-s2-temporal-20260917.zip",
+        "sha256": "e5df99b8c3d32ec6d495ef1aada2b869478f307884ebeedca3df76def36c3584"
+      },
+      "round5_temporal_raw": {
+        "path": "reports/temporal_round5/evidence/temporal_raw_v1.jsonl",
+        "sha256": "3bc0fc59af87fc8542793e4419889b4cdf86a63c56e9c02c7ea19fdb1109cf72"
+      },
+      "spatial_base_lora_reader": {
+        "path": "submissions/qwen3vl_lora_reader_20260912/predictions.jsonl",
+        "sha256": "a81a711878ffcd68db84dba4b530c4c051cd10cd82b1b4929f35bd06853ef471"
+      },
+      "test_metadata_index": {
+        "path": "reports/round6_score_alignment/phase0/evidence/supervisor_test_metadata.json",
+        "sha256": "7f38d3f7f29b7fc5d91a9762ecfea00e6fc84b583bf11b439ba4a853bf1ec428"
+      }
+    }
+  },
+  "evaluator_source_verification": {
+    "vendored": {
+      "schema.py": "0236f98731919e2675a6eb827453f3c20bb63d38f459fd6b1ddf0f813200f5a9",
+      "internal_metric.py": "41ec9ecf274c5a2e140bb4d84a3803d9a3bfa3d41e65323f466a296896d92317",
+      "__init__.py": "3b8123792150de4656a7f5ff60725979286757ff20a58018edb6986483b91140",
+      "README.md": "4878fc1960e10aad56251996df5fd792a1d4ad9c8d1e3b11df8c2a6830cd5c80",
+      "validate_predictions.py": "f34003df8638aa3a6b22a466c22bc2415b4387b6e1fd89a774e33ef5cdc1d980"
+    },
+    "phase0": {
+      "schema.py": "0236f98731919e2675a6eb827453f3c20bb63d38f459fd6b1ddf0f813200f5a9",
+      "internal_metric.py": "41ec9ecf274c5a2e140bb4d84a3803d9a3bfa3d41e65323f466a296896d92317",
+      "__init__.py": "3b8123792150de4656a7f5ff60725979286757ff20a58018edb6986483b91140",
+      "README.md": "4878fc1960e10aad56251996df5fd792a1d4ad9c8d1e3b11df8c2a6830cd5c80",
+      "validate_predictions.py": "f34003df8638aa3a6b22a466c22bc2415b4387b6e1fd89a774e33ef5cdc1d980"
+    },
+    "ok": true
+  },
+  "rules": [
+    {
+      "rule": "seconds->frame, new internal policy",
+      "definition": "frame f selected iff a <= f/fps < b; legal frames 0..N-1",
+      "mode": "timestamp_halfopen",
+      "source": "P1a internal policy; the published AIC page does not settle endpoint semantics for the hidden labels"
+    },
+    {
+      "rule": "local window time origin",
+      "definition": "local time 0 is the real first sampled frame ceil(window_start*fps)/fps",
+      "source": "P1a fix for the round-5 mismatch between the model timeline and the composer"
+    },
+    {
+      "rule": "legacy ceil half-open",
+      "definition": "ceil(a*fps-eps)..ceil(b*fps-eps)-1",
+      "mode": "legacy_ceil_halfopen",
+      "source": "historical 43.48 chain (inference_v2/temporal.seconds_to_frame_segments)"
+    },
+    {
+      "rule": "legacy round inclusive",
+      "definition": "round(a*fps)..round(b*fps) inclusive",
+      "mode": "legacy_round_inclusive",
+      "source": "historical round-5 composer (compose_temporal_candidate_v1)"
+    },
+    {
+      "rule": "VFR",
+      "definition": "explicit decoded PTS only; no PTS means no VFR claim",
+      "source": "P1a internal policy"
+    },
+    {
+      "rule": "three states",
+      "definition": "VALID_NONEMPTY / VALID_EMPTY / INVALID(reasons)",
+      "source": "P1a internal policy; replaces the historical invalid==empty conflation"
+    },
+    {
+      "rule": "segment cardinality",
+      "definition": "one configurable constraint shared by prompt/training/inference; window replay constraint = 0..5",
+      "source": "P1a internal policy; the historical prompt allowed 1..5 and the parsing allowed a different maximum"
+    },
+    {
+      "rule": "centre-80% fallback",
+      "definition": "exists only in legacy_replay mode; the new mode keeps invalid invalid",
+      "source": "P1a internal policy"
+    },
+    {
+      "rule": "spatial provenance",
+      "definition": "SOURCE_SAME_FRAME / SOURCE_SHOT_NEAREST / NEEDS_SPATIAL_INFERENCE",
+      "source": "P1a internal policy; any distance limit must be declared by the caller"
+    },
+    {
+      "rule": "legacy nearest box",
+      "definition": "nearest source frame anywhere in the video",
+      "mode": "legacy_replay",
+      "source": "historical round-5 composer"
+    },
+    {
+      "rule": "joint score",
+      "definition": "2*sum(matched_frame_IoU)/(N_pred+N_gt); both empty 1; one side empty 0; mean over index videos x100",
+      "source": "published AIC formula (seen 2026-09-17); internal re-implementation"
+    },
+    {
+      "rule": "strict validation",
+      "definition": "validation failure => score null, issues listed, nothing cleaned",
+      "source": "P1a internal policy"
+    },
+    {
+      "rule": "missing reference",
+      "definition": "no reference or incomplete reference => NOT_COMPUTABLE; sparse reference => SPARSE_DIAGNOSTIC",
+      "source": "P1a internal policy; supervisor P0 erratum 1"
+    }
+  ],
+  "modes": {
+    "scoring": [
+      "OK",
+      "SPARSE_DIAGNOSTIC",
+      "NOT_COMPUTABLE",
+      "INVALID_INPUT"
+    ],
+    "composition": [
+      "traceable",
+      "legacy_replay"
+    ],
+    "time": [
+      "timestamp_halfopen",
+      "legacy_ceil_halfopen",
+      "legacy_round_inclusive"
+    ]
+  },
+  "code_manifest": {
+    "round6_score_alignment/p1a/aic6/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "round6_score_alignment/p1a/aic6/cli.py": "c9ca0cc11641f486b43d26860b4c34cd656bd5668b91e16db04af95908f0eca6",
+    "round6_score_alignment/p1a/aic6/compose.py": "aaf267583f1aa88eb1cdd9e0e09438a708d4773dfe10a0a879e0b2ee2e7dc98c",
+    "round6_score_alignment/p1a/aic6/provenance.py": "0628f22b124969ffeb7d2fb43fa2d6fcf17c5a727503ec036bd9769e1d280583",
+    "round6_score_alignment/p1a/aic6/replay.py": "40e24e871c460eb18f41c96cccf664631544f12a72bf516db9eee31677d9a78b",
+    "round6_score_alignment/p1a/aic6/scoring.py": "81d2886c8e34302cb8765862ad94f229d3dbeb04ed699a14e0d06bbf1a4c7ae2",
+    "round6_score_alignment/p1a/aic6/segments.py": "464697b7d5a21e6d7d54ef30227e667d42d0faa9ce86e91f4c308c1e58c199b3",
+    "round6_score_alignment/p1a/aic6/timebase.py": "d3b285c440201e4e5f4bb6ca698bafe3a66883c9dca316920e414c350d8c59b4",
+    "round6_score_alignment/p1a/aic6/vendor/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "round6_score_alignment/p1a/aic6/vendor/existing_internal_evaluator/__init__.py": "3b8123792150de4656a7f5ff60725979286757ff20a58018edb6986483b91140",
+    "round6_score_alignment/p1a/aic6/vendor/existing_internal_evaluator/internal_metric.py": "41ec9ecf274c5a2e140bb4d84a3803d9a3bfa3d41e65323f466a296896d92317",
+    "round6_score_alignment/p1a/aic6/vendor/existing_internal_evaluator/schema.py": "0236f98731919e2675a6eb827453f3c20bb63d38f459fd6b1ddf0f813200f5a9",
+    "round6_score_alignment/p1a/aic6/vendor/existing_internal_evaluator/validate_predictions.py": "f34003df8638aa3a6b22a466c22bc2415b4387b6e1fd89a774e33ef5cdc1d980",
+    "round6_score_alignment/p1a/run_p1a.py": "595cf1ff12c38fb9da87f528a56c2d33e3558182842dea5a46672f5124fbcf63",
+    "round6_score_alignment/p1a/tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "round6_score_alignment/p1a/tests/hand_cases.py": "8f1d9bffc2176bf2af419f2bd134a493c0054b6163ffe5941eeff594b3635486",
+    "round6_score_alignment/p1a/tests/test_boundary_regressions.py": "74b39dbd53057601c03e960f395cfb3a3e49ff82247c091c1f6eaf322a7c8ee1",
+    "round6_score_alignment/p1a/tests/test_compose.py": "7d1103732753bd312afbe21b683932943ce1c6c494714402f21e596202cb5708",
+    "round6_score_alignment/p1a/tests/test_scoring.py": "e7f2f6e46b42158f20f5ee3a3076df5058a9f30dfa6e6a5c26711a6b2545691d",
+    "round6_score_alignment/p1a/tests/test_segments.py": "79260037406fafad8c2beb1659432fc76c0b80720b879fa58a7964211e95a884",
+    "round6_score_alignment/p1a/tests/test_timebase.py": "4fa921a796955a669e83e78d7c4b2ad2cdb4254c5a5d9140b51f46c8930a5fa4"
+  },
+  "protected_inputs_before": {
+    "round5_predictions": {
+      "path": "submissions/round5_s2_temporal_20260917/predictions.jsonl",
+      "expected_sha256": "f8f026a69c8f9fa676dd31a6ffcd375569842c59f4cb6fdcd8d4ced5d86cf3ef",
+      "observed_sha256": "f8f026a69c8f9fa676dd31a6ffcd375569842c59f4cb6fdcd8d4ced5d86cf3ef",
+      "matches": true
+    },
+    "round5_zip": {
+      "path": "submissions/round5_s2_temporal_20260917/aic-round5-s2-temporal-20260917.zip",
+      "expected_sha256": "e5df99b8c3d32ec6d495ef1aada2b869478f307884ebeedca3df76def36c3584",
+      "observed_sha256": "e5df99b8c3d32ec6d495ef1aada2b869478f307884ebeedca3df76def36c3584",
+      "matches": true
+    },
+    "round5_temporal_raw": {
+      "path": "reports/temporal_round5/evidence/temporal_raw_v1.jsonl",
+      "expected_sha256": "3bc0fc59af87fc8542793e4419889b4cdf86a63c56e9c02c7ea19fdb1109cf72",
+      "observed_sha256": "3bc0fc59af87fc8542793e4419889b4cdf86a63c56e9c02c7ea19fdb1109cf72",
+      "matches": true
+    },
+    "spatial_base_lora_reader": {
+      "path": "submissions/qwen3vl_lora_reader_20260912/predictions.jsonl",
+      "expected_sha256": "a81a711878ffcd68db84dba4b530c4c051cd10cd82b1b4929f35bd06853ef471",
+      "observed_sha256": "a81a711878ffcd68db84dba4b530c4c051cd10cd82b1b4929f35bd06853ef471",
+      "matches": true
+    },
+    "test_metadata_index": {
+      "path": "reports/round6_score_alignment/phase0/evidence/supervisor_test_metadata.json",
+      "expected_sha256": "7f38d3f7f29b7fc5d91a9762ecfea00e6fc84b583bf11b439ba4a853bf1ec428",
+      "observed_sha256": "7f38d3f7f29b7fc5d91a9762ecfea00e6fc84b583bf11b439ba4a853bf1ec428",
+      "matches": true
+    }
+  },
+  "protected_inputs_after": {
+    "round5_predictions": {
+      "path": "submissions/round5_s2_temporal_20260917/predictions.jsonl",
+      "expected_sha256": "f8f026a69c8f9fa676dd31a6ffcd375569842c59f4cb6fdcd8d4ced5d86cf3ef",
+      "observed_sha256": "f8f026a69c8f9fa676dd31a6ffcd375569842c59f4cb6fdcd8d4ced5d86cf3ef",
+      "matches": true
+    },
+    "round5_zip": {
+      "path": "submissions/round5_s2_temporal_20260917/aic-round5-s2-temporal-20260917.zip",
+      "expected_sha256": "e5df99b8c3d32ec6d495ef1aada2b869478f307884ebeedca3df76def36c3584",
+      "observed_sha256": "e5df99b8c3d32ec6d495ef1aada2b869478f307884ebeedca3df76def36c3584",
+      "matches": true
+    },
+    "round5_temporal_raw": {
+      "path": "reports/temporal_round5/evidence/temporal_raw_v1.jsonl",
+      "expected_sha256": "3bc0fc59af87fc8542793e4419889b4cdf86a63c56e9c02c7ea19fdb1109cf72",
+      "observed_sha256": "3bc0fc59af87fc8542793e4419889b4cdf86a63c56e9c02c7ea19fdb1109cf72",
+      "matches": true
+    },
+    "spatial_base_lora_reader": {
+      "path": "submissions/qwen3vl_lora_reader_20260912/predictions.jsonl",
+      "expected_sha256": "a81a711878ffcd68db84dba4b530c4c051cd10cd82b1b4929f35bd06853ef471",
+      "observed_sha256": "a81a711878ffcd68db84dba4b530c4c051cd10cd82b1b4929f35bd06853ef471",
+      "matches": true
+    },
+    "test_metadata_index": {
+      "path": "reports/round6_score_alignment/phase0/evidence/supervisor_test_metadata.json",
+      "expected_sha256": "7f38d3f7f29b7fc5d91a9762ecfea00e6fc84b583bf11b439ba4a853bf1ec428",
+      "observed_sha256": "7f38d3f7f29b7fc5d91a9762ecfea00e6fc84b583bf11b439ba4a853bf1ec428",
+      "matches": true
+    }
+  },
+  "protected_inputs_unchanged": true,
+  "deviations_from_vendored_evaluator": [
+    "statuses SPARSE_DIAGNOSTIC / NOT_COMPUTABLE / INVALID_INPUT are new; the vendored implementation has a single ok/not-ok exit and no notion of reference coverage",
+    "validation is executed by the vendored schema module unchanged, but its report is surfaced as INVALID_INPUT with score=null instead of an exit code",
+    "the joint math is re-implemented here and cross-checked against vendor.internal_metric.score_predictions on hand cases",
+    "duplicate predictions: EVERY duplicate record stays in N_pred (it is counted as a false positive exactly like the vendored implementation); only the first record for a frame contributes IoU. The vendored implementation behaves identically and additionally emits a DUPLICATE_FRAME warning through its validator",
+    "reference objects must declare coverage and provenance explicitly: a missing/null frames field, a duplicate video_id or missing label_status/annotation_source is REJECTED at load time (the vendored implementation has no reference loader at all)",
+    "a reference that omits a scored video is NOT_COMPUTABLE rather than silently scored as empty ground truth",
+    "a sparse reference produces sparse-only diagnostics: no per-video precision/recall/F1, no false positives from unannotated frames and no whole-video empty judgement"
+  ],
+  "fix_round": {
+    "round": "p1a_fix",
+    "supervisor_review": "reports/round6_score_alignment/SUPERVISOR_P1A_REVIEW.md",
+    "fixes": [
+      "load_reference rejects missing/null/wrong-typed videos or frames, duplicate video_id and missing provenance metadata; only an explicit frames: [] is empty",
+      "sparse references produce sparse-only diagnostics (no per-video F1/precision/recall/time-F1, no false positives from unannotated frames, no whole-video empty judgement); zero annotated frames reports NO_EVIDENCE",
+      "SOURCE_SHOT_NEAREST replaces SOURCE_SHOT_INTERPOLATION; the declared gap limit must be a non-bool positive integer",
+      "composition reports status/deliverable/exit_code; INVALID windows fail the run, legal empty stays a success, missing spatial boxes are undeliverable",
+      "aic6.cli is the public failure boundary and exits non-zero on failure",
+      "duplicate-counting wording and the symmetric-difference wording corrected"
+    ],
+    "outputs_dir": "reports/round6_score_alignment/phase1a_fix"
+  }
+}

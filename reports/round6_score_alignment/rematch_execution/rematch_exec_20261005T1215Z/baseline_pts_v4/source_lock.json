@@ -1,0 +1,22 @@
+{
+  "schema": "aic_native_clock_source_lock_v4",
+  "scope": "stdlib numeric re-audit only; no decoding/models/admission",
+  "production_files": [
+    {
+      "path": "native_clock_core.py",
+      "sha256": "27962fd8cff54e6eaf0fc7723cbc35402c4d0bfac2dc543520db2e4ea0136ed7"
+    },
+    {
+      "path": "registry_io.py",
+      "sha256": "db61dd4d1317cfdbe37624ad34dfc10a5bed936bfac98a8ecfcac84dcc42c8d7"
+    },
+    {
+      "path": "scan_native_clock.py",
+      "sha256": "d7c8de5673580ffeb00cb689be835523e5635650f65c4e323ab55e9ddb6a1768"
+    },
+    {
+      "path": "build_nontest_registry.py",
+      "sha256": "67d193afb21c82f93c88f1b6b833c32176ed0ef5d9cebbde81c916b0c9f61978"
+    }
+  ]
+}

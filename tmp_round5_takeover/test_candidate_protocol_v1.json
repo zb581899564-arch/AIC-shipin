@@ -1,0 +1,27 @@
+{
+  "version": "round5_takeover_test_candidate_v1",
+  "frozen_before_dev_candidate_results": "2026-09-16",
+  "permission": "User explicitly requested automatic local test inference, ZIP upload through logged-in Chrome, and official score recording after project completion.",
+  "entry_gate": "A single selected candidate must pass frozen dev and one-shot holdout gates, including replay checks.",
+  "test_input_use": "Automatic local inference only. No manual labeling, frame review, model tuning, third-party API, or test-set-derived threshold choice.",
+  "temporal": {
+    "model": "Selected Qwen3-VL temporal LoRA adapter",
+    "prompt": "Frozen temporal_common.PROMPT",
+    "window_seconds": 30.0,
+    "max_frames_per_window": 64,
+    "max_new_tokens": 256,
+    "invalid_window_fallback": "centered 80 percent of that window",
+    "maximum_invalid_window_rate": 0.05
+  },
+  "spatial": {
+    "base": "Previously validated Qwen3-VL LoRA reader output, unchanged boxes where available",
+    "missing_frame_rule": "nearest old predicted frame's box within the same video"
+  },
+  "submission": {
+    "video_count": 174,
+    "format": "ZIP containing predictions.jsonl with video_id, targetRatioWH and frame/bboxes predictions",
+    "local_validator_required": true,
+    "upload_destination": "Logged-in AIC highlighter competition team AIC-2026-29124269",
+    "record": "Actual official score and ranked position, not internal proxy score"
+  }
+}

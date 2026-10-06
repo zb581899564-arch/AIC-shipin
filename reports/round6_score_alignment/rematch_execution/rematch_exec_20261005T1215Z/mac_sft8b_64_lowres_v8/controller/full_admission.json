@@ -1,0 +1,30 @@
+{
+  "authorized": true,
+  "scope": "MAC_8B_64_LOWRES_INTERVAL_SFT_NONTEST",
+  "phase": "full",
+  "source_lock_sha256": "6d42f4768e542c13c7c5d72f988c3dc84970e2a5edc0b53f2963cccc4445d9fa",
+  "config_sha256": "8f6fcd65da99c48f6bdfb07c58ff664668246cbf69236123345e88605733a6cd",
+  "max_seconds": 45410,
+  "registered_utc": "2026-10-06T07:55:08.328452+00:00",
+  "user_authorization_sha256": "09937ec4fdb3afab01d7629ee632d95891117cbbd85a16367746c2acd009afc6",
+  "resources": {
+    "checked_utc": "2026-10-06T07:55:08.307089+00:00",
+    "mac_workspace_bytes": 27947769856,
+    "mac_free_bytes": 854875709440,
+    "linux_work_upper_bytes": 51531308487,
+    "combined_planned_peak_bytes": 80386358727,
+    "combined_cap_bytes": 85899345920,
+    "planned_remaining_output_bytes": 907280384,
+    "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                  2093936.\nPages active:                                 128778.\nPages inactive:                              1693818.\nPages speculative:                              7553.\nPages throttled:                                   0.\nPages wired down:                             206010.\nPages purgeable:                                8430.\n\"Translation faults\":                      676203732.\nPages copy-on-write:                        47354118.\nPages zero filled:                        2384274428.\nPages reactivated:                           5655315.\nPages purged:                               92505567.\nFile-backed pages:                           1716547.\nAnonymous pages:                              113602.\nPages stored in compressor:                    88073.\nPages occupied by compressor:                  24582.\nDecompressions:                             44137373.\nCompressions:                               69368804.\nPageins:                                    13014337.\nPageouts:                                        928.\nSwapins:                                     6629790.\nSwapouts:                                    7220481.\nPages tagged:                                  84328.\nPages tagged resident:                         63461.\nPages tagged compressed:                       20867.\nPages tag-storage:                            131072.\nPages tag-storage holding tags:                 3291.\nPages tag-storage free:                        71689.\nPages tag-storage non-tag pageable:            55406.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                    3317888.\nTagged compressions:                           83056.\nTagged decompressions:                         54710.\n",
+    "swap": "vm.swapusage: total = 2048.00M  used = 872.19M  free = 1175.81M  (encrypted)\n",
+    "external_compute": []
+  },
+  "formal_c_bce_admitted": false,
+  "test_inference_admitted": false,
+  "upload_admitted": false,
+  "base_initialization": "PINNED_BASE_NEW_LORA_NOT_PROBE_ADAPTER",
+  "probe_report_sha256": "b0c319b18bbd50784eb2699c0aa77e7cc65cac0d941b1e96275aaaddd9e11f7c",
+  "measured_probe_wall_seconds": 341.48157216701657,
+  "measured_probe_peak_mps_mib": 25593.40625,
+  "cost_formula": "ceil(probe_wall_seconds/48*3620*1.75+probe_wall_seconds)"
+}

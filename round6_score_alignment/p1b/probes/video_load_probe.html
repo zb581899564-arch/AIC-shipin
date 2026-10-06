@@ -1,0 +1,16 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>PENDING</title></head><body>
+<div id="out">waiting</div>
+<script>
+const v = document.createElement('video');
+v.preload = 'metadata';
+v.src = 'media/0ReDuH0_rpI_210.0_360.0.mp4';
+v.onloadedmetadata = () => {
+  document.title = 'READY ' + v.videoWidth + 'x' + v.videoHeight + ' dur=' + v.duration.toFixed(4);
+  document.getElementById('out').textContent = document.title;
+};
+v.onerror = () => {
+  document.title = 'ERROR code=' + (v.error ? v.error.code : 'unknown');
+  document.getElementById('out').textContent = document.title;
+};
+setTimeout(() => { if (document.title === 'PENDING') { document.title = 'TIMEOUT'; } }, 6000);
+</script></body></html>

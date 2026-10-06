@@ -1,0 +1,23 @@
+{
+  "status": "PASS_EXACT_PRE_GENERATION_FAILURE_RECOVERY",
+  "counts": {
+    "BASE8B": {
+      "windows": 112,
+      "pre_decode_failures": 112,
+      "model_generation_calls": 0,
+      "output_sha256": "7da56db618dee455f96a3621078d51f311d7817b27146b859a9c5163a5bee359"
+    },
+    "SFT8B": {
+      "windows": 112,
+      "pre_decode_failures": 112,
+      "model_generation_calls": 0,
+      "output_sha256": "30c84df8aac2d167844b8463122baa141a2d20c48e53c2ab8951339b5f32c446"
+    }
+  },
+  "old_input_contract_sha256": "55eaaaffd790984403addea399558c1c142cf1f275dcd0b8186ad806a8f2eac6",
+  "old_source_sha256": "8397f75c55861caf07e88754ecb8f610f4daa30859440cbbbcfe440d485db60f",
+  "failure_location": "decode_dev_av Linux-root assertion before av.open, encoding, and model.generate",
+  "original_failure_preserved": true,
+  "quality_evaluation_calls_completed": 0,
+  "scientific_recipe_changed": false
+}

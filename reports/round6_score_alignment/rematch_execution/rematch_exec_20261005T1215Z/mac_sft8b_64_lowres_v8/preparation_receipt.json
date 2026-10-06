@@ -1,0 +1,32 @@
+{
+  "status": "PASS_MAC_REAL_CPU_ACCEPTANCE_AND_PINNED_ENVIRONMENT",
+  "tests": 8,
+  "real_codec_processor_test": true,
+  "packages": {
+    "torch": "2.5.1",
+    "torchvision": "0.20.1",
+    "transformers": "4.57.1",
+    "peft": "0.17.1",
+    "numpy": "2.2.6",
+    "av": "16.0.1",
+    "Pillow": "11.3.0",
+    "safetensors": "0.6.2",
+    "huggingface-hub": "0.36.0"
+  },
+  "torchvision_addition_to_initial_environment_recorded": true,
+  "python": "/Users/choubk/codex-workspace/projects/aic-video/mac_sft8b_20261006T054133Z/env/bin/python",
+  "cache_scope": {
+    "XDG_CONFIG_HOME": "/Users/choubk/codex-workspace/configs",
+    "XDG_CACHE_HOME": "/Users/choubk/codex-workspace/cache",
+    "HF_HOME": "/Users/choubk/codex-workspace/cache/huggingface",
+    "TORCH_HOME": "/Users/choubk/codex-workspace/cache/torch",
+    "PIP_CACHE_DIR": "/Users/choubk/codex-workspace/cache/pip",
+    "TMPDIR": "/Users/choubk/codex-workspace/tmp/",
+    "PYTHONPYCACHEPREFIX": "/Users/choubk/codex-workspace/cache/pycache"
+  },
+  "cpu_log_sha256": "5a02af660aa066532bbf040cf360b73bf2e16707dd1e379a36d2c54105b33423",
+  "hostname": "choubkdeMac-Mini.local",
+  "hardware": "hw.model: Mac17,16\nhw.memsize: 68719476736\nhw.ncpu: 18\nmachdep.cpu.brand_string: Apple M5 Pro\n",
+  "checked_utc": "2026-10-06T07:47:52.821762+00:00",
+  "training_started": false
+}

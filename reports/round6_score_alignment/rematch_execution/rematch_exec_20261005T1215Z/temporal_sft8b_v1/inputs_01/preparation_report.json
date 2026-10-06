@@ -1,0 +1,32 @@
+{
+  "status": "PASS_TRAIN_ONLY_SFT_INPUT_PREPARATION_NOT_TRAINING",
+  "parents": 704,
+  "source_groups": 602,
+  "source_paths": 704,
+  "registered_positive_windows": 724,
+  "smoke_source_groups": 16,
+  "smoke_windows": 17,
+  "geometric_unknown_windows_not_used": 30,
+  "targets_quantized_at_four_decimals": 715,
+  "per_endpoint_precision_change_max_sec": 0.000100001,
+  "unselected_to_negative_conversions": 0,
+  "original_positive_seconds": 3821.1870194530984,
+  "represented_positive_seconds": 3821.182099999995,
+  "geometric_positive_duration_conserved": true,
+  "complete_negative_semantics_claim": false,
+  "teacher_observation_claim": false,
+  "old_pts_audit_reused_metadata_checked_only": true,
+  "all908_pts_reaudited": false,
+  "original_source_byte_hashes_available_in_old_pts_record": false,
+  "current_source_bytes_newly_bound": true,
+  "confirm_labels_read": false,
+  "dev_labels_used_for_training": false,
+  "models_run": false,
+  "GPU_used": false,
+  "wall_seconds": 53.67732847575098,
+  "files": {
+    "r7_train_registry.json": "71552f64ccdb125ca11a451baf5b8a22491d51d73db1a42e0ce1a545262d1cd4",
+    "smoke_train.jsonl": "0754fdcfaa01eb4027b5c845c25af2abacc705a89f0cb695ebb5293f29385266",
+    "full_train.jsonl": "124801624736f960d15074ad65840d4e2850dcb7d8d5d3b16a2cb54e7eee4bc0"
+  }
+}

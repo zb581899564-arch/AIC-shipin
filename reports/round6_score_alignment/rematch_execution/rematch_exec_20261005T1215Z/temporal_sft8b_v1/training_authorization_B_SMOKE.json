@@ -1,0 +1,16 @@
+{
+  "schema": "aic_sft8b_training_authorization_v1",
+  "authorized": true,
+  "route": "TEMPORAL_8B_INTERVAL_SFT",
+  "scope": "TEMPORAL_8B_SFT_SMOKE_NONTEST",
+  "authority_kind": "USER_TRAINING_REQUEST_MAIN_REGISTERED_B_ROUTE",
+  "user_request_quote": "然后推理打包开训。",
+  "prior_user_preference_quote": "我倾向于用那个接近9b的模型，微调",
+  "explicit_user_route_choice": false,
+  "main_registered_route": "B control already present in final-decision; C has zero eligible BCE rows; bounded local interval SFT smoke can test 8B feasibility",
+  "authorization_inferred_from_nonresponse": false,
+  "formal_c_bce_admitted": false,
+  "full_training_admitted": false,
+  "competition_upload_authorized": false,
+  "sequence": "A complete strict426 candidate, then shared-resource registered B5update smoke"
+}

@@ -1,0 +1,52 @@
+{
+  "status": "PASS_COMPLETE_426_CANDIDATE_NOT_UPLOADED",
+  "original_spatial_sha256": "aa1b94a132886acea73d0951b84928a4b073d365f8b56b226ddc2c22cc910339",
+  "original_successes": 13014,
+  "recovery_requests": 8,
+  "uploaded": false,
+  "videos": 426,
+  "frames": 93155,
+  "anchors": 13022,
+  "restored_pixel_identities": 8,
+  "unchanged_successful_spatial_rows": 13014,
+  "unchanged_successful_spatial_lines_byte_identical": true,
+  "reused_artifacts": {
+    "temporal.jsonl": "b816935d6e81f81878c84573b7938382d5659bdfb6c36af5f81551e54d2ac8b7",
+    "selected.jsonl": "fd86e0b2c5c6b0c53ba83ed323739462e6d9aa79788a89c706218844f795f5c4",
+    "shots.jsonl": "e4a6bab85cb2103aaca230f60bfc1ae780291e1f9fd426c66449f7ce343e23c4",
+    "anchor_requests.jsonl": "1102ba4adbbe1c53acf481bca67bf23d3c6628251c5bb9e8008427b8d4254102",
+    "metadata.json": "6601ffe56e0528847ba9cbc28e97182d78027e568cbeadbe2cc78f29f8465908"
+  },
+  "candidate": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/spatial_identity_recovery_v1/recover_01/candidate_A_PTS.zip",
+  "candidate_sha256": "5b8a186eefc2d162d65f76267979b57a6fbb94ea64fd26461f13270acb66e313",
+  "candidate_bytes": 266448,
+  "package_stage": {
+    "archive_names": [
+      "predictions.jsonl"
+    ],
+    "clock_registry_sha256": "1058aba02e5e959bc8e4842cbde0eadced192a8201d5c833ae50a7c0aac07909",
+    "config_sha256": "137a60e3efae567794105bac8d2fcb4288c7d1b289ab4ad1d0a81e2ba11c5414",
+    "issues": [],
+    "legal_empty_supported": false,
+    "manifest_sha256": "ceb91ee9434ce3de6a55abf727e613b83368b547d3be3d1e71b46414c2f019f8",
+    "official_status": "NOT_SCORED_NOT_UPLOADED",
+    "old_test_boxes_used": 0,
+    "prediction_frames": 93155,
+    "predictions_sha256": "1337e38f5106aef7dbe1962f531c8fd649de22751f9a9e8899bebfb37bf8ed8c",
+    "silent_fallbacks": 0,
+    "source_lock_sha256": "86fc0da7cf631a2afe33c54fb5b66246bba88adfd95c1d8ce80ccbf73522d70d",
+    "stage": "package",
+    "status": "PASS_FORMAT_PROVENANCE_PACKAGE_NOT_OFFICIALLY_SCORED",
+    "strict_original_A": false,
+    "uploaded": false,
+    "variant": "A_NATIVE_PTS_COMPAT_V1",
+    "video_records": 426,
+    "weak_roi_inputs_used": 0,
+    "zip_bytes": 266448,
+    "zip_sha256": "5b8a186eefc2d162d65f76267979b57a6fbb94ea64fd26461f13270acb66e313"
+  },
+  "original_failed_run_preserved": true,
+  "silent_fallbacks": 0,
+  "peak_memory_mib": 8534.25,
+  "wall_seconds": 55.265018741600215
+}

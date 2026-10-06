@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "isolated_python": "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+  "temporal_windowed_videos": 3,
+  "temporal_multi_videos": 3,
+  "corrected_spatial_videos": 3,
+  "temporal_changed": [],
+  "spatial_changed_ids": [],
+  "invalid_or_fallback_ids": [],
+  "candidate_prediction_sha256": "ce328d56514608a5e9d9301ae49537a0ccf30298ba63fb0cde52b60782964975",
+  "candidate_acceptance_sha256": "9275bc75b6fcf94faae3ad0716d4fbe6cf6cf341ab6aaa3bb12140b0977ca426",
+  "recovery_source_hashes": {
+    "inference_recovery/__init__.py": "9b3e82ad16978cf48982127c6b11d6641129aeba75f6f29f6071f40c0695f016",
+    "inference_recovery/spatial_replay.py": "6f999a8d650761c7a8d90c687d1d82b3120b75bcd69e463e56c7b2de209fc728",
+    "inference_recovery/reader.py": "2ce044ae4d649942248c5b20082bb8847240663f2a8f32aa353658668b1908d1"
+  },
+  "scope": "offline CUDA temporal and image inference using same weights and corrected source-frame reader",
+  "all_174_recomputed_in_isolated_runtime": false,
+  "replay_is_validation_only": true
+}

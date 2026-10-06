@@ -1,0 +1,53 @@
+{
+  "run_id": "round6_p2final_20260920T132906Z",
+  "stage": "P2FINAL_COMPETITION_TEST_INFERENCE_AND_PACKAGE",
+  "authorized": "automatic test inference and package only; no upload",
+  "registered_before_gpu": true,
+  "temporal": {
+    "component": "P2-T2 final adapter",
+    "adapter_sha256": "c9bf3754a05a42d69ee8c4d11f56c41346d927094fd643863f0cb55626b8e6a0",
+    "window_seconds": 30.0,
+    "endpoint_rule": "ceil plus half-open [start,end)",
+    "invalid_window": "no fallback; select no frames from invalid window",
+    "max_invalid_window_rate": 0.05,
+    "no_test_tuning": true
+  },
+  "spatial": {
+    "component": "unfinetuned Qwen3-VL-4B-Instruct",
+    "hist_bhattacharyya_threshold": 0.35,
+    "gray_mad_threshold": 0.18,
+    "max_anchor_gap_frames": 8,
+    "anchors": "first and last of each selected run/shot plus max gap 8",
+    "interpolation": "integer linear interpolation only within one detected shot",
+    "forbidden": [
+      "old competition-test boxes",
+      "weak ROI",
+      "cross-shot reuse",
+      "unbounded reuse",
+      "center fallback"
+    ]
+  },
+  "output": {
+    "records": 174,
+    "schema": "official JSONL video_id,targetRatioWH,predictions[{frame,bboxes:[x,y,w]}]",
+    "ratios": "preserve per-video 16:9 or 9:16",
+    "allow_empty_predictions": true,
+    "archive": "single predictions.jsonl",
+    "upload": false
+  },
+  "resources": {
+    "project_cap_gpu_hours": 24,
+    "temporal_job_max_seconds": 1800,
+    "spatial_job_max_seconds": 9000,
+    "stage_disk_cap_gib": 8
+  },
+  "stop_conditions": [
+    "active GPU conflict",
+    "input or adapter hash mismatch",
+    "invalid-window rate above 5%",
+    "shot detector equivalence failure",
+    "any anchor failure",
+    "any illegal or missing composed box",
+    "project GPU cap would be exceeded"
+  ]
+}

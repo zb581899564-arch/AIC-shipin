@@ -1,0 +1,40 @@
+{
+  "scope": "MAC_8B_128_LOWRES_INTERVAL_SFT_NONTEST",
+  "phase": "probe",
+  "runner_pid": 78471,
+  "child_pid": 78482,
+  "started_utc": "2026-10-06T07:33:09.521571+00:00",
+  "max_seconds": 10800,
+  "admission_sha256": "62014a824f1490cabd6a46e2a86c6001f09321eda901da013c09b00ce4c999b5",
+  "source_lock_sha256": "d936c5a76e89f0360010ce3fd29ada8c7e353e4aec360cc145a298605fe21cba",
+  "finished_utc": "2026-10-06T07:35:57.258442+00:00",
+  "exit_code": 4,
+  "charged_seconds": 167.73769183387049,
+  "cumulative_gpu_time_mode": "UNLIMITED",
+  "linux_initial_7200_offset_unchanged": true,
+  "stopped_owned_child_reason": null,
+  "resources_before": {
+    "checked_utc": "2026-10-06T07:33:09.493951+00:00",
+    "mac_workspace_bytes": 27879796736,
+    "mac_free_bytes": 854938144768,
+    "linux_work_upper_bytes": 51531308487,
+    "combined_planned_peak_bytes": 80523382215,
+    "combined_cap_bytes": 85899345920,
+    "planned_remaining_output_bytes": 1112276992,
+    "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                  3652503.\nPages active:                                 135422.\nPages inactive:                               151854.\nPages speculative:                              1398.\nPages throttled:                                   0.\nPages wired down:                             193123.\nPages purgeable:                               14028.\n\"Translation faults\":                      668382597.\nPages copy-on-write:                        43973474.\nPages zero filled:                        2310453487.\nPages reactivated:                           5631921.\nPages purged:                               55697689.\nFile-backed pages:                            140291.\nAnonymous pages:                              148383.\nPages stored in compressor:                    74827.\nPages occupied by compressor:                  20377.\nDecompressions:                             44088178.\nCompressions:                               69165977.\nPageins:                                     8855722.\nPageouts:                                        924.\nSwapins:                                     6628609.\nSwapouts:                                    7220481.\nPages tagged:                                  83236.\nPages tagged resident:                         63107.\nPages tagged compressed:                       20129.\nPages tag-storage:                            131072.\nPages tag-storage holding tags:                 3253.\nPages tag-storage free:                        68466.\nPages tag-storage non-tag pageable:            58821.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                    3173056.\nTagged compressions:                           81143.\nTagged decompressions:                         53537.\n",
+    "swap": "vm.swapusage: total = 2048.00M  used = 888.19M  free = 1159.81M  (encrypted)\n",
+    "external_compute": []
+  },
+  "resources_last": {
+    "checked_utc": "2026-10-06T07:35:42.218422+00:00",
+    "mac_workspace_bytes": 27880050688,
+    "mac_free_bytes": 854948515840,
+    "linux_work_upper_bytes": 51531308487,
+    "combined_planned_peak_bytes": 80523636167,
+    "combined_cap_bytes": 85899345920,
+    "planned_remaining_output_bytes": 1112276992,
+    "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    47337.\nPages active:                                1009222.\nPages inactive:                              1020665.\nPages speculative:                                47.\nPages throttled:                                   0.\nPages wired down:                            2056868.\nPages purgeable:                                9284.\n\"Translation faults\":                      669438137.\nPages copy-on-write:                        45068224.\nPages zero filled:                        2324653268.\nPages reactivated:                           5631972.\nPages purged:                               62518343.\nFile-backed pages:                            622059.\nAnonymous pages:                             1407875.\nPages stored in compressor:                    75108.\nPages occupied by compressor:                  20538.\nDecompressions:                             44088811.\nCompressions:                               69165977.\nPageins:                                    10402010.\nPageouts:                                        924.\nSwapins:                                     6628835.\nSwapouts:                                    7220481.\nPages tagged:                                  85751.\nPages tagged resident:                         65625.\nPages tagged compressed:                       20126.\nPages tag-storage:                            131072.\nPages tag-storage holding tags:                 3262.\nPages tag-storage free:                        34893.\nPages tag-storage non-tag pageable:            92348.\nPages tag-storage non-tag wired:                  39.\nBytes of compressed tags:                    3172224.\nTagged compressions:                           81143.\nTagged decompressions:                         53540.\n",
+    "swap": "vm.swapusage: total = 2048.00M  used = 880.19M  free = 1167.81M  (encrypted)\n",
+    "external_compute": []
+  }
+}

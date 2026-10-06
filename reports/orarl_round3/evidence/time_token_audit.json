@@ -1,0 +1,551 @@
+{
+  "model": "/home/inspur/aic_video_work/orarl_round1/model/Video-ORA-4B",
+  "processor_file": "/home/inspur/aic_video_work/orarl_round1/env/orarl_hf/lib/python3.11/site-packages/transformers/models/qwen3_vl/processing_qwen3_vl.py",
+  "sampling_profile": {
+    "fps": 1,
+    "max_frames": 32,
+    "min_pixels": 4096,
+    "max_pixels": 786432,
+    "total_pixels": 8388608
+  },
+  "round2_wrong_claim": "'the model's final input contains NO explicit per-frame timestamps' -- round 2 inspected the PRE-processor text and hard-coded any_numeric_timestamp_list=False, and only listed processor output TENSOR keys, never decoding input_ids",
+  "videos": {
+    "known_time_32s_30fps": {
+      "path": "/home/inspur/aic_video_work/orarl_round2/clips/known_time_32s_30fps.mkv",
+      "labelled": true,
+      "note": "32.000 s / 30 fps / 960 frames, each frame bit-encodes its second",
+      "container": {
+        "width": 320,
+        "height": 180,
+        "avg_fps": 30.0,
+        "r_fps": "30/1",
+        "nb_frames": null,
+        "duration_sec": 32.0
+      },
+      "n_real_pts": 960,
+      "real_pts_available": true,
+      "real_pts_field_used": "best_effort_timestamp_time",
+      "sampling": {
+        "frames_indices": [
+          0,
+          31,
+          62,
+          93,
+          124,
+          155,
+          186,
+          217,
+          247,
+          278,
+          309,
+          340,
+          371,
+          402,
+          433,
+          464,
+          495,
+          526,
+          557,
+          588,
+          619,
+          650,
+          681,
+          712,
+          742,
+          773,
+          804,
+          835,
+          866,
+          897,
+          928,
+          959
+        ],
+        "metadata_fps": 30.0,
+        "metadata_total_num_frames": 960,
+        "video_backend": "decord"
+      },
+      "processor_time_computation": {
+        "formula": "_calculate_timestamps: t=idx/fps then averaged over each temporal patch: (t[i]+t[i+merge-1])/2",
+        "temporal_patch_size": 2,
+        "timestamps": [
+          0.5167,
+          2.5833,
+          4.65,
+          6.7167,
+          8.75,
+          10.8167,
+          12.8833,
+          14.95,
+          17.0167,
+          19.0833,
+          21.15,
+          23.2167,
+          25.25,
+          27.3167,
+          29.3833,
+          31.45
+        ],
+        "n_timestamps": 16,
+        "IS_real_pts": false,
+        "is_nominal_index_over_fps": true
+      },
+      "index_over_fps_nominal_sec": [
+        0.0,
+        1.0333,
+        2.0667,
+        3.1,
+        4.1333,
+        5.1667,
+        6.2,
+        7.2333,
+        8.2333,
+        9.2667,
+        10.3,
+        11.3333,
+        12.3667,
+        13.4,
+        14.4333,
+        15.4667,
+        16.5,
+        17.5333,
+        18.5667,
+        19.6,
+        20.6333,
+        21.6667,
+        22.7,
+        23.7333,
+        24.7333,
+        25.7667,
+        26.8,
+        27.8333,
+        28.8667,
+        29.9,
+        30.9333,
+        31.9667
+      ],
+      "real_container_pts_sec_for_sampled_frames": [
+        0.0,
+        1.033,
+        2.067,
+        3.1,
+        4.133,
+        5.167,
+        6.2,
+        7.233,
+        8.233,
+        9.267,
+        10.3,
+        11.333,
+        12.367,
+        13.4,
+        14.433,
+        15.467,
+        16.5,
+        17.533,
+        18.567,
+        19.6,
+        20.633,
+        21.667,
+        22.7,
+        23.733,
+        24.733,
+        25.767,
+        26.8,
+        27.833,
+        28.867,
+        29.9,
+        30.933,
+        31.967
+      ],
+      "final_input_ids": {
+        "length": 1115,
+        "n_video_pad_tokens": 960,
+        "video_pad_token_id": 248057,
+        "time_literals_in_decoded_text": [
+          "0.5",
+          "2.6",
+          "4.7",
+          "6.7",
+          "8.8",
+          "10.8",
+          "12.9",
+          "14.9",
+          "17.0",
+          "19.1",
+          "21.1",
+          "23.2",
+          "25.2",
+          "27.3",
+          "29.4",
+          "31.4"
+        ],
+        "n_time_literals": 16
+      },
+      "decoded_text_head": "<|im_start|>user\n<0.5 seconds><|vision_start|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|v",
+      "patch_real_seconds": [
+        {
+          "patch": 0,
+          "frame_indices": [
+            0,
+            31
+          ],
+          "real_seconds_in_patch": [
+            0,
+            1
+          ]
+        },
+        {
+          "patch": 1,
+          "frame_indices": [
+            62,
+            93
+          ],
+          "real_seconds_in_patch": [
+            2,
+            3
+          ]
+        },
+        {
+          "patch": 2,
+          "frame_indices": [
+            124,
+            155
+          ],
+          "real_seconds_in_patch": [
+            4,
+            5
+          ]
+        },
+        {
+          "patch": 3,
+          "frame_indices": [
+            186,
+            217
+          ],
+          "real_seconds_in_patch": [
+            6,
+            7
+          ]
+        },
+        {
+          "patch": 4,
+          "frame_indices": [
+            247,
+            278
+          ],
+          "real_seconds_in_patch": [
+            8,
+            9
+          ]
+        },
+        {
+          "patch": 5,
+          "frame_indices": [
+            309,
+            340
+          ],
+          "real_seconds_in_patch": [
+            10,
+            11
+          ]
+        },
+        {
+          "patch": 6,
+          "frame_indices": [
+            371,
+            402
+          ],
+          "real_seconds_in_patch": [
+            12,
+            13
+          ]
+        },
+        {
+          "patch": 7,
+          "frame_indices": [
+            433,
+            464
+          ],
+          "real_seconds_in_patch": [
+            14,
+            15
+          ]
+        },
+        {
+          "patch": 8,
+          "frame_indices": [
+            495,
+            526
+          ],
+          "real_seconds_in_patch": [
+            16,
+            17
+          ]
+        },
+        {
+          "patch": 9,
+          "frame_indices": [
+            557,
+            588
+          ],
+          "real_seconds_in_patch": [
+            18,
+            19
+          ]
+        },
+        {
+          "patch": 10,
+          "frame_indices": [
+            619,
+            650
+          ],
+          "real_seconds_in_patch": [
+            20,
+            21
+          ]
+        },
+        {
+          "patch": 11,
+          "frame_indices": [
+            681,
+            712
+          ],
+          "real_seconds_in_patch": [
+            22,
+            23
+          ]
+        },
+        {
+          "patch": 12,
+          "frame_indices": [
+            742,
+            773
+          ],
+          "real_seconds_in_patch": [
+            24,
+            25
+          ]
+        },
+        {
+          "patch": 13,
+          "frame_indices": [
+            804,
+            835
+          ],
+          "real_seconds_in_patch": [
+            26,
+            27
+          ]
+        },
+        {
+          "patch": 14,
+          "frame_indices": [
+            866,
+            897
+          ],
+          "real_seconds_in_patch": [
+            28,
+            29
+          ]
+        },
+        {
+          "patch": 15,
+          "frame_indices": [
+            928,
+            959
+          ],
+          "real_seconds_in_patch": [
+            30,
+            31
+          ]
+        }
+      ],
+      "nominal_vs_real_pts": {
+        "max_abs_diff_sec": 0.000333,
+        "mean_diff_sec": -2.1e-05,
+        "identical_within_1ms": true,
+        "note": "index/fps happens to coincide with container PTS within 1 ms for THIS file"
+      }
+    },
+    "round1_clip_32p2s": {
+      "path": "/home/inspur/aic_video_work/orarl_round1/clips/src_wk2CeU_DcBo_60_210_off0_len32.mp4",
+      "labelled": false,
+      "note": "32.200 s / 962 frames, the round-1 clip",
+      "container": {
+        "width": 534,
+        "height": 300,
+        "avg_fps": 30.0,
+        "r_fps": "30/1",
+        "nb_frames": 962,
+        "duration_sec": 32.2
+      },
+      "n_real_pts": 962,
+      "real_pts_available": true,
+      "real_pts_field_used": "best_effort_timestamp_time",
+      "sampling": {
+        "frames_indices": [
+          0,
+          31,
+          62,
+          93,
+          124,
+          155,
+          186,
+          217,
+          248,
+          279,
+          310,
+          341,
+          372,
+          403,
+          434,
+          465,
+          496,
+          527,
+          558,
+          589,
+          620,
+          651,
+          682,
+          713,
+          744,
+          775,
+          806,
+          837,
+          868,
+          899,
+          930,
+          961
+        ],
+        "metadata_fps": 30.0,
+        "metadata_total_num_frames": 962,
+        "video_backend": "decord"
+      },
+      "processor_time_computation": {
+        "formula": "_calculate_timestamps: t=idx/fps then averaged over each temporal patch: (t[i]+t[i+merge-1])/2",
+        "temporal_patch_size": 2,
+        "timestamps": [
+          0.5167,
+          2.5833,
+          4.65,
+          6.7167,
+          8.7833,
+          10.85,
+          12.9167,
+          14.9833,
+          17.05,
+          19.1167,
+          21.1833,
+          23.25,
+          25.3167,
+          27.3833,
+          29.45,
+          31.5167
+        ],
+        "n_timestamps": 16,
+        "IS_real_pts": false,
+        "is_nominal_index_over_fps": true
+      },
+      "index_over_fps_nominal_sec": [
+        0.0,
+        1.0333,
+        2.0667,
+        3.1,
+        4.1333,
+        5.1667,
+        6.2,
+        7.2333,
+        8.2667,
+        9.3,
+        10.3333,
+        11.3667,
+        12.4,
+        13.4333,
+        14.4667,
+        15.5,
+        16.5333,
+        17.5667,
+        18.6,
+        19.6333,
+        20.6667,
+        21.7,
+        22.7333,
+        23.7667,
+        24.8,
+        25.8333,
+        26.8667,
+        27.9,
+        28.9333,
+        29.9667,
+        31.0,
+        32.0333
+      ],
+      "real_container_pts_sec_for_sampled_frames": [
+        0.066016,
+        1.099349,
+        2.132682,
+        3.166016,
+        4.199349,
+        5.232682,
+        6.266016,
+        7.299349,
+        8.332682,
+        9.366016,
+        10.399349,
+        11.432682,
+        12.466016,
+        13.499349,
+        14.532682,
+        15.566016,
+        16.599349,
+        17.632682,
+        18.666016,
+        19.699349,
+        20.732682,
+        21.766016,
+        22.799349,
+        23.832682,
+        24.866016,
+        25.899349,
+        26.932682,
+        27.966016,
+        28.999349,
+        30.032682,
+        31.066016,
+        32.166016
+      ],
+      "final_input_ids": {
+        "length": 2603,
+        "n_video_pad_tokens": 2448,
+        "video_pad_token_id": 248057,
+        "time_literals_in_decoded_text": [
+          "0.5",
+          "2.6",
+          "4.7",
+          "6.7",
+          "8.8",
+          "10.9",
+          "12.9",
+          "15.0",
+          "17.1",
+          "19.1",
+          "21.2",
+          "23.2",
+          "25.3",
+          "27.4",
+          "29.4",
+          "31.5"
+        ],
+        "n_time_literals": 16
+      },
+      "decoded_text_head": "<|im_start|>user\n<0.5 seconds><|vision_start|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|v",
+      "patch_real_seconds": null,
+      "nominal_vs_real_pts": {
+        "max_abs_diff_sec": 0.132683,
+        "mean_diff_sec": 0.068099,
+        "identical_within_1ms": false,
+        "note": "index/fps does NOT equal container PTS for this file: differs by up to 0.132683 s (mean +0.068099 s). Round 2 labelled index/fps values as 'real decoded timestamps', which is incorrect in general and measurably wrong here."
+      }
+    }
+  }
+}

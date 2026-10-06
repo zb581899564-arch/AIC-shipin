@@ -1,0 +1,70 @@
+{
+  "audit_script_version": "2026-09-09.data-audit.v1",
+  "candidate_split_counts": {
+    "dev": {
+      "groups": 84,
+      "isolated": 99,
+      "labels": 99,
+      "trusted_identity": 0
+    },
+    "holdout": {
+      "groups": 85,
+      "isolated": 99,
+      "labels": 99,
+      "trusted_identity": 0
+    },
+    "train": {
+      "groups": 694,
+      "isolated": 789,
+      "labels": 789,
+      "trusted_identity": 0
+    }
+  },
+  "candidate_zero_group_leakage": true,
+  "data_root": "/home/inspur/aic_video_data",
+  "elapsed_seconds": 68.816,
+  "generated_at_utc": "2026-09-09T14:34:56Z",
+  "hash_policy": "label-related MP4s only",
+  "label_related_video_stems": 987,
+  "labels_file": {
+    "parse_errors": 0,
+    "path": "/home/inspur/aic_video_data/labels/train.jsonl",
+    "rows": 987
+  },
+  "original_split_rows": {
+    "train": 887,
+    "val": 100
+  },
+  "original_train_val_overlap_groups": [
+    "-e_TnS4fh7Y",
+    "5YgYDR4xBqY",
+    "7PKEbzSNwts",
+    "9Xzrtwiint4",
+    "Aa7o08i2wKg",
+    "HL60CCu_R44",
+    "I6aMNiONm3I",
+    "LPRwcq_K1qU",
+    "LRLAgQZIe6w",
+    "MBw7R9wKYbU",
+    "NJpmjlwthHY",
+    "T0ijy2Nrefw",
+    "TbCWfBDAsGk",
+    "YVVefQ5X2R8",
+    "_dL1_68nwtw",
+    "bJZ-FTeG7D8",
+    "dsmZngVgytA",
+    "jBZnY21JbiY",
+    "k8e_fsm9ynI",
+    "nK1-FNE3P-U",
+    "psNjHIpXxEs",
+    "tb6Br2F4KQM",
+    "v6391WY0pZE",
+    "wUgPzvcKK5c",
+    "xCf2LGLi8Lc",
+    "yITWrNLEGLE"
+  ],
+  "source_groups": 863,
+  "teacher_signals_policy": "teacher_signals omitted from all artifacts",
+  "training_gate": "training_gate.json",
+  "video_files": 11576
+}

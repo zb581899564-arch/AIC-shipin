@@ -1,0 +1,128 @@
+{
+  "run_id": "round6_p2j_20260920T1301Z",
+  "status": "FROZEN_BEFORE_ANCHOR_GPU_INFERENCE",
+  "created_utc": "2026-09-20T13:06:09.641186+00:00",
+  "rules": {
+    "max_anchor_gap_frames": 8,
+    "hist_bhattacharyya_threshold": 0.35,
+    "gray_mad_threshold": 0.18,
+    "calibration_gate": "PASS_SPARSE_FIDELITY_GATE"
+  },
+  "anchor_requests_sha256": "fa0e09c9f7ff4570d19b710e60da3928d3ecce8ce8afb5c6f1e9e55189f512a9",
+  "anchor_calls": 68,
+  "p2t2_adapter_sha256": "c9bf3754a05a42d69ee8c4d11f56c41346d927094fd643863f0cb55626b8e6a0",
+  "competition_test_opened": false,
+  "holdout_opened": false,
+  "files": [
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/protocol.json",
+      "size_bytes": 2491,
+      "sha256": "7e4ff4330ecef0ce8ebcabaeb77f193d374ed16e803b205a52cbec69f027a6d5"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/inputs/p2d_selected_frames.jsonl",
+      "size_bytes": 143762,
+      "sha256": "026f07c5ea4d3d23855c53bd8b5508515f5e933a0b2e840f19e16b282b1476a0"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/inputs/p2d_full_qwen.jsonl",
+      "size_bytes": 137785,
+      "sha256": "44036655b25e37ece2e0c904d268e7648c9d99f4cbf70c5cdf881a6e660627a9"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/inputs/p2t2_selected_frames.jsonl",
+      "size_bytes": 190659,
+      "sha256": "b3ff9bb58c76782efe1fadf57315e9764184e70eb5c762816d97754ccd12503e"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/inputs/p2t2_selection_summary.json",
+      "size_bytes": 2730,
+      "sha256": "45a556233812f2c73098f2b07e5c78251bd7efff29b4d714e350bd1a6bb538ab"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/evidence/p2d_shots.jsonl",
+      "size_bytes": 74775,
+      "sha256": "3df0134c250dd2923d6c735c5a3357960a317f344a781953859fc271db6ac203"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/evidence/p2d_shots.summary.json",
+      "size_bytes": 398,
+      "sha256": "1c71348d11bab7a40da06229e6614bd7b237bb7a07096ba6bb08c121a5f99ad7"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/evidence/p2t2_shots.jsonl",
+      "size_bytes": 107341,
+      "sha256": "268c03bf5ed0ddbee5212aa76ea7ce193e45e6ae9e51d170192e4bc0eb5be744"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/evidence/p2t2_shots.summary.json",
+      "size_bytes": 398,
+      "sha256": "484bb78aa7119ac1eb931d089c9d56201c983540afac439195021111495ac89c"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/evidence/sparse_calibration.json",
+      "size_bytes": 90221,
+      "sha256": "29ceb0c21c3d416417255c70003232493823137e4923c3d23035e320841327e6"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/inputs/anchor_requests.jsonl",
+      "size_bytes": 47707,
+      "sha256": "fa0e09c9f7ff4570d19b710e60da3928d3ecce8ce8afb5c6f1e9e55189f512a9"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/inputs/anchor_summary.json",
+      "size_bytes": 421,
+      "sha256": "420aa7e46bd81eee8e5e05c2189d260d8aba6c190288a72596300739590dd1c4"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/evidence/resource_preflight.json",
+      "size_bytes": 618,
+      "sha256": "e97256941077ee94240b23aa5ad0560b5a1fdba7c1d8803e461bc94286f60824"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/code/build_anchors.py",
+      "size_bytes": 2737,
+      "sha256": "579eb1fe307c4b86936657396fb25c7b21ea2dbf1221cd99efbedbd4e8c46e4a"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/code/calibrate_sparse.py",
+      "size_bytes": 4601,
+      "sha256": "9f25777a1bf895683898ffcf5811e858b1212b6ea4f7b4c77110345225d40956"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/code/compose_joint.py",
+      "size_bytes": 5468,
+      "sha256": "61da7411932ec22e333ac9b00d0ed27f419e076059abf5b35490c90d1a64d6fd"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/code/p2j_core.py",
+      "size_bytes": 6555,
+      "sha256": "ff1bb30a52b2cd5f752247e4105c0af5da18a50a60b16d44e84258472c86eed7"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/code/prepare_joint_slice.py",
+      "size_bytes": 3871,
+      "sha256": "1242f4eb4e07ad7b1d11f33b8cb425410eeeaf276070136da127e8e989b14eb4"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/code/remote_detect_shots.py",
+      "size_bytes": 4477,
+      "sha256": "553db05543158c671d0a8598b34bb975e104b939fdc3b8a8c1d0959b60bf18e8"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/code/remote_infer_anchors.py",
+      "size_bytes": 5731,
+      "sha256": "27f6845b87725413c2c95f77b4aa8d98a97ab7a48d778901dc312d7471bf0bc3"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/code/tests/__init__.py",
+      "size_bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/code/tests/test_p2j_core.py",
+      "size_bytes": 3091,
+      "sha256": "c28574fa144d8715c9f95dc3a64ba454b1b5fb86b999ba78e82fe78f5b805cb9"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "run_id": "round6_p2final_20260920T132906Z",
+  "supersedes": "input_freeze.json",
+  "reason": "post-temporal CPU metadata schema compatibility fix; array and whitespace ratios are equivalent",
+  "temporal_output_sha256": "3a26328dd98b2b980d2cd75e0bc44489d602f381e2d2a2a59b9caae155db6a51",
+  "temporal_output_unchanged": true,
+  "protocol_sha256": "d1245bb6dc3504ee8c1cf0b1166c399a42c3be6b0ba0ae072e8bbc3e4785d0f7",
+  "metadata_sha256": "7f38d3f7f29b7fc5d91a9762ecfea00e6fc84b583bf11b439ba4a853bf1ec428",
+  "remote_test_index_sha256": "4f892d2a1f6096260d10858ed72185ec7941a77837196aa79f83794cfc305794",
+  "adapter_sha256": "c9bf3754a05a42d69ee8c4d11f56c41346d927094fd643863f0cb55626b8e6a0",
+  "temporal_common_sha256": "bb8f47896e20e069e9ddf992d94488132ccbee46dc850a2658851f4aa52946b4",
+  "code": [
+    {
+      "path": "build_anchors.py",
+      "sha256": "579eb1fe307c4b86936657396fb25c7b21ea2dbf1221cd99efbedbd4e8c46e4a",
+      "bytes": 2737
+    },
+    {
+      "path": "build_selected_test.py",
+      "sha256": "16b1588366b42b861fb98c90e7a152d44f482f003b39b5365f92f1ca5c1953d1",
+      "bytes": 4935
+    },
+    {
+      "path": "compose_test_candidate.py",
+      "sha256": "2764963bf394a928caf75436957ff745618b57841c718b2d633bc3507225037a",
+      "bytes": 6273
+    },
+    {
+      "path": "detect_shots_sequential.py",
+      "sha256": "995df4750c691939d144982c7ee73684f2f863188af946411f0b6a3bc3771b29",
+      "bytes": 5029
+    },
+    {
+      "path": "infer_temporal_test.py",
+      "sha256": "70caee0ed2a757eee2a35b3f71356a2d5e49067250177ed94354b2830f1be02e",
+      "bytes": 6999
+    },
+    {
+      "path": "p2j_core.py",
+      "sha256": "db660d8afe562f56ade048fc3de57c83354308ce2ca7e12856010b6341d80e6c",
+      "bytes": 7087
+    },
+    {
+      "path": "remote_infer_anchors.py",
+      "sha256": "27f6845b87725413c2c95f77b4aa8d98a97ab7a48d778901dc312d7471bf0bc3",
+      "bytes": 5731
+    },
+    {
+      "path": "validate_and_package.py",
+      "sha256": "fed7bfda1ddd7d6797dbd6c37b03073dbe07f65c274fca2f6ca9cee302feda1b",
+      "bytes": 5181
+    }
+  ],
+  "frozen_utc": "2026-09-20T14:03:33.6747279Z"
+}

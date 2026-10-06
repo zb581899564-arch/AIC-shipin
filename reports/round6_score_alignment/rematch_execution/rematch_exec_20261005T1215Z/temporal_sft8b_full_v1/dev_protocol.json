@@ -1,0 +1,38 @@
+{
+  "schema": "aic_B_full_frozen_weak_dev_protocol_v1",
+  "frozen_utc": "2026-10-06T04:12:14.274066+00:00",
+  "dataset": "R7_FIXED_104_DEV_96_SOURCE_GROUPS",
+  "train_parents": 704,
+  "train_source_groups": 602,
+  "confirm_count": 100,
+  "confirm_not_used": true,
+  "official_evaluator_available": false,
+  "metric_scope": "WEAK_TEACHER_AGREEMENT_INTERNAL_SPEC_REIMPLEMENTATION",
+  "comparisons": [
+    "PINNED_BASE_8B_INTERVAL_OUTPUT",
+    "FINAL_FIVE_EPOCH_8B_INTERVAL_SFT"
+  ],
+  "checkpoint_selection": "FINAL_ONLY_NO_INTERMEDIATE_DEV_SELECTION",
+  "model_recipe": "same_pinned_8B_and_frozen_original_R7_prompt_processor",
+  "temporal_window_geometry": "same_nonoverlap_30s_all_dev_windows_keep_empty_failure_distinct",
+  "inference": "deterministic_greedy_frozen_contract_no_online_threshold_search",
+  "metrics": [
+    "VIDEO_MACRO_TEMPORAL_PRECISION_RECALL_F1",
+    "SOURCE_GROUP_MACRO_F1",
+    "COVERED_WEAK_POSITIVE_RECALL",
+    "LEGAL_EMPTY_RATE",
+    "PARSE_FAILURE_RATE",
+    "INFERENCE_FAILURE_RATE"
+  ],
+  "paired_uncertainty": "10000_source_group_resamples_seed_20261006_95_percent_CI",
+  "unknown_unselected_segments_are_not_certified_true_negatives": true,
+  "source_split_and_dev_sha_must_be_rechecked_before_evaluation": true,
+  "evaluation_runs_per_final_model": 1,
+  "not_automatically_launched": true,
+  "stop_conditions": [
+    "SYSTEMATIC_FAILURE_OR_COLLAPSE",
+    "PAIRED_WEAK_F1_CI_ALL_NEGATIVE_WITHOUT_INDEPENDENT_TRADEOFF"
+  ],
+  "official_quality_claim": false,
+  "test_inference_not_admitted": true
+}

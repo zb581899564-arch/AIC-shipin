@@ -1,0 +1,29 @@
+{
+  "schema": "aic_rematch_c_data_gate_v1",
+  "status": "STOP_C_FORMAL_BCE_UNKNOWN_NEGATIVE_SEMANTICS",
+  "formal_c_bce_admitted": false,
+  "same_supervision_4b_binary_head_admitted": false,
+  "engineering_probe_admitted_by_this_audit": false,
+  "engineering_probe_note": "主控可独立登记并验收工程探针，本数据审计不扩大工程或GPU授权",
+  "a_baseline_admitted_by_this_audit": false,
+  "a_baseline_note": "A独立推进须由主控核其现有数据使用依据，本审计不修改A历史配方",
+  "reasons": [
+    "教师prompt正文和生成配置/源码未取得，通用高光/query及强制top-K语义UNKNOWN",
+    "无实际media请求或帧/PTS观察清单，timeline_coverage=1.0仅为标签自述",
+    "无原始response/finish_reason/token或补点截断处理合同",
+    "所有未选范围均为UNKNOWN，已证TEACHER_NEGATIVE数量为0",
+    "808行provenance.license为空，既有历史边界限本地弱研究；新复赛使用依据待补证",
+    "有界既有registry检查未找到已准入的独立query-free时间正负桥接"
+  ],
+  "audited_splits": {"train": 704, "dev": 104},
+  "source_groups": {"train": 602, "dev": 96, "train_dev_intersection": 0},
+  "teacher_negative_rows": 0,
+  "verified_observation_rows": 0,
+  "confirmed_label_file_opened": false,
+  "confirmed_label_rows_parsed": 0,
+  "outer_split_changed": false,
+  "pts_audit_rerun": false,
+  "gpu_used": false,
+  "rematch_media_or_jsonl_content_read": false,
+  "required_next_step": "在原有train/dev清单上补读教师prompt/config/source/绑定请求响应及使用条款，不重切外层split；无可信负语义则维持STOP"
+}

@@ -1,0 +1,14 @@
+{
+  "version": "round5_takeover_test_candidate_v2",
+  "supersedes": "test_candidate_protocol_v1.json",
+  "registered_before_holdout_or_test_use": "2026-09-17",
+  "change_from_v1": "If the independently registered dev interval-calibration grid selects a shrink factor below 1, apply that exact factor to valid model intervals during automatic test inference composition. All other v1 rules remain unchanged.",
+  "calibration_protocol": "interval_calibration_protocol_v1.json",
+  "window_seconds": 30.0,
+  "invalid_window_fallback": "centered 80 percent of that window, not shrunk",
+  "maximum_invalid_window_rate": 0.05,
+  "spatial_base": "previously validated Qwen3-VL LoRA reader predictions",
+  "missing_spatial_frame": "nearest existing old prediction within the same video",
+  "local_validation": "174 videos, no duplicate or out-of-range frames, no invalid boxes",
+  "no_test_selection": true
+}

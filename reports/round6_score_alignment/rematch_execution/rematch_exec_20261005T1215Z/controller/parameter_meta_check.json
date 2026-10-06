@@ -1,0 +1,14 @@
+{
+  "base": 8767123696,
+  "lora": 15335424,
+  "head": 524545,
+  "total": 8782983665,
+  "decimal_9B_remaining": 217016335,
+  "shared_parameter_aliases": {},
+  "method": "actual numel, tensor identity de-duplication, unquantized BF16 base",
+  "status": "PASS_ACTUAL_MODULE_SHAPES_META_ONLY",
+  "model_weights_loaded": false,
+  "GPU_used": false,
+  "inference_chain_parameter_count_pending_real_load": true,
+  "language_projections": 144
+}

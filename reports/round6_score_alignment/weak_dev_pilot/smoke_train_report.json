@@ -1,0 +1,153 @@
+{
+  "status": "SPATIAL_WEAK_LORA_TRAINED_NEEDS_RELOAD_AND_DEV_COMPARISON",
+  "mode": "smoke",
+  "base_model": "/home/inspur/aic_video_work/models/Qwen3-VL-4B-Instruct",
+  "manifest_sha256": "80cbe45fb909c045582266fec4ab4ab91829a0a11cf30f4ac8676698d046f6b8",
+  "extracted_sha256": "ecd3b36a11fa95968b5ff703a19e811b42c6a7eb7b69fb0413c9e18b0dcc959f",
+  "adapter_sha256": "c4cd544ded292bd824873ef7c8297078f666414858b2f5f41d695349ed47d716",
+  "training_rows": 16,
+  "examples_seen": 320,
+  "optimizer_steps": 20,
+  "loss_finite": true,
+  "loss_log": [
+    {
+      "step": 1,
+      "sample_key": "qvh_000080_9x16#clip325",
+      "loss": 4.027370929718018,
+      "elapsed_seconds": 13.287
+    },
+    {
+      "step": 2,
+      "sample_key": "qvh_000080_9x16#clip325",
+      "loss": 3.8807921409606934,
+      "elapsed_seconds": 21.015
+    },
+    {
+      "step": 3,
+      "sample_key": "qvh_000080_9x16#clip325",
+      "loss": 3.5667850971221924,
+      "elapsed_seconds": 28.889
+    },
+    {
+      "step": 4,
+      "sample_key": "qvh_000080_9x16#clip325",
+      "loss": 3.115328788757324,
+      "elapsed_seconds": 36.647
+    },
+    {
+      "step": 5,
+      "sample_key": "qvh_000080_9x16#clip325",
+      "loss": 2.5467681884765625,
+      "elapsed_seconds": 44.497
+    },
+    {
+      "step": 6,
+      "sample_key": "qvh_000080_9x16#clip325",
+      "loss": 1.8934071063995361,
+      "elapsed_seconds": 52.23
+    },
+    {
+      "step": 7,
+      "sample_key": "qvh_000080_9x16#clip325",
+      "loss": 1.3907363414764404,
+      "elapsed_seconds": 60.078
+    },
+    {
+      "step": 8,
+      "sample_key": "qvh_000080_9x16#clip325",
+      "loss": 0.8984912037849426,
+      "elapsed_seconds": 67.937
+    },
+    {
+      "step": 9,
+      "sample_key": "qvh_000080_9x16#clip325",
+      "loss": 0.674522340297699,
+      "elapsed_seconds": 75.65
+    },
+    {
+      "step": 10,
+      "sample_key": "qvh_000080_9x16#clip325",
+      "loss": 0.6391919851303101,
+      "elapsed_seconds": 83.511
+    },
+    {
+      "step": 11,
+      "sample_key": "qvh_000080_9x16#clip325",
+      "loss": 0.5840834379196167,
+      "elapsed_seconds": 91.238
+    },
+    {
+      "step": 12,
+      "sample_key": "qvh_000080_9x16#clip325",
+      "loss": 0.5185683965682983,
+      "elapsed_seconds": 99.085
+    },
+    {
+      "step": 13,
+      "sample_key": "qvh_000080_9x16#clip325",
+      "loss": 0.4838642477989197,
+      "elapsed_seconds": 106.801
+    },
+    {
+      "step": 14,
+      "sample_key": "qvh_000080_9x16#clip325",
+      "loss": 0.440722793340683,
+      "elapsed_seconds": 114.681
+    },
+    {
+      "step": 15,
+      "sample_key": "qvh_000080_9x16#clip325",
+      "loss": 0.402619332075119,
+      "elapsed_seconds": 122.39
+    },
+    {
+      "step": 16,
+      "sample_key": "qvh_000080_9x16#clip325",
+      "loss": 0.37002676725387573,
+      "elapsed_seconds": 130.237
+    },
+    {
+      "step": 17,
+      "sample_key": "qvh_000080_9x16#clip325",
+      "loss": 0.35788699984550476,
+      "elapsed_seconds": 137.971
+    },
+    {
+      "step": 18,
+      "sample_key": "qvh_000080_9x16#clip325",
+      "loss": 0.34444954991340637,
+      "elapsed_seconds": 145.815
+    },
+    {
+      "step": 19,
+      "sample_key": "qvh_000080_9x16#clip325",
+      "loss": 0.33674198389053345,
+      "elapsed_seconds": 153.039
+    },
+    {
+      "step": 20,
+      "sample_key": "qvh_000080_9x16#clip325",
+      "loss": 0.327309787273407,
+      "elapsed_seconds": 159.901
+    }
+  ],
+  "config": {
+    "dtype": "bf16",
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "lr": 5e-05,
+    "batch": 1,
+    "gradient_accumulation": 16,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj"
+    ],
+    "seed": 20260917
+  },
+  "trainable_parameter_count": 11796480,
+  "peak_memory_mib": 8781.42,
+  "wall_seconds": 160.109
+}

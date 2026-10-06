@@ -1,0 +1,304 @@
+{
+  "checked_utc": "2026-10-05T14:33:06.524579+00:00",
+  "host": "inspur-NP5570M5",
+  "resource_policy": {
+    "schema_version": 1,
+    "gpu_time_mode": "UNLIMITED",
+    "max_total_gpu_seconds": null,
+    "authorized_by": "user",
+    "authorized_at_utc": "2026-10-05T07:57:35Z",
+    "authorization_text": "GPU\u9884\u7b97\u65f6\u95f4\u8c03\u6574\u4e3a\u65e0\u9650\u5236",
+    "scope": "/home/inspur/aic_video_work",
+    "ledger_initial_charge_seconds": 7200,
+    "added_disk_budget_gib": 80,
+    "preserve_frozen_experiment_protocols": true,
+    "preserve_shared_gpu_exclusivity": true,
+    "policy_run_id": "gpu_policy_unlimited_20261005T075735Z"
+  },
+  "resource_policy_sha256": "74f15dc694428d5d421d58c6d790560ee6e8d86fc8847db6625b14fbeb38e8c6",
+  "ledger_sha256": "f4461e0db6688584412dae43b39675b296afb047e159815e39e309702a97c2fa",
+  "ledger_records": 96,
+  "initial_offset_seconds": 7200,
+  "total_charged_seconds_including_offset": 73670.69336578296,
+  "this_execution_charged_seconds": 805.9806549889036,
+  "this_execution_jobs": [
+    {
+      "name": "rematch_a_nontest_e2e_01",
+      "command": [
+        "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+        "-B",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/run_a_e2e.py"
+      ],
+      "started_utc": "2026-10-05T12:33:07.823371+00:00",
+      "runner_pid": 3092909,
+      "reserved_seconds": 1800,
+      "teardown_reserve_seconds": 120,
+      "prior_charged_seconds": 72864.71271079406,
+      "gpu_time_mode": "UNLIMITED",
+      "max_total_gpu_seconds": null,
+      "resource_policy_sha256": "74f15dc694428d5d421d58c6d790560ee6e8d86fc8847db6625b14fbeb38e8c6",
+      "disk_before": {
+        "free_bytes": 247429599232,
+        "work_bytes": 33821601792
+      },
+      "planned_output_bytes": 268435456,
+      "capacity_reason": "8-source new entry regression: JSONL logs and ZIP, no media/model duplication",
+      "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+      "runner_source_sha256": "d9a05639b605afb9f804aa1811f8de7dc0192e4c5f813c2f9e1061dd68da920d",
+      "child_pid": 3092913,
+      "finished_utc": "2026-10-05T12:33:17.999273+00:00",
+      "charged_seconds": 10.176025704015046,
+      "exit_code": 1,
+      "stop_reason": null,
+      "sampled_peak_memory_mib": 0,
+      "status": "failed",
+      "disk_after": {
+        "free_bytes": 247313113088,
+        "work_bytes": 33938956288
+      }
+    },
+    {
+      "name": "rematch_a_nontest_e2e_02",
+      "command": [
+        "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+        "-B",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/run_a_e2e.py",
+        "--attempt",
+        "02"
+      ],
+      "started_utc": "2026-10-05T12:35:20.168569+00:00",
+      "runner_pid": 3095283,
+      "reserved_seconds": 1800,
+      "teardown_reserve_seconds": 120,
+      "prior_charged_seconds": 72874.88873649808,
+      "gpu_time_mode": "UNLIMITED",
+      "max_total_gpu_seconds": null,
+      "resource_policy_sha256": "74f15dc694428d5d421d58c6d790560ee6e8d86fc8847db6625b14fbeb38e8c6",
+      "disk_before": {
+        "free_bytes": 245924675584,
+        "work_bytes": 35327086592
+      },
+      "planned_output_bytes": 268435456,
+      "capacity_reason": "8-source new entry regression: JSONL logs and ZIP, no media/model duplication",
+      "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+      "runner_source_sha256": "d9a05639b605afb9f804aa1811f8de7dc0192e4c5f813c2f9e1061dd68da920d",
+      "child_pid": 3095287,
+      "finished_utc": "2026-10-05T12:36:21.427167+00:00",
+      "charged_seconds": 61.258712232578546,
+      "exit_code": 1,
+      "stop_reason": null,
+      "sampled_peak_memory_mib": 0,
+      "status": "failed",
+      "disk_after": {
+        "free_bytes": 245227012096,
+        "work_bytes": 36024713216
+      }
+    },
+    {
+      "name": "rematch_a_nontest_e2e_03",
+      "command": [
+        "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+        "-B",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/run_a_e2e.py",
+        "--attempt",
+        "03"
+      ],
+      "started_utc": "2026-10-05T12:40:29.536836+00:00",
+      "runner_pid": 3100448,
+      "reserved_seconds": 1800,
+      "teardown_reserve_seconds": 120,
+      "prior_charged_seconds": 72936.14744873066,
+      "gpu_time_mode": "UNLIMITED",
+      "max_total_gpu_seconds": null,
+      "resource_policy_sha256": "74f15dc694428d5d421d58c6d790560ee6e8d86fc8847db6625b14fbeb38e8c6",
+      "disk_before": {
+        "free_bytes": 242565070848,
+        "work_bytes": 38686433280
+      },
+      "planned_output_bytes": 268435456,
+      "capacity_reason": "8-source new entry regression: JSONL logs and ZIP, no media/model duplication",
+      "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+      "runner_source_sha256": "5c9cea5307b0bf4723ac61074b0716aaeab1ad8c4b1414934f10bc5300e4707b",
+      "child_pid": 3100452,
+      "finished_utc": "2026-10-05T12:41:20.596695+00:00",
+      "charged_seconds": 51.06000582082197,
+      "exit_code": 1,
+      "stop_reason": null,
+      "sampled_peak_memory_mib": 0,
+      "status": "failed",
+      "disk_after": {
+        "free_bytes": 241988337664,
+        "work_bytes": 39262965760
+      }
+    },
+    {
+      "name": "rematch_a_nontest_e2e_04",
+      "command": [
+        "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+        "-B",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/run_a_e2e.py",
+        "--attempt",
+        "04"
+      ],
+      "started_utc": "2026-10-05T12:48:50.744526+00:00",
+      "runner_pid": 3108703,
+      "reserved_seconds": 1800,
+      "teardown_reserve_seconds": 120,
+      "prior_charged_seconds": 72987.20745455148,
+      "gpu_time_mode": "UNLIMITED",
+      "max_total_gpu_seconds": null,
+      "resource_policy_sha256": "74f15dc694428d5d421d58c6d790560ee6e8d86fc8847db6625b14fbeb38e8c6",
+      "disk_before": {
+        "free_bytes": 237403848704,
+        "work_bytes": 43845656576
+      },
+      "planned_output_bytes": 268435456,
+      "capacity_reason": "8-source new entry regression: JSONL logs and ZIP, no media/model duplication",
+      "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+      "runner_source_sha256": "0cddca5f85a2a885ee2ac50e9193819b58dead39b6b561a30cb1c97f192ca961",
+      "child_pid": 3108707,
+      "finished_utc": "2026-10-05T12:51:44.397900+00:00",
+      "charged_seconds": 173.653490266297,
+      "exit_code": 0,
+      "stop_reason": null,
+      "sampled_peak_memory_mib": 10886,
+      "status": "completed",
+      "disk_after": {
+        "free_bytes": 231164055552,
+        "work_bytes": 50085306368
+      }
+    },
+    {
+      "name": "rematch_c_engineering_probe_01",
+      "command": [
+        "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+        "-B",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/dense_head/probe_8b.py",
+        "--model-dir",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/models/Qwen3-VL-8B-Instruct",
+        "--model-receipt",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/model_download_v2_status.json",
+        "--out-dir",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/dense_head/probe8b_01",
+        "--engineering-only",
+        "--updates",
+        "3"
+      ],
+      "started_utc": "2026-10-05T12:52:22.628091+00:00",
+      "runner_pid": 3116997,
+      "reserved_seconds": 1800,
+      "teardown_reserve_seconds": 120,
+      "prior_charged_seconds": 73160.86094481777,
+      "gpu_time_mode": "UNLIMITED",
+      "max_total_gpu_seconds": null,
+      "resource_policy_sha256": "74f15dc694428d5d421d58c6d790560ee6e8d86fc8847db6625b14fbeb38e8c6",
+      "disk_before": {
+        "free_bytes": 231164010496,
+        "work_bytes": 50085314560
+      },
+      "planned_output_bytes": 268435456,
+      "capacity_reason": "8B rank16 synthetic probe: ~64MB adapter and head plus JSON evidence, no base checkpoint copy",
+      "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+      "runner_source_sha256": "0cddca5f85a2a885ee2ac50e9193819b58dead39b6b561a30cb1c97f192ca961",
+      "child_pid": 3117001,
+      "finished_utc": "2026-10-05T12:55:05.698341+00:00",
+      "charged_seconds": 163.0703845312819,
+      "exit_code": 1,
+      "stop_reason": null,
+      "sampled_peak_memory_mib": 17818,
+      "status": "failed",
+      "disk_after": {
+        "free_bytes": 231163654144,
+        "work_bytes": 50085576704
+      }
+    },
+    {
+      "name": "rematch_c_engineering_probe_02",
+      "command": [
+        "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+        "-B",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/dense_head/probe_8b.py",
+        "--model-dir",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/models/Qwen3-VL-8B-Instruct",
+        "--model-receipt",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/model_download_v2_status.json",
+        "--out-dir",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/dense_head/probe8b_02",
+        "--engineering-only",
+        "--updates",
+        "3"
+      ],
+      "started_utc": "2026-10-05T13:04:29.013386+00:00",
+      "runner_pid": 3129434,
+      "reserved_seconds": 1800,
+      "teardown_reserve_seconds": 120,
+      "prior_charged_seconds": 73323.93132934906,
+      "gpu_time_mode": "UNLIMITED",
+      "max_total_gpu_seconds": null,
+      "resource_policy_sha256": "74f15dc694428d5d421d58c6d790560ee6e8d86fc8847db6625b14fbeb38e8c6",
+      "disk_before": {
+        "free_bytes": 231154057216,
+        "work_bytes": 50086322176
+      },
+      "planned_output_bytes": 268435456,
+      "capacity_reason": "8B rank16 synthetic probe: ~64MB adapter and head plus JSON evidence, no base checkpoint copy",
+      "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+      "runner_source_sha256": "0cddca5f85a2a885ee2ac50e9193819b58dead39b6b561a30cb1c97f192ca961",
+      "child_pid": 3129438,
+      "finished_utc": "2026-10-05T13:07:12.121969+00:00",
+      "charged_seconds": 163.10868497891352,
+      "exit_code": 0,
+      "stop_reason": null,
+      "sampled_peak_memory_mib": 18766,
+      "status": "completed",
+      "disk_after": {
+        "free_bytes": 231089836032,
+        "work_bytes": 50150387712
+      }
+    },
+    {
+      "name": "rematch_c_cost_32s_01",
+      "command": [
+        "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+        "-B",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/dense_head_cost_v1/cost_probe.py",
+        "--config",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/c_cost_32s_01.config.json",
+        "--admission",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/c_cost_32s_01.admission.json"
+      ],
+      "started_utc": "2026-10-05T14:14:24.573648+00:00",
+      "runner_pid": 3198030,
+      "reserved_seconds": 1800,
+      "teardown_reserve_seconds": 120,
+      "prior_charged_seconds": 73487.04001432797,
+      "gpu_time_mode": "UNLIMITED",
+      "max_total_gpu_seconds": null,
+      "resource_policy_sha256": "74f15dc694428d5d421d58c6d790560ee6e8d86fc8847db6625b14fbeb38e8c6",
+      "disk_before": {
+        "free_bytes": 231068504064,
+        "work_bytes": 50151763968
+      },
+      "planned_output_bytes": 134217728,
+      "capacity_reason": "one fixed non-test native PTS index and three synthetic-label 32s updates; no new model or media copy",
+      "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+      "runner_source_sha256": "0cddca5f85a2a885ee2ac50e9193819b58dead39b6b561a30cb1c97f192ca961",
+      "child_pid": 3198035,
+      "finished_utc": "2026-10-05T14:17:28.226880+00:00",
+      "charged_seconds": 183.65335145499557,
+      "exit_code": 0,
+      "stop_reason": null,
+      "sampled_peak_memory_mib": 21278,
+      "status": "completed",
+      "disk_after": {
+        "free_bytes": 231061319680,
+        "work_bytes": 50158784512
+      }
+    }
+  ],
+  "project_disk_bytes": 50174566400,
+  "free_disk_bytes": 231044767744,
+  "nvidia_gpu": "NVIDIA RTX 6000 Ada Generation, 46068 MiB, 182 MiB, 0 %",
+  "compute_processes": "",
+  "active_owned_reservation": null
+}

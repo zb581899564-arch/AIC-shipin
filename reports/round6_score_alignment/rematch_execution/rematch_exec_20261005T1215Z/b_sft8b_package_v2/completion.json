@@ -1,0 +1,9 @@
+{
+  "stage": "STOP_B8B_PACKAGE_CONTINUATION",
+  "utc": "2026-10-06T17:45:34.601648+08:00",
+  "pid": 890455,
+  "uploaded": false,
+  "failure_type": "RuntimeError",
+  "failure": "GPU phase failed: rematch_B8B_v2_rematch_temporal_01",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_sft8b_package_v2/controller.py\", line 78, in main\n    run_gpu('temporal','rematch',rematch,14400,100000000)\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_sft8b_package_v2/controller.py\", line 45, in run_gpu\n    require(result.returncode==0 and resource.get('status')=='completed' and resource.get('exit_code')==0 and resource.get('stop_reason') is None,'GPU phase failed: '+name)\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_sft8b_package_v2/runtime.py\", line 18, in require\n    if not ok: raise RuntimeError(message)\nRuntimeError: GPU phase failed: rematch_B8B_v2_rematch_temporal_01\n"
+}

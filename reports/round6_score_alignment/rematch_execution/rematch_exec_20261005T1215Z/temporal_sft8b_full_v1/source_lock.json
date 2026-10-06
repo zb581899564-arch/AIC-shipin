@@ -1,0 +1,32 @@
+{
+  "scope": "TEMPORAL_8B_INTERVAL_SFT_FULL_NONTEST",
+  "frozen_utc": "2026-10-06T04:13:40.436835+00:00",
+  "CPU_contract_tests_windows": 12,
+  "files": {
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_full_v1/authorization.json": "0f342c7a49a32732717fb111ed2f00938ecda2e313b1fd16e214b4f24e887567",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_full_v1/config.json": "7c05b28c75f2ea4aede7844712d8945b9b79ea8c5402e906514c1cfe755e0de3",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_full_v1/dev_protocol.json": "9d524e15d6996be22d6f2caa13b08e7945ff6a30d11735a1bc40154eed2244b0",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_full_v1/full_contract.py": "4caed1c9907e6ced0da0d5066e8998a28aa8113c8730ce880a183b4aef81bc9d",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_full_v1/launch_full.py": "41d5e3c0ec726821824b888291279ad89d824ae360b4ca65a6a340108e8907bc",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_full_v1/PROTOCOL.md": "6a873118f27b54aeac2150f40425a029f89a5de6224490cc4711b049d8bfb601",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_full_v1/register_full.py": "6925b0aec418598df8791eedba17a79a9ddf4cd6dfb3f09e9b769cfc3a76b14b",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_full_v1/row_contract.py": "9447dfe87e6fa30dea930b7cf7aa4543eb3a1777f7486a5ae5cc0f747e9a8c14",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_full_v1/status_full.py": "f8f3c9e5e6e54abd7067bfcd6580bb51aabfba8931040011ef91d4bbeb919979",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_full_v1/test_full_cpu.py": "1df354d6d8a5dfc347e8110eda8c51857cb7f39ee6d8891bbcdb482d01f02cc3",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_full_v1/train_full.py": "9451cc270308d25c1dc39bf86337037b8af70a409bee1aa7f6164d76b559ba2a",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_v1/sft_contract.py": "c2e762e7deca7cbc15d6d2b158e5251eeb25141b5cf5b02b8996042619c3414d",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_v1/train_sft.py": "b3e291aad6240c55e6366f5d8138269e5f184f196f4ba989f5a586321ba3f506",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_v1/verify_saved_smoke.py": "a9bf8ba9b02a85a982b8bbd7369bb61d7c4eba7743bed42977eeab90051186ae",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_v1/smoke_source_lock.json": "806deb54de18835ee6841a1a921f015cd0d8b82ad65268e016af3144cb19ff93",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_v1/inputs_01/r7_train_registry.json": "71552f64ccdb125ca11a451baf5b8a22491d51d73db1a42e0ce1a545262d1cd4",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_v1/inputs_01/full_train.jsonl": "124801624736f960d15074ad65840d4e2850dcb7d8d5d3b16a2cb54e7eee4bc0",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_v1/inputs_01/preparation_report.json": "d30b2d5991aa24e7fee8c7bb930fd06688a0da5d5cc4919bca5105ce32a7611f",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_v1/smoke_01/train_report.json": "4e5a836d4f31da0f7c1704e611701264cf5b90324e1263726fdf2e6eea36caad",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_v1/saved_adapter_check_01/verification_report.json": "900ae26e6fcf83a177611df8f56fab64c88c7793fb6ceee4de029013d6bb6b47",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/gpu_run.py": "0cddca5f85a2a885ee2ac50e9193819b58dead39b6b561a30cb1c97f192ca961",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/sft8b_smoke_acceptance_01.json": "90a4fc7949dce810ae277c6bb1804806b3f2f95f159b874374451bdb6711bf61",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/official_score_A_33_81_20261006.json": "c3805e6ca64ec26bbd01218c57ca0682ccfce0b713dea244b5d67a26d71c61d6"
+  },
+  "old_stage_unchanged": true,
+  "requires_linux_tests_before_admission": true
+}

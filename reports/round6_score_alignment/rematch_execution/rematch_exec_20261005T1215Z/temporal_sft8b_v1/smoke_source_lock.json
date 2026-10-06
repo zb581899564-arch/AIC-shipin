@@ -1,0 +1,28 @@
+{
+  "schema": "aic_sft8b_smoke_source_lock_v1",
+  "registered_utc": "2026-10-05T17:44:27.143218+00:00",
+  "scope": "TEMPORAL_8B_SFT_SMOKE_NONTEST",
+  "training_authority_kind": "USER_TRAINING_REQUEST_MAIN_REGISTERED_B_ROUTE",
+  "files": {
+    "sft_contract.py": "c2e762e7deca7cbc15d6d2b158e5251eeb25141b5cf5b02b8996042619c3414d",
+    "train_sft.py": "b3e291aad6240c55e6366f5d8138269e5f184f196f4ba989f5a586321ba3f506",
+    "test_sft_cpu.py": "dcbd6611bb843243bdb106e3da06fe08d36494b610dda81b44d03bd08ad0562d",
+    "training_authorization_B_SMOKE.json": "80af40f8fdac6af405229763a6fc1acff6e1f8809f22e191a4c54cbccee39dbf",
+    "smoke_config_PREPARED_NOT_ADMITTED.json": "c6684ba5d381f3e370d1a6036d8dcfffc442d0bac1f90b7a5ab258ed95a7036d",
+    "smoke_admission_TEMPLATE_V2_DO_NOT_RUN.json": "1f2164bf5bce7a18fc5dab7ef30d47c682b1bccfd2a0f84d8132d8fb3f286b6f",
+    "PROTOCOL.md": "6cad87fcebf1611820f33cdcbd5d9c2e15c4073e65f0c7e839f64cca09b3b14c",
+    "prepare_inputs.py": "d4611e8f61e7c3c6b0db661b2a900fc0d9edce36bd5cea26ca4913d6470580bf",
+    "cpu_main_review_01.json": "add7f0cf57d99be9718fd790c493eba0210dcd45bfbeaf7d437209dc00d4a227",
+    "inputs_01/smoke_train.jsonl": "0754fdcfaa01eb4027b5c845c25af2abacc705a89f0cb695ebb5293f29385266",
+    "inputs_01/full_train.jsonl": "124801624736f960d15074ad65840d4e2850dcb7d8d5d3b16a2cb54e7eee4bc0",
+    "inputs_01/r7_train_registry.json": "71552f64ccdb125ca11a451baf5b8a22491d51d73db1a42e0ce1a545262d1cd4",
+    "inputs_01/preparation_report.json": "d30b2d5991aa24e7fee8c7bb930fd06688a0da5d5cc4919bca5105ce32a7611f",
+    "inputs_01/independent_input_verification.json": "709ad6334b71ab943c0089dd36ead83f090fe5f7109faaa18f52898fb73673f1"
+  },
+  "queue_helper_sha256": "a848850f670c40414c7bb043da64ef020aecdcd1d5e7e047d5b4de08364ddb34",
+  "queue_launcher_sha256": "166f4a5fdefb881cba761df9be2d04cd1767a6d559802ef10d70434fe0a0be7c",
+  "training_authorization_evidence_sha256": "80af40f8fdac6af405229763a6fc1acff6e1f8809f22e191a4c54cbccee39dbf",
+  "formal_c_bce_admitted": false,
+  "full_training_admitted": false,
+  "competition_upload_authorized": false
+}

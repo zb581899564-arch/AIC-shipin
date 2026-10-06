@@ -1,0 +1,25 @@
+{
+  "status": "WITHIN_LIMITS",
+  "p2t2": {
+    "train_seconds": 5814.945341345854,
+    "dev_seconds": 212.05320501700044,
+    "charged_seconds": 6026.9985463628545,
+    "charged_hours": 1.6741662628785707,
+    "limit_hours": 2.25,
+    "remaining_hours": 0.5758337371214293,
+    "peak_sampled_memory_mib": 11770
+  },
+  "project": {
+    "charged_seconds": 60716.26851261221,
+    "charged_hours": 16.86563014239228,
+    "limit_hours": 24.0,
+    "remaining_hours": 7.1343698576077195
+  },
+  "disk": {
+    "remote_run_bytes": 47543509,
+    "remote_run_gib": 0.044278343208134174,
+    "p2t2_limit_gib": 4.0,
+    "filesystem_free_bytes": 151835090944
+  },
+  "gpu_end_state": "idle_180_MiB_no_compute_process"
+}

@@ -1,0 +1,23 @@
+{
+  "status": "R7_FROZEN_INPUTS_VERIFIED",
+  "issues": [],
+  "rows": {
+    "train": 704,
+    "dev": 104,
+    "confirm": 100,
+    "smoke": 16
+  },
+  "groups": {
+    "train": 602,
+    "dev": 96,
+    "confirm": 96
+  },
+  "historical_groups": 409,
+  "manifest_hashes": {
+    "train": "ef427866153a9601be01b6e12356951c2fb56730525b0d7b7c353651c2930ddf",
+    "dev": "53f7053fc3df698ce96c94b04f1af3b5c0c210ce93ecd3269b6306daf4c0a700",
+    "confirm": "4b89f441ec2c029bbbc569cc3ed9a2c93f04205fad4e9748f44a4a445b0faf13",
+    "smoke": "faca879e7c177a6f9fd5fc9193cfa6e016922f98850a62bef442831fb4716940"
+  },
+  "split_freeze_sha256": "505b3fccd49f591d866f945efa462237aace688e81881670a9bc470d61ba6f23"
+}

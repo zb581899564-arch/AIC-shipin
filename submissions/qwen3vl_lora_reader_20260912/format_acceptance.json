@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-09-10T13:51:30.150443+00:00",
+  "acceptance_type": "format_only",
+  "official_evaluator": {
+    "source_found": false,
+    "status": "unavailable",
+    "score_computed": false,
+    "note": "Official evaluator source/test labels were not available; no official or internal score is claimed here."
+  },
+  "metadata": {
+    "source": "/home/inspur/aic_video_work/reports/supervisor_test_metadata.json",
+    "is_ground_truth": false,
+    "video_count": 174,
+    "indexed_frame_count": 87781
+  },
+  "static_review": {
+    "script": "/home/inspur/aic_video_work/inference/baseline_qwen3vl.py",
+    "status": "PASS_AFTER_VIDEO_METADATA_PATCH",
+    "verified_contract": {
+      "process_vision_info": "return_video_metadata=True",
+      "tuple_split": "(video, metadata) split before processor",
+      "processor_kwargs": "video_metadata=list, do_sample_frames=False",
+      "source_frame_indices_and_fps": "retained for Qwen3-VL timestamp construction"
+    },
+    "cpu_processor_regression": {
+      "status": "PASS",
+      "sampled_frames": 64,
+      "source_total_frames": 4500,
+      "source_fps": 30.0,
+      "source_first_last_frame": [
+        0,
+        4499
+      ],
+      "timestamp_span_sec_after_temporal_merge": [
+        1.1833333333,
+        148.7833333333
+      ],
+      "missing_metadata_default24_span_sec": [
+        0.0208333333,
+        2.6041666667
+      ]
+    },
+    "prior_train10_diagnostic": {
+      "run": "/home/inspur/aic_video_work/runs/baseline_qwen3vl_train10",
+      "warning": "Qwen3VL missing video_metadata default fps=24",
+      "videos": 10,
+      "predictions": 94,
+      "format_or_score_status": "not_accepted"
+    },
+    "metadata_smoke_after_patch": {
+      "run": "/home/inspur/aic_video_work/runs/baseline_qwen3vl_metadata_smoke",
+      "status": "PASS_TIME_AXIS",
+      "sampling_records": 1,
+      "sampled_frames": 64,
+      "source_last_frame": 4495,
+      "last_timestamp_sec": 149.9831666667,
+      "default_fps_warning_observed": false
+    }
+  },
+  "outputs": [
+    {
+      "path": "/home/inspur/aic_video_work/training_round2_20260910/test_adapter_reader_v2/predictions.jsonl",
+      "bytes": 2357792,
+      "format_status": "PASS_FORMAT_ONLY",
+      "ground_truth_used": false,
+      "score": null,
+      "coverage": {
+        "expected_video_count": 174,
+        "output_line_count": 174,
+        "output_unique_video_count": 174,
+        "missing_video_count": 0,
+        "missing_video_ids_sample": [],
+        "unknown_video_count": 0,
+        "unknown_video_ids_sample": [],
+        "duplicate_video_line_count": 0,
+        "duplicate_video_ids_sample": []
+      },
+      "predictions": {
+        "valid_prediction_count_strict": 66890,
+        "valid_prediction_count_partial": 66890,
+        "known_empty_prediction_videos": 0,
+        "unknown_empty_prediction_videos": 0,
+        "malformed_prediction_rows": 0,
+        "raw_prediction_count_known": 66890,
+        "raw_prediction_count_unknown": 0
+      },
+      "strict_validation": {
+        "ok": true,
+        "line_count": 174,
+        "video_count": 174,
+        "valid_prediction_count": 66890,
+        "error_count": 0,
+        "warning_count": 0,
+        "issues_summary": {
+          "count": 0,
+          "by_code": {},
+          "by_severity": {},
+          "examples": []
+        }
+      },
+      "partial_validation": {
+        "ok": true,
+        "line_count": 174,
+        "video_count": 174,
+        "valid_prediction_count": 66890,
+        "error_count": 0,
+        "warning_count": 0,
+        "issues_summary": {
+          "count": 0,
+          "by_code": {},
+          "by_severity": {},
+          "examples": []
+        }
+      },
+      "parse_issues": [],
+      "issue_summary": {
+        "count": 0,
+        "by_code": {},
+        "by_severity": {},
+        "examples": []
+      },
+      "status_sidecar": {
+        "available": true,
+        "path": "/home/inspur/aic_video_work/training_round2_20260910/test_adapter_reader_v2/status.jsonl",
+        "line_count": 174,
+        "parse_issues": [],
+        "status_counts": {
+          "ok": 174
+        }
+      },
+      "run_summary": {
+        "available": false,
+        "path": null,
+        "value": null
+      },
+      "empty_failure_separation": {
+        "empty_prediction_records": 0,
+        "empty_prediction_ids_sample": [],
+        "empty_by_status": {},
+        "failed_status_records": 0,
+        "failed_status_ids_sample": [],
+        "separation": "available"
+      },
+      "status_coverage": {
+        "status_unique_video_count": 174,
+        "output_ids_without_status_count": 0,
+        "status_ids_without_output_count": 0
+      },
+      "label": "lora"
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "run_id": "round6_p1a_20260917T0430Z",
+  "spec_version": "aic_round6_p1a_internal_spec_v1",
+  "created_utc": "2026-09-17T04:39:45Z",
+  "official_status": "INTERNAL_SPEC_REIMPLEMENTATION",
+  "not_the_official_evaluator": true,
+  "environment": {
+    "python": "3.11.7 | packaged by Anaconda, Inc. | (main, Dec 15 2023, 18:05:47) [MSC v.1916 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "sources": {
+    "spec_version": "aic_round6_p1a_internal_spec_v1",
+    "evaluator_sources": {
+      "schema.py": "0236f98731919e2675a6eb827453f3c20bb63d38f459fd6b1ddf0f813200f5a9",
+      "internal_metric.py": "41ec9ecf274c5a2e140bb4d84a3803d9a3bfa3d41e65323f466a296896d92317",
+      "__init__.py": "3b8123792150de4656a7f5ff60725979286757ff20a58018edb6986483b91140",
+      "README.md": "4878fc1960e10aad56251996df5fd792a1d4ad9c8d1e3b11df8c2a6830cd5c80",
+      "validate_predictions.py": "f34003df8638aa3a6b22a466c22bc2415b4387b6e1fd89a774e33ef5cdc1d980"
+    },
+    "protected_inputs": {
+      "round5_predictions": {
+        "path": "submissions/round5_s2_temporal_20260917/predictions.jsonl",
+        "sha256": "f8f026a69c8f9fa676dd31a6ffcd375569842c59f4cb6fdcd8d4ced5d86cf3ef"
+      },
+      "round5_zip": {
+        "path": "submissions/round5_s2_temporal_20260917/aic-round5-s2-temporal-20260917.zip",
+        "sha256": "e5df99b8c3d32ec6d495ef1aada2b869478f307884ebeedca3df76def36c3584"
+      },
+      "round5_temporal_raw": {
+        "path": "reports/temporal_round5/evidence/temporal_raw_v1.jsonl",
+        "sha256": "3bc0fc59af87fc8542793e4419889b4cdf86a63c56e9c02c7ea19fdb1109cf72"
+      },
+      "spatial_base_lora_reader": {
+        "path": "submissions/qwen3vl_lora_reader_20260912/predictions.jsonl",
+        "sha256": "a81a711878ffcd68db84dba4b530c4c051cd10cd82b1b4929f35bd06853ef471"
+      },
+      "test_metadata_index": {
+        "path": "reports/round6_score_alignment/phase0/evidence/supervisor_test_metadata.json",
+        "sha256": "7f38d3f7f29b7fc5d91a9762ecfea00e6fc84b583bf11b439ba4a853bf1ec428"
+      }
+    }
+  },
+  "evaluator_source_verification": {
+    "vendored": {
+      "schema.py": "0236f98731919e2675a6eb827453f3c20bb63d38f459fd6b1ddf0f813200f5a9",
+      "internal_metric.py": "41ec9ecf274c5a2e140bb4d84a3803d9a3bfa3d41e65323f466a296896d92317",
+      "__init__.py": "3b8123792150de4656a7f5ff60725979286757ff20a58018edb6986483b91140",
+      "README.md": "4878fc1960e10aad56251996df5fd792a1d4ad9c8d1e3b11df8c2a6830cd5c80",
+      "validate_predictions.py": "f34003df8638aa3a6b22a466c22bc2415b4387b6e1fd89a774e33ef5cdc1d980"
+    },
+    "phase0": {
+      "schema.py": "0236f98731919e2675a6eb827453f3c20bb63d38f459fd6b1ddf0f813200f5a9",
+      "internal_metric.py": "41ec9ecf274c5a2e140bb4d84a3803d9a3bfa3d41e65323f466a296896d92317",
+      "__init__.py": "3b8123792150de4656a7f5ff60725979286757ff20a58018edb6986483b91140",
+      "README.md": "4878fc1960e10aad56251996df5fd792a1d4ad9c8d1e3b11df8c2a6830cd5c80",
+      "validate_predictions.py": "f34003df8638aa3a6b22a466c22bc2415b4387b6e1fd89a774e33ef5cdc1d980"
+    },
+    "ok": true
+  },
+  "rules": [
+    {
+      "rule": "seconds->frame, new internal policy",
+      "definition": "frame f selected iff a <= f/fps < b; legal frames 0..N-1",
+      "mode": "timestamp_halfopen",
+      "source": "P1a internal policy; the published AIC page does not settle endpoint semantics for the hidden labels"
+    },
+    {
+      "rule": "local window time origin",
+      "definition": "local time 0 is the real first sampled frame ceil(window_start*fps)/fps",
+      "source": "P1a fix for the round-5 mismatch between the model timeline and the composer"
+    },
+    {
+      "rule": "legacy ceil half-open",
+      "definition": "ceil(a*fps-eps)..ceil(b*fps-eps)-1",
+      "mode": "legacy_ceil_halfopen",
+      "source": "historical 43.48 chain (inference_v2/temporal.seconds_to_frame_segments)"
+    },
+    {
+      "rule": "legacy round inclusive",
+      "definition": "round(a*fps)..round(b*fps) inclusive",
+      "mode": "legacy_round_inclusive",
+      "source": "historical round-5 composer (compose_temporal_candidate_v1)"
+    },
+    {
+      "rule": "VFR",
+      "definition": "explicit decoded PTS only; no PTS means no VFR claim",
+      "source": "P1a internal policy"
+    },
+    {
+      "rule": "three states",
+      "definition": "VALID_NONEMPTY / VALID_EMPTY / INVALID(reasons)",
+      "source": "P1a internal policy; replaces the historical invalid==empty conflation"
+    },
+    {
+      "rule": "segment cardinality",
+      "definition": "one configurable constraint shared by prompt/training/inference; window replay constraint = 0..5",
+      "source": "P1a internal policy; the historical prompt allowed 1..5 and the parsing allowed a different maximum"
+    },
+    {
+      "rule": "centre-80% fallback",
+      "definition": "exists only in legacy_replay mode; the new mode keeps invalid invalid",
+      "source": "P1a internal policy"
+    },
+    {
+      "rule": "spatial provenance",
+      "definition": "SOURCE_SAME_FRAME / SOURCE_SHOT_INTERPOLATION / NEEDS_SPATIAL_INFERENCE",
+      "source": "P1a internal policy; any distance limit must be declared by the caller"
+    },
+    {
+      "rule": "legacy nearest box",
+      "definition": "nearest source frame anywhere in the video",
+      "mode": "legacy_replay",
+      "source": "historical round-5 composer"
+    },
+    {
+      "rule": "joint score",
+      "definition": "2*sum(matched_frame_IoU)/(N_pred+N_gt); both empty 1; one side empty 0; mean over index videos x100",
+      "source": "published AIC formula (seen 2026-09-17); internal re-implementation"
+    },
+    {
+      "rule": "strict validation",
+      "definition": "validation failure => score null, issues listed, nothing cleaned",
+      "source": "P1a internal policy"
+    },
+    {
+      "rule": "missing reference",
+      "definition": "no reference or incomplete reference => NOT_COMPUTABLE; sparse reference => SPARSE_DIAGNOSTIC",
+      "source": "P1a internal policy; supervisor P0 erratum 1"
+    }
+  ],
+  "modes": {
+    "scoring": [
+      "OK",
+      "SPARSE_DIAGNOSTIC",
+      "NOT_COMPUTABLE",
+      "INVALID_INPUT"
+    ],
+    "composition": [
+      "traceable",
+      "legacy_replay"
+    ],
+    "time": [
+      "timestamp_halfopen",
+      "legacy_ceil_halfopen",
+      "legacy_round_inclusive"
+    ]
+  },
+  "code_manifest": {
+    "round6_score_alignment/p1a/aic6/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "round6_score_alignment/p1a/aic6/compose.py": "0045592a70106fa2bb41e5adbedf6caf8ae2a36df611065c70610c107df578b0",
+    "round6_score_alignment/p1a/aic6/provenance.py": "0628f22b124969ffeb7d2fb43fa2d6fcf17c5a727503ec036bd9769e1d280583",
+    "round6_score_alignment/p1a/aic6/replay.py": "24bb72243e19de72bf50535974101fa0ee404980e1ba5accab754414f5cd9f25",
+    "round6_score_alignment/p1a/aic6/scoring.py": "d03d5d7f671898cf472636764881f86a458b7f7bcaf9f7e79dc346ef2520cfdc",
+    "round6_score_alignment/p1a/aic6/segments.py": "464697b7d5a21e6d7d54ef30227e667d42d0faa9ce86e91f4c308c1e58c199b3",
+    "round6_score_alignment/p1a/aic6/timebase.py": "d3b285c440201e4e5f4bb6ca698bafe3a66883c9dca316920e414c350d8c59b4",
+    "round6_score_alignment/p1a/aic6/vendor/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "round6_score_alignment/p1a/aic6/vendor/existing_internal_evaluator/__init__.py": "3b8123792150de4656a7f5ff60725979286757ff20a58018edb6986483b91140",
+    "round6_score_alignment/p1a/aic6/vendor/existing_internal_evaluator/internal_metric.py": "41ec9ecf274c5a2e140bb4d84a3803d9a3bfa3d41e65323f466a296896d92317",
+    "round6_score_alignment/p1a/aic6/vendor/existing_internal_evaluator/schema.py": "0236f98731919e2675a6eb827453f3c20bb63d38f459fd6b1ddf0f813200f5a9",
+    "round6_score_alignment/p1a/aic6/vendor/existing_internal_evaluator/validate_predictions.py": "f34003df8638aa3a6b22a466c22bc2415b4387b6e1fd89a774e33ef5cdc1d980",
+    "round6_score_alignment/p1a/run_p1a.py": "39a5dc8c93b1cc107a25e4bea5984143a1bbe20bc825abeef55f03c03ef5f57f",
+    "round6_score_alignment/p1a/tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "round6_score_alignment/p1a/tests/hand_cases.py": "8f1d9bffc2176bf2af419f2bd134a493c0054b6163ffe5941eeff594b3635486",
+    "round6_score_alignment/p1a/tests/test_compose.py": "3ade49960b02eec8326112b319c1e143e70ef8518c248617fbdee2f78aa3766a",
+    "round6_score_alignment/p1a/tests/test_scoring.py": "e7f2f6e46b42158f20f5ee3a3076df5058a9f30dfa6e6a5c26711a6b2545691d",
+    "round6_score_alignment/p1a/tests/test_segments.py": "79260037406fafad8c2beb1659432fc76c0b80720b879fa58a7964211e95a884",
+    "round6_score_alignment/p1a/tests/test_timebase.py": "4fa921a796955a669e83e78d7c4b2ad2cdb4254c5a5d9140b51f46c8930a5fa4"
+  },
+  "protected_inputs_before": {
+    "round5_predictions": {
+      "path": "submissions/round5_s2_temporal_20260917/predictions.jsonl",
+      "expected_sha256": "f8f026a69c8f9fa676dd31a6ffcd375569842c59f4cb6fdcd8d4ced5d86cf3ef",
+      "observed_sha256": "f8f026a69c8f9fa676dd31a6ffcd375569842c59f4cb6fdcd8d4ced5d86cf3ef",
+      "matches": true
+    },
+    "round5_zip": {
+      "path": "submissions/round5_s2_temporal_20260917/aic-round5-s2-temporal-20260917.zip",
+      "expected_sha256": "e5df99b8c3d32ec6d495ef1aada2b869478f307884ebeedca3df76def36c3584",
+      "observed_sha256": "e5df99b8c3d32ec6d495ef1aada2b869478f307884ebeedca3df76def36c3584",
+      "matches": true
+    },
+    "round5_temporal_raw": {
+      "path": "reports/temporal_round5/evidence/temporal_raw_v1.jsonl",
+      "expected_sha256": "3bc0fc59af87fc8542793e4419889b4cdf86a63c56e9c02c7ea19fdb1109cf72",
+      "observed_sha256": "3bc0fc59af87fc8542793e4419889b4cdf86a63c56e9c02c7ea19fdb1109cf72",
+      "matches": true
+    },
+    "spatial_base_lora_reader": {
+      "path": "submissions/qwen3vl_lora_reader_20260912/predictions.jsonl",
+      "expected_sha256": "a81a711878ffcd68db84dba4b530c4c051cd10cd82b1b4929f35bd06853ef471",
+      "observed_sha256": "a81a711878ffcd68db84dba4b530c4c051cd10cd82b1b4929f35bd06853ef471",
+      "matches": true
+    },
+    "test_metadata_index": {
+      "path": "reports/round6_score_alignment/phase0/evidence/supervisor_test_metadata.json",
+      "expected_sha256": "7f38d3f7f29b7fc5d91a9762ecfea00e6fc84b583bf11b439ba4a853bf1ec428",
+      "observed_sha256": "7f38d3f7f29b7fc5d91a9762ecfea00e6fc84b583bf11b439ba4a853bf1ec428",
+      "matches": true
+    }
+  },
+  "protected_inputs_after": {
+    "round5_predictions": {
+      "path": "submissions/round5_s2_temporal_20260917/predictions.jsonl",
+      "expected_sha256": "f8f026a69c8f9fa676dd31a6ffcd375569842c59f4cb6fdcd8d4ced5d86cf3ef",
+      "observed_sha256": "f8f026a69c8f9fa676dd31a6ffcd375569842c59f4cb6fdcd8d4ced5d86cf3ef",
+      "matches": true
+    },
+    "round5_zip": {
+      "path": "submissions/round5_s2_temporal_20260917/aic-round5-s2-temporal-20260917.zip",
+      "expected_sha256": "e5df99b8c3d32ec6d495ef1aada2b869478f307884ebeedca3df76def36c3584",
+      "observed_sha256": "e5df99b8c3d32ec6d495ef1aada2b869478f307884ebeedca3df76def36c3584",
+      "matches": true
+    },
+    "round5_temporal_raw": {
+      "path": "reports/temporal_round5/evidence/temporal_raw_v1.jsonl",
+      "expected_sha256": "3bc0fc59af87fc8542793e4419889b4cdf86a63c56e9c02c7ea19fdb1109cf72",
+      "observed_sha256": "3bc0fc59af87fc8542793e4419889b4cdf86a63c56e9c02c7ea19fdb1109cf72",
+      "matches": true
+    },
+    "spatial_base_lora_reader": {
+      "path": "submissions/qwen3vl_lora_reader_20260912/predictions.jsonl",
+      "expected_sha256": "a81a711878ffcd68db84dba4b530c4c051cd10cd82b1b4929f35bd06853ef471",
+      "observed_sha256": "a81a711878ffcd68db84dba4b530c4c051cd10cd82b1b4929f35bd06853ef471",
+      "matches": true
+    },
+    "test_metadata_index": {
+      "path": "reports/round6_score_alignment/phase0/evidence/supervisor_test_metadata.json",
+      "expected_sha256": "7f38d3f7f29b7fc5d91a9762ecfea00e6fc84b583bf11b439ba4a853bf1ec428",
+      "observed_sha256": "7f38d3f7f29b7fc5d91a9762ecfea00e6fc84b583bf11b439ba4a853bf1ec428",
+      "matches": true
+    }
+  },
+  "protected_inputs_unchanged": true,
+  "deviations_from_vendored_evaluator": [
+    "statuses SPARSE_DIAGNOSTIC / NOT_COMPUTABLE / INVALID_INPUT are new; the vendored implementation has a single ok/not-ok exit and no notion of reference coverage",
+    "validation is executed by the vendored schema module unchanged, but its report is surfaced as INVALID_INPUT with score=null instead of an exit code",
+    "the joint math is re-implemented here and cross-checked against vendor.internal_metric.score_predictions on hand cases",
+    "duplicate predictions are counted in N_pred through the *first valid* record only; the vendored implementation additionally emitted a DUPLICATE_FRAME warning, which is preserved by the vendored validator",
+    "reference objects must declare coverage; a reference that omits a scored video is NOT_COMPUTABLE rather than silently scored as empty ground truth"
+  ]
+}

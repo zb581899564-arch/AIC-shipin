@@ -1,0 +1,33 @@
+{
+  "schema": "aic6_p2d_strict_format_validation_v1",
+  "status": "PASS_STRICT_FORMAT",
+  "official_status": "NOT_OFFICIAL_SCORE",
+  "expected_videos": 8,
+  "expected_selected_frames": 276,
+  "arms": {
+    "qwen": {
+      "path": "qwen_composed_dev.jsonl",
+      "sha256": "53990693e3ef932e31d6dba374f198a7e30b91d01e9065665bdc458651607a79",
+      "strict_loader_ok": true,
+      "issues": [],
+      "exact_selected_key_set": true,
+      "video_records_ok": true,
+      "target_ratio_ok": true,
+      "prediction_count": 276,
+      "duplicate_frame_count": 0,
+      "ok": true
+    },
+    "center": {
+      "path": "center_composed_dev.jsonl",
+      "sha256": "075d534a6b7c81d8928832c95df375f0695aa65f3629d1ba082c478699e71115",
+      "strict_loader_ok": true,
+      "issues": [],
+      "exact_selected_key_set": true,
+      "video_records_ok": true,
+      "target_ratio_ok": true,
+      "prediction_count": 276,
+      "duplicate_frame_count": 0,
+      "ok": true
+    }
+  }
+}

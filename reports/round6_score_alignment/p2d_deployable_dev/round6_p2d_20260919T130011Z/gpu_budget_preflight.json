@@ -1,0 +1,51 @@
+{
+  "schema": "aic6_p2d_gpu_budget_preflight_v1",
+  "run_id": "round6_p2d_20260919T130011Z",
+  "observed_remote_time": "2026-09-19T21:05:19+08:00",
+  "ssh_status": "OK",
+  "gpu": {
+    "index": 0,
+    "memory_used_mib": 180,
+    "utilization_pct": 0,
+    "compute_processes": 0,
+    "active_gpu_job_present": false
+  },
+  "project_budget": {
+    "original_ledger_rows": 73,
+    "original_ledger_sha256": "f29ad73a0ce6b4b62b22bed4b455d1c5a8e6f3ab14b22fa035bebe3e1716965e",
+    "original_ledger_cumulative_seconds_including_prior": 51993.079482816625,
+    "p2_addendum_seconds": 4491.78,
+    "reconciled_project_seconds": 56484.85948281663,
+    "reconciled_project_hours": 15.69023874522684,
+    "project_cap_seconds": 86400,
+    "project_remaining_seconds": 29915.14051718337
+  },
+  "p2_budget": {
+    "historical_used_seconds": 4491.78,
+    "historical_cap_seconds": 7200,
+    "remaining_seconds": 2708.22
+  },
+  "p2d_budget": {
+    "stage_cap_seconds": 1800,
+    "runner_hard_stop_seconds": 1650,
+    "runner_teardown_reserve_seconds": 120,
+    "requested_frames": 276,
+    "estimated_wall_seconds_from_prior_throughput": 190.85
+  },
+  "disk": {
+    "work_root_bytes": 40614921046,
+    "work_root_cap_bytes": 85899345920,
+    "filesystem_free_bytes": 152212701184,
+    "p2d_remote_bytes_before_gpu": 325681,
+    "p2d_new_disk_cap_bytes": 1073741824
+  },
+  "remote_hashes": {
+    "p2d_core.py": "da5a4e83ab3a02154a038ea8a779b4be2141a1779e968e53a016c69d3def43fa",
+    "remote_infer.py": "800267826d331cf0200a29c76d0d90430ad7f269fcea6de19734f7fd2e5b094f",
+    "inference_requests.jsonl": "163f80126a7fe45845e6374684391ef900840956d85792050c898ca05c928686",
+    "freeze_manifest.json": "c48282261f6b98a7652558eddd35d8b051a8c803392e5e002020e8b06e40c450",
+    "source_identity_pts.json": "184d50f407b4cdf29ca1108dfe3ba5b2b2badc85e5b0a8aabd19688feccb8258"
+  },
+  "gate": "PASS_GPU_START",
+  "note": "Actual runner wall time, including model hash checks, load, inference and failures, is charged. No retry is authorized merely to improve results."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "rematch_c_cost_32s_01",
+  "command": [
+    "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+    "-B",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/dense_head_cost_v1/cost_probe.py",
+    "--config",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/c_cost_32s_01.config.json",
+    "--admission",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/c_cost_32s_01.admission.json"
+  ],
+  "started_utc": "2026-10-05T14:14:24.573648+00:00",
+  "runner_pid": 3198030,
+  "reserved_seconds": 1800,
+  "teardown_reserve_seconds": 120,
+  "prior_charged_seconds": 73487.04001432797,
+  "gpu_time_mode": "UNLIMITED",
+  "max_total_gpu_seconds": null,
+  "resource_policy_sha256": "74f15dc694428d5d421d58c6d790560ee6e8d86fc8847db6625b14fbeb38e8c6",
+  "disk_before": {
+    "free_bytes": 231068504064,
+    "work_bytes": 50151763968
+  },
+  "planned_output_bytes": 134217728,
+  "capacity_reason": "one fixed non-test native PTS index and three synthetic-label 32s updates; no new model or media copy",
+  "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+  "runner_source_sha256": "0cddca5f85a2a885ee2ac50e9193819b58dead39b6b561a30cb1c97f192ca961",
+  "child_pid": 3198035,
+  "finished_utc": "2026-10-05T14:17:28.226880+00:00",
+  "charged_seconds": 183.65335145499557,
+  "exit_code": 0,
+  "stop_reason": null,
+  "sampled_peak_memory_mib": 21278,
+  "status": "completed",
+  "disk_after": {
+    "free_bytes": 231061319680,
+    "work_bytes": 50158784512
+  }
+}

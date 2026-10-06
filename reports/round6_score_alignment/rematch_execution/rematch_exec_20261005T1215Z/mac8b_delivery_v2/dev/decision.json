@@ -1,0 +1,67 @@
+{
+  "status": "PASS_FROZEN_WEAK_DEV_GATE",
+  "metric_status": "WEAK_TEACHER_AGREEMENT_INTERNAL_SPEC_REIMPLEMENTATION",
+  "official_score": false,
+  "videos": 104,
+  "groups": 96,
+  "comparisons": {
+    "BASE8B": {
+      "video_macro": {
+        "precision": 0.2787988761995727,
+        "recall": 0.4303291501079473,
+        "f1": 0.30403253437020095
+      },
+      "source_group_macro_f1": 0.303103400222171,
+      "covered_weak_positive_recall": 0.4303291501079473,
+      "windows": 112,
+      "parse_failure_rate": 0.39285714285714285,
+      "inference_failure_rate": 0.0,
+      "legal_empty_rate": 0,
+      "unsupported_empty_rate": 0.0,
+      "valid_windows": 68
+    },
+    "SFT8B": {
+      "video_macro": {
+        "precision": 0.6812076558227776,
+        "recall": 0.6902255925173142,
+        "f1": 0.6445155660742903
+      },
+      "source_group_macro_f1": 0.6499916173220135,
+      "covered_weak_positive_recall": 0.6902255925173142,
+      "windows": 112,
+      "parse_failure_rate": 0.0,
+      "inference_failure_rate": 0.0,
+      "legal_empty_rate": 0,
+      "unsupported_empty_rate": 0.0,
+      "valid_windows": 112
+    }
+  },
+  "paired": {
+    "mean": 0.34688821709984247,
+    "ci95": [
+      0.260853978400427,
+      0.4331386392513276
+    ],
+    "draws": 10000,
+    "seed": 20261006
+  },
+  "stop_checks": {
+    "inference_failure": false,
+    "all_final_outputs_invalid": false,
+    "all_final_overlap_zero": false,
+    "paired_weak_F1_CI_all_negative": false
+  },
+  "logical_parameters": 8782459120,
+  "original_dev_sha256": "53f7053fc3df698ce96c94b04f1af3b5c0c210ce93ecd3269b6306daf4c0a700",
+  "adapter_sha256": "1baa14a96d30d3836478295752c0b932f40f811863c28db99b56102fcfa1d5b5",
+  "video_pixels_per_frame": 32768,
+  "decoder": "PYAV_SEQUENTIAL",
+  "execution_device": "CUDA",
+  "full_protocol_sha256": "3197c381692db2e0e80ae608b4c4f48e4cf6b509cf3bd6f903d98244ac9e0c23",
+  "wall_seconds": 808.0019059451297,
+  "confirm_read": false,
+  "test_read": false,
+  "evaluation_runs_per_final_model": 1,
+  "failures_kept_in_video_denominator": true,
+  "unknown_unselected_not_certified_negatives": true
+}

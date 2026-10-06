@@ -1,0 +1,25 @@
+{
+  "status": "PASS_SYNTHETIC_LONG_INPUT_8B_INFERENCE",
+  "input_tokens": 12048,
+  "input_shape": [
+    64,
+    1080,
+    1920,
+    3
+  ],
+  "inference_limit": 16384,
+  "training_limit_unchanged": 8192,
+  "peak_memory_allocated_mib": 20361.958984375,
+  "wall_seconds": 58.367003253661096,
+  "logical_parameters": 8782459120,
+  "base_hash": {
+    "sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+    "parameters": 8767123696,
+    "method": "sorted canonical names and all unique frozen parameter bytes"
+  },
+  "selected_scores_finite": true,
+  "synthetic_pixels_only": true,
+  "contest_media_read": false,
+  "quality_claim": false,
+  "uploaded": false
+}

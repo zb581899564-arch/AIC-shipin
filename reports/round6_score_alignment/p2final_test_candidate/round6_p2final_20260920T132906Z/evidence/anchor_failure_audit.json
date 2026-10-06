@@ -1,0 +1,25 @@
+{
+  "rows": 5065,
+  "invalid": 154,
+  "status_counts": {
+    "DECODE_OR_MODEL_FAILURE": 154
+  },
+  "error_counts": {
+    "RuntimeError: decoded frame identity changed": 154
+  },
+  "ratio_counts": {
+    "[16, 9]": 154
+  },
+  "raw_features": {
+    "empty": 154,
+    "other_start": 154,
+    "no_bbox_2d": 154,
+    "no_code_fence": 154,
+    "integer_count_0": 154
+  },
+  "raw_length": {
+    "min": 0,
+    "max": 0,
+    "mean": 0.0
+  }
+}

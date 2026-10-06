@@ -1,0 +1,18 @@
+{
+  "run_id": "round6_p1b_fix2_20260917T0951Z",
+  "gpu_hours": 0,
+  "ssh": false,
+  "network_downloads": 0,
+  "models_loaded": 0,
+  "training": false,
+  "test_videos_accessed": false,
+  "pilot_media_read_only_count": 8,
+  "test_wall_seconds_final_batch": 1.774,
+  "pilot_decode_check_seconds": 12.647,
+  "report_files_bytes_at_record": 143522,
+  "new_tool_test_files_bytes": 19319,
+  "disk_budget_bytes": 524288000,
+  "cpu_test_budget_seconds": 1200,
+  "cpu_test_cumulative_conservative_upper_bound_sec": 60,
+  "cpu_test_bound_note": "Includes repeated synthetic/VM/boundary/interface runs and eight read-only pilot scans; conservative measured-wall upper bound, not CPU profiler time."
+}

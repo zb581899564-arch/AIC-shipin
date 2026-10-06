@@ -1,0 +1,60 @@
+{
+  "schema": "aic_sft8b_full_config_v1",
+  "model_id": "Qwen/Qwen3-VL-8B-Instruct",
+  "revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+  "model_dir": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/models/Qwen3-VL-8B-Instruct",
+  "model_receipt": {
+    "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/model_download_v2_status.json",
+    "sha256": "ab3e30b18dc54ceb7cb90b07194eff30449db75653483da5b213807137d8da70"
+  },
+  "train_manifest": {
+    "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_v1/inputs_01/full_train.jsonl",
+    "sha256": "124801624736f960d15074ad65840d4e2850dcb7d8d5d3b16a2cb54e7eee4bc0"
+  },
+  "r7_train_registry": {
+    "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_v1/inputs_01/r7_train_registry.json",
+    "sha256": "71552f64ccdb125ca11a451baf5b8a22491d51d73db1a42e0ce1a545262d1cd4"
+  },
+  "temporal_common": {
+    "path": "/home/inspur/aic_video_work/round6_score_alignment/r7_temporal_pool/round7_temporal_pool_20260921T090903Z/code/temporal_common.py",
+    "sha256": "bb8f47896e20e069e9ddf992d94488132ccbee46dc850a2658851f4aa52946b4"
+  },
+  "r7_core": {
+    "path": "/home/inspur/aic_video_work/round6_score_alignment/r7_temporal_pool/round7_temporal_pool_20260921T090903Z/code/r7_core.py",
+    "sha256": "95f2ef01b39c3298af1e700b300ddd2baa37b247232db8076b2747a831719827"
+  },
+  "out_dir": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_full_v1/train_01",
+  "grad_accum": 16,
+  "lr": 5e-05,
+  "seed": 20261006,
+  "max_sequence_length": 8192,
+  "max_wall_seconds": 36000,
+  "max_frames": 64,
+  "max_pixels": 131072,
+  "window_seconds": 30,
+  "precision": "bf16",
+  "attn_implementation": "sdpa",
+  "lora_rank": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "modules_to_save": null,
+  "gradient_checkpointing_use_reentrant": false,
+  "loss": "ASSISTANT_INTERVAL_JSON_CE",
+  "optimizer": "AdamW",
+  "weight_decay": 0.0,
+  "grad_clip_norm": 1.0,
+  "adamw_betas": [
+    0.9,
+    0.999
+  ],
+  "adamw_eps": 1e-08,
+  "epochs": 5,
+  "initialization": "PINNED_BASE_NEW_LORA_NOT_SMOKE_ADAPTER",
+  "final_checkpoint_only": true,
+  "expected_parents": 704,
+  "expected_groups": 602,
+  "expected_windows": 724,
+  "expected_effective_batches": 3620,
+  "expected_optimizer_steps": 227,
+  "source_endpoint_contract": "R7_MILLISECOND_ROUNDING_ONLY_MAX_0_000500001_SEC"
+}

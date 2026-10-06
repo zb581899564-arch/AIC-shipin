@@ -1,0 +1,19 @@
+{
+  "scope": "TEMPORAL_8B_INTERVAL_SFT_FULL_NONTEST",
+  "authorized": true,
+  "source_lock_sha256": "88e9767ee875566c7adeb7470d89d0cd3f936c53265d640c37e536a0f98bf9b5",
+  "config_sha256": "7c05b28c75f2ea4aede7844712d8945b9b79ea8c5402e906514c1cfe755e0de3",
+  "authority": {
+    "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_full_v1/authorization.json",
+    "sha256": "0f342c7a49a32732717fb111ed2f00938ecda2e313b1fd16e214b4f24e887567"
+  },
+  "resource_preflight_pass": true,
+  "shared_gpu_queue_approved": true,
+  "disk_peak_within_80gib": true,
+  "planned_output_bytes": 1144520704,
+  "work_bytes": 50427392000,
+  "free_bytes": 229747408896,
+  "formal_c_bce_admitted": false,
+  "full_training_admitted": true,
+  "smoke_acceptance_sha256": "90a4fc7949dce810ae277c6bb1804806b3f2f95f159b874374451bdb6711bf61"
+}

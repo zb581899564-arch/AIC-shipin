@@ -1,0 +1,49 @@
+{
+  "schema": "aic6_p2d_gpu_resource_postflight_v1",
+  "run_id": "round6_p2d_20260919T130011Z",
+  "observed_remote_time": "2026-09-19T21:10:31+08:00",
+  "job": {
+    "ledger_name": "r6p2d_20260919t130011z",
+    "status": "completed",
+    "exit_code": 0,
+    "stop_reason": null,
+    "charged_seconds": 212.01722279796377,
+    "charged_hours": 0.05889367299943438,
+    "reserved_seconds": 1650,
+    "stage_cap_seconds": 1800,
+    "sampled_peak_memory_mib": 9070
+  },
+  "post_job_gpu": {
+    "memory_used_mib": 180,
+    "utilization_pct": 0,
+    "compute_processes": 0,
+    "active_gpu_job_present": false
+  },
+  "ledger": {
+    "rows_after": 74,
+    "sha256_after": "bf5ad0d2abb669eacb112b5e34c23286888552150284f1941c119a3e96f28ce0",
+    "original_ledger_cumulative_seconds_after": 52205.09670561459,
+    "p2_addendum_seconds": 4491.78,
+    "reconciled_project_seconds_after": 56696.87670561459,
+    "reconciled_project_hours_after": 15.749132418226274,
+    "remaining_project_seconds_vs_24h": 29703.12329438541,
+    "remaining_project_hours_vs_24h": 8.250867581773725,
+    "p2_total_seconds_after": 4703.797222797963,
+    "p2_remaining_seconds_vs_2h": 2496.202777202037
+  },
+  "disk": {
+    "p2d_remote_bytes_before_gpu": 325681,
+    "p2d_remote_bytes_after_gpu": 466847,
+    "p2d_gpu_run_increment_bytes": 141166,
+    "p2d_stage_cap_bytes": 1073741824,
+    "work_root_bytes_after": 40615066757,
+    "filesystem_free_bytes_after": 152203874304
+  },
+  "remote_local_hash_matches": {
+    "raw_inference.jsonl": "44036655b25e37ece2e0c904d268e7648c9d99f4cbf70c5cdf881a6e660627a9",
+    "raw_inference.run.json": "804f18b1da1dbb408604d69b0895996dc9d4c343e168f85d72e60b3272091e8a",
+    "r6p2d_20260919t130011z.resource.json": "145dd08429545308926d096fe86fb79c56f629233b9f8b948ffbdeaecd4b3cde",
+    "r6p2d_20260919t130011z.log": "75a522e0cb76fcc9fb68ab0249b555318d670f8ae5bfcb15b64b1f6e654dea16"
+  },
+  "budget_status": "PASS_WITHIN_ALL_CAPS"
+}

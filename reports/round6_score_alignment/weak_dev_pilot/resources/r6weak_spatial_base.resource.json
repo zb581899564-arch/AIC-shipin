@@ -1,0 +1,26 @@
+{
+  "name": "r6weak_spatial_base",
+  "command": [
+    "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+    "/home/inspur/aic_video_work/round6_score_alignment/weak_dev_pilot/remote_spatial_baseline.py",
+    "/home/inspur/aic_video_work/round6_score_alignment/weak_dev_pilot/dev_frames.jsonl",
+    "/home/inspur/aic_video_work/round6_score_alignment/weak_dev_pilot/prepared_dev/extracted_frames.jsonl",
+    "/home/inspur/aic_video_work/round6_score_alignment/weak_dev_pilot/p1_predictions.jsonl"
+  ],
+  "started_utc": "2026-09-17T15:09:37.626209+00:00",
+  "runner_pid": 903557,
+  "reserved_seconds": 1800,
+  "teardown_reserve_seconds": 120,
+  "prior_charged_seconds": 50962.94865657063,
+  "disk_before": {
+    "free_bytes": 152819892224,
+    "work_bytes": 40750071808
+  },
+  "child_pid": 903561,
+  "finished_utc": "2026-09-17T15:12:39.395181+00:00",
+  "charged_seconds": 181.76906338194385,
+  "exit_code": 0,
+  "stop_reason": null,
+  "sampled_peak_memory_mib": 9070,
+  "status": "completed"
+}

@@ -1,0 +1,157 @@
+{
+  "status": "TRAINING_COMPLETED_WEAK_TEACHER_ONLY",
+  "manifest": "/home/inspur/aic_video_work/round6_score_alignment/p2t_temporal_improvement/round6_p2t_20260920T1429Z/inputs/smoke_temporal.jsonl",
+  "manifest_sha256": "5c9996007e104a276b67601267754957b2557544e519059b15dbe06f30b05874",
+  "rows": 16,
+  "source_groups": 16,
+  "epochs_requested": 20,
+  "epochs_completed": 20,
+  "max_steps": 20,
+  "optimizer_steps": 20,
+  "examples_seen": 320,
+  "stop_reason": "max_steps_20",
+  "lr": 5e-05,
+  "grad_accum": 16,
+  "seed": 20260920,
+  "lora": {
+    "rank": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj"
+    ]
+  },
+  "trainable_params": 11796480,
+  "vision_frozen": true,
+  "base_frozen": true,
+  "loss_finite": true,
+  "loss_log": [
+    {
+      "epoch": 0,
+      "optimizer_step": 1,
+      "loss": 3.491068,
+      "elapsed_seconds": 45.336
+    },
+    {
+      "epoch": 1,
+      "optimizer_step": 2,
+      "loss": 2.581504,
+      "elapsed_seconds": 92.476
+    },
+    {
+      "epoch": 2,
+      "optimizer_step": 3,
+      "loss": 3.002614,
+      "elapsed_seconds": 141.005
+    },
+    {
+      "epoch": 3,
+      "optimizer_step": 4,
+      "loss": 2.728084,
+      "elapsed_seconds": 190.101
+    },
+    {
+      "epoch": 4,
+      "optimizer_step": 5,
+      "loss": 3.006866,
+      "elapsed_seconds": 239.818
+    },
+    {
+      "epoch": 5,
+      "optimizer_step": 6,
+      "loss": 1.551501,
+      "elapsed_seconds": 289.556
+    },
+    {
+      "epoch": 6,
+      "optimizer_step": 7,
+      "loss": 2.34381,
+      "elapsed_seconds": 338.955
+    },
+    {
+      "epoch": 7,
+      "optimizer_step": 8,
+      "loss": 1.729822,
+      "elapsed_seconds": 388.208
+    },
+    {
+      "epoch": 8,
+      "optimizer_step": 9,
+      "loss": 1.334256,
+      "elapsed_seconds": 437.644
+    },
+    {
+      "epoch": 9,
+      "optimizer_step": 10,
+      "loss": 1.174858,
+      "elapsed_seconds": 487.04
+    },
+    {
+      "epoch": 10,
+      "optimizer_step": 11,
+      "loss": 1.409755,
+      "elapsed_seconds": 536.501
+    },
+    {
+      "epoch": 11,
+      "optimizer_step": 12,
+      "loss": 1.390478,
+      "elapsed_seconds": 586.136
+    },
+    {
+      "epoch": 12,
+      "optimizer_step": 13,
+      "loss": 1.484525,
+      "elapsed_seconds": 635.525
+    },
+    {
+      "epoch": 13,
+      "optimizer_step": 14,
+      "loss": 1.465246,
+      "elapsed_seconds": 684.939
+    },
+    {
+      "epoch": 14,
+      "optimizer_step": 15,
+      "loss": 1.43274,
+      "elapsed_seconds": 734.683
+    },
+    {
+      "epoch": 15,
+      "optimizer_step": 16,
+      "loss": 1.126235,
+      "elapsed_seconds": 784.083
+    },
+    {
+      "epoch": 16,
+      "optimizer_step": 17,
+      "loss": 1.215453,
+      "elapsed_seconds": 833.437
+    },
+    {
+      "epoch": 17,
+      "optimizer_step": 18,
+      "loss": 0.802517,
+      "elapsed_seconds": 882.742
+    },
+    {
+      "epoch": 18,
+      "optimizer_step": 19,
+      "loss": 1.062421,
+      "elapsed_seconds": 932.538
+    },
+    {
+      "epoch": 19,
+      "optimizer_step": 20,
+      "loss": 0.668826,
+      "elapsed_seconds": 982.035
+    }
+  ],
+  "wall_seconds": 982.139,
+  "peak_memory_allocated_mib": 10987.5,
+  "adapter_model_sha256": "3f81b974e9433f01be9a3534bee7e56ea05d2554f7a68170cdcdce17374e0531",
+  "environment": "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python"
+}

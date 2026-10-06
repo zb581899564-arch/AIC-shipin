@@ -1,0 +1,58 @@
+{
+  "status": "PASS_CPU_CONTRACT",
+  "cases": 12,
+  "results": [
+    {
+      "name": "Mac lowres budget fixed",
+      "passed": true
+    },
+    {
+      "name": "64 source ordinals retain endpoints",
+      "passed": true
+    },
+    {
+      "name": "bounded positive sorted interval",
+      "passed": true
+    },
+    {
+      "name": "end beyond source rejected",
+      "passed": true
+    },
+    {
+      "name": "no empty fallback",
+      "passed": true
+    },
+    {
+      "name": "overlap rejected",
+      "passed": true
+    },
+    {
+      "name": "six segments rejected",
+      "passed": true
+    },
+    {
+      "name": "gap consumed from ordinal zero",
+      "passed": true
+    },
+    {
+      "name": "same-frame expected SHA enforced",
+      "passed": true
+    },
+    {
+      "name": "backward ordinal rejected",
+      "passed": true
+    },
+    {
+      "name": "pixel mismatch rejected",
+      "passed": true
+    },
+    {
+      "name": "unchanged PTS/frame/strict serialization regression",
+      "passed": true
+    }
+  ],
+  "original_contract_sha256": "7820292db506bc64167f79a35346e68a8f2a84daa5de90e7f6d655f0a2908379",
+  "test_sha256": "53a543cf3c2e0f396e18dc7f9fca51063587b03d0dc98df22084969a5a8696e9",
+  "test_media_read": false,
+  "models_loaded": false
+}

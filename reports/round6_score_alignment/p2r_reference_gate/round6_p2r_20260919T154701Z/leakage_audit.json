@@ -1,0 +1,117 @@
+{
+  "schema": "p2r_bounded_leakage_audit_v1",
+  "identifier_intersection": [],
+  "candidate_images": 8,
+  "aic_non_test_groups_probed": 8,
+  "aic_frames_probed": 96,
+  "pairwise_phash_comparisons": 768,
+  "phash_algorithm": "32x32 grayscale DCT, top-left 8x8 median bits, Hamming distance",
+  "near_duplicate_threshold": 6,
+  "near_duplicate_matches": [],
+  "minimum_distances": [
+    {
+      "candidate": "gnmc:validation:005995.jpeg",
+      "aic_probe": "P04:3269",
+      "distance": 20
+    },
+    {
+      "candidate": "gnmc:validation:003840.jpeg",
+      "aic_probe": "P04:2288",
+      "distance": 20
+    },
+    {
+      "candidate": "gnmc:validation:003840.jpeg",
+      "aic_probe": "P08:682",
+      "distance": 20
+    },
+    {
+      "candidate": "gnmc:test:007968.jpeg",
+      "aic_probe": "P06:4086",
+      "distance": 20
+    },
+    {
+      "candidate": "gnmc:test:002515.jpeg",
+      "aic_probe": "P02:2452",
+      "distance": 20
+    },
+    {
+      "candidate": "gnmc:test:007968.jpeg",
+      "aic_probe": "P04:981",
+      "distance": 22
+    },
+    {
+      "candidate": "gnmc:test:002854.jpeg",
+      "aic_probe": "P01:1635",
+      "distance": 22
+    },
+    {
+      "candidate": "gnmc:test:008528.jpeg",
+      "aic_probe": "P02:0",
+      "distance": 22
+    },
+    {
+      "candidate": "gnmc:test:008528.jpeg",
+      "aic_probe": "P02:3269",
+      "distance": 22
+    },
+    {
+      "candidate": "gnmc:test:008528.jpeg",
+      "aic_probe": "P06:4495",
+      "distance": 22
+    },
+    {
+      "candidate": "gnmc:test:008528.jpeg",
+      "aic_probe": "P08:682",
+      "distance": 22
+    },
+    {
+      "candidate": "gnmc:validation:005995.jpeg",
+      "aic_probe": "P06:817",
+      "distance": 24
+    },
+    {
+      "candidate": "gnmc:validation:005995.jpeg",
+      "aic_probe": "P06:3269",
+      "distance": 24
+    },
+    {
+      "candidate": "gnmc:validation:006034.jpeg",
+      "aic_probe": "P01:0",
+      "distance": 24
+    },
+    {
+      "candidate": "gnmc:validation:006034.jpeg",
+      "aic_probe": "P02:3269",
+      "distance": 24
+    },
+    {
+      "candidate": "gnmc:validation:006034.jpeg",
+      "aic_probe": "P05:341",
+      "distance": 24
+    },
+    {
+      "candidate": "gnmc:validation:006034.jpeg",
+      "aic_probe": "P07:818",
+      "distance": 24
+    },
+    {
+      "candidate": "gnmc:validation:007812.jpeg",
+      "aic_probe": "P02:1226",
+      "distance": 24
+    },
+    {
+      "candidate": "gnmc:validation:007812.jpeg",
+      "aic_probe": "P02:1635",
+      "distance": 24
+    },
+    {
+      "candidate": "gnmc:validation:003840.jpeg",
+      "aic_probe": "P05:2045",
+      "distance": 24
+    }
+  ],
+  "decode_failures": [],
+  "bounded_result": "NO_MATCH_IN_BOUNDED_PROBES",
+  "full_source_leakage": "UNKNOWN",
+  "limitation": "GNMC does not publish per-image origin URLs in the archive, and only 96 frames from 8 AIC non-test pilot groups were compared; this cannot prove corpus-wide source isolation."
+}

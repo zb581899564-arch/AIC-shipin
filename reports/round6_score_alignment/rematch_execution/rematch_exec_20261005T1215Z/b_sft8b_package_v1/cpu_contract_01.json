@@ -1,0 +1,50 @@
+{
+  "status": "PASS_CPU_CONTRACT",
+  "cases": 10,
+  "results": [
+    {
+      "name": "bounded positive sorted interval",
+      "passed": true
+    },
+    {
+      "name": "end beyond source rejected",
+      "passed": true
+    },
+    {
+      "name": "no empty fallback",
+      "passed": true
+    },
+    {
+      "name": "overlap rejected",
+      "passed": true
+    },
+    {
+      "name": "six segments rejected",
+      "passed": true
+    },
+    {
+      "name": "gap consumed from ordinal zero",
+      "passed": true
+    },
+    {
+      "name": "same-frame expected SHA enforced",
+      "passed": true
+    },
+    {
+      "name": "backward ordinal rejected",
+      "passed": true
+    },
+    {
+      "name": "pixel mismatch rejected",
+      "passed": true
+    },
+    {
+      "name": "unchanged PTS/frame/strict serialization regression",
+      "passed": true
+    }
+  ],
+  "original_contract_sha256": "742e07f4b13b419f14990fb4ce0ad2c5635733ab0d33e6e02a24fc7e72f3bf30",
+  "test_sha256": "aa2ff56a8d1872bf93b077a9db2cf3f68f857edb90f16cdc8c5b840d36226c91",
+  "test_media_read": false,
+  "models_loaded": false
+}

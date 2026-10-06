@@ -1,0 +1,146 @@
+{
+  "audited_rows": 808,
+  "confirmation_label_file_opened": false,
+  "confirmation_label_rows_parsed": 0,
+  "counting_note": "seconds sum clip rows; overlapping same-source clips are not deduplicated; no verified observed or negative exposure is inferred",
+  "gpu_used": false,
+  "input_hashes": {
+    "dev": "53f7053fc3df698ce96c94b04f1af3b5c0c210ce93ecd3269b6306daf4c0a700",
+    "train": "ef427866153a9601be01b6e12356951c2fb56730525b0d7b7c353651c2930ddf"
+  },
+  "media_decoded": false,
+  "outer_split_changed": false,
+  "pts_audit_rerun": false,
+  "raw_file_sha256_byte_identity_only": "7177731fb7af99e8581c0ec071d116cdb9e6652a6b2b355cd8100364a004c629",
+  "raw_other_rows_not_decoded_or_parsed": true,
+  "raw_rows_parsed": 808,
+  "scalar_field_counts": {
+    "annotation_mode": {
+      "\"temporal_spatial\"": 808
+    },
+    "dataset_split": {
+      "\"train\"": 722,
+      "\"val\"": 86
+    },
+    "provenance.seed_model": {
+      "\"api_doubao_doubao-seed-2-1-pro-260628\"": 808
+    },
+    "provenance.spatial_fps": {
+      "1.0": 808
+    },
+    "provenance.temporal_fps": {
+      "1.0": 808
+    },
+    "quality.annotation_mode": {
+      "\"temporal_spatial\"": 808
+    },
+    "schema_version": {
+      "\"seed_weak_training_label_v1\"": 808
+    }
+  },
+  "schema_key_counts": {
+    "clip": {
+      "achieved_hl_ratio": 808,
+      "end_sec": 808,
+      "free_axis": 808,
+      "free_axis_travel": 808,
+      "planned_hl_ratio": 808,
+      "qvh_window": 808,
+      "source_vid": 808,
+      "start_sec": 808,
+      "used_window": 808
+    },
+    "provenance": {
+      "annotator_config_sha256": 808,
+      "license": 808,
+      "n_seed_repeats": 808,
+      "prompt_fingerprint": 808,
+      "prompt_version": 808,
+      "seed_model": 808,
+      "source": 808,
+      "source_group": 808,
+      "spatial_fps": 808,
+      "temporal_fps": 808,
+      "video_sha256": 808
+    },
+    "quality": {
+      "annotation_mode": 808,
+      "n_repeats": 808,
+      "reasons": 808,
+      "repeat_agreement": 808,
+      "score": 808,
+      "score_spread": 808,
+      "selected_ratio": 808,
+      "spatial_confidence": 808,
+      "spatial_source": 808,
+      "status": 808,
+      "temporal_confidence": 808,
+      "threshold_margin": 808,
+      "timeline_coverage": 808,
+      "trajectory_coverage": 808
+    },
+    "teacher_signals": {
+      "candidate_segments": 808,
+      "summary": 808,
+      "timeline": 808,
+      "trajectory": 808
+    },
+    "top_level": {
+      "annotation_mode": 808,
+      "clip": 808,
+      "cropRois": 808,
+      "crop_keyframes": 808,
+      "dataset_split": 808,
+      "provenance": 808,
+      "quality": 808,
+      "schema_version": 808,
+      "segments": 808,
+      "targetRatioWH": 808,
+      "teacher_signals": 808,
+      "video_id": 808,
+      "video_path": 808,
+      "video_url": 808
+    }
+  },
+  "script_sha256": "b5c318ae5d5f3cf7c678ff523c0d70c52c7f88c3e1e360c747b4753d7bce9647",
+  "source_groups": 698,
+  "statistics": {
+    "dev": {
+      "bce_formal_training_eligible_rows": 0,
+      "clip_seconds_sum_over_rows": 1414.0239999999997,
+      "nonempty_positive_rows": 104,
+      "rows": 104,
+      "segment_count_histogram": {
+        "1": 76,
+        "2": 22,
+        "3": 5,
+        "4": 1
+      },
+      "source_groups": 96,
+      "teacher_negative_rows": 0,
+      "unselected_unknown_seconds_sum_over_rows": 730.7349473390057,
+      "verified_observation_rows": 0,
+      "weak_positive_seconds_sum_over_rows": 683.2890526609942
+    },
+    "train": {
+      "bce_formal_training_eligible_rows": 0,
+      "clip_seconds_sum_over_rows": 9246.595999999992,
+      "nonempty_positive_rows": 704,
+      "rows": 704,
+      "segment_count_histogram": {
+        "1": 469,
+        "2": 177,
+        "3": 39,
+        "4": 17,
+        "5": 2
+      },
+      "source_groups": 602,
+      "teacher_negative_rows": 0,
+      "unselected_unknown_seconds_sum_over_rows": 5425.408980546911,
+      "verified_observation_rows": 0,
+      "weak_positive_seconds_sum_over_rows": 3821.1870194530984
+    }
+  },
+  "status": "STOP_C_FORMAL_BCE_UNKNOWN_NEGATIVE_SEMANTICS",
+  "train_dev_group_intersection": []
+}

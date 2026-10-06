@@ -1,0 +1,47 @@
+{
+  "status": "PASS_SAVED_ADAPTER_SEMANTIC_RELOAD_ADDENDUM",
+  "original_report_sha256": "4e5a836d4f31da0f7c1704e611701264cf5b90324e1263726fdf2e6eea36caad",
+  "original_failed_report_preserved": true,
+  "optimizer_steps": 5,
+  "effective_batches": 80,
+  "additional_optimizer_updates": 0,
+  "original_freeze_hash_values_were_not_persisted": true,
+  "original_freeze_comparison_guard_passed_before_recipe_failure": true,
+  "uploaded": false,
+  "target_serialization": "PEFT_MINIMAL_SUFFIX_COMPRESSION_144_QUALIFIED_TO_4_SUFFIXES",
+  "exact_reloaded_language_modules": 144,
+  "reloaded_lora_tensors": 288,
+  "all_saved_and_reloaded_lora_tensors_equal": true,
+  "adapter_model_sha256": "068c4e956509c4bd293f199b1030a9f0de27443a1a63a791a92c446a7d758d11",
+  "base_frozen_on_reload": true,
+  "vision_frozen_on_reload": true,
+  "adapter_reload_succeeded": true,
+  "adapter_off_base_bytes_unchanged": true,
+  "freeze_evidence": {
+    "pinned_base": {
+      "sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+      "parameters": 8767123696,
+      "method": "sorted canonical names and all unique frozen parameter bytes"
+    },
+    "adapter_loaded": {
+      "sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+      "parameters": 8767123696,
+      "method": "sorted canonical names and all unique frozen parameter bytes"
+    },
+    "adapter_off": {
+      "sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+      "parameters": 8767123696,
+      "method": "sorted canonical names and all unique frozen parameter bytes"
+    }
+  },
+  "parameter_inventory": {
+    "base": 8767123696,
+    "lora": 15335424,
+    "total": 8782459120
+  },
+  "original_training_freeze_evidence_kind": "audited reached/passed guard in pinned source; original values not persisted",
+  "full_training_completed": false,
+  "quality_claim": false,
+  "wall_seconds": 144.31831911206245,
+  "checked_utc": "2026-10-06T03:54:56.967201+00:00"
+}

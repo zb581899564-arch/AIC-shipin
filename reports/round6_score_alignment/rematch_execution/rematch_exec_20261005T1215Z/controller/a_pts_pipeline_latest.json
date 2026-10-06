@@ -1,0 +1,12 @@
+{
+  "stage": "STOP_BACKGROUND_CONTINUATION",
+  "checked_utc": "2026-10-05T16:29:25.099015+00:00",
+  "pid": 3339287,
+  "source_lock_sha256": "86fc0da7cf631a2afe33c54fb5b66246bba88adfd95c1d8ce80ccbf73522d70d",
+  "formal_C_training_admitted": false,
+  "competition_upload_authorized": false,
+  "failure_type": "RuntimeError",
+  "failure": "owned job did not complete successfully: a_pts_temporal_01",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/finish_registered_a_pts.py\", line 94, in <module>\n    temporal_resource_path,temporal_resource = wait_resource('a_pts_temporal_01',temporal_admission)\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/finish_registered_a_pts.py\", line 66, in wait_resource\n    require(result['status'] == 'completed' and result['exit_code'] == 0\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/finish_registered_a_pts.py\", line 37, in require\n    raise RuntimeError(message)\nRuntimeError: owned job did not complete successfully: a_pts_temporal_01\n",
+  "candidate_not_accepted": true
+}

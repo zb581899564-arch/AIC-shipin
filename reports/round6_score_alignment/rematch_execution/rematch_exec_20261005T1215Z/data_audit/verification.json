@@ -1,0 +1,17 @@
+{
+  "status": "PASS_AUDIT_ARTIFACT_CONSISTENCY_ONLY",
+  "checks": {
+    "808_semantic_rows_and_generation_rows": true,
+    "unique_sample_ids": true,
+    "expected_split_counts": true,
+    "source_group_split_intersection_empty": true,
+    "no_observation_or_negative_inferred": true,
+    "unknown_ranges_not_bce_eligible": true,
+    "raw_row_citations_consistent": true,
+    "clip_domain_conserved": true,
+    "generation_row_binding": true,
+    "existing_script_hashes_match_executed_summaries": true
+  },
+  "formal_c_data_gate": "STOP_C_FORMAL_BCE_UNKNOWN_NEGATIVE_SEMANTICS",
+  "note": "统计及机器状态表一致性验收，不是教师观察、负语义、许可或模型质量验收。"
+}

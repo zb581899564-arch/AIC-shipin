@@ -1,0 +1,10 @@
+{
+  "stage": "STOP_SFT8B_QUEUE",
+  "checked_utc": "2026-10-05T20:03:09.715843+00:00",
+  "pid": 3587355,
+  "formal_c_bce_admitted": false,
+  "uploaded": false,
+  "failure_type": "RuntimeError",
+  "failure": "A candidate did not pass; SFT queue not started",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/queue_sft8b_after_a.py\", line 49, in <module>\n    require(result['stage']=='PASS_COMPLETE_426_CANDIDATE_NOT_UPLOADED' and result['videos']==426,\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/queue_sft8b_after_a.py\", line 10, in require\n    if not ok:raise RuntimeError(message)\nRuntimeError: A candidate did not pass; SFT queue not started\n"
+}

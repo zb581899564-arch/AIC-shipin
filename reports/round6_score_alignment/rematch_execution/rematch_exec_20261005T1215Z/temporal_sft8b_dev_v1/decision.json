@@ -1,0 +1,64 @@
+{
+  "status": "PASS_FROZEN_WEAK_DEV_GATE",
+  "metric_status": "WEAK_TEACHER_AGREEMENT_INTERNAL_SPEC_REIMPLEMENTATION",
+  "official_score": false,
+  "videos": 104,
+  "groups": 96,
+  "comparisons": {
+    "BASE8B": {
+      "video_macro": {
+        "precision": 0.3052698325262406,
+        "recall": 0.5098485379532234,
+        "f1": 0.3471742516766221
+      },
+      "source_group_macro_f1": 0.342618220574476,
+      "covered_weak_positive_recall": 0.5098485379532234,
+      "windows": 112,
+      "parse_failure_rate": 0.32142857142857145,
+      "inference_failure_rate": 0.0,
+      "legal_empty_rate": 0,
+      "unsupported_empty_rate": 0.0,
+      "valid_windows": 76
+    },
+    "SFT8B": {
+      "video_macro": {
+        "precision": 0.7074172685521686,
+        "recall": 0.71800295950884,
+        "f1": 0.6777229641052717
+      },
+      "source_group_macro_f1": 0.6850031670773553,
+      "covered_weak_positive_recall": 0.71800295950884,
+      "windows": 112,
+      "parse_failure_rate": 0.0,
+      "inference_failure_rate": 0.0,
+      "legal_empty_rate": 0,
+      "unsupported_empty_rate": 0.0,
+      "valid_windows": 112
+    }
+  },
+  "paired": {
+    "mean": 0.3423849465028794,
+    "ci95": [
+      0.2589075960019084,
+      0.42465932389287625
+    ],
+    "draws": 10000,
+    "seed": 20261006
+  },
+  "stop_checks": {
+    "inference_failure": false,
+    "all_final_outputs_invalid": false,
+    "all_final_overlap_zero": false,
+    "paired_weak_F1_CI_all_negative": false
+  },
+  "logical_parameters": 8782459120,
+  "original_dev_sha256": "53f7053fc3df698ce96c94b04f1af3b5c0c210ce93ecd3269b6306daf4c0a700",
+  "adapter_sha256": "8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23",
+  "full_protocol_sha256": "9d524e15d6996be22d6f2caa13b08e7945ff6a30d11735a1bc40154eed2244b0",
+  "wall_seconds": 736.3910307465121,
+  "confirm_read": false,
+  "test_read": false,
+  "evaluation_runs_per_final_model": 1,
+  "failures_kept_in_video_denominator": true,
+  "unknown_unselected_not_certified_negatives": true
+}

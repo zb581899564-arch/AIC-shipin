@@ -1,0 +1,40 @@
+{
+  "transfer_route": "scp -J macmini",
+  "schema": "aic_sft8b_docs_receipt_copy_v1",
+  "status": "PASS_BOTH_ENDS_SHA256",
+  "checked_utc": "2026-10-05T17:50:35.9344227Z",
+  "files": [
+    {
+      "sha256": "03c88cfaa8257f4c0edf0ce1d992f8d693664d04581de0adf5eb8209612a728c",
+      "path": "REPORT.md"
+    },
+    {
+      "sha256": "f32b3f2d0b5ee35ac4d14ca26ea9e8bdd9379d53e508492dfcab7e22946d498c",
+      "path": "CONTINUE.md"
+    },
+    {
+      "sha256": "24befc155d2d6150b9ebe9dd59cf1f2f64903c9dbfdc2c02d1131bb991a1e177",
+      "path": "controller/execution_status.json"
+    },
+    {
+      "sha256": "ff0036f776426b0027d9037d8dee645bc31bb07345725d09baa01d2c386385cd",
+      "path": "controller/sft8b_deployment_review_01.json"
+    },
+    {
+      "sha256": "d755c73df5e5bf1e9edf8ff0c251b5460634008e69cf734d49fa3577045b8fd4",
+      "path": "temporal_sft8b_v1/cpu_linux_review_01.json"
+    },
+    {
+      "sha256": "0cde4978a9a05f190e53ffe987cb488bd42aaa1a624ab03a7de4a7fabb43337d",
+      "path": "controller/sft8b_queue.launch.json"
+    },
+    {
+      "sha256": "53ce8fbf1ecc96ca4f0a65ba26ee98a90c264f74f83b3301e2ad770958e42035",
+      "path": "controller/sft8b_queue.registration.json"
+    },
+    {
+      "sha256": "084210174fb839d3cce78316ebc5cb1ec3e0beac4bb694d7ee351b1440aead57",
+      "path": "controller/sft8b_queue_latest.json"
+    }
+  ]
+}

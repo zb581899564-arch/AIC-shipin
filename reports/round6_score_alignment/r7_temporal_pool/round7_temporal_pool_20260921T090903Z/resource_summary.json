@@ -1,0 +1,54 @@
+{
+  "status": "R7_RESOURCE_FINAL",
+  "r7_jobs": [
+    {
+      "name": "r7_smoke5_20260921t2140",
+      "charged_seconds": 272.69630120974034,
+      "status": "completed",
+      "exit_code": 0,
+      "peak_mib": 11788
+    },
+    {
+      "name": "r7_full120_20260921t2147",
+      "charged_seconds": 6089.022927810904,
+      "status": "completed",
+      "exit_code": 0,
+      "peak_mib": 11990
+    },
+    {
+      "name": "r7_dev_base_20260921t2349",
+      "charged_seconds": 303.1131663862616,
+      "status": "completed",
+      "exit_code": 0,
+      "peak_mib": 11672
+    },
+    {
+      "name": "r7_dev_p2t2_20260921t2349",
+      "charged_seconds": 272.573280591052,
+      "status": "completed",
+      "exit_code": 0,
+      "peak_mib": 11758
+    },
+    {
+      "name": "r7_dev_r7_20260921t2349",
+      "charged_seconds": 272.65694193262607,
+      "status": "completed",
+      "exit_code": 0,
+      "peak_mib": 11758
+    }
+  ],
+  "r7_seconds": 7210.062617930584,
+  "r7_hours": 2.002795171647384,
+  "r7_gpu_cap_hours": 2.75,
+  "r7_gpu_cap_passed": true,
+  "global_seconds_with_initial_7200_offset": 72864.71271079406,
+  "global_hours": 20.24019797522057,
+  "global_remaining_hours": 3.759802024779429,
+  "r7_pre_gpu_bytes": 2743972,
+  "r7_final_bytes_before_freeze": 97587435,
+  "r7_increment_bytes_before_freeze": 94843463,
+  "r7_disk_cap_bytes": 2147483648,
+  "r7_disk_cap_passed": true,
+  "disk_free_bytes": 135363473408,
+  "gpu_peak_mib": 11990
+}

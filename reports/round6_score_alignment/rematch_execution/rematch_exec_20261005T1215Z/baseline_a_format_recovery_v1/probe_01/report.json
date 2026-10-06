@@ -1,0 +1,23 @@
+{
+  "adapter_sha256": "c9bf3754a05a42d69ee8c4d11f56c41346d927094fd643863f0cb55626b8e6a0",
+  "base_production_source_lock_sha256": "86fc0da7cf631a2afe33c54fb5b66246bba88adfd95c1d8ce80ccbf73522d70d",
+  "cases": 10,
+  "failures": 0,
+  "frozen_config_sha256": "137a60e3efae567794105bac8d2fcb4288c7d1b289ab4ad1d0a81e2ba11c5414",
+  "labels_used": false,
+  "manifest_sha256": "ba34a284183e8a079054ffe811d7ec096e6b47c94e6edf812a37fd11b92d8dd7",
+  "mode": "probe",
+  "official_quality_claim": false,
+  "original_successful_window_reruns": 0,
+  "posthoc_segment_rewrite": false,
+  "prompt_sha256": "6294dddea26e8ba8ea4d516c2ff39333dbd9a511b4ddc1d9ccb4db3cb9153ea8",
+  "source_hashes": {
+    "constrained_json.py": "9282153980ef098f3f0457e9352d605dc9c50c681ccdbc27f2f9174774ff258d",
+    "inference.py": "dc9f7f759976e2e972697a4a84914a73018a7374f310dbc01d56e677f39b83ec"
+  },
+  "status": "PASS_REAL_NONTEST_FORMAT_CONSTRAINT_ONLY",
+  "tokenizer_receipt_sha256": "cffe9f81b0914ade3b4e004ff1e4c3c15099a74fb0c7b00bad449c67fac7fb1f",
+  "uploaded": false,
+  "variant": "A_FORMAT_CONSTRAINED_RECOVERY_V1",
+  "wall_seconds": 32.35016761161387
+}

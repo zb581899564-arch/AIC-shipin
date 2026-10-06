@@ -1,0 +1,147 @@
+{
+  "constraint": {
+    "min_segments": 0,
+    "max_segments": 5
+  },
+  "files": {
+    "train": {
+      "path": "/home/inspur/aic_video_work/temporal_round5/data/train.jsonl",
+      "sha256": "e54e217864ca3dd707556704a0b8c4a168808159f1e3caa04d1f1fcef97ca9cb"
+    },
+    "dev": {
+      "path": "/home/inspur/aic_video_work/temporal_round5/data/dev.jsonl",
+      "sha256": "e5d2113c1e30415dd2f76eb8870b25ad5341283e83c18f26fddc280d8398895e"
+    },
+    "holdout": {
+      "path": "/home/inspur/aic_video_work/temporal_round5/data/holdout.jsonl",
+      "sha256": "e2c8d0cf0838c3188fb1e1a98d27d633b8e551c577f3b7d7bb5d39090d7ad193"
+    }
+  },
+  "per_split": {
+    "train": {
+      "rows": 640,
+      "histogram": {
+        "1": 401,
+        "2": 181,
+        "3": 38,
+        "4": 18,
+        "5": 1,
+        "7": 1
+      }
+    },
+    "dev": {
+      "rows": 90,
+      "histogram": {
+        "1": 64,
+        "2": 23,
+        "3": 2,
+        "4": 1
+      }
+    },
+    "holdout": {
+      "rows": 88,
+      "histogram": {
+        "1": 59,
+        "2": 18,
+        "3": 9,
+        "4": 1,
+        "5": 1
+      }
+    }
+  },
+  "violations": [
+    {
+      "split": "train",
+      "sample_id": "XFg-PaelogA__r905",
+      "video_id": "qvh_000917_9x16",
+      "youtube_id": "XFg-PaelogA",
+      "n_segments": 7,
+      "problems": [
+        "n_segments 7 outside 0..5"
+      ],
+      "segments_clip_local": [
+        [
+          0.0,
+          1.96
+        ],
+        [
+          2.04,
+          4.48
+        ],
+        [
+          5.68,
+          7.96
+        ],
+        [
+          8.04,
+          11.72
+        ],
+        [
+          13.04,
+          15.32
+        ],
+        [
+          18.04,
+          20.48
+        ],
+        [
+          23.04,
+          24.48
+        ]
+      ],
+      "action": "REPORTED_ONLY_NO_CHANGE"
+    }
+  ],
+  "totals": {
+    "rows": 818,
+    "histogram": {
+      "1": 524,
+      "2": 222,
+      "3": 49,
+      "4": 20,
+      "5": 2,
+      "7": 1
+    },
+    "rows_above_max": 1,
+    "rows_below_min": 0,
+    "distinct_n_segments": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7
+    ]
+  },
+  "manifest_cross_check": {
+    "manifest_sha256": "a2cb649fc020da368559c3b837c402f9527a1047a8b08c6350d07fe494e1ac87",
+    "dataset_sha256": {
+      "train": "e54e217864ca3dd707556704a0b8c4a168808159f1e3caa04d1f1fcef97ca9cb",
+      "dev": "e5d2113c1e30415dd2f76eb8870b25ad5341283e83c18f26fddc280d8398895e",
+      "holdout": "e2c8d0cf0838c3188fb1e1a98d27d633b8e551c577f3b7d7bb5d39090d7ad193"
+    },
+    "balance_global_n_segments": {
+      "min": 1,
+      "q1": 1,
+      "q2": 1,
+      "q3": 2,
+      "max": 7,
+      "mean": 1.481663
+    },
+    "counts": {
+      "holdout": {
+        "rows": 88,
+        "groups": 80
+      },
+      "train": {
+        "rows": 640,
+        "groups": 559
+      },
+      "dev": {
+        "rows": 90,
+        "groups": 80
+      }
+    }
+  },
+  "note": "read-only audit; the violating row(s) are reported and left byte-identical. No training label or production config was modified."
+}

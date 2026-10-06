@@ -1,0 +1,40 @@
+{
+  "schema": "independent_format_validation_v2",
+  "validator": "reports/round6_score_alignment/phase0/evidence/existing_internal_evaluator/schema.py (source, sha256 0236f98731919e2675a6eb827453f3c20bb63d38f459fd6b1ddf0f813200f5a9)",
+  "metadata": "supervisor_test_metadata.json (sha256 7f38d3f7f29b7fc5d91a9762ecfea00e6fc84b583bf11b439ba4a853bf1ec428)",
+  "ran_at_utc": "2026-09-17T02:05Z",
+  "results": {
+    "round5_candidate": {
+      "ok": true,
+      "line_count": 174,
+      "video_count": 174,
+      "valid_prediction_count": 40568,
+      "parse_errors": 0,
+      "issue_codes": {}
+    },
+    "lora_reader_43_48": {
+      "ok": true,
+      "line_count": 174,
+      "video_count": 174,
+      "valid_prediction_count": 66890,
+      "parse_errors": 0,
+      "issue_codes": {}
+    },
+    "multi_reader_41_22": {
+      "ok": true,
+      "line_count": 174,
+      "video_count": 174,
+      "valid_prediction_count": 56855,
+      "parse_errors": 0,
+      "issue_codes": {}
+    },
+    "baseline_41_09": {
+      "ok": true,
+      "line_count": 174,
+      "video_count": 174,
+      "valid_prediction_count": 52734,
+      "parse_errors": 0,
+      "issue_codes": {}
+    }
+  }
+}

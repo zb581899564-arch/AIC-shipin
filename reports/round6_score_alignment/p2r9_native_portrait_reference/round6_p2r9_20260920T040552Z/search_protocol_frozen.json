@@ -1,0 +1,35 @@
+{
+  "schema": "p2r9_search_protocol_v1",
+  "frozen_before_online_candidate_search": true,
+  "created_utc": "2026-09-20T04:07:50.738295+00:00",
+  "priority": [
+    "LIVE-YT Video Cropping",
+    "GAICD",
+    "MIR-Thumb",
+    "bounded new first-party candidates"
+  ],
+  "questions": [
+    "Is native 9:16 human-composition annotation first-party and byte-bound?",
+    "Are annotation, data, and underlying-media terms explicit for local noncommercial competition research diagnosis?",
+    "Can at least 8 independent source groups be frozen as 4 dev plus 4 process-sealed?",
+    "Can source identity and bounded AIC overlap be checked without opening competition test media?"
+  ],
+  "new_candidate_queries": [
+    "native 9:16 human crop annotation dataset official",
+    "portrait vertical video reframing human annotation dataset official",
+    "9:16 image cropping human crop boxes dataset official",
+    "vertical video composition crop trajectory dataset official"
+  ],
+  "stop_conditions": [
+    "complete first-party review of the three fixed-priority candidates",
+    "run the four frozen new-candidate queries and inspect only plausible first-party leads",
+    "stop after 12 new plausible leads or when two consecutive query families yield no qualifying new lead",
+    "do not broaden to detection, tracking, segmentation, saliency, aesthetics-only, or algorithm-only boxes",
+    "do not download candidate media before all written qualification gates pass"
+  ],
+  "download_gates": {
+    "metadata_per_candidate_bytes": 104857600,
+    "total_new_bytes": 3221225472,
+    "single_media_bytes": 524288000
+  }
+}

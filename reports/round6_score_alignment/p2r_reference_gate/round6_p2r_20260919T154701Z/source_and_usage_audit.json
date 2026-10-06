@@ -1,0 +1,37 @@
+{
+  "schema": "p2r_source_and_usage_audit_v1",
+  "accessed_utc": "2026-09-19T16:14:04.433884+00:00",
+  "conclusion": "Only GNMC passed a limited local-diagnostic gate, and only for 16:9. No 9:16 candidate passed both semantics and use-boundary gates.",
+  "sources": [
+    {
+      "name": "AIC/QVHighlights-derived official share",
+      "tier": "TIER_W_WEAK_TEACHER",
+      "use": "existing local weak-supervision research only",
+      "restriction": "no redistribution; no per-video license; no external service upload"
+    },
+    {
+      "name": "P1b media",
+      "tier": "NOT_ELIGIBLE_REFERENCE_UNANNOTATED",
+      "use": "local interface tests",
+      "restriction": "all 8 are unannotated; no semantic reference"
+    },
+    {
+      "name": "GNMC",
+      "tier": "TIER_B_PUBLIC_ANNOTATION_LIMITED",
+      "use": "local noncommercial diagnostic only",
+      "restriction": "PolyForm Noncommercial; no downstream competition/training/submission approval; no per-image origin URL"
+    },
+    {
+      "name": "LIVE-YT VC",
+      "tier": "NOT_ELIGIBLE_CURRENTLY",
+      "use": "metadata audit only",
+      "restriction": "no explicit license found"
+    },
+    {
+      "name": "GAICD",
+      "tier": "NOT_ELIGIBLE_CURRENTLY",
+      "use": "metadata audit only",
+      "restriction": "no explicit license found; Flickr origins not itemized in inspected material"
+    }
+  ]
+}

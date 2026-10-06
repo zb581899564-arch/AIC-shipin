@@ -1,0 +1,53 @@
+{
+  "run_id": "round6_p2t2_equal_exposure_20260920T1555Z",
+  "frozen_before_model_output": true,
+  "predecessor": {
+    "run_id": "round6_p2t_20260920T1429Z",
+    "status": "STOP_KEEP_BASE",
+    "observed_failure": "one clean epoch produced only 24 optimizer steps versus the historical S2 recipe's 120 optimizer steps; long and multi-interval clips regressed and six outputs showed interval-enumeration degeneration"
+  },
+  "single_hypothesis": "Match the historical S2 optimizer-step exposure with a fresh source-disjoint model while keeping every other P2-T setting fixed",
+  "model_selection_policy": "Train exactly five epochs (120 expected optimizer steps) from the base model. Do not evaluate or select intermediate epochs. Evaluate the final adapter once on the already-used 82-row development set.",
+  "data": {
+    "train_manifest_sha256": "fa839715ff32880096538b7f386f14ca8479138825c69bf8ddd69ff710ec41ec",
+    "train_rows": 370,
+    "train_source_groups": 335,
+    "dev_manifest_sha256": "88813a6d106b0f5c43b8121c29f7eaa94cbc9aa9328260b50e31485247031018",
+    "dev_rows": 82,
+    "dev_source_groups": 74,
+    "train_dev_source_overlap": 0,
+    "holdout": "closed",
+    "competition_test": "not read or inferred"
+  },
+  "training": {
+    "fresh_from_base": true,
+    "epochs": 5,
+    "expected_optimizer_steps": 120,
+    "learning_rate": 0.00005,
+    "batch_size": 1,
+    "gradient_accumulation": 16,
+    "precision": "BF16",
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj"],
+    "vision_frozen": true,
+    "base_frozen": true,
+    "seed": 20260920
+  },
+  "acceptance_gate": {
+    "comparison": "frozen unfine-tuned BASE on the same 82 development rows",
+    "minimum_group_macro_f1_gain": 0.03,
+    "paired_source_group_bootstrap_draws": 10000,
+    "paired_ci95_lower_bound": "> 0",
+    "valid_rate": ">= BASE",
+    "all_conditions_required": true
+  },
+  "evidence_limit": "The development set has already been used by P2-T. P2-T2 remains development evidence and cannot be called a blind confirmation or official-score prediction.",
+  "resource_limit": {
+    "p2t2_gpu_hours": 2.25,
+    "p2t2_disk_gib": 4.0,
+    "project_gpu_hours": 24.0,
+    "project_disk_gib": 80.0
+  }
+}

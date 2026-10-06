@@ -1,0 +1,20 @@
+{
+  "schema": "aic_temporal_sft8b_admission_v1",
+  "scope": "TEMPORAL_8B_SFT_SMOKE_NONTEST",
+  "authorized": false,
+  "user_route_selected": "PENDING_USER_TECHNICAL_ROUTE_CHOICE",
+  "user_route_evidence": {
+    "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_v1/route_choice_PENDING.json",
+    "sha256": "5b55315ccaed8365afc4c8c6df44cb7cd29badb362a2285be25b03083dd28c3f"
+  },
+  "config_sha256": "c6684ba5d381f3e370d1a6036d8dcfffc442d0bac1f90b7a5ab258ed95a7036d",
+  "train_manifest_sha256": "0754fdcfaa01eb4027b5c845c25af2abacc705a89f0cb695ebb5293f29385266",
+  "r7_train_registry_sha256": "71552f64ccdb125ca11a451baf5b8a22491d51d73db1a42e0ce1a545262d1cd4",
+  "model_receipt_sha256": "ab3e30b18dc54ceb7cb90b07194eff30449db75653483da5b213807137d8da70",
+  "source_code_sha256": {},
+  "resource_preflight_pass": false,
+  "shared_gpu_queue_approved": false,
+  "disk_peak_within_80gib": false,
+  "budget_runner_required": true,
+  "formal_c_bce_admitted": false
+}

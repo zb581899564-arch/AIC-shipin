@@ -1,0 +1,90 @@
+{
+  "config_evidence": {
+    "tie_word_embeddings": true,
+    "text_config.tie_word_embeddings": true,
+    "vocab_size": 248320,
+    "hidden_size": 2560,
+    "architectures": [
+      "Qwen3_5ForConditionalGeneration"
+    ]
+  },
+  "per_shard": {
+    "model-00001-of-00005.safetensors": {
+      "n_tensors": 1,
+      "params": 635699200
+    },
+    "model-00002-of-00005.safetensors": {
+      "n_tensors": 78,
+      "params": 1237021632
+    },
+    "model-00003-of-00005.safetensors": {
+      "n_tensors": 141,
+      "params": 1236329984
+    },
+    "model-00004-of-00005.safetensors": {
+      "n_tensors": 150,
+      "params": 1238952448
+    },
+    "model-00005-of-00005.safetensors": {
+      "n_tensors": 354,
+      "params": 826961472
+    }
+  },
+  "sum_over_shards_params": 5174964736,
+  "sum_over_shards_billion": 5.175,
+  "tie_candidate_keys_in_checkpoint": {
+    "lm_head.weight": {
+      "shape": [
+        248320,
+        2560
+      ],
+      "dtype": "BF16",
+      "params": 635699200,
+      "shard": "model-00001-of-00005.safetensors"
+    },
+    "model.language_model.embed_tokens.weight": {
+      "shape": [
+        248320,
+        2560
+      ],
+      "dtype": "BF16",
+      "params": 635699200,
+      "shard": "model-00002-of-00005.safetensors"
+    }
+  },
+  "config_implied_tied_tensor_params": 635699200,
+  "runtime": {
+    "n_named_parameters_remove_duplicate_true": 723,
+    "sum_remove_duplicate_true": 4539265536,
+    "sum_remove_duplicate_true_billion": 4.5393,
+    "n_named_parameters_remove_duplicate_false": 724,
+    "sum_remove_duplicate_false": 5174964736,
+    "sum_remove_duplicate_false_billion": 5.175,
+    "n_unique_parameter_objects": 723,
+    "shared_parameter_groups": {
+      "ptr=139813841786888 n=635699200 shape=(248320, 2560)": [
+        "model.language_model.embed_tokens.weight",
+        "lm_head.weight"
+      ]
+    }
+  },
+  "difference": {
+    "checkpoint_sum": 5174964736,
+    "runtime_sum_remove_duplicate_false": 5174964736,
+    "checkpoint_vs_runtime_named_difference": 0,
+    "checkpoint_and_runtime_hold_same_named_tensors": true,
+    "runtime_sum_remove_duplicate_true": 4539265536,
+    "unique_vs_named_difference": 635699200,
+    "unique_vs_named_difference_billion": 0.6357,
+    "equals_config_vocab_times_hidden": true,
+    "n_checkpoint_keys": 724,
+    "n_model_unique_params": 723,
+    "aliased_groups": {
+      "ptr=139813841786888 n=635699200 shape=(248320, 2560)": [
+        "model.language_model.embed_tokens.weight",
+        "lm_head.weight"
+      ]
+    }
+  },
+  "conclusion": "Two different numbers, both correct, explained by parameter tying. (1) The five shards store 5174964736 parameters = 5.1750 B. (2) After loading, summing every parameter NAME without de-duplication gives the identical 5174964736 = 5.1750 B, so the checkpoint and the model hold exactly the same named tensors: 0 missing, 0 extra, 0 dropped. (3) Summing UNIQUE parameter objects gives 4539265536 = 4.5393 B, which is the figure round 1 quoted. The gap is 635699200 = 0.6357 B and equals vocab_size*hidden_size = 635699200 exactly. Evidence that this is tying rather than loss: (a) config.json declares tie_word_embeddings=true; (b) the checkpoint contains BOTH lm_head.weight and model.language_model.embed_tokens.weight with identical shape [248320, 2560]; (c) loading reports 0 missing / 0 unexpected / 0 mismatched keys; (d) at runtime both names resolve to the SAME Parameter object (identical data_ptr), observed with named_parameters(remove_duplicate=False). Therefore the 0.6357 B is one shared matrix counted twice in the shard arithmetic, not weights that went missing."
+}

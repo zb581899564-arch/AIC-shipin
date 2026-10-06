@@ -1,0 +1,215 @@
+{
+  "time": "2026-09-12T05:18:44.129124+00:00",
+  "removed_caches": [
+    {
+      "path": "/home/inspur/aic_video_work/training/__pycache__/__init__.cpython-310.pyc",
+      "bytes": 199
+    },
+    {
+      "path": "/home/inspur/aic_video_work/training/__pycache__/gate.cpython-39.pyc",
+      "bytes": 11364
+    },
+    {
+      "path": "/home/inspur/aic_video_work/training/__pycache__/train_lora.cpython-39.pyc",
+      "bytes": 18482
+    },
+    {
+      "path": "/home/inspur/aic_video_work/training/__pycache__/__init__.cpython-39.pyc",
+      "bytes": 169
+    },
+    {
+      "path": "/home/inspur/aic_video_work/training/__pycache__/train_lora.cpython-310.pyc",
+      "bytes": 18960
+    },
+    {
+      "path": "/home/inspur/aic_video_work/training/__pycache__/gate.cpython-310.pyc",
+      "bytes": 11678
+    },
+    {
+      "path": "/home/inspur/aic_video_work/training/tests/__pycache__/test_static_contract.cpython-39.pyc",
+      "bytes": 1703
+    },
+    {
+      "path": "/home/inspur/aic_video_work/training/tests/__pycache__/test_gate.cpython-39.pyc",
+      "bytes": 2434
+    },
+    {
+      "path": "/home/inspur/aic_video_work/training/tests/__pycache__/__init__.cpython-39.pyc",
+      "bytes": 174
+    },
+    {
+      "path": "/home/inspur/aic_video_work/training/tests/__pycache__/run_static_tests.cpython-39.pyc",
+      "bytes": 1963
+    },
+    {
+      "path": "/home/inspur/aic_video_work/training_v2/__pycache__/__init__.cpython-310.pyc",
+      "bytes": 230
+    },
+    {
+      "path": "/home/inspur/aic_video_work/training_v2/__pycache__/train.cpython-310.pyc",
+      "bytes": 10955
+    },
+    {
+      "path": "/home/inspur/aic_video_work/inference/__pycache__/baseline_qwen3vl.cpython-310.pyc",
+      "bytes": 22668
+    },
+    {
+      "path": "/home/inspur/aic_video_work/inference_v2/__pycache__/__init__.cpython-310.pyc",
+      "bytes": 440
+    },
+    {
+      "path": "/home/inspur/aic_video_work/inference_v2/__pycache__/temporal.cpython-310.pyc",
+      "bytes": 11269
+    },
+    {
+      "path": "/home/inspur/aic_video_work/inference_v2/__pycache__/qwen_io.cpython-310.pyc",
+      "bytes": 12309
+    },
+    {
+      "path": "/home/inspur/aic_video_work/inference_v2/__pycache__/baseline_v2.cpython-310.pyc",
+      "bytes": 15202
+    },
+    {
+      "path": "/home/inspur/aic_video_work/inference_v2/tests/__pycache__/__init__.cpython-310.pyc",
+      "bytes": 162
+    },
+    {
+      "path": "/home/inspur/aic_video_work/inference_v2/tests/__pycache__/test_temporal.cpython-310.pyc",
+      "bytes": 15587
+    },
+    {
+      "path": "/home/inspur/aic_video_work/inference_recovery/__pycache__/__init__.cpython-310.pyc",
+      "bytes": 294
+    },
+    {
+      "path": "/home/inspur/aic_video_work/inference_recovery/__pycache__/spatial_replay.cpython-311.pyc",
+      "bytes": 29973
+    },
+    {
+      "path": "/home/inspur/aic_video_work/inference_recovery/__pycache__/reader.cpython-310.pyc",
+      "bytes": 1775
+    },
+    {
+      "path": "/home/inspur/aic_video_work/inference_recovery/__pycache__/reader.cpython-311.pyc",
+      "bytes": 2706
+    },
+    {
+      "path": "/home/inspur/aic_video_work/inference_recovery/__pycache__/spatial_replay.cpython-310.pyc",
+      "bytes": 14591
+    },
+    {
+      "path": "/home/inspur/aic_video_work/inference_recovery/__pycache__/__init__.cpython-311.pyc",
+      "bytes": 352
+    },
+    {
+      "path": "/home/inspur/aic_video_work/inference_recovery/tests/__pycache__/test_reader.cpython-311.pyc",
+      "bytes": 6030
+    },
+    {
+      "path": "/home/inspur/aic_video_work/inference_recovery/tests/__pycache__/test_spatial_replay.cpython-311.pyc",
+      "bytes": 5611
+    },
+    {
+      "path": "/home/inspur/aic_video_work/inference_recovery/tests/__pycache__/test_spatial_replay.cpython-310.pyc",
+      "bytes": 3337
+    },
+    {
+      "path": "/home/inspur/aic_video_work/inference_recovery/tests/__pycache__/test_reader.cpython-310.pyc",
+      "bytes": 3453
+    },
+    {
+      "path": "/home/inspur/aic_video_work/evaluation/__pycache__/__init__.cpython-310.pyc",
+      "bytes": 519
+    },
+    {
+      "path": "/home/inspur/aic_video_work/evaluation/__pycache__/schema.cpython-310.pyc",
+      "bytes": 12595
+    },
+    {
+      "path": "/home/inspur/aic_video_work/evaluation/__pycache__/accept_baseline.cpython-39.pyc",
+      "bytes": 11681
+    },
+    {
+      "path": "/home/inspur/aic_video_work/evaluation/__pycache__/validate_predictions.cpython-39.pyc",
+      "bytes": 1824
+    },
+    {
+      "path": "/home/inspur/aic_video_work/evaluation/__pycache__/test_boundary.cpython-39.pyc",
+      "bytes": 6525
+    },
+    {
+      "path": "/home/inspur/aic_video_work/evaluation/__pycache__/internal_metric.cpython-310.pyc",
+      "bytes": 11128
+    },
+    {
+      "path": "/home/inspur/aic_video_work/evaluation/__pycache__/schema.cpython-39.pyc",
+      "bytes": 12410
+    },
+    {
+      "path": "/home/inspur/aic_video_work/evaluation/__pycache__/internal_metric.cpython-39.pyc",
+      "bytes": 10901
+    },
+    {
+      "path": "/home/inspur/aic_video_work/evaluation/__pycache__/__init__.cpython-39.pyc",
+      "bytes": 489
+    },
+    {
+      "path": "/home/inspur/aic_video_work/evaluation/tests/__pycache__/test_boundary.cpython-39.pyc",
+      "bytes": 6531
+    },
+    {
+      "path": "/home/inspur/aic_video_work/evaluation/tests/__pycache__/run_boundary_tests.cpython-39.pyc",
+      "bytes": 1905
+    },
+    {
+      "path": "/home/inspur/aic_video_work/evaluation/tests/__pycache__/__init__.cpython-39.pyc",
+      "bytes": 191
+    },
+    {
+      "path": "/home/inspur/aic_video_work/evaluation_v2/__pycache__/test_temporal.cpython-311.pyc",
+      "bytes": 5156
+    },
+    {
+      "path": "/home/inspur/aic_video_work/evaluation_v2/__pycache__/__init__.cpython-310.pyc",
+      "bytes": 221
+    },
+    {
+      "path": "/home/inspur/aic_video_work/evaluation_v2/__pycache__/temporal.cpython-310.pyc",
+      "bytes": 7260
+    },
+    {
+      "path": "/home/inspur/aic_video_work/evaluation_v2/__pycache__/__init__.cpython-311.pyc",
+      "bytes": 253
+    },
+    {
+      "path": "/home/inspur/aic_video_work/evaluation_v2/__pycache__/test_temporal.cpython-310.pyc",
+      "bytes": 2897
+    },
+    {
+      "path": "/home/inspur/aic_video_work/evaluation_v2/__pycache__/temporal.cpython-311.pyc",
+      "bytes": 15599
+    },
+    {
+      "path": "/home/inspur/aic_video_work/data_audit/__pycache__/audit_dataset.cpython-39.pyc",
+      "bytes": 22630
+    },
+    {
+      "path": "/home/inspur/aic_video_work/training_round2_20260910/__pycache__/spatial_replay_formal_v2.cpython-310.pyc",
+      "bytes": 14711
+    }
+  ],
+  "deduplicated": [
+    {
+      "retained_paths": [
+        "/home/inspur/aic_video_work/training_round2_20260910/formal_v1/best/adapter_model.safetensors",
+        "/home/inspur/aic_video_work/training_round2_20260910/formal_v1/last/adapter_model.safetensors"
+      ],
+      "sha256": "678c45d362020df887936f9623bb2a955feb006fc3ec2ef66885a47bb6f06ba3",
+      "bytes": 47228944,
+      "method": "hardlink_identical_immutable_checkpoints"
+    }
+  ],
+  "bytes_reclaimed": 47598440,
+  "protected_file_count": 141,
+  "protected_hashes_unchanged": true
+}

@@ -1,0 +1,40 @@
+{
+  "GPU_used": false,
+  "all_python_ast_parse": "PASS",
+  "anchors": 68,
+  "historical_sources": [
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/inputs/p2t2_selected_frames.jsonl",
+      "sha256": "b3ff9bb58c76782efe1fadf57315e9764184e70eb5c762816d97754ccd12503e"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/inputs/anchor_requests.jsonl",
+      "sha256": "fa0e09c9f7ff4570d19b710e60da3928d3ecce8ce8afb5c6f1e9e55189f512a9"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/evidence/p2t2_shots.jsonl",
+      "sha256": "268c03bf5ed0ddbee5212aa76ea7ce193e45e6ae9e51d170192e4bc0eb5be744"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/outputs/anchor_qwen.jsonl",
+      "sha256": "244339479a194f627cabe7450301ec111d576bbefe78af8f6721b67c76572e61"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/outputs/joint_composed_dev_v2.jsonl",
+      "sha256": "3aadab519a38c8c532013fd4f06c7c3aa63e996a71d170af2c6318eaaff0c326"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2j_joint_candidate/round6_p2j_20260920T1301Z/outputs/joint_provenance_v2.jsonl",
+      "sha256": "1ea2d03078c517ed9c61d8172e5d1f3433191d8d72b7ea6f70b90b4f111b547e"
+    }
+  ],
+  "instrumented_infer_sha256": "0be25a2666bc784494f1224b70dbff0746afab89113c36b74c19c14c1818ea3a",
+  "media_decoded": false,
+  "official_field_projection_exact": true,
+  "provenance_bytes_exact": true,
+  "selected_frames": 396,
+  "selected_keys_exact": true,
+  "status": "PASS_HISTORICAL_NONTEST_OUTPUT_REPLAY_ONLY",
+  "strict_validation_report": "cpu_legacy_replay/independent_validation.json",
+  "videos": 8
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "p2r_evidence_index_v1",
+  "status": "REFERENCE_GATE_PARTIAL",
+  "facts": [
+    {
+      "claim": "Official training spatial labels are model-teacher 9:16 weak labels",
+      "evidence": "existing_evidence_inventory.json",
+      "level": "L1_LOCAL_BYTES"
+    },
+    {
+      "claim": "80,214 of 81,128 bracketed non-holdout ROI frames match linear interpolation of 1 Hz key positions within 1 px",
+      "evidence": "existing_evidence_inventory.json",
+      "level": "L2_RECOMPUTED_STRUCTURE",
+      "limitation": "64 weak holdout rows are excluded; consistency does not prove unpublished generator code"
+    },
+    {
+      "claim": "P1b has four 16:9 and four 9:16 media, all UNANNOTATED",
+      "evidence": "existing_evidence_inventory.json + round6_score_alignment/p1b/pilot_manifest.json",
+      "level": "L1_LOCAL_BYTES"
+    },
+    {
+      "claim": "GNMC archive is official Zenodo 0.0.1 and matches publisher MD5",
+      "evidence": "snapshots/gnmc_zenodo_record.json + pilot/gnmc/GNMC.zip",
+      "level": "L1_PUBLISHER_AND_BYTES"
+    },
+    {
+      "claim": "GNMC partial pilot contains four dev and four sealed 16:9 file-unique image items",
+      "evidence": "pilot_manifest.jsonl + manifest_validation.json",
+      "level": "L2_RECOMPUTED",
+      "limitation": "source independence beyond publisher filename is UNKNOWN"
+    },
+    {
+      "claim": "No near duplicate was found in 768 pHash comparisons against 96 frames from eight AIC non-test groups",
+      "evidence": "leakage_audit.json",
+      "level": "L3_BOUNDED",
+      "limitation": "full source leakage remains UNKNOWN"
+    },
+    {
+      "claim": "No eligible 9:16 public candidate passed both semantics and use-boundary gates",
+      "evidence": "candidate_registry.json + source_and_usage_audit.json",
+      "level": "L2_PRIMARY_SOURCE_AUDIT"
+    },
+    {
+      "claim": "Initial superseded audit parsed 64 weak-holdout label payloads; final recomputation excludes them",
+      "evidence": "boundary_incident.json",
+      "level": "L1_EXECUTION_RECORD"
+    }
+  ]
+}

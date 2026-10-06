@@ -1,0 +1,124 @@
+{
+  "status": "PASS_REAL_PROCESSOR_CPU_ONLY",
+  "scope": "synthetic video; processor only; no weights/GPU/quality",
+  "environment": {
+    "torch": "2.5.1+cu124",
+    "transformers": "4.57.1"
+  },
+  "receipt": {
+    "repo_id": "Qwen/Qwen3-VL-8B-Instruct",
+    "revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+    "receipt_sha256": "962ba6e67e698d0ae02dcfa41fc6eb10eb2870982e7a99661828feabfcff2eab",
+    "verified_files": 11,
+    "metadata_only": true,
+    "authority": "controller-provided pinned-download receipt"
+  },
+  "query_positions": [
+    275,
+    282,
+    289,
+    296
+  ],
+  "marker_token_ids": [
+    [
+      508,
+      72909,
+      31585,
+      62,
+      15,
+      15,
+      921
+    ],
+    [
+      508,
+      72909,
+      31585,
+      62,
+      15,
+      16,
+      921
+    ],
+    [
+      508,
+      72909,
+      31585,
+      62,
+      15,
+      17,
+      921
+    ],
+    [
+      508,
+      72909,
+      31585,
+      62,
+      15,
+      18,
+      921
+    ]
+  ],
+  "query_markers": [
+    " [GRID_QUERY_00]\n",
+    " [GRID_QUERY_01]\n",
+    " [GRID_QUERY_02]\n",
+    " [GRID_QUERY_03]\n"
+  ],
+  "last_video_position": 229,
+  "sequence_length": 299,
+  "video_grid_thw": [
+    [
+      4,
+      14,
+      14
+    ]
+  ],
+  "video_token_count": 196,
+  "source_frame_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "source_frame_pts": [
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5
+  ],
+  "temporal_patch_expected_pts": [
+    0.25,
+    1.25,
+    2.25,
+    3.25
+  ],
+  "processor_timestamp_text_values": [
+    0.2,
+    1.2,
+    2.2,
+    3.2
+  ],
+  "timestamp_text_rounding_max_error": 0.050000000000000044,
+  "padded_query_positions": [
+    275,
+    282,
+    289,
+    296
+  ],
+  "padding_side": "right",
+  "padding_offset": 0,
+  "padding_query_correspondence_valid": true,
+  "truncated_query_rejected": true,
+  "vocabulary_size_before_after": [
+    151669,
+    151669
+  ],
+  "wall_seconds": 3.3555964319966733
+}

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8">
+<title>AIC P1b pilot annotation (offline)</title>
+<style>
+ :root { --bg:#14161a; --panel:#1d2026; --line:#2c313a; --fg:#e8eaee; --muted:#9aa3b2;
+         --accent:#4da3ff; --warn:#ffb020; --ok:#3ddc84; --bad:#ff5f56; }
+ * { box-sizing:border-box; }
+ body { margin:0; background:var(--bg); color:var(--fg);
+        font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans CJK SC",sans-serif; }
+ header { padding:10px 14px; background:var(--panel); border-bottom:1px solid var(--line);
+          display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+ h1 { font-size:15px; margin:0 12px 0 0; font-weight:600; }
+ .warn { color:var(--warn); font-size:12px; }
+ main { display:grid; grid-template-columns: 300px 1fr 380px; gap:12px; padding:12px; }
+ .panel { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:10px; }
+ .panel h2 { font-size:13px; margin:0 0 8px; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:.04em;}
+ .samplebtn { display:block; width:100%; text-align:left; margin:4px 0; padding:8px;
+              background:#232830; color:var(--fg); border:1px solid var(--line); border-radius:6px; cursor:pointer; }
+ .samplebtn.active { border-color:var(--accent); background:#1b2c42; }
+ .samplebtn small { color:var(--muted); display:block; }
+ video { width:100%; background:#000; border-radius:6px; }
+ .stage { position:relative; display:inline-block; width:100%; }
+ .overlay { position:absolute; border:2px solid var(--accent); background:rgba(77,163,255,.18);
+            cursor:move; }
+ .overlay .handle { position:absolute; right:-6px; bottom:-6px; width:12px; height:12px;
+                    background:var(--accent); cursor:nwse-resize; }
+ .row { display:flex; gap:8px; align-items:center; margin:6px 0; flex-wrap:wrap; }
+ label { color:var(--muted); font-size:12px; }
+ input[type=number], input[type=text], textarea, select {
+   background:#12151a; color:var(--fg); border:1px solid var(--line); border-radius:4px; padding:4px 6px; }
+ input[type=number] { width:80px; }
+ textarea { width:100%; min-height:52px; }
+ button { background:#2b313b; color:var(--fg); border:1px solid var(--line); border-radius:4px;
+          padding:5px 9px; cursor:pointer; }
+ button:hover { border-color:var(--accent); }
+ button.primary { background:#1f4d7a; border-color:var(--accent); }
+ button.danger { background:#4a2323; border-color:#7a2f2f; }
+ table { width:100%; border-collapse:collapse; font-size:12.5px; }
+ th, td { border-bottom:1px solid var(--line); padding:4px 5px; text-align:left; }
+ .muted { color:var(--muted); }
+ .pill { display:inline-block; padding:1px 7px; border-radius:10px; font-size:11.5px;
+         border:1px solid var(--line); }
+ .pill.UNANNOTATED { color:var(--muted); }
+ .pill.HAS_HIGHLIGHT { color:var(--ok); border-color:#245c3d; }
+ .pill.NO_HIGHLIGHT { color:var(--warn); border-color:#5c4a24; }
+ .pill.UNCERTAIN { color:var(--bad); border-color:#5c2424; }
+ .kv { font-size:12px; color:var(--muted); }
+ .kv b { color:var(--fg); font-weight:600; }
+ pre { background:#12151a; border:1px solid var(--line); border-radius:6px; padding:8px;
+       max-height:260px; overflow:auto; font-size:11.5px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>AIC P1b 试点标注（离线）</h1>
+  <span class="warn">所有高光/构图字段默认“未标注”。页面不联网、不上传、不写入任何服务器；导出靠浏览器下载。</span>
+</header>
+
+<main>
+  <section class="panel" id="left">
+    <h2>样本（8 来源组）</h2>
+    <div id="sampleList"><button class="samplebtn active"><b>P01</b> 0ReDuH0_rpI<small>534x300 · 23.976 fps · 3597 帧 · 目标 16:9 · <span class="pill UNANNOTATED">UNANNOTATED</span></small></button><button class="samplebtn"><b>P02</b> FQEW3xLOa9M<small>534x300 · 29.970 fps · 4496 帧 · 目标 16:9 · <span class="pill UNANNOTATED">UNANNOTATED</span></small></button><button class="samplebtn"><b>P03</b> GYH6HdJ6nao<small>534x300 · 25.000 fps · 3750 帧 · 目标 16:9 · <span class="pill UNANNOTATED">UNANNOTATED</span></small></button><button class="samplebtn"><b>P04</b> QPcwfuStFnU<small>534x300 · 23.976 fps · 3597 帧 · 目标 16:9 · <span class="pill UNANNOTATED">UNANNOTATED</span></small></button><button class="samplebtn"><b>P05</b> Snpclpo7Ono<small>534x300 · 25.000 fps · 3750 帧 · 目标 9:16 · <span class="pill UNANNOTATED">UNANNOTATED</span></small></button><button class="samplebtn"><b>P06</b> Xm1ouND-aiQ<small>534x300 · 29.970 fps · 4496 帧 · 目标 9:16 · <span class="pill UNANNOTATED">UNANNOTATED</span></small></button><button class="samplebtn"><b>P07</b> dEuxoRj0G5Y<small>534x300 · 30.000 fps · 4500 帧 · 目标 9:16 · <span class="pill UNANNOTATED">UNANNOTATED</span></small></button><button class="samplebtn"><b>P08</b> vvT-gqzwUxA<small>534x300 · 25.000 fps · 3750 帧 · 目标 9:16 · <span class="pill UNANNOTATED">UNANNOTATED</span></small></button></div>
+    <div class="kv" id="sampleMeta"></div>
+  </section>
+
+  <section class="panel">
+    <h2>视频与定位</h2>
+    <div class="stage">
+      <video id="video" controls="" preload="metadata" src="media/0ReDuH0_rpI_210.0_360.0.mp4"></video>
+      <div class="overlay" id="overlay" style="display:none"><div class="handle" id="handle"></div></div>
+    </div>
+    <div class="row">
+      <span class="kv">当前时间 <b id="tNow">0.000</b> s ｜ 估算帧 <b id="fEst">0</b>
+      （<span id="fErr">±1 帧</span>，浏览器时间不是精确帧号）</span>
+    </div>
+    <div class="row">
+      <label>帧号（权威字段）</label><input type="number" id="frameInput" value="0" min="0" max="3596">
+      <button id="useEstimate">用当前时间估算帧号</button>
+      <button id="stepBack10">-10 帧</button><button id="stepBack1">-1 帧</button>
+      <button id="stepFwd1">+1 帧</button><button id="stepFwd10">+10 帧</button>
+      <button id="alignPts">对齐到最近的已校验采样帧</button>
+    </div>
+    <div class="row" id="ptsRow"><label>已校验采样帧</label><button title="PTS 0s">0</button><button title="PTS 13.638625s">327</button><button title="PTS 27.27725s">654</button><button title="PTS 40.915875s">981</button><button title="PTS 54.5545s">1308</button><button title="PTS 68.193125s">1635</button><button title="PTS 81.790042s">1961</button><button title="PTS 95.428667s">2288</button><button title="PTS 109.067292s">2615</button><button title="PTS 122.705917s">2942</button><button title="PTS 136.344542s">3269</button><button title="PTS 149.983167s">3596</button></div>
+    <div class="row">
+      <label>目标比例</label><span class="pill" id="ratioPill">16:9</span>
+      <span class="kv">最大合法裁剪 <b id="maxCrop">宽 533.3333 × 高 300（源 534x300）</b></span>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>标注</h2>
+    <div class="row">
+      <label>状态</label>
+      <select id="status">
+        <option value="UNANNOTATED">未标注（默认）</option>
+        <option value="HAS_HIGHLIGHT">有高光</option>
+        <option value="NO_HIGHLIGHT">确认无高光</option>
+        <option value="UNCERTAIN">不确定</option>
+      </select>
+      <label><input type="checkbox" id="confirmNoHighlight"> 我确认整段没有值得保留的高光</label>
+    </div>
+
+    <h2 style="margin-top:10px">时间区间（秒 = 帧 / fps）</h2>
+    <div class="row">
+      <label>起帧</label><input type="number" id="intStart" min="0">
+      <label>止帧</label><input type="number" id="intEnd" min="0" max="3596">
+      <button id="setStartHere">起点=当前帧</button>
+      <button id="setEndHere">终点=当前帧</button>
+      <button id="addInterval">添加区间</button>
+    </div>
+    <table id="intervalTable"><thead><tr><th>#</th><th>起帧</th><th>止帧</th><th>起s</th><th>止s</th><th></th></tr></thead><tbody></tbody></table>
+
+    <h2 style="margin-top:10px">稀疏构图关键帧 [x, y, w]</h2>
+    <div class="row">
+      <label>x</label><input type="number" id="bx" value="0">
+      <label>y</label><input type="number" id="by" value="0">
+      <label>w</label><input type="number" id="bw" value="100" max="533">
+      <span class="kv">高度按比例推导 h = w·th/tw</span>
+    </div>
+    <div class="row">
+      <button id="showBox">在画面上显示/编辑框</button>
+      <button id="addKeyframe">以当前帧添加关键帧</button>
+      <button id="clampBox">框约束到合法范围</button>
+    </div>
+    <table id="kfTable"><thead><tr><th>帧</th><th>x</th><th>y</th><th>w</th><th>h(推导)</th><th></th></tr></thead><tbody></tbody></table>
+
+    <h2 style="margin-top:10px">身份与不确定性</h2>
+    <div class="row"><label>标注者</label><input type="text" id="annotator" placeholder="必填，需为真实执行者"></div>
+    <div class="row"><label>复核者</label><input type="text" id="reviewer" placeholder="未复核则留空"></div>
+    <div class="row"><textarea id="notes" placeholder="不确定性/说明（例如：帧号由浏览器时间估算，误差约 1 帧）"></textarea></div>
+
+    <div class="row">
+      <button class="primary" id="exportOne">导出本样本 JSON</button>
+      <button id="exportAll">导出全部已标注样本</button>
+      <button id="copyJson">复制本样本 JSON</button>
+      <button class="danger" id="resetOne">清空本样本标注</button>
+    </div>
+    <div class="kv" id="exportHint">导出模式：NOT_EXPORTABLE — 尚未标注；未标注不等于空参考，不能导出为 full/sparse 参考</div>
+    <pre id="preview">{
+  "schema": "p1b_annotation_export_v1",
+  "run_id": "round6_p1b_20260917T0615Z",
+  "sample_id": "P01",
+  "source_group": "0ReDuH0_rpI",
+  "split": "pilot_dev",
+  "media": {
+    "file_name": "0ReDuH0_rpI_210.0_360.0.mp4",
+    "sha256": "85999bd9326423e801b01b12dfba7e5806042c6c3fae721a8517726a9e545d3d",
+    "fps": 23.976023976023978,
+    "n_frames": 3597,
+    "source_width": 534,
+    "source_height": 300,
+    "target_ratio_wh": [
+      16,
+      9
+    ]
+  },
+  "annotation_status": "UNANNOTATED",
+  "confirm_no_highlight": false,
+  "intervals": null,
+  "keyframes": null,
+  "frame_provenance": {
+    "frame_source": null,
+    "estimated_error_frames": null,
+    "global_note": "浏览器 currentTime 只是估算；权威字段是帧号，误差需记录"
+  },
+  "identity": {
+    "annotator": null,
+    "reviewer": null
+  },
+  "notes": "",
+  "exportable_as_reference": false,
+  "reference_derivation": {
+    "mode": "NOT_EXPORTABLE",
+    "reason": "尚未标注；未标注不等于空参考，不能导出为 full/sparse 参考",
+    "reference": null
+  },
+  "not_human_reviewed_unless_recorded": true,
+  "label_status": "WEAK_HUMAN_SPARSE_PENDING_REVIEW"
+}</pre>
+  </section>
+</main>
+
+<script>
+const MANIFEST = {"schema": "p1b_pilot_manifest_v1", "run_id": "round6_p1b_20260917T0615Z", "created_utc": "2026-09-17T06:23:39Z", "purpose": "8-source-group pilot media package for offline, human annotation; every highlight/composition field is intentionally unannotated", "annotation_contract": {"states": ["UNANNOTATED", "HAS_HIGHLIGHT", "NO_HIGHLIGHT", "UNCERTAIN"], "rules": ["every highlight and composition field starts UNANNOTATED; the page never pre-fills semantics", "NO_HIGHLIGHT requires an explicit confirmation by the annotator and only then exports an empty ground-truth frame set", "UNANNOTATED and UNCERTAIN are never exported as a reference; they are exported as 'not_exportable' with a reason", "UNANNOTATED is exported with intervals=null and keyframes=null, never as []", "composition keyframes are sparse and export as coverage='sparse'; the page never fabricates per-frame boxes", "reviewed_by stays null unless a human reviewer is recorded; no tool fills it automatically", "browser currentTime is an estimate: the frame field records how the number was obtained and the estimated error"]}, "sampling": {"rule": "group by youtube_id; drop groups whose youtube_id appears in the 987 label rows or the 818 split rows; size window 3-40 MB; stable sort by (youtube_id, filename); random.Random(20260917).sample(8 distinct groups)", "candidate_groups": 2443, "selected": [{"youtube_id": "0ReDuH0_rpI", "target_ratio_wh": [16, 9], "files_in_group": 4, "first_file": "0ReDuH0_rpI_210.0_360.0.mp4", "first_file_bytes": 12288211, "window": [210.0, 360.0]}, {"youtube_id": "FQEW3xLOa9M", "target_ratio_wh": [16, 9], "files_in_group": 2, "first_file": "FQEW3xLOa9M_210.0_360.0.mp4", "first_file_bytes": 11727174, "window": [210.0, 360.0]}, {"youtube_id": "GYH6HdJ6nao", "target_ratio_wh": [16, 9], "files_in_group": 3, "first_file": "GYH6HdJ6nao_210.0_360.0.mp4", "first_file_bytes": 9180392, "window": [210.0, 360.0]}, {"youtube_id": "QPcwfuStFnU", "target_ratio_wh": [16, 9], "files_in_group": 5, "first_file": "QPcwfuStFnU_210.0_360.0.mp4", "first_file_bytes": 18819556, "window": [210.0, 360.0]}, {"youtube_id": "Snpclpo7Ono", "target_ratio_wh": [9, 16], "files_in_group": 2, "first_file": "Snpclpo7Ono_210.0_360.0.mp4", "first_file_bytes": 4364219, "window": [210.0, 360.0]}, {"youtube_id": "Xm1ouND-aiQ", "target_ratio_wh": [9, 16], "files_in_group": 5, "first_file": "Xm1ouND-aiQ_210.0_360.0.mp4", "first_file_bytes": 10464938, "window": [210.0, 360.0]}, {"youtube_id": "dEuxoRj0G5Y", "target_ratio_wh": [9, 16], "files_in_group": 3, "first_file": "dEuxoRj0G5Y_210.0_360.0.mp4", "first_file_bytes": 14495915, "window": [210.0, 360.0]}, {"youtube_id": "vvT-gqzwUxA", "target_ratio_wh": [9, 16], "files_in_group": 1, "first_file": "vvT-gqzwUxA_60.0_210.0.mp4", "first_file_bytes": 10119652, "window": [60.0, 210.0]}]}, "exclusion": {"label_youtube_ids": 863, "mapping_youtube_ids": 863, "split_youtube_ids": 719, "union_youtube_ids": 863, "basis": "union of YouTube-level ids from the 987 label rows, the round-4 mapping and the 818 split rows; exclusion is applied to the YouTube id parsed from the corpus file name", "test_root": "/home/inspur/aic_video_data/test", "test_root_files": 350, "test_root_excluded": true}, "pilot_targets": {"groups": 8, "target_ratio_wh_distribution": {"[16,9]": 4, "[9,16]": 4}, "negative_examples": "not guaranteed and not fabricated; a no-highlight case only counts if an annotator confirms it"}, "totals": {"samples": 8, "bytes": 91460057, "duration_sec": 1200.083}, "samples": [{"sample_id": "P01", "split": "pilot_dev", "source_group": "0ReDuH0_rpI", "youtube_id": "0ReDuH0_rpI", "file_name": "0ReDuH0_rpI_210.0_360.0.mp4", "media_rel_path": "media/0ReDuH0_rpI_210.0_360.0.mp4", "media_abs_path": "G:\\ai\\AIC视频\\round6_score_alignment\\p1b\\media\\0ReDuH0_rpI_210.0_360.0.mp4", "target_ratio_wh": [16, 9], "source_width": 534, "source_height": 300, "fps": 23.976023976023978, "n_frames": 3597, "duration_sec": 150.024875, "codec": "h264", "sha256_local": "85999bd9326423e801b01b12dfba7e5806042c6c3fae721a8517726a9e545d3d", "sha256_remote": "85999bd9326423e801b01b12dfba7e5806042c6c3fae721a8517726a9e545d3d", "bytes": 12288211, "remote_path": "/home/inspur/aic_video_data/videos/0/0ReDuH0_rpI_210.0_360.0.mp4", "corpus_window_sec": [210.0, 360.0], "files_in_source_group": 4, "max_legal_crop": {"max_width": 533.3333, "max_height": 300, "height_rule": "h = w * target_h / target_w"}, "pts": {"time_base_seconds": 4.1666666666666665e-05, "first_pts_sec": 0.0, "last_pts_sec": 149.98316666666668, "median_step_sec": 0.041708333, "max_abs_step_deviation_sec": 0.0, "cfr_within_1us": true, "cfr_within_one_tick": true, "stream_start_is_zero": true}, "verified_sample_frames": [{"index": 0, "pts_sec": 0.0, "thumb_sha256": "efac8b3680bbdd64"}, {"index": 327, "pts_sec": 13.638625, "thumb_sha256": "ed4f3c12a1646370"}, {"index": 654, "pts_sec": 27.27725, "thumb_sha256": "b723a5da8e9484a0"}, {"index": 981, "pts_sec": 40.915875, "thumb_sha256": "e6d2bbf360974dd6"}, {"index": 1308, "pts_sec": 54.5545, "thumb_sha256": "dea138fb5cae1777"}, {"index": 1635, "pts_sec": 68.193125, "thumb_sha256": "753ee2a0629d45e5"}, {"index": 1961, "pts_sec": 81.790042, "thumb_sha256": "3ed0dc4bd6beb70f"}, {"index": 2288, "pts_sec": 95.428667, "thumb_sha256": "02b8abc234a4b4fc"}, {"index": 2615, "pts_sec": 109.067292, "thumb_sha256": "f894a85d4866b300"}, {"index": 2942, "pts_sec": 122.705917, "thumb_sha256": "a4a805f223f32b8b"}, {"index": 3269, "pts_sec": 136.344542, "thumb_sha256": "e5f777c75ee78aff"}, {"index": 3596, "pts_sec": 149.983167, "thumb_sha256": "8de00b691d7fd777"}], "video_fingerprint": "faee22eb30db82732ce8aa8d2c4c9599889ca45e47e386272f8b83e185635328", "annotation_status": "UNANNOTATED", "annotation": null, "source_record": {"origin": "competition-provided Baidu-netdisk share '/高光剪辑训练集/qvhighlights-videos/'", "evidence_files": ["remote:/home/inspur/aic_video_data/bddownload.log (share listing, 34 zip archives + train.jsonl)", "remote:/home/inspur/aic_video_data/unzip.log (UNZIP_ALL_DONE after extracting the archives)", "reports/标签来源复核_20260915.md (project record of the share and its open questions)"], "video_provenance": "derived 150-second windows of public YouTube videos, named <youtube_id>_<start>_<end>.mp4; the YouTube id is the source group", "terms_recorded": [{"what": "official task page", "url": "https://www.aicomp.cn/tracks/tracks-6/4267.html", "read_on": "2026-09-15 (recorded 2026-09-09 and 2026-09-15 in project evidence)", "states": "the organiser does not provide a training set; public/self-built training data is allowed; samples, test data and a basic evaluation script are provided", "confidence": "page text recorded by the project; not re-fetched in P1b"}, {"what": "competition-provided share", "url": "login-gated AIC submission form (not public)", "read_on": "recorded in reports/标签来源复核_20260915.md", "states": "shows the 高光剪辑训练集 and test-video download links", "confidence": "recorded, publisher identity not verifiable from the logs"}], "permitted_use_registered": ["internal research use inside this project", "local offline analysis, annotation and diagnostics"], "limitations": ["no per-video licence is attached to the shared corpus", "the underlying videos are YouTube content with their own rights; the share terms do not transfer them", "'downloadable from a netdisk' is NOT treated as a licence grant", "videos must not be redistributed or published by this project", "no frame or video may be sent to any external service"], "unconfirmed": ["whether the share terms permit redistribution (assumed NOT, so nothing is redistributed)", "the identity of the share publisher", "whether the corpus videos share sources with the official test set (see the pilot report's test-exclusion limitations)"]}}, {"sample_id": "P02", "split": "pilot_dev", "source_group": "FQEW3xLOa9M", "youtube_id": "FQEW3xLOa9M", "file_name": "FQEW3xLOa9M_210.0_360.0.mp4", "media_rel_path": "media/FQEW3xLOa9M_210.0_360.0.mp4", "media_abs_path": "G:\\ai\\AIC视频\\round6_score_alignment\\p1b\\media\\FQEW3xLOa9M_210.0_360.0.mp4", "target_ratio_wh": [16, 9], "source_width": 534, "source_height": 300, "fps": 29.97002997002997, "n_frames": 4496, "duration_sec": 150.016533, "codec": "h264", "sha256_local": "c32486d888ec80bd105cd08d1ba1c3623bf0d2ce9ded05941ca027389bd69323", "sha256_remote": "c32486d888ec80bd105cd08d1ba1c3623bf0d2ce9ded05941ca027389bd69323", "bytes": 11727174, "remote_path": "/home/inspur/aic_video_data/videos/f/FQEW3xLOa9M_210.0_360.0.mp4", "corpus_window_sec": [210.0, 360.0], "files_in_source_group": 2, "max_legal_crop": {"max_width": 533.3333, "max_height": 300, "height_rule": "h = w * target_h / target_w"}, "pts": {"time_base_seconds": 3.3333333333333335e-05, "first_pts_sec": 0.0, "last_pts_sec": 149.98316666666668, "median_step_sec": 0.033366667, "max_abs_step_deviation_sec": 0.0, "cfr_within_1us": true, "cfr_within_one_tick": true, "stream_start_is_zero": true}, "verified_sample_frames": [{"index": 0, "pts_sec": 0.0, "thumb_sha256": "4c0d7aa57623b607"}, {"index": 409, "pts_sec": 13.646967, "thumb_sha256": "cdd6767f0f55cf4f"}, {"index": 817, "pts_sec": 27.260567, "thumb_sha256": "6c2aacf77e58f8e9"}, {"index": 1226, "pts_sec": 40.907533, "thumb_sha256": "2a892df46f19b643"}, {"index": 1635, "pts_sec": 54.5545, "thumb_sha256": "c3fc0469327d0bf0"}, {"index": 2043, "pts_sec": 68.1681, "thumb_sha256": "f0a03c87948a1184"}, {"index": 2452, "pts_sec": 81.815067, "thumb_sha256": "e3fb7bf9f115010c"}, {"index": 2860, "pts_sec": 95.428667, "thumb_sha256": "9fe5d2117f59772e"}, {"index": 3269, "pts_sec": 109.075633, "thumb_sha256": "6239013648d596be"}, {"index": 3678, "pts_sec": 122.7226, "thumb_sha256": "92b38bf64f08cef6"}, {"index": 4086, "pts_sec": 136.3362, "thumb_sha256": "2ae8831adf2bcb5c"}, {"index": 4495, "pts_sec": 149.983167, "thumb_sha256": "f847726b57367658"}], "video_fingerprint": "9e36205496f5e6f468eb23ea6b94e3df994a5ea032745d2442e05e3c6e04affd", "annotation_status": "UNANNOTATED", "annotation": null, "source_record": {"origin": "competition-provided Baidu-netdisk share '/高光剪辑训练集/qvhighlights-videos/'", "evidence_files": ["remote:/home/inspur/aic_video_data/bddownload.log (share listing, 34 zip archives + train.jsonl)", "remote:/home/inspur/aic_video_data/unzip.log (UNZIP_ALL_DONE after extracting the archives)", "reports/标签来源复核_20260915.md (project record of the share and its open questions)"], "video_provenance": "derived 150-second windows of public YouTube videos, named <youtube_id>_<start>_<end>.mp4; the YouTube id is the source group", "terms_recorded": [{"what": "official task page", "url": "https://www.aicomp.cn/tracks/tracks-6/4267.html", "read_on": "2026-09-15 (recorded 2026-09-09 and 2026-09-15 in project evidence)", "states": "the organiser does not provide a training set; public/self-built training data is allowed; samples, test data and a basic evaluation script are provided", "confidence": "page text recorded by the project; not re-fetched in P1b"}, {"what": "competition-provided share", "url": "login-gated AIC submission form (not public)", "read_on": "recorded in reports/标签来源复核_20260915.md", "states": "shows the 高光剪辑训练集 and test-video download links", "confidence": "recorded, publisher identity not verifiable from the logs"}], "permitted_use_registered": ["internal research use inside this project", "local offline analysis, annotation and diagnostics"], "limitations": ["no per-video licence is attached to the shared corpus", "the underlying videos are YouTube content with their own rights; the share terms do not transfer them", "'downloadable from a netdisk' is NOT treated as a licence grant", "videos must not be redistributed or published by this project", "no frame or video may be sent to any external service"], "unconfirmed": ["whether the share terms permit redistribution (assumed NOT, so nothing is redistributed)", "the identity of the share publisher", "whether the corpus videos share sources with the official test set (see the pilot report's test-exclusion limitations)"]}}, {"sample_id": "P03", "split": "pilot_dev", "source_group": "GYH6HdJ6nao", "youtube_id": "GYH6HdJ6nao", "file_name": "GYH6HdJ6nao_210.0_360.0.mp4", "media_rel_path": "media/GYH6HdJ6nao_210.0_360.0.mp4", "media_abs_path": "G:\\ai\\AIC视频\\round6_score_alignment\\p1b\\media\\GYH6HdJ6nao_210.0_360.0.mp4", "target_ratio_wh": [16, 9], "source_width": 534, "source_height": 300, "fps": 25.0, "n_frames": 3750, "duration_sec": 150.0, "codec": "h264", "sha256_local": "6c0e966e42f86f151bf49cde2e7e00538f70313501f8899818afbd68acbf9647", "sha256_remote": "6c0e966e42f86f151bf49cde2e7e00538f70313501f8899818afbd68acbf9647", "bytes": 9180392, "remote_path": "/home/inspur/aic_video_data/videos/g/GYH6HdJ6nao_210.0_360.0.mp4", "corpus_window_sec": [210.0, 360.0], "files_in_source_group": 3, "max_legal_crop": {"max_width": 533.3333, "max_height": 300, "height_rule": "h = w * target_h / target_w"}, "pts": {"time_base_seconds": 7.8125e-05, "first_pts_sec": 0.0, "last_pts_sec": 149.96, "median_step_sec": 0.04, "max_abs_step_deviation_sec": 0.0, "cfr_within_1us": true, "cfr_within_one_tick": true, "stream_start_is_zero": true}, "verified_sample_frames": [{"index": 0, "pts_sec": 0.0, "thumb_sha256": "1cfa7a0ce9c8dca6"}, {"index": 341, "pts_sec": 13.64, "thumb_sha256": "225d5d8adfd995c4"}, {"index": 682, "pts_sec": 27.28, "thumb_sha256": "f53de1eecf220230"}, {"index": 1022, "pts_sec": 40.88, "thumb_sha256": "a69c6d5b3e08e875"}, {"index": 1363, "pts_sec": 54.52, "thumb_sha256": "f1d51ad7aa840957"}, {"index": 1704, "pts_sec": 68.16, "thumb_sha256": "3f60b3c8c348eb5d"}, {"index": 2045, "pts_sec": 81.8, "thumb_sha256": "a657935e381b5857"}, {"index": 2386, "pts_sec": 95.44, "thumb_sha256": "7cb9577d94ecd517"}, {"index": 2727, "pts_sec": 109.08, "thumb_sha256": "38657c67460ccd16"}, {"index": 3067, "pts_sec": 122.68, "thumb_sha256": "90e17b65711495d7"}, {"index": 3408, "pts_sec": 136.32, "thumb_sha256": "75aab4319daf729e"}, {"index": 3749, "pts_sec": 149.96, "thumb_sha256": "8d948633589cef79"}], "video_fingerprint": "989887f9e15d65845b7ef782ac7f830a24221a6bc43728f17d5f9eaaff8c018a", "annotation_status": "UNANNOTATED", "annotation": null, "source_record": {"origin": "competition-provided Baidu-netdisk share '/高光剪辑训练集/qvhighlights-videos/'", "evidence_files": ["remote:/home/inspur/aic_video_data/bddownload.log (share listing, 34 zip archives + train.jsonl)", "remote:/home/inspur/aic_video_data/unzip.log (UNZIP_ALL_DONE after extracting the archives)", "reports/标签来源复核_20260915.md (project record of the share and its open questions)"], "video_provenance": "derived 150-second windows of public YouTube videos, named <youtube_id>_<start>_<end>.mp4; the YouTube id is the source group", "terms_recorded": [{"what": "official task page", "url": "https://www.aicomp.cn/tracks/tracks-6/4267.html", "read_on": "2026-09-15 (recorded 2026-09-09 and 2026-09-15 in project evidence)", "states": "the organiser does not provide a training set; public/self-built training data is allowed; samples, test data and a basic evaluation script are provided", "confidence": "page text recorded by the project; not re-fetched in P1b"}, {"what": "competition-provided share", "url": "login-gated AIC submission form (not public)", "read_on": "recorded in reports/标签来源复核_20260915.md", "states": "shows the 高光剪辑训练集 and test-video download links", "confidence": "recorded, publisher identity not verifiable from the logs"}], "permitted_use_registered": ["internal research use inside this project", "local offline analysis, annotation and diagnostics"], "limitations": ["no per-video licence is attached to the shared corpus", "the underlying videos are YouTube content with their own rights; the share terms do not transfer them", "'downloadable from a netdisk' is NOT treated as a licence grant", "videos must not be redistributed or published by this project", "no frame or video may be sent to any external service"], "unconfirmed": ["whether the share terms permit redistribution (assumed NOT, so nothing is redistributed)", "the identity of the share publisher", "whether the corpus videos share sources with the official test set (see the pilot report's test-exclusion limitations)"]}}, {"sample_id": "P04", "split": "pilot_dev", "source_group": "QPcwfuStFnU", "youtube_id": "QPcwfuStFnU", "file_name": "QPcwfuStFnU_210.0_360.0.mp4", "media_rel_path": "media/QPcwfuStFnU_210.0_360.0.mp4", "media_abs_path": "G:\\ai\\AIC视频\\round6_score_alignment\\p1b\\media\\QPcwfuStFnU_210.0_360.0.mp4", "target_ratio_wh": [16, 9], "source_width": 534, "source_height": 300, "fps": 23.976023976023978, "n_frames": 3597, "duration_sec": 150.024875, "codec": "h264", "sha256_local": "6bad7c178fe0e87f3039a6c16b167c2d032da2137d8cdf03593404c3fd97efbe", "sha256_remote": "6bad7c178fe0e87f3039a6c16b167c2d032da2137d8cdf03593404c3fd97efbe", "bytes": 18819556, "remote_path": "/home/inspur/aic_video_data/videos/q/QPcwfuStFnU_210.0_360.0.mp4", "corpus_window_sec": [210.0, 360.0], "files_in_source_group": 5, "max_legal_crop": {"max_width": 533.3333, "max_height": 300, "height_rule": "h = w * target_h / target_w"}, "pts": {"time_base_seconds": 4.1666666666666665e-05, "first_pts_sec": 0.0, "last_pts_sec": 149.98316666666668, "median_step_sec": 0.041708333, "max_abs_step_deviation_sec": 0.0, "cfr_within_1us": true, "cfr_within_one_tick": true, "stream_start_is_zero": true}, "verified_sample_frames": [{"index": 0, "pts_sec": 0.0, "thumb_sha256": "fd4b2a7eb77517b2"}, {"index": 327, "pts_sec": 13.638625, "thumb_sha256": "4c3df0681aa2b893"}, {"index": 654, "pts_sec": 27.27725, "thumb_sha256": "3729d6be9c893806"}, {"index": 981, "pts_sec": 40.915875, "thumb_sha256": "0d4afffe95942549"}, {"index": 1308, "pts_sec": 54.5545, "thumb_sha256": "5dd632e320932782"}, {"index": 1635, "pts_sec": 68.193125, "thumb_sha256": "255b26f2f77bd86e"}, {"index": 1961, "pts_sec": 81.790042, "thumb_sha256": "49a53c2ab5a343c8"}, {"index": 2288, "pts_sec": 95.428667, "thumb_sha256": "5604526770148a18"}, {"index": 2615, "pts_sec": 109.067292, "thumb_sha256": "d63a0489323c59b1"}, {"index": 2942, "pts_sec": 122.705917, "thumb_sha256": "4df97977a7928b25"}, {"index": 3269, "pts_sec": 136.344542, "thumb_sha256": "cfd24ccb08c9c85d"}, {"index": 3596, "pts_sec": 149.983167, "thumb_sha256": "ce0d45a6b6b3f401"}], "video_fingerprint": "b08647d03321f2a0e23ec6ee758f586a47581af6afb4aee51075d035a872b4a6", "annotation_status": "UNANNOTATED", "annotation": null, "source_record": {"origin": "competition-provided Baidu-netdisk share '/高光剪辑训练集/qvhighlights-videos/'", "evidence_files": ["remote:/home/inspur/aic_video_data/bddownload.log (share listing, 34 zip archives + train.jsonl)", "remote:/home/inspur/aic_video_data/unzip.log (UNZIP_ALL_DONE after extracting the archives)", "reports/标签来源复核_20260915.md (project record of the share and its open questions)"], "video_provenance": "derived 150-second windows of public YouTube videos, named <youtube_id>_<start>_<end>.mp4; the YouTube id is the source group", "terms_recorded": [{"what": "official task page", "url": "https://www.aicomp.cn/tracks/tracks-6/4267.html", "read_on": "2026-09-15 (recorded 2026-09-09 and 2026-09-15 in project evidence)", "states": "the organiser does not provide a training set; public/self-built training data is allowed; samples, test data and a basic evaluation script are provided", "confidence": "page text recorded by the project; not re-fetched in P1b"}, {"what": "competition-provided share", "url": "login-gated AIC submission form (not public)", "read_on": "recorded in reports/标签来源复核_20260915.md", "states": "shows the 高光剪辑训练集 and test-video download links", "confidence": "recorded, publisher identity not verifiable from the logs"}], "permitted_use_registered": ["internal research use inside this project", "local offline analysis, annotation and diagnostics"], "limitations": ["no per-video licence is attached to the shared corpus", "the underlying videos are YouTube content with their own rights; the share terms do not transfer them", "'downloadable from a netdisk' is NOT treated as a licence grant", "videos must not be redistributed or published by this project", "no frame or video may be sent to any external service"], "unconfirmed": ["whether the share terms permit redistribution (assumed NOT, so nothing is redistributed)", "the identity of the share publisher", "whether the corpus videos share sources with the official test set (see the pilot report's test-exclusion limitations)"]}}, {"sample_id": "P05", "split": "pilot_dev", "source_group": "Snpclpo7Ono", "youtube_id": "Snpclpo7Ono", "file_name": "Snpclpo7Ono_210.0_360.0.mp4", "media_rel_path": "media/Snpclpo7Ono_210.0_360.0.mp4", "media_abs_path": "G:\\ai\\AIC视频\\round6_score_alignment\\p1b\\media\\Snpclpo7Ono_210.0_360.0.mp4", "target_ratio_wh": [9, 16], "source_width": 534, "source_height": 300, "fps": 25.0, "n_frames": 3750, "duration_sec": 150.0, "codec": "h264", "sha256_local": "e01cb649f2ff19eb93c8dd5a773e5daa99d57f414ccadab2e380205d68d4fc01", "sha256_remote": "e01cb649f2ff19eb93c8dd5a773e5daa99d57f414ccadab2e380205d68d4fc01", "bytes": 4364219, "remote_path": "/home/inspur/aic_video_data/videos/s/Snpclpo7Ono_210.0_360.0.mp4", "corpus_window_sec": [210.0, 360.0], "files_in_source_group": 2, "max_legal_crop": {"max_width": 168.75, "max_height": 300, "height_rule": "h = w * target_h / target_w"}, "pts": {"time_base_seconds": 7.8125e-05, "first_pts_sec": 0.0, "last_pts_sec": 149.96, "median_step_sec": 0.04, "max_abs_step_deviation_sec": 0.0, "cfr_within_1us": true, "cfr_within_one_tick": true, "stream_start_is_zero": true}, "verified_sample_frames": [{"index": 0, "pts_sec": 0.0, "thumb_sha256": "4f577859fc45ef06"}, {"index": 341, "pts_sec": 13.64, "thumb_sha256": "37bb1d4566225789"}, {"index": 682, "pts_sec": 27.28, "thumb_sha256": "62d8352e3a30b7ba"}, {"index": 1022, "pts_sec": 40.88, "thumb_sha256": "7e009eadd504fc1e"}, {"index": 1363, "pts_sec": 54.52, "thumb_sha256": "7b3451a5e4d5f625"}, {"index": 1704, "pts_sec": 68.16, "thumb_sha256": "bdab720e3bb0b6ca"}, {"index": 2045, "pts_sec": 81.8, "thumb_sha256": "aa7e5f67c5183b91"}, {"index": 2386, "pts_sec": 95.44, "thumb_sha256": "0804c20a5f2c08ee"}, {"index": 2727, "pts_sec": 109.08, "thumb_sha256": "206d7cac9d8766bf"}, {"index": 3067, "pts_sec": 122.68, "thumb_sha256": "471adeb7de14b7a3"}, {"index": 3408, "pts_sec": 136.32, "thumb_sha256": "9559051c8de45896"}, {"index": 3749, "pts_sec": 149.96, "thumb_sha256": "62cb33aa7cc36488"}], "video_fingerprint": "bb4966d6803877c2d2e0b054a355291a66e207673c32bbfc4ba2780bfaf59257", "annotation_status": "UNANNOTATED", "annotation": null, "source_record": {"origin": "competition-provided Baidu-netdisk share '/高光剪辑训练集/qvhighlights-videos/'", "evidence_files": ["remote:/home/inspur/aic_video_data/bddownload.log (share listing, 34 zip archives + train.jsonl)", "remote:/home/inspur/aic_video_data/unzip.log (UNZIP_ALL_DONE after extracting the archives)", "reports/标签来源复核_20260915.md (project record of the share and its open questions)"], "video_provenance": "derived 150-second windows of public YouTube videos, named <youtube_id>_<start>_<end>.mp4; the YouTube id is the source group", "terms_recorded": [{"what": "official task page", "url": "https://www.aicomp.cn/tracks/tracks-6/4267.html", "read_on": "2026-09-15 (recorded 2026-09-09 and 2026-09-15 in project evidence)", "states": "the organiser does not provide a training set; public/self-built training data is allowed; samples, test data and a basic evaluation script are provided", "confidence": "page text recorded by the project; not re-fetched in P1b"}, {"what": "competition-provided share", "url": "login-gated AIC submission form (not public)", "read_on": "recorded in reports/标签来源复核_20260915.md", "states": "shows the 高光剪辑训练集 and test-video download links", "confidence": "recorded, publisher identity not verifiable from the logs"}], "permitted_use_registered": ["internal research use inside this project", "local offline analysis, annotation and diagnostics"], "limitations": ["no per-video licence is attached to the shared corpus", "the underlying videos are YouTube content with their own rights; the share terms do not transfer them", "'downloadable from a netdisk' is NOT treated as a licence grant", "videos must not be redistributed or published by this project", "no frame or video may be sent to any external service"], "unconfirmed": ["whether the share terms permit redistribution (assumed NOT, so nothing is redistributed)", "the identity of the share publisher", "whether the corpus videos share sources with the official test set (see the pilot report's test-exclusion limitations)"]}}, {"sample_id": "P06", "split": "pilot_dev", "source_group": "Xm1ouND-aiQ", "youtube_id": "Xm1ouND-aiQ", "file_name": "Xm1ouND-aiQ_210.0_360.0.mp4", "media_rel_path": "media/Xm1ouND-aiQ_210.0_360.0.mp4", "media_abs_path": "G:\\ai\\AIC视频\\round6_score_alignment\\p1b\\media\\Xm1ouND-aiQ_210.0_360.0.mp4", "target_ratio_wh": [9, 16], "source_width": 534, "source_height": 300, "fps": 29.97002997002997, "n_frames": 4496, "duration_sec": 150.016533, "codec": "h264", "sha256_local": "c4375a95f042ebf40889c0a088255dbb1c73342a7f0d25c18191bdf426a1216e", "sha256_remote": "c4375a95f042ebf40889c0a088255dbb1c73342a7f0d25c18191bdf426a1216e", "bytes": 10464938, "remote_path": "/home/inspur/aic_video_data/videos/x/Xm1ouND-aiQ_210.0_360.0.mp4", "corpus_window_sec": [210.0, 360.0], "files_in_source_group": 5, "max_legal_crop": {"max_width": 168.75, "max_height": 300, "height_rule": "h = w * target_h / target_w"}, "pts": {"time_base_seconds": 3.3333333333333335e-05, "first_pts_sec": 0.0, "last_pts_sec": 149.98316666666668, "median_step_sec": 0.033366667, "max_abs_step_deviation_sec": 0.0, "cfr_within_1us": true, "cfr_within_one_tick": true, "stream_start_is_zero": true}, "verified_sample_frames": [{"index": 0, "pts_sec": 0.0, "thumb_sha256": "da56e54df78d3a9f"}, {"index": 409, "pts_sec": 13.646967, "thumb_sha256": "b4ed0270cfa94b5c"}, {"index": 817, "pts_sec": 27.260567, "thumb_sha256": "1924c15464ca0e61"}, {"index": 1226, "pts_sec": 40.907533, "thumb_sha256": "fdaf5e07f397c2ef"}, {"index": 1635, "pts_sec": 54.5545, "thumb_sha256": "8fe3a314f3ed5895"}, {"index": 2043, "pts_sec": 68.1681, "thumb_sha256": "39bec66dfc3fa709"}, {"index": 2452, "pts_sec": 81.815067, "thumb_sha256": "e23401ca5b8d60a2"}, {"index": 2860, "pts_sec": 95.428667, "thumb_sha256": "ea04a3b795900be1"}, {"index": 3269, "pts_sec": 109.075633, "thumb_sha256": "5e6c6525406807e3"}, {"index": 3678, "pts_sec": 122.7226, "thumb_sha256": "da1a271e433a8bc8"}, {"index": 4086, "pts_sec": 136.3362, "thumb_sha256": "e670b40ad7468ed1"}, {"index": 4495, "pts_sec": 149.983167, "thumb_sha256": "b00120f0ce655239"}], "video_fingerprint": "4939605cd77f824d33414f2ccfe30850ea6f64b1adf6d59891207e0a9c036644", "annotation_status": "UNANNOTATED", "annotation": null, "source_record": {"origin": "competition-provided Baidu-netdisk share '/高光剪辑训练集/qvhighlights-videos/'", "evidence_files": ["remote:/home/inspur/aic_video_data/bddownload.log (share listing, 34 zip archives + train.jsonl)", "remote:/home/inspur/aic_video_data/unzip.log (UNZIP_ALL_DONE after extracting the archives)", "reports/标签来源复核_20260915.md (project record of the share and its open questions)"], "video_provenance": "derived 150-second windows of public YouTube videos, named <youtube_id>_<start>_<end>.mp4; the YouTube id is the source group", "terms_recorded": [{"what": "official task page", "url": "https://www.aicomp.cn/tracks/tracks-6/4267.html", "read_on": "2026-09-15 (recorded 2026-09-09 and 2026-09-15 in project evidence)", "states": "the organiser does not provide a training set; public/self-built training data is allowed; samples, test data and a basic evaluation script are provided", "confidence": "page text recorded by the project; not re-fetched in P1b"}, {"what": "competition-provided share", "url": "login-gated AIC submission form (not public)", "read_on": "recorded in reports/标签来源复核_20260915.md", "states": "shows the 高光剪辑训练集 and test-video download links", "confidence": "recorded, publisher identity not verifiable from the logs"}], "permitted_use_registered": ["internal research use inside this project", "local offline analysis, annotation and diagnostics"], "limitations": ["no per-video licence is attached to the shared corpus", "the underlying videos are YouTube content with their own rights; the share terms do not transfer them", "'downloadable from a netdisk' is NOT treated as a licence grant", "videos must not be redistributed or published by this project", "no frame or video may be sent to any external service"], "unconfirmed": ["whether the share terms permit redistribution (assumed NOT, so nothing is redistributed)", "the identity of the share publisher", "whether the corpus videos share sources with the official test set (see the pilot report's test-exclusion limitations)"]}}, {"sample_id": "P07", "split": "pilot_dev", "source_group": "dEuxoRj0G5Y", "youtube_id": "dEuxoRj0G5Y", "file_name": "dEuxoRj0G5Y_210.0_360.0.mp4", "media_rel_path": "media/dEuxoRj0G5Y_210.0_360.0.mp4", "media_abs_path": "G:\\ai\\AIC视频\\round6_score_alignment\\p1b\\media\\dEuxoRj0G5Y_210.0_360.0.mp4", "target_ratio_wh": [9, 16], "source_width": 534, "source_height": 300, "fps": 30.0, "n_frames": 4500, "duration_sec": 150.0, "codec": "h264", "sha256_local": "e8c410e21d5d2e75c5533f2b162c6c9ede01e109b6e30316c0395d1ff26be45a", "sha256_remote": "e8c410e21d5d2e75c5533f2b162c6c9ede01e109b6e30316c0395d1ff26be45a", "bytes": 14495915, "remote_path": "/home/inspur/aic_video_data/videos/d/dEuxoRj0G5Y_210.0_360.0.mp4", "corpus_window_sec": [210.0, 360.0], "files_in_source_group": 3, "max_legal_crop": {"max_width": 168.75, "max_height": 300, "height_rule": "h = w * target_h / target_w"}, "pts": {"time_base_seconds": 6.510416666666667e-05, "first_pts_sec": 0.0, "last_pts_sec": 149.96666666666667, "median_step_sec": 0.033333333, "max_abs_step_deviation_sec": 0.0, "cfr_within_1us": true, "cfr_within_one_tick": true, "stream_start_is_zero": true}, "verified_sample_frames": [{"index": 0, "pts_sec": 0.0, "thumb_sha256": "3875f66a317e2b5e"}, {"index": 409, "pts_sec": 13.633333, "thumb_sha256": "63e815e4873acf51"}, {"index": 818, "pts_sec": 27.266667, "thumb_sha256": "cef0a60fe7cbfd59"}, {"index": 1227, "pts_sec": 40.9, "thumb_sha256": "1057e0bfc7bf9303"}, {"index": 1636, "pts_sec": 54.533333, "thumb_sha256": "a85d8aa3d8364bb7"}, {"index": 2045, "pts_sec": 68.166667, "thumb_sha256": "69ae51099c0f4bdf"}, {"index": 2454, "pts_sec": 81.8, "thumb_sha256": "0e2dcd833fc3477f"}, {"index": 2863, "pts_sec": 95.433333, "thumb_sha256": "44cff7954c5c5b4c"}, {"index": 3272, "pts_sec": 109.066667, "thumb_sha256": "a4763305361f97ec"}, {"index": 3681, "pts_sec": 122.7, "thumb_sha256": "6beac46967da1006"}, {"index": 4090, "pts_sec": 136.333333, "thumb_sha256": "db2fddef22744719"}, {"index": 4499, "pts_sec": 149.966667, "thumb_sha256": "bab1be8d79753532"}], "video_fingerprint": "b517fdf5006a54e0a544f023b1fe31ca8b778a5644a145817b748c73dd92e878", "annotation_status": "UNANNOTATED", "annotation": null, "source_record": {"origin": "competition-provided Baidu-netdisk share '/高光剪辑训练集/qvhighlights-videos/'", "evidence_files": ["remote:/home/inspur/aic_video_data/bddownload.log (share listing, 34 zip archives + train.jsonl)", "remote:/home/inspur/aic_video_data/unzip.log (UNZIP_ALL_DONE after extracting the archives)", "reports/标签来源复核_20260915.md (project record of the share and its open questions)"], "video_provenance": "derived 150-second windows of public YouTube videos, named <youtube_id>_<start>_<end>.mp4; the YouTube id is the source group", "terms_recorded": [{"what": "official task page", "url": "https://www.aicomp.cn/tracks/tracks-6/4267.html", "read_on": "2026-09-15 (recorded 2026-09-09 and 2026-09-15 in project evidence)", "states": "the organiser does not provide a training set; public/self-built training data is allowed; samples, test data and a basic evaluation script are provided", "confidence": "page text recorded by the project; not re-fetched in P1b"}, {"what": "competition-provided share", "url": "login-gated AIC submission form (not public)", "read_on": "recorded in reports/标签来源复核_20260915.md", "states": "shows the 高光剪辑训练集 and test-video download links", "confidence": "recorded, publisher identity not verifiable from the logs"}], "permitted_use_registered": ["internal research use inside this project", "local offline analysis, annotation and diagnostics"], "limitations": ["no per-video licence is attached to the shared corpus", "the underlying videos are YouTube content with their own rights; the share terms do not transfer them", "'downloadable from a netdisk' is NOT treated as a licence grant", "videos must not be redistributed or published by this project", "no frame or video may be sent to any external service"], "unconfirmed": ["whether the share terms permit redistribution (assumed NOT, so nothing is redistributed)", "the identity of the share publisher", "whether the corpus videos share sources with the official test set (see the pilot report's test-exclusion limitations)"]}}, {"sample_id": "P08", "split": "pilot_dev", "source_group": "vvT-gqzwUxA", "youtube_id": "vvT-gqzwUxA", "file_name": "vvT-gqzwUxA_60.0_210.0.mp4", "media_rel_path": "media/vvT-gqzwUxA_60.0_210.0.mp4", "media_abs_path": "G:\\ai\\AIC视频\\round6_score_alignment\\p1b\\media\\vvT-gqzwUxA_60.0_210.0.mp4", "target_ratio_wh": [9, 16], "source_width": 534, "source_height": 300, "fps": 25.0, "n_frames": 3750, "duration_sec": 150.0, "codec": "h264", "sha256_local": "2f8462e601fd4471dd5779a4fdeea9b72f22e2a89e9cc9b8e825da63cdddc993", "sha256_remote": "2f8462e601fd4471dd5779a4fdeea9b72f22e2a89e9cc9b8e825da63cdddc993", "bytes": 10119652, "remote_path": "/home/inspur/aic_video_data/videos/v/vvT-gqzwUxA_60.0_210.0.mp4", "corpus_window_sec": [60.0, 210.0], "files_in_source_group": 1, "max_legal_crop": {"max_width": 168.75, "max_height": 300, "height_rule": "h = w * target_h / target_w"}, "pts": {"time_base_seconds": 7.8125e-05, "first_pts_sec": 0.0, "last_pts_sec": 149.96, "median_step_sec": 0.04, "max_abs_step_deviation_sec": 0.0, "cfr_within_1us": true, "cfr_within_one_tick": true, "stream_start_is_zero": true}, "verified_sample_frames": [{"index": 0, "pts_sec": 0.0, "thumb_sha256": "e0098979454262dc"}, {"index": 341, "pts_sec": 13.64, "thumb_sha256": "b92e9d2b8ffc1a38"}, {"index": 682, "pts_sec": 27.28, "thumb_sha256": "100e77e22ff7b801"}, {"index": 1022, "pts_sec": 40.88, "thumb_sha256": "43cf88a3952943c5"}, {"index": 1363, "pts_sec": 54.52, "thumb_sha256": "488d4052993b647e"}, {"index": 1704, "pts_sec": 68.16, "thumb_sha256": "88c62ab5cd026839"}, {"index": 2045, "pts_sec": 81.8, "thumb_sha256": "4ecd3e8d07d11f04"}, {"index": 2386, "pts_sec": 95.44, "thumb_sha256": "18489b4c00c3f383"}, {"index": 2727, "pts_sec": 109.08, "thumb_sha256": "b6bce60b13db9936"}, {"index": 3067, "pts_sec": 122.68, "thumb_sha256": "73aed644aa7a8171"}, {"index": 3408, "pts_sec": 136.32, "thumb_sha256": "f2d073b1c22b3ce2"}, {"index": 3749, "pts_sec": 149.96, "thumb_sha256": "9478f10a098bc840"}], "video_fingerprint": "e59abf8b3ca658a68e53b4bb6d643f4eb05724abfdffde03edad3bbada5bc1a8", "annotation_status": "UNANNOTATED", "annotation": null, "source_record": {"origin": "competition-provided Baidu-netdisk share '/高光剪辑训练集/qvhighlights-videos/'", "evidence_files": ["remote:/home/inspur/aic_video_data/bddownload.log (share listing, 34 zip archives + train.jsonl)", "remote:/home/inspur/aic_video_data/unzip.log (UNZIP_ALL_DONE after extracting the archives)", "reports/标签来源复核_20260915.md (project record of the share and its open questions)"], "video_provenance": "derived 150-second windows of public YouTube videos, named <youtube_id>_<start>_<end>.mp4; the YouTube id is the source group", "terms_recorded": [{"what": "official task page", "url": "https://www.aicomp.cn/tracks/tracks-6/4267.html", "read_on": "2026-09-15 (recorded 2026-09-09 and 2026-09-15 in project evidence)", "states": "the organiser does not provide a training set; public/self-built training data is allowed; samples, test data and a basic evaluation script are provided", "confidence": "page text recorded by the project; not re-fetched in P1b"}, {"what": "competition-provided share", "url": "login-gated AIC submission form (not public)", "read_on": "recorded in reports/标签来源复核_20260915.md", "states": "shows the 高光剪辑训练集 and test-video download links", "confidence": "recorded, publisher identity not verifiable from the logs"}], "permitted_use_registered": ["internal research use inside this project", "local offline analysis, annotation and diagnostics"], "limitations": ["no per-video licence is attached to the shared corpus", "the underlying videos are YouTube content with their own rights; the share terms do not transfer them", "'downloadable from a netdisk' is NOT treated as a licence grant", "videos must not be redistributed or published by this project", "no frame or video may be sent to any external service"], "unconfirmed": ["whether the share terms permit redistribution (assumed NOT, so nothing is redistributed)", "the identity of the share publisher", "whether the corpus videos share sources with the official test set (see the pilot report's test-exclusion limitations)"]}}]};
+const state = { current: 0, annotations: {} };
+const samples = MANIFEST.samples;
+
+function blank() {
+  return { status: "UNANNOTATED", confirm_no_highlight: false, intervals: null, keyframes: null,
+           annotator: "", reviewer: null, notes: "", frame_source: null, estimated_error_frames: null };
+}
+function ann(sample) {
+  if (!state.annotations[sample.sample_id]) state.annotations[sample.sample_id] = blank();
+  return state.annotations[sample.sample_id];
+}
+function frameFromTime(t, sample) { return Math.max(0, Math.min(sample.n_frames - 1, Math.round(t * sample.fps))); }
+function timeFromFrame(f, sample) { return f / sample.fps; }
+function boxHeight(w, sample) { return w * sample.target_ratio_wh[1] / sample.target_ratio_wh[0]; }
+
+function renderSampleList() {
+  const el = document.getElementById("sampleList");
+  el.innerHTML = "";
+  samples.forEach((s, i) => {
+    const b = document.createElement("button");
+    b.className = "samplebtn" + (i === state.current ? " active" : "");
+    b.innerHTML = `<b>${s.sample_id}</b> ${s.source_group}<small>` +
+      `${s.source_width}x${s.source_height} · ${s.fps.toFixed(3)} fps · ${s.n_frames} 帧 · ` +
+      `目标 ${s.target_ratio_wh[0]}:${s.target_ratio_wh[1]} · ` +
+      `<span class="pill ${ann(s).status}">${ann(s).status}</span></small>`;
+    b.onclick = () => { state.current = i; loadSample(); };
+    el.appendChild(b);
+  });
+}
+
+function loadSample() {
+  const s = samples[state.current];
+  const v = document.getElementById("video");
+  v.src = s.media_rel_path;
+  v.load();
+  const a = ann(s);
+  document.getElementById("status").value = a.status;
+  document.getElementById("confirmNoHighlight").checked = !!a.confirm_no_highlight;
+  document.getElementById("annotator").value = a.annotator || "";
+  document.getElementById("reviewer").value = a.reviewer || "";
+  document.getElementById("notes").value = a.notes || "";
+  document.getElementById("ratioPill").textContent = s.target_ratio_wh[0] + ":" + s.target_ratio_wh[1];
+  document.getElementById("maxCrop").textContent =
+    `宽 ${s.max_legal_crop.max_width} × 高 ${s.max_legal_crop.max_height}（源 ${s.source_width}x${s.source_height}）`;
+  const maxW = Math.floor(s.max_legal_crop.max_width);
+  document.getElementById("bw").value = Math.min(maxW, Math.floor(s.source_width));
+  document.getElementById("bw").max = maxW;
+  document.getElementById("frameInput").max = s.n_frames - 1;
+  document.getElementById("intEnd").max = s.n_frames - 1;
+  const ptsRow = document.getElementById("ptsRow");
+  ptsRow.innerHTML = "<label>已校验采样帧</label>";
+  s.verified_sample_frames.forEach(f => {
+    const b = document.createElement("button");
+    b.textContent = f.index;
+    b.title = `PTS ${f.pts_sec}s`;
+    b.onclick = () => { v.currentTime = f.pts_sec; setFrameField(f.index, "pts_sample", 0); };
+    ptsRow.appendChild(b);
+  });
+  renderTables();
+  renderSampleList();
+  updatePreview();
+}
+
+function setFrameField(frame, source, errorFrames) {
+  document.getElementById("frameInput").value = frame;
+  const a = ann(samples[state.current]);
+  a.frame_source = source;
+  a.estimated_error_frames = errorFrames;
+}
+
+function renderTables() {
+  const s = samples[state.current];
+  const a = ann(s);
+  const it = document.querySelector("#intervalTable tbody");
+  it.innerHTML = "";
+  (a.intervals || []).forEach((iv, i) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td>${i + 1}</td><td>${iv.start_frame}</td><td>${iv.end_frame}</td>` +
+      `<td>${timeFromFrame(iv.start_frame, s).toFixed(3)}</td>` +
+      `<td>${timeFromFrame(iv.end_frame, s).toFixed(3)}</td>`;
+    const td = document.createElement("td");
+    const del = document.createElement("button");
+    del.textContent = "删除";
+    del.onclick = () => { a.intervals.splice(i, 1); renderTables(); updatePreview(); };
+    td.appendChild(del); tr.appendChild(td); it.appendChild(tr);
+  });
+  const kt = document.querySelector("#kfTable tbody");
+  kt.innerHTML = "";
+  (a.keyframes || []).forEach((kf, i) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td>${kf.frame}</td><td>${kf.box[0]}</td><td>${kf.box[1]}</td><td>${kf.box[2]}</td>` +
+      `<td>${boxHeight(kf.box[2], s).toFixed(2)}</td>`;
+    const td = document.createElement("td");
+    const del = document.createElement("button");
+    del.textContent = "删除";
+    del.onclick = () => { a.keyframes.splice(i, 1); renderTables(); updatePreview(); };
+    td.appendChild(del); tr.appendChild(td); it.appendChild(tr);
+  });
+}
+
+function currentFrame() { return parseInt(document.getElementById("frameInput").value || "0", 10); }
+
+function updatePreview() {
+  const s = samples[state.current];
+  const a = ann(s);
+  const payload = buildExport(s, a);
+  document.getElementById("preview").textContent = JSON.stringify(payload, null, 2);
+  document.getElementById("exportHint").textContent =
+    "导出模式：" + payload.reference_derivation.mode + " — " + payload.reference_derivation.reason;
+}
+
+function buildExport(s, a) {
+  const annotator = (a.annotator || "").trim();
+  const intervals = a.intervals;
+  const keyframes = a.keyframes;
+  let mode, reason, reference = null;
+  if (a.status === "UNANNOTATED") {
+    mode = "NOT_EXPORTABLE";
+    reason = "尚未标注；未标注不等于空参考，不能导出为 full/sparse 参考";
+  } else if (a.status === "UNCERTAIN") {
+    mode = "NOT_EXPORTABLE";
+    reason = "标注者标记为不确定；不计入参考";
+  } else if (a.status === "NO_HIGHLIGHT") {
+    if (!a.confirm_no_highlight) {
+      mode = "NOT_EXPORTABLE";
+      reason = "无高光需标注者显式勾选确认后才可导出为空真值";
+    } else {
+      mode = "NO_HIGHLIGHT_EMPTY_GT";
+      reason = "标注者确认整段无高光：导出为空帧集合（coverage=full, frames=[]）";
+      reference = { coverage: "full", videos: [{ video_id: s.sample_id, coverage: "full", frames: [] }] };
+    }
+  } else {
+    if (!intervals || intervals.length === 0) {
+      mode = "NOT_EXPORTABLE";
+      reason = "状态为有高光但没有时间区间";
+    } else if (!keyframes || keyframes.length === 0) {
+      mode = "TEMPORAL_ONLY";
+      reason = "只有时间区间、没有构图关键帧：可用于时间诊断，不构成联合指标参考";
+    } else {
+      mode = "SPARSE_KEYFRAME_GT";
+      reason = "稀疏构图关键帧：导出为 coverage=sparse（只有列出的帧被标注）";
+      reference = { coverage: "sparse",
+                    videos: [{ video_id: s.sample_id, coverage: "sparse",
+                               frames: keyframes.map(kf => ({ frame: kf.frame, box_xyw: kf.box })) }] };
+    }
+  }
+  return {
+    schema: "p1b_annotation_export_v1",
+    run_id: MANIFEST.run_id,
+    sample_id: s.sample_id,
+    source_group: s.source_group,
+    split: "pilot_dev",
+    media: { file_name: s.file_name, sha256: s.sha256_local, fps: s.fps, n_frames: s.n_frames,
+             source_width: s.source_width, source_height: s.source_height,
+             target_ratio_wh: s.target_ratio_wh },
+    annotation_status: a.status,
+    confirm_no_highlight: !!a.confirm_no_highlight,
+    intervals: intervals ? intervals.map(iv => ({ start_frame: iv.start_frame, end_frame: iv.end_frame,
+      start_sec: timeFromFrame(iv.start_frame, s), end_sec: timeFromFrame(iv.end_frame, s) })) : null,
+    keyframes: keyframes ? keyframes.map(kf => ({ frame: kf.frame, box: kf.box,
+      box_height_derived: boxHeight(kf.box[2], s) })) : null,
+    frame_provenance: { frame_source: a.frame_source, estimated_error_frames: a.estimated_error_frames,
+      global_note: "浏览器 currentTime 只是估算；权威字段是帧号，误差需记录" },
+    identity: { annotator: annotator || null, reviewer: (a.reviewer || "").trim() || null },
+    notes: a.notes || "",
+    exportable_as_reference: reference !== null,
+    reference_derivation: { mode: mode, reason: reason, reference: reference },
+    not_human_reviewed_unless_recorded: true,
+    label_status: "WEAK_HUMAN_SPARSE_PENDING_REVIEW",
+  };
+}
+
+function download(name, text) {
+  const blob = new Blob([text], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = name; a.click();
+  URL.revokeObjectURL(url);
+}
+
+document.getElementById("useEstimate").onclick = () => {
+  const s = samples[state.current], v = document.getElementById("video");
+  const f = frameFromTime(v.currentTime, s);
+  setFrameField(f, "browser_estimate", 1);
+  updatePreview();
+};
+function step(d) {
+  const s = samples[state.current], v = document.getElementById("video");
+  const f = Math.max(0, Math.min(s.n_frames - 1, currentFrame() + d));
+  v.currentTime = timeFromFrame(f, s);
+  setFrameField(f, "frame_step", 0);
+  updatePreview();
+}
+document.getElementById("stepBack10").onclick = () => step(-10);
+document.getElementById("stepBack1").onclick = () => step(-1);
+document.getElementById("stepFwd1").onclick = () => step(1);
+document.getElementById("stepFwd10").onclick = () => step(10);
+document.getElementById("alignPts").onclick = () => {
+  const s = samples[state.current], v = document.getElementById("video");
+  let best = s.verified_sample_frames[0];
+  s.verified_sample_frames.forEach(f => {
+    if (Math.abs(f.pts_sec - v.currentTime) < Math.abs(best.pts_sec - v.currentTime)) best = f;
+  });
+  v.currentTime = best.pts_sec;
+  setFrameField(best.index, "pts_sample", 0);
+  updatePreview();
+};
+document.getElementById("setStartHere").onclick = () => { document.getElementById("intStart").value = currentFrame(); };
+document.getElementById("setEndHere").onclick = () => { document.getElementById("intEnd").value = currentFrame(); };
+document.getElementById("addInterval").onclick = () => {
+  const s = samples[state.current], a = ann(s);
+  const start = parseInt(document.getElementById("intStart").value || "0", 10);
+  const end = parseInt(document.getElementById("intEnd").value || "0", 10);
+  if (!(end > start)) { alert("结束帧必须大于起始帧"); return; }
+  if (start < 0 || end > s.n_frames - 1) { alert("帧号超出 0.." + (s.n_frames - 1)); return; }
+  a.intervals = a.intervals || [];
+  a.intervals.push({ start_frame: start, end_frame: end });
+  renderTables(); updatePreview();
+};
+function readBox() {
+  return [parseInt(document.getElementById("bx").value || "0", 10),
+          parseInt(document.getElementById("by").value || "0", 10),
+          parseFloat(document.getElementById("bw").value || "0")];
+}
+function clampBox(box, s) {
+  const [tw, th] = s.target_ratio_wh;
+  let [x, y, w] = box;
+  w = Math.min(w, s.max_legal_crop.max_width, s.source_width);
+  const h = w * th / tw;
+  x = Math.max(0, Math.min(x, s.source_width - w));
+  y = Math.max(0, Math.min(y, s.source_height - h));
+  return [Math.round(x), Math.round(y), +w.toFixed(2)];
+}
+document.getElementById("clampBox").onclick = () => {
+  const s = samples[state.current];
+  const b = clampBox(readBox(), s);
+  document.getElementById("bx").value = b[0]; document.getElementById("by").value = b[1];
+  document.getElementById("bw").value = b[2];
+};
+document.getElementById("addKeyframe").onclick = () => {
+  const s = samples[state.current], a = ann(s);
+  const box = clampBox(readBox(), s);
+  const h = boxHeight(box[2], s);
+  if (box[0] + box[2] > s.source_width + 1e-6 || box[1] + h > s.source_height + 1e-6) {
+    alert("框超出源帧范围"); return;
+  }
+  a.keyframes = a.keyframes || [];
+  a.keyframes.push({ frame: currentFrame(), box: box });
+  renderTables(); updatePreview();
+};
+document.getElementById("status").onchange = (e) => {
+  const a = ann(samples[state.current]);
+  a.status = e.target.value;
+  if (a.status !== "NO_HIGHLIGHT") a.confirm_no_highlight = false;
+  document.getElementById("confirmNoHighlight").checked = !!a.confirm_no_highlight;
+  renderSampleList(); updatePreview();
+};
+document.getElementById("confirmNoHighlight").onchange = (e) => {
+  ann(samples[state.current]).confirm_no_highlight = e.target.checked; updatePreview();
+};
+["annotator", "reviewer", "notes"].forEach(id => {
+  document.getElementById(id).oninput = (e) => {
+    const a = ann(samples[state.current]);
+    if (id === "annotator") a.annotator = e.target.value;
+    if (id === "reviewer") a.reviewer = e.target.value;
+    if (id === "notes") a.notes = e.target.value;
+    updatePreview();
+  };
+});
+document.getElementById("exportOne").onclick = () => {
+  const s = samples[state.current];
+  const payload = buildExport(s, ann(s));
+  if (!payload.identity.annotator) { alert("请先填写标注者（必须为真实执行者）"); return; }
+  download(`${s.sample_id}_annotation.json`, JSON.stringify(payload, null, 2));
+};
+document.getElementById("exportAll").onclick = () => {
+  const out = [];
+  samples.forEach(s => {
+    const a = ann(s);
+    const payload = buildExport(s, a);
+    if (payload.annotation_status !== "UNANNOTATED" && payload.identity.annotator) out.push(payload);
+  });
+  download("p1b_annotations_export.json", JSON.stringify(
+    { schema: "p1b_annotation_bundle_v1", run_id: MANIFEST.run_id, exports: out }, null, 2));
+};
+document.getElementById("copyJson").onclick = () => {
+  const s = samples[state.current];
+  navigator.clipboard.writeText(JSON.stringify(buildExport(s, ann(s)), null, 2));
+};
+document.getElementById("resetOne").onclick = () => {
+  const s = samples[state.current];
+  if (confirm("清空 " + s.sample_id + " 的标注？")) { state.annotations[s.sample_id] = blank(); loadSample(); }
+};
+loadSample();
+</script>
+
+
+</body></html>

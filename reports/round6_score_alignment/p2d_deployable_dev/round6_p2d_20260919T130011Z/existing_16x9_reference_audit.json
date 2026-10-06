@@ -1,0 +1,25 @@
+{
+  "schema": "aic6_p2d_existing_16x9_reference_audit_v1",
+  "status": "NO_ELIGIBLE_16X9_QUALITY_REFERENCE",
+  "read_only": true,
+  "finding": {
+    "identity_traceable_non_test_media_exists": true,
+    "samples": 4,
+    "sample_ids": ["P01", "P02", "P03", "P04"],
+    "target_ratio": [16, 9],
+    "media_sha256_recorded": true,
+    "local_internal_analysis_registered": true,
+    "per_video_licence_grant_found": false,
+    "valid_semantic_annotations": 0,
+    "human_reviewed_annotations": 0,
+    "eligible_for_quality_scoring": false
+  },
+  "reason": "The existing P1b pilot fixes non-test media identity and permits internal local analysis, but the project audit found no per-video licence grant and the only browser draft has all eight samples UNANNOTATED. It is an interface pilot, not a composition reference.",
+  "evidence": {
+    "reports/round6_score_alignment/phase1b/source_and_license_audit.json": "640f3514c8f833786982c9a9d48fdfc6cd9dee7ad5b3204ff31874a2fd339411",
+    "reports/round6_score_alignment/P1B_USER_SMOKE_REVIEW_20260917.md": "0365a4c9779db70edb3238c0bb7f5a8d0335898aa045e75720d34f9558529fd0",
+    "round6_score_alignment/p1b/pilot_manifest.json": "e3f49ce8a13bf55e2142cc297a767c3e9ff7af73bea784656c41281917d55ec2",
+    "round6_score_alignment/p1b/README_annotation.md": "31a382c369e56e0ef6d70502fae42fe1bcc0d0b256b182be67bdf32ed45f1559"
+  },
+  "action_taken": "No new media was downloaded; no test video was opened; no 16:9 quality score was produced. Existing 16:9 geometry tests remain interface-only."
+}

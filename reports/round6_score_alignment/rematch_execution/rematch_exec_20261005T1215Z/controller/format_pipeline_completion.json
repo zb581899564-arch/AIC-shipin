@@ -1,0 +1,12 @@
+{
+  "stage": "STOP_FORMAT_CONTINUATION",
+  "checked_utc": "2026-10-05T20:02:57.907192+00:00",
+  "pid": 3404813,
+  "variant": "A_FORMAT_CONSTRAINED_RECOVERY_V1",
+  "formal_C_training_admitted": false,
+  "competition_upload_authorized": false,
+  "failure_type": "RuntimeError",
+  "failure": "owned job did not succeed: space",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/finish_format_recovery.py\", line 99, in <module>\n    space_resource=wait_resource('space')\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/finish_format_recovery.py\", line 52, in wait_resource\n    require(receipt['status']=='completed' and receipt['exit_code']==0 and receipt['stop_reason'] is None,\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/finish_format_recovery.py\", line 26, in require\n    if not ok:raise RuntimeError(message)\nRuntimeError: owned job did not succeed: space\n",
+  "candidate_not_accepted": true
+}

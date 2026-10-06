@@ -1,0 +1,161 @@
+{
+  "model_dir": "/home/inspur/aic_video_work/orarl_round1/model/Video-ORA-4B",
+  "revision": "01850297d5ab2adaaf130f700ed7cec52993d956",
+  "orarl_commit": "e1ec91ff00f59ee0da04d285938c1f7247daa69c",
+  "files": [
+    {
+      "file": "chat_template.jinja",
+      "size": 7756,
+      "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+    },
+    {
+      "file": "config.json",
+      "size": 2821,
+      "sha256": "eaad50dcf9c3594baaa771e9a891a904eba64d97994f9ffbf0b3096d85732986"
+    },
+    {
+      "file": "generation_config.json",
+      "size": 213,
+      "sha256": "252e0efee3ded327704912616f3493a227cdc39eb4bab52fcae1ceb3ed5dc890"
+    },
+    {
+      "file": "model-00001-of-00005.safetensors",
+      "size": 1271398528,
+      "sha256": "c76539c8db29c9a48dacbb2d92db040a6d19e47ff2ae1af0f6ef9f945e01c8fa"
+    },
+    {
+      "file": "model-00002-of-00005.safetensors",
+      "size": 2474053512,
+      "sha256": "5aef3f77725e8971a9320ae5b326f36d91fa4525073029a9dfa9d2ac9cb23615"
+    },
+    {
+      "file": "model-00003-of-00005.safetensors",
+      "size": 2472678384,
+      "sha256": "1fa049729c02e2e5ad9c61eb033f6a95fcc6c8e83e083259c2f5c2cb0caa0b0f"
+    },
+    {
+      "file": "model-00004-of-00005.safetensors",
+      "size": 2477924456,
+      "sha256": "73f9d3f7d2bd18d15a486352dd5deb0f3d0eefa7e9fae9b7b11809940526f222"
+    },
+    {
+      "file": "model-00005-of-00005.safetensors",
+      "size": 1653963896,
+      "sha256": "0efef653624c683615049e9dfbe122bdc675a388f8c21a2a0160e532b6b8e884"
+    },
+    {
+      "file": "model.safetensors.index.json",
+      "size": 66259,
+      "sha256": "9b31d78ed5f516dd872b7af81fe845c0451c0cd736e166ac85d2bc87be5abfc3"
+    },
+    {
+      "file": "processor_config.json",
+      "size": 1191,
+      "sha256": "d89ef49ce9cd37fbf510158e13c1ef063d9286411c1ec9049932dbe0487143b1"
+    },
+    {
+      "file": "tokenizer.json",
+      "size": 19989343,
+      "sha256": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4"
+    },
+    {
+      "file": "tokenizer_config.json",
+      "size": 1139,
+      "sha256": "e98f1901ac6f0adff67b1d540bfa0c36ac1a0cf59eb72ed78146ef89aafa1182"
+    }
+  ],
+  "index_check": {
+    "present": true,
+    "weight_map_entries": 724,
+    "shards": {
+      "model-00001-of-00005.safetensors": {
+        "present": true,
+        "keys_in_index": 1,
+        "keys_in_header": 1,
+        "missing_from_header": [],
+        "extra_in_header": [],
+        "dtypes": {
+          "BF16": 1
+        },
+        "param_count": 635699200
+      },
+      "model-00002-of-00005.safetensors": {
+        "present": true,
+        "keys_in_index": 78,
+        "keys_in_header": 78,
+        "missing_from_header": [],
+        "extra_in_header": [],
+        "dtypes": {
+          "BF16": 78
+        },
+        "param_count": 1237021632
+      },
+      "model-00003-of-00005.safetensors": {
+        "present": true,
+        "keys_in_index": 141,
+        "keys_in_header": 141,
+        "missing_from_header": [],
+        "extra_in_header": [],
+        "dtypes": {
+          "BF16": 141
+        },
+        "param_count": 1236329984
+      },
+      "model-00004-of-00005.safetensors": {
+        "present": true,
+        "keys_in_index": 150,
+        "keys_in_header": 150,
+        "missing_from_header": [],
+        "extra_in_header": [],
+        "dtypes": {
+          "BF16": 150
+        },
+        "param_count": 1238952448
+      },
+      "model-00005-of-00005.safetensors": {
+        "present": true,
+        "keys_in_index": 354,
+        "keys_in_header": 354,
+        "missing_from_header": [],
+        "extra_in_header": [],
+        "dtypes": {
+          "BF16": 354
+        },
+        "param_count": 826961472
+      }
+    },
+    "total_params": 5174964736
+  },
+  "weights_byte_identical_to_published": true,
+  "interpretation": "Byte-level identity to the published revision is verified. This does NOT prove the checkpoint loads or runs; that is verified separately by the GPU inference run.",
+  "source": {
+    "path": "/home/inspur/aic_video_work/orarl_round1/src/OraRL",
+    "head": "e1ec91ff00f59ee0da04d285938c1f7247daa69c",
+    "dirty": false,
+    "expected_commit": "e1ec91ff00f59ee0da04d285938c1f7247daa69c",
+    "commit_match": true
+  },
+  "hardware": {
+    "gpu": "NVIDIA RTX 6000 Ada Generation, 570.144, 46068 MiB",
+    "compute_apps": "",
+    "fs_free_bytes": 154338222080,
+    "work_root_bytes": 39928741888
+  },
+  "budget": {
+    "records": 26,
+    "charged_seconds": 35333.91261576209,
+    "budget_seconds": 86400,
+    "remaining_seconds": 51066.08738423791,
+    "active_job_present": false
+  },
+  "admission": {
+    "weights_verified": true,
+    "disk_within_project_limits": true,
+    "gpu_idle": true,
+    "budget_available": true,
+    "no_active_gpu_job": true,
+    "framework_gpu_check": "deferred to budgeted GPU run (not probed here)",
+    "admitted": true
+  },
+  "checked_utc": "2026-09-15T15:40:20Z"
+}

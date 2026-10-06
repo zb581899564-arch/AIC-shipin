@@ -1,0 +1,39 @@
+{
+  "status": "PASS_SYNTHETIC_MAC_LOWRES_8B_INFERENCE",
+  "input_tokens": 1296,
+  "input_shape": [
+    64,
+    1080,
+    1920,
+    3
+  ],
+  "inference_limit": 6144,
+  "training_limit_unchanged": 6144,
+  "video_pixels_per_frame": 32768,
+  "peak_memory_allocated_mib": 17170.2548828125,
+  "wall_seconds": 55.19107040669769,
+  "logical_parameters": 8782459120,
+  "base_hash": {
+    "sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+    "parameters": 8767123696,
+    "method": "sorted canonical names and all unique frozen parameter bytes"
+  },
+  "selected_scores_finite": true,
+  "relocation": {
+    "status": "PASS_MAC_ADAPTER_CUDA_RELOCATION",
+    "tensors": 288,
+    "targets": 144,
+    "logical_parameters": 8782459120,
+    "byte_equal": true,
+    "base_hash": {
+      "sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+      "parameters": 8767123696,
+      "method": "sorted canonical names and all unique frozen parameter bytes"
+    },
+    "base_sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59"
+  },
+  "synthetic_pixels_only": true,
+  "contest_media_read": false,
+  "quality_claim": false,
+  "uploaded": false
+}

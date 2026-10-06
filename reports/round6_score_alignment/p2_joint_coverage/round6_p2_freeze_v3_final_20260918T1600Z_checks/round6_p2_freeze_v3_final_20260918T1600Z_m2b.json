@@ -1,0 +1,246 @@
+{
+  "schema": "aic6_p2_m2b_boundary_cases_v1",
+  "run_id": "round6_p2_freeze_v3_final_20260918T1600Z_m2b",
+  "official_status": "NOT_OFFICIAL_SCORE",
+  "counts": {
+    "total": 16,
+    "pass": 16,
+    "fail": 0
+  },
+  "cases": [
+    {
+      "case": "endpoint_full_clip",
+      "pass": true,
+      "detail": {
+        "n": 300,
+        "first": 0,
+        "last": 299
+      }
+    },
+    {
+      "case": "endpoint_single_frame_interval",
+      "pass": true,
+      "detail": {
+        "frames": [
+          0
+        ]
+      }
+    },
+    {
+      "case": "endpoint_subframe_tail_below_one_frame_is_empty",
+      "pass": true,
+      "detail": {
+        "frames": []
+      }
+    },
+    {
+      "case": "endpoint_halfopen_last_frame_only",
+      "pass": true,
+      "detail": {
+        "frames": [
+          299
+        ]
+      }
+    },
+    {
+      "case": "endpoint_legacy_round_inclusive_last_frame",
+      "pass": true,
+      "detail": {
+        "frames": [
+          299
+        ]
+      }
+    },
+    {
+      "case": "duplicate_selection_deduped",
+      "pass": true,
+      "detail": {
+        "SAME_FRAME": 1,
+        "SHOT_NEAREST": 0,
+        "NEEDS_INFERENCE": 0,
+        "UNRESOLVABLE": 0
+      }
+    },
+    {
+      "case": "shot_boundary_blocks_reuse",
+      "pass": true,
+      "detail": {
+        "rows": [
+          {
+            "frame": 35,
+            "state": "SHOT_NEAREST",
+            "box": [
+              0,
+              0,
+              50
+            ],
+            "source_frame": 30,
+            "distance": 5,
+            "shot": [
+              0,
+              40
+            ],
+            "crosses_shot_boundary": false,
+            "note": "nearest box within the declared shot and the declared gap limit"
+          },
+          {
+            "frame": 39,
+            "state": "SHOT_NEAREST",
+            "box": [
+              0,
+              0,
+              50
+            ],
+            "source_frame": 30,
+            "distance": 9,
+            "shot": [
+              0,
+              40
+            ],
+            "crosses_shot_boundary": false,
+            "note": "nearest box within the declared shot and the declared gap limit"
+          },
+          {
+            "frame": 41,
+            "state": "NEEDS_INFERENCE",
+            "box": null,
+            "source_frame": null,
+            "distance": 0,
+            "shot": [
+              40,
+              100
+            ],
+            "crosses_shot_boundary": false,
+            "note": "inside a declared shot that contains no source frame"
+          }
+        ]
+      }
+    },
+    {
+      "case": "missing_source_unresolvable_not_centercrop",
+      "pass": true,
+      "detail": {
+        "rows": [
+          {
+            "frame": 7,
+            "state": "UNRESOLVABLE",
+            "box": null,
+            "source_frame": null,
+            "distance": 0,
+            "shot": null,
+            "crosses_shot_boundary": false,
+            "note": "no box source declared for this video"
+          }
+        ]
+      }
+    },
+    {
+      "case": "no_shot_info_needs_inference",
+      "pass": true,
+      "detail": {
+        "rows": [
+          {
+            "frame": 7,
+            "state": "NEEDS_INFERENCE",
+            "box": null,
+            "source_frame": null,
+            "distance": 0,
+            "shot": null,
+            "crosses_shot_boundary": false,
+            "note": "no shot declared; unbounded copying refused"
+          }
+        ]
+      }
+    },
+    {
+      "case": "geometry_9x16_168_legal",
+      "pass": true,
+      "detail": {
+        "h": 298.6666666666667
+      }
+    },
+    {
+      "case": "geometry_9x16_169_rejected",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "case": "geometry_16x9_720x405_legal",
+      "pass": true,
+      "detail": {
+        "h": 405.0,
+        "y_plus_h": 1280.0
+      }
+    },
+    {
+      "case": "compose_legal_empty_is_success",
+      "pass": true,
+      "detail": {
+        "status": "OK_DELIVERABLE",
+        "totals": {
+          "videos": 1,
+          "frames_selected": 0,
+          "resolved_frames": 0,
+          "needs_spatial_inference": 0,
+          "same_frame": 0,
+          "shot_nearest": 0,
+          "legacy_nearest": 0,
+          "empty_windows": 1,
+          "invalid_windows": 0,
+          "empty_videos": 1,
+          "videos_with_gaps": 0
+        }
+      }
+    },
+    {
+      "case": "compose_invalid_stays_failed",
+      "pass": true,
+      "detail": {
+        "status": "FAILED_INVALID_WINDOWS"
+      }
+    },
+    {
+      "case": "compose_all_frames_need_inference",
+      "pass": true,
+      "detail": {
+        "status": "NOT_DELIVERABLE_NEEDS_SPATIAL_INFERENCE",
+        "totals": {
+          "videos": 1,
+          "frames_selected": 60,
+          "resolved_frames": 0,
+          "needs_spatial_inference": 60,
+          "same_frame": 0,
+          "shot_nearest": 0,
+          "legacy_nearest": 0,
+          "empty_windows": 0,
+          "invalid_windows": 0,
+          "empty_videos": 0,
+          "videos_with_gaps": 1
+        }
+      }
+    },
+    {
+      "case": "loader_duplicate_counted_out_of_range_reported",
+      "pass": true,
+      "detail": {
+        "validation": {
+          "rows_ok": false,
+          "issues": [
+            {
+              "line": 1,
+              "code": "FRAME_OUT_OF_RANGE",
+              "detail": "9:400"
+            }
+          ],
+          "n_issue_codes": 1
+        },
+        "n_pred": 3,
+        "duplicates": {
+          "9": 1
+        }
+      }
+    }
+  ],
+  "python": "3.11.7",
+  "elapsed_seconds": 0.0
+}

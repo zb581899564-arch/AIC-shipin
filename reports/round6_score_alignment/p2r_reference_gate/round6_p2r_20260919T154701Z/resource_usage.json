@@ -1,0 +1,19 @@
+{
+  "schema": "p2r_resource_usage_v1",
+  "gpu_seconds": 0,
+  "models_loaded": 0,
+  "training_runs": 0,
+  "inference_runs": 0,
+  "competition_test_media_opened": 0,
+  "weak_holdout_opened_for_quality": 0,
+  "weak_holdout_label_payloads_parsed_by_initial_superseded_structural_audit": 64,
+  "weak_holdout_media_opened": 0,
+  "download_bytes": 363946070,
+  "snapshot_bytes": 52413,
+  "run_directory_bytes_before_freeze": 365427005,
+  "code_bytes": 58910,
+  "p2r_disk_limit_bytes": 2147483648,
+  "accounted_cpu_heavy_wall_seconds": 6.6,
+  "cpu_note": "sum of recorded wall times for audit/build/leakage/tests/rebuild/finalizer; network transfer and light hashing are excluded",
+  "limits_respected": true
+}

@@ -1,0 +1,30 @@
+{
+  "status": "PASS_TEST_ENGINEERING",
+  "official_status": "NOT_SCORED_NOT_UPLOADED",
+  "videos": 174,
+  "videos_with_empty_predictions": 0,
+  "selected_frames": 36345,
+  "composed_frames": 36345,
+  "anchor_calls": 5065,
+  "shots": 398,
+  "call_reduction": 0.8606410785527583,
+  "missing": 0,
+  "extra": 0,
+  "illegal": 0,
+  "cross_shot_reuse": 0,
+  "silent_fallbacks": 0,
+  "weak_roi_inputs_used": 0,
+  "old_test_boxes_used": 0,
+  "source_counts": {
+    "QWEN_ANCHOR_SAME_FRAME": 5065,
+    "SHOT_LINEAR_INTERPOLATION": 31280
+  },
+  "selected_sha256": "d729d3287343dd89a13252b2744ba6e254e8d127331372975cb7241a9fb0356e",
+  "shots_sha256": "b895637865c2a6270282e483c52e7dc6d5d8eb6494bcf3624461176d7023e14b",
+  "anchors_sha256": "63f8dd973eabd5261f7e587d9cb75de61ff137e0b79ebd12c3e50472725ef4cd",
+  "anchor_output_sha256": "ecc1d7d6295e88ca3603d490ae1eeb9945a5ee2ca7456c5af1a10b64af1705f6",
+  "metadata_sha256": "7f38d3f7f29b7fc5d91a9762ecfea00e6fc84b583bf11b439ba4a853bf1ec428",
+  "predictions_sha256": "7b65d3f65ad9a75819e1b181fdd0bb297ca9c63970f519919bb31882e3396bc3",
+  "provenance_sha256": "0200d3221f51786fc61df670fc77df25a8ae35b922b715583a41705310b73a2f",
+  "violations": []
+}

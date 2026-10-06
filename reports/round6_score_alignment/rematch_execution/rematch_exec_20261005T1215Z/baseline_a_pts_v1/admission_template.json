@@ -1,0 +1,21 @@
+{
+  "variant": "A_NATIVE_PTS_COMPAT_V1",
+  "stage": "A_PTS_NONTEST_E2E",
+  "authorized": false,
+  "manifest_sha256": "MAIN_FILL_VERIFIED_MANIFEST_SHA256",
+  "clock_registry_sha256": "MAIN_FILL_VERIFIED_REGISTRY_SHA256",
+  "source_lock_sha256": "86fc0da7cf631a2afe33c54fb5b66246bba88adfd95c1d8ce80ccbf73522d70d",
+  "run_dir": "MAIN_FILL_EXACT_NEW_LINUX_RUN_DIRECTORY",
+  "resource_preflight_pass": false,
+  "shared_gpu_queue_approved": false,
+  "disk_peak_within_80gib": false,
+  "budget_runner_required": true,
+  "allowed_stages": [],
+  "space_inference_admitted": false,
+  "non_test_e2e_pass": false,
+  "synthetic_processor_pass": false,
+  "synthetic_decoder_pass": false,
+  "non_test_evidence_sha256": null,
+  "synthetic_processor_evidence_sha256": null,
+  "synthetic_decoder_evidence_sha256": null
+}

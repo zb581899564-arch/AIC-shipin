@@ -1,0 +1,36 @@
+{
+  "files": [
+    {
+      "sha256": "0e18b306d75df10e4af5f794d19c69f0deb09585893a5452738acdd570e9b784",
+      "path": "pts_contract.py"
+    },
+    {
+      "sha256": "30d4012a34646b59c56a8d77ecd7807cd13845dfe63ab3f70259902e560ed6b1",
+      "path": "exact_pts.py"
+    },
+    {
+      "sha256": "f2fd7900d1862a2e25fd42af6554888c5b9b7e31a8340bccdcbe9444447bedbf",
+      "path": "native_frames.py"
+    },
+    {
+      "sha256": "2a34da6c76e7d76fd974518c385991968e64115701f1bbf8643a9134842c3f57",
+      "path": "run_pts.py"
+    },
+    {
+      "sha256": "016e6f1186b8fdfe93216c4a0fb1de14a2917e667bcfb842241f576d6a98f8e0",
+      "path": "infer_temporal_pts.py"
+    },
+    {
+      "sha256": "b71dceee4209752b4b3cd70be36379800abc486768cbff62a4ef87b1bfb77d7a",
+      "path": "detect_shots_pts.py"
+    },
+    {
+      "sha256": "c3baa687c6e37173a1856967b61c1ff794df7892e01dabc6c77afa32fc0cec4f",
+      "path": "infer_anchors_pts.py"
+    }
+  ],
+  "variant": "A_NATIVE_PTS_COMPAT_V1",
+  "schema": "aic_a_native_pts_source_lock_v1",
+  "revision": 4,
+  "supersedes_source_lock_sha256": "94938aca8c47ad02068bebe9c8bfdb34e3219872bfe83d418fb3f48fc55eb0ee"
+}

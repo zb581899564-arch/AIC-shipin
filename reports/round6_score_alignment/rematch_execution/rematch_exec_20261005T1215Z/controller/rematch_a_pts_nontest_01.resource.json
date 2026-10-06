@@ -1,0 +1,38 @@
+{
+  "name": "rematch_a_pts_nontest_01",
+  "command": [
+    "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+    "-B",
+    "-u",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/execute_registered_a_pts.py",
+    "--admission",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/a_pts_nontest_01.admission.json"
+  ],
+  "started_utc": "2026-10-05T15:25:33.749838+00:00",
+  "runner_pid": 3288135,
+  "reserved_seconds": 1800,
+  "teardown_reserve_seconds": 120,
+  "prior_charged_seconds": 73670.69336578296,
+  "gpu_time_mode": "UNLIMITED",
+  "max_total_gpu_seconds": null,
+  "resource_policy_sha256": "74f15dc694428d5d421d58c6d790560ee6e8d86fc8847db6625b14fbeb38e8c6",
+  "disk_before": {
+    "free_bytes": 231015206912,
+    "work_bytes": 50193231872
+  },
+  "planned_output_bytes": 268435456,
+  "capacity_reason": "same frozen eight CFR non-test sources; prior actual 396 selected frames and 68 anchors, new JSONL and ZIP only",
+  "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+  "runner_source_sha256": "0cddca5f85a2a885ee2ac50e9193819b58dead39b6b561a30cb1c97f192ca961",
+  "child_pid": 3288139,
+  "finished_utc": "2026-10-05T15:26:45.151739+00:00",
+  "charged_seconds": 71.40200602822006,
+  "exit_code": 1,
+  "stop_reason": null,
+  "sampled_peak_memory_mib": 10886,
+  "status": "failed",
+  "disk_after": {
+    "free_bytes": 231014952960,
+    "work_bytes": 50193408000
+  }
+}

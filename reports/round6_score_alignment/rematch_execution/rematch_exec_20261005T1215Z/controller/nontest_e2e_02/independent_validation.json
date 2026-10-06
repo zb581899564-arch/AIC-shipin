@@ -1,0 +1,35 @@
+{
+  "status": "PASS_INDEPENDENT_STRICT_VALIDATION",
+  "official_status": "NOT_SCORED_NOT_UPLOADED",
+  "checks": {
+    "strict_loader_ok": true,
+    "video_record_set_exact": true,
+    "selected_key_set_exact": true,
+    "ratio_fields_exact": true,
+    "frames_sorted": true,
+    "provenance_key_set_exact": true,
+    "provenance_boxes_match_predictions": true,
+    "provenance_all_legal": true,
+    "provenance_sources_allowed": true,
+    "archive_single_file": true,
+    "archive_roundtrip_exact": true
+  },
+  "strict_loader_issues": [],
+  "video_records": 8,
+  "expected_frames": 396,
+  "prediction_frames": 396,
+  "duplicate_frames": 0,
+  "missing": 0,
+  "extra": 0,
+  "ratios": {
+    "16:9": 0,
+    "9:16": 8
+  },
+  "strict_loader_sha256": "34ea6d198acba95a8651d687be84ccbc2281039083a560fa122ec42c101d84c9",
+  "predictions_sha256": "607392e7b2f60743ef841661cf84a3d560c8e570ca93bc674f2c6450c89fbb43",
+  "provenance_sha256": "1ea2d03078c517ed9c61d8172e5d1f3433191d8d72b7ea6f70b90b4f111b547e",
+  "zip_sha256": "f1c200f92b716e72350b7a3d00fb681a4df3a72ac34cd873c1bf7f393637541c",
+  "archive_names": [
+    "predictions.jsonl"
+  ]
+}

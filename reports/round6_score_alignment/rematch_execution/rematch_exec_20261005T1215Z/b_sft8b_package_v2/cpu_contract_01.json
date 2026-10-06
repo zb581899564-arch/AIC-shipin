@@ -1,0 +1,54 @@
+{
+  "status": "PASS_CPU_CONTRACT",
+  "cases": 11,
+  "results": [
+    {
+      "name": "actual Windows six-digit timestamp accepted by Linux Python",
+      "passed": true
+    },
+    {
+      "name": "bounded positive sorted interval",
+      "passed": true
+    },
+    {
+      "name": "end beyond source rejected",
+      "passed": true
+    },
+    {
+      "name": "no empty fallback",
+      "passed": true
+    },
+    {
+      "name": "overlap rejected",
+      "passed": true
+    },
+    {
+      "name": "six segments rejected",
+      "passed": true
+    },
+    {
+      "name": "gap consumed from ordinal zero",
+      "passed": true
+    },
+    {
+      "name": "same-frame expected SHA enforced",
+      "passed": true
+    },
+    {
+      "name": "backward ordinal rejected",
+      "passed": true
+    },
+    {
+      "name": "pixel mismatch rejected",
+      "passed": true
+    },
+    {
+      "name": "unchanged PTS/frame/strict serialization regression",
+      "passed": true
+    }
+  ],
+  "original_contract_sha256": "2ee3475687e5f0ad2fe6870a3142361d45f366f4e6b90e0509d6960fcfb241cb",
+  "test_sha256": "77ff83a835ce35be0e97324baf5f8a58143dceec287c79011cf7a45881cc5863",
+  "test_media_read": false,
+  "models_loaded": false
+}

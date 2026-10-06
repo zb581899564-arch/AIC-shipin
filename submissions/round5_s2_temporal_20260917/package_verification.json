@@ -1,0 +1,22 @@
+{
+  "status": "PACKAGED_LOCAL_FORMAT_VALIDATED_PENDING_OFFICIAL_SCORE",
+  "created_utc": "2026-09-16T19:20:55Z",
+  "videos": 174,
+  "temporal_windows": 203,
+  "invalid_temporal_windows": 0,
+  "frame_predictions": 40568,
+  "validation_errors": 0,
+  "validation_warnings": 0,
+  "nearest_old_spatial_boxes": 3243,
+  "selected_arm": "S2_WARM",
+  "selected_checkpoint": "epoch_3",
+  "calibration_factor": 1.0,
+  "adapter_sha256": "6cb2ac3b4336934eaf31e1bc35fc36b9e3e5f6ce1278f710602d7664decf7a9f",
+  "old_spatial_sha256": "a81a711878ffcd68db84dba4b530c4c051cd10cd82b1b4929f35bd06853ef471",
+  "temporal_raw_sha256": "3bc0fc59af87fc8542793e4419889b4cdf86a63c56e9c02c7ea19fdb1109cf72",
+  "prediction_sha256": "f8f026a69c8f9fa676dd31a6ffcd375569842c59f4cb6fdcd8d4ced5d86cf3ef",
+  "archive_sha256": "e5df99b8c3d32ec6d495ef1aada2b869478f307884ebeedca3df76def36c3584",
+  "archive_bytes": 153764,
+  "archive_entry": "predictions.jsonl",
+  "archive": "G:\\ai\\AIC视频\\submissions\\round5_s2_temporal_20260917\\aic-round5-s2-temporal-20260917.zip"
+}

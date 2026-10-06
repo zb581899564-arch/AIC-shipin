@@ -1,0 +1,67 @@
+{
+  "run_id": "round6_p2final_20260920T132906Z",
+  "supersedes": "input_freeze_v2.json",
+  "reason": "targeted random-seek frame identity repair only",
+  "prior_anchor_output_sha256": "eb4e8704bc0c6882ebe545430b0722a2224054a2d0b935866cc15d4cd20f26d9",
+  "registered_failure": "154 DECODE_OR_MODEL_FAILURE rows, all decoded frame identity changed, model not called",
+  "recovery_contract": [
+    "preserve 4911 valid rows unchanged",
+    "sequentially decode exact 154 failed frames",
+    "require expected pixel hash before model call",
+    "same baseline model prompt parser and box logic",
+    "no fallback or test tuning"
+  ],
+  "code": [
+    {
+      "path": "build_anchors.py",
+      "sha256": "579eb1fe307c4b86936657396fb25c7b21ea2dbf1221cd99efbedbd4e8c46e4a",
+      "bytes": 2737
+    },
+    {
+      "path": "build_selected_test.py",
+      "sha256": "16b1588366b42b861fb98c90e7a152d44f482f003b39b5365f92f1ca5c1953d1",
+      "bytes": 4935
+    },
+    {
+      "path": "compose_test_candidate.py",
+      "sha256": "2764963bf394a928caf75436957ff745618b57841c718b2d633bc3507225037a",
+      "bytes": 6273
+    },
+    {
+      "path": "detect_shots_sequential.py",
+      "sha256": "995df4750c691939d144982c7ee73684f2f863188af946411f0b6a3bc3771b29",
+      "bytes": 5029
+    },
+    {
+      "path": "infer_temporal_test.py",
+      "sha256": "70caee0ed2a757eee2a35b3f71356a2d5e49067250177ed94354b2830f1be02e",
+      "bytes": 6999
+    },
+    {
+      "path": "p2j_core.py",
+      "sha256": "db660d8afe562f56ade048fc3de57c83354308ce2ca7e12856010b6341d80e6c",
+      "bytes": 7087
+    },
+    {
+      "path": "prepare_identity_retry.py",
+      "sha256": "dd474106e3a0310876a7a233c1a73aa336d7e75843db4db018b77364154ebe5c",
+      "bytes": 5564
+    },
+    {
+      "path": "remote_infer_anchors.py",
+      "sha256": "27f6845b87725413c2c95f77b4aa8d98a97ab7a48d778901dc312d7471bf0bc3",
+      "bytes": 5731
+    },
+    {
+      "path": "retry_identity_failures.py",
+      "sha256": "0f31b9d113a9deaa2423a0d9678c7a52bb6fab8832e8baac901a9481155c78f5",
+      "bytes": 6465
+    },
+    {
+      "path": "validate_and_package.py",
+      "sha256": "fed7bfda1ddd7d6797dbd6c37b03073dbe07f65c274fca2f6ca9cee302feda1b",
+      "bytes": 5181
+    }
+  ],
+  "frozen_utc": "2026-09-20T15:28:31.4100944Z"
+}

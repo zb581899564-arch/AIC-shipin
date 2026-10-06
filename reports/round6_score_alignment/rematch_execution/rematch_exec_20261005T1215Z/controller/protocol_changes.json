@@ -1,0 +1,144 @@
+{
+  "schema": "aic_rematch_engineering_changes_v1",
+  "run_id": "rematch_exec_20261005T1215Z",
+  "formal_supervision_gate": "STOP_C_FORMAL_BCE_UNKNOWN_NEGATIVE_SEMANTICS",
+  "changes": [
+    {
+      "stage": "A_NONTEST_E2E",
+      "attempts": [
+        "01",
+        "02",
+        "03",
+        "04"
+      ],
+      "reason": "Complete deployment before launch; initialize torch/CUDA before decord to avoid random_device initialization failure.",
+      "algorithm_config_changed": false,
+      "accepted_attempt": "04",
+      "prior_failure_evidence_preserved": true
+    },
+    {
+      "stage": "C_SYNTHETIC_ENGINEERING_PROBE",
+      "attempts": [
+        "01",
+        "02"
+      ],
+      "reason": "Identical masked-label losses but differing gradients; diagnose backend using same-label repeat control, then exact comparison with deterministic math SDPA and fixed RNG.",
+      "default_same_label_different_tensors": 268,
+      "default_same_label_max_abs_gradient_difference": 0.0002334490418434143,
+      "masked_acceptance_tolerance": "none; exact elementwise equality",
+      "base_revision_or_training_hyperparameters_changed": false,
+      "accepted_attempt": "02",
+      "prior_failure_evidence_preserved": true
+    },
+    {
+      "stage": "M0_INPUT_MANIFEST",
+      "reason": "All426 extraction and metadata completed, but deployed contract was older than approved metadata-only role. Recheck source hashes and approved fields into a new manifest without re-extracting media.",
+      "accepted_attempt": "m0_finalize_01",
+      "prior_reports_or_media_modified": false
+    },
+    {
+      "stage": "SOURCE_PTS_IDENTITY",
+      "reason": "Source18 raw ffprobe firstPTS=0.046s while Decord frame0=0s; investigate and explicitly bind source-relative origin before mapping frames.",
+      "quality_parameters_changed": false,
+      "one_frame_cfr_tolerance_may_be_relaxed": false,
+      "inference_allowed_before_identity_gate": false
+    },
+    {
+      "stage": "C_32S_COST_ENGINEERING_ONLY",
+      "source_manifest_sha256": "7b3e187451eb15f80647b4441a4a41f030f4be1438a95ef5b7982a53554f153a",
+      "fixed_source_video_id": "qvh_000056_9x16",
+      "source_relative_window_seconds": [
+        0,
+        32
+      ],
+      "original_short_A_scope_used": false,
+      "scope_override_authority": "main supervisor under user execute-the-plan authorization, non-test engineering cost only",
+      "labels": "synthetic targets only; no semantic labels read",
+      "purpose": "actual source-frame PTS/processor identity and 32s backward/update cost; no formal training or quality evaluation"
+    },
+    {
+      "stage": "A_NATIVE_PTS_COMPAT_V1_ENGINEERING",
+      "reason": "Complete426 numeric metadata audit: 10 sources exceed unchanged CFR gate but native Decord/all-frame binding matches; 2 coarse-tick CFR sources were over-blocked by float/tick conflation. Preserve old A and v3 failures; separate exact clock identity from CFR eligibility and make a distinct A-PTS compatibility variant.",
+      "prior_receipt_sha256": "efcb86a8435523e53c17e86eedc9506e134b9571a84acdd0ebf5e8af8d17bff5",
+      "native_non_cfr_sources": [
+        "55",
+        "69",
+        "78",
+        "79",
+        "94",
+        "97",
+        "102",
+        "107",
+        "122",
+        "159"
+      ],
+      "coarse_tick_cfr_sources": [
+        "80",
+        "161"
+      ],
+      "source_set_may_change": false,
+      "source_bytes_may_change": false,
+      "old_cfr_tolerance_may_change": false,
+      "model_prompt_threshold_space_rules_may_change": false,
+      "cfr_branch": "preserve frozen old A",
+      "native_branch": "bound native PTS windows, processor timestamps and source-frame mapping; endpoint must be evidenced",
+      "new_inference_allowed_before_regressions_and_supervisor_admission": false,
+      "formal_C_gate": "STOP_C_FORMAL_BCE_UNKNOWN_NEGATIVE_SEMANTICS"
+    },
+    {
+      "stage": "NATIVE_PTS_ENDPOINT_AUTHORITY",
+      "reason": "Numeric supplement shows container header duration disagrees with native final presentation PTS plus packet duration in six sources. Define native branch endpoint from all-frame original integer PTS/packet duration bound to Decord actual ends; retain header differences as diagnostic rather than fabricate equality.",
+      "endpoint_authority": "NATIVE_LAST_FRAME_PACKET_AND_DECORD_END",
+      "header_duration_used_for_native_window_endpoint": false,
+      "exact_native_end_binding_required": true,
+      "cfr_old_endpoint": "unchanged n_frames/fps",
+      "semantic_labels_or_model_results_used": false,
+      "input_set_or_bytes_changed": false,
+      "metadata_summary": "controller/native_endpoint_metadata_summary.json"
+    },
+    {
+      "stage": "A_PTS_ACTUAL_PROCESSOR_SINGLE_FRAME",
+      "reason": "Installed Qwen3VL fast processor accepts 3,63,64 synthetic physical frames but rejects a single physical frame before timestamp padding (t:1 must be larger than temporal_factor:2). Preserve failed attempt; repair explicit same-last-frame padding or keep explicit STOP, without changing physical frame identity/time or other source quality rules.",
+      "failed_receipt_sha256": "2dd16247a3483b06e1cba96cf09a9189f6e3f16304cc8abe64fce4bb589f6e37",
+      "failed_source_lock_sha256": "22db6136f977903530bff43145f1c81669ffc17b671cc400560d6a7aad5e816d",
+      "models_run": false,
+      "GPU_used": false,
+      "previous_runtime_snapshot": "controller/a_pts_runtime_01.zip SHA256 33ad5bbb3cf8b728557fcb6d1bb08892410956320c0165ced2e647185bbc4148",
+      "prior_failure_evidence_preserved": true
+    },
+    {
+      "stage": "A_PTS_FRACTIONAL_TERMINAL_REPRESENTATION",
+      "reason": "Synthetic duration739/60 with segment end12.3167 is accepted by old parser, which clips and then rounds4 back above the physical terminal; strict native selection rejects it. Native-only wrapper will reconcile only the rounded physical terminal with an explicit representation event; unchanged CFR parser/path.",
+      "model_or_semantic_label_results_used": false,
+      "original_parser_input_tolerance_changed": false,
+      "arbitrary_invalid_endpoint_tolerance_may_expand": false,
+      "previous_runtime_receipts_preserved": true,
+      "newly_registered_before_rematch_model_inference": true
+    },
+    {
+      "rematch_inference_not_admitted": true,
+      "quality_parameters_changed": false,
+      "reason": "Revision03 passed actual processor and marker decoder tests, but complete NONTEST8 stops in the shot CLI because a local sha lambda shadows the imported sha before manifest verification. Preserve failed run and snapshot; smallest repair with complete CLI path regression required.",
+      "stage": "A_PTS_NONTEST_SHOT_CLI_RUNTIME",
+      "failed_source_lock_sha256": "94938aca8c47ad02068bebe9c8bfdb34e3219872bfe83d418fb3f48fc55eb0ee",
+      "prior_failure_evidence_preserved": true,
+      "failed_job": "rematch_a_pts_nontest_01"
+    },
+    {
+      "prior_failure_evidence_preserved": true,
+      "models_prompts_thresholds_changed": false,
+      "reason": "Only remove the local sha shadowing assignment; final NONTEST8 predictions and provenance match original A byte for byte. ZIP member timestamps differ between runs, so compare scientific payload bytes and each new archive whole SHA/CRC rather than requiring the historical ZIP container hash.",
+      "non_test_e2e_pass": true,
+      "stage": "A_PTS_NONTEST_REVISION04_ACCEPTANCE",
+      "source_lock_sha256": "86fc0da7cf631a2afe33c54fb5b66246bba88adfd95c1d8ce80ccbf73522d70d"
+    },
+    {
+      "rejection_before_framework_import": true,
+      "native_timing_tolerance_changed": false,
+      "input_bytes_or_source_set_changed": false,
+      "reason": "Strict rematch admission initially refused two native scope_end values (source78 and102) because the old complete-source manifest uses n/float(fps) while the legacy spatial projection uses n*den/num. Require those exact binary64 expressions explicitly only for native projected scope, keep all other source fields exact and native temporal scope bound to packet PTS.",
+      "stage": "A_PTS_SUPERVISOR_METADATA_PROJECTION",
+      "inference_started_before_fix": false
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "gpu_time_mode": "UNLIMITED",
+  "max_total_gpu_seconds": null,
+  "authorized_by": "user",
+  "authorized_at_utc": "2026-10-05T07:57:35Z",
+  "authorization_text": "GPU预算时间调整为无限制",
+  "scope": "/home/inspur/aic_video_work",
+  "ledger_initial_charge_seconds": 7200,
+  "added_disk_budget_gib": 80,
+  "preserve_frozen_experiment_protocols": true,
+  "preserve_shared_gpu_exclusivity": true,
+  "policy_run_id": "gpu_policy_unlimited_20261005T075735Z"
+}

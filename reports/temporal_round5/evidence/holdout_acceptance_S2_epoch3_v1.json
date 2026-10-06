@@ -1,0 +1,12 @@
+{
+  "accepted_utc": "2026-09-16T18:57:13Z",
+  "arm": "S2_WARM",
+  "checkpoint": "epoch_3",
+  "gate_report_sha256": "5d0ba9172846b2fa3c6bd3b8706b61864fdb1c10fc62aa4df2bd6074c57fde06",
+  "gate_pass_except_replay": true,
+  "replay_dev3_sha256": "fea2dbf54807288aff293105b28943be74b4d30631ceb472970e3660390204d6",
+  "replay_holdout3_sha256": "c3e30dff7c9826bc66e11c5785793e42fa1fd93026c0ad05052db7d9ec278f26",
+  "replay_exact_raw_output_and_segments": "3/3 dev, 3/3 holdout",
+  "final_acceptance": true,
+  "next_step": "automatic local AIC test inference under frozen protocol v2"
+}

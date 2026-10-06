@@ -1,0 +1,25 @@
+{
+  "baseline_sha256": "a522244712831e7fddc605bce73b083851b7353dac1ceb2a9e4f41b948733631",
+  "config_sha256": "137a60e3efae567794105bac8d2fcb4288c7d1b289ab4ad1d0a81e2ba11c5414",
+  "invalid": 0,
+  "manifest_sha256": "7b3e187451eb15f80647b4441a4a41f030f4be1438a95ef5b7982a53554f153a",
+  "model_hashes": {
+    "config.json": "edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d",
+    "model-00001-of-00002.safetensors": "30a01a0556622645a3cce87b655bbbbbc1f170c196099f1b666c93202c3339a9",
+    "model-00002-of-00002.safetensors": "046296a2a387efb43b0c997d5833c789604d168834f6e0d3064bf7bb13d002a6",
+    "model.safetensors.index.json": "58a7841d7bff2548dd91577d216274a83cf1b500bc6a534b809d6c1b1707cf2b",
+    "tokenizer.json": "a5d85b6dcc535e6b93115a9ef287e6132fdbf30270da6218194ba742261173c7"
+  },
+  "model_load_seconds": 7.669335457030684,
+  "old_test_boxes_used": 0,
+  "output_sha256": "de1050078d77ce653b103e738109fb2371522f5a0559751aadf87334861e6473",
+  "peak_memory_mib": 8534.25,
+  "requests_sha256": "91dd5dc5cfa07c9048777bcc4d68526e6a28df21f1059b240e91f6d7c5e0fdb0",
+  "rows": 68,
+  "silent_fallbacks": 0,
+  "stage": "spatial",
+  "status": "COMPLETED",
+  "uploaded": false,
+  "wall_seconds": 51.92380009405315,
+  "weak_roi_inputs_used": 0
+}

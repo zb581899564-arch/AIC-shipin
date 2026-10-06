@@ -1,0 +1,643 @@
+{
+  "status": "PRE_PTS_CANDIDATES_FROZEN",
+  "input_hashes": {
+    "labels": "7177731fb7af99e8581c0ec071d116cdb9e6652a6b2b355cd8100364a004c629",
+    "mapping": "a07a1ba0ea89e820311989b523ca85c87b65cb7b6381f8ff97d597e9994732fc"
+  },
+  "input_rows": {
+    "labels": 987,
+    "mapping": 987
+  },
+  "candidate_rows": 909,
+  "candidate_groups": 795,
+  "candidate_mapping_status": {
+    "usable": 817,
+    "time_uncertain": 92
+  },
+  "rejected_rows": 78,
+  "rejections": [
+    {
+      "row_index": 5,
+      "video_id": "qvh_000006_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 21,
+      "video_id": "qvh_000023_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 24,
+      "video_id": "qvh_000026_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 71,
+      "video_id": "qvh_000073_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 95,
+      "video_id": "qvh_000097_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 102,
+      "video_id": "qvh_000104_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 112,
+      "video_id": "qvh_000114_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 128,
+      "video_id": "qvh_000130_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 174,
+      "video_id": "qvh_000177_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 177,
+      "video_id": "qvh_000180_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 203,
+      "video_id": "qvh_000206_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 207,
+      "video_id": "qvh_000210_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 217,
+      "video_id": "qvh_000220_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 219,
+      "video_id": "qvh_000222_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 240,
+      "video_id": "qvh_000243_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 270,
+      "video_id": "qvh_000275_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 277,
+      "video_id": "qvh_000282_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 279,
+      "video_id": "qvh_000284_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 289,
+      "video_id": "qvh_000294_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 291,
+      "video_id": "qvh_000296_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 296,
+      "video_id": "qvh_000301_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 309,
+      "video_id": "qvh_000314_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 316,
+      "video_id": "qvh_000321_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 318,
+      "video_id": "qvh_000323_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 351,
+      "video_id": "qvh_000356_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 352,
+      "video_id": "qvh_000357_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 354,
+      "video_id": "qvh_000359_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 355,
+      "video_id": "qvh_000360_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 358,
+      "video_id": "qvh_000363_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 363,
+      "video_id": "qvh_000369_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 404,
+      "video_id": "qvh_000410_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 406,
+      "video_id": "qvh_000412_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 439,
+      "video_id": "qvh_000446_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 481,
+      "video_id": "qvh_000488_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 484,
+      "video_id": "qvh_000491_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 486,
+      "video_id": "qvh_000493_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 498,
+      "video_id": "qvh_000506_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 508,
+      "video_id": "qvh_000516_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 509,
+      "video_id": "qvh_000517_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 513,
+      "video_id": "qvh_000521_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 545,
+      "video_id": "qvh_000553_9x16",
+      "reasons": [
+        "segment_bounds:0"
+      ]
+    },
+    {
+      "row_index": 548,
+      "video_id": "qvh_000556_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 557,
+      "video_id": "qvh_000565_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 563,
+      "video_id": "qvh_000572_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 568,
+      "video_id": "qvh_000577_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 570,
+      "video_id": "qvh_000579_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 571,
+      "video_id": "qvh_000580_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 580,
+      "video_id": "qvh_000589_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 593,
+      "video_id": "qvh_000602_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 601,
+      "video_id": "qvh_000610_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 623,
+      "video_id": "qvh_000633_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 624,
+      "video_id": "qvh_000634_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 630,
+      "video_id": "qvh_000640_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 652,
+      "video_id": "qvh_000663_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 684,
+      "video_id": "qvh_000695_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 697,
+      "video_id": "qvh_000708_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 701,
+      "video_id": "qvh_000712_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 740,
+      "video_id": "qvh_000751_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 773,
+      "video_id": "qvh_000784_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 774,
+      "video_id": "qvh_000785_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 787,
+      "video_id": "qvh_000798_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 795,
+      "video_id": "qvh_000806_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 809,
+      "video_id": "qvh_000820_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 814,
+      "video_id": "qvh_000825_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 818,
+      "video_id": "qvh_000829_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 843,
+      "video_id": "qvh_000854_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 873,
+      "video_id": "qvh_000884_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 896,
+      "video_id": "qvh_000908_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 899,
+      "video_id": "qvh_000911_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 905,
+      "video_id": "qvh_000917_9x16",
+      "reasons": [
+        "segment_count:7"
+      ]
+    },
+    {
+      "row_index": 920,
+      "video_id": "qvh_000932_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 925,
+      "video_id": "qvh_000937_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 929,
+      "video_id": "qvh_000941_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 947,
+      "video_id": "qvh_000961_9x16",
+      "reasons": [
+        "segment_bounds:0"
+      ]
+    },
+    {
+      "row_index": 950,
+      "video_id": "qvh_000964_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 965,
+      "video_id": "qvh_000979_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 966,
+      "video_id": "qvh_000980_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    },
+    {
+      "row_index": 986,
+      "video_id": "qvh_001000_9x16",
+      "reasons": [
+        "mapping_status:missing",
+        "missing_source_path"
+      ]
+    }
+  ],
+  "candidate_manifest_sha256": "96dc1e4344c91f2c35707e628fd0e16cc46e890c1afa2ca3f592dbd97f9a60ca",
+  "policy": "WEAK_TEACHER temporal-only candidates; PTS audit required before use"
+}

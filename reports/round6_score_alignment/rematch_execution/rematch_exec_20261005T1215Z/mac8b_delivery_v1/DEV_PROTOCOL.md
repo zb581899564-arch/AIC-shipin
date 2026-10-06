@@ -1,0 +1,15 @@
+# Mac最终8B固定开发与交付协议
+
+用户于2026-10-06要求“mac的开发测评和提交包尽早完成”。Mac64低分辨率v8最终5epochs/3620有效/227更新已完成，仅使用最终adapter，SHA1baa14a96d30d3836478295752c0b932f40f811863c28db99b56102fcfa1d5b5。Mac训练源锁、全部字节冻结与adapter重载验收保持；新接续不重训、不修改旧协议或旧运行文件。
+
+采用空闲Linux CUDA执行Mac最终模型，既有同revision8B基座共享一次，全链参数8782459120。先合成GPU验证288 LoRA张量/144语言模块与保存值精确相等、全部冻结基座字节相等、有限实际生成与JSON合同。CPU实际processor单帧/奇帧/63/64帧与native时间戳验收、原合同回归通过才运行。CUDA数值和部署解码差异明确登记，不声称Mac/MPS逐logit相等。
+
+开发沿用原104视频/96来源组/112非重叠30秒窗口，来源隔离与DEV SHA53f7053fc3df698ce96c94b04f1af3b5c0c210ce93ecd3269b6306daf4c0a700保持。新BASE8B和Mac最终SFT8B两臂均固定64源帧上限、PyAV顺序源序号/原近似CFR时钟合同、实际视频每帧<=32768像素、6144输入token界；与Mac训练一致的显式全视频size预算和原prompt，greedy/256新token。每臂112窗一次，不选择epoch、不调阈值、不读100confirm，不用比赛结果调整。Linux先前HD指标只作历史，不能把输入改变归因于adapter。
+
+视频宏precision/recall/F1、来源组宏F1、弱正例召回、解析/推理/空输出率及配对10000组bootstrap(seed20261006)照原协议。任一推理工程失败、最终全无效、最终弱正例重叠全零或配对95%CI上界<0均STOP。失败保留分母，UNKNOWN不造负类，C/BCE仍STOP。只为弱教师一致性指标，不是官方质量或提分结论。
+
+开发PASS后完整NONTEST8时间/CPU镜头锚点/原生空间/严格ZIP工程验收，再426视频/521窗口各一次复赛时间推理，随后CPU顺序镜头/实际锚点/空间/严格ZIP。生产使用已验JSON生成约束，与开发原greedy协议明确有别。CFR与native复赛时钟、源帧选取和PTS原协议不变；生产CFR沿用原Decord构建虚拟clip，native沿用原验证读取，故解码后端与开发PyAV有别，需NONTEST8完整验收，不声称跨后端像素相同。时间显式低分辨率预算不变，空间仍为同8B无adapter原生图像接口，既有最多8帧锚点间隔/镜头阈值保持，不复用旧测试空间框、弱ROI或fallback。
+
+所有GPU阶段用现有共享锁/追加账本/7200秒历史偏移，动态无冲突与Linux+整个Mac根+实际阶段产物预计占用<=80GiB；Mac已训练完成，未完成训练产物预留为0。Linux传输全部经Mac跳板，Mac唯一工作根与严格主机校验不改。独立源码/输入/教师弱划分/基座/adapter逐SHA锁定；运行中不修改、不重复launcher。传输失败有界重试、科学门或交付合同失败STOP。
+
+最终candidate_MAC_8B.zip仅含predictions.jsonl，完整426记录与全部选中帧在Linux独立strict loader通过后经Mac回传，Windows重核SHA/大小/CRC和独立loader。只有delivery_completion=PASS_LOCAL_UPLOADABLE_8B_PACKAGE才交付，官网不自动上传。保留原4B33.81与已交付Linux8B包。

@@ -1,0 +1,95 @@
+{
+  "round2_gpu_jobs": [
+    {
+      "name": "r2sg",
+      "charged_seconds": 30.3,
+      "status": "completed",
+      "exit_code": 0,
+      "sampled_peak_memory_mib": null
+    },
+    {
+      "name": "r2tr",
+      "charged_seconds": 757.1,
+      "status": "failed",
+      "exit_code": 5,
+      "sampled_peak_memory_mib": 11070
+    }
+  ],
+  "round2_gpu_seconds_total": 787.4,
+  "round2_gpu_cap_seconds": 2700,
+  "campaign_records": 31,
+  "campaign_charged_seconds": 36272.8,
+  "campaign_charged_hours": 10.0758,
+  "campaign_remaining_hours": 13.9242,
+  "disk": {
+    "work_root_before_bytes": 39983165440,
+    "work_root_now_bytes": 40047198208,
+    "round2_dir_bytes": 63995904,
+    "round2_new_bytes": 64032768,
+    "round2_new_gib": 0.0596,
+    "round2_cap_gib": 3,
+    "project_work_cap_gib": 80,
+    "work_root_gib": 37.3,
+    "fs_free_bytes": 154092949504,
+    "fs_free_gib": 143.51
+  },
+  "results": {
+    "sg": {
+      "n_cases": 7,
+      "n_success": 7,
+      "exit_code": 0
+    },
+    "tracking": {
+      "n_cases": 21,
+      "n_success": 19,
+      "n_failed": 2,
+      "exit_code": 5
+    },
+    "per_case_generate_seconds": {
+      "tr_clip1_A": 39.42,
+      "tr_clip1_B": 35.01,
+      "tr_clip1_C": 32.11,
+      "tr_sel04_A": 32.1,
+      "tr_sel04_B": 31.14,
+      "tr_sel04_C": 40.9,
+      "tr_sel12_A": 42.68,
+      "tr_sel12_B": 35.31,
+      "tr_sel12_C": 36.15,
+      "tr_sel06_A": 33.83,
+      "tr_sel06_B": 31.21,
+      "tr_sel06_C": 30.96,
+      "tr_sel07_A": 41.26,
+      "tr_sel07_B": 31.12,
+      "tr_sel07_C": 32.59,
+      "tr_sel02_A": 35.0,
+      "tr_sel02_B": 44.59,
+      "tr_sel02_C": 33.37,
+      "tr_sel08_A": 14.95,
+      "tr_sel08_B": 32.71,
+      "tr_sel08_C": 32.34
+    },
+    "per_case_peak_mib": {
+      "tr_clip1_A": 9455,
+      "tr_clip1_B": 9458,
+      "tr_clip1_C": 9458,
+      "tr_sel04_A": 9455,
+      "tr_sel04_B": 9458,
+      "tr_sel04_C": 9458,
+      "tr_sel12_A": 9455,
+      "tr_sel12_B": 9458,
+      "tr_sel12_C": 9458,
+      "tr_sel06_A": 9455,
+      "tr_sel06_B": 9458,
+      "tr_sel06_C": 9458,
+      "tr_sel07_A": 9455,
+      "tr_sel07_B": 9458,
+      "tr_sel07_C": 9458,
+      "tr_sel02_A": 9456,
+      "tr_sel02_B": 9458,
+      "tr_sel02_C": 9458,
+      "tr_sel08_A": 9455,
+      "tr_sel08_B": 9458,
+      "tr_sel08_C": 9458
+    }
+  }
+}

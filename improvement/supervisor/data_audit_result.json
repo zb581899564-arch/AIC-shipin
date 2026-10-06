@@ -1,0 +1,35 @@
+{
+  "structural_media_audit_passed": true,
+  "training_authorized": false,
+  "source_provenance_acceptance": "SEPARATE_REQUIRED_DECISION",
+  "summary": {
+    "train": {
+      "rows": 1000,
+      "unique_query_ids": 1000,
+      "source_groups": 327,
+      "trusted_identity": 0,
+      "sha256": "88ce7312eccfe1928c6aae2b0daa869c8f4913d330a8ae6b3cb9597fd6c84b6b"
+    },
+    "dev": {
+      "rows": 100,
+      "unique_query_ids": 100,
+      "source_groups": 34,
+      "trusted_identity": 0,
+      "sha256": "2a3a983cfa0680971806261dc2fc3b84c5a2115072fdac73ba14a2727954d955"
+    },
+    "holdout": {
+      "rows": 100,
+      "unique_query_ids": 100,
+      "source_groups": 33,
+      "trusted_identity": 0,
+      "sha256": "ecf13785fd6214c308cf7d9c0d0410263bf37de46bbf47cdf6428b77e46aaf79"
+    }
+  },
+  "unique_media_hashed": 1177,
+  "overlap": {
+    "train__dev": [],
+    "train__holdout": [],
+    "dev__holdout": []
+  },
+  "errors": []
+}

@@ -1,0 +1,30 @@
+{
+  "checked_utc": "2026-10-06T04:15:15.172930+00:00",
+  "windows_cpu_tests": {
+    "passed": 12,
+    "failed": 0
+  },
+  "linux_cpu_tests": {
+    "passed": 12,
+    "failed": 0
+  },
+  "source_lock_sha256": "88e9767ee875566c7adeb7470d89d0cd3f936c53265d640c37e536a0f98bf9b5",
+  "first_full_population_test_rejected": true,
+  "first_failure": "14 historical source endpoints rounded to milliseconds failed original 1e-6 bound",
+  "repair": "new separately locked row_contract accepts exact round(n_frames/fps,3) only, maximum 0.000500001 seconds",
+  "original_training_inputs_and_old_smoke_implementation_unchanged": true,
+  "tests": [
+    "each_window_once_per_epoch",
+    "partial_batch_not_dropped_or_padded",
+    "seeded_schedule",
+    "invalid_batch_specs",
+    "frozen_recipe",
+    "new_direct_request_required",
+    "C_BCE_nonresponse_rejected",
+    "full_population_contract",
+    "missing_duplicate_window_rejected",
+    "dev_unknown_injection_rejected",
+    "exact_millisecond_only",
+    "all_14_rounding_cases_bounded"
+  ]
+}

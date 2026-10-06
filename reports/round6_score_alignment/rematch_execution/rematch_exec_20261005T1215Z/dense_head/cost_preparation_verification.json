@@ -1,0 +1,19 @@
+{
+  "status": "PREPARED_CPU_ONLY_REAL_RUN_BY_SUPERVISOR",
+  "cost_tests": 8,
+  "py_compile": "PASS",
+  "started_remote_by_worker": false,
+  "gpu_used_by_worker": false,
+  "sha256": {
+    "cost_probe.py": "31efa3a27a13b399edc51ed37f255f23538bdd68e7e54650182c06154cbe8351",
+    "cost_config_32s_v1.json": "4f0c01871569f0b7818c627af81c9c8fd076cff4d18a9675699d0ec6221fc636",
+    "cost_admission_32s_v1.json": "135356c7aeee5aa467a18330608892b3ec9d5a00f73b9d941a72fc656d536fbb",
+    "test_cost_cpu.py": "9bbf0dcc57b65914657a49e47c524289f034d8e2bded5a4c5b929deff05f2029",
+    "cost_cpu_test_report.json": "122fce3188897a72de31e5fa3fb56ac7f4e1e5ccb1a053373f5678bf00d99949",
+    "cost_plan_cpu_v1.json": "d6a14562894186d23583225b76dc63cd0eddf270e7b23cc4eb15b7d4161fd333",
+    "README.md": "6f6064207b26e477b079d0ef79872b0043e9ce14b35972c91fa3e85cdd081d7a"
+  },
+  "active_linux_config": "../controller/c_cost_32s_01.config.json",
+  "active_linux_admission": "../controller/c_cost_32s_01.admission.json",
+  "formal_bce_status": "STOP_C_FORMAL_BCE_UNKNOWN_NEGATIVE_SEMANTICS"
+}

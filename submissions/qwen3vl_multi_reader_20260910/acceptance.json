@@ -1,0 +1,1264 @@
+{
+  "status": "PASS_READY_FOR_OFFICIAL_EVALUATION",
+  "official_score": null,
+  "prediction_sha256": "ce328d56514608a5e9d9301ae49537a0ccf30298ba63fb0cde52b60782964975",
+  "archive_sha256": "6df46d39044e88ca5c41cc7b3af08e20256aadb5f1b3b23cf4aebab9e17a56f2",
+  "archive": "/home/inspur/aic_video_work/runs/improvement_test174_multi_reader_v1/aic-qwen3vl-multi-20260910.zip",
+  "archive_bytes": 196663,
+  "videos": 174,
+  "frames": 56855,
+  "status_counts": {
+    "ok": 174
+  },
+  "crop_failures": 0,
+  "crop_parse_fallbacks": 0,
+  "total_processing_seconds": 2888.9975193976425,
+  "peak_reported_vram_mib": 9580.3828125,
+  "holdout_plan_sha256": "a43b35848ecfbb087b5673a203e8236c5d142b5ad53dc9abcc46fd59706b2e4d",
+  "holdout_report_sha256": "c0228fa8b8f6cf5963bde7cd966d9bf4b9e120212f0fb2cc5fcea00e7e2eb0bd",
+  "inference_launch_sha256": "7b83dfa347c744ba870d352e8a7b2aebdb60667b2b5ca61d0031bfc5403a2601",
+  "engineering_recovery": {
+    "kind": "exact_source_frame_reader_v1",
+    "temporal_sha256": "ed042f8028eaa0f7d3b54edb9514e229ea0f554e4882a5c0184fa26680034552",
+    "compared_original_complete_rows": 149,
+    "recovery_source_hashes": {
+      "inference_recovery/__init__.py": "9b3e82ad16978cf48982127c6b11d6641129aeba75f6f29f6071f40c0695f016",
+      "inference_recovery/spatial_replay.py": "6f999a8d650761c7a8d90c687d1d82b3120b75bcd69e463e56c7b2de209fc728",
+      "inference_recovery/reader.py": "2ce044ae4d649942248c5b20082bb8847240663f2a8f32aa353658668b1908d1"
+    },
+    "resource_sha256": "7a61209b9cea0aa701a6b1440fed95eea5fb6b15542b07b619ce6e475f61711d",
+    "all_174_frozen_temporal_decisions_preserved": true,
+    "manifest_sha256": "658a41c7bd12d2fa05d83027d55979f50d537f6129c9554dc9ffe2d034e6edf8",
+    "model_tree_sha256": "d2a5f4ccdf3f5f041db027b2ed562bcb56607d75b4f2a8d7af9812c98be5eb80",
+    "fixed_spatial_parameters_verified": true
+  },
+  "validation": {
+    "ok": true,
+    "line_count": 174,
+    "video_count": 174,
+    "valid_prediction_count": 56855,
+    "error_count": 0,
+    "warning_count": 0,
+    "issues": [],
+    "rows": [
+      {
+        "line_number": 1,
+        "valid": true,
+        "video_id": "0",
+        "prediction_count": 510,
+        "valid_prediction_count": 510
+      },
+      {
+        "line_number": 2,
+        "valid": true,
+        "video_id": "1",
+        "prediction_count": 513,
+        "valid_prediction_count": 513
+      },
+      {
+        "line_number": 3,
+        "valid": true,
+        "video_id": "10",
+        "prediction_count": 180,
+        "valid_prediction_count": 180
+      },
+      {
+        "line_number": 4,
+        "valid": true,
+        "video_id": "100",
+        "prediction_count": 1155,
+        "valid_prediction_count": 1155
+      },
+      {
+        "line_number": 5,
+        "valid": true,
+        "video_id": "101",
+        "prediction_count": 475,
+        "valid_prediction_count": 475
+      },
+      {
+        "line_number": 6,
+        "valid": true,
+        "video_id": "102",
+        "prediction_count": 128,
+        "valid_prediction_count": 128
+      },
+      {
+        "line_number": 7,
+        "valid": true,
+        "video_id": "103",
+        "prediction_count": 180,
+        "valid_prediction_count": 180
+      },
+      {
+        "line_number": 8,
+        "valid": true,
+        "video_id": "104",
+        "prediction_count": 150,
+        "valid_prediction_count": 150
+      },
+      {
+        "line_number": 9,
+        "valid": true,
+        "video_id": "105",
+        "prediction_count": 168,
+        "valid_prediction_count": 168
+      },
+      {
+        "line_number": 10,
+        "valid": true,
+        "video_id": "106",
+        "prediction_count": 377,
+        "valid_prediction_count": 377
+      },
+      {
+        "line_number": 11,
+        "valid": true,
+        "video_id": "107",
+        "prediction_count": 1154,
+        "valid_prediction_count": 1154
+      },
+      {
+        "line_number": 12,
+        "valid": true,
+        "video_id": "108",
+        "prediction_count": 132,
+        "valid_prediction_count": 132
+      },
+      {
+        "line_number": 13,
+        "valid": true,
+        "video_id": "109",
+        "prediction_count": 90,
+        "valid_prediction_count": 90
+      },
+      {
+        "line_number": 14,
+        "valid": true,
+        "video_id": "11",
+        "prediction_count": 245,
+        "valid_prediction_count": 245
+      },
+      {
+        "line_number": 15,
+        "valid": true,
+        "video_id": "110",
+        "prediction_count": 447,
+        "valid_prediction_count": 447
+      },
+      {
+        "line_number": 16,
+        "valid": true,
+        "video_id": "111",
+        "prediction_count": 480,
+        "valid_prediction_count": 480
+      },
+      {
+        "line_number": 17,
+        "valid": true,
+        "video_id": "112",
+        "prediction_count": 150,
+        "valid_prediction_count": 150
+      },
+      {
+        "line_number": 18,
+        "valid": true,
+        "video_id": "113",
+        "prediction_count": 690,
+        "valid_prediction_count": 690
+      },
+      {
+        "line_number": 19,
+        "valid": true,
+        "video_id": "114",
+        "prediction_count": 180,
+        "valid_prediction_count": 180
+      },
+      {
+        "line_number": 20,
+        "valid": true,
+        "video_id": "115",
+        "prediction_count": 174,
+        "valid_prediction_count": 174
+      },
+      {
+        "line_number": 21,
+        "valid": true,
+        "video_id": "116",
+        "prediction_count": 675,
+        "valid_prediction_count": 675
+      },
+      {
+        "line_number": 22,
+        "valid": true,
+        "video_id": "117",
+        "prediction_count": 108,
+        "valid_prediction_count": 108
+      },
+      {
+        "line_number": 23,
+        "valid": true,
+        "video_id": "118",
+        "prediction_count": 111,
+        "valid_prediction_count": 111
+      },
+      {
+        "line_number": 24,
+        "valid": true,
+        "video_id": "119",
+        "prediction_count": 136,
+        "valid_prediction_count": 136
+      },
+      {
+        "line_number": 25,
+        "valid": true,
+        "video_id": "12",
+        "prediction_count": 148,
+        "valid_prediction_count": 148
+      },
+      {
+        "line_number": 26,
+        "valid": true,
+        "video_id": "120",
+        "prediction_count": 510,
+        "valid_prediction_count": 510
+      },
+      {
+        "line_number": 27,
+        "valid": true,
+        "video_id": "121",
+        "prediction_count": 360,
+        "valid_prediction_count": 360
+      },
+      {
+        "line_number": 28,
+        "valid": true,
+        "video_id": "122",
+        "prediction_count": 243,
+        "valid_prediction_count": 243
+      },
+      {
+        "line_number": 29,
+        "valid": true,
+        "video_id": "123",
+        "prediction_count": 90,
+        "valid_prediction_count": 90
+      },
+      {
+        "line_number": 30,
+        "valid": true,
+        "video_id": "124",
+        "prediction_count": 321,
+        "valid_prediction_count": 321
+      },
+      {
+        "line_number": 31,
+        "valid": true,
+        "video_id": "125",
+        "prediction_count": 450,
+        "valid_prediction_count": 450
+      },
+      {
+        "line_number": 32,
+        "valid": true,
+        "video_id": "126",
+        "prediction_count": 210,
+        "valid_prediction_count": 210
+      },
+      {
+        "line_number": 33,
+        "valid": true,
+        "video_id": "127",
+        "prediction_count": 408,
+        "valid_prediction_count": 408
+      },
+      {
+        "line_number": 34,
+        "valid": true,
+        "video_id": "128",
+        "prediction_count": 120,
+        "valid_prediction_count": 120
+      },
+      {
+        "line_number": 35,
+        "valid": true,
+        "video_id": "129",
+        "prediction_count": 270,
+        "valid_prediction_count": 270
+      },
+      {
+        "line_number": 36,
+        "valid": true,
+        "video_id": "13",
+        "prediction_count": 39,
+        "valid_prediction_count": 39
+      },
+      {
+        "line_number": 37,
+        "valid": true,
+        "video_id": "130",
+        "prediction_count": 150,
+        "valid_prediction_count": 150
+      },
+      {
+        "line_number": 38,
+        "valid": true,
+        "video_id": "131",
+        "prediction_count": 204,
+        "valid_prediction_count": 204
+      },
+      {
+        "line_number": 39,
+        "valid": true,
+        "video_id": "132",
+        "prediction_count": 359,
+        "valid_prediction_count": 359
+      },
+      {
+        "line_number": 40,
+        "valid": true,
+        "video_id": "133",
+        "prediction_count": 50,
+        "valid_prediction_count": 50
+      },
+      {
+        "line_number": 41,
+        "valid": true,
+        "video_id": "134",
+        "prediction_count": 224,
+        "valid_prediction_count": 224
+      },
+      {
+        "line_number": 42,
+        "valid": true,
+        "video_id": "135",
+        "prediction_count": 90,
+        "valid_prediction_count": 90
+      },
+      {
+        "line_number": 43,
+        "valid": true,
+        "video_id": "136",
+        "prediction_count": 210,
+        "valid_prediction_count": 210
+      },
+      {
+        "line_number": 44,
+        "valid": true,
+        "video_id": "137",
+        "prediction_count": 230,
+        "valid_prediction_count": 230
+      },
+      {
+        "line_number": 45,
+        "valid": true,
+        "video_id": "138",
+        "prediction_count": 90,
+        "valid_prediction_count": 90
+      },
+      {
+        "line_number": 46,
+        "valid": true,
+        "video_id": "139",
+        "prediction_count": 240,
+        "valid_prediction_count": 240
+      },
+      {
+        "line_number": 47,
+        "valid": true,
+        "video_id": "14",
+        "prediction_count": 179,
+        "valid_prediction_count": 179
+      },
+      {
+        "line_number": 48,
+        "valid": true,
+        "video_id": "140",
+        "prediction_count": 591,
+        "valid_prediction_count": 591
+      },
+      {
+        "line_number": 49,
+        "valid": true,
+        "video_id": "141",
+        "prediction_count": 504,
+        "valid_prediction_count": 504
+      },
+      {
+        "line_number": 50,
+        "valid": true,
+        "video_id": "142",
+        "prediction_count": 375,
+        "valid_prediction_count": 375
+      },
+      {
+        "line_number": 51,
+        "valid": true,
+        "video_id": "143",
+        "prediction_count": 42,
+        "valid_prediction_count": 42
+      },
+      {
+        "line_number": 52,
+        "valid": true,
+        "video_id": "144",
+        "prediction_count": 135,
+        "valid_prediction_count": 135
+      },
+      {
+        "line_number": 53,
+        "valid": true,
+        "video_id": "145",
+        "prediction_count": 144,
+        "valid_prediction_count": 144
+      },
+      {
+        "line_number": 54,
+        "valid": true,
+        "video_id": "146",
+        "prediction_count": 90,
+        "valid_prediction_count": 90
+      },
+      {
+        "line_number": 55,
+        "valid": true,
+        "video_id": "147",
+        "prediction_count": 180,
+        "valid_prediction_count": 180
+      },
+      {
+        "line_number": 56,
+        "valid": true,
+        "video_id": "148",
+        "prediction_count": 1314,
+        "valid_prediction_count": 1314
+      },
+      {
+        "line_number": 57,
+        "valid": true,
+        "video_id": "149",
+        "prediction_count": 375,
+        "valid_prediction_count": 375
+      },
+      {
+        "line_number": 58,
+        "valid": true,
+        "video_id": "15",
+        "prediction_count": 50,
+        "valid_prediction_count": 50
+      },
+      {
+        "line_number": 59,
+        "valid": true,
+        "video_id": "150",
+        "prediction_count": 247,
+        "valid_prediction_count": 247
+      },
+      {
+        "line_number": 60,
+        "valid": true,
+        "video_id": "151",
+        "prediction_count": 135,
+        "valid_prediction_count": 135
+      },
+      {
+        "line_number": 61,
+        "valid": true,
+        "video_id": "152",
+        "prediction_count": 175,
+        "valid_prediction_count": 175
+      },
+      {
+        "line_number": 62,
+        "valid": true,
+        "video_id": "153",
+        "prediction_count": 210,
+        "valid_prediction_count": 210
+      },
+      {
+        "line_number": 63,
+        "valid": true,
+        "video_id": "154",
+        "prediction_count": 469,
+        "valid_prediction_count": 469
+      },
+      {
+        "line_number": 64,
+        "valid": true,
+        "video_id": "155",
+        "prediction_count": 135,
+        "valid_prediction_count": 135
+      },
+      {
+        "line_number": 65,
+        "valid": true,
+        "video_id": "156",
+        "prediction_count": 174,
+        "valid_prediction_count": 174
+      },
+      {
+        "line_number": 66,
+        "valid": true,
+        "video_id": "157",
+        "prediction_count": 1134,
+        "valid_prediction_count": 1134
+      },
+      {
+        "line_number": 67,
+        "valid": true,
+        "video_id": "158",
+        "prediction_count": 462,
+        "valid_prediction_count": 462
+      },
+      {
+        "line_number": 68,
+        "valid": true,
+        "video_id": "159",
+        "prediction_count": 427,
+        "valid_prediction_count": 427
+      },
+      {
+        "line_number": 69,
+        "valid": true,
+        "video_id": "16",
+        "prediction_count": 33,
+        "valid_prediction_count": 33
+      },
+      {
+        "line_number": 70,
+        "valid": true,
+        "video_id": "160",
+        "prediction_count": 430,
+        "valid_prediction_count": 430
+      },
+      {
+        "line_number": 71,
+        "valid": true,
+        "video_id": "161",
+        "prediction_count": 350,
+        "valid_prediction_count": 350
+      },
+      {
+        "line_number": 72,
+        "valid": true,
+        "video_id": "162",
+        "prediction_count": 330,
+        "valid_prediction_count": 330
+      },
+      {
+        "line_number": 73,
+        "valid": true,
+        "video_id": "163",
+        "prediction_count": 298,
+        "valid_prediction_count": 298
+      },
+      {
+        "line_number": 74,
+        "valid": true,
+        "video_id": "164",
+        "prediction_count": 150,
+        "valid_prediction_count": 150
+      },
+      {
+        "line_number": 75,
+        "valid": true,
+        "video_id": "165",
+        "prediction_count": 225,
+        "valid_prediction_count": 225
+      },
+      {
+        "line_number": 76,
+        "valid": true,
+        "video_id": "166",
+        "prediction_count": 255,
+        "valid_prediction_count": 255
+      },
+      {
+        "line_number": 77,
+        "valid": true,
+        "video_id": "167",
+        "prediction_count": 216,
+        "valid_prediction_count": 216
+      },
+      {
+        "line_number": 78,
+        "valid": true,
+        "video_id": "168",
+        "prediction_count": 150,
+        "valid_prediction_count": 150
+      },
+      {
+        "line_number": 79,
+        "valid": true,
+        "video_id": "169",
+        "prediction_count": 144,
+        "valid_prediction_count": 144
+      },
+      {
+        "line_number": 80,
+        "valid": true,
+        "video_id": "17",
+        "prediction_count": 144,
+        "valid_prediction_count": 144
+      },
+      {
+        "line_number": 81,
+        "valid": true,
+        "video_id": "170",
+        "prediction_count": 438,
+        "valid_prediction_count": 438
+      },
+      {
+        "line_number": 82,
+        "valid": true,
+        "video_id": "171",
+        "prediction_count": 84,
+        "valid_prediction_count": 84
+      },
+      {
+        "line_number": 83,
+        "valid": true,
+        "video_id": "172",
+        "prediction_count": 120,
+        "valid_prediction_count": 120
+      },
+      {
+        "line_number": 84,
+        "valid": true,
+        "video_id": "173",
+        "prediction_count": 270,
+        "valid_prediction_count": 270
+      },
+      {
+        "line_number": 85,
+        "valid": true,
+        "video_id": "18",
+        "prediction_count": 357,
+        "valid_prediction_count": 357
+      },
+      {
+        "line_number": 86,
+        "valid": true,
+        "video_id": "19",
+        "prediction_count": 1112,
+        "valid_prediction_count": 1112
+      },
+      {
+        "line_number": 87,
+        "valid": true,
+        "video_id": "2",
+        "prediction_count": 304,
+        "valid_prediction_count": 304
+      },
+      {
+        "line_number": 88,
+        "valid": true,
+        "video_id": "20",
+        "prediction_count": 1200,
+        "valid_prediction_count": 1200
+      },
+      {
+        "line_number": 89,
+        "valid": true,
+        "video_id": "21",
+        "prediction_count": 450,
+        "valid_prediction_count": 450
+      },
+      {
+        "line_number": 90,
+        "valid": true,
+        "video_id": "22",
+        "prediction_count": 825,
+        "valid_prediction_count": 825
+      },
+      {
+        "line_number": 91,
+        "valid": true,
+        "video_id": "23",
+        "prediction_count": 36,
+        "valid_prediction_count": 36
+      },
+      {
+        "line_number": 92,
+        "valid": true,
+        "video_id": "24",
+        "prediction_count": 312,
+        "valid_prediction_count": 312
+      },
+      {
+        "line_number": 93,
+        "valid": true,
+        "video_id": "25",
+        "prediction_count": 328,
+        "valid_prediction_count": 328
+      },
+      {
+        "line_number": 94,
+        "valid": true,
+        "video_id": "26",
+        "prediction_count": 148,
+        "valid_prediction_count": 148
+      },
+      {
+        "line_number": 95,
+        "valid": true,
+        "video_id": "27",
+        "prediction_count": 250,
+        "valid_prediction_count": 250
+      },
+      {
+        "line_number": 96,
+        "valid": true,
+        "video_id": "28",
+        "prediction_count": 105,
+        "valid_prediction_count": 105
+      },
+      {
+        "line_number": 97,
+        "valid": true,
+        "video_id": "29",
+        "prediction_count": 133,
+        "valid_prediction_count": 133
+      },
+      {
+        "line_number": 98,
+        "valid": true,
+        "video_id": "3",
+        "prediction_count": 246,
+        "valid_prediction_count": 246
+      },
+      {
+        "line_number": 99,
+        "valid": true,
+        "video_id": "30",
+        "prediction_count": 300,
+        "valid_prediction_count": 300
+      },
+      {
+        "line_number": 100,
+        "valid": true,
+        "video_id": "31",
+        "prediction_count": 139,
+        "valid_prediction_count": 139
+      },
+      {
+        "line_number": 101,
+        "valid": true,
+        "video_id": "32",
+        "prediction_count": 75,
+        "valid_prediction_count": 75
+      },
+      {
+        "line_number": 102,
+        "valid": true,
+        "video_id": "33",
+        "prediction_count": 539,
+        "valid_prediction_count": 539
+      },
+      {
+        "line_number": 103,
+        "valid": true,
+        "video_id": "34",
+        "prediction_count": 398,
+        "valid_prediction_count": 398
+      },
+      {
+        "line_number": 104,
+        "valid": true,
+        "video_id": "35",
+        "prediction_count": 253,
+        "valid_prediction_count": 253
+      },
+      {
+        "line_number": 105,
+        "valid": true,
+        "video_id": "36",
+        "prediction_count": 511,
+        "valid_prediction_count": 511
+      },
+      {
+        "line_number": 106,
+        "valid": true,
+        "video_id": "37",
+        "prediction_count": 240,
+        "valid_prediction_count": 240
+      },
+      {
+        "line_number": 107,
+        "valid": true,
+        "video_id": "38",
+        "prediction_count": 139,
+        "valid_prediction_count": 139
+      },
+      {
+        "line_number": 108,
+        "valid": true,
+        "video_id": "39",
+        "prediction_count": 114,
+        "valid_prediction_count": 114
+      },
+      {
+        "line_number": 109,
+        "valid": true,
+        "video_id": "4",
+        "prediction_count": 396,
+        "valid_prediction_count": 396
+      },
+      {
+        "line_number": 110,
+        "valid": true,
+        "video_id": "40",
+        "prediction_count": 136,
+        "valid_prediction_count": 136
+      },
+      {
+        "line_number": 111,
+        "valid": true,
+        "video_id": "41",
+        "prediction_count": 145,
+        "valid_prediction_count": 145
+      },
+      {
+        "line_number": 112,
+        "valid": true,
+        "video_id": "42",
+        "prediction_count": 140,
+        "valid_prediction_count": 140
+      },
+      {
+        "line_number": 113,
+        "valid": true,
+        "video_id": "43",
+        "prediction_count": 190,
+        "valid_prediction_count": 190
+      },
+      {
+        "line_number": 114,
+        "valid": true,
+        "video_id": "44",
+        "prediction_count": 268,
+        "valid_prediction_count": 268
+      },
+      {
+        "line_number": 115,
+        "valid": true,
+        "video_id": "45",
+        "prediction_count": 239,
+        "valid_prediction_count": 239
+      },
+      {
+        "line_number": 116,
+        "valid": true,
+        "video_id": "46",
+        "prediction_count": 72,
+        "valid_prediction_count": 72
+      },
+      {
+        "line_number": 117,
+        "valid": true,
+        "video_id": "47",
+        "prediction_count": 146,
+        "valid_prediction_count": 146
+      },
+      {
+        "line_number": 118,
+        "valid": true,
+        "video_id": "48",
+        "prediction_count": 142,
+        "valid_prediction_count": 142
+      },
+      {
+        "line_number": 119,
+        "valid": true,
+        "video_id": "49",
+        "prediction_count": 166,
+        "valid_prediction_count": 166
+      },
+      {
+        "line_number": 120,
+        "valid": true,
+        "video_id": "5",
+        "prediction_count": 84,
+        "valid_prediction_count": 84
+      },
+      {
+        "line_number": 121,
+        "valid": true,
+        "video_id": "50",
+        "prediction_count": 177,
+        "valid_prediction_count": 177
+      },
+      {
+        "line_number": 122,
+        "valid": true,
+        "video_id": "51",
+        "prediction_count": 245,
+        "valid_prediction_count": 245
+      },
+      {
+        "line_number": 123,
+        "valid": true,
+        "video_id": "52",
+        "prediction_count": 339,
+        "valid_prediction_count": 339
+      },
+      {
+        "line_number": 124,
+        "valid": true,
+        "video_id": "53",
+        "prediction_count": 142,
+        "valid_prediction_count": 142
+      },
+      {
+        "line_number": 125,
+        "valid": true,
+        "video_id": "54",
+        "prediction_count": 216,
+        "valid_prediction_count": 216
+      },
+      {
+        "line_number": 126,
+        "valid": true,
+        "video_id": "55",
+        "prediction_count": 122,
+        "valid_prediction_count": 122
+      },
+      {
+        "line_number": 127,
+        "valid": true,
+        "video_id": "56",
+        "prediction_count": 345,
+        "valid_prediction_count": 345
+      },
+      {
+        "line_number": 128,
+        "valid": true,
+        "video_id": "57",
+        "prediction_count": 90,
+        "valid_prediction_count": 90
+      },
+      {
+        "line_number": 129,
+        "valid": true,
+        "video_id": "58",
+        "prediction_count": 90,
+        "valid_prediction_count": 90
+      },
+      {
+        "line_number": 130,
+        "valid": true,
+        "video_id": "59",
+        "prediction_count": 179,
+        "valid_prediction_count": 179
+      },
+      {
+        "line_number": 131,
+        "valid": true,
+        "video_id": "6",
+        "prediction_count": 180,
+        "valid_prediction_count": 180
+      },
+      {
+        "line_number": 132,
+        "valid": true,
+        "video_id": "60",
+        "prediction_count": 45,
+        "valid_prediction_count": 45
+      },
+      {
+        "line_number": 133,
+        "valid": true,
+        "video_id": "61",
+        "prediction_count": 90,
+        "valid_prediction_count": 90
+      },
+      {
+        "line_number": 134,
+        "valid": true,
+        "video_id": "62",
+        "prediction_count": 870,
+        "valid_prediction_count": 870
+      },
+      {
+        "line_number": 135,
+        "valid": true,
+        "video_id": "63",
+        "prediction_count": 357,
+        "valid_prediction_count": 357
+      },
+      {
+        "line_number": 136,
+        "valid": true,
+        "video_id": "64",
+        "prediction_count": 348,
+        "valid_prediction_count": 348
+      },
+      {
+        "line_number": 137,
+        "valid": true,
+        "video_id": "65",
+        "prediction_count": 90,
+        "valid_prediction_count": 90
+      },
+      {
+        "line_number": 138,
+        "valid": true,
+        "video_id": "66",
+        "prediction_count": 578,
+        "valid_prediction_count": 578
+      },
+      {
+        "line_number": 139,
+        "valid": true,
+        "video_id": "67",
+        "prediction_count": 181,
+        "valid_prediction_count": 181
+      },
+      {
+        "line_number": 140,
+        "valid": true,
+        "video_id": "68",
+        "prediction_count": 440,
+        "valid_prediction_count": 440
+      },
+      {
+        "line_number": 141,
+        "valid": true,
+        "video_id": "69",
+        "prediction_count": 382,
+        "valid_prediction_count": 382
+      },
+      {
+        "line_number": 142,
+        "valid": true,
+        "video_id": "7",
+        "prediction_count": 204,
+        "valid_prediction_count": 204
+      },
+      {
+        "line_number": 143,
+        "valid": true,
+        "video_id": "70",
+        "prediction_count": 126,
+        "valid_prediction_count": 126
+      },
+      {
+        "line_number": 144,
+        "valid": true,
+        "video_id": "71",
+        "prediction_count": 320,
+        "valid_prediction_count": 320
+      },
+      {
+        "line_number": 145,
+        "valid": true,
+        "video_id": "72",
+        "prediction_count": 182,
+        "valid_prediction_count": 182
+      },
+      {
+        "line_number": 146,
+        "valid": true,
+        "video_id": "73",
+        "prediction_count": 225,
+        "valid_prediction_count": 225
+      },
+      {
+        "line_number": 147,
+        "valid": true,
+        "video_id": "74",
+        "prediction_count": 272,
+        "valid_prediction_count": 272
+      },
+      {
+        "line_number": 148,
+        "valid": true,
+        "video_id": "75",
+        "prediction_count": 394,
+        "valid_prediction_count": 394
+      },
+      {
+        "line_number": 149,
+        "valid": true,
+        "video_id": "76",
+        "prediction_count": 390,
+        "valid_prediction_count": 390
+      },
+      {
+        "line_number": 150,
+        "valid": true,
+        "video_id": "77",
+        "prediction_count": 250,
+        "valid_prediction_count": 250
+      },
+      {
+        "line_number": 151,
+        "valid": true,
+        "video_id": "78",
+        "prediction_count": 596,
+        "valid_prediction_count": 596
+      },
+      {
+        "line_number": 152,
+        "valid": true,
+        "video_id": "79",
+        "prediction_count": 159,
+        "valid_prediction_count": 159
+      },
+      {
+        "line_number": 153,
+        "valid": true,
+        "video_id": "8",
+        "prediction_count": 176,
+        "valid_prediction_count": 176
+      },
+      {
+        "line_number": 154,
+        "valid": true,
+        "video_id": "80",
+        "prediction_count": 99,
+        "valid_prediction_count": 99
+      },
+      {
+        "line_number": 155,
+        "valid": true,
+        "video_id": "81",
+        "prediction_count": 133,
+        "valid_prediction_count": 133
+      },
+      {
+        "line_number": 156,
+        "valid": true,
+        "video_id": "82",
+        "prediction_count": 411,
+        "valid_prediction_count": 411
+      },
+      {
+        "line_number": 157,
+        "valid": true,
+        "video_id": "83",
+        "prediction_count": 1770,
+        "valid_prediction_count": 1770
+      },
+      {
+        "line_number": 158,
+        "valid": true,
+        "video_id": "84",
+        "prediction_count": 360,
+        "valid_prediction_count": 360
+      },
+      {
+        "line_number": 159,
+        "valid": true,
+        "video_id": "85",
+        "prediction_count": 604,
+        "valid_prediction_count": 604
+      },
+      {
+        "line_number": 160,
+        "valid": true,
+        "video_id": "86",
+        "prediction_count": 660,
+        "valid_prediction_count": 660
+      },
+      {
+        "line_number": 161,
+        "valid": true,
+        "video_id": "87",
+        "prediction_count": 51,
+        "valid_prediction_count": 51
+      },
+      {
+        "line_number": 162,
+        "valid": true,
+        "video_id": "88",
+        "prediction_count": 268,
+        "valid_prediction_count": 268
+      },
+      {
+        "line_number": 163,
+        "valid": true,
+        "video_id": "89",
+        "prediction_count": 963,
+        "valid_prediction_count": 963
+      },
+      {
+        "line_number": 164,
+        "valid": true,
+        "video_id": "9",
+        "prediction_count": 90,
+        "valid_prediction_count": 90
+      },
+      {
+        "line_number": 165,
+        "valid": true,
+        "video_id": "90",
+        "prediction_count": 247,
+        "valid_prediction_count": 247
+      },
+      {
+        "line_number": 166,
+        "valid": true,
+        "video_id": "91",
+        "prediction_count": 4652,
+        "valid_prediction_count": 4652
+      },
+      {
+        "line_number": 167,
+        "valid": true,
+        "video_id": "92",
+        "prediction_count": 162,
+        "valid_prediction_count": 162
+      },
+      {
+        "line_number": 168,
+        "valid": true,
+        "video_id": "93",
+        "prediction_count": 204,
+        "valid_prediction_count": 204
+      },
+      {
+        "line_number": 169,
+        "valid": true,
+        "video_id": "94",
+        "prediction_count": 101,
+        "valid_prediction_count": 101
+      },
+      {
+        "line_number": 170,
+        "valid": true,
+        "video_id": "95",
+        "prediction_count": 303,
+        "valid_prediction_count": 303
+      },
+      {
+        "line_number": 171,
+        "valid": true,
+        "video_id": "96",
+        "prediction_count": 475,
+        "valid_prediction_count": 475
+      },
+      {
+        "line_number": 172,
+        "valid": true,
+        "video_id": "97",
+        "prediction_count": 718,
+        "valid_prediction_count": 718
+      },
+      {
+        "line_number": 173,
+        "valid": true,
+        "video_id": "98",
+        "prediction_count": 105,
+        "valid_prediction_count": 105
+      },
+      {
+        "line_number": 174,
+        "valid": true,
+        "video_id": "99",
+        "prediction_count": 233,
+        "valid_prediction_count": 233
+      }
+    ]
+  }
+}
