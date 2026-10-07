@@ -1,5 +1,60 @@
 # AIC 高光剪辑项目执行约定
 
+## Linux 教师与微调全链自动接续已注册（2026-10-07 13:02 UTC+8）
+
+用户明确允许本次在 Linux 原地下载固定 32B 教师权重约19.52GiB，并自动接续标注、8B微调和封包；本次许可覆盖下方对 Linux 教师下载的暂停，Windows旧下载50872、上传等待27724、Z回传61596仍保持停止。Mac不参与。最终只交付一个选定ZIP，中间结果与最终新包先留Linux，不自动回传，不自动上传AIC官网；其他新大流量传输仍须先说明规模与链路并取得确认。
+
+新入口为执行目录 `teacher_student_autopilot_v1/CONTINUE.md`。Linux单次控制器启动PID2397312，13:02:18实际写出registration.json，13:02:52按完整命令身份实查存活；PID仅为这次历史记录，后续必须核验。149项绑定文件源锁SHA `7a65ff88936295e7c51bdb37e1fbd1c2f76c965bdf8212b71eaba8ecf85fbd07`，教师CPU10项、学生CPU16项和总控preflight均已在Linux通过，CPU验收未启动GPU。运行期间禁止改绑定源码、模型、协议或重开同名launcher。
+
+后台顺序为等待本次Linux下载完整SHA、固定CUDA运行时和现有Z作业终态，然后真实非测试教师探针、128train/32dev自然窗口标注、同32B第二次弱语义审核与独立validator、从原B最终LoRA按r16/lr1e-5/最多3epochs接续T训练（第20更新真实CPU重载检查）、固定弱开发选检查点、NONTEST8、426复赛推理/空间/独立strict ZIP。Z的质量/分数不是T训练门；这里只等既有共享计算结束，并在身份完全一致时复用完整源空间缓存。教师离线使用，不进入8,782,459,120参数部署链。弱开发指标不是官网评分复刻，官网分仍由用户提交获得。
+
+13:06:38 UTC+8补充：Linux两个教师文件合计20,958,945,472字节均已通过完整SHA，completion为PASS_PINNED_TEACHER_WEIGHTS_ON_LINUX；13:06:43总控实际读取download_ready=true/runtime_ready=true/Z_terminal=false，仍等原Z调度与封包结束。真实教师生成/新标签/T optimizer更新尚未开始。实际阶段看progress.json与日志；只有completion.json为PASS_AUTOPILOT_FINAL_T_ZIP_ON_LINUX且426独立strict全部通过才算新T包完成。错误保留原始日志与STOP，不强造空标签或静默降级。执行不依赖Windows持续在线；共享锁、追加账本及7200秒历史偏移保留，新作业仅按真实容量和外部任务冲突安排，无人为磁盘/RAM/VRAM额度。
+
+## 高流量传输必须事先说明（2026-10-07，用户明确要求）
+
+用户说明Windows与Linux并非网络直连，大文件传输可能消耗付费机场流量。今后模型、数据集、批量产物和大包的下载、上传、回传，开始前必须告知方向、预计字节数、实际链路或不确定性、可能消耗的机场流量与重复搬运，等用户确认后执行；不能把SSH别名直连等同网络直连。链路未核实时按可能计入机场流量处理。不为诊断进行大文件速度测试，不改代理/SSH/Tailscale配置。
+
+本次已按完整命令身份暂停Windows教师权重下载PID50872及自动上传等待PID27724，两个进程均实查不存在；已有GGUF部分文件14747600564字节保留，未完成SHA验收，不能当完整模型使用。Linux本地Z推理/封包和CUDA编译不停止，Mac不参与。此前“自动上传教师权重”授权现被此传输偏好覆盖；资产下载、桥接或其新版本不得自动重开，需先按本条说明并取得确认。记录见teacher32b_prepare_v1/user_network_pause.json、teacher32b_bridge_v2/user_network_pause.json及controller/network_transfer_policy_20261007.json。应用下载进度不等于机场账单，实际已消耗流量未知。最终仍只交付一个选定ZIP，传输该ZIP也先说明大小。
+## 最终交付仅一个ZIP（2026-10-07，用户澄清）
+
+用户要求中间结果留Linux、最终只需要一个可上传官网打分的ZIP。当前Z是原生8B对照候选，不是额外必交材料，也不是新教师监督/8B T微调的结果依赖。Windows direct_delivery_v3历史PID61596已按完整命令身份停止并实查不存在，登记delivery_cancelled.json；不重开v2/v3，不自动回传Z或整套中间产物。Linux Z原控制器继续推理/封包/独立校验，103绑定文件不改。教师权重Windows→Linux传输不属于成果回传，现有下载/编译/transfer waiter保持。最终选定提交版本后仅交付其ZIP，官网由用户上传；相关receipt与中间文件留Linux保存。执行依据见controller/delivery_policy_20261007.json。下方12:17回传修复登记已被本条取消授权覆盖，保持历史。
+## 回传等待修复（2026-10-07 12:17 UTC+8）
+
+实时核验原Windows direct_delivery_v2 PID45736已不存在，未生成completion/STOP、日志为空；退出原因未知，不把旧登记当存活。独立next_round_v1/direct_delivery_v3只恢复Windows等待与直连回传，历史PID61596，12文件源码绑定及真实SSH状态查询通过，注册后实查存活并写WAITING_FROZEN_Z_COMPLETION。Linux Z控制器及103绑定源码未动、未重复launcher。包回传后仍须SHA/大小/CRC及独立strict全部通过，只有v3 delivery_completion.json PASS才算新Z包交付。v2历史记录保留，不重开。
+## 当前：取消人为资源额度（2026-10-07，用户明确纠正）
+
+用户明确指令：“我们这个项目不限制磁盘，也不限制内存，也不限制显存，随便用”。此前80GiB合计、51GiB Linux与Mac占用预留不再是后续任务准入条件；不要再据这些旧额度拒绝或等待。磁盘、RAM、VRAM的项目人为上限均为null，累计GPU继续不限。按机器实际可用容量、当次实测/预计产物和共享任务冲突安排，不抢占他人任务；真实OOM/磁盘不足仍如实记录。
+
+Linux /home/inspur/aic_video_work/resource_policy.json已11:37 UTC+8实际更新为ACTUAL_CAPACITY_ONLY，旧策略按原字节归档。added_disk_budget_gib仅为尚在运行的旧wrapper提供物理文件系统总量兼容值，不代表人为项目额度。后续新作业使用resource_unlimited_v1_20261007/gpu_run.py与physical_capacity.py，完全不读旧80/51配额或Mac预留。共享GPU锁、7200秒历史偏移和追加账本保持；当前已注册Z源码/模型/科学输入协议不重写。
+
+32B准备已实际开始：Windows teacher32b_prepare_v1/download_weights.py单次PID50872正在下载官方固定Q4_K_M+F16投影器，约19.52GiB，Windows只是传输暂存；教师加载、观察视频和生成标签只在Linux，不用Mac。七项范围恢复/SHA/实际容量合同通过。第一次运行时因系统CMake3.16.3低于CUDA要求3.18而STOP，旧失败保留；teacher32b_runtime_v2使用项目内固定CMake3.31.6，11:44配置PASS并实际进入CUDA编译，历史PID2293438，无系统安装/旧环境修改。
+
+新teacher32b_bridge_v2单次Windows等待历史PID27724已登记：权重全SHA通过、当前冻结Z结束和CUDA编译完成后，自动直连上传Linux并逐字节/SHA验收。v1失败桥接保持STOP，不重开。当前教师尚未加载、标签未生成、新8B T训练未开始；下一门为真实视频CUDA探针、完整观察响应验证，然后按已有T科学协议微调。详细接续见resource_unlimited_v1_20261007/CONTINUE.md。Mac已退出，之前80GiB、未来79GiB与“未开始下载”描述均是本授权前历史。
+
+## 当前：Mac退出与空间释放（2026-10-07）
+
+用户截图确认Mac8B复赛33.46 / DONE，绑定candidate_MAC_8B.zip SHA `7f49ff90b5a21fd71a6036d8da0a1b78f3ab9c1d900ab2f81bc1f319e9d4533d`；比4B 33.81低0.35、比Linux8B 37.63低4.17。成绩来源为用户截图与包指认；不补造完整评分时间或名次，不改历史交付receipt。
+
+按用户“以后我们不用mac了”和释放占用授权，Mac唯一工作根内本项目数据、模型、环境、缓存及我们安装的辅助程序已移除，占用从28,053,655,552降至12,288字节，释放约26.13GiB。仅保留AGENTS.md、README.md和bin/run三个小文件。源码、记录、账本与LoRA已先归档到Windows并逐442成员SHA/大小核验，最终Mac LoRA在Linux也逐SHA确认；未触及根外用户文件、系统、SSH或Tailscale。
+
+本项目停止Mac计算与中转；Windows与Linux今后使用既有aic-inspur-home直接传输，这是用户本次明确变更，覆盖本项目此前Mac跳板要求。旧Windows Mac交付等待已按命令身份停止；新next_round_v1/direct_delivery_v2独立交付等待历史PID45736已登记，实际直连scp通过。当前Linux Z控制器2234812继续，103文件冻结锁和51GiB单次配额不改、不重开。11:22 UTC+8实查已通过NONTEST8并进入426条复赛时间推理，尚无Z交付包。
+
+独立mac_retirement_20261007/future_quota_plan.json为后续作业登记Mac16KiB、共享1GiB、Linux79GiB减16KiB，合计仍80GiB；32B权重容量投影通过。它不替换当前运行Z的旧配额，必须等Z结束并重新核实时容量/实际工具写入范围后再下载教师；当前32B未下载、新标签未生成、T训练未开始。128train/32dev自然窗口选择已CPU验收通过，仅为未标注输入。清理、备份、传输及容量证据见同目录，旧Mac目录与环境存在性描述自本条起均为历史。
+
+## 下一轮v1已实际启动（2026-10-07 11:00 UTC+8）
+
+用户采纳新结论，授权先修代码、制定路线并执行。新独立入口`next_round_v1/CONTINUE.md`、协议`PROTOCOL.md`；旧37.63 Linux B及Mac包/冻结运行文件不改。Linux103文件源锁SHA`9a4159496083dfa36cbcae703644aea1a44d1e31c6ac0f3c29627e5fd0f9e8e2`，主控历史启动PID2234812、Windows独立交付等待PID60188，须实时核活，不重复launcher。
+
+145项Windows/Linux CPU合同通过；真实processor1/63/64帧及HD和旧默认逐张量相同（旧B提示64HD=12048token、实际372736像素/帧），显式视频size4096/25165824和统一16384界，无截断。全空426通过独立strict的11检查；真实CUDA合成空兼容生成为LEGAL_EMPTY，空assistant CE loss=1.6668949有限，head/full各自原生PTS context通过，峰值20312.43MiB，0optimizer更新。这里只验工程，不宣称新监督/质量通过。
+
+代码修复覆盖严格0..1000整数中心、空/失败分离、空assistant目标、CFR/native选帧、完整源镜头/空间场先插值后筛时间；B/Z开发同production解码及同encoded窗口。Z保留B的1..5段提示做原生8B对照；T取得真实完整观察监督后才用0..5段与lr1e-5/最多3epochs，不重复旧LoRA延长训练。Z相对旧B同时改变坐标与镜头边界，官网比较应按整套配方解释。
+
+Mac占用预留28GiB、共享临时1GiB、Linux当前实占+当次产物<=51GiB，80GiB合计不变；Linux无Mac心跳TTL等待，传输仍实时验证Mac并经跳板。按一次性控制器自动合成探针→开放104/96 B/Z诊断→NONTEST8完整门→426 Z时间/全源空间/strict封包/经Mac回传；没有delivery_completion PASS前不能宣称Z包已交付，不自动官网上传。当前已实际通过合成GPU探针，后续以progress/completion为准。
+
+监督原128/32选择v1实际遇到duration-only尾格而STOP，保留证据，独立supervision_v2只修最后真实非空PTS格选择并保留不可采样时间格；实际提供帧、教师响应前无新标签。32B教师需20958945472字节（19.52GiB），现行余6.46GiB，T仍STOP_32B_TEACHER_CAPACITY，未下载/训练、未用8B替代。S缺已绑定双比例人工构图参考，登记STOP，不用弱ROI冒充构图真值。C正式BCE未知负语义STOP保持。
+
+用户问本地评分：不需要本地复刻AIC总分，官网每日最多5次、最终取复赛阶段最高有效分；仍保留非测试机制/弱教师实验比较、格式、源帧身份和失败检查。内部F1不是官网分，不以其CI>0作为新Z工程门。100confirm不读，不按手看测试内容改参数。
+
 ## 最新：Mac8B完整提交包已交付（2026-10-07 10:27 UTC+8实时复核）
 
 Mac最终8B已完成开发、NONTEST8及426复赛全链推理封包。远端完成时间2026-10-07 03:12:57、本机经Mac跳板回传验收03:14:07，delivery_completion=PASS_LOCAL_UPLOADABLE_8B_PACKAGE。candidate_MAC_8B.zip实际300152字节，SHA256 `7f49ff90b5a21fd71a6036d8da0a1b78f3ab9c1d900ab2f81bc1f319e9d4533d`；本次实核大小/SHA/CRC/唯一predictions.jsonl及426记录通过，独立strict全部11检查true，101880帧/14007锚点，missing/extra/duplicate均0。控制器与桥接已完成，不重开launcher；当前GPU compute为空。

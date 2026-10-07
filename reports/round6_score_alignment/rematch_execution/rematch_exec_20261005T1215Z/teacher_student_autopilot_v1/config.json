@@ -1,0 +1,29 @@
+{
+  "schema": "AIC_LINUX_ONCE_ONLY_TEACHER_STUDENT_AUTOPILOT_V1",
+  "selection_dir": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1/supervision_v2/selection_02",
+  "registered_B_train_report": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_full_v1/train_01/train_report.json",
+  "student_input_contract": {
+    "max_frames": 64,
+    "video_size": {
+      "shortest_edge": 4096,
+      "longest_edge": 25165824
+    },
+    "max_input_tokens": 16384,
+    "clock": "REAL_SOURCE_PRESENTATION_PTS_RELATIVE_TO_WINDOW_START",
+    "sampling": "SELECTED_WINDOW_INTEGER_FLOOR_ENDPOINTS",
+    "decoder": "SEQUENTIAL_PYAV_RGB24_WITH_ACTUAL_PTS_AND_PIXEL_SHA",
+    "allow_empty": true,
+    "prompt": "NEXT_ROUND_0_TO_5",
+    "truncation": false,
+    "same_contract_train_dev_production": true
+  },
+  "official_upload_authorized": false,
+  "automatic_return": false,
+  "teacher_download": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher32b_linux_download_v1/completion.json",
+  "teacher_runtime": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher32b_runtime_v2/runtime_build_completion.json",
+  "teacher_probe_is_not_quality_acceptance": true,
+  "teacher_review_mode": "same 32B second sampled-window weak review; not human truth",
+  "resource_strategy": "ACTUAL_CAPACITY_ONLY; shared GPU lock; append ledger; preserve7200s",
+  "T_frame_selection": "ALL_BRANCH_NATIVE_PTS_BISECT_HALF_OPEN",
+  "checkpoint_selection": "weak video macro temporal F1; exact tie lower epoch; no official score reconstruction"
+}

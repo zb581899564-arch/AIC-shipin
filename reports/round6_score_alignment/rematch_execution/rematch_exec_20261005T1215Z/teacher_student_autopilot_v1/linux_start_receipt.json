@@ -1,0 +1,55 @@
+{
+  "utc": "2026-10-07T05:04:57.074138+00:00",
+  "registration.json": {
+    "pid": 2397312,
+    "utc": "2026-10-07T05:02:18.037497+00:00",
+    "source_lock_sha256": "7a65ff88936295e7c51bdb37e1fbd1c2f76c965bdf8212b71eaba8ecf85fbd07",
+    "config_sha256": "69d7aaf92c1a362eed8513505d0355f29b7e2d970010dcaaacc71de4de80906d"
+  },
+  "progress.json": {
+    "stage": "WAITING_REGISTERED_LINUX_PREPARATION_AND_EXISTING_Z_TERMINAL",
+    "utc": "2026-10-07T05:04:16.076124+00:00",
+    "pid": 2397312,
+    "uploaded": false,
+    "automatic_return": false,
+    "download_ready": false,
+    "runtime_ready": true,
+    "Z_terminal": false,
+    "Z_quality_required": false,
+    "model_payload_download_host": "Linux",
+    "Windows_bulk_transfer": false
+  },
+  "completion.json": null,
+  "start_receipt.json": {
+    "status": "STARTED_ONCE_ONLY_LINUX_AUTOPILOT",
+    "utc": "2026-10-07T05:00:50.773442+00:00",
+    "pid": 2397312,
+    "host": "inspur-NP5570M5",
+    "command": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v1/controller.py",
+    "source_lock_sha256": "7a65ff88936295e7c51bdb37e1fbd1c2f76c965bdf8212b71eaba8ecf85fbd07",
+    "automatic_return": false,
+    "official_upload": false
+  },
+  "actual_command_matches": true,
+  "download_progress": {
+    "status": "DOWNLOADING_OFFICIAL_CDN_ON_LINUX",
+    "utc": "2026-10-07T05:04:55.665930+00:00",
+    "pid": 2361512,
+    "file": "mmproj-Qwen3VL-32B-Instruct-F16.gguf",
+    "file_bytes": 58720256,
+    "file_expected_bytes": 1196795040,
+    "total_downloaded_bytes": 19820870688,
+    "total_expected_bytes": 20958945472,
+    "attempt": 1,
+    "payload_receiver": "Linux",
+    "Windows_payload_transfer": false,
+    "application_proxy_disabled": true
+  },
+  "download_completion": null,
+  "Z_progress": {
+    "stage": "RUNNING_REMATCH_SCHEDULING",
+    "utc": "2026-10-07T04:20:30.273597+00:00",
+    "pid": 2234812,
+    "uploaded": false
+  }
+}

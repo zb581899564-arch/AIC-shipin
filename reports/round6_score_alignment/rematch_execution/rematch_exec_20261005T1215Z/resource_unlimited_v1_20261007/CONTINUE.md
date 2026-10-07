@@ -1,3 +1,6 @@
+> 最新授权（2026-10-07）：用户已明确允许本次Linux原地下载约19.52GiB固定教师权重，并自动接续标注、8B微调和封包。单次入口已转为../teacher_student_autopilot_v1/CONTINUE.md，Linux控制器历史PID2397312、149文件锁SHA7a65ff88936295e7c51bdb37e1fbd1c2f76c965bdf8212b71eaba8ecf85fbd07；须核registration/progress及实际进程，禁止重复启动。下方Windows下载与上传桥接为已暂停的历史方案，不恢复。运行时编译已PASS，教师真实探针与T训练尚未开始，最终ZIP只留Linux，不自动回传/官网上传。
+
+> 2026-10-07用户新增流量约束，优先于下方历史自动传输安排：Windows权重下载50872与上传等待27724均已按身份暂停，不自动重开。约13.7GiB部分文件保留但未验收完整SHA。其他新的大流量下载/上传/回传先说明方向、规模、链路及可能机场消耗，等确认后继续；SSH别名直连不代表网络不经代理。中间结果留Linux，最终只交付一个选定ZIP。详见../controller/network_transfer_policy_20261007.json及两份user_network_pause.json。
 # 取消人为额度后的接续
 
 用户2026-10-07明确取消本项目磁盘/RAM/VRAM人为上限，所有新作业采用ACTUAL_CAPACITY_ONLY。全局有效策略见effective_policy.json与Linux同名根策略，policy_transition_01.json记录真实原/新SHA。旧80GiB、Linux51GiB、Mac预留、此前future_quota_plan都被本授权覆盖；新运行不得继承。旧数字字段只是物理文件系统总量兼容，不是项目预算。新GPU入口gpu_run.py保留共享锁、无限累计时间、7200秒账本偏移及外部冲突检测，physical_capacity.py只检查实际剩余空间与预计剩余输出。
