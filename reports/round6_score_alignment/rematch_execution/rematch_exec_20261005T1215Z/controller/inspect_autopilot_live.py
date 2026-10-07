@@ -96,6 +96,39 @@ def capture(version, entry=None):
             scope:{p.name:{'bytes':p.stat().st_size,'mtime_ns':p.stat().st_mtime_ns}
             for p in sorted((here/scope).glob('*')) if p.is_file()}
             for scope in ('probe_01','nontest_01','rematch_01')}
+        config = read(here/'config.json') or {}
+        provider_entry = config.get('duration_repair', {}).get('original_entry')
+        if provider_entry:
+            if not re.fullmatch(r'b_score_aligned_package_v[1-9][0-9]*', provider_entry):
+                raise RuntimeError('unexpected original generation provider')
+            provider = RUN / provider_entry
+            snapshot['b2_generation_provider'] = dict(entry=provider_entry,
+                processes=[line.strip() for line in process_lines if str(provider)+'/' in line],
+                progress=read(provider/'progress.json'), completion=read(provider/'completion.json'),
+                temporal_progress=read(provider/'rematch_01/progress.json'),
+                temporal_stage=read(provider/'rematch_01/temporal.stage.json'),
+                temporal_resource=read(RUN/'controller'/('rematch_B2_'+provider_entry.rsplit('_',1)[1]+
+                    '_rematch_temporal_01.resource.json')),
+                original_CPU_handoff=read(here/'handoff_receipt.json'))
+        snapshot['b2_reuse_receipts'] = dict(probe=read(here/'probe_01/reuse_receipt.json'),
+            nontest=read(here/'nontest_01/temporal_reuse_receipt.json'),
+            rematch=read(here/'rematch_01/temporal_reuse_receipt.json'))
+        color = read(here/'source_color_acceptance.json')
+        if color:
+            snapshot['b2_color_acceptance'] = {key:color[key] for key in ('status','tests','source_headers',
+                'changed_color_sources','actual_converted_frames','original_errno95_reproduced',
+                'raw_YUV_planes_unchanged','original_metadata_restored','temporal_RGB_field_BGR_exact',
+                'source_pts_unchanged','default_other_sources_unchanged','gamma_curve_recovered',
+                'actual_CUDA_started','optimizer_updates')}
+            snapshot['b2_color_acceptance']['original_receipt_sha256'] = hashlib.sha256(
+                (here/'source_color_acceptance.json').read_bytes()).hexdigest()
+        snapshot['b2_recovery_manifest'] = read(here/'rematch_01/recovery_manifest.json')
+        snapshot['b2_recovery_receipts_cpu'] = read(here/'recovery_receipts_acceptance.json')
+        snapshot['b2_recovery_failure'] = read(here/'rematch_01/recovery_failure.json')
+        snapshot['b2_recovered_raw_receipts'] = {
+            p.name:dict(bytes=p.stat().st_size,mtime_ns=p.stat().st_mtime_ns,
+                        sha256=hashlib.sha256(p.read_bytes()).hexdigest())
+            for p in sorted((here/'rematch_01/recovered_raw').glob('*.json'))}
     if entry.startswith('teacher_context_diagnostic_'):
         snapshot['context_diagnostic_requests'] = [
             {'window_id': row['window_id'], 'arm': row['arm'], 'status': row['status'],

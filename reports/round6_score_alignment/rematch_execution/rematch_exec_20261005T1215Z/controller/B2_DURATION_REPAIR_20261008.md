@@ -1,0 +1,17 @@
+# B2端点合同复现、独立修复和自动移交
+
+2026-10-08自主执行，用户不参与中间决策。原v1和全部教师原raw、失败与科学拒绝保留。
+
+原v1时间生成已经用十进制Fraction计算窗口长度；生产选帧两处使用浮点`end-start`。434来源/529真实元数据窗口有56处不同，29个合法全端点被选帧原validator误拒绝。独立审计只读元数据及合成全端点，没有读取复赛视频内容/调评分参数。原症状见B2_duration_audit_20261008.json，SHA6a5c432ef601d4ee865196651d7f988d26662d516fba83e8d33353fb12ef94a5。
+
+独立b_score_aligned_package_v2以同一window_duration绑定生成/原validator/物理选帧，不加epsilon、不裁端点、不改回答值、不扩上界。69项CPU包括原29误拒绝逐一复现、529全端点真实native帧选择、529 nextafter越界继续拒绝、全部529原生成输入完全相等、12原目标无损回放、实际8/8原回答和同288张量B LoRA模型回执复查。另有实际processor1/3/63/64、HD默认张量相等与8非测试源重开pixel SHA验收。
+
+第一轮修复CPU验收曾将native PTS的Fraction直接与浮点边界比，而生产协议按登记float64边界比较；该测试断言失败记录保留。修正测试参考为同协议的实际float64原生PTS，真实529窗口全通过，没有改生产源PTS、原标签或输出。v2冻结前预修记录保持；不重写旧失败日志。
+
+v2锁564文件SHA7bf811f5e81f09d45ef10ba89caf1116bb185ff89e7fe6eba34ee3198a4fb497，部署25个小量控制文件222267字节，既有模型权重原地使用。算法等价以完整生成AST/八helper/所有旧配置及529实际输入核验，probe/NONTEST时间关键字节逐SHA绑定原资源记账回执，原样复制并写独立reuse receipt，不称本版重做CUDA。
+
+v1实际B LoRA长输入已PASS，NONTEST8时间8/8无失败、完整strict11项均true、444选中帧；所需成功输出保留，不重复生成。当前v1完整426/521时间GPU计算不受选帧错误影响，让原冻结任务完成。v2控制器先重新完整NONTEST8选帧/空间/strict，然后等待原v1时间PASS及所属wrapper完整记账；逐SHA/原validator/源帧身份核验后，只按实时完整controller命令/父子PGID终止其后续CPU路径并保存handoff证据。任何GPU仍在活跃/记账、命令身份不符或外部成员存在时，不发送信号。
+
+随后v2全源CPU镜头、同8B空间、恢复合成和426独立strict ZIP自动接续。旧rematch CPU域不满足新native域，不强行复用。真正失败/UNKNOWN不转空，T监督科学门保持STOP/T更新0；B2保留已经训练的B，不是新教师T训练，新官网分未知。
+
+每15分钟静默检查、自主修复并独立新版本接续。最终一个ZIP留Linux、不自动回传/官网上传，Mac不用，新大流量仍须许可；共享锁/追加账本/7200历史偏移和真实容量继续。最终completion PASS、8/426全部strict、大小/SHA/CRC/唯一JSONL/426身份实核后才报告一次并删除监控。

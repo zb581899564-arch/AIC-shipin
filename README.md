@@ -10,7 +10,7 @@ AIC 产业命题赛「基于视频大模型的通用视频高光剪辑」的项�
 | --- | --- | ---: | --- |
 | 复赛 | A：4B / P2-T2 时间模型，native PTS 与帧身份恢复 | **33.81** | [candidate_A_PTS.zip][zip-a] |
 | 复赛 | B：Linux 8B 区间 JSON SFT，最终 5 轮，同 8B 空间基座 | **37.63** | [candidate_B_8B.zip][zip-b] |
-| 复赛 | B2：保留Linux B最终LoRA、native输入与全源空间场 | 未评分 | [代码与生成状态](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/CONTINUE.md)；ZIP验收中 |
+| 复赛 | B2：保留Linux B最终LoRA、native输入与全源空间场 | 未评分 | [代码与生成状态](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/CONTINUE.md)；ZIP验收中 |
 | 复赛 | Mac 8B：64 帧低分辨率区间 SFT | **33.46** | [candidate_MAC_8B.zip](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_01/candidate_MAC_8B.zip)；用户已提交，方案停止 |
 | 初赛 | 未微调 Qwen3-VL 单片段基线 | 41.09 | [baseline ZIP](submissions/qwen3vl_baseline_20260910/baseline_qwen3vl_20260910.zip) |
 | 初赛 | 未微调 Qwen3-VL 多片段 reader | 41.22 | [multi-reader ZIP](submissions/qwen3vl_multi_reader_20260910/aic-qwen3vl-multi-20260910.zip) |
@@ -24,15 +24,19 @@ AIC 产业命题赛「基于视频大模型的通用视频高光剪辑」的项�
 
 已按采纳结论建立独立 [next_round_v1](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1)。145项CPU合同、真实processor逐张量一致、全空426独立strict及真实CUDA空生成/空assistant有限CE损失已通过。修复严格0..1000坐标、合法空与失败分离、原生PTS训练目标、生产一致开发输入、全源空间场和Mac离线预留。旧已评分包不变。
 
-2026-10-08 01:58 UTC+8：当前自主接续为[B2已微调8B生产对齐](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/CONTINUE.md)。保留已评分37.63的B最终LoRA，不增加训练更新；时间使用B adapter、空间同8B原生基座，总逻辑参数8,782,459,120。B2采用所有分支实际native PTS/floor64帧/顺序PyAV/16384长输入、精确端点与全源空间场，仍用B原1–5段提示与greedy。旧37.63仍绑定旧B包，新B2官网分未知。
+2026-10-08 03:37 UTC+8：当前自主接续为[B2已微调8B生产对齐](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/CONTINUE.md)。保留已评分37.63的B最终LoRA，不增加训练更新；时间使用B adapter、空间同8B原生基座，总逻辑参数8,782,459,120。B2采用所有分支实际native PTS/floor64帧/顺序PyAV/16384长输入、精确端点与全源空间场，仍用B原1–5段提示与greedy。旧37.63仍绑定旧B包，新B2官网分未知。
 
 32B context v3已经完整8/8真实请求、0工程失败，三正被弱审核支持，唯一NO被拒绝；没有受支持真实空例，T更新0。审核声称overview仅到119.0189秒，实际完整源回执末PTS149.98316666666668、13帧>=120；事实性错误和语义争议同时保留，不能将拒绝改PASS或空标签当真值。旧raw/失败/科学STOP保存；不再盲试同配方，不造空或弱化原监督门。B2是保留已经训练B的可交付路线，不冒充新教师T训练。
 
-65项CPU、434来源/529真实自然窗/33447样本端点、12原目标无损回放与实际processor/HD/8非测试源重开pixel SHA通过。527文件锁 `0c63bc55df1ec3a34773dc543f4241241a646ac55249b320c72df02fab598d2c`，单次launcher历史PID `3295213`；本次快照阶段 `RUNNING_NONTEST_TEMPORAL`、实际命令进程 `3`。实际B LoRA长输入CUDA已PASS：12048token、288 adapter张量与保存值相等、全基座SHA与原训练相等，选择token分数有限；0优化器更新。完整NONTEST8/426严格包分别看实际回执，尚未宣称ZIP完成。
+69项CPU、434来源/529真实自然窗/33447样本端点、12原目标无损回放与实际processor/HD/8非测试源重开pixel SHA通过。571文件锁 `52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db`，单次launcher历史PID `3965729`；本次快照阶段 `WAITING_VALID_B2_V1_TEMPORAL`、实际命令进程 `1`。实际B LoRA长输入CUDA已PASS：12048token、288 adapter张量与保存值相等、全基座SHA与原训练相等，选择token分数有限；0优化器更新。完整NONTEST8/426严格包分别看实际回执，尚未宣称ZIP完成。
 
 旧Z时间实际adapter=False，521旧时间不能复用B2。非测试全源CPU/同基座空间只在输入/算法/关键SHA与完整回执一致后原样复用；复赛旧CPU域与新native源域不同，不准入复用，真实重算全源CPU/空间。后台真实B长输入CUDA→NONTEST8→426/521时间/全源空间→独立strict ZIP。最终只有真实B2 completion PASS、8/426独立strict全部true、大小/SHA/CRC/唯一JSONL/426身份验收才可提交。
 
-已有监控每15分钟静默核查、自主修复并更新证据，最后汇报一次。Linux后台独立运行，本地巡检需要Windows开机且Codex运行。最终只有一个选定ZIP留Linux，不自动回传或AIC上传；新大流量先许可、Mac退出，实际容量与共享GPU锁/账本/7200保持。见[B2决策](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/NEXT_ACTION_B2_20261008.md)、[协议](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/PROTOCOL.md)、[实时接续](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/STATUS_AUTOPILOT_20261007.md)。
+已有监控每15分钟静默核查、自主修复并更新证据，最后汇报一次。Linux后台独立运行，本地巡检需要Windows开机且Codex运行。最终只有一个选定ZIP留Linux，不自动回传或AIC上传；新大流量先许可、Mac退出，实际容量与共享GPU锁/账本/7200保持。见[B2决策](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/NEXT_ACTION_B2_20261008.md)、[协议](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/PROTOCOL.md)、[实时接续](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/STATUS_AUTOPILOT_20261007.md)。
+
+v4保持canonical时长修复，新加SHA绑定的97送模型前log316/errno95转换修复：临时UNSPECIFIED transfer/限定范围ITU601样本映射后恢复frame元数据，原源/YUV/range/尺寸/PTS不变，不声称恢复摄影gamma曲线。其他源默认转换保持，9转换CPU/64实际帧RGB与空间BGR完全对应、69原CPU/实际processor/8非测试pixel SHA通过；11独立所有权mock及6实际失败分类CPU通过。v1有效GPU计算不打断，v4新NONTEST8后等待完整provider和记账，所有成功原validator/输入/SHA核验原字节保留，只为登记送模型前错误真正生成一次；旧失败STOP保留，不转空/减426分母。见[显式转换与恢复](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/B2_COLOR_RECOVERY_20261008.md)。
+
+v4另修复恢复失败证据丢失：新返回原文先写独立且不可覆盖raw，再做有效性校验，异常另记failure/traceback；3项CPU验收无效原文保留/有效原文保留/重复覆盖拒绝通过。v3只停止等待controller，未开始恢复GPU，旧锁与产物保留。冻结源码不回写，生成/色彩/时间配方保持v3，不重复任何成功推理。
 
 ## 资源策略已取消人为额度（2026-10-07）
 
@@ -62,7 +66,7 @@ Mac 版本保留相同监督、r16、学习率和训练曝光量，改为最多 
 | Mac 低内存训练与 MPS 修复 | [mac_sft8b_64_lowres_v8][mac-train]：`train_mac.py`、`mac_inputs.py`、`mps_deepstack.py` |
 | Mac 最终 adapter 的 CUDA 开发与提交包 | [mac8b_delivery_v2][mac-delivery]：`lowres.py`、`runtime.py`、`dev/evaluate.py`、`production.py` |
 | PTS 合同、顺序帧解码、CPU 镜头与空间锚点 | [baseline_a_pts_v1][pts-code]；JSON 约束在同级 `baseline_a_format_recovery_v1` |
-| B2已训练B生产对齐 | [b_score_aligned_package_v1](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1)：`engine.py`、`native_input.py`、`cache_contract.py`、`production.py`、`controller.py` |
+| B2已训练B生产对齐 | [b_score_aligned_package_v4](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4)：`engine.py`、`native_input.py`、`source_color.py`、`temporal_reuse.py`、`recovery.py`、`production.py`、`controller.py` |
 | 新教师/8B全链与审计修复 | [v7源码](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7)：`teacher_label.py`、`train_student.py`、`precision_helpers`、`production_t.py`、`controller.py` |
 | 共享 GPU 作业锁、资源证据与追加账本 | [controller/gpu_run.py][gpu-run] |
 | Qwen 原生基线实现 | [inference/baseline_qwen3vl.py](inference/baseline_qwen3vl.py) |

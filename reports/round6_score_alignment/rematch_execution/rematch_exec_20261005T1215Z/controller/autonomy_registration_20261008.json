@@ -1,0 +1,63 @@
+{
+  "status": "PASS_AUTONOMOUS_SILENT_CONTINUATION_REGISTERED",
+  "automation_id": "aic-linux",
+  "interval_minutes": 15,
+  "notification_policy": "failed_runs_only",
+  "entry": "b_score_aligned_package_v4",
+  "source_lock_sha256": "52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db",
+  "snapshot_utc": "2026-10-07T19:37:05.949555+00:00",
+  "progress": {
+    "utc": "2026-10-07T19:36:14.752810+00:00",
+    "stage": "WAITING_VALID_B2_V1_TEMPORAL",
+    "pid": 3965729,
+    "source_lock_sha256": "52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db",
+    "automatic_return": false,
+    "uploaded": false
+  },
+  "completion": null,
+  "actual_process_count": 1,
+  "provider_actual_progress": {
+    "utc": "2026-10-07T19:32:24.386008+00:00",
+    "stage": "B2_TEMPORAL",
+    "scope": "rematch",
+    "videos": 426,
+    "total": 426,
+    "windows": 521,
+    "failures": 1,
+    "wall_seconds": 5191.704845281318
+  },
+  "nontest8_status": "PASS_COMPLETE_B2_8B_PACKAGE_ON_LINUX",
+  "nontest8_strict_checks": {
+    "strict_loader_ok": true,
+    "video_record_set_exact": true,
+    "selected_key_set_exact": true,
+    "ratio_fields_exact": true,
+    "frames_sorted": true,
+    "provenance_key_set_exact": true,
+    "provenance_boxes_match_predictions": true,
+    "provenance_all_legal": true,
+    "provenance_sources_allowed": true,
+    "archive_single_file": true,
+    "archive_roundtrip_exact": true
+  },
+  "B2ZIP_completed": false,
+  "TZIP_completed": false,
+  "T_optimizer_steps": 0,
+  "new_model_updates": 0,
+  "adopted_model": "PRESERVED_OFFICIALLY_SCORED_B_8B_LORA_NATIVE_INPUT",
+  "final_zip_stays_linux": true,
+  "github_last_pushed_commit_at_snapshot": "12af79eb7c65decabb1764bb856100a03ba928ff",
+  "utc": "2026-10-07T19:37:05.905236+00:00",
+  "launch": {
+    "pid": 3965729,
+    "utc": "2026-10-07T19:32:44.781646+00:00",
+    "source_lock_sha256": "52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db",
+    "automatic_return": false,
+    "uploaded": false
+  },
+  "raw_receipt_cpu_tests": 3,
+  "raw_receipt_status": "PASS_B2_RECOVERY_RAW_RECEIPTS_CPU",
+  "owned_handoff_cpu_tests": 11,
+  "raw_receipt_failure_to_empty": 0,
+  "raw_receipt_cpu_status": "PASS_RECOVERY_RAW_BEFORE_GUARD_CPU"
+}

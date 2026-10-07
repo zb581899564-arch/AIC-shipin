@@ -64,7 +64,7 @@ def main():
         "    require(sum(p.numel() for p in model.model.parameters())==8767123696,'space model parameter count changed')\n"
         "    for parameter in model.model.parameters():parameter.requires_grad_(False)\n"
         "    from engine import frozen_identity\n    base_hash=frozen_identity(model.model,config)")
-    production = production.replace("strict_units='INTEGER_0_TO_1000',time_adapter_enabled=False", 
+    production = production.replace("strict_units='INTEGER_0_TO_1000',time_adapter_enabled=False",
                                     "base_hash=base_hash,strict_units='INTEGER_0_TO_1000',time_adapter_enabled=False")
     production = production.replace("    selected=rows(out/'selected.jsonl');shots=rows(out/'field_shots.jsonl')",
         "    require(read(out/'temporal.stage.json')['status']=='PASS_TEMPORAL_EXECUTION' and "

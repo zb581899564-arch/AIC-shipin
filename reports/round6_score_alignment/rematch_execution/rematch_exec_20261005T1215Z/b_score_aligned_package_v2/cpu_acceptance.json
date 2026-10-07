@@ -1,0 +1,77 @@
+{
+  "status": "PASS_B2_CPU_CONTRACTS",
+  "tests": 69,
+  "additional_contract_cases": 33,
+  "inherited_tests": 36,
+  "actual_metadata_sources": 434,
+  "actual_natural_windows": 529,
+  "actual_sampled_native_endpoints": 33447,
+  "original_target_values_replayed": 12,
+  "original_target_values_changed": 0,
+  "original_target_file_sha256": "7d6891ac51d61e4c26d04877ddf5178027794b33c57e8107c50f052f659e1aa1",
+  "cases": [
+    {
+      "scope": "nontest",
+      "sources": 8,
+      "all_metadata_windows_plannable": true
+    },
+    {
+      "scope": "rematch",
+      "sources": 426,
+      "all_metadata_windows_plannable": true
+    }
+  ],
+  "helper_bindings": {
+    "contracts": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v2/contracts.py",
+    "constrained_json": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v2/constrained_json.py",
+    "package_contract": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v2/package_contract.py",
+    "frame_contract": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v2/frame_contract.py",
+    "field_contract": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v2/field_contract.py",
+    "video_contract": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v2/video_contract.py",
+    "native_segment_contract": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v2/native_segment_contract.py",
+    "native_input": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v2/native_input.py"
+  },
+  "duration_mismatches_reproduced": 56,
+  "original_valid_endpoint_rejections_reproduced": 29,
+  "repaired_full_endpoint_selection_windows": 529,
+  "strict_nextafter_upper_bound_rejections": 529,
+  "generation_algorithm_equivalence": {
+    "status": "PASS_UNCHANGED_B2_GENERATION_ALGORITHM",
+    "original_source_lock_sha256": "0c63bc55df1ec3a34773dc543f4241241a646ac55249b320c72df02fab598d2c",
+    "config_values_equal": true,
+    "unchanged_helpers": [
+      "engine.py",
+      "common.py",
+      "native_input.py",
+      "native_segment_contract.py",
+      "video_contract.py",
+      "frame_contract.py",
+      "contracts.py",
+      "constrained_json.py"
+    ],
+    "canonical_input_plan_equal_529_windows": true,
+    "model_or_prompt_changes": 0
+  },
+  "original_nontest_temporal_replayed": {
+    "status": "PASS_ORIGINAL_TEMPORAL_RAW_AND_VALIDATOR_REPLAY",
+    "scope": "nontest",
+    "source_lock_sha256": "0c63bc55df1ec3a34773dc543f4241241a646ac55249b320c72df02fab598d2c",
+    "videos": 8,
+    "windows": 8,
+    "selected_frames": 444,
+    "output_sha256": "4a677d3e83c48782ecce870f734555e94e5632776bf2d85203794e45c4384d49",
+    "original_model_identity_sha256": "1d19fbbe33845f429b5732f5ed375d544dda71dc4c7dcca0a430d1d1404ef553",
+    "original_temporal_stage_sha256": "e8e2df51665d2f3d3a8476cc86ae7098e4ef49b7d0cbd305077f5bb0b3c3b9da",
+    "original_resource_sha256": "6e91819dd76c4e289a93294dfb82b1c546df9c316d6a4148dbbf55186d64b249",
+    "copied_raw_bytes_exact": true,
+    "output_values_changed": 0,
+    "failures_to_empty": 0,
+    "model_generation_calls_this_version": 0
+  },
+  "actual_CUDA_started": false,
+  "optimizer_updates": 0,
+  "teacher_quality_not_admitted": true,
+  "source_media_pixels_read": false,
+  "official_score_reconstruction": false,
+  "confirm_read": false
+}

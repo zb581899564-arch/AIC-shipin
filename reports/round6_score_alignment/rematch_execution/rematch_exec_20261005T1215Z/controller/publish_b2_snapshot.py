@@ -53,6 +53,24 @@ def main():
         '已有监控每15分钟静默核查、自主修复并更新证据，最后汇报一次。Linux后台独立运行，本地巡检需要Windows开机且Codex运行。'
         '最终只有一个选定ZIP留Linux，不自动回传或AIC上传；新大流量先许可、Mac退出，实际容量与共享GPU锁/账本/7200保持。'
         f'见[B2决策]({REL}/controller/NEXT_ACTION_B2_20261008.md)、[协议]({REL}/{entry}/PROTOCOL.md)、[实时接续]({REL}/STATUS_AUTOPILOT_20261007.md)。\n\n')
+    if entry == 'b_score_aligned_package_v2':
+        common+=('v2独立修复统一canonical duration：真实529窗56处差异，原29合法全端点误拒绝逐一复现；'
+            '新529全端点/529 nextafter上界拒绝、原529输入相等全部通过。原v1有效GPU生成继续到完整426/521；'
+            'v2只原字节复用逐SHA/原validator/实际模型与输入身份验收的probe/时间，重新完整NONTEST8/strict，'
+            '随后等待原GPU完成记账并受控移交CPU，再全源空间/426严格ZIP。不打断有效生成，不把复用写成新CUDA或新T训练。'
+            f'见[端点修复与移交]({REL}/controller/B2_DURATION_REPAIR_20261008.md)。\n\n')
+    if entry in ('b_score_aligned_package_v3','b_score_aligned_package_v4'):
+        version=entry.rsplit('_',1)[1]
+        common+=(f'{version}保持canonical时长修复，新加SHA绑定的97送模型前log316/errno95转换修复：'
+            '临时UNSPECIFIED transfer/限定范围ITU601样本映射后恢复frame元数据，原源/YUV/range/尺寸/PTS不变，不声称恢复摄影gamma曲线。'
+            '其他源默认转换保持，9转换CPU/64实际帧RGB与空间BGR完全对应、69原CPU/实际processor/8非测试pixel SHA通过；'
+            f'11独立所有权mock及6实际失败分类CPU通过。v1有效GPU计算不打断，{version}新NONTEST8后等待完整provider和记账，'
+            '所有成功原validator/输入/SHA核验原字节保留，只为登记送模型前错误真正生成一次；旧失败STOP保留，不转空/减426分母。'
+            f'见[显式转换与恢复]({REL}/controller/B2_COLOR_RECOVERY_20261008.md)。\n\n')
+        if entry == 'b_score_aligned_package_v4':
+            common+=('v4另修复恢复失败证据丢失：新返回原文先写独立且不可覆盖raw，再做有效性校验，异常另记failure/traceback；'
+                '3项CPU验收无效原文保留/有效原文保留/重复覆盖拒绝通过。v3只停止等待controller，未开始恢复GPU，旧锁与产物保留。'
+                '冻结源码不回写，生成/色彩/时间配方保持v3，不重复任何成功推理。\n\n')
     def readme(text):
         before,rest=text.split('旧已评分包不变。',1)
         _,tail=rest.split('## 资源策略已取消人为额度',1)
@@ -60,10 +78,13 @@ def main():
         if '| B2：' not in before:
             start=before.index('| 复赛 | Mac 8B：')
             before=before[:start]+row+before[start:]
+        else:
+            before='\n'.join(row.rstrip('\n') if line.startswith('| 复赛 | B2：') else line for line in before.split('\n'))
         return before+'旧已评分包不变。\n\n'+common+'## 资源策略已取消人为额度'+tail
     edit(PUB/'README.md',readme)
-    edit(PUB/'README.md',lambda text:text if '| B2已训练B生产对齐 |' in text else
-        text.replace('| 新教师/8B全链与审计修复 |', '| B2已训练B生产对齐 | ['+entry+']('+REL+'/'+entry+')：`engine.py`、`native_input.py`、`cache_contract.py`、`production.py`、`controller.py` |\n| 新教师/8B全链与审计修复 |'))
+    core_row='| B2已训练B生产对齐 | ['+entry+']('+REL+'/'+entry+')：`engine.py`、`native_input.py`、`source_color.py`、`temporal_reuse.py`、`recovery.py`、`production.py`、`controller.py` |'
+    edit(PUB/'README.md',lambda text:'\n'.join(core_row if line.startswith('| B2已训练B生产对齐 |') else line for line in text.split('\n'))
+         if '| B2已训练B生产对齐 |' in text else text.replace('| 新教师/8B全链与审计修复 |',core_row+'\n| 新教师/8B全链与审计修复 |'))
     section=common.replace(']('+REL,'](../'+REL)
     edit(PUB/'docs/SOLUTIONS.md',lambda text:'# 方案、证据与当前状态\n\n## 当前自主B2接续\n\n'+section+'## 复赛 A：'+text.split('## 复赛 A：',1)[1])
     edit(PUB/'docs/REPRODUCTION.md',lambda text:text.split('## 当前自主诊断复现范围',1)[0].split('## 当前B2复现范围',1)[0]+
@@ -72,9 +93,16 @@ def main():
     selected=[WORKSPACE/'AGENTS.md',RUN/'STATUS_AUTOPILOT_20261007.md']
     selected += [RUN/'controller'/name for name in ('NEXT_ACTION_B2_20261008.md','AUTONOMOUS_EXECUTION_20261008.md',
         'RELATIVE_SUMMARY_DECISION_20261008.md','inspect_autopilot_live.py','checkpoint_b2_autonomy_20261008.py',
-        'register_b2_package_v1.py','build_b2_control.py','publish_b2_snapshot.py')]
-    selected += [path for path in (RUN/entry).iterdir() if path.is_file() and path.suffix in ('.py','.md','.json') and
-                 path.name not in ('processor_acceptance.json',)]
+        'register_b2_package_v1.py','build_b2_control.py','publish_b2_snapshot.py',
+        'build_b2_duration_repair.py','B2_DURATION_REPAIR_20261008.md','build_b2_color_repair.py',
+        'B2_COLOR_RECOVERY_20261008.md','test_b2_handoff_cpu.py')]
+    selected += [p for pattern in ('B2_v3_*_cpu_20261008.json','B2_v4_*_cpu_20261008.json')
+                 for p in (RUN/'controller').glob(pattern) if p.is_file()]
+    selected += [RUN/'controller/autonomy_registration_20261008.json']
+    history=[name for name in ('b_score_aligned_package_v2','b_score_aligned_package_v3') if name!=entry and (RUN/name).is_dir()]
+    selected += [path for name in [*history,entry] for path in (RUN/name).iterdir()
+                 if path.is_file() and path.suffix in ('.py','.md','.json') and
+                 path.name not in ('processor_acceptance.json','source_color_acceptance.json')]
     for path in selected:
         target=PUB/path.relative_to(WORKSPACE);target.parent.mkdir(parents=True,exist_ok=True)
         shutil.copyfile(path,target);assert target.read_bytes()==path.read_bytes()
@@ -85,6 +113,33 @@ def main():
     destination=PUB/REL/entry/'processor_acceptance_summary.json'
     destination.write_text(json.dumps(aggregate,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     derived=[destination]
+    for name in history:
+        path=RUN/name/'processor_acceptance.json'
+        if path.is_file():
+            summary=aggregate_processor(json.loads(path.read_text()))
+            summary.update(original_receipt_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
+                           per_frame_source_data_exported=False)
+            destination_history=PUB/REL/name/'processor_acceptance_summary.json'
+            destination_history.write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
+            derived.append(destination_history)
+        path=RUN/name/'source_color_acceptance.json'
+        if path.is_file():
+            color=json.loads(path.read_text())
+            summary={key:value for key,value in color.items() if key not in ('actual_production_window','actual_native_evidence')}
+            summary.update(original_receipt_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
+                           per_frame_source_data_exported=False)
+            destination_history=PUB/REL/name/'source_color_acceptance_summary.json'
+            destination_history.write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
+            derived.append(destination_history)
+    color_path=RUN/entry/'source_color_acceptance.json'
+    if color_path.is_file():
+        color=json.loads(color_path.read_text())
+        color_summary={key:value for key,value in color.items() if key not in ('actual_production_window','actual_native_evidence')}
+        color_summary.update(original_receipt_sha256=hashlib.sha256(color_path.read_bytes()).hexdigest(),
+                             per_frame_source_data_exported=False)
+        destination_color=PUB/REL/entry/'source_color_acceptance_summary.json'
+        destination_color.write_text(json.dumps(color_summary,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
+        derived.append(destination_color)
     if probe:
         probe_summary={key:probe[key] for key in ('status','model_identity','synthetic_only','contest_media_read',
             'optimizer_updates','peak_allocated_mib','wall_seconds') if key in probe}

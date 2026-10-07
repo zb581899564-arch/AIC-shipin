@@ -1,0 +1,23 @@
+# B2 显式转换与仅失败窗口恢复
+
+当前唯一接续为v4。571文件锁SHA52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db；部署30小量控制文件249364字节，2026-10-08 03:32:44 UTC+8单次launcher历史PID3965729。v3等待controller按实时完整身份/唯一PGID停止，未启动恢复GPU；原568文件锁/源码/成功物保持，独立owned_stop_B2_v3_raw_receipt_repair_20261008.json。
+
+v4只新增可证实工程修复：新模型返回原文先写独立不可覆盖raw回执，再做有效性校验；异常另写failure/traceback。3项CPU分别验证无效响应拒绝后原文仍在、有效响应保留、重复写入拒绝。9转换CPU/69原CPU/真实processor/8非测试源pixel SHA和全preflight通过。下面v3转换/失败恢复配方、模型/提示词/时长/采样/生成算法及全部门保持，不重复任何新成功生成。当前进程/阶段与原provider实际进度见monitor_aic_linux/latest.json，CPU与启动不代表ZIP完成。
+
+## v3配方与历史验收
+
+用户完全自主授权，期间静默。v1真实时间生成中，video97在送入processor/模型前发生errno95：PyAV17.1/libswscale9拒绝yuv420p/unknown颜色空间与原色/log316 transfer。原窗口无模型回答，所有旧raw/失败保持。434来源元数据仅一项为此profile；源SHA8ec893eb5378452de6223f6c8e5878bcea044cb2f9e4feaabf708fa364871722。OpenCV也打印相同转换错误，其read返回不能冒充正确RGB。
+
+只停止v2已经完成NONTEST8的等待controller，实时PID3444622/完整命令/唯一PGID成员均核实，未触及v1 GPU或外部任务；独立controller/owned_stop_B2_v2_decoder_repair_20261008.json保持原失败与冻结文件。
+
+独立v3明确登记新像素转换配方：仅此SHA及720x1280/yuv420p/trc10/space2/prim2/range1全匹配，转换时临时transfer标记UNSPECIFIED(2)，限定范围ITU601映射YUV样本到RGB/BGR，随后恢复原frame元数据。原源文件/YUV样本/range/尺寸/native PTS不改；不应用或声称恢复摄影gamma曲线。没有观察复赛图像内容选择颜色参数；其他来源保持原转换。新的未知错误仍STOP，不catch任意错误自动换decoder。
+
+9项转换CPU已复现实际errno95，4合成恒定样本验证有限范围映射，实际64帧时间RGB与空间BGR逐通道完全对应、原YUV/元数据恢复、全部原生序号/PTS通过。69CPU/529全端点/529 nextafter上界拒绝/原29误拒绝与12原目标无损回放保持；实际processor/HD默认相等/8非测试重开pixel SHA通过。另11项独立mock所有权/PGID/外部成员/GPU记账等待/已知失败wrapper合同与6项真实失败分类CPU通过，不发送真实信号或调用GPU。
+
+v3锁568文件SHA48518101580bf06f866b71e48cdefb68afd4cc1386093e4cb269209ba9424a0a，部署28文件245711字节；03:03:23 UTC+8单次后台历史PID3754761，存活及阶段必须看实时完整身份。v3先逐SHA复用真实原probe/8时间，重新完整NONTEST8/strict；v1剩余有效时间GPU不打断、不重复成功物。
+
+完整426/521 provider及wrapper追加账本终态后，允许旧完整STOP_TEMPORAL_FAILURES/failed exit1 stop_reason null仅作为独立恢复输入。temporal_reuse逐一核所有成功的原validator/源帧/模型/输入/SHA；全部失败必须严格为登记source97送模型前errno95，否则STOP待独立诊断。原provider raw/stage整字节保存于新目录，旧STOP不改。recovery.py只为此失败窗实际生成一次，425原成功记录整行字节/520成功窗口原值保持（以实际完整分母为准）；新B288张量/全基座SHA、真实转换CPU帧SHA、有限分数/原validator均须PASS。新stage公开原成功数、新调用数和两个真实wall成本，不把旧失败变空或旧失败stage改成功。
+
+新真实完整时间PASS后，全源CPU镜头/同转换源空间/合成/426独立strict ZIP自动接续。旧rematch源域不准入缓存，实际重算；非测试原默认解码无新转换来源，同源/算法/全部关键SHA缓存资格保持。T0/教师科学STOP保持，B2保留已经训练的B，新官方分未知。
+
+每15分钟静默核provider/v3真实父子PGID、全部阶段/reuse/recovery/strict/资源与字节mtime，异常立即独立修复。最终仅一个验收ZIP留Linux，不回传/官网提交，Mac不参与、新大流量先许可。共享锁/追加账本/7200offset/真实容量与全部426分母、8/426独立strict、大小/SHA/CRC/唯一JSONL验收保持；最终一次汇报并删除监控。

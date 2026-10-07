@@ -1,0 +1,77 @@
+{
+  "status": "PASS_B2_OWNERSHIP_AND_HANDOFF_CPU",
+  "cases": [
+    {
+      "case": "owned_CPU_only",
+      "passed": true,
+      "real_signals_sent": 0,
+      "original_provider_bytes_unchanged": true
+    },
+    {
+      "case": "provider_already_terminal",
+      "passed": true,
+      "real_signals_sent": 0,
+      "original_provider_bytes_unchanged": true
+    },
+    {
+      "case": "foreign_descendant",
+      "passed": true,
+      "real_signals_sent": 0,
+      "original_provider_bytes_unchanged": true
+    },
+    {
+      "case": "PID_reused",
+      "passed": true,
+      "real_signals_sent": 0,
+      "original_provider_bytes_unchanged": true
+    },
+    {
+      "case": "wrong_PGID",
+      "passed": true,
+      "real_signals_sent": 0,
+      "original_provider_bytes_unchanged": true
+    },
+    {
+      "case": "provider_stopped_before_completion",
+      "passed": true,
+      "real_signals_sent": 0,
+      "original_provider_bytes_unchanged": true
+    },
+    {
+      "case": "gpu_wait",
+      "passed": true,
+      "real_signals_sent": 0,
+      "original_provider_bytes_unchanged": true
+    },
+    {
+      "case": "wrapper_wait",
+      "passed": true,
+      "real_signals_sent": 0,
+      "original_provider_bytes_unchanged": true
+    },
+    {
+      "case": "external_gpu_untouched",
+      "passed": true,
+      "real_signals_sent": 0,
+      "original_provider_bytes_unchanged": true
+    },
+    {
+      "case": "declared_failed_provider_complete",
+      "passed": true,
+      "real_signals_sent": 0,
+      "original_provider_bytes_unchanged": true
+    },
+    {
+      "case": "unexpected_wrapper_failure",
+      "passed": true,
+      "real_signals_sent": 0,
+      "original_provider_bytes_unchanged": true
+    }
+  ],
+  "tests": 11,
+  "live_helper_sha256": "ce7b8e9afceed8e3bc87747fa382066d391da7c3835c63b637cd62123c03d622",
+  "source_lock_sha256": "48518101580bf06f866b71e48cdefb68afd4cc1386093e4cb269209ba9424a0a",
+  "actual_process_signals_sent": 0,
+  "actual_GPU_calls": 0,
+  "actual_frozen_sources_changed": false
+}

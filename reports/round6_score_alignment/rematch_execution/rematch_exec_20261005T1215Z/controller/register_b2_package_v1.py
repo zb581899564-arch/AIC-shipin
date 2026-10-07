@@ -5,6 +5,7 @@ import datetime as dt
 import hashlib
 import json
 from pathlib import Path
+import re
 import subprocess
 
 RUN=Path(__file__).resolve().parent.parent
@@ -26,7 +27,8 @@ def deploy():
     payload={}
     for path in (RUN/ENTRY).iterdir():
         if path.is_file() and path.suffix in ('.py','.md','.json') and path.name not in (
-            'source_lock.json','cpu_acceptance.json','processor_acceptance.json','cache_bindings.json','registration.json','launch.json','progress.json','completion.json'):
+            'source_lock.json','cpu_acceptance.json','processor_acceptance.json','source_color_acceptance.json',
+            'cache_bindings.json','registration.json','launch.json','progress.json','completion.json'):
             data=path.read_bytes();payload[path.name]=dict(sha256=hashlib.sha256(data).hexdigest(),data=base64.b64encode(data).decode())
     encoded=base64.b64encode(json.dumps(payload).encode()).decode()
     remote("""import base64,hashlib,json,socket
@@ -58,7 +60,10 @@ from pathlib import Path
 root=Path(%r)/%r
 env=dict(os.environ,HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1',PYTHONDONTWRITEBYTECODE='1',PYTHONNOUSERSITE='1',
     HF_HOME=str(root.parent/'cache/hf'),XDG_CACHE_HOME=str(root.parent/'cache'),TMPDIR=str(root.parent/'tmp'))
-for name,args in [('cpu_tests.py',[]),('processor_cpu.py',[]),('prepare.py',[])]:
+stages=([('recovery_receipts_cpu.py',[])] if (root/'recovery_receipts_cpu.py').exists() else [])+[
+    *([('source_color_cpu.py',[])] if (root/'source_color_cpu.py').exists() else []),
+    ('cpu_tests.py',[]),('processor_cpu.py',[]),('prepare.py',[])]
+for name,args in stages:
     if (root/'source_lock.json').exists():raise RuntimeError('never rerun frozen CPU registration')
     tag=str(time.time_ns())
     result=subprocess.run([%r,'-B',str(root/name),*args],cwd=root,env=env,capture_output=True,timeout=1800)
@@ -75,7 +80,8 @@ if result.returncode:
     print(result.stderr.decode(errors='replace'),flush=True)
     raise RuntimeError('B2 sealed preflight failed')
 """%(REMOTE,ENTRY,PY,PY))
-    fetch(('cpu_acceptance.json','processor_acceptance.json','cache_bindings.json','source_lock.json'))
+    fetch(('cpu_acceptance.json','processor_acceptance.json','source_color_acceptance.json',
+        'recovery_receipts_acceptance.json','cache_bindings.json','source_lock.json'))
 
 
 def fetch(names):
@@ -89,10 +95,14 @@ print(json.dumps({name:base64.b64encode((root/name).read_bytes()).decode() for n
 
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('stage',choices=('deploy','accept','launch','fetch'));args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('stage',choices=('deploy','accept','launch','fetch'))
+    parser.add_argument('--entry',default=ENTRY);args=parser.parse_args()
+    assert re.fullmatch(r'b_score_aligned_package_v[1-9][0-9]*',args.entry)
+    ENTRY=args.entry
     if args.stage=='deploy':deploy()
     elif args.stage=='accept':accept()
     elif args.stage=='launch':
         remote('import subprocess\nsubprocess.run([%r,"-B",%r],check=True)'%(PY,REMOTE+'/'+ENTRY+'/launch.py'))
         fetch(('launch.json','registration.json','progress.json','completion.json'))
-    else:fetch(('launch.json','registration.json','progress.json','completion.json','cpu_acceptance.json','processor_acceptance.json','cache_bindings.json','source_lock.json'))
+    else:fetch(('launch.json','registration.json','progress.json','completion.json','cpu_acceptance.json','processor_acceptance.json',
+        'source_color_acceptance.json','cache_bindings.json','source_lock.json'))

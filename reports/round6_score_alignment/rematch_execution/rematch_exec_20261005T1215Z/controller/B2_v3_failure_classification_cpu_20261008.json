@@ -1,0 +1,33 @@
+{
+  "status": "PASS_B2_DECLARED_FAILURE_CLASSIFICATION",
+  "tests": 6,
+  "cases": [
+    {
+      "case": "actual_pre_model_errno95",
+      "pass": true
+    },
+    {
+      "case": "generated_output_present",
+      "pass": true
+    },
+    {
+      "case": "model_input_present",
+      "pass": true
+    },
+    {
+      "case": "failure_converted_to_empty",
+      "pass": true
+    },
+    {
+      "case": "different_runtime_error",
+      "pass": true
+    },
+    {
+      "case": "different_clock",
+      "pass": true
+    }
+  ],
+  "actual_original_window_sha256": "02aa351edac45b5ad0d926d81c119a308d3fadd2a00a32f6dd8decdd8c3777bd",
+  "original_output_modified": false,
+  "actual_GPU_calls": 0
+}

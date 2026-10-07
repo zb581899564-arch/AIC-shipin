@@ -1,0 +1,33 @@
+{
+  "schema": "B2_FROZEN_SOURCE_FIELD_REUSE_V1",
+  "scopes": {
+    "nontest": {
+      "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1/nontest_01",
+      "manifest_sha256": "ba34a284183e8a079054ffe811d7ec096e6b47c94e6edf812a37fd11b92d8dd7",
+      "registry_sha256": "7f57785312c94b1658cb002b2432d09b318ae2943e3297a0c45536d1bd8cd3ea",
+      "cpu_eligible": true,
+      "spatial_eligible": true,
+      "files": {
+        "schedule.stage.json": "dc1ab8456eae1b7d0d739f28018fbd258cc1f99273f83f55cf0a1b7ef7d5fa1e",
+        "field_frames.jsonl": "c4b53cb7d95442ecaa4c8fa6b82b027fd5779370230a2b97f8c8796526386aed",
+        "field_shots.jsonl": "cf4a873053bd2baf24343043eb36f835a5853ce232b409489915329f161c0375",
+        "anchor_requests.jsonl": "f630e725ddff54c590a4062c39b98c1b7233773b8c0a391f271378ac157283a7",
+        "spatial.stage.json": "be653a6c224c8bb12f03a52ab3aad4289e95c76114a0a2e3edc46e0253a5c4c1",
+        "anchor_output.jsonl": "1ffd45d72c723ec71f973d6b24f5e72d052ddf3f6e3b51150a2e68bacfc1532d"
+      }
+    },
+    "rematch": {
+      "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1/rematch_01",
+      "manifest_sha256": "ceb91ee9434ce3de6a55abf727e613b83368b547d3be3d1e71b46414c2f019f8",
+      "registry_sha256": "1058aba02e5e959bc8e4842cbde0eadced192a8201d5c833ae50a7c0aac07909",
+      "cpu_eligible": false,
+      "spatial_eligible": false,
+      "files": {}
+    }
+  },
+  "temporal_reuse_allowed": false,
+  "original_spatial_seconds_per_anchor": 0.6053568722173861,
+  "original_spatial_cost_receipt": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1/nontest_01/spatial.stage.json",
+  "old_algorithms_semantically_equal": true,
+  "old_artifacts_modified": false
+}

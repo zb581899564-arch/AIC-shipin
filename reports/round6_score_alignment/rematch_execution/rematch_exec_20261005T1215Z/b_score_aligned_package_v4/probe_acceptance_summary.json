@@ -1,0 +1,27 @@
+{
+  "status": "PASS_B2_ACTUAL_TRAINED_ADAPTER_LONG_CUDA_INFERENCE",
+  "model_identity": {
+    "base": {
+      "sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+      "parameters": 8767123696,
+      "method": "sorted canonical names and all unique frozen parameter bytes"
+    },
+    "adapter": {
+      "sha256": "8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23",
+      "tensors": 288,
+      "actual_saved_values_equal": true,
+      "adapter_enabled": true,
+      "optimizer_updates": 0
+    },
+    "logical_parameters": 8782459120
+  },
+  "synthetic_only": true,
+  "contest_media_read": false,
+  "optimizer_updates": 0,
+  "peak_allocated_mib": 20361.958984375,
+  "wall_seconds": 106.6720536146313,
+  "original_receipt_sha256": "ab1f5222e393007731960fd8207f34b397ed726a3b997935b2527576f5040119",
+  "input_tokens": 12048,
+  "selected_generation_scores_finite": true,
+  "per_frame_data_exported": false
+}

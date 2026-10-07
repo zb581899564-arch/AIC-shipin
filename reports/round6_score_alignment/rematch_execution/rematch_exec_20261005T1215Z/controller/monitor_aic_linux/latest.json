@@ -1,37 +1,37 @@
 {
-  "utc": "2026-10-07T17:58:26.431848+00:00",
+  "utc": "2026-10-07T19:37:05.949555+00:00",
   "host": "inspur-NP5570M5",
-  "version": "v1",
-  "entry": "b_score_aligned_package_v1",
+  "version": "v4",
+  "entry": "b_score_aligned_package_v4",
   "processes": [
-    "3295213       1 3295213     329 38.2  0.0 /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/controller.py",
-    "3300606 3295213 3295213      49  0.1  0.0 /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/resource_unlimited_v1_20261007/gpu_run.py --name rematch_B2_v1_nontest_temporal_01 --max-seconds 3600 --planned-output-bytes 60000000 --capacity-reason Measured current same-8B outputs and complete source-field counts; actual capacity only, no Mac or quota --queue-seconds 86400 -- /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/engine.py temporal nontest /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/nontest_01",
-    "3300610 3300606 3300610      49  105  1.5 /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/engine.py temporal nontest /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/nontest_01"
+    "3965729       1 3965729     262 67.6  0.0 /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/controller.py"
   ],
   "owned_servers": [],
-  "gpu": "0, NVIDIA RTX 6000 Ada Generation, 0 %, 16152 MiB, 46068 MiB",
-  "memory": "总计         已用        空闲      共享    缓冲/缓存    可用\n内存：      128557        7502       55624          82       65431      119936\n交换：      131071        1939      129132",
+  "gpu": "0, NVIDIA RTX 6000 Ada Generation, 0 %, 182 MiB, 46068 MiB",
+  "memory": "总计         已用        空闲      共享    缓冲/缓存    可用\n内存：      128557        7105       54479          74       66973      120341\n交换：      131071        1939      129132",
   "disk": {
     "total": 943412031488,
-    "used": 694177456128,
-    "free": 201234964480
+    "used": 694233329664,
+    "free": 201179090944
   },
   "window_counts": {},
   "window_receipts": [],
   "all_completed_window_file_sha_pass": true,
-  "new_zip_paths": [],
-  "source_lock_sha256": "0c63bc55df1ec3a34773dc543f4241241a646ac55249b320c72df02fab598d2c",
+  "new_zip_paths": [
+    "nontest_01/candidate_B2_8B.zip"
+  ],
+  "source_lock_sha256": "52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db",
   "launch_receipt": {
-    "pid": 3295213,
-    "utc": "2026-10-07T17:52:57.271916+00:00",
-    "source_lock_sha256": "0c63bc55df1ec3a34773dc543f4241241a646ac55249b320c72df02fab598d2c",
+    "pid": 3965729,
+    "utc": "2026-10-07T19:32:44.781646+00:00",
+    "source_lock_sha256": "52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db",
     "automatic_return": false,
     "uploaded": false
   },
   "b2_cpu_acceptance": {
     "status": "PASS_B2_CPU_CONTRACTS",
-    "tests": 65,
-    "additional_contract_cases": 29,
+    "tests": 69,
+    "additional_contract_cases": 33,
     "inherited_tests": 36,
     "actual_metadata_sources": 434,
     "actual_natural_windows": 529,
@@ -52,14 +52,53 @@
       }
     ],
     "helper_bindings": {
-      "contracts": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/contracts.py",
-      "constrained_json": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/constrained_json.py",
-      "package_contract": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/package_contract.py",
-      "frame_contract": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/frame_contract.py",
-      "field_contract": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/field_contract.py",
-      "video_contract": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/video_contract.py",
-      "native_segment_contract": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/native_segment_contract.py",
-      "native_input": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/native_input.py"
+      "contracts": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/contracts.py",
+      "constrained_json": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/constrained_json.py",
+      "package_contract": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/package_contract.py",
+      "frame_contract": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/frame_contract.py",
+      "field_contract": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/field_contract.py",
+      "video_contract": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/video_contract.py",
+      "native_segment_contract": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/native_segment_contract.py",
+      "native_input": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/native_input.py"
+    },
+    "duration_mismatches_reproduced": 56,
+    "original_valid_endpoint_rejections_reproduced": 29,
+    "repaired_full_endpoint_selection_windows": 529,
+    "strict_nextafter_upper_bound_rejections": 529,
+    "generation_algorithm_equivalence": {
+      "status": "PASS_UNCHANGED_B2_GENERATION_ALGORITHM",
+      "original_source_lock_sha256": "0c63bc55df1ec3a34773dc543f4241241a646ac55249b320c72df02fab598d2c",
+      "config_values_equal": true,
+      "unchanged_helpers": [
+        "engine.py",
+        "common.py",
+        "native_input.py",
+        "native_segment_contract.py",
+        "video_contract.py",
+        "frame_contract.py",
+        "contracts.py",
+        "constrained_json.py"
+      ],
+      "canonical_input_plan_equal_529_windows": true,
+      "model_or_prompt_changes": 0
+    },
+    "original_nontest_temporal_replayed": {
+      "status": "PASS_ORIGINAL_TEMPORAL_RAW_AND_VALIDATOR_REPLAY",
+      "scope": "nontest",
+      "source_lock_sha256": "0c63bc55df1ec3a34773dc543f4241241a646ac55249b320c72df02fab598d2c",
+      "videos": 8,
+      "windows": 8,
+      "selected_frames": 444,
+      "failed_windows": [],
+      "reusable_valid_windows": 8,
+      "output_sha256": "4a677d3e83c48782ecce870f734555e94e5632776bf2d85203794e45c4384d49",
+      "original_model_identity_sha256": "1d19fbbe33845f429b5732f5ed375d544dda71dc4c7dcca0a430d1d1404ef553",
+      "original_temporal_stage_sha256": "e8e2df51665d2f3d3a8476cc86ae7098e4ef49b7d0cbd305077f5bb0b3c3b9da",
+      "original_resource_sha256": "6e91819dd76c4e289a93294dfb82b1c546df9c316d6a4148dbbf55186d64b249",
+      "copied_raw_bytes_exact": true,
+      "output_values_changed": 0,
+      "failures_to_empty": 0,
+      "model_generation_calls_this_version": 0
     },
     "actual_CUDA_started": false,
     "optimizer_updates": 0,
@@ -78,7 +117,7 @@
     "optimizer_updates": 0,
     "confirm_read": false,
     "rematch_pixels_read": false,
-    "wall_seconds": 26.401628038845956
+    "wall_seconds": 26.44783212430775
   },
   "b2_probe": {
     "status": "PASS_B2_ACTUAL_TRAINED_ADAPTER_LONG_CUDA_INFERENCE",
@@ -104,128 +143,386 @@
     "wall_seconds": 106.6720536146313
   },
   "b2_probe_receipt_sha256": "ab1f5222e393007731960fd8207f34b397ed726a3b997935b2527576f5040119",
-  "active_gpu_job": {
-    "name": "rematch_B2_v1_nontest_temporal_01",
-    "command": [
-      "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
-      "-B",
-      "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/engine.py",
-      "temporal",
-      "nontest",
-      "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/nontest_01"
-    ],
-    "started_utc": "2026-10-07T17:57:37.471362+00:00",
-    "runner_pid": 3300606,
-    "reserved_seconds": 3600,
-    "teardown_reserve_seconds": 120,
-    "prior_charged_seconds": 152561.8011910678,
-    "gpu_time_mode": "UNLIMITED",
-    "max_total_gpu_seconds": null,
-    "resource_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
-    "disk_before": {
-      "free_bytes": 201235025920,
-      "work_bytes": 78977126400
+  "active_gpu_job": null,
+  "b2_resource_receipts": {},
+  "b2_queue_receipts": {},
+  "b2_artifact_activity": {
+    "probe_01": {
+      "probe.stage.json": {
+        "bytes": 65084,
+        "mtime_ns": 1791401606966027816
+      },
+      "reuse_receipt.json": {
+        "bytes": 669,
+        "mtime_ns": 1791401606970027799
+      }
     },
-    "planned_output_bytes": 60000000,
-    "capacity_reason": "Measured current same-8B outputs and complete source-field counts; actual capacity only, no Mac or quota",
-    "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
-    "project_disk_limit_bytes": null,
-    "project_ram_limit_bytes": null,
-    "project_vram_limit_bytes": null,
-    "runner_source_sha256": "9997d41fbe2bb51726914b4698b874cf939c52aac02048fa9b3bb753c64c6cec",
-    "child_pid": 3300610,
-    "elapsed_seconds": 40.99702084995806,
-    "last_checked_utc": "2026-10-07T17:58:18.724671+00:00",
-    "sampled_peak_memory_mib": 0,
-    "disk_current": {
-      "free_bytes": 201234989056,
-      "work_bytes": 78977130496
+    "nontest_01": {
+      "anchor_output.jsonl": {
+        "bytes": 94183,
+        "mtime_ns": 1791401690841686593
+      },
+      "anchor_requests.jsonl": {
+        "bytes": 96687,
+        "mtime_ns": 1791401690841686593
+      },
+      "cache_reuse_receipt.json": {
+        "bytes": 668,
+        "mtime_ns": 1791401690845686577
+      },
+      "candidate_B2_8B.zip": {
+        "bytes": 1964,
+        "mtime_ns": 1791401774477363213
+      },
+      "field_frames.jsonl": {
+        "bytes": 370340,
+        "mtime_ns": 1791401690837686609
+      },
+      "field_shots.jsonl": {
+        "bytes": 288017,
+        "mtime_ns": 1791401690841686593
+      },
+      "independent_validation.json": {
+        "bytes": 1130,
+        "mtime_ns": 1791401774553362927
+      },
+      "metadata.json": {
+        "bytes": 4627,
+        "mtime_ns": 1791401774477363213
+      },
+      "model_identity.json": {
+        "bytes": 462,
+        "mtime_ns": 1791401607514025526
+      },
+      "package.stage.json": {
+        "bytes": 1330,
+        "mtime_ns": 1791401774565362882
+      },
+      "predictions.jsonl": {
+        "bytes": 19090,
+        "mtime_ns": 1791401774473363229
+      },
+      "provenance.jsonl": {
+        "bytes": 106073,
+        "mtime_ns": 1791401774473363229
+      },
+      "schedule.stage.json": {
+        "bytes": 785,
+        "mtime_ns": 1791401690841686593
+      },
+      "selected.jsonl": {
+        "bytes": 110611,
+        "mtime_ns": 1791401690777686846
+      },
+      "spatial.stage.json": {
+        "bytes": 638,
+        "mtime_ns": 1791401690841686593
+      },
+      "temporal.jsonl": {
+        "bytes": 126928,
+        "mtime_ns": 1791401607514025526
+      },
+      "temporal.stage.json": {
+        "bytes": 935,
+        "mtime_ns": 1791401607518025509
+      },
+      "temporal_reuse_receipt.json": {
+        "bytes": 1107,
+        "mtime_ns": 1791401607518025509
+      }
+    },
+    "rematch_01": {
+      "provider_temporal.jsonl": {
+        "bytes": 8570734,
+        "mtime_ns": 1791401802881256759
+      },
+      "provider_temporal.stage.json": {
+        "bytes": 938,
+        "mtime_ns": 1791401802921256609
+      },
+      "recovery_manifest.json": {
+        "bytes": 2733,
+        "mtime_ns": 1791401802945256521
+      }
     }
   },
-  "b2_resource_receipts": {
-    "rematch_B2_v1_synthetic_probe_01.resource.json": {
-      "name": "rematch_B2_v1_synthetic_probe_01",
+  "b2_generation_provider": {
+    "entry": "b_score_aligned_package_v1",
+    "processes": [],
+    "progress": {
+      "utc": "2026-10-07T19:33:16.089695+00:00",
+      "stage": "STOP_B2_PACKAGE_V1",
+      "pid": 3295213,
+      "source_lock_sha256": "0c63bc55df1ec3a34773dc543f4241241a646ac55249b320c72df02fab598d2c",
+      "automatic_return": false,
+      "uploaded": false,
+      "failure_type": "ValueError",
+      "failure": "B2 GPU phase failed: rematch_B2_v1_rematch_temporal_01",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/controller.py\", line 95, in main\n    gpu('engine.py', 'temporal', scope, out, maximum, planned)\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/controller.py\", line 40, in gpu\n    require(result.returncode == 0 and receipt.exists() and read(receipt)['status'] == 'completed',\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/common.py\", line 19, in require\n    raise ValueError(reason)\nValueError: B2 GPU phase failed: rematch_B2_v1_rematch_temporal_01\n"
+    },
+    "completion": {
+      "utc": "2026-10-07T19:33:16.090095+00:00",
+      "stage": "STOP_B2_PACKAGE_V1",
+      "pid": 3295213,
+      "source_lock_sha256": "0c63bc55df1ec3a34773dc543f4241241a646ac55249b320c72df02fab598d2c",
+      "automatic_return": false,
+      "uploaded": false,
+      "failure_type": "ValueError",
+      "failure": "B2 GPU phase failed: rematch_B2_v1_rematch_temporal_01",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/controller.py\", line 95, in main\n    gpu('engine.py', 'temporal', scope, out, maximum, planned)\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/controller.py\", line 40, in gpu\n    require(result.returncode == 0 and receipt.exists() and read(receipt)['status'] == 'completed',\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/common.py\", line 19, in require\n    raise ValueError(reason)\nValueError: B2 GPU phase failed: rematch_B2_v1_rematch_temporal_01\n"
+    },
+    "temporal_progress": {
+      "utc": "2026-10-07T19:32:24.386008+00:00",
+      "stage": "B2_TEMPORAL",
+      "scope": "rematch",
+      "videos": 426,
+      "total": 426,
+      "windows": 521,
+      "failures": 1,
+      "wall_seconds": 5191.704845281318
+    },
+    "temporal_stage": {
+      "status": "STOP_TEMPORAL_FAILURES",
+      "videos": 426,
+      "windows": 521,
+      "invalid_windows": 1,
+      "output_sha256": "c4b5bc6660bb2e39be2545362488f4c054efc1a140b99d5ef904fd397d24a701",
+      "logical_parameters": 8782459120,
+      "adapter_enabled": true,
+      "selected_adapter_sha256": "8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23",
+      "allow_empty": false,
+      "input_contract": {
+        "sampling": "INTEGER_FLOOR_64_NATIVE_ORDINAL_ENDPOINTS",
+        "clock": "ACTUAL_NATIVE_PTS_ALL_FORMAT_BRANCHES",
+        "decoder": "SEQUENTIAL_PYAV_RGB24",
+        "prompt": "UNCHANGED_B_1_TO_5",
+        "allow_empty": false,
+        "truncation": false,
+        "max_input_tokens": 16384,
+        "video_size": {
+          "shortest_edge": 4096,
+          "longest_edge": 25165824
+        }
+      },
+      "source_lock_sha256": "0c63bc55df1ec3a34773dc543f4241241a646ac55249b320c72df02fab598d2c",
+      "wall_seconds": 5237.485004105605,
+      "optimizer_updates": 0,
+      "official_score": null
+    },
+    "temporal_resource": {
+      "name": "rematch_B2_v1_rematch_temporal_01",
       "command": [
         "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
         "-B",
         "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/engine.py",
-        "probe",
-        "synthetic",
-        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/probe_01"
+        "temporal",
+        "rematch",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/rematch_01"
       ],
-      "started_utc": "2026-10-07T17:54:20.685034+00:00",
-      "runner_pid": 3296688,
-      "reserved_seconds": 3600,
+      "started_utc": "2026-10-07T18:04:13.905190+00:00",
+      "runner_pid": 3315663,
+      "reserved_seconds": 11797,
       "teardown_reserve_seconds": 120,
-      "prior_charged_seconds": 152408.12563964864,
+      "prior_charged_seconds": 152746.38646403654,
       "gpu_time_mode": "UNLIMITED",
       "max_total_gpu_seconds": null,
       "resource_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
       "disk_before": {
-        "free_bytes": 201235730432,
-        "work_bytes": 78976581632
+        "free_bytes": 201233149952,
+        "work_bytes": 78978682880
       },
-      "planned_output_bytes": 30000000,
+      "planned_output_bytes": 60000000,
       "capacity_reason": "Measured current same-8B outputs and complete source-field counts; actual capacity only, no Mac or quota",
       "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
       "project_disk_limit_bytes": null,
       "project_ram_limit_bytes": null,
       "project_vram_limit_bytes": null,
       "runner_source_sha256": "9997d41fbe2bb51726914b4698b874cf939c52aac02048fa9b3bb753c64c6cec",
-      "child_pid": 3296692,
-      "finished_utc": "2026-10-07T17:56:54.360499+00:00",
-      "charged_seconds": 153.67555141914636,
-      "exit_code": 0,
+      "child_pid": 3315667,
+      "finished_utc": "2026-10-07T19:33:15.890144+00:00",
+      "charged_seconds": 5341.98504852131,
+      "exit_code": 1,
       "stop_reason": null,
-      "sampled_peak_memory_mib": 21890,
-      "status": "completed",
+      "sampled_peak_memory_mib": 25336,
+      "status": "failed",
       "disk_after": {
-        "free_bytes": 201235361792,
-        "work_bytes": 78976819200
-      }
-    }
-  },
-  "b2_queue_receipts": {},
-  "b2_artifact_activity": {
-    "probe_01": {
-      "probe.stage.json": {
-        "bytes": 65084,
-        "mtime_ns": 1791395810462825384
+        "free_bytes": 201189502976,
+        "work_bytes": 78992850944
       }
     },
-    "nontest_01": {},
-    "rematch_01": {}
+    "original_CPU_handoff": {
+      "status": "PASS_OLD_PROVIDER_ALREADY_TERMINAL",
+      "utc": "2026-10-07T19:36:28.797572+00:00",
+      "controller_pid": 3295213,
+      "original_completion": {
+        "utc": "2026-10-07T19:33:16.090095+00:00",
+        "stage": "STOP_B2_PACKAGE_V1",
+        "pid": 3295213,
+        "source_lock_sha256": "0c63bc55df1ec3a34773dc543f4241241a646ac55249b320c72df02fab598d2c",
+        "automatic_return": false,
+        "uploaded": false,
+        "failure_type": "ValueError",
+        "failure": "B2 GPU phase failed: rematch_B2_v1_rematch_temporal_01",
+        "traceback": "Traceback (most recent call last):\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/controller.py\", line 95, in main\n    gpu('engine.py', 'temporal', scope, out, maximum, planned)\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/controller.py\", line 40, in gpu\n    require(result.returncode == 0 and receipt.exists() and read(receipt)['status'] == 'completed',\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/common.py\", line 19, in require\n    raise ValueError(reason)\nValueError: B2 GPU phase failed: rematch_B2_v1_rematch_temporal_01\n"
+      },
+      "temporal_stage_sha256": "d077ca5d3017ad25f387b6a4479fe0300620104c79d11b88b4002a3695e21ffb",
+      "temporal_resource_sha256": "b58ac5370599fb8b63b6449a4a49fb52aea87b5fb2075c37def48f6a6b198a83",
+      "signals_sent": []
+    }
   },
+  "b2_reuse_receipts": {
+    "probe": {
+      "status": "PASS_ORIGINAL_CUDA_PROBE_RAW_REUSE",
+      "source": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/probe_01/probe.stage.json",
+      "source_sha256": "ab1f5222e393007731960fd8207f34b397ed726a3b997935b2527576f5040119",
+      "original_resource_sha256": "34089a61c03a459ad71f015f3b7981cb0f0b557e85b8191ba82785b73222098f",
+      "original_source_lock_sha256": "0c63bc55df1ec3a34773dc543f4241241a646ac55249b320c72df02fab598d2c",
+      "new_source_lock_sha256": "52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db",
+      "new_model_generation_calls": 0,
+      "not_new_CUDA_execution": true
+    },
+    "nontest": {
+      "utc": "2026-10-07T19:33:27.519356+00:00",
+      "status": "PASS_ORIGINAL_TEMPORAL_RAW_AND_VALIDATOR_REPLAY",
+      "scope": "nontest",
+      "source_lock_sha256": "0c63bc55df1ec3a34773dc543f4241241a646ac55249b320c72df02fab598d2c",
+      "videos": 8,
+      "windows": 8,
+      "selected_frames": 444,
+      "failed_windows": [],
+      "reusable_valid_windows": 8,
+      "output_sha256": "4a677d3e83c48782ecce870f734555e94e5632776bf2d85203794e45c4384d49",
+      "original_model_identity_sha256": "1d19fbbe33845f429b5732f5ed375d544dda71dc4c7dcca0a430d1d1404ef553",
+      "original_temporal_stage_sha256": "e8e2df51665d2f3d3a8476cc86ae7098e4ef49b7d0cbd305077f5bb0b3c3b9da",
+      "original_resource_sha256": "6e91819dd76c4e289a93294dfb82b1c546df9c316d6a4148dbbf55186d64b249",
+      "copied_raw_bytes_exact": true,
+      "output_values_changed": 0,
+      "failures_to_empty": 0,
+      "model_generation_calls_this_version": 0,
+      "original_entry": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1",
+      "new_source_lock_sha256": "52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db"
+    },
+    "rematch": null
+  },
+  "b2_color_acceptance": {
+    "status": "PASS_B2_DECLARED_COLOR_CONVERSION_CPU",
+    "tests": 9,
+    "source_headers": 434,
+    "changed_color_sources": 1,
+    "actual_converted_frames": 64,
+    "original_errno95_reproduced": true,
+    "raw_YUV_planes_unchanged": true,
+    "original_metadata_restored": true,
+    "temporal_RGB_field_BGR_exact": true,
+    "source_pts_unchanged": true,
+    "default_other_sources_unchanged": true,
+    "gamma_curve_recovered": false,
+    "actual_CUDA_started": false,
+    "optimizer_updates": 0,
+    "original_receipt_sha256": "eb579c521a020259f81f176f72534b5035a1c28664358c28863ac6b42a144c8b"
+  },
+  "b2_recovery_manifest": {
+    "utc": "2026-10-07T19:36:42.926466+00:00",
+    "status": "PASS_DECLARED_PROVIDER_RECOVERY_MANIFEST",
+    "provider_temporal_sha256": "c4b5bc6660bb2e39be2545362488f4c054efc1a140b99d5ef904fd397d24a701",
+    "provider_stage_sha256": "d077ca5d3017ad25f387b6a4479fe0300620104c79d11b88b4002a3695e21ffb",
+    "original_provider_replay": {
+      "status": "PASS_ORIGINAL_TEMPORAL_RAW_AND_VALIDATOR_REPLAY",
+      "scope": "rematch",
+      "source_lock_sha256": "0c63bc55df1ec3a34773dc543f4241241a646ac55249b320c72df02fab598d2c",
+      "videos": 426,
+      "windows": 521,
+      "selected_frames": null,
+      "failed_windows": [
+        {
+          "video_id": "97",
+          "index": 0,
+          "start_sec": 0.0,
+          "end_sec": 26.833333333333332,
+          "original_window_sha256": "02aa351edac45b5ad0d926d81c119a308d3fadd2a00a32f6dd8decdd8c3777bd",
+          "reason": "REGISTERED_LOG316_CONVERSION_FAILURE_BEFORE_MODEL_INPUT"
+        }
+      ],
+      "reusable_valid_windows": 520,
+      "output_sha256": "c4b5bc6660bb2e39be2545362488f4c054efc1a140b99d5ef904fd397d24a701",
+      "original_model_identity_sha256": "1d19fbbe33845f429b5732f5ed375d544dda71dc4c7dcca0a430d1d1404ef553",
+      "original_temporal_stage_sha256": "d077ca5d3017ad25f387b6a4479fe0300620104c79d11b88b4002a3695e21ffb",
+      "original_resource_sha256": "b58ac5370599fb8b63b6449a4a49fb52aea87b5fb2075c37def48f6a6b198a83",
+      "copied_raw_bytes_exact": true,
+      "output_values_changed": 0,
+      "failures_to_empty": 0,
+      "model_generation_calls_this_version": 0
+    },
+    "failed_windows": [
+      {
+        "video_id": "97",
+        "index": 0,
+        "start_sec": 0.0,
+        "end_sec": 26.833333333333332,
+        "original_window_sha256": "02aa351edac45b5ad0d926d81c119a308d3fadd2a00a32f6dd8decdd8c3777bd",
+        "reason": "REGISTERED_LOG316_CONVERSION_FAILURE_BEFORE_MODEL_INPUT"
+      }
+    ],
+    "original_valid_windows": 520,
+    "source_color_repair": {
+      "schema": "PINNED_LOG316_YUV_CONVERSION_V1",
+      "sources": {
+        "8ec893eb5378452de6223f6c8e5878bcea044cb2f9e4feaabf708fa364871722": {
+          "video_id": "97",
+          "format": "yuv420p",
+          "color_trc": 10,
+          "colorspace": 2,
+          "color_primaries": 2,
+          "color_range": 1,
+          "width": 720,
+          "height": 1280
+        }
+      },
+      "transfer_tag_for_conversion": 2,
+      "matrix": "ITU601",
+      "range_changed": false,
+      "gamma_transform_applied": false,
+      "raw_YUV_planes_changed": false,
+      "unsupported_other_sources": "STOP",
+      "successful_default_decode_unchanged": true,
+      "recovery_only_original_pre_model_decode_failures": true
+    },
+    "new_source_lock_sha256": "52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db",
+    "original_failed_rows_preserved": true,
+    "failure_to_empty_conversions": 0
+  },
+  "b2_recovery_receipts_cpu": {
+    "status": "PASS_RECOVERY_RAW_BEFORE_GUARD_CPU",
+    "tests": 3,
+    "rejected_original_response_preserved": true,
+    "failed_response_not_accepted": true,
+    "prior_success_not_overwritten": true,
+    "synthetic_only": true,
+    "actual_GPU_calls": 0,
+    "actual_previous_sources_or_outputs_changed": false
+  },
+  "b2_recovery_failure": null,
+  "b2_recovered_raw_receipts": {},
   "review_counts": {
     "pilot_01": {},
     "teacher_01": {}
   },
   "registration": {
-    "pid": 3295213,
-    "utc": "2026-10-07T17:52:57.326692+00:00",
-    "source_lock_sha256": "0c63bc55df1ec3a34773dc543f4241241a646ac55249b320c72df02fab598d2c",
+    "pid": 3965729,
+    "utc": "2026-10-07T19:32:44.836210+00:00",
+    "source_lock_sha256": "52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db",
     "route": "PRESERVED_TRAINED_B_8B_NATIVE_PTS_SOURCE_FIELD_B2",
     "new_optimizer_updates": 0,
     "automatic_return": false,
     "uploaded": false
   },
   "progress": {
-    "utc": "2026-10-07T17:57:37.190782+00:00",
-    "stage": "RUNNING_NONTEST_TEMPORAL",
-    "pid": 3295213,
-    "source_lock_sha256": "0c63bc55df1ec3a34773dc543f4241241a646ac55249b320c72df02fab598d2c",
+    "utc": "2026-10-07T19:36:14.752810+00:00",
+    "stage": "WAITING_VALID_B2_V1_TEMPORAL",
+    "pid": 3965729,
+    "source_lock_sha256": "52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db",
     "automatic_return": false,
-    "uploaded": false,
-    "job": "rematch_B2_v1_nontest_temporal_01",
-    "capacity": {
-      "status": "ADMITTED_ACTUAL_CAPACITY",
-      "project_disk_limit_bytes": null,
-      "project_ram_limit_bytes": null,
-      "project_vram_limit_bytes": null,
-      "disk_free_bytes": 201235030016,
-      "remaining_output_bytes": 60000000,
-      "shared_task_conflicts_must_be_checked": true
-    }
+    "uploaded": false
   },
   "completion": null,
   "pilot_progress": null,
@@ -238,12 +535,200 @@
   "teacher_stop": null,
   "student_progress": null,
   "student_report": null,
-  "nontest8_package": null,
-  "nontest8_strict": null,
+  "nontest8_package": {
+    "video_records": 8,
+    "prediction_frames": 444,
+    "issues": [],
+    "official_status": "NOT_SCORED_NOT_UPLOADED",
+    "legal_empty_supported": true,
+    "weak_roi_inputs_used": 0,
+    "old_test_boxes_used": 0,
+    "silent_fallbacks": 0,
+    "zip_sha256": "614ce2a826505925d7ac74eec92ca16de50abb4bde4010f3ae1a50cfe38b9a3e",
+    "predictions_sha256": "b81449580f34264d1ea24dc0e183df2d7d9b6351db3a247d94268958bea44c6f",
+    "zip_bytes": 1964,
+    "archive_names": [
+      "predictions.jsonl"
+    ],
+    "uploaded": false,
+    "status": "PASS_COMPLETE_B2_8B_PACKAGE_ON_LINUX",
+    "candidate": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/nontest_01/candidate_B2_8B.zip",
+    "scope": "nontest",
+    "complete_pipeline_parameters": 8782459120,
+    "shared_base_counted_once": true,
+    "official_score": null,
+    "old_B_package_unchanged": true,
+    "time_independent_source_field": true,
+    "strict_coordinate_units": true,
+    "comparison_to_B": "PRESERVED_TRAINED_B_NATIVE_INPUT_AND_SOURCE_FIELD_RECIPE",
+    "selected_adapter_sha256": "8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23",
+    "new_optimizer_updates": 0,
+    "new_T_training_started": false,
+    "automatic_return": false,
+    "source_lock_sha256": "52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db"
+  },
+  "nontest8_strict": {
+    "status": "PASS_INDEPENDENT_STRICT_VALIDATION",
+    "official_status": "NOT_SCORED_NOT_UPLOADED",
+    "checks": {
+      "strict_loader_ok": true,
+      "video_record_set_exact": true,
+      "selected_key_set_exact": true,
+      "ratio_fields_exact": true,
+      "frames_sorted": true,
+      "provenance_key_set_exact": true,
+      "provenance_boxes_match_predictions": true,
+      "provenance_all_legal": true,
+      "provenance_sources_allowed": true,
+      "archive_single_file": true,
+      "archive_roundtrip_exact": true
+    },
+    "strict_loader_issues": [],
+    "video_records": 8,
+    "expected_frames": 444,
+    "prediction_frames": 444,
+    "duplicate_frames": 0,
+    "missing": 0,
+    "extra": 0,
+    "ratios": {
+      "16:9": 0,
+      "9:16": 8
+    },
+    "strict_loader_sha256": "34ea6d198acba95a8651d687be84ccbc2281039083a560fa122ec42c101d84c9",
+    "predictions_sha256": "b81449580f34264d1ea24dc0e183df2d7d9b6351db3a247d94268958bea44c6f",
+    "provenance_sha256": "d342cc6790bc4a046def0b7923b8a336dc8a47025a411f51c3418c367a1922f9",
+    "zip_sha256": "614ce2a826505925d7ac74eec92ca16de50abb4bde4010f3ae1a50cfe38b9a3e",
+    "archive_names": [
+      "predictions.jsonl"
+    ]
+  },
   "rematch_package": null,
   "rematch_strict": null,
   "production_stage_receipts": {
-    "nontest_01": {},
-    "rematch_01": {}
+    "nontest_01": {
+      "package.stage.json": {
+        "video_records": 8,
+        "prediction_frames": 444,
+        "issues": [],
+        "official_status": "NOT_SCORED_NOT_UPLOADED",
+        "legal_empty_supported": true,
+        "weak_roi_inputs_used": 0,
+        "old_test_boxes_used": 0,
+        "silent_fallbacks": 0,
+        "zip_sha256": "614ce2a826505925d7ac74eec92ca16de50abb4bde4010f3ae1a50cfe38b9a3e",
+        "predictions_sha256": "b81449580f34264d1ea24dc0e183df2d7d9b6351db3a247d94268958bea44c6f",
+        "zip_bytes": 1964,
+        "archive_names": [
+          "predictions.jsonl"
+        ],
+        "uploaded": false,
+        "status": "PASS_COMPLETE_B2_8B_PACKAGE_ON_LINUX",
+        "candidate": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/nontest_01/candidate_B2_8B.zip",
+        "scope": "nontest",
+        "complete_pipeline_parameters": 8782459120,
+        "shared_base_counted_once": true,
+        "official_score": null,
+        "old_B_package_unchanged": true,
+        "time_independent_source_field": true,
+        "strict_coordinate_units": true,
+        "comparison_to_B": "PRESERVED_TRAINED_B_NATIVE_INPUT_AND_SOURCE_FIELD_RECIPE",
+        "selected_adapter_sha256": "8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23",
+        "new_optimizer_updates": 0,
+        "new_T_training_started": false,
+        "automatic_return": false,
+        "source_lock_sha256": "52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db"
+      },
+      "schedule.stage.json": {
+        "status": "PASS_TIME_INDEPENDENT_SOURCE_FIELD",
+        "selected_frames": 444,
+        "field_frames": 1486,
+        "anchors": 206,
+        "temporal_selection_used_for_boundaries": false,
+        "max_gap": 8,
+        "whole_batch_empty": false,
+        "empty_spatial_calls": null,
+        "field_frames_sha256": "c4b53cb7d95442ecaa4c8fa6b82b027fd5779370230a2b97f8c8796526386aed",
+        "shots_sha256": "cf4a873053bd2baf24343043eb36f835a5853ce232b409489915329f161c0375",
+        "requests_sha256": "f630e725ddff54c590a4062c39b98c1b7233773b8c0a391f271378ac157283a7",
+        "wall_seconds": 8.542043364606798,
+        "source_cache": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1/nontest_01",
+        "reused_time_independent_source_field": true,
+        "old_temporal_results_reused": false
+      },
+      "spatial.stage.json": {
+        "status": "PASS_STRICT_SOURCE_FIELD_SPATIAL",
+        "rows": 206,
+        "invalid": 0,
+        "model_calls": 206,
+        "wall_seconds": 124.7222928898409,
+        "measured_seconds_per_anchor": 0.6053568722173861,
+        "logical_parameters": 8767123696,
+        "strict_units": "INTEGER_0_TO_1000",
+        "time_adapter_enabled": false,
+        "failure_to_empty_conversions": 0,
+        "reused_cache": true,
+        "model_calls_this_B2_candidate": 0,
+        "source_cache": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1/nontest_01",
+        "cache_binding_sha256": "caa903e0b59c6ee2aadfc5fc5f7bfb46cb48e1382e08e8fc17e21b8d0eac303c"
+      },
+      "temporal.stage.json": {
+        "status": "PASS_TEMPORAL_EXECUTION",
+        "videos": 8,
+        "windows": 8,
+        "invalid_windows": 0,
+        "output_sha256": "4a677d3e83c48782ecce870f734555e94e5632776bf2d85203794e45c4384d49",
+        "logical_parameters": 8782459120,
+        "adapter_enabled": true,
+        "selected_adapter_sha256": "8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23",
+        "allow_empty": false,
+        "input_contract": {
+          "sampling": "INTEGER_FLOOR_64_NATIVE_ORDINAL_ENDPOINTS",
+          "clock": "ACTUAL_NATIVE_PTS_ALL_FORMAT_BRANCHES",
+          "decoder": "SEQUENTIAL_PYAV_RGB24",
+          "prompt": "UNCHANGED_B_1_TO_5",
+          "allow_empty": false,
+          "truncation": false,
+          "max_input_tokens": 16384,
+          "video_size": {
+            "shortest_edge": 4096,
+            "longest_edge": 25165824
+          }
+        },
+        "source_lock_sha256": "0c63bc55df1ec3a34773dc543f4241241a646ac55249b320c72df02fab598d2c",
+        "wall_seconds": 81.35653649270535,
+        "optimizer_updates": 0,
+        "official_score": null
+      }
+    },
+    "rematch_01": {
+      "provider_temporal.stage.json": {
+        "status": "STOP_TEMPORAL_FAILURES",
+        "videos": 426,
+        "windows": 521,
+        "invalid_windows": 1,
+        "output_sha256": "c4b5bc6660bb2e39be2545362488f4c054efc1a140b99d5ef904fd397d24a701",
+        "logical_parameters": 8782459120,
+        "adapter_enabled": true,
+        "selected_adapter_sha256": "8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23",
+        "allow_empty": false,
+        "input_contract": {
+          "sampling": "INTEGER_FLOOR_64_NATIVE_ORDINAL_ENDPOINTS",
+          "clock": "ACTUAL_NATIVE_PTS_ALL_FORMAT_BRANCHES",
+          "decoder": "SEQUENTIAL_PYAV_RGB24",
+          "prompt": "UNCHANGED_B_1_TO_5",
+          "allow_empty": false,
+          "truncation": false,
+          "max_input_tokens": 16384,
+          "video_size": {
+            "shortest_edge": 4096,
+            "longest_edge": 25165824
+          }
+        },
+        "source_lock_sha256": "0c63bc55df1ec3a34773dc543f4241241a646ac55249b320c72df02fab598d2c",
+        "wall_seconds": 5237.485004105605,
+        "optimizer_updates": 0,
+        "official_score": null
+      }
+    }
   }
 }

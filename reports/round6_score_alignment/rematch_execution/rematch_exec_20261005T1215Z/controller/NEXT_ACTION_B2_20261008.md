@@ -6,7 +6,25 @@
 
 自主选择先交付B2：保留已取得37.63的Linux B最终LoRA和同8B空间基座，用已修复的生产一致原生PTS/合法坐标/完整源空间场生成一个新候选。不是新教师微调，不延长旧LoRA，不向无效监督开训。B2官方分未知，37.63仍只绑定旧B包。最终报告明确这条路线和T未训练原因，不静默冒充T结果。
 
-## 实现与一次性启动
+## 当前唯一v4：保留失败原文与真实恢复证据
+
+当前入口b_score_aligned_package_v4/CONTINUE.md，571文件锁SHA52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db；2026-10-08 03:32:44 UTC+8单次launcher历史PID3965729，存活与阶段以实时完整身份和回执为准。v3只按完整命令/唯一PGID停止等待controller，未开始恢复GPU，旧568冻结文件/成功物保留。独立owned_stop_B2_v3_raw_receipt_repair_20261008.json。
+
+v4修复原始新回答在有效性拒绝前未落盘的证据缺口：recovery_receipts.py先独立不可覆盖保存原返回，再运行原校验；异常另写failure/traceback，不修补回答或失败转空。3项CPU验收无效响应拒绝后原文保留、有效响应保留、重复覆盖拒绝通过。v3的显式source97转换、生成算法、canonical时长与全部科学/工程门保持；9转换CPU、69原CPU、真实processor/8非测试pixel SHA与完整preflight通过。原provider有效GPU不打断；只为登记的送模型前失败生成一次，原成功字节和全部426/521分母保持。实际恢复时间PASS后全源CPU/空间/独立strict ZIP自动接续，最终只交付一个Linux包。
+
+## 独立v3历史：保留有效生成并修复一条送模型前转换错误
+
+当前入口b_score_aligned_package_v3/CONTINUE.md，568文件锁SHA48518101580bf06f866b71e48cdefb68afd4cc1386093e4cb269209ba9424a0a，03:03:23 UTC+8一次launcher历史PID3754761。v1有效GPU继续，97出现PyAV17/libswscale9 log316转RGB errno95、实际模型回答0。v2等待controller已按完整身份单独停下，旧回执/源码不改。详情B2_COLOR_RECOVERY_20261008.md。
+
+v3只对绑定source97 SHA/确切profile登记临时UNSPECIFIED transfer+限定范围ITU601样本转换，恢复frame元数据；源YUV/range/尺寸/PTS不改，不声称摄影gamma真值。其他源默认代码保持，不观察复赛内容调参。9转换CPU/69原CPU/真实processor/8非测试pixel SHA、11移交mock/6原失败分类CPU已PASS。先重新NONTEST8/strict，再等待v1全521时间及完整记账；所有原成功逐SHA/原validator/实际输入核验并原字节复用，只将登记送模型前错误在新目录真正生成一次。旧STOP/raw不改，失败不转空、426/521分母不减，新完整时间PASS才全源CPU/空间/严格ZIP。
+
+## 独立v2历史：统一端点合同并保留有效GPU计算
+
+当前唯一接续b_score_aligned_package_v2/CONTINUE.md。v1生成与选帧时长算法不同，529真实窗口56处差异，29个合法全端点误拒绝；v2共享原生成的十进制Fraction时长，不裁值/放宽界。69CPU、529全端点/529 nextafter拒绝、原529输入相等/12目标无损回放、真实processor/8非测试pixel SHA通过；564文件锁SHA7bf811f5e81f09d45ef10ba89caf1116bb185ff89e7fe6eba34ee3198a4fb497。详情B2_DURATION_REPAIR_20261008.md。
+
+原v1已真实长输入CUDA PASS及完整NONTEST8 PASS，正在426/521时间GPU生成。该生成不受后续选帧bug影响，不打断或重复；v2先原样逐SHA复用原probe/8条成功时间并重新完整NONTEST8/strict，然后自动等待原426时间PASS/wrapper记账。temporal_reuse.py按原validator/全部源/模型/实际输入核验，之后只按完整身份受控移交原controller CPU路径，独立回执不回写v1。v2继续全源CPU/同基座空间/426严格ZIP。定时监控同时读取v2与v1真实provider，合法等待不当卡死。
+
+## 实现与一次性启动（v1历史，当前v2优先）
 
 1. 创建独立b_score_aligned_package_v1/PROTOCOL.md、CONTINUE、config、CPU合同、source_lock和一次控制器，不改旧next_round_v1/v7/已评分包/原失败。读取最新AGENTS、真实主机/任务/资源后再动作；无需用户参与。
 2. 基于next_round_v1已验原生PTS/空间场与v7的precision_helpers、native_segment_contract、cost_contract工程修复实现。全部helpers显式按新目录加载，不让sys.path/sys.modules落回旧4位parser或旧空间quota。保留B原时间提示、64帧/HD/16384生产界、greedy受约束生成；不读100confirm，不手看复赛内容调参，不复刻官网分。
