@@ -1,0 +1,19 @@
+{
+  "schema": "aic_selector_v2_preparation_source_lock_v1",
+  "scope": "CPU_ONLY_NATURAL_GRID_NONEMPTY_PTS_SELECTION_REPAIR",
+  "selector_revision": "NATURAL_GRID_NONEMPTY_PTS_SELECTION_V2",
+  "files": {
+    "cpu_contract_result_01.json": "376c7ad5b384fb039f8a8294c6fe571fa1c6de7210b46c99000717de9a006c1d",
+    "failure_audit_01.json": "56a2c84b894b74b624c053b94b0927109dd542e1c6eb328be1e44d4362e766a1",
+    "REPAIR_REPORT.md": "501f3939722cca807272a7dba65f9ad82545127624bba4c6fa828ec51de81333",
+    "select_windows.py": "42660202fca9fb6a9d7709461c390954ade9246d7d14e0aaf622d0d99a7ff419",
+    "test_selector_cpu.py": "18f48ba17f0bf98e83267519f54137a779b62c7340410f84f4d64e6feb1381bb"
+  },
+  "file_count": 5,
+  "readonly_compatibility_test_dependencies": {
+    "../supervision/select_windows.py": "875e7a1bab260905eab6e0d86330d541c77fde72b465cca754553ab8a24f967f",
+    "../supervision/validate_teacher.py": "3fc9af6d0040ed926cba6073a45d1d868b3fa0ed5c5739eb6cbeafe6fbf7a2b4"
+  },
+  "teacher_contract_modified": false,
+  "historical_v1_lock_files_unchanged": 13
+}

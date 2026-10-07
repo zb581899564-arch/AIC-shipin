@@ -7,3 +7,7 @@
 - 原实验包含绝对机器路径，恢复资产与环境后重新登记新运行；不在其他机器直接执行已注册的一次性 launcher。
 - 新提交包须有完整来源数量、严格格式检查、ZIP CRC、大小与 SHA-256；官网提交与打包是独立状态。
 - 源工作项目的操作约束快照在 `docs/history/AGENTS_workspace_snapshot.md`。其中远端地址/PID是历史上下文，不能视为当前资源或连接证据。
+
+## 下一轮接续
+
+2026-10-07独立next_round_v1已实际进入Linux B/Z生产一致开发。它和supervision_v2的source_lock、一次性注册不得重开/修改。145+19 CPU与真实CUDA探针通过仅为工程事实。T缺32B容量/新标签、S无绑定双比例参考，均未准入。官网评分与内部弱F1分别记录；新Z尚未交付。查看next_round_v1/CONTINUE.md及supervision_v2/EXECUTION_REGISTRATION_20261007.md。

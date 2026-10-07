@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "tests": 145,
+  "results": [
+    {
+      "command": [
+        "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+        "-B",
+        "test_contracts.py"
+      ],
+      "exit_code": 0,
+      "tail": ".. ok\ntest_missing_tokenization_path_is_explicit_stop (_next_round_frozen_nonempty_tests.TokenAdapterTests) ... ok\ntest_multichar_numeric_token_is_bound_by_duration (_next_round_frozen_nonempty_tests.TokenAdapterTests) ... ok\ntest_multichar_token_crosses_grammar_boundaries (_next_round_frozen_nonempty_tests.TokenAdapterTests) ... ok\ntest_multiple_eos_ids_only_after_completion (_next_round_frozen_nonempty_tests.TokenAdapterTests) ... ok\ntest_prompt_identity_and_eos_configuration_stop (_next_round_frozen_nonempty_tests.TokenAdapterTests) ... ok\n\n----------------------------------------------------------------------\nRan 37 tests in 0.031s\n\nOK\n\n{\"schema\": \"aic_next_round_contract_cpu_v1\", \"status\": \"PASS\", \"tests_run\": 37, \"failures\": 0, \"errors\": 0, \"old_nonempty_regression_tests\": 19, \"source_sha256\": {\"contracts.py\": \"a18345d9728902ba0278fd58d4fa6ee3e314290df826bee04f10654254a93191\", \"constrained_json.py\": \"6360eecc854a0e6633273c33c12b776c245492ffec0f20afdee94791f1653e5f\", \"test_contracts.py\": \"8a4806590aeb6d713fcebd845407b8229388fa0e63882085d5c8c4365b4de435\"}, \"model_run\": false, \"GPU_used\": false, \"contest_media_read\": false, \"semantic_labels_read\": false, \"quality_claim\": false}\n"
+    },
+    {
+      "command": [
+        "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+        "-B",
+        "test_empty_pipeline.py"
+      ],
+      "exit_code": 0,
+      "tail": "rejects_changed_clock_hash (__main__.EmptyPipelineTests) ... ok\ntest_native_empty_still_rejects_clock_array_byte_mismatch (__main__.EmptyPipelineTests) ... ok\ntest_native_parser_has_no_rounding_or_endpoint_recovery (__main__.EmptyPipelineTests) ... ok\ntest_positive_segment_with_no_cfr_frame_is_failure_not_empty (__main__.EmptyPipelineTests) ... ok\ntest_positive_segment_with_no_native_frame_is_failure_not_empty (__main__.EmptyPipelineTests) ... ok\ntest_rematch426_all_empty_zip_crc_roundtrip_and_denominator (__main__.EmptyPipelineTests) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.532s\n\nOK\n\n{\"schema\": \"aic_next_round_empty_pipeline_cpu_v1\", \"status\": \"PASS\", \"tests_run\": 13, \"failures\": 0, \"errors\": 0, \"source_sha256\": {\"package_contract.py\": \"19c626aeef73eb2b3093a0defa4e8e531352a95d6f0943cc34973d4874aecce5\", \"frame_contract.py\": \"ae378566a5ab8dd23c0541fe2a6da00ac68e034bca2f0735c3c94ade1c4906db\", \"test_empty_pipeline.py\": \"e7fc747df06e40577cfbd56592e0e4bb861a206c80fe759d348f658c7235b24d\"}, \"fixture_only\": true, \"model_run\": false, \"GPU_used\": false, \"contest_media_read\": false, \"semantic_labels_read\": false, \"quality_claim\": false}\n"
+    },
+    {
+      "command": [
+        "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "-q",
+        "test_resource_contract",
+        "test_field_contract",
+        "test_training_target_bridge"
+      ],
+      "exit_code": 0,
+      "tail": "----------------------------------------------------------------------\nRan 61 tests in 0.225s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+        "-B",
+        "supervision/test_cpu.py"
+      ],
+      "exit_code": 0,
+      "tail": "racts) ... ok\ntest_uncertain_empty_remains_excluded_unknown (__main__.TeacherContracts) ... ok\ntest_uncertain_positive_candidates_are_preserved_but_excluded (__main__.TeacherContracts) ... ok\ntest_valid_positive_is_weak_interval_target (__main__.TeacherContracts) ... ok\ntest_30s_exact_source_does_not_add_empty_tail (__main__.WindowContracts) ... ok\ntest_missing_actual_final_duration_stops (__main__.WindowContracts) ... ok\ntest_missing_pts_is_not_dropped (__main__.WindowContracts) ... ok\ntest_natural_windows_cover_nonzero_actual_pts_and_tail_without_overlap (__main__.WindowContracts) ... ok\ntest_old_positive_bounds_do_not_select_new_window (__main__.WindowContracts) ... ok\ntest_original_train_dev_bytes_counts_and_isolation (__main__.WindowContracts) ... ok\ntest_repeated_or_nonfinite_pts_stops (__main__.WindowContracts) ... ok\ntest_same_youtube_different_clips_cannot_cross_split (__main__.WindowContracts) ... ok\ntest_sampling_includes_actual_first_and_last_frames (__main__.WindowContracts) ... ok\ntest_source_ranking_is_stable_prefix_not_label_dependent (__main__.WindowContracts) ... ok\n\n----------------------------------------------------------------------\nRan 34 tests in 0.059s\n\nOK\n"
+    }
+  ]
+}

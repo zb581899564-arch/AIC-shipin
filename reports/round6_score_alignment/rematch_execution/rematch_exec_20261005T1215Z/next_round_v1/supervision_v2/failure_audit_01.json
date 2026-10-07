@@ -1,0 +1,79 @@
+{
+  "schema": "aic_selector_v1_real_failure_readonly_audit_v1",
+  "recorded_after_readonly_query_utc": "2026-10-07T02:55:49.400725+00:00",
+  "hostname": "inspur-NP5570M5",
+  "source_rank": 2,
+  "source_group": "2dKTLCv__ds",
+  "source_path": "/home/inspur/aic_video_data/videos/2/2dKTLCv__ds_210.0_360.0.mp4",
+  "source_sha256": "29e851cd72ab5a88d46cf83700ad8ddeb0b6af034e0b768a268c3b03e05e94a2",
+  "media_bytes": 17307794,
+  "frame_count": 3597,
+  "first_pts_sec": 0.0,
+  "last_pts_sec": 149.983167,
+  "last_frame_duration_sec": 0.041708,
+  "last_frame_duration_field": "pkt_duration_time",
+  "pts_end_exclusive_sec": 150.024875,
+  "pts_sequence_sha256": "ab4b5cce254606c5e5fa73b380ec432357b2ce58da9dd0f7fcd9befb49030a8a",
+  "natural_grid_bounds": [
+    [
+      0,
+      30
+    ],
+    [
+      30,
+      60
+    ],
+    [
+      60,
+      90
+    ],
+    [
+      90,
+      120
+    ],
+    [
+      120,
+      150
+    ],
+    [
+      150,
+      150.024875
+    ]
+  ],
+  "presentation_start_frames_per_cell": [
+    720,
+    719,
+    719,
+    720,
+    719,
+    0
+  ],
+  "last_actual_pts_sec": [
+    149.816333,
+    149.858042,
+    149.89975,
+    149.941458,
+    149.983167
+  ],
+  "old_run": "supervision/selection_01",
+  "old_status": "STOP_CPU_SELECTION_CLOCK_OR_IDENTITY",
+  "old_reason": "ValueError: empty eligible frame range",
+  "old_completed_counts": {
+    "train": 2,
+    "dev": 0
+  },
+  "root_cause": "FINAL_FRAME_DISPLAY_EXTENDS_AFTER_GRID_BOUNDARY_BUT_LAST_TIME_CELL_HAS_NO_NEW_PRESENTATION_START",
+  "v2_selected_grid_ordinal": 4,
+  "v2_selected_grid_bounds": [
+    120,
+    150
+  ],
+  "terminal_display_remainder_outside_last_pts_cell_sec": 0.024875,
+  "original_grid_and_actual_endpoint_preserved": true,
+  "zero_pts_cell_is_not_negative_label": true,
+  "gpu_used": false,
+  "raw_video_semantics_read": false,
+  "pixels_exported_or_inspected": false,
+  "read_query_used_existing_v1_probe_only": true,
+  "installed_or_downloaded_anything": false
+}

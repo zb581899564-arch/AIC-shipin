@@ -1,0 +1,35 @@
+{
+  "schema": "aic_teacher_runtime_readonly_snapshot_v1",
+  "recorded_after_queries_utc": "2026-10-07T02:45:30.729832+00:00",
+  "query_route": "ssh -o BatchMode=yes aic-inspur-home; purpose-only read-only metadata",
+  "hostname": "inspur-NP5570M5",
+  "gpu": {
+    "name": "NVIDIA RTX 6000 Ada Generation",
+    "memory_total_mib": 46068,
+    "memory_used_mib": 182,
+    "utilization_percent": 0,
+    "compute_apps": []
+  },
+  "system_available_ram_bytes": 126149324800,
+  "filesystem_free_bytes": 229274841088,
+  "existing_python": "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+  "versions": {
+    "torch": "2.5.1+cu124",
+    "transformers": "4.57.1",
+    "qwen-vl-utils": "0.0.14",
+    "llama-cpp-python": null,
+    "autoawq": null,
+    "vllm": null,
+    "bitsandbytes": null
+  },
+  "llama_cli_on_PATH": false,
+  "ffprobe_on_PATH": false,
+  "existing_Andy_ffprobe_file": true,
+  "existing_Andy_ffprobe_path": "/home/inspur/anaconda3/envs/Andy/bin/ffprobe",
+  "32b_runtime_loaded": false,
+  "32b_gpu_peak_measured": false,
+  "installed_anything": false,
+  "new_files_sent_to_remote": false,
+  "models_downloaded": false,
+  "Mac_access_performed_by_this_agent": false
+}

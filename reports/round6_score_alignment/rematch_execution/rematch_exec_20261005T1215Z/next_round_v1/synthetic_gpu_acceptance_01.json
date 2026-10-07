@@ -1,0 +1,29 @@
+{
+  "status": "PASS_SYNTHETIC_SHARED_VIDEO_AND_EMPTY_CAPABLE_GENERATION",
+  "logical_parameters": 8767123696,
+  "input_identity": {
+    "sampled_frames": 64,
+    "video_grid_thw": [
+      32,
+      28,
+      52
+    ],
+    "actual_pixels_per_frame": 372736,
+    "input_tokens": 12085,
+    "explicit_size": {
+      "shortest_edge": 4096,
+      "longest_edge": 25165824
+    },
+    "truncation": false
+  },
+  "selected_output_status": "LEGAL_EMPTY",
+  "grammar_allows_empty": true,
+  "synthetic_only": true,
+  "contest_media_read": false,
+  "empty_target_finite_loss": 1.6668949127197266,
+  "empty_target_native_pts_contexts": 2,
+  "empty_target_supervision_is_synthetic_only": true,
+  "optimizer_updates": 0,
+  "peak_allocated_mib": 20312.431640625,
+  "wall_seconds": 14.168818194419146
+}

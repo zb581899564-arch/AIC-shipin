@@ -19,6 +19,14 @@ AIC 产业命题赛「基于视频大模型的通用视频高光剪辑」的项�
 
 每个 ZIP 仅包含 `predictions.jsonl`。完整 SHA-256、大小、成绩来源与状态见 [提交包清单](docs/SUBMISSIONS.md) 和 [机器可读清单](docs/submission_packages.json)。只有已确认结果才填官方分数；未评分候选不继承其他包的分数。复赛成绩由用户报告/截图提供，未另行核验官网。Linux 8B 截图显示 `37.63 / DONE`，裁切部分不足以确认完整时间或名次。
 
+## 下一轮代码修复与执行（2026-10-07）
+
+已按采纳结论建立独立 [next_round_v1](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1)。145项CPU合同、真实processor逐张量一致、全空426独立strict及真实CUDA空生成/空assistant有限CE损失已通过。修复严格0..1000坐标、合法空与失败分离、原生PTS训练目标、生产一致开发输入、全源空间场和Mac离线预留。旧已评分包不变。
+
+Linux一次性接续已注册并通过真实合成GPU探针，随后执行B/Z开放开发比较、NONTEST8和Z原生8B完整复赛推理封包；当前没有已交付Z包/官方分。T新完整监督微调因32B容量与真实标签门未准入，未重训旧LoRA；S缺合格双比例构图参考。准确路线、状态及边界见 [协议](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1/PROTOCOL.md) 和 [执行状态](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1/EXECUTION_STATUS.md)。
+
+不需要本地复刻AIC官方总分；非测试诊断和格式/身份检查保留。正式得分来自官网每日最多5次提交，阶段最高有效分排名。内部弱教师F1不能替代官方分。[复赛通知](https://www.aicomp.cn/notice/notice-3/5307.html)
+
 ## 当前方案
 
 时间模型先预测 30 秒窗口中的高光区间，再按源帧与真实时间戳恢复所选帧。CPU 镜头检测限制空间框的跨帧复用；最多每 8 帧安排一个空间锚点，使用同帧 Qwen 结果在镜头内插值。最终经过完整性、合法框、同帧身份、JSONL 合同与 ZIP 验收。

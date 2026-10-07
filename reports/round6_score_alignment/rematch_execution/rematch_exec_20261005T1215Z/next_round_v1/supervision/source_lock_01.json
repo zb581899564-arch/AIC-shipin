@@ -1,0 +1,20 @@
+{
+  "schema": "aic_supervision_preparation_source_lock_v1",
+  "scope": "CPU_ONLY_NEW_COMPLETE_WINDOW_SUPERVISION_PREPARATION_NO_TEACHER_OR_TRAINING_ADMISSION",
+  "files": {
+    "check_supervision_gate.py": "248c82f74c30e55cc631493b15221f0cdece03247910fac6a95b5e5dc0719cca",
+    "cpu_contract_result_01.json": "93ddb5b59c9f0a778dbef4584bd2c7d023b1b6abbcdd6f2fb6dd3489a86a9f6e",
+    "current_gate_01.json": "030dfc00c9705ead66222947c769dad1184b0e330176c54a3f8f1b7d94f2c571",
+    "runtime_readonly_20261007.json": "eedef9c1f03580282fa6f20552c4b954b3f4e1b0e079d399eebf75d45422d903",
+    "select_windows.py": "875e7a1bab260905eab6e0d86330d541c77fde72b465cca754553ab8a24f967f",
+    "SUPERVISION_REPORT.md": "b7f27d5f158cdb09207d30ecdef84ca7c9219d6bf401b5fe6200e17165922915",
+    "teacher_metadata_20261007.json": "ae025c43728abcdc79c306d63fcc80f0425e8f505cf49026c8c9442f74600731",
+    "teacher_metadata_probe.py": "b3408e90f70f92034e7197f21737487b39962c20a05dfbb4405ab85ee6109761",
+    "teacher_prompt.txt": "fb5427bd7054ec54c1f414702729b3dee50ea7271cec37988855c2d764f1cf0e",
+    "teacher_response.schema.json": "896406a6066f2d31923cd3832532a1d6aa03b71e3734a3f000984dbdb22f18f4",
+    "test_cpu.py": "42083003952fa55cc00830292ccf33c0d07d858b79e05f2202453680f64b599c",
+    "train_config_template.json": "07deef90ea9365aa40a990986f53af9ce1ef36de82c88f0d2a29af4a095067fa",
+    "validate_teacher.py": "3fc9af6d0040ed926cba6073a45d1d868b3fa0ed5c5739eb6cbeafe6fbf7a2b4"
+  },
+  "file_count": 13
+}

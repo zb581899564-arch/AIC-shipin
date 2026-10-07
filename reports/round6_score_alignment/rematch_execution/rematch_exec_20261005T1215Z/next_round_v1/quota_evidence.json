@@ -1,0 +1,21 @@
+{
+  "observed_at": "2026-10-07T10:46:26.783554+08:00",
+  "timezone": "Asia/Taipei",
+  "mac": {
+    "workspace_root": "/Users/choubk/codex-workspace",
+    "known_work_bytes": 28053655552,
+    "occupancy_reserve_bytes": 28991029248,
+    "registered_remaining_write_bytes": 0,
+    "new_write_limit_bytes": 1073741824,
+    "reservation_bytes": 30064771072,
+    "training_completed": true,
+    "remaining_write_bound_reliable": true,
+    "active_new_tasks": []
+  },
+  "shared_temporary_limit_bytes": 1073741824,
+  "linux_limit_bytes": 54760833024,
+  "live_observation_sha256": "c9a4964fe2aed4ff5b420640ea0d94d3710047ff8e72041988e68bf83a003432",
+  "mac_completion_sha256": "18f9292e44c3d5991d08618ad3e716fe4731d1d3c9338f67733f1495b003601e",
+  "mac_delivery_sha256": "708921805c188e089ef29ed840316cad6205b7a0f49b8ad4e6c587e90bfa6d87",
+  "mac_write_rules": "No new Mac computation; future transfer scratch <=1GiB within approved root, reserved while offline"
+}

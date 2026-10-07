@@ -1,0 +1,19 @@
+{
+  "schema": "aic_selector_v2_live_transfer_capacity_v1",
+  "recorded_after_readonly_queries_utc": "2026-10-07T02:59:02.160620+00:00",
+  "linux_hostname": "inspur-NP5570M5",
+  "linux_work_bytes": 50908450816,
+  "linux_quota_bytes": 54760833024,
+  "mac_hostname": "choubkdeMac-Mini.local",
+  "mac_work_du_kib": 27396148,
+  "mac_work_bytes": 28053655552,
+  "mac_AGENTS_read": true,
+  "Mac_task_entry_used": "/Users/choubk/codex-workspace/bin/run",
+  "Mac_root": "/Users/choubk/codex-workspace",
+  "combined_cap_bytes": 85899345920,
+  "planned_new_output_bytes": 8388608,
+  "transfer_route": "scp -J macmini via existing strict aliases; no Mac landing files",
+  "only_CPU_metadata_and_ffprobe_authorized": true,
+  "models_or_gpu_jobs_authorized": false,
+  "Z_existing_frozen_files_modified": false
+}

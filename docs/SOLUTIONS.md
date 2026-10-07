@@ -42,3 +42,11 @@ v1 在容量时间戳兼容处停止。v2 NONTEST8 通过，但误将训练 8192
 - 空间 LoRA 小试弱 IoU 下降，停止完整空间训练；后续空间链冻结未微调 Qwen。
 
 详见原始 `ROADMAP.md`、各版本 `PROTOCOL.md`、`decision.json` 和报告。目标 50/55+ 是项目目标，尚未达到，不是收益承诺。
+
+## 下一轮Z/T/S（2026-10-07）
+
+独立next_round_v1已修坐标单位、合法空、空目标/原生PTS、统一生产输入、完整源空间场及离线Mac容量。145主合同与19选择器合同通过；真实processor旧默认逐张量一致、全空426独立strict和实际CUDA有限空CE通过。Z为原生8B、保留B的时间提示与受约束解码，但空间实现同步修复，因此官网比较是整套配方比较。一次性Linux接续已实际进入B/Z同输入开发，并自动通过NONTEST8门后生产426包；当前Z无已交付包/官方分。
+
+T模板从既有B adapter续训、lr1e-5、最多3epochs，但首批完整窗口无真实标签，32B权重需19.52GiB且现行80GiB合计不足，因此训练未准入。supervision_v2独立一次CPU实际选择128/32，修复无新PTS的duration-only尾格并保留其证据。S无已绑定双比例构图参考，继续STOP。所有旧包/成绩保持。
+
+详见next_round_v1/PROTOCOL.md、EXECUTION_STATUS.md；官网每日5次、取最高有效分，内部弱F1仅机制诊断，不复刻官方总分。

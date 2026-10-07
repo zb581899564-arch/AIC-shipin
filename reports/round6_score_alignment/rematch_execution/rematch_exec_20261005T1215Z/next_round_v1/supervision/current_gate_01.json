@@ -1,0 +1,18 @@
+{
+  "schema": "aic_complete_window_first_workday_gate_v1",
+  "checked_utc": "2026-10-07T02:45:30.783445+00:00",
+  "status": "T_NOT_ADMITTED_PREPARATION_ONLY",
+  "reasons": [
+    "Stronger 32B teacher has no real capacity/runtime admission; same-8B substitution forbidden",
+    "New real teacher validation receipt unavailable",
+    "Main-controller semantic explanation/coverage/bias review incomplete"
+  ],
+  "first_workday_end": "2026-10-07T23:59:59+08:00",
+  "semantic_training_admitted": false,
+  "gpu_job_started": false,
+  "continue_low_cost_candidate": "Z_WITHOUT_WAITING_FOR_T",
+  "M_status": "ALREADY_DELIVERED",
+  "same_8b_teacher_fallback": false,
+  "forced_empty_quota": false,
+  "current_teacher_capacity_status": "STOP_32B_TEACHER_CAPACITY"
+}

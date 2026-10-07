@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "plan_id": null,
+  "frozen_at": null,
+  "timezone": "Asia/Taipei",
+  "total_budget_bytes": 85899345920,
+  "mac": {
+    "workspace_root": "/Users/choubk/codex-workspace",
+    "known_work_bytes": null,
+    "occupancy_reserve_bytes": null,
+    "registered_remaining_write_bytes": null,
+    "new_write_limit_bytes": null,
+    "reservation_bytes": null,
+    "training_completed": null,
+    "remaining_write_bound_reliable": null,
+    "active_new_tasks": []
+  },
+  "shared_temporary_limit_bytes": null,
+  "linux_limit_bytes": null,
+  "proofs": {
+    "mac_capacity": {
+      "path": "quota_evidence.json",
+      "sha256": null,
+      "observed_at": null,
+      "timezone": "Asia/Taipei",
+      "assertions": {
+        "workspace_root": "/mac/workspace_root",
+        "known_work_bytes": "/mac/known_work_bytes",
+        "observed_at": "/observed_at",
+        "timezone": "/timezone"
+      }
+    },
+    "mac_training_completed": {
+      "path": "quota_evidence.json",
+      "sha256": null,
+      "observed_at": null,
+      "timezone": "Asia/Taipei",
+      "assertions": {
+        "completed": "/mac/training_completed",
+        "observed_at": "/observed_at",
+        "timezone": "/timezone"
+      }
+    },
+    "mac_write_bound": {
+      "path": "quota_evidence.json",
+      "sha256": null,
+      "observed_at": null,
+      "timezone": "Asia/Taipei",
+      "assertions": {
+        "registered_remaining_write_bytes": "/mac/registered_remaining_write_bytes",
+        "new_write_limit_bytes": "/mac/new_write_limit_bytes",
+        "remaining_write_bound_reliable": "/mac/remaining_write_bound_reliable",
+        "active_new_tasks": "/mac/active_new_tasks",
+        "observed_at": "/observed_at",
+        "timezone": "/timezone"
+      }
+    },
+    "quota_registration": {
+      "path": "quota_evidence.json",
+      "sha256": null,
+      "observed_at": null,
+      "timezone": "Asia/Taipei",
+      "assertions": {
+        "occupancy_reserve_bytes": "/mac/occupancy_reserve_bytes",
+        "reservation_bytes": "/mac/reservation_bytes",
+        "shared_temporary_limit_bytes": "/shared_temporary_limit_bytes",
+        "linux_limit_bytes": "/linux_limit_bytes",
+        "observed_at": "/observed_at",
+        "timezone": "/timezone"
+      }
+    }
+  },
+  "frozen_plan_sha256": null,
+  "instructions": [
+    "This template is intentionally inadmissible. Replace nulls only with verified production measurements and registered bounds.",
+    "All byte fields must be nonnegative JSON integers; bools, fractions and unknown bounds are refused.",
+    "Mac reservation = occupancy reserve + registered remaining writes + bounded new writes; occupancy reserve >= known Mac work.",
+    "Linux limit = 80 GiB - Mac reservation - shared temporary limit. Linux free disk also covers remaining outputs plus shared scratch.",
+    "Copy hashed JSON evidence with the plan. Resolve relative proof paths with base_dir=plan_path.parent.",
+    "Each proof assertion selects a fact from the hashed evidence via a JSON pointer, including its observed_at and IANA timezone.",
+    "Evidence must establish completed Mac training, bounded remaining writes and no active new Mac tasks; cite the actual completion receipts in the evidence.",
+    "Use seal_plan(plan, base_dir=plan_path.parent) after evidence verification. New or increased Mac writes require a new evidenced registration; do not silently enlarge this plan.",
+    "No Mac heartbeat TTL applies to Linux quota admission. Offline Mac occupancy and every reservation remain charged.",
+    "This quota does not authorize GPU launch or transfer; existing shared GPU lock and append-only ledger remain. Verify live Mac status and use its required jump route for transfers."
+  ]
+}

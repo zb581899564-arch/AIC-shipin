@@ -1,0 +1,20 @@
+{
+  "status": "STOP_S_NO_BOUND_DUAL_RATIO_COMPOSITION_REFERENCE",
+  "timestamp": "2026-10-07T02:58:54.542061+00:00",
+  "eligible_native_portrait_registered": 0,
+  "official_quality_claim": false,
+  "weak_roi_not_composition_ground_truth": true,
+  "coordinate_fix_unblocked": true,
+  "max_crop_size_unchanged": true,
+  "source_reports": [
+    {
+      "path": "reports\\round6_score_alignment\\p2r_reference_gate\\SUPERVISOR_REVIEW_20260920.md",
+      "sha256": "1d74db7452ac1f24fe6639bf875ddb18c80ed40f3bd06ae5b6bcc5aec1b81094"
+    },
+    {
+      "path": "reports\\round6_score_alignment\\p2r9_native_portrait_reference\\SUPERVISOR_REVIEW_20260920.md",
+      "sha256": "3e39441fbb8559417117a9ffe4441e101087055413356faac890759e800da474"
+    }
+  ],
+  "next_step": "Only diagnose area/width ceiling after a genuinely eligible non-test composition reference is registered; no spatial training or scale tuning from rematch content"
+}
