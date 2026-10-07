@@ -19,15 +19,19 @@ AIC 产业命题赛「基于视频大模型的通用视频高光剪辑」的项�
 
 每个 ZIP 仅包含 `predictions.jsonl`。完整 SHA-256、大小、成绩来源与状态见 [提交包清单](docs/SUBMISSIONS.md) 和 [机器可读清单](docs/submission_packages.json)。只有已确认结果才填官方分数；未评分候选不继承其他包的分数。复赛成绩由用户报告/截图提供，未另行核验官网。Linux 8B 截图显示 `37.63 / DONE`，裁切部分不足以确认完整时间或名次。
 
-## 下一轮代码修复与执行（2026-10-07）
+## 下一轮代码修复与自主执行（2026-10-08）
 
 已按采纳结论建立独立 [next_round_v1](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1)。145项CPU合同、真实processor逐张量一致、全空426独立strict及真实CUDA空生成/空assistant有限CE损失已通过。修复严格0..1000坐标、合法空与失败分离、原生PTS训练目标、生产一致开发输入、全源空间场和Mac离线预留。旧已评分包不变。
 
-2026-10-07 23:38 UTC+8：全面核查后的 [v7 接续入口](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/CONTINUE.md) 已单次启动。修复了真实 PTS 到学生目标的精度冲突、helper身份、开发/生产实帧合同、成本与回执等问题；94项CPU合同、10302真实端点、12原目标无损回放及两条真实视频解码通过。旧serializer拒绝11/12，新拒绝0，标签数值变化0。
+2026-10-08 01:02 UTC+8：用户已授权完全自主裁决、修复和接续至最终 ZIP，已有监控改为每15分钟静默检查。v7于10月7日23:49:31科学STOP：12/12均正、真实空0，第二真实弱复查12/12为10支持/2拒绝，工程失败0；旧失败与标签保持，T更新0，无新T ZIP。
 
-真实小试12/12全部正、空例0，分布门 `STOP_PILOT_DISTRIBUTION`；第二弱复查2/12、2支持，其余仍在运行，不能宣称字段顺序校准解决质量问题。T更新0、无新T ZIP。完整诊断后保留原科学门，不造空/删样本/盲目全量重跑。详见[全链审计](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/COMPREHENSIVE_AUDIT_20261007.md)。
+当前独立 [相对全源摘要必要性诊断v3](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/CONTINUE.md)：v2完整4次有/无背景配对均正、状态未变，因此v3改为先说明整段可见主内容、与窗外比较再判断目标保留价值。剩余校准来源只按split内window_id SHA各选2条，不按旧标签或内容筛选；4次判断后全部4次真实弱复查，无配额。校准不是未触碰验证，诊断回答不成为训练标签或人工真值。324项Linux CPU（289实际固定runtime grammar、256真实native时间）和原记录逐SHA/validator回放通过；312文件锁 `f95f3a60b3ab2ac673f899103c5960f4a80ac04667f0287c4144cce2b93b9f6c`，单次launcher历史PID `3210273`。该次实查阶段 `REAL_RELATIVE_SUMMARY_WEAK_REVIEW`，判断 `4/4`、复查 `3/4`、实际命令进程 `2`、所属server `1`。
 
-v5同样十二窗全正而STOP；独立真实诊断3支持、9拒绝/不确定，部分拒绝有可证实的时间单位误判。同教师弱复查不能视为人工真值。v6为独立工程修复准备版本、未准入启动；v7保留v5高光定义，先解释/选择状态再列片段，且明确复查两套时间，这是待验证科学校准。当前校准集已看过历史诊断，不冒充未触碰验证集。原grammar的all_provided_frames_reviewed=true为常量，不能当自主观察证明。
+诊断v1首请求错配frame ordinal与另一帧的秒数，差0.5005秒，被独立validator正确拒绝。v2以每帧完整ordinal/time对象anyOf固定配对，时间用源数据的完整十进制字符串与Decimal验证；固定C++ JSON/runtime numeric常量变位已复现，原失败不改写/复用。见[独立修复](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/REPAIR.md)、[科学决策](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/RELATIVE_SUMMARY_DECISION_20261008.md)和[自主接续](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/AUTONOMOUS_EXECUTION_20261008.md)。
+
+完整八请求后按证据独立登记下一监督或可交付8B方案。T仍经原完整质量门推进B LoRA lr1e-5/最多3epochs、第20更新实际重载、开发、NONTEST8、426独立strict ZIP。不重复已证伪配方、不造空或弱化科学门。最终只交付一个Linux ZIP，不自动回传/官网上传；新大流量先许可，Mac不参与。Linux后台计算独立运行；本地定时诊断/修复需要Windows开机且Codex运行。旧预测失效，官网新分未知。
+
+v7的94项CPU、10302实际端点、12原目标无损及两条真实native解码验收仍有效；工程通过不代表标签分布或CUDA训练通过。[全链审计](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/COMPREHENSIVE_AUDIT_20261007.md)保留全部问题与限制。
 
 Z已完成426条/521窗口时间和全源CPU调度，但13:08被旧冻结51GiB额度拒绝空间阶段而STOP，旧失败与源码保留，未生成Z包。机器实际尚有约193GiB空间；新T使用真实容量运行器，不以Z成功/评分为前提。Windows旧下载、上传桥接和Z回传停止，Mac不参与。用户批准的Linux原地下载与自动标注、微调、封包授权继续有效。
 

@@ -40,10 +40,16 @@ python tools/verify_publication.py
 
 仓库内 ZIP 已逐个核验 SHA、字节数、CRC 和唯一 `predictions.jsonl` 成员。Linux8B 与 4B 完整包的严格 loader 验收见原 delivery 证据。发布验证不会访问官网，不代表重新提交或评分，也不重新加载比赛媒体。
 
-## 当前v7工程修复复现范围
+## 当前自主诊断复现范围
 
-2026-10-07 23:38 UTC+8：全面核查后的 [v7 接续入口](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/CONTINUE.md) 已单次启动。修复了真实 PTS 到学生目标的精度冲突、helper身份、开发/生产实帧合同、成本与回执等问题；94项CPU合同、10302真实端点、12原目标无损回放及两条真实视频解码通过。旧serializer拒绝11/12，新拒绝0，标签数值变化0。
+2026-10-08 01:02 UTC+8：用户已授权完全自主裁决、修复和接续至最终 ZIP，已有监控改为每15分钟静默检查。v7于10月7日23:49:31科学STOP：12/12均正、真实空0，第二真实弱复查12/12为10支持/2拒绝，工程失败0；旧失败与标签保持，T更新0，无新T ZIP。
 
-真实小试12/12全部正、空例0，分布门 `STOP_PILOT_DISTRIBUTION`；第二弱复查2/12、2支持，其余仍在运行，不能宣称字段顺序校准解决质量问题。T更新0、无新T ZIP。完整诊断后保留原科学门，不造空/删样本/盲目全量重跑。详见[全链审计](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/COMPREHENSIVE_AUDIT_20261007.md)。
+当前独立 [相对全源摘要必要性诊断v3](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/CONTINUE.md)：v2完整4次有/无背景配对均正、状态未变，因此v3改为先说明整段可见主内容、与窗外比较再判断目标保留价值。剩余校准来源只按split内window_id SHA各选2条，不按旧标签或内容筛选；4次判断后全部4次真实弱复查，无配额。校准不是未触碰验证，诊断回答不成为训练标签或人工真值。324项Linux CPU（289实际固定runtime grammar、256真实native时间）和原记录逐SHA/validator回放通过；312文件锁 `f95f3a60b3ab2ac673f899103c5960f4a80ac04667f0287c4144cce2b93b9f6c`，单次launcher历史PID `3210273`。该次实查阶段 `REAL_RELATIVE_SUMMARY_WEAK_REVIEW`，判断 `4/4`、复查 `3/4`、实际命令进程 `2`、所属server `1`。
 
-当前运行234文件锁SHA `70fb36cd016c30dd837f134b907ee75f8582cc957c172ee57a57034d42d4f3dc`。v6/v7测试、precision_helpers、native_segment_contract、cost_contract、真实元数据回放脚本和冻结协议均随仓库发布；媒体、逐样本标签和权重不分发。CPU回放与真实decode证据不冒充CUDA训练或第20步重载。恢复资产后应另建目录和锁，不执行历史一次性launcher。
+诊断v1首请求错配frame ordinal与另一帧的秒数，差0.5005秒，被独立validator正确拒绝。v2以每帧完整ordinal/time对象anyOf固定配对，时间用源数据的完整十进制字符串与Decimal验证；固定C++ JSON/runtime numeric常量变位已复现，原失败不改写/复用。见[独立修复](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/REPAIR.md)、[科学决策](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/RELATIVE_SUMMARY_DECISION_20261008.md)和[自主接续](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/AUTONOMOUS_EXECUTION_20261008.md)。
+
+完整八请求后按证据独立登记下一监督或可交付8B方案。T仍经原完整质量门推进B LoRA lr1e-5/最多3epochs、第20更新实际重载、开发、NONTEST8、426独立strict ZIP。不重复已证伪配方、不造空或弱化科学门。最终只交付一个Linux ZIP，不自动回传/官网上传；新大流量先许可，Mac不参与。Linux后台计算独立运行；本地定时诊断/修复需要Windows开机且Codex运行。旧预测失效，官网新分未知。
+
+v7的94项CPU、10302实际端点、12原目标无损及两条真实native解码验收仍有效；工程通过不代表标签分布或CUDA训练通过。[全链审计](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/COMPREHENSIVE_AUDIT_20261007.md)保留全部问题与限制。
+
+v6/v7和context v1/v2核心源码、CPU检查、source_lock与聚合停止/验收回执随仓库发布。媒体、逐样本标签/回答、权重不分发。新机器需自行恢复授权资产并另建版本和锁，不执行历史一次性launcher。

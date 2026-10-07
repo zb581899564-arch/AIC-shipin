@@ -1,0 +1,28 @@
+{
+  "schema": "AIC_CONTEXT_PAIR_DIAGNOSTIC_REGISTRATION_V1",
+  "utc": "2026-10-07T16:20:41.791752+00:00",
+  "selection": "minimum SHA256(window_id) separately in original train and dev; no labels or review used",
+  "window_ids": [
+    "complete_7757d020fcdef4d4db1f4dbc",
+    "complete_86bf69d3ade2a644b9c19095"
+  ],
+  "splits": [
+    "train",
+    "dev"
+  ],
+  "original_records_sha256": "e702a3589d7e3a6c28956e229237387a3a464ed443c062705f63f7e127327f79",
+  "original_done_sha256": {
+    "complete_7757d020fcdef4d4db1f4dbc": "fa220ffd851b0423f7213efd48d3f7fd3edbf4d6db352f7718e18a0e6de2bde4",
+    "complete_86bf69d3ade2a644b9c19095": "94d6b119a4fd829cf23cb6ce510e7cd23dce55c18e75c3248b2656ae9a803c77"
+  },
+  "request_count": 4,
+  "target_frames_per_request": 64,
+  "overview_max_frames": 64,
+  "overview_max_edge": 384,
+  "diagnostic_outputs_are_training_labels": false,
+  "original_target_request_bytes_for_two_windows": 29601603,
+  "predicted_incremental_output_bytes": 262626950,
+  "capacity_mode": "ACTUAL_CAPACITY_ONLY",
+  "queue_max_sec": 86400,
+  "job_wall_max_sec": 10800
+}

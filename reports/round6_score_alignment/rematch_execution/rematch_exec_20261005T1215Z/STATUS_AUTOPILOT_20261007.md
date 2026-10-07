@@ -1,6 +1,22 @@
 # Linux 后台接续登记
 
-## 2026-10-07 23:38 UTC+8：全链工程修复验收；v7分布未通过，继续真实诊断复查
+## 2026-10-08 01:02 UTC+8：自主裁决与15分钟静默监控已登记
+
+用户完全放权到最终ZIP；工程修复、科学路线、独立新版本和接续均自主完成，阶段证据写项目，最后验收报告一次。新大流量仍先许可，Mac不参与，最终包留Linux、不自动回传或官网上传。
+
+v7已于10月7日23:49:31科学STOP：12/12正、空0、工程失败0，第二真实弱复查10支持/2拒绝；原标签与234冻结文件保持。没有T更新或T ZIP，不重开旧配方。
+
+当前入口teacher_context_diagnostic_v3/CONTINUE.md，312文件锁SHAf95f3a60b3ab2ac673f899103c5960f4a80ac04667f0287c4144cce2b93b9f6c。324项Linux CPU合同（含289实际runtime grammar）和原记录逐SHA/validator回放通过，51,512字节小量控制代码直接SSH部署。一次launcher历史PID3210273，01:02实际完整路径捕获进程2、所属server1，阶段REAL_RELATIVE_SUMMARY_WEAK_REVIEW，真实判断4/4、复查3/4，全源背景回执4/4。完成回执尚未写出。诊断输出不是训练标签，不宣称上下文已解决科学阻塞。
+
+v1首请求将ordinal1723错配另一帧时间，差0.5005秒，独立诊断validator正确拒绝；独立v2/v3绑定每帧ordinal/time完整anyOf，使用原始十进制字符串和Decimal验证。固定C++ converter数字常量变位已CPU复现；当前256真实native时间无损通过，全部旧失败保持。
+
+v2实际4/4判断完成，两个有/无整段overview配对均正、状态未变，0工程失败；不能声称添加背景已解决分布。独立v3改变科学任务为先说明整段可见主内容与窗外对比，再判断摘要必要性。原校准剩余来源按split/window_id SHA各取两条，共4判断+全部4真实弱复查；不按旧标签或拒绝筛选，无类别/时长配额。旧校准不冒充未触碰验证。
+
+完整诊断后按证据自主登记下一监督或可交付方案，并继续原完整质量门→B LoRA lr1e-5最多3epochs→开发→NONTEST8→426独立strict ZIP。诊断若不支持则不重复盲试，不造空或弱化门。详细接续controller/AUTONOMOUS_EXECUTION_20261008.md，实际快照controller/monitor_aic_linux/latest.json。
+
+aic-linux每15分钟静默检查；完成前不发阶段通知，异常立即自主处理。Windows开机且Codex运行才能唤醒本地检查，Linux后台计算独立继续。旧时间预测和下方快照均历史。
+
+## 2026-10-0723:38 UTC+8：全链工程修复验收；v7分布未通过，继续真实诊断复查
 
 当前唯一入口 teacher_student_autopilot_v7/CONTINUE.md，234文件锁SHA70fb36cd016c30dd837f134b907ee75f8582cc957c172ee57a57034d42d4f3dc。23:13:35单次启动历史PID3086278，23:38实查完整controller、wrapper、pilot及所属32B server命令身份均存活。12/12新配方真实标注完成、0工程失败，全部12条关键文件逐SHA通过；8train/4dev均正、真实空例均0，distribution=STOP_PILOT_DISTRIBUTION。真实第二弱复查已完成2/12、2支持，余项继续，根/小试completion尚未写出。分布拒绝已确定，不能宣称本次字段顺序校准解决了全正现象，也不能宣称后续将自动开训；T更新0、无新T ZIP。机器继续完成诊断，原质量门拒绝保留STOP，不造空例、不盲目重跑。
 

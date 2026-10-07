@@ -12012,8 +12012,8 @@
     {
       "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/STATUS_AUTOPILOT_20261007.md",
       "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/STATUS_AUTOPILOT_20261007.md",
-      "bytes": 12823,
-      "sha256": "60ba3238fc30c2e598fd2bddcae5138347fff9ab8c25c196bcdc5656fc0f56d4",
+      "bytes": 15255,
+      "sha256": "3bae0e35b0e1c88e4c0631e4708e3a9836d58bf134ae3968849bd01379e83f1b",
       "category": "audit_or_aggregate_receipt"
     },
     {
@@ -12999,15 +12999,15 @@
     {
       "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/inspect_autopilot_live.py",
       "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/inspect_autopilot_live.py",
-      "bytes": 6305,
-      "sha256": "72e6851139f889c6a23beac309e003a03371f35f7f73bfd3524010fd008a2f68",
+      "bytes": 8597,
+      "sha256": "311ebdd4d8bc6a727ef96370f395890807c8c4d78f0c274e165f82fab6e52066",
       "category": "audit_or_aggregate_receipt"
     },
     {
       "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/monitor_aic_linux/latest.json",
       "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/monitor_aic_linux/latest.json",
-      "bytes": 17158,
-      "sha256": "c12e4e1af3521d17e237798027f5dc8d92dff139c5b27fed6207e3264ea5f212",
+      "bytes": 9821,
+      "sha256": "4814deca8d9c06892213de8948363b80aa955ad26a15438f39f40ac4503b86bd",
       "category": "audit_or_aggregate_receipt"
     },
     {
@@ -13947,6 +13947,482 @@
       "bytes": 62520,
       "sha256": "1c5fd1d303ddba18a9ed94280f58c4ba0af90f6150b5f2a17aad7c0509600d34",
       "category": "project_code_or_configuration"
+    },
+    {
+      "path": "AGENTS.md",
+      "source_relative_path": "AGENTS.md",
+      "bytes": 70099,
+      "sha256": "621ef0f7a9d816ec981b0125da2e78b98f2ad6dd2be56eeb5abebb9ecf2200e6",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/AUTONOMOUS_EXECUTION_20261008.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/AUTONOMOUS_EXECUTION_20261008.md",
+      "bytes": 6809,
+      "sha256": "19f7ef7d742bf3dfa1f9f8a99aa49ce9cac71c156b60ff72fe96c8b454eebbfe",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/register_context_diagnostic_v1.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/register_context_diagnostic_v1.py",
+      "bytes": 4911,
+      "sha256": "50eb5c710086883866756574b89331812ece79ee219a53febb8628656967250d",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/checkpoint_autonomy_20261008.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/checkpoint_autonomy_20261008.py",
+      "bytes": 7852,
+      "sha256": "0403d27fa586953a6f8f543ef1b0c9f1deef77974fecdd3012014ab73014e5cf",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/publish_context_snapshot.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/publish_context_snapshot.py",
+      "bytes": 7777,
+      "sha256": "bbba9e43b22683c39000b1ae386f67537f61537b3535baf33300ddcb95595ec1",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/RELATIVE_SUMMARY_DECISION_20261008.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/RELATIVE_SUMMARY_DECISION_20261008.md",
+      "bytes": 3309,
+      "sha256": "19edf121dc6c549a19805f3ce83a38aeebd28c73d9d6c8ec05f32a610f90c58e",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/completion.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/completion.json",
+      "bytes": 240,
+      "sha256": "2381b6fa499d0c1925dcf227e36d7dee7977de091a9bb5de85dae041ce07dd48",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/CONTINUE.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/CONTINUE.md",
+      "bytes": 1762,
+      "sha256": "61a7438d71644ec3c517d4420d983b68402cf69b3770856a92c35455b84ec4dd",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/cpu_acceptance.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/cpu_acceptance.json",
+      "bytes": 686,
+      "sha256": "71c1b2704ef69b939066106788d3f73a083ffe2121829c698cda0a09ec5fad83",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/cpu_tests.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/cpu_tests.py",
+      "bytes": 5701,
+      "sha256": "4e8b4809464357e52a06179236b89fadfdbf4d5519fd0fdab3a05970c5ce0b8e",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/cpu_tests.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/cpu_tests.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/cpu_tests.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/cpu_tests.stdout.txt",
+      "bytes": 648,
+      "sha256": "1c987735d2108059399ca55aea230c7f92a1f297ecf629c524d6be59f99b30c9",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/diagnostic.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/diagnostic.py",
+      "bytes": 18475,
+      "sha256": "c5f2af1075b3ac3c52574fa42e0bb43e339f17d8de2fba5edc0fb67e3df3bd95",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/diagnostic.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/diagnostic.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/diagnostic.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/diagnostic.stdout.txt",
+      "bytes": 84,
+      "sha256": "702cbfe378510d0cab21795b88c20edba4e15e1ba5ba57b93ce4abdd9052f491",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/launch.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/launch.py",
+      "bytes": 2162,
+      "sha256": "5f14e8bc6c294d7698c2954be18751bcb570cba45285ce968e577e7461a31b90",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/manifest.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/manifest.json",
+      "bytes": 1082,
+      "sha256": "73717aea86b092fa8e9be47318ac78fa1d5b1e79d2ed0cce3ad9dc3b19fa0c8a",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/prepare.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/prepare.py",
+      "bytes": 3019,
+      "sha256": "581efc458a6f5ddc664167a445f3129c0cb55db75edcbc7a245a9adb4317dc92",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/prepare.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/prepare.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/prepare.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/prepare.stdout.txt",
+      "bytes": 301,
+      "sha256": "6f02abbd8f42b25426f53cb6243269621d399700d84916ad40d1d77d96fcb097",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/progress.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/progress.json",
+      "bytes": 240,
+      "sha256": "2381b6fa499d0c1925dcf227e36d7dee7977de091a9bb5de85dae041ce07dd48",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/prompt.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/prompt.txt",
+      "bytes": 1468,
+      "sha256": "b6b9ee0baf013ab0317f60b9b1e5710a93f02631a2f13dddbbc4b16d36c31318",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/PROTOCOL.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/PROTOCOL.md",
+      "bytes": 2730,
+      "sha256": "4f9ea840374de7da4ae0e011fda3e5e4917511794eb12b43f2051149dd105081",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/registration.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/registration.json",
+      "bytes": 285,
+      "sha256": "26c8f79768a491659a8946810dd37e1c06d3643cadbe51c6446d106ca6b080e9",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/source_lock.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/source_lock.json",
+      "bytes": 62161,
+      "sha256": "f23812e99ecb842721eb22eb7c84bb3ef5515fdeb4971bc3f5243349ba762789",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/start_receipt.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v1/start_receipt.json",
+      "bytes": 1084,
+      "sha256": "195af82dd2949262de647d466e578f12a84413fd4347c0e64d6362a84619c7bf",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/completion.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/completion.json",
+      "bytes": 773,
+      "sha256": "28ca5a3cfb433da123403ae50c2670c2adecfd5abc399b07c752c81092797593",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/CONTINUE.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/CONTINUE.md",
+      "bytes": 2011,
+      "sha256": "d62b7bb64263d98bbc2d8f5c7d74ecbcf3de68f28be2ba7204ec6bc11ad77a7c",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/cpu_acceptance.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/cpu_acceptance.json",
+      "bytes": 1328,
+      "sha256": "5a956121310dd8bcb06ba37f25f8d056a229e7f65c8ffa7029c15d9439099602",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/cpu_tests.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/cpu_tests.py",
+      "bytes": 8442,
+      "sha256": "46015c7fbce6a11d3bf8a32ab89d59e9c28b98ed38d99645876e6c9fbe389ac6",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/cpu_tests.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/cpu_tests.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/cpu_tests.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/cpu_tests.stdout.txt",
+      "bytes": 1274,
+      "sha256": "f0cafee7baf18d63255937d79294937f796f28248de04abba4e39f8b240255c3",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/diagnostic.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/diagnostic.py",
+      "bytes": 18995,
+      "sha256": "3aa9eb85d83d34f1253bc1cf562291ba8b68bee16cffa9cad0fcb1064230fe14",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/diagnostic.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/diagnostic.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/diagnostic.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/diagnostic.stdout.txt",
+      "bytes": 84,
+      "sha256": "702cbfe378510d0cab21795b88c20edba4e15e1ba5ba57b93ce4abdd9052f491",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/launch.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/launch.py",
+      "bytes": 2163,
+      "sha256": "b76c16a426f1b93f012182d5325a538427bba9d7b79e4793c52d54daaa350dc9",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/manifest.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/manifest.json",
+      "bytes": 1207,
+      "sha256": "f63bcabc1615c3cf17b67b6d170c6acbe71b0519904759110b26931c73632edc",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/prepare.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/prepare.py",
+      "bytes": 3246,
+      "sha256": "b56ef7572e1a11e03b384e2da9f576d609803fac41a7d5605c28fec635a00de0",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/prepare.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/prepare.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/prepare.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/prepare.stdout.txt",
+      "bytes": 301,
+      "sha256": "c0457563991dc6efeef19444bf5a98455701f7167c35565415d458fc1075e86b",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/progress.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/progress.json",
+      "bytes": 773,
+      "sha256": "28ca5a3cfb433da123403ae50c2670c2adecfd5abc399b07c752c81092797593",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/prompt.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/prompt.txt",
+      "bytes": 1809,
+      "sha256": "cf7952453e1ae5d6b4272464b397da6258ae4a964e85d1b57dc03f8e8e8a655d",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/PROTOCOL.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/PROTOCOL.md",
+      "bytes": 3176,
+      "sha256": "02906ab8a8ef401874d7eb5fb798c5e096caa1c6b264989c828a10587dd04b5b",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/registration.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/registration.json",
+      "bytes": 285,
+      "sha256": "ff3984e880d0eca3575024c1530d1418e66eb93f9f46259ba373e5e3d2de1390",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/REPAIR.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/REPAIR.md",
+      "bytes": 1683,
+      "sha256": "6f560d589d62b26dc6bd9033aa67ab6671b57b5b3f6dc6d6f322f6b5fe87debd",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/source_lock.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/source_lock.json",
+      "bytes": 62939,
+      "sha256": "a32754061d2326fc517eddcb56e08aa5fca0ff89e80a364fe896b42fbdd04f57",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/start_receipt.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/start_receipt.json",
+      "bytes": 1084,
+      "sha256": "573740ddb4e61460c02e780f10e7ab610234b718939ba44bc54ec8684e6b9bfd",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/CONTINUE.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/CONTINUE.md",
+      "bytes": 1865,
+      "sha256": "86dff9497eafd8a301231be2925304af83132b5cd3f303573d612e498331847d",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/cpu_acceptance.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/cpu_acceptance.json",
+      "bytes": 1455,
+      "sha256": "9d12faca14fb3a8a94b243ef8c355b93317d56fabfd3b550e8079f6d8cda6f2c",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/cpu_tests.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/cpu_tests.py",
+      "bytes": 9681,
+      "sha256": "9fda53be8ddfd37a825ce278a75751387e2d0e028a66253bc65383a601298b70",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/cpu_tests.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/cpu_tests.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/cpu_tests.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/cpu_tests.stdout.txt",
+      "bytes": 1395,
+      "sha256": "80d5fbc033883a23e0aa42073c6d7c3cea2a60303bbc79b087eaa56e77f4231a",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/diagnostic.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/diagnostic.py",
+      "bytes": 25238,
+      "sha256": "0168b2a8a01fc548a53e23759e759fd151d04a2927b4ec6bc0f4cae8a4947955",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/diagnostic.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/diagnostic.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/diagnostic.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/diagnostic.stdout.txt",
+      "bytes": 84,
+      "sha256": "28d0569809bcd99d6e2a4ba70bb9cb9cf9d57bdd8d295e65324b6aff7667e620",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/launch.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/launch.py",
+      "bytes": 2284,
+      "sha256": "f9bc8f938e97bae241190a3bd8aab1dbaa3fd68c1bb2c85d230e2588350b0cd5",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/manifest.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/manifest.json",
+      "bytes": 1707,
+      "sha256": "dd99e20312c9a8a21177dd12a3654f0c0ad958613107b0074b5d1a217e82585f",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/prepare.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/prepare.py",
+      "bytes": 3580,
+      "sha256": "1b46689d8f95856711976e13c6e30c1719e8bea6d5a48283c449df56517725dc",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/prepare.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/prepare.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/prepare.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/prepare.stdout.txt",
+      "bytes": 375,
+      "sha256": "8ff5beeec445788d1b9eb58acafcb2e3ef972b8173ea9f8a7960bb47697ee225",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/progress.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/progress.json",
+      "bytes": 359,
+      "sha256": "06feea6ca3374de265b42cfb5b6d36382c9ba461a4c8bf220542c71097f7ee3b",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/prompt.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/prompt.txt",
+      "bytes": 2247,
+      "sha256": "31ec62082cdb8645bbc5f9775c44213193e59a9121ae5fec877ceb1d04abfb41",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/PROTOCOL.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/PROTOCOL.md",
+      "bytes": 3214,
+      "sha256": "b4119d56f9ad60eb5ec55c97cd0a63df3c35c159164962f96ed05058ee8535b9",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/registration.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/registration.json",
+      "bytes": 285,
+      "sha256": "acb1dcbc55baa93d389cf5fb69220cdfbc33cb7474ff1d49d347a720d20a8852",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/REPAIR.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/REPAIR.md",
+      "bytes": 1683,
+      "sha256": "6f560d589d62b26dc6bd9033aa67ab6671b57b5b3f6dc6d6f322f6b5fe87debd",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/review_prompt.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/review_prompt.txt",
+      "bytes": 1720,
+      "sha256": "210a29aa015c8982616064c7cc4cc3872e3ed0c386432671533d2756bb2c6e5f",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/source_lock.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/source_lock.json",
+      "bytes": 71521,
+      "sha256": "f95f3a60b3ab2ac673f899103c5960f4a80ac04667f0287c4144cce2b93b9f6c",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/start_receipt.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/start_receipt.json",
+      "bytes": 1109,
+      "sha256": "cd0e5eed8ea093922be5c7269be494cbee048f16ee4f1a48b2d6f57bf53c8147",
+      "category": "experiment_protocol_or_acceptance"
     }
   ],
   "project_code_count": 930,
@@ -14023,5 +14499,5 @@
   "autopilot_v5_pilot_completed_windows": 3,
   "autopilot_v5_pilot_failed_windows": 0,
   "autopilot_v5_pilot_quality_pass": false,
-  "updated_utc": "2026-10-07T15:43:25.398917+00:00"
+  "updated_utc": "2026-10-07T17:02:07.292887+00:00"
 }

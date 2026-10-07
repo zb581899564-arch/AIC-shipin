@@ -5,6 +5,7 @@ import datetime
 import hashlib
 import json
 from pathlib import Path
+import re
 import shutil
 import socket
 import subprocess
@@ -18,10 +19,13 @@ def read(path):
     return json.loads(path.read_text(encoding='utf-8'))
 
 
-def capture(version):
+def capture(version, entry=None):
     if socket.gethostname() != 'inspur-NP5570M5':
         raise RuntimeError('unexpected training host')
-    here = RUN / ('teacher_student_autopilot_' + version)
+    entry = entry or ('teacher_student_autopilot_' + version)
+    if not re.fullmatch(r'teacher_(?:student_autopilot|context_diagnostic)_v[1-9][0-9]*', entry):
+        raise RuntimeError('unexpected inspection entry')
+    here = RUN / entry
     if not here.is_dir():
         raise RuntimeError('unregistered version directory')
     now = datetime.datetime.now(datetime.timezone.utc)
@@ -63,7 +67,7 @@ def capture(version):
             states['positive'] += 1
         else:
             states['unclassified'] += 1
-    snapshot = {'utc': now.isoformat(), 'host': socket.gethostname(), 'version': version,
+    snapshot = {'utc': now.isoformat(), 'host': socket.gethostname(), 'version': version, 'entry': entry,
                 'processes': processes, 'owned_servers': servers,
                 'gpu': subprocess.check_output(['nvidia-smi', '--query-gpu=index,name,utilization.gpu,memory.used,memory.total',
                                                 '--format=csv,noheader'], text=True).strip(),
@@ -72,7 +76,30 @@ def capture(version):
                 'window_counts': dict(states), 'window_receipts': windows,
                 'all_completed_window_file_sha_pass': all(all(w['file_sha_checks'].values()) and w['file_sha_checks']
                                                           for w in windows if w['done_status']),
-                'new_zip_paths': [str(p.relative_to(here)) for p in here.glob('**/candidate_T_8B.zip')]}
+                'new_zip_paths': [str(p.relative_to(here)) for p in here.glob('**/candidate_T_8B.zip')],
+                'source_lock_sha256': hashlib.sha256((here/'source_lock.json').read_bytes()).hexdigest()
+                    if (here/'source_lock.json').is_file() else None,
+                'launch_receipt': read(here/'start_receipt.json')}
+    if entry.startswith('teacher_context_diagnostic_'):
+        snapshot['context_diagnostic_requests'] = [
+            {'window_id': row['window_id'], 'arm': row['arm'], 'status': row['status'],
+             'state': row['result']['state'], 'wall_sec': row['wall_sec'],
+             'actual_prompt_tokens': row['actual_prompt_tokens'], 'physical_images': row['physical_images'],
+             'raw_answer_sha256': row['raw_answer_sha256'], 'receipt_sha256': hashlib.sha256(path.read_bytes()).hexdigest()}
+            for path in sorted((here/'run_01/requests').glob('*/*/diagnostic_receipt.json'))
+            for row in [read(path)]]
+        snapshot['context_overview_receipts'] = [
+            {'source_sha256': row['source_sha256'], 'full_source_frame_count': row['full_source_frame_count'],
+             'provided_context_frames': len(row['frames']), 'clock_sequence_sha256': row['clock_sequence_sha256'],
+             'receipt_sha256': hashlib.sha256(path.read_bytes()).hexdigest()}
+            for path in sorted((here/'run_01/overview').glob('*/decode_receipt.json'))
+            for row in [read(path)]]
+        snapshot['context_diagnostic_reviews'] = [
+            {'window_id':row['window_id'],'status':row['status'],'review_status':row['review_status'],
+             'actual_prompt_tokens':row['actual_prompt_tokens'],'physical_images':row['physical_images'],
+             'raw_answer_sha256':row['raw_answer_sha256'],'receipt_sha256':hashlib.sha256(path.read_bytes()).hexdigest()}
+            for path in sorted((here/'run_01/reviews').glob('*/review_receipt.json'))for row in [read(path)]]
+        snapshot['context_resource_receipt'] = read(RUN/'controller'/('rematch_CONTEXT_DIAG_'+entry.rsplit('_',1)[1]+'.resource.json'))
     snapshot['review_counts'] = {}
     for phase in ('pilot_01', 'teacher_01'):
         reviews = [read(p) for p in sorted((here / phase / 'reviews').glob('*/review_receipt.json'))]
@@ -96,15 +123,16 @@ def capture(version):
     monitor = RUN / 'controller/monitor_aic_linux'
     monitor.mkdir(exist_ok=True)
     data = json.dumps(snapshot, ensure_ascii=False, indent=2) + '\n'
-    snapshot_path = monitor / ('comprehensive_' + version + '_' + now.strftime('%Y%m%dT%H%M%SZ') + '.json')
+    snapshot_path = monitor / ('comprehensive_' + entry + '_' + now.strftime('%Y%m%dT%H%M%SZ') + '.json')
     snapshot_path.write_text(data, encoding='utf-8')
-    (monitor / 'latest.json').write_text(data, encoding='utf-8')
+    temporary=monitor/'latest.json.tmp';temporary.write_text(data,encoding='utf-8');temporary.replace(monitor/'latest.json')
     return snapshot_path, snapshot
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--version', choices=['v7'], default='v7')
+    parser.add_argument('--version', default='v7')
+    parser.add_argument('--entry')
     args = parser.parse_args()
-    path, snapshot = capture(args.version)
+    path, snapshot = capture(args.version,args.entry)
     print(json.dumps({'snapshot_path': str(path), 'snapshot': snapshot}, ensure_ascii=False))

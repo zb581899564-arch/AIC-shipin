@@ -1,0 +1,106 @@
+"""CPU checks for the new diagnostic, including its actual pinned grammar."""
+import copy
+import json
+from pathlib import Path
+import subprocess
+import sys
+
+import diagnostic as d
+
+record = {'window_id': 'context_cpu', 'split': 'train',
+          'window': {'window_id': 'context_cpu', 'window_pts_start_sec': 90.0,
+                     'window_duration_sec': 30.0},
+          'actual_observation': {'window_pts_start_sec': 90.0, 'window_duration_sec': 30.0,
+                                 'actual_pts_sec': [90.125, 105.5, 119.75],
+                                 'source_frame_ordinals': [10, 20, 30]}}
+base = {'window_id': record['window_id'], 'decision_reason': 'Actual visible event has independent value',
+        'state': 'POSITIVE', 'evidence': [{'frame_ordinal': 20, 'window_local_sec': 15.5,
+                                         'description': 'Visible result'}],
+        'retained_segments': [{'start_sec': 0.125, 'end_sec': 15.5, 'reason': 'Visible result'}]}
+checks = 0
+
+
+def expect(value, valid):
+    global checks
+    try:
+        d.validate_result(json.dumps(value, ensure_ascii=False), record)
+    except (ValueError, RuntimeError, KeyError, TypeError):
+        assert not valid, value
+    else:
+        assert valid, value
+    checks += 1
+
+
+for count in (1, 2, 63, 64, 65, 719, 720, 10302):
+    selected = d.ordinal_sample(count)
+    assert selected[0] == 0 and len(selected) == min(count, 64) and len(set(selected)) == len(selected)
+    assert selected[-1] == count - 1 and selected == sorted(selected)
+    checks += 1
+for count, limit in ((0, 64), (-1, 64), (True, 64), (4, 0), (4, True)):
+    try: d.ordinal_sample(count, limit)
+    except ValueError: pass
+    else: raise AssertionError('Invalid source/limit accepted')
+    checks += 1
+
+values = []
+for state in ('POSITIVE', 'NO_HIGHLIGHT', 'UNCERTAIN'):
+    value = copy.deepcopy(base)
+    value['state'] = state
+    if state != 'POSITIVE': value['retained_segments'] = []
+    expect(value, True)
+    values.append({'text': json.dumps(value, separators=(',', ':')), 'expected': True})
+
+for wrong in ('source_time', 'mismatched_ordinal', 'bool_ordinal', 'missing_description', 'empty_evidence',
+              'positive_without_segments', 'negative_with_segments', 'uncertain_with_segments',
+              'out_of_window', 'unprovided_endpoint', 'reverse', 'overlap', 'six_segments',
+              'empty_reason', 'wrong_window', 'missing_decision', 'extra_key'):
+    value = copy.deepcopy(base)
+    if wrong == 'source_time': value['evidence'][0]['window_local_sec'] = 105.5
+    elif wrong == 'mismatched_ordinal': value['evidence'][0]['frame_ordinal'] = 10
+    elif wrong == 'bool_ordinal': value['evidence'][0]['frame_ordinal'] = True
+    elif wrong == 'missing_description': value['evidence'][0].pop('description')
+    elif wrong == 'empty_evidence': value['evidence'] = []
+    elif wrong == 'positive_without_segments': value['retained_segments'] = []
+    elif wrong == 'negative_with_segments': value['state'] = 'NO_HIGHLIGHT'
+    elif wrong == 'uncertain_with_segments': value['state'] = 'UNCERTAIN'
+    elif wrong == 'out_of_window': value['retained_segments'][0]['end_sec'] = 30.1
+    elif wrong == 'unprovided_endpoint': value['retained_segments'][0]['start_sec'] = 1.111
+    elif wrong == 'reverse': value['retained_segments'][0].update(start_sec=15.5, end_sec=0.125)
+    elif wrong == 'overlap': value['retained_segments'].append(copy.deepcopy(value['retained_segments'][0]))
+    elif wrong == 'six_segments': value['retained_segments'] *= 6
+    elif wrong == 'empty_reason': value['retained_segments'][0]['reason'] = ''
+    elif wrong == 'wrong_window': value['window_id'] = 'other'
+    elif wrong == 'missing_decision': value.pop('decision_reason')
+    else: value['extra'] = 1
+    expect(value, False)
+
+# The grammar intentionally does not prove matched times or semantic truth; the validator above does.
+for wrong in ('missing_keys', 'bad_state', 'missing_description', 'no_evidence', 'negative_segment', 'extra_key', 'source_endpoint'):
+    value = copy.deepcopy(base)
+    if wrong == 'missing_keys': value.pop('decision_reason')
+    elif wrong == 'bad_state': value['state'] = 'EMPTY_FALLBACK'
+    elif wrong == 'missing_description': value['evidence'][0].pop('description')
+    elif wrong == 'no_evidence': value['evidence'] = []
+    elif wrong == 'negative_segment': value['state'] = 'NO_HIGHLIGHT'
+    elif wrong == 'extra_key': value['extra'] = 1
+    else: value['retained_segments'][0]['end_sec'] = 105.5
+    values.append({'text': json.dumps(value, separators=(',', ':')), 'expected': False})
+
+grammar = None
+if sys.platform.startswith('linux'):
+    result = subprocess.run([str(d.V7 / 'runtime_schema_check')],
+                            input=json.dumps({'schema': d.schema(record), 'examples': values}),
+                            capture_output=True, text=True, timeout=30)
+    assert result.returncode == 0, result.stdout + result.stderr
+    grammar = json.loads(result.stdout)
+    assert grammar['all_examples_match_expectations']
+    checks += len(values)
+
+report = {'status': 'PASS_CONTEXT_DIAGNOSTIC_CPU' if grammar else 'PASS_LOCAL_SEMANTIC_ONLY_CPU',
+          'checks': checks, 'actual_pinned_grammar_examples': len(values) if grammar else 0,
+          'three_decision_states_expressible': bool(grammar), 'GPU_started': False,
+          'source_sha256': {name: d.c.sha(d.HERE / name) for name in ('cpu_tests.py', 'diagnostic.py', 'prompt.txt', 'PROTOCOL.md')},
+          'runtime_helper_sha256': d.c.sha(d.V7 / 'runtime_schema_check') if grammar else None,
+          'utc': d.c.utc()}
+if grammar: d.c.write(d.HERE / 'cpu_acceptance.json', report, fresh=True)
+print(json.dumps(report))

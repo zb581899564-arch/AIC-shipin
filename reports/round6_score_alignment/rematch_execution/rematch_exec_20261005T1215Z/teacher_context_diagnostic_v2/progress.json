@@ -1,0 +1,27 @@
+{
+  "status": "PASS_CONTEXT_DIAGNOSTIC_COMPLETE",
+  "request_count": 4,
+  "pairs": [
+    {
+      "window_id": "complete_7757d020fcdef4d4db1f4dbc",
+      "split": "train",
+      "window_only": "POSITIVE",
+      "with_context": "POSITIVE",
+      "state_changed": false
+    },
+    {
+      "window_id": "complete_86bf69d3ade2a644b9c19095",
+      "split": "dev",
+      "window_only": "POSITIVE",
+      "with_context": "POSITIVE",
+      "state_changed": false
+    }
+  ],
+  "same_teacher_not_independent_truth": true,
+  "new_training_labels": 0,
+  "student_training_admitted": false,
+  "optimizer_steps": 0,
+  "raw_receipts_sha256": "af4d6ed8a11daadfb5bf3d1bd7d096e32d622031f827e8bed817b811a897635c",
+  "wall_sec": 327.0175064159557,
+  "utc": "2026-10-07T16:38:58.618421+00:00"
+}

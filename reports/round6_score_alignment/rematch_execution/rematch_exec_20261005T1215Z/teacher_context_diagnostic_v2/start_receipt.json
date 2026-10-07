@@ -1,0 +1,27 @@
+{
+  "status": "LAUNCHED_CONTEXT_DIAGNOSTIC_PENDING_REAL_ACCEPTANCE",
+  "utc": "2026-10-07T16:33:31.216963+00:00",
+  "command": [
+    "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+    "-B",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/resource_unlimited_v1_20261007/gpu_run.py",
+    "--name",
+    "rematch_CONTEXT_DIAG_v2",
+    "--max-seconds",
+    "10800",
+    "--planned-output-bytes",
+    "262626950",
+    "--capacity-reason",
+    "four actual paired teacher requests plus two sequential source overviews; measured original HTTP bytes",
+    "--queue-seconds",
+    "86400",
+    "--",
+    "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+    "-B",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/diagnostic.py"
+  ],
+  "source_lock_sha256": "a32754061d2326fc517eddcb56e08aa5fca0ff89e80a364fe896b42fbdd04f57",
+  "automatic_return": false,
+  "student_training_admitted": false,
+  "pid": 3187318
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "AIC_RELATIVE_SUMMARY_DIAGNOSTIC_REGISTRATION_V3",
+  "utc": "2026-10-07T16:49:44.584828+00:00",
+  "scientific_change": "whole-source visible summary and marginal target information before keep decision; four fresh context requests plus four real weak reviews",
+  "selection": "two minimum SHA256(window_id) per split from original calibration excluding the registered v2 pair; native64 and outside-window metadata only; no labels or review used",
+  "window_ids": [
+    "complete_cd3e09529324acc16114d2fa",
+    "complete_47c0dd5636aff0e0ebbc37a1",
+    "complete_999f44661e0ad2ba0fc003ab",
+    "complete_e1e3a1030b7e5f5e7f4b9fb2"
+  ],
+  "splits": [
+    "train",
+    "train",
+    "dev",
+    "dev"
+  ],
+  "original_records_sha256": "e702a3589d7e3a6c28956e229237387a3a464ed443c062705f63f7e127327f79",
+  "original_done_sha256": {
+    "complete_cd3e09529324acc16114d2fa": "82182385a09955c9a1958837aeccd0bce015c6e3604cb883400f048948897c36",
+    "complete_47c0dd5636aff0e0ebbc37a1": "376cc8aae56f22220ff729cc48cc96fadb6e41d2a513aa4bcc12a02d640a5e63",
+    "complete_999f44661e0ad2ba0fc003ab": "dc80ae4db0f201e71864c69b62b751758694374789899baa9136560c0706b548",
+    "complete_e1e3a1030b7e5f5e7f4b9fb2": "fdbf5348b0bf5e196d077f13296efdee3a76a5fda815d20f1f5277d8def04e03"
+  },
+  "request_count": 8,
+  "annotation_requests": 4,
+  "review_requests": 4,
+  "target_frames_per_request": 64,
+  "overview_max_frames": 64,
+  "overview_max_edge": 384,
+  "diagnostic_outputs_are_training_labels": false,
+  "original_target_request_bytes_for_four_windows": 51729556,
+  "predicted_incremental_output_bytes": 736799016,
+  "capacity_mode": "ACTUAL_CAPACITY_ONLY",
+  "queue_max_sec": 86400,
+  "job_wall_max_sec": 10800
+}

@@ -1,446 +1,192 @@
 {
-  "utc": "2026-10-07T15:38:16.885934+00:00",
+  "utc": "2026-10-07T17:02:05.607269+00:00",
   "host": "inspur-NP5570M5",
-  "version": "v7",
+  "version": "v3",
+  "entry": "teacher_context_diagnostic_v3",
   "processes": [
-    "3086278       1 3086278    1482 17.7  0.0 /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/controller.py",
-    "3091186 3086278 3086278    1214  0.0  0.0 /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/resource_unlimited_v1_20261007/gpu_run.py --name rematch_TAUTO_v7_teacher_pilot --max-seconds 10800 --planned-output-bytes 6455316480 --capacity-reason preregistered label-independent 8train/4dev pilot; new prompt, real original validator and second weak review; zero student updates --queue-seconds 259200 -- /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/pilot.py",
-    "3091199 3091186 3091199    1214 13.9  0.1 /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/pilot.py"
+    "3210273       1 3210273     571  0.0  0.0 /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/resource_unlimited_v1_20261007/gpu_run.py --name rematch_CONTEXT_DIAG_v3 --max-seconds 10800 --planned-output-bytes 736799016 --capacity-reason four actual relative-summary requests and four weak reviews plus four sequential source overviews; measured original HTTP bytes --queue-seconds 86400 -- /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/diagnostic.py",
+    "3210277 3210273 3210277     571 21.2  0.1 /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/diagnostic.py"
   ],
   "owned_servers": [
-    "3092890 3091199 3091199    1121  497  5.6 /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher32b_runtime_v2/runtime/build/bin/llama-server --model /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher32b_linux_download_v1/assets/Qwen3VL-32B-Instruct-Q4_K_M.gguf --mmproj /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher32b_linux_download_v1/assets/mmproj-Qwen3VL-32B-Instruct-F16.gguf --n-gpu-layers 99 --host 127.0.0.1 --port 49329 --parallel 1 --ctx-size 65536 --no-context-shift --log-verbosity 10 --image-min-tokens 8 --image-max-tokens 768 --flash-attn on"
+    "3216465 3210277 3210277     449  436  6.6 /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher32b_runtime_v2/runtime/build/bin/llama-server --model /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher32b_linux_download_v1/assets/Qwen3VL-32B-Instruct-Q4_K_M.gguf --mmproj /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher32b_linux_download_v1/assets/mmproj-Qwen3VL-32B-Instruct-F16.gguf --n-gpu-layers 99 --host 127.0.0.1 --port 42687 --parallel 1 --ctx-size 65536 --no-context-shift --log-verbosity 10 --image-min-tokens 8 --image-max-tokens 768 --flash-attn on"
   ],
-  "gpu": "0, NVIDIA RTX 6000 Ada Generation, 100 %, 37290 MiB, 46068 MiB",
-  "memory": "总计         已用        空闲      共享    缓冲/缓存    可用\n内存：      128557       13773       49643         280       65141      113467\n交换：      131071        1939      129132",
+  "gpu": "0, NVIDIA RTX 6000 Ada Generation, 93 %, 37290 MiB, 46068 MiB",
+  "memory": "总计         已用        空闲      共享    缓冲/缓存    可用\n内存：      128557       15003       48304         280       65249      112237\n交换：      131071        1939      129132",
   "disk": {
     "total": 943412031488,
-    "used": 693657251840,
-    "free": 201755168768
+    "used": 694154866688,
+    "free": 201257553920
   },
-  "window_counts": {
-    "positive": 12
+  "window_counts": {},
+  "window_receipts": [],
+  "all_completed_window_file_sha_pass": true,
+  "new_zip_paths": [],
+  "source_lock_sha256": "f95f3a60b3ab2ac673f899103c5960f4a80ac04667f0287c4144cce2b93b9f6c",
+  "launch_receipt": {
+    "status": "LAUNCHED_CONTEXT_DIAGNOSTIC_PENDING_REAL_ACCEPTANCE",
+    "utc": "2026-10-07T16:52:34.365357+00:00",
+    "command": [
+      "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+      "-B",
+      "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/resource_unlimited_v1_20261007/gpu_run.py",
+      "--name",
+      "rematch_CONTEXT_DIAG_v3",
+      "--max-seconds",
+      "10800",
+      "--planned-output-bytes",
+      "736799016",
+      "--capacity-reason",
+      "four actual relative-summary requests and four weak reviews plus four sequential source overviews; measured original HTTP bytes",
+      "--queue-seconds",
+      "86400",
+      "--",
+      "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+      "-B",
+      "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/diagnostic.py"
+    ],
+    "source_lock_sha256": "f95f3a60b3ab2ac673f899103c5960f4a80ac04667f0287c4144cce2b93b9f6c",
+    "automatic_return": false,
+    "student_training_admitted": false,
+    "pid": 3210273
   },
-  "window_receipts": [
-    {
-      "window_id": "complete_229ff0be5322a3810fc9d4dd",
-      "done_status": "PASS_COMPLETE_ANNOTATION_RECEIPT",
-      "completed_utc": "2026-10-07T15:35:48.772964+00:00",
-      "wall_sec": 95.25789280515164,
-      "failure": null,
-      "status": "PASS_WEAK_COMPLETE_WINDOW_TARGET",
-      "split": "dev",
-      "sft_eligible": true,
-      "explicit_no_highlight": false,
-      "uncertain": false,
-      "segment_count": 5,
-      "file_sha_checks": {
-        "annotation.json": true,
-        "validated_record.json": true,
-        "decode_receipt.json": true,
-        "prompt.txt": true,
-        "raw_answer.txt": true,
-        "server_response.json": true,
-        "input_contract.json": true,
-        "runtime_grammar_validation.json": true,
-        "generation_schema.json": true,
-        "processor.log": true,
-        "http/request.json": true,
-        "http/response.bin": true,
-        "http/http_receipt.json": true
-      }
-    },
+  "context_diagnostic_requests": [
     {
       "window_id": "complete_47c0dd5636aff0e0ebbc37a1",
-      "done_status": "PASS_COMPLETE_ANNOTATION_RECEIPT",
-      "completed_utc": "2026-10-07T15:23:23.534621+00:00",
-      "wall_sec": 79.02391867805272,
-      "failure": null,
-      "status": "PASS_WEAK_COMPLETE_WINDOW_TARGET",
-      "split": "train",
-      "sft_eligible": true,
-      "explicit_no_highlight": false,
-      "uncertain": false,
-      "segment_count": 1,
-      "file_sha_checks": {
-        "annotation.json": true,
-        "validated_record.json": true,
-        "decode_receipt.json": true,
-        "prompt.txt": true,
-        "raw_answer.txt": true,
-        "server_response.json": true,
-        "input_contract.json": true,
-        "runtime_grammar_validation.json": true,
-        "generation_schema.json": true,
-        "processor.log": true,
-        "http/request.json": true,
-        "http/response.bin": true,
-        "http/http_receipt.json": true
-      }
-    },
-    {
-      "window_id": "complete_6927d8eafbda6602e0b6e7a6",
-      "done_status": "PASS_COMPLETE_ANNOTATION_RECEIPT",
-      "completed_utc": "2026-10-07T15:27:22.627934+00:00",
-      "wall_sec": 84.42441536858678,
-      "failure": null,
-      "status": "PASS_WEAK_COMPLETE_WINDOW_TARGET",
-      "split": "train",
-      "sft_eligible": true,
-      "explicit_no_highlight": false,
-      "uncertain": false,
-      "segment_count": 3,
-      "file_sha_checks": {
-        "annotation.json": true,
-        "validated_record.json": true,
-        "decode_receipt.json": true,
-        "prompt.txt": true,
-        "raw_answer.txt": true,
-        "server_response.json": true,
-        "input_contract.json": true,
-        "runtime_grammar_validation.json": true,
-        "generation_schema.json": true,
-        "processor.log": true,
-        "http/request.json": true,
-        "http/response.bin": true,
-        "http/http_receipt.json": true
-      }
-    },
-    {
-      "window_id": "complete_7757d020fcdef4d4db1f4dbc",
-      "done_status": "PASS_COMPLETE_ANNOTATION_RECEIPT",
-      "completed_utc": "2026-10-07T15:20:58.395250+00:00",
-      "wall_sec": 74.41047442518175,
-      "failure": null,
-      "status": "PASS_WEAK_COMPLETE_WINDOW_TARGET",
-      "split": "train",
-      "sft_eligible": true,
-      "explicit_no_highlight": false,
-      "uncertain": false,
-      "segment_count": 1,
-      "file_sha_checks": {
-        "annotation.json": true,
-        "validated_record.json": true,
-        "decode_receipt.json": true,
-        "prompt.txt": true,
-        "raw_answer.txt": true,
-        "server_response.json": true,
-        "input_contract.json": true,
-        "runtime_grammar_validation.json": true,
-        "generation_schema.json": true,
-        "processor.log": true,
-        "http/request.json": true,
-        "http/response.bin": true,
-        "http/http_receipt.json": true
-      }
-    },
-    {
-      "window_id": "complete_86bf69d3ade2a644b9c19095",
-      "done_status": "PASS_COMPLETE_ANNOTATION_RECEIPT",
-      "completed_utc": "2026-10-07T15:31:25.791837+00:00",
-      "wall_sec": 77.69898930098861,
-      "failure": null,
-      "status": "PASS_WEAK_COMPLETE_WINDOW_TARGET",
-      "split": "dev",
-      "sft_eligible": true,
-      "explicit_no_highlight": false,
-      "uncertain": false,
-      "segment_count": 1,
-      "file_sha_checks": {
-        "annotation.json": true,
-        "validated_record.json": true,
-        "decode_receipt.json": true,
-        "prompt.txt": true,
-        "raw_answer.txt": true,
-        "server_response.json": true,
-        "input_contract.json": true,
-        "runtime_grammar_validation.json": true,
-        "generation_schema.json": true,
-        "processor.log": true,
-        "http/request.json": true,
-        "http/response.bin": true,
-        "http/http_receipt.json": true
-      }
-    },
-    {
-      "window_id": "complete_946fa65d6ef10a8f021a408d",
-      "done_status": "PASS_COMPLETE_ANNOTATION_RECEIPT",
-      "completed_utc": "2026-10-07T15:30:08.092263+00:00",
-      "wall_sec": 87.20748562924564,
-      "failure": null,
-      "status": "PASS_WEAK_COMPLETE_WINDOW_TARGET",
-      "split": "train",
-      "sft_eligible": true,
-      "explicit_no_highlight": false,
-      "uncertain": false,
-      "segment_count": 4,
-      "file_sha_checks": {
-        "annotation.json": true,
-        "validated_record.json": true,
-        "decode_receipt.json": true,
-        "prompt.txt": true,
-        "raw_answer.txt": true,
-        "server_response.json": true,
-        "input_contract.json": true,
-        "runtime_grammar_validation.json": true,
-        "generation_schema.json": true,
-        "processor.log": true,
-        "http/request.json": true,
-        "http/response.bin": true,
-        "http/http_receipt.json": true
-      }
+      "arm": "WINDOW_WITH_SOURCE_OVERVIEW",
+      "status": "PASS_REAL_CONTEXT_DIAGNOSTIC_REQUEST",
+      "state": "NO_HIGHLIGHT",
+      "wall_sec": 56.782411204651,
+      "actual_prompt_tokens": 22584,
+      "physical_images": 128,
+      "raw_answer_sha256": "d430ad1f110e39501de211472354f0cb0519e5d7eb0155730610a0bccb3813f6",
+      "receipt_sha256": "ee46ad2a20a7ef1f22a2ea18196756033c7eb20bb6352d21b502a62ecf8a05c6"
     },
     {
       "window_id": "complete_999f44661e0ad2ba0fc003ab",
-      "done_status": "PASS_COMPLETE_ANNOTATION_RECEIPT",
-      "completed_utc": "2026-10-07T15:32:48.689850+00:00",
-      "wall_sec": 82.89738850109279,
-      "failure": null,
-      "status": "PASS_WEAK_COMPLETE_WINDOW_TARGET",
-      "split": "dev",
-      "sft_eligible": true,
-      "explicit_no_highlight": false,
-      "uncertain": false,
-      "segment_count": 2,
-      "file_sha_checks": {
-        "annotation.json": true,
-        "validated_record.json": true,
-        "decode_receipt.json": true,
-        "prompt.txt": true,
-        "raw_answer.txt": true,
-        "server_response.json": true,
-        "input_contract.json": true,
-        "runtime_grammar_validation.json": true,
-        "generation_schema.json": true,
-        "processor.log": true,
-        "http/request.json": true,
-        "http/response.bin": true,
-        "http/http_receipt.json": true
-      }
-    },
-    {
-      "window_id": "complete_a1a6619c8af6732ef6c4798f",
-      "done_status": "PASS_COMPLETE_ANNOTATION_RECEIPT",
-      "completed_utc": "2026-10-07T15:25:58.202913+00:00",
-      "wall_sec": 77.04932728316635,
-      "failure": null,
-      "status": "PASS_WEAK_COMPLETE_WINDOW_TARGET",
-      "split": "train",
-      "sft_eligible": true,
-      "explicit_no_highlight": false,
-      "uncertain": false,
-      "segment_count": 2,
-      "file_sha_checks": {
-        "annotation.json": true,
-        "validated_record.json": true,
-        "decode_receipt.json": true,
-        "prompt.txt": true,
-        "raw_answer.txt": true,
-        "server_response.json": true,
-        "input_contract.json": true,
-        "runtime_grammar_validation.json": true,
-        "generation_schema.json": true,
-        "processor.log": true,
-        "http/request.json": true,
-        "http/response.bin": true,
-        "http/http_receipt.json": true
-      }
-    },
-    {
-      "window_id": "complete_af54d88f8f48732039b514c3",
-      "done_status": "PASS_COMPLETE_ANNOTATION_RECEIPT",
-      "completed_utc": "2026-10-07T15:24:41.152992+00:00",
-      "wall_sec": 77.61775358114392,
-      "failure": null,
-      "status": "PASS_WEAK_COMPLETE_WINDOW_TARGET",
-      "split": "train",
-      "sft_eligible": true,
-      "explicit_no_highlight": false,
-      "uncertain": false,
-      "segment_count": 2,
-      "file_sha_checks": {
-        "annotation.json": true,
-        "validated_record.json": true,
-        "decode_receipt.json": true,
-        "prompt.txt": true,
-        "raw_answer.txt": true,
-        "server_response.json": true,
-        "input_contract.json": true,
-        "runtime_grammar_validation.json": true,
-        "generation_schema.json": true,
-        "processor.log": true,
-        "http/request.json": true,
-        "http/response.bin": true,
-        "http/http_receipt.json": true
-      }
-    },
-    {
-      "window_id": "complete_c3ef08d0ae9c755915b0ec00",
-      "done_status": "PASS_COMPLETE_ANNOTATION_RECEIPT",
-      "completed_utc": "2026-10-07T15:28:40.884203+00:00",
-      "wall_sec": 78.25562813971192,
-      "failure": null,
-      "status": "PASS_WEAK_COMPLETE_WINDOW_TARGET",
-      "split": "train",
-      "sft_eligible": true,
-      "explicit_no_highlight": false,
-      "uncertain": false,
-      "segment_count": 2,
-      "file_sha_checks": {
-        "annotation.json": true,
-        "validated_record.json": true,
-        "decode_receipt.json": true,
-        "prompt.txt": true,
-        "raw_answer.txt": true,
-        "server_response.json": true,
-        "input_contract.json": true,
-        "runtime_grammar_validation.json": true,
-        "generation_schema.json": true,
-        "processor.log": true,
-        "http/request.json": true,
-        "http/response.bin": true,
-        "http/http_receipt.json": true
-      }
+      "arm": "WINDOW_WITH_SOURCE_OVERVIEW",
+      "status": "PASS_REAL_CONTEXT_DIAGNOSTIC_REQUEST",
+      "state": "POSITIVE",
+      "wall_sec": 64.17629760596901,
+      "actual_prompt_tokens": 22658,
+      "physical_images": 128,
+      "raw_answer_sha256": "b595d142c7ec93c3c5ee8f2e01c91b41672ef81fc87f1f94c9a271070cf7ee09",
+      "receipt_sha256": "ce4d72e5e78de6a0fd444b3fb427a31b9225e7d3f030444bee94a22cd12a8859"
     },
     {
       "window_id": "complete_cd3e09529324acc16114d2fa",
-      "done_status": "PASS_COMPLETE_ANNOTATION_RECEIPT",
-      "completed_utc": "2026-10-07T15:22:04.510148+00:00",
-      "wall_sec": 66.11438736319542,
-      "failure": null,
-      "status": "PASS_WEAK_COMPLETE_WINDOW_TARGET",
-      "split": "train",
-      "sft_eligible": true,
-      "explicit_no_highlight": false,
-      "uncertain": false,
-      "segment_count": 4,
-      "file_sha_checks": {
-        "annotation.json": true,
-        "validated_record.json": true,
-        "decode_receipt.json": true,
-        "prompt.txt": true,
-        "raw_answer.txt": true,
-        "server_response.json": true,
-        "input_contract.json": true,
-        "runtime_grammar_validation.json": true,
-        "generation_schema.json": true,
-        "processor.log": true,
-        "http/request.json": true,
-        "http/response.bin": true,
-        "http/http_receipt.json": true
-      }
+      "arm": "WINDOW_WITH_SOURCE_OVERVIEW",
+      "status": "PASS_REAL_CONTEXT_DIAGNOSTIC_REQUEST",
+      "state": "POSITIVE",
+      "wall_sec": 64.15578391775489,
+      "actual_prompt_tokens": 21058,
+      "physical_images": 128,
+      "raw_answer_sha256": "c8030b6902295caa12f2817cb59e19fd554350554c73cc7c3bcbca7e69b098fb",
+      "receipt_sha256": "02392eef160e7e44a9966c4d433d333e7745cfad876116d238154326e215d6a0"
     },
     {
       "window_id": "complete_e1e3a1030b7e5f5e7f4b9fb2",
-      "done_status": "PASS_COMPLETE_ANNOTATION_RECEIPT",
-      "completed_utc": "2026-10-07T15:34:13.514479+00:00",
-      "wall_sec": 84.82404746022075,
-      "failure": null,
-      "status": "PASS_WEAK_COMPLETE_WINDOW_TARGET",
-      "split": "dev",
-      "sft_eligible": true,
-      "explicit_no_highlight": false,
-      "uncertain": false,
-      "segment_count": 2,
-      "file_sha_checks": {
-        "annotation.json": true,
-        "validated_record.json": true,
-        "decode_receipt.json": true,
-        "prompt.txt": true,
-        "raw_answer.txt": true,
-        "server_response.json": true,
-        "input_contract.json": true,
-        "runtime_grammar_validation.json": true,
-        "generation_schema.json": true,
-        "processor.log": true,
-        "http/request.json": true,
-        "http/response.bin": true,
-        "http/http_receipt.json": true
-      }
+      "arm": "WINDOW_WITH_SOURCE_OVERVIEW",
+      "status": "PASS_REAL_CONTEXT_DIAGNOSTIC_REQUEST",
+      "state": "POSITIVE",
+      "wall_sec": 64.72217973601073,
+      "actual_prompt_tokens": 22562,
+      "physical_images": 128,
+      "raw_answer_sha256": "43ad926ddf879f11139c3f975909f65395312f28872077d0d8c80839ada79c98",
+      "receipt_sha256": "f509e5f2cf4ebb57911020a875aca68d8c3d2037a0711e5944630d88746a667d"
     }
   ],
-  "all_completed_window_file_sha_pass": true,
-  "new_zip_paths": [],
-  "review_counts": {
-    "pilot_01": {
-      "PASS_EXPLAINABLE_SAMPLED_WINDOW_REVIEW": 2
+  "context_overview_receipts": [
+    {
+      "source_sha256": "48f0841a0c1a71f6da282611cd57948e8ad243d9e6dbfe3ff17d136d5ccac6ee",
+      "full_source_frame_count": 4496,
+      "provided_context_frames": 64,
+      "clock_sequence_sha256": "de6e65e16993b37ee22401d9845c480f74e9c1fa5ad8ccfe130d14267238f271",
+      "receipt_sha256": "37d6f8e4ac4b305ea8f3256b3640aa094b32636aa8679936e632b4d0cbe1b44f"
     },
+    {
+      "source_sha256": "d96cad8937221e00f1286d497a299118f93981578b6acab308053356fe2ddf58",
+      "full_source_frame_count": 3597,
+      "provided_context_frames": 64,
+      "clock_sequence_sha256": "ab4b5cce254606c5e5fa73b380ec432357b2ce58da9dd0f7fcd9befb49030a8a",
+      "receipt_sha256": "e62da1d04fe20d71daa677ea29bd2427529f241c9a1a3f0cfae898b7d4983cec"
+    },
+    {
+      "source_sha256": "2d3a2d35a1a5978fe5528b863301f8c8e8181481a2bda252dba732eb535678fe",
+      "full_source_frame_count": 3750,
+      "provided_context_frames": 64,
+      "clock_sequence_sha256": "4477664c318916512fdce656773792dc8ec653b1662fd8c1cc8c20b3de9eb150",
+      "receipt_sha256": "ae331d834f8c0476f964a742c7671f216b516833935ae18ff324a14b8c394f6d"
+    },
+    {
+      "source_sha256": "9829f8a967daf3926f9b6e9416a1ebe498c9dec40c6211eb5bf07d2d28b1f78f",
+      "full_source_frame_count": 4500,
+      "provided_context_frames": 64,
+      "clock_sequence_sha256": "ced76f8bebf3982a104941fcb0d326fda9dd5d8d38b1ae188cf5a3a095130de9",
+      "receipt_sha256": "2897f03a6836a0fd845056bfa362b4317ec46cf8f893ac65f8fc0cd0abbb1142"
+    }
+  ],
+  "context_diagnostic_reviews": [
+    {
+      "window_id": "complete_47c0dd5636aff0e0ebbc37a1",
+      "status": "PASS_REAL_RELATIVE_SUMMARY_WEAK_REVIEW_REQUEST",
+      "review_status": "REJECTED_OR_UNCERTAIN",
+      "actual_prompt_tokens": 23113,
+      "physical_images": 128,
+      "raw_answer_sha256": "fb3323e2f0e81918eaca382c3ab75007e746b666a6b49ccee7b1145c773de627",
+      "receipt_sha256": "f13657a74961654b7b1ba1f3eb0bc300d79ef9f4801e188d500468fb0035126d"
+    },
+    {
+      "window_id": "complete_999f44661e0ad2ba0fc003ab",
+      "status": "PASS_REAL_RELATIVE_SUMMARY_WEAK_REVIEW_REQUEST",
+      "review_status": "SUPPORTED",
+      "actual_prompt_tokens": 23319,
+      "physical_images": 128,
+      "raw_answer_sha256": "90b327dde98c3174a091de8e67a1196b79bb47ed36b708332c903d630443cd37",
+      "receipt_sha256": "87f9414d949d5d83e32f025823120c0a4507c7b88553099a6c009111a6ebd54e"
+    },
+    {
+      "window_id": "complete_cd3e09529324acc16114d2fa",
+      "status": "PASS_REAL_RELATIVE_SUMMARY_WEAK_REVIEW_REQUEST",
+      "review_status": "SUPPORTED",
+      "actual_prompt_tokens": 21980,
+      "physical_images": 128,
+      "raw_answer_sha256": "886a77f3f49606e171b00ca02b423b79b94fbf9c4331dd9aa376318891781464",
+      "receipt_sha256": "2488cad362fa88ad0586d071d0ed5074b35a138b02b3b56f13daafdc82c97f24"
+    }
+  ],
+  "context_resource_receipt": null,
+  "review_counts": {
+    "pilot_01": {},
     "teacher_01": {}
   },
   "registration": {
-    "pid": 3086278,
-    "utc": "2026-10-07T15:14:59.867079+00:00",
-    "source_lock_sha256": "70fb36cd016c30dd837f134b907ee75f8582cc957c172ee57a57034d42d4f3dc",
-    "config_sha256": "8860c085404516d5912d3f17686e1599eef528a12b597f66518f6f8c3edc17e9"
-  },
-  "progress": {
-    "stage": "RUNNING_TEACHER_PILOT",
-    "utc": "2026-10-07T15:18:03.183033+00:00",
-    "pid": 3086278,
-    "uploaded": false,
-    "automatic_return": false,
-    "maximum_seconds": 10800,
-    "planned_output_bytes": 6455316480
-  },
-  "completion": null,
-  "pilot_progress": {
-    "stage": "REAL_PILOT_SECOND_WEAK_REVIEW",
-    "completed_reviews": 2,
-    "eligible_windows": 12,
-    "utc": "2026-10-07T15:38:05.221745+00:00",
-    "optimizer_steps": 0
-  },
-  "pilot_completion": null,
-  "distribution": {
-    "status": "STOP_PILOT_DISTRIBUTION",
-    "validation_summary": {
-      "schema": "aic_complete_window_validation_receipt_v1",
-      "record_count": 12,
-      "eligible_count": 12,
-      "status_counts": {
-        "PASS_WEAK_COMPLETE_WINDOW_TARGET": 12
-      },
-      "eligible_by_split": {
-        "train": 8,
-        "dev": 4
-      },
-      "explicit_empty_by_split": {
-        "train": 0,
-        "dev": 0
-      },
-      "positive_by_split": {
-        "train": 8,
-        "dev": 4
-      },
-      "multisegment_by_split": {
-        "train": 6,
-        "dev": 3
-      },
-      "weak_teacher_only": true,
-      "semantic_training_admitted": false,
-      "official_quality_claim": false,
-      "selected_window_count": 12,
-      "unlabelled_window_count": 0,
-      "unlabelled_windows_never_converted_to_empty": true,
-      "annotation_receipts_sha256": "42d9faf60c822d323da6aef58bc9c2bdd3518c8caa493957d0c1805fa54680de",
-      "selection_receipt_sha256": "944b8b4de90df644c60ce8daf81941e7e92b212457d00dd0c916f2801c62f133",
-      "selected_train_sha256": "ba7c5556cef8f5448bad5aea46b014a28a3ad3b5203be8dfd41b189f7e2d74c7",
-      "selected_dev_sha256": "bea55f85cf3bb3444491678ed42c51226d82606191b7bd002b37e71b60237ca5",
-      "confirm_opened": false,
-      "contest_assets_opened": false,
-      "gpu_used": false,
-      "files": {
-        "validated_records.jsonl": "e702a3589d7e3a6c28956e229237387a3a464ed443c062705f63f7e127327f79",
-        "eligible_train.jsonl": "a8093a250a39375c562b7cdd89651c45c78ec37e4f6e772a92f4d944b0e513f1",
-        "eligible_dev.jsonl": "b3eb6f8b74d19ea97d345b9b5ad67bd53d081494f29ab439c82da8faf15d54a7"
-      }
-    },
-    "reasons": [
-      "no real justified empty observed; do not force an empty quota"
-    ],
-    "no_label_changed": true,
-    "no_forced_quota": true,
+    "pid": 3210277,
+    "utc": "2026-10-07T16:53:20.817897+00:00",
+    "source_lock_sha256": "f95f3a60b3ab2ac673f899103c5960f4a80ac04667f0287c4144cce2b93b9f6c",
+    "manifest_sha256": "dd99e20312c9a8a21177dd12a3654f0c0ad958613107b0074b5d1a217e82585f",
     "student_training_admitted": false
   },
+  "progress": {
+    "stage": "REAL_RELATIVE_SUMMARY_WEAK_REVIEW",
+    "completed_requests": 7,
+    "total_requests": 8,
+    "annotation_requests": 4,
+    "review_requests": 3,
+    "states": {
+      "POSITIVE": 3,
+      "NO_HIGHLIGHT": 1
+    },
+    "review_states": {
+      "SUPPORTED": 2,
+      "REJECTED_OR_UNCERTAIN": 1
+    },
+    "optimizer_steps": 0,
+    "utc": "2026-10-07T17:01:57.151345+00:00"
+  },
+  "completion": null,
+  "pilot_progress": null,
+  "pilot_completion": null,
+  "distribution": null,
   "semantic_quality": null,
   "teacher_progress": null,
   "teacher_completion": null,
