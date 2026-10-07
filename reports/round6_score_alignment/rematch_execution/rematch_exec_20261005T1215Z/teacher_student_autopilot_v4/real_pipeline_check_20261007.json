@@ -1,0 +1,47 @@
+{
+  "utc": "2026-10-07T09:22:13.347943+00:00",
+  "progress": {
+    "stage": "RUNNING_TEACHER_FULL",
+    "utc": "2026-10-07T09:20:53.067890+00:00",
+    "pid": 2537197,
+    "uploaded": false,
+    "automatic_return": false,
+    "maximum_seconds": 82562,
+    "planned_output_bytes": 28686204587
+  },
+  "completion": null,
+  "label_progress": {
+    "status": "REAL_TEACHER_LABELS_RUNNING",
+    "completed_windows": 11,
+    "selected_windows": 160,
+    "last_window_id": "complete_a4e25ed171e78251578d82fe",
+    "updated_utc": "2026-10-07T09:21:57.672618+00:00"
+  },
+  "probe": {
+    "status": "PASS_REAL_NONTEST_TEACHER_PROBE",
+    "window_ids": [
+      "complete_1ca5dafbf4af1f0d713434de",
+      "complete_1871532967174b70e24091d0",
+      "complete_a4e25ed171e78251578d82fe"
+    ],
+    "admission_sha256": "b2188602bbdffcaf475d95e4e51f560667de2dee2291ae908784555f4fb44dc5",
+    "actual_processor_grids_and_tokens_measured": true,
+    "not_a_supervision_or_training_admission": true,
+    "completed_utc": "2026-10-07T09:18:42.187243+00:00",
+    "wall_sec": 241.77094644028693,
+    "per_window_wall_sec": [
+      74.69423701427877,
+      74.3978305440396,
+      79.83295573107898
+    ],
+    "max_actual_prompt_tokens": 17009
+  },
+  "review_format_probe_status": [
+    "PASS_REAL_REVIEW_REQUEST_FORMAT_ONLY"
+  ],
+  "actual_grammar_receipts": 4,
+  "failures": [],
+  "controller_identity": "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v4/controller.py",
+  "gpu": "37282 MiB, 99 %",
+  "probe_sha256": "951a28b998bb2163c96640645de5de675be5bbe44432899833319027954d6039"
+}

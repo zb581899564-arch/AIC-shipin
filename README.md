@@ -23,7 +23,7 @@ AIC 产业命题赛「基于视频大模型的通用视频高光剪辑」的项�
 
 已按采纳结论建立独立 [next_round_v1](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1)。145项CPU合同、真实processor逐张量一致、全空426独立strict及真实CUDA空生成/空assistant有限CE损失已通过。修复严格0..1000坐标、合法空与失败分离、原生PTS训练目标、生产一致开发输入、全源空间场和Mac离线预留。旧已评分包不变。
 
-2026-10-07 13:59 UTC+8实查：固定32B教师权重与运行时就绪，v3两条真实视频小试均通过原strict validator，每窗约74.4/74.8秒。13:49已进入完整标注，最新完成8/160自然窗口、0失败，控制器命令身份存活。8B T微调尚未开始，新T ZIP不存在；标注和弱复查通过后自动接续训练、开发、NONTEST8与426推理/strict ZIP。当前入口为[v3总控](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v3/CONTINUE.md)，158绑定文件保持冻结。v1路径失败及v2源PTS混用失败保留，未修补原错误回答。
+2026-10-07 17:22 UTC+8实查：v3于14:03在第11个列表窗口因字段缺失STOP，进度10/160。固定运行时要求response_format.json_schema.schema，旧同级schema被忽略。新独立[v4入口](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v4/CONTINUE.md)纠正嵌套、等价保留正/空/不确定三状态，校验服务实际grammar。32个运行时格式用例及原CPU合同/preflight通过；三个真实窗口（含原失败窗）和审核格式通过，每窗约75–80秒，17:20已自动恢复完整标注，最新11/160、0失败，控制器/GPU实查在跑。旧成功回执逐SHA/原validator核验后原样引用，失败raw保持；新T优化器更新0、无T ZIP。真实格式通过尚不代表160标签/语义复查或新训练质量通过。
 
 v3维持同一自然窗口、源帧、PNG、固定权重、主提示词和validator。逐帧文本明确窗口内秒数，结构化生成将区间端点限定到实测窗口内采样PTS或0/窗口末端；输入身份metadata固定，空/不确定/高光语义及all_provided_frames_reviewed仍由模型选择。不修补旧响应或放宽validator，端点粒度作为新教师配方登记；另修复probe逐窗耗时数组的统计接口。
 
