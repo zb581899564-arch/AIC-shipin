@@ -1,4 +1,6 @@
-> 13:22 UTC+8入口修复：v1已因后台裸ffprobe缺失STOP，0教师GPU调用/标签/T更新；新../teacher_student_autopilot_v2/CONTINUE.md只绑定既有ffprobe绝对路径及SHA，160窗口真实元数据/CLI4检查、教师10/学生16 CPU及总控preflight通过。单次启动历史PID2421099，153文件锁SHA71d59c5627f3ca0e77b63033d71126bd8ccf96f63d4636d4953ebc6ba532c7b0；实际注册/阶段须核验，不重开。教师权重完整SHA和CUDA运行时均已就绪，Z因旧51GiB检查STOP并保留，不是T质量门；T仍用真实容量运行器。下方v1启动和Windows桥接均是历史。
+> 当前13:41 UTC+8：v2真实32B输出坐标混用，被strict validator拒绝；原始失败保留，不修改标签。新../teacher_student_autopilot_v3/CONTINUE.md明确逐帧窗口内时间、约束生成端点为真实采样PTS/窗口端点，并修正逐窗时间数组统计；主提示词/validator/源帧/模型不变。38项CPU及preflight通过，单次启动历史PID2441375，158锁SHA273f796cf3f30fb309226fa98cd8f8b284a16b76b4eb92b73beb27acf75623ca；实际进程/探针/注册须核验，不重复launcher。教师权重/运行时已就绪，T尚未有更新，最终仍只一个ZIP留Linux。
+
+> 13:22 UTC+8历史入口修复：v1已因后台裸ffprobe缺失STOP；v2只绑定既有ffprobe绝对路径及SHA。教师权重完整SHA和CUDA运行时均已就绪，Z因旧51GiB检查STOP并保留，不是T质量门；T仍用真实容量运行器。下方v1/v2启动和Windows桥接均是历史。
 
 > 最新授权（2026-10-07）：用户已明确允许本次Linux原地下载约19.52GiB固定教师权重，并自动接续标注、8B微调和封包。下方Windows下载与上传桥接为已暂停的历史方案，不恢复。最终ZIP只留Linux，不自动回传/官网上传。
 

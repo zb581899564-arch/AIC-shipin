@@ -23,11 +23,13 @@ AIC 产业命题赛「基于视频大模型的通用视频高光剪辑」的项�
 
 已按采纳结论建立独立 [next_round_v1](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1)。145项CPU合同、真实processor逐张量一致、全空426独立strict及真实CUDA空生成/空assistant有限CE损失已通过。修复严格0..1000坐标、合法空与失败分离、原生PTS训练目标、生产一致开发输入、全源空间场和Mac离线预留。旧已评分包不变。
 
-2026-10-07 13:24 UTC+8实查：固定32B教师运行时编译通过，两权重合计20,958,945,472字节完整SHA通过。v1总控13:10在GPU探针前因后台PATH没有ffprobe而STOP，0教师生成/标签/T更新。独立[v2总控](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v2/CONTINUE.md)只绑定选择器原用的既有ffprobe绝对路径和SHA，不改模型或科学协议；160个真实非测试窗口的两处元数据调用与CLI4项、教师10/学生16 CPU合同及preflight通过。153文件源码/资产锁已绑定，单次后台注册写出并实查存活，正在教师准备阶段；真实新标签和T训练仍未开始。
+2026-10-07 13:43 UTC+8实查：固定32B教师权重与运行时就绪。v1的ffprobe路径遗漏已修复；v2真实小试成功载入32B、处理64帧并生成回答，但把源PTS139.514375/150混入本窗0..30秒区间，原strict validator拒绝后STOP。0合格标签/0 T更新，原始响应和输入保留。当前独立[v3总控](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v3/CONTINUE.md)已写出一次性注册并实查存活，158绑定文件、38项CPU与preflight通过，正在准备新的真实探针；还不能宣称监督或T训练通过。
+
+v3维持同一自然窗口、源帧、PNG、固定权重、主提示词和validator。逐帧文本明确窗口内秒数，结构化生成将区间端点限定到实测窗口内采样PTS或0/窗口末端；输入身份metadata固定，空/不确定/高光语义及all_provided_frames_reviewed仍由模型选择。不修补旧响应或放宽validator，端点粒度作为新教师配方登记；另修复probe逐窗耗时数组的统计接口。
 
 Z已完成426条/521窗口时间和全源CPU调度，但13:08被旧冻结51GiB额度拒绝空间阶段而STOP，旧失败与源码保留，未生成Z包。机器实际尚有约193GiB空间；新T使用真实容量运行器，不以Z成功/评分为前提。Windows旧下载、上传桥接和Z回传停止，Mac不参与。用户批准的Linux原地下载与自动标注、微调、封包授权继续有效。
 
-T路线是32B离线教师观察128train/32dev自然窗口、生成并复查完整窗口弱标签，然后从已取得37.63的B最终LoRA以lr1e-5接续最多3epochs；第20更新做真实重载验收，每轮固定弱开发选择检查点，通过NONTEST8后做426复赛推理和strict ZIP。训练、开发、生产共用原生PTS选帧与0..5段输入合同；允许合法空，失败不转空。32B不进入比赛部署链，部署仍为8,782,459,120参数。详见[T协议](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v2/PROTOCOL.md)和[接续状态](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/STATUS_AUTOPILOT_20261007.md)。本轮未取得新官方分。
+T路线是32B离线教师观察128train/32dev自然窗口、生成并复查完整窗口弱标签，然后从已取得37.63的B最终LoRA以lr1e-5接续最多3epochs；第20更新做真实重载验收，每轮固定弱开发选择检查点，通过NONTEST8后做426复赛推理和strict ZIP。训练、开发、生产共用原生PTS选帧与0..5段输入合同；允许合法空，失败不转空。32B不进入比赛部署链，部署仍为8,782,459,120参数。详见[T协议](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v3/PROTOCOL.md)和[接续状态](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/STATUS_AUTOPILOT_20261007.md)。本轮未取得新官方分。
 
 中间产物和最终新ZIP先留Linux，用户只取一个选定提交包，取包前说明实际大小；其他新大流量传输须先说明规模、链路及可能机场消耗并取得确认。计算不依赖Windows持续在线，Mac不参与。磁盘/RAM/VRAM没有项目人为额度，新作业按真实容量和共享任务冲突安排；已注册旧作业与失败证据保持。S仍缺合格双比例构图参考。
 

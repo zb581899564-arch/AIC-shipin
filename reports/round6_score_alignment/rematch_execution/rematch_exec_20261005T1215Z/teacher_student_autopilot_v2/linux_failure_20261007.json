@@ -1,0 +1,17 @@
+{
+  "status": "STOP_AUTOPILOT_PRESERVED",
+  "utc": "2026-10-07T05:29:12.538963+00:00",
+  "last_progress": {
+    "stage": "RUNNING_TEACHER_PROBE",
+    "utc": "2026-10-07T05:26:48.878041+00:00",
+    "pid": 2421099,
+    "uploaded": false,
+    "automatic_return": false,
+    "maximum_seconds": 3600,
+    "planned_output_bytes": 268720640
+  },
+  "error_type": "RuntimeError",
+  "reason": "GPU stage did not complete: teacher_probe",
+  "uploaded": false,
+  "automatic_return": false
+}

@@ -1,0 +1,30 @@
+{
+  "status": "PASS_V3_CPU_CLOCK_GENERATION_AND_TIMING_INTERFACES",
+  "utc": "2026-10-07T05:39:41.424116+00:00",
+  "checks": [
+    {
+      "name": "clock_cpu",
+      "exit_code": 0
+    },
+    {
+      "name": "ffprobe_cpu",
+      "exit_code": 0
+    },
+    {
+      "name": "teacher_cpu",
+      "exit_code": 0
+    },
+    {
+      "name": "student_cpu",
+      "exit_code": 0
+    },
+    {
+      "name": "controller_preflight",
+      "exit_code": 0
+    }
+  ],
+  "bound_files": 158,
+  "source_lock_sha256": "273f796cf3f30fb309226fa98cd8f8b284a16b76b4eb92b73beb27acf75623ca",
+  "source_bundle_bytes": 77671,
+  "GPU_started": false
+}

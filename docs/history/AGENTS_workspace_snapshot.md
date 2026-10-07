@@ -1,5 +1,13 @@
 # AIC 高光剪辑项目执行约定
 
+## 当前自动接续v3：真实教师坐标错误修复（2026-10-07 13:41 UTC+8）
+
+v2已完成真实32B载入/64帧处理与首条生成（14,179输入token，GPU峰值37,096MiB，prompt15.85秒/generate46.20秒），但模型把源PTS139.514375/150混进本窗0..30秒区间，原strict validator13:29拒绝并STOP；没有合格标签/T更新。原始HTTP、PNG、输入合同和失败均留Linux，不裁段、裁数或转空。v1路径错误与Z旧额度STOP也保留。
+
+新独立 `teacher_student_autopilot_v3/CONTINUE.md` 保持原窗口、源帧、PNG、教师/学生权重、主提示词和validator字节；逐帧文本明确窗口内秒数，生成schema将区间端点限定为真实采样的窗口内PTS及0/窗口末端，只固定输入身份metadata，模型仍自行选择高光/空/不确定及all_provided_frames_reviewed。端点生成粒度是单独登记的新教师配方，不宣称只修路径。另修复真实probe.per_window_wall_sec数组的max统计。新38项CPU（clock8/ffprobe4/teacher10/student16）与总控preflight在Linux通过；CPU不代表教师标签质量通过。
+
+v3单次启动历史PID2441375，13:41:01完整命令身份实查存活；158文件锁SHA273f796cf3f30fb309226fa98cd8f8b284a16b76b4eb92b73beb27acf75623ca。实际registration/progress与teacher_probe_completion仍须核验，不重开/改绑定源码。作业名rematch_TAUTO_v3_*，之后真实有效探针→160标签/弱审核→B最终LoRA续训T→开发→NONTEST8→426/strict ZIP，全程Linux、不自动回传/官网上传、Mac退出、仅真实容量准入，其他流量仍须先说明并确认。
+
 ## 自动接续v2路径修复（2026-10-07 13:22 UTC+8）
 
 13:15实时查明：v1总控已于13:10:45在教师GPU探针前因裸ffprobe不在后台PATH而STOP，0教师生成/0标签/0 T更新；旧源码、注册与失败回执保留。Z也已13:08:35在CPU调度完成后被旧冻结51GiB额度拒绝空间阶段，而实际磁盘仍有约193GiB可用。Z终态已满足T的共享任务等待条件，Z质量/分数不是T训练门。本次不重开Z，T继续使用用户已授权的ACTUAL_CAPACITY_ONLY入口，不恢复任何旧额度。
