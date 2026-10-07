@@ -1,5 +1,12 @@
 # 当前Mac最终8B开发/提交包接续：v2
 
+## 最新：Mac8B完整提交包已交付（2026-10-07 10:27 UTC+8实时复核）
+
+Mac最终8B已完成开发、NONTEST8及426复赛全链推理封包。远端完成时间2026-10-07 03:12:57、本机经Mac跳板回传验收03:14:07，delivery_completion=PASS_LOCAL_UPLOADABLE_8B_PACKAGE。candidate_MAC_8B.zip实际300152字节，SHA256 `7f49ff90b5a21fd71a6036d8da0a1b78f3ab9c1d900ab2f81bc1f319e9d4533d`；本次实核大小/SHA/CRC/唯一predictions.jsonl及426记录通过，独立strict全部11检查true，101880帧/14007锚点，missing/extra/duplicate均0。控制器与桥接已完成，不重开launcher；当前GPU compute为空。
+
+官网未上传、尚无Mac官方分数；用户可直接上传mac8b_delivery_v2/delivery_01/candidate_MAC_8B.zip。原4B33.81和Linux8B37.63分数保持各自包绑定，不赋予Mac包。下方运行进度与PID都是历史快照。
+
+
 2026-10-06 23:44:57 UTC+8实时更新：v2实际GPU合成重载/生成PASS，64帧1080p原输入显式低分辨率后1296token、6144界、allocated峰值17170.255MiB、有限选择分数与JSON通过，288 LoRA张量/144语言目标与保存值一致、全冻结基座字节一致。单次dev已真正生成，BASE8B完成18/104视频、20窗口（11 MODEL_OK/9 PARSE_FAILURE/0 INFERENCE_FAILURE）；解析失败保留，尚无最终开发质量结论。控制器1312611和GPU开发子进程1316567实查存活。Windows桥接52752实查存活，曾一次SSH超时按登记重试，未改绑定源。只剩已登记机器计算；通过开发和NONTEST门才自动比赛推理、空间、strict ZIP与经Mac回传。尚无Mac提交ZIP。
 
 用户授权“mac的开发测评和提交包尽早完成”。Mac最终adapter SHA1baa14a96d30d3836478295752c0b932f40f811863c28db99b56102fcfa1d5b5，仍是64帧/32768像素/6144token的原5轮/227更新模型；不重训、不选择中间epoch、100confirm不读、C/BCE STOP、官网不上传。Linux CUDA用于评测与推理，加快交付，逻辑总参数8782459120，同基座空间无adapter且共享参数只计一次。

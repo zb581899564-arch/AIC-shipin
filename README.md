@@ -10,7 +10,7 @@ AIC 产业命题赛「基于视频大模型的通用视频高光剪辑」的项�
 | --- | --- | ---: | --- |
 | 复赛 | A：4B / P2-T2 时间模型，native PTS 与帧身份恢复 | **33.81** | [candidate_A_PTS.zip][zip-a] |
 | 复赛 | B：Linux 8B 区间 JSON SFT，最终 5 轮，同 8B 空间基座 | **37.63** | [candidate_B_8B.zip][zip-b] |
-| 复赛 | Mac 8B：64 帧低分辨率区间 SFT | **尚无官方成绩** | 快照时开发和 NONTEST8 已通过，复赛推理进行中；完整包未交付 |
+| 复赛 | Mac 8B：64 帧低分辨率区间 SFT | **尚无官方成绩** | [candidate_MAC_8B.zip](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_01/candidate_MAC_8B.zip)；03:14 已交付，待用户提交 |
 | 初赛 | 未微调 Qwen3-VL 单片段基线 | 41.09 | [baseline ZIP](submissions/qwen3vl_baseline_20260910/baseline_qwen3vl_20260910.zip) |
 | 初赛 | 未微调 Qwen3-VL 多片段 reader | 41.22 | [multi-reader ZIP](submissions/qwen3vl_multi_reader_20260910/aic-qwen3vl-multi-20260910.zip) |
 | 初赛 | 历史 Qwen3-VL LoRA reader | 43.48 | [LoRA-reader ZIP](submissions/qwen3vl_lora_reader_20260912/aic-qwen3vl-lora-reader-20260912.zip) |

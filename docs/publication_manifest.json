@@ -4,25 +4,11 @@
   "source_root": "project workspace (not distributed)",
   "files": [
     {
-      "path": "docs/history/AGENTS_workspace_snapshot.md",
-      "source_relative_path": "AGENTS.md",
-      "bytes": 42342,
-      "sha256": "65e7955cc603047031d7086155af3d66a378c9779aa1bf27b092a9b3effb6df4",
-      "category": "project_documentation"
-    },
-    {
       "path": "bd_share_ls.py",
       "source_relative_path": "bd_share_ls.py",
       "bytes": 6328,
       "sha256": "f2b504147509c71ce4fd0189af37541757375489d34b6d5e64df5dfb49e15c64",
       "category": "project_code_or_configuration"
-    },
-    {
-      "path": "ROADMAP.md",
-      "source_relative_path": "ROADMAP.md",
-      "bytes": 50076,
-      "sha256": "86579641f0ae7e921593b8d48eef56395208c8add68e1fe34cefa9c75cf91222",
-      "category": "project_documentation"
     },
     {
       "path": "data_audit/audit_dataset.py",
@@ -2927,13 +2913,6 @@
       "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/OFFICIAL_SCORE_33_81.md",
       "bytes": 814,
       "sha256": "fa5bee75949b05fd6e2f8bee285c7dc25ab495db098b3a2a6f7318fc2b2bbe8a",
-      "category": "project_documentation"
-    },
-    {
-      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/REPORT.md",
-      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/REPORT.md",
-      "bytes": 33178,
-      "sha256": "0dc1a53bc673b4c0efdcd4ceaa25d962be8596af0d56078f71c0c9011bc466c8",
       "category": "project_documentation"
     },
     {
@@ -5980,13 +5959,6 @@
       "bytes": 8054,
       "sha256": "c200f1ff4bb0a10b8be1c377f8ce1b1521295c800686eecc7863ede85fe9fb24",
       "category": "project_code_or_configuration"
-    },
-    {
-      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/CONTINUE_MAC_DELIVERY.md",
-      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/CONTINUE_MAC_DELIVERY.md",
-      "bytes": 3735,
-      "sha256": "1626cb6cc84eeae6e7b9ce3c3064b32ef7268b5e80d9bf52a31916499558401c",
-      "category": "project_documentation"
     },
     {
       "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/controller.py",
@@ -11098,6 +11070,76 @@
       "sha256": "a522244712831e7fddc605bce73b083851b7353dac1ceb2a9e4f41b948733631",
       "category": "frozen_core_recovered_from_Linux_via_Mac",
       "source": "registered_linux_source_lock"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_completion.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_completion.json",
+      "bytes": 406,
+      "sha256": "708921805c188e089ef29ed840316cad6205b7a0f49b8ad4e6c587e90bfa6d87",
+      "category": "delivered_MAC8B_package_or_updated_status"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_01/candidate_MAC_8B.zip",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_01/candidate_MAC_8B.zip",
+      "bytes": 300152,
+      "sha256": "7f49ff90b5a21fd71a6036d8da0a1b78f3ab9c1d900ab2f81bc1f319e9d4533d",
+      "category": "delivered_MAC8B_package_or_updated_status"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_01/package.stage.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_01/package.stage.json",
+      "bytes": 1036,
+      "sha256": "578e0aff520b10f7046b20e36dea323dfc49d543faf5632745804f504eca4d69",
+      "category": "delivered_MAC8B_package_or_updated_status"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_01/independent_validation.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_01/independent_validation.json",
+      "bytes": 1142,
+      "sha256": "d6b17828841da8a8e122d4150310aaccd4a4af3a934be152301a5997db66e48a",
+      "category": "delivered_MAC8B_package_or_updated_status"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_01/local_independent_validation.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_01/local_independent_validation.json",
+      "bytes": 1177,
+      "sha256": "516a7e4197e8b394a91268955eaa20b0077a61c5ff7fb919edf98c5c57ecdb56",
+      "category": "delivered_MAC8B_package_or_updated_status"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_01/spatial.stage.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_01/spatial.stage.json",
+      "bytes": 912,
+      "sha256": "546c7d7562a2a6d15f6a0ee5aa668a2e9bfdc49da4d7e57d5f8fc4320f72b367",
+      "category": "delivered_MAC8B_package_or_updated_status"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/CONTINUE_MAC_DELIVERY.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/CONTINUE_MAC_DELIVERY.md",
+      "bytes": 4638,
+      "sha256": "6524704122a416f8e661f66b4d40c99adb885cbc14bf8ca80b331497009be2b0",
+      "category": "delivered_MAC8B_package_or_updated_status"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/REPORT.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/REPORT.md",
+      "bytes": 34107,
+      "sha256": "039ce7283c68c30041c3c96b1d525ecb77fc28bec06f23b7e48923b322b66454",
+      "category": "delivered_MAC8B_package_or_updated_status"
+    },
+    {
+      "path": "ROADMAP.md",
+      "source_relative_path": "ROADMAP.md",
+      "bytes": 51005,
+      "sha256": "2772f24700aab7502c5d2dbaebe92016642fa419bc32e9bd6eefd0ddc5fab49d",
+      "category": "delivered_MAC8B_package_or_updated_status"
+    },
+    {
+      "path": "docs/history/AGENTS_workspace_snapshot.md",
+      "source_relative_path": "AGENTS.md",
+      "bytes": 43288,
+      "sha256": "296711e9e9e7af4d1bbf7a09d05be521d0f3941b158cf3153e716aaecb481a2f",
+      "category": "delivered_MAC8B_package_or_updated_status"
     }
   ],
   "project_code_count": 930,
@@ -11134,5 +11176,6 @@
   },
   "datasets_weights_environments_not_distributed": true,
   "source_files_modified": false,
-  "snapshot_status_checked_utc": "2026-10-06T16:07:05Z"
+  "snapshot_status_checked_utc": "2026-10-06T16:07:05Z",
+  "latest_delivery_update_utc": "2026-10-07T02:28:23.612902+00:00"
 }

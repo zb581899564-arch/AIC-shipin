@@ -1,0 +1,25 @@
+{
+  "video_records": 426,
+  "prediction_frames": 101880,
+  "issues": [],
+  "official_status": "NOT_SCORED_NOT_UPLOADED",
+  "legal_empty_supported": false,
+  "weak_roi_inputs_used": 0,
+  "old_test_boxes_used": 0,
+  "silent_fallbacks": 0,
+  "zip_sha256": "7f49ff90b5a21fd71a6036d8da0a1b78f3ab9c1d900ab2f81bc1f319e9d4533d",
+  "predictions_sha256": "e0a9cd3cc9a598836743969fda46246ebe70f82c7cf3ea3725044e5a4637d79e",
+  "zip_bytes": 300152,
+  "archive_names": [
+    "predictions.jsonl"
+  ],
+  "uploaded": false,
+  "status": "PASS_COMPLETE_8B_PACKAGE_NOT_SCORED_NOT_UPLOADED",
+  "scope": "rematch",
+  "candidate": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/rematch_01/candidate_MAC_8B.zip",
+  "complete_pipeline_parameters": 8782459120,
+  "shared_base_counted_once": true,
+  "spatial_base": "SAME_PINNED_8B_WITHOUT_TEMPORAL_LORA",
+  "model_identity_from_test_content": false,
+  "source_lock_sha256": "fb9076f0bd7f95ee6e63b7d3fde44def3c5a23e2e65df6f3ff321be2a62ef3e4"
+}

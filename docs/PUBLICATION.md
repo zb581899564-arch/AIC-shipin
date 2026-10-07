@@ -9,7 +9,7 @@
 - 项目自有 Python、Shell、PowerShell、JavaScript、Jinja、YAML/TOML 代码及配置，包括历史失败版本、合同测试、帧工具和 vendor 辅助快照。
 - 原 Markdown 方案、讨论最终裁决、论文检索结论、验收与历史归因报告。
 - 固定配置、源锁、环境 freeze 和有界聚合验收/开发/完成记录。
-- 七份明确登记的候选 ZIP、对应成绩证据与 Linux8B 官方结果截图。
+- 八份明确登记的候选 ZIP、对应成绩证据与 Linux8B 官方结果截图。
 - Linux 原生 `inference/baseline_qwen3vl.py` 已经 Mac 跳板读回，并核对冻结 source_lock 的 SHA；本地源项目缺此入口，本次补入发布副本。
 
 ## 排除
@@ -23,10 +23,13 @@
 
 ## 验证
 
-`python tools/verify_publication.py` 检查导出文件大小与 SHA、所有 Python 语法、七包 SHA/CRC/JSON 及复赛 426 记录、排除资产扩展名、常见凭据模式。它不运行训练/推理，也不访问比赛媒体或官网。
+`python tools/verify_publication.py` 检查导出文件大小与 SHA、所有 Python 语法、八包 SHA/CRC/JSON 及复赛 426 记录、排除资产扩展名、常见凭据模式。它不运行训练/推理，也不访问比赛媒体或官网。
 
 发布前另核对核心运行绑定的源码完整性、文档入口链接、GitHub 登录账户、实际 author/committer 和远端 HEAD。工作副本与原冻结实验分离，网站上传和 GitHub 项目发布是不同操作。
 
 ## 当前模型状态
 
 2026-10-07 00:07 UTC+8 只读核验 Linux 主机、GPU、内存、磁盘和控制器：Mac8B `RUNNING_REMATCH_TEMPORAL`，控制器存活，固定开发及 NONTEST8 收据已通过 Mac 跳板同步。此快照不承诺后续自动阶段已完成。
+
+
+2026-10-07 10:27 UTC+8更新：Mac8B完整包已经03:14回传交付，本机SHA/大小/CRC/426记录和独立strict通过；新增包与6项交付证据、修正首页和包清单。GPU空闲，后台控制器已完成；尚无Mac官方成绩。

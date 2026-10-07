@@ -1,6 +1,6 @@
 # 提交包—方案—官方分数
 
-初赛与复赛分开记录。七份 ZIP 都已重新核验大小、SHA-256、CRC 和唯一成员 `predictions.jsonl`。成绩来源为原历史记录或用户报告/截图；不存在已确认成绩的候选填写“未确认”，不从前一包继承成绩。
+初赛与复赛分开记录。八份 ZIP 都已重新核验大小、SHA-256、CRC 和唯一成员 `predictions.jsonl`。成绩来源为原历史记录或用户报告/截图；不存在已确认成绩的候选填写“未确认”，不从前一包继承成绩。
 
 | 阶段 | 包 ID | 官方分数 | 方案 | 下载 | 成绩证据 |
 | --- | --- | ---: | --- | --- | --- |
@@ -69,4 +69,14 @@
 
 复赛 A：426 视频、93,155 帧、13,022 空间锚点。复赛 B：426 视频、101,985 帧、13,947 空间锚点；比 A 官方成绩增加 **3.82**。初赛 P2-Final：174 视频、36,345 帧、5,065 锚点，43.94 比 43.48 增加 **0.46**。
 
-Mac8B 快照时完整训练、固定开发和 NONTEST8 已通过，复赛推理进行中；无完整交付 ZIP/官方分数，未列为已交付候选。
+Mac8B现已完整交付，官网尚未上传、官方分数未知。
+
+
+## Mac8B 新交付包（2026-10-07）
+
+- [candidate_MAC_8B.zip](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_01/candidate_MAC_8B.zip)
+- 方案：Mac MPS训练64帧低分辨率8B区间SFT；Linux CUDA开发与推理，同8B空间基座；已交付未评分
+- 官方分数：**未知，尚未提交/评分**。
+- 426视频 / 101880帧 / 14007空间锚点。
+- 大小：300152字节；SHA-256：`7f49ff90b5a21fd71a6036d8da0a1b78f3ab9c1d900ab2f81bc1f319e9d4533d`。
+- [本机交付收据](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_completion.json)；[独立严格验证](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_01/local_independent_validation.json)。

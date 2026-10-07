@@ -1,5 +1,12 @@
 # 复赛执行记录：Linux 开训准备
 
+## 最新：Mac8B完整提交包已交付（2026-10-07 10:27 UTC+8实时复核）
+
+Mac最终8B已完成开发、NONTEST8及426复赛全链推理封包。远端完成时间2026-10-07 03:12:57、本机经Mac跳板回传验收03:14:07，delivery_completion=PASS_LOCAL_UPLOADABLE_8B_PACKAGE。candidate_MAC_8B.zip实际300152字节，SHA256 `7f49ff90b5a21fd71a6036d8da0a1b78f3ab9c1d900ab2f81bc1f319e9d4533d`；本次实核大小/SHA/CRC/唯一predictions.jsonl及426记录通过，独立strict全部11检查true，101880帧/14007锚点，missing/extra/duplicate均0。控制器与桥接已完成，不重开launcher；当前GPU compute为空。
+
+官网未上传、尚无Mac官方分数；用户可直接上传mac8b_delivery_v2/delivery_01/candidate_MAC_8B.zip。原4B33.81和Linux8B37.63分数保持各自包绑定，不赋予Mac包。下方运行进度与PID都是历史快照。
+
+
 ## Linux8B复赛官方成绩登记：37.63（2026-10-06，用户截图）
 
 用户提供Linux8B结果截图，显示37.63、DONE；相对同一复赛4B的33.81提高3.82分。按用户指认与本次对话最近交付包绑定`b_sft8b_package_v3/delivery_01/candidate_B_8B.zip`，实际SHA256 `86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54`、310902字节已重新核验。截图未显示完整时间、名次或包名，官网未独立核验，不补造这些字段。记录与原截图见执行目录`controller/official_score_B_LINUX_37_63_20261006.json`及同名PNG。原交付receipt的uploaded=false是当时状态，保持不回写；此次提交由用户完成。
