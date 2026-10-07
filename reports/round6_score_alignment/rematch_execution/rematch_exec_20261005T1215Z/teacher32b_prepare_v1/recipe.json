@@ -1,0 +1,23 @@
+{
+  "schema": "AIC_PINNED_OFFICIAL_TEACHER_DOWNLOAD_V1",
+  "repo": "Qwen/Qwen3-VL-32B-Instruct-GGUF",
+  "revision": "e3e1fe0c76de7ee58ea65db420c643adfe2e457c",
+  "files": [
+    {
+      "path": "Qwen3VL-32B-Instruct-Q4_K_M.gguf",
+      "size_bytes": 19762150432,
+      "lfs_sha256": "5cf0136e721d6294718ec71fd8c93b17ab5dd4e2714d6079e83fa46571ad94c8"
+    },
+    {
+      "path": "mmproj-Qwen3VL-32B-Instruct-F16.gguf",
+      "size_bytes": 1196795040,
+      "lfs_sha256": "8617824839df91f84b4840ad5084dcf50a1403a435a1f4cfc4d8c84ce6cac2fc"
+    }
+  ],
+  "total_bytes": 20958945472,
+  "inference_host": "Linux",
+  "Mac_used": false,
+  "human_disk_cap_bytes": null,
+  "authority": "OFFICIAL_QWEN_PUBLISHER",
+  "existing_non_test_label_contract_unchanged": true
+}

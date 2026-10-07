@@ -8,9 +8,13 @@
 - 新提交包须有完整来源数量、严格格式检查、ZIP CRC、大小与 SHA-256；官网提交与打包是独立状态。
 - 源工作项目的操作约束快照在 `docs/history/AGENTS_workspace_snapshot.md`。其中远端地址/PID是历史上下文，不能视为当前资源或连接证据。
 
+## 当前人为资源额度已取消（2026-10-07，用户明确纠正）
+
+本项目磁盘、RAM、VRAM人为额度均为null，GPU累计时间继续不限。后续仅按实际硬件可用量/预计产物/共享任务冲突准入，不继承任何旧80/51GiB或Mac预留；此前future_quota_plan也已被覆盖。新GPU入口resource_unlimited_v1_20261007/gpu_run.py保留共享锁与7200秒账本偏移，physical_capacity.py只核实际剩余输出空间。当前Z冻结源码保持，新教师权重在Windows暂存下载、Linux新CUDA运行时编译，teacher32b_bridge_v2自动直连接续。Mac停用。资产准备/配置/编译不等同教师真实生成/新8B开训，仍需真实视频/标签门。
+
 ## Mac退出和当前传输（2026-10-07）
 
-Mac8B官方33.46已按用户截图独立登记；该机器的本项目资产、环境与缓存已核验备份后清理，禁止重启Mac任务或重建其占用。本项目后续使用既有aic-inspur-home直接传输，这是用户明确变更，覆盖历史Mac跳板规则。其他项目/系统的连接配置不修改。当前Linux Z的103文件锁和51GiB单次配额保持；新direct_delivery_v2只替换Windows交付等待。未来独立作业可使用mac_retirement_20261007/future_quota_plan.json，实际容量仍需重新核验，不在当前Z运行中下载19.52GiB教师。
+Mac8B官方33.46已按用户截图独立登记；该机器的本项目资产、环境与缓存已核验备份后清理，禁止重启Mac任务或重建其占用。本项目后续使用既有aic-inspur-home直接传输，这是用户明确变更，覆盖历史Mac跳板规则。其他项目/系统的连接配置不修改。当前Linux Z的103文件锁和51GiB单次配额保持；新direct_delivery_v2只替换Windows交付等待。上述future_quota_plan已被用户的新无限资源指令覆盖，后续使用实际容量运行器；当前Z源码保持，教师准备从新独立目录接续。
 
 ## 下一轮接续
 

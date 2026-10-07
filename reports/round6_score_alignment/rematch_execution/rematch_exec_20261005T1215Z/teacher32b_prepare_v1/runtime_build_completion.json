@@ -1,0 +1,10 @@
+{
+  "status": "STOP_RUNTIME_BUILD",
+  "utc": "2026-10-07T03:42:08.976375+00:00",
+  "pid": 2289832,
+  "failure_type": "CalledProcessError",
+  "failure": "Command '['cmake', '-S', '/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher32b_prepare_v1/runtime/llama.cpp-5ad1c5da0ad7f6176256b823925aad19134f0263', '-B', '/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher32b_prepare_v1/runtime/build', '-DCMAKE_BUILD_TYPE=Release', '-DGGML_CUDA=ON', '-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.1/bin/nvcc', '-DCMAKE_CUDA_ARCHITECTURES=89', '-DLLAMA_CURL=OFF', '-DLLAMA_OPENSSL=OFF', '-DLLAMA_BUILD_TESTS=OFF']' returned non-zero exit status 1.",
+  "logs_and_partial_sources_preserved": true,
+  "GPU_model_loaded": false,
+  "Mac_used": false
+}

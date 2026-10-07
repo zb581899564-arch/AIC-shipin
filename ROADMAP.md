@@ -1,5 +1,15 @@
 # AIC 冲击 50+ 分路线图
 
+## 当前：取消人为资源额度（2026-10-07，用户明确纠正）
+
+用户明确指令：“我们这个项目不限制磁盘，也不限制内存，也不限制显存，随便用”。此前80GiB合计、51GiB Linux与Mac占用预留不再是后续任务准入条件；不要再据这些旧额度拒绝或等待。磁盘、RAM、VRAM的项目人为上限均为null，累计GPU继续不限。按机器实际可用容量、当次实测/预计产物和共享任务冲突安排，不抢占他人任务；真实OOM/磁盘不足仍如实记录。
+
+Linux /home/inspur/aic_video_work/resource_policy.json已11:37 UTC+8实际更新为ACTUAL_CAPACITY_ONLY，旧策略按原字节归档。added_disk_budget_gib仅为尚在运行的旧wrapper提供物理文件系统总量兼容值，不代表人为项目额度。后续新作业使用resource_unlimited_v1_20261007/gpu_run.py与physical_capacity.py，完全不读旧80/51配额或Mac预留。共享GPU锁、7200秒历史偏移和追加账本保持；当前已注册Z源码/模型/科学输入协议不重写。
+
+32B准备已实际开始：Windows teacher32b_prepare_v1/download_weights.py单次PID50872正在下载官方固定Q4_K_M+F16投影器，约19.52GiB，Windows只是传输暂存；教师加载、观察视频和生成标签只在Linux，不用Mac。七项范围恢复/SHA/实际容量合同通过。第一次运行时因系统CMake3.16.3低于CUDA要求3.18而STOP，旧失败保留；teacher32b_runtime_v2使用项目内固定CMake3.31.6，11:44配置PASS并实际进入CUDA编译，历史PID2293438，无系统安装/旧环境修改。
+
+新teacher32b_bridge_v2单次Windows等待历史PID27724已登记：权重全SHA通过、当前冻结Z结束和CUDA编译完成后，自动直连上传Linux并逐字节/SHA验收。v1失败桥接保持STOP，不重开。当前教师尚未加载、标签未生成、新8B T训练未开始；下一门为真实视频CUDA探针、完整观察响应验证，然后按已有T科学协议微调。详细接续见resource_unlimited_v1_20261007/CONTINUE.md。Mac已退出，之前80GiB、未来79GiB与“未开始下载”描述均是本授权前历史。
+
 ## 当前：Mac退出与空间释放（2026-10-07）
 
 用户截图确认Mac8B复赛33.46 / DONE，绑定candidate_MAC_8B.zip SHA `7f49ff90b5a21fd71a6036d8da0a1b78f3ab9c1d900ab2f81bc1f319e9d4533d`；比4B 33.81低0.35、比Linux8B 37.63低4.17。成绩来源为用户截图与包指认；不补造完整评分时间或名次，不改历史交付receipt。

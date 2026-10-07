@@ -37,7 +37,7 @@ def main():
         ast.parse(path.read_text(encoding='utf-8-sig'), filename=str(path))
         code_count += 1
     blocked = re.compile(r'-----BEGIN (?:OPENSSH|RSA|EC|DSA) PRIVATE KEY-----|(?:gh[pousr]_[A-Za-z0-9_]{20,}|github_pat_[A-Za-z0-9_]{20,})|\bsk-[A-Za-z0-9_-]{25,}|(?:X-Amz-Signature|X-Goog-Signature|[?&]access_token)=[A-Za-z0-9%._-]{12,}')
-    forbidden = {'.safetensors','.pt','.pth','.onnx','.mp4','.mkv','.mov','.avi','.pem','.key'}
+    forbidden = {'.safetensors','.gguf','.whl','.incomplete','.pt','.pth','.onnx','.mp4','.mkv','.mov','.avi','.pem','.key'}
     for path in ROOT.rglob('*'):
         if not path.is_file() or '.git' in path.parts:
             continue

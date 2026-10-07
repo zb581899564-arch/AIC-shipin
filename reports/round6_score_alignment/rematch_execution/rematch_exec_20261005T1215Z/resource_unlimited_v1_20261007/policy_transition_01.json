@@ -1,0 +1,17 @@
+{
+  "status": "PASS_UNLIMITED_RESOURCE_POLICY_APPLIED",
+  "utc": "2026-10-07T03:37:09.878391+00:00",
+  "user_instruction": "我们这个项目不限制磁盘，也不限制内存，也不限制显存，随便用",
+  "old_policy_sha256": "74f15dc694428d5d421d58c6d790560ee6e8d86fc8847db6625b14fbeb38e8c6",
+  "new_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
+  "artificial_project_disk_ram_vram_caps": null,
+  "physical_disk_free_bytes": 229250273280,
+  "deprecated_numeric_field_is_only_physical_total_compatibility": true,
+  "running_frozen_Z_source_and_gpu_process_untouched": true,
+  "scientific_model_input_settings_unchanged": true,
+  "current_Z_registered_per_job_quota_is_historical_frozen_compatibility_only": "Will finish under its existing source; no new job will inherit 80/51 GiB or Mac reserve",
+  "new_teacher_download_staging_host": "Windows",
+  "teacher_inference_host": "Linux",
+  "Mac_used": false,
+  "shared_lock_and_ledger_preserved": true
+}
