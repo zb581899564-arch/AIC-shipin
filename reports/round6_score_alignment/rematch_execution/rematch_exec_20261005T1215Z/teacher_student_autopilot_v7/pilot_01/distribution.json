@@ -1,0 +1,51 @@
+{
+  "status": "STOP_PILOT_DISTRIBUTION",
+  "validation_summary": {
+    "schema": "aic_complete_window_validation_receipt_v1",
+    "record_count": 12,
+    "eligible_count": 12,
+    "status_counts": {
+      "PASS_WEAK_COMPLETE_WINDOW_TARGET": 12
+    },
+    "eligible_by_split": {
+      "train": 8,
+      "dev": 4
+    },
+    "explicit_empty_by_split": {
+      "train": 0,
+      "dev": 0
+    },
+    "positive_by_split": {
+      "train": 8,
+      "dev": 4
+    },
+    "multisegment_by_split": {
+      "train": 6,
+      "dev": 3
+    },
+    "weak_teacher_only": true,
+    "semantic_training_admitted": false,
+    "official_quality_claim": false,
+    "selected_window_count": 12,
+    "unlabelled_window_count": 0,
+    "unlabelled_windows_never_converted_to_empty": true,
+    "annotation_receipts_sha256": "42d9faf60c822d323da6aef58bc9c2bdd3518c8caa493957d0c1805fa54680de",
+    "selection_receipt_sha256": "944b8b4de90df644c60ce8daf81941e7e92b212457d00dd0c916f2801c62f133",
+    "selected_train_sha256": "ba7c5556cef8f5448bad5aea46b014a28a3ad3b5203be8dfd41b189f7e2d74c7",
+    "selected_dev_sha256": "bea55f85cf3bb3444491678ed42c51226d82606191b7bd002b37e71b60237ca5",
+    "confirm_opened": false,
+    "contest_assets_opened": false,
+    "gpu_used": false,
+    "files": {
+      "validated_records.jsonl": "e702a3589d7e3a6c28956e229237387a3a464ed443c062705f63f7e127327f79",
+      "eligible_train.jsonl": "a8093a250a39375c562b7cdd89651c45c78ec37e4f6e772a92f4d944b0e513f1",
+      "eligible_dev.jsonl": "b3eb6f8b74d19ea97d345b9b5ad67bd53d081494f29ab439c82da8faf15d54a7"
+    }
+  },
+  "reasons": [
+    "no real justified empty observed; do not force an empty quota"
+  ],
+  "no_label_changed": true,
+  "no_forced_quota": true,
+  "student_training_admitted": false
+}

@@ -1,0 +1,21 @@
+test_all_frozen_runtime_helpers_exist (__main__.StudentContracts) ... ok
+test_confirm_source_cannot_gain_train_membership_by_split_flag (__main__.StudentContracts) ... ok
+test_empty_target_has_supervised_json_and_end_tokens (__main__.StudentContracts) ... ok
+test_exact_pts_overrides_fps_and_restores_processor (__main__.StudentContracts) ... ok
+test_floor_sampling_preserves_real_native_pts_and_endpoints (__main__.StudentContracts) ... ok
+test_genuine_cpu_adamw_rng_and_state_roundtrip_without_active_reset (__main__.StudentContracts) ... ok
+test_insufficient_20_updates_never_adds_epoch_four (__main__.StudentContracts) ... ok
+test_left_padding_prompt_video_and_padding_are_masked (__main__.StudentContracts) ... ok
+test_production_cfr_native_selector_regression (__main__.StudentContracts) ... ok
+test_production_fractional_origin_regression (__main__.StudentContracts) ... ok
+test_same_20_prefix_is_inside_three_epochs (__main__.StudentContracts) ... ok
+test_semantic_receipt_must_agree_with_real_raw_scope_and_response (__main__.StudentContracts) ... ok
+test_source_isolation_rejects_youtube_path_and_bytes_overlap (__main__.StudentContracts) ... ok
+test_target_endpoints_are_not_silently_rounded (__main__.StudentContracts) ... ok
+test_unknown_missing_observation_never_becomes_empty (__main__.StudentContracts) ... ok
+test_update20_epoch_end_is_saved_as_pending_checkpoint_and_dev (__main__.StudentContracts) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 2.231s
+
+OK

@@ -1,0 +1,17 @@
+{
+  "status": "STARTED_V7_CONTROLLER_PENDING_REAL_PILOT",
+  "pid": 3086278,
+  "utc": "2026-10-07T15:13:35.044098+00:00",
+  "source_lock_sha256": "70fb36cd016c30dd837f134b907ee75f8582cc957c172ee57a57034d42d4f3dc",
+  "command": [
+    "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+    "-B",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/controller.py"
+  ],
+  "gpu_compute_at_launch": "",
+  "disk_free_bytes": 202131873792,
+  "CPU_contract_cases": 94,
+  "original_labels_reused": false,
+  "optimizer_steps": 0,
+  "automatic_return": false
+}

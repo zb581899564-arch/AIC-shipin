@@ -11137,9 +11137,9 @@
     {
       "path": "docs/history/AGENTS_workspace_snapshot.md",
       "source_relative_path": "AGENTS.md",
-      "bytes": 65019,
-      "sha256": "a07196c4655f49e6d478a0684d0285cdcfedab6923251fbd54a844edd4e26ea4",
-      "category": "project_documentation"
+      "bytes": 67606,
+      "sha256": "769dbae3efad1927174893ba9481fa77dc52f92de83b928984bd33e8bcc1006a",
+      "category": "operational_history_snapshot"
     },
     {
       "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1/CONTINUE.md",
@@ -12012,9 +12012,9 @@
     {
       "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/STATUS_AUTOPILOT_20261007.md",
       "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/STATUS_AUTOPILOT_20261007.md",
-      "bytes": 10236,
-      "sha256": "9f4a51e1ca330f8deadee64a74d89dc625c5816d659c717b17553db3a1d7c543",
-      "category": "project_documentation"
+      "bytes": 12823,
+      "sha256": "60ba3238fc30c2e598fd2bddcae5138347fff9ab8c25c196bcdc5656fc0f56d4",
+      "category": "audit_or_aggregate_receipt"
     },
     {
       "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher32b_linux_download_v1/authorization.json",
@@ -12988,6 +12988,965 @@
       "bytes": 245,
       "sha256": "93a0992e9329a9bb0869809b29a24b37911264c6beac029c8f1004e275ce66a2",
       "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/COMPREHENSIVE_AUDIT_20261007.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/COMPREHENSIVE_AUDIT_20261007.md",
+      "bytes": 7911,
+      "sha256": "a61c49581a261597805b0eab31aba5192a9252109e2dba290fd392ae87fae7e3",
+      "category": "audit_or_aggregate_receipt"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/inspect_autopilot_live.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/inspect_autopilot_live.py",
+      "bytes": 6305,
+      "sha256": "72e6851139f889c6a23beac309e003a03371f35f7f73bfd3524010fd008a2f68",
+      "category": "audit_or_aggregate_receipt"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/monitor_aic_linux/latest.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/monitor_aic_linux/latest.json",
+      "bytes": 17158,
+      "sha256": "c12e4e1af3521d17e237798027f5dc8d92dff139c5b27fed6207e3264ea5f212",
+      "category": "audit_or_aggregate_receipt"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_semantic_diagnostic_v1/PROTOCOL.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_semantic_diagnostic_v1/PROTOCOL.md",
+      "bytes": 1118,
+      "sha256": "a32fc01d368440b6c2cae471a89bae9846e01f0b27a53a6835c87c0a0991a264",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_semantic_diagnostic_v1/completion.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_semantic_diagnostic_v1/completion.json",
+      "bytes": 566,
+      "sha256": "40016f1d352ea4c0e3bb6a60440d10544dbbbac5471b6dee918aeb3cdcb8a848",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_semantic_diagnostic_v1/diagnostic.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_semantic_diagnostic_v1/diagnostic.py",
+      "bytes": 8347,
+      "sha256": "1dec8c975c9fdd2ee772bd3ce8be8c24ddf5432d263f628799d26e277900352d",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_semantic_diagnostic_v1/launcher_receipt.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_semantic_diagnostic_v1/launcher_receipt.json",
+      "bytes": 1040,
+      "sha256": "04d99fdb6fb6bf694c71ecc624f675200dfbf2462ba83f9f7415c9fed7e9eed0",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_semantic_diagnostic_v1/manifest.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_semantic_diagnostic_v1/manifest.json",
+      "bytes": 2366,
+      "sha256": "ced6aa6af8a4fc7c932ea9b7d5d9c9eb9f4c482714d94dceffc346d3395e352c",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_semantic_diagnostic_v1/preflight.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_semantic_diagnostic_v1/preflight.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_semantic_diagnostic_v1/preflight.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_semantic_diagnostic_v1/preflight.stdout.txt",
+      "bytes": 103,
+      "sha256": "758a8e9c2c7e3e53b8ff5ace44f5e3d24811321d9cc67fb3ad058d45412b8c46",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_semantic_diagnostic_v1/progress.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_semantic_diagnostic_v1/progress.json",
+      "bytes": 615,
+      "sha256": "bc875218473d174f9d6b60f5a73f7fbdc19f335896dc5d78d5f0c4c4c1df1cc6",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_semantic_diagnostic_v1/registration.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_semantic_diagnostic_v1/registration.json",
+      "bytes": 247,
+      "sha256": "414133909b4e6ecc3d36971c981f11663b941406c46ba955b3cd53504178dc35",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_semantic_diagnostic_v1/source_lock.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_semantic_diagnostic_v1/source_lock.json",
+      "bytes": 45554,
+      "sha256": "410e91a0b6b1d4862bd86a18ea6954ac85cd0ee45f77b62228691eeee99320ed",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v5/completion.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v5/completion.json",
+      "bytes": 481,
+      "sha256": "8ff536e14cc86a69be82fa14e5c599c468ebc4551e12d2ee369faed45e064175",
+      "category": "audit_or_aggregate_receipt"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v5/pilot_01/completion.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v5/pilot_01/completion.json",
+      "bytes": 262,
+      "sha256": "748cd5074b51a126cfa791c5acd7e1736edbf9f5d5837032ae9c8c2a2b376b44",
+      "category": "audit_or_aggregate_receipt"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v5/pilot_01/distribution.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v5/pilot_01/distribution.json",
+      "bytes": 1746,
+      "sha256": "ea7f58d9ce0b068e0661fee01ee3086cfa82a77cf52ed36b3e78afc8db674cee",
+      "category": "audit_or_aggregate_receipt"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v5/progress.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v5/progress.json",
+      "bytes": 218,
+      "sha256": "c4751a8322c155227e82c50cf9c389bc57804fb0d6e8af0396829913a4961f0e",
+      "category": "audit_or_aggregate_receipt"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/CONTINUE.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/CONTINUE.md",
+      "bytes": 1316,
+      "sha256": "b3fa4b8cc18d442afc0ff14b41a8d1507db759be7736c0bbac42736c00fc5872",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/PROTOCOL.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/PROTOCOL.md",
+      "bytes": 2547,
+      "sha256": "722f6aa383800bd28ab5259f95715036bdaae8590a435fa833086a248993f912",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/accepted_resume_manifest.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/accepted_resume_manifest.json",
+      "bytes": 698,
+      "sha256": "13628e32f6533b03ef6769a18965bf9636ffe5bd65296e0ba9d3b952480dd44a",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/audit_cpu.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/audit_cpu.stderr.txt",
+      "bytes": 1400,
+      "sha256": "a0b553a957cf65c88febed84f64a107c55539fe5413dd14f840c6d1a312cafaa",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/audit_cpu.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/audit_cpu.stdout.txt",
+      "bytes": 210,
+      "sha256": "c465db25b0ade218caa097ae59873a5f91eb8a826fa91d47e7f06b74c14638c0",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/audit_cpu_acceptance.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/audit_cpu_acceptance.json",
+      "bytes": 226,
+      "sha256": "12cf88f3ac2c807f432f1caafb2267053665311f8e5e257ad6561c075874d3fe",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/audit_cpu_tests.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/audit_cpu_tests.py",
+      "bytes": 8726,
+      "sha256": "bd7c66519d2eb2aa4636bb83a737ba04de6f159e08e3101e87181afe07bb30a6",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/authorization.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/authorization.json",
+      "bytes": 890,
+      "sha256": "15c1a89eb6cfe6b6dbf4b006c248554a5fff53f405487c0bcf7cb79418a6a94f",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/autopilot_common.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/autopilot_common.py",
+      "bytes": 2094,
+      "sha256": "67ac86119d1edb5c68e348aa719ec7d23176c8ace6a030a067eb17181b8490ef",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/clock_cpu.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/clock_cpu.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/clock_cpu.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/clock_cpu.stdout.txt",
+      "bytes": 196,
+      "sha256": "e3c528a86d68dce0c62c1107bd11946537275e3971dd68f810142b8b61495de7",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/clock_cpu_tests.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/clock_cpu_tests.py",
+      "bytes": 2025,
+      "sha256": "b7fdbab1b72b171c2b1be9a4ce23cc4cace367f2e791a3cde05cce5f9320b5d1",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/config.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/config.json",
+      "bytes": 3142,
+      "sha256": "64a004741c26e858fbe67c84f56e9330f98908bd27ae64de3e788164445eaaca",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/controller.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/controller.py",
+      "bytes": 22106,
+      "sha256": "102ab11a80a5ebd471e018966772ce9f6b234d7bfdb1494d4a1f847e17a3407e",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/controller.py.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/controller.py.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/controller.py.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/controller.py.stdout.txt",
+      "bytes": 91,
+      "sha256": "d45194cdbe25442f1616d7ba06e1bcb2c788ffd6113d7d744e021f3127261858",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/cost_contract.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/cost_contract.py",
+      "bytes": 2454,
+      "sha256": "dc513138c4401f126ea58d310c1cde84a84ca83ccee0c94d81d7c3469dbf28ac",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/development_receipts/audit_cpu_acceptance_12_before_review_clock_fix.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/development_receipts/audit_cpu_acceptance_12_before_review_clock_fix.json",
+      "bytes": 226,
+      "sha256": "90f2c1ee259de9e410adb7ac8a4293a869cf82112b049983ba563b22c1ed94af",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/ffprobe_cpu.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/ffprobe_cpu.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/ffprobe_cpu.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/ffprobe_cpu.stdout.txt",
+      "bytes": 296,
+      "sha256": "3b65b9c4aab0c53111078ee05b383ae7ccb797bdde2e1236ad9d1b5a2b8d5451",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/ffprobe_cpu_tests.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/ffprobe_cpu_tests.py",
+      "bytes": 1459,
+      "sha256": "36018afbfbfe0eabcb7ed87664485458a2f271302b7f3b0753cc5b6c6ebb16f2",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/native_segment_contract.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/native_segment_contract.py",
+      "bytes": 948,
+      "sha256": "1bc5dd05235ecb32994da8d227e940f0cef21ff19c9c620f3e0a736227d91637",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/pilot.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/pilot.py",
+      "bytes": 8981,
+      "sha256": "dd0ca65892918bdf3c83fc814efb3e31ba774fd3df01d1eb940965445f6c0511",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/precision_helpers/constrained_json.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/precision_helpers/constrained_json.py",
+      "bytes": 12079,
+      "sha256": "69d6a5e66907a21799274351dc27b73c5e0806e547ad2a5eac4b4d145ac69a8a",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/precision_helpers/contracts.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/precision_helpers/contracts.py",
+      "bytes": 8522,
+      "sha256": "4b0359e2e507b97ee987c61e1f317f64dbb739d4327cd663a62b61031a7d4768",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/precision_helpers/engine.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/precision_helpers/engine.py",
+      "bytes": 15273,
+      "sha256": "71ab2e87df072bf2b7d4a7b652c9d84dfd14dc442a8ba5cdae9d8c381b916812",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/precision_helpers/training_target.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/precision_helpers/training_target.py",
+      "bytes": 3478,
+      "sha256": "1f4bd875d358e67cd400585a00fb23b9395122624fdb2b8719f5d1b275d4c564",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/production_t.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/production_t.py",
+      "bytes": 15832,
+      "sha256": "969f9ffc6a7a305a5ced21101905d75ec5cee7a6625b7ba8da4b8389506c116c",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/real_bridge_cpu_acceptance.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/real_bridge_cpu_acceptance.json",
+      "bytes": 1007,
+      "sha256": "69fb479cbc8e809191b4ced731347a36206df043fb23f12cf580a38cbab3123d",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/real_bridge_cpu_audit.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/real_bridge_cpu_audit.py",
+      "bytes": 3754,
+      "sha256": "fb122bb199d5b2dc932fdcac651ed9d68fcb183733b1b1e4146737f202b6bd55",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/real_bridge_cpu_audit.py.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/real_bridge_cpu_audit.py.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/real_bridge_cpu_audit.py.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/real_bridge_cpu_audit.py.stdout.txt",
+      "bytes": 895,
+      "sha256": "4b54f3e2934b41bcf70275e52d46f5ffc9abdaa43b621d5eca8cf8b70e41b3a0",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/recipe_cpu.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/recipe_cpu.stderr.txt",
+      "bytes": 919,
+      "sha256": "9af78b3adaf3633dfd1ea2abf499c44afba7226a886baf01232236a93e4558fa",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/recipe_cpu.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/recipe_cpu.stdout.txt",
+      "bytes": 195,
+      "sha256": "02fbf096358a50607f8be19afa144b0ddecab8235a4efdcf95eca331bbde8ebf",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/recipe_cpu_acceptance.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/recipe_cpu_acceptance.json",
+      "bytes": 211,
+      "sha256": "7f397dca6203dbcb8431dcef107c47fbc178e27a5cf0f87c7b47ca42cc80396a",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/recipe_cpu_tests.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/recipe_cpu_tests.py",
+      "bytes": 6050,
+      "sha256": "0728c6ad1b763a9222fee97bef4fdaa6f999b7c9dc7869a48568c66db56453f0",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/review_prompt.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/review_prompt.txt",
+      "bytes": 2060,
+      "sha256": "dab1ac1038103cee83027af57a3eb2721247c3666cd0c98ec4fa3c0262d9a851",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/runtime_schema_check.cpp",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/runtime_schema_check.cpp",
+      "bytes": 2041,
+      "sha256": "61592d49fabba1a3ea12d660a3497dcba06be9d65b979338daefcec1c870088c",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/schema_cpu.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/schema_cpu.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/schema_cpu.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/schema_cpu.stdout.txt",
+      "bytes": 291,
+      "sha256": "114eea493ab06865110a20ec60ec8ef380f9be8859c38533145568a939846426",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/schema_cpu_acceptance.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/schema_cpu_acceptance.json",
+      "bytes": 307,
+      "sha256": "167455990eb5bd104e5c93504857eb0c630105dc41ec97a9eee4d533dfd2e766",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/schema_cpu_tests.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/schema_cpu_tests.py",
+      "bytes": 4914,
+      "sha256": "1c1b39f76f228e30d7181a4afa5e302a4e0a2d754a9daeaed6a69d43102fbb7d",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/source_lock.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/source_lock.json",
+      "bytes": 49756,
+      "sha256": "c34e3ab554f7137151f48e43a1bf556685443d3e464ae32cf13a530ed4a93134",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/student_cpu.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/student_cpu.stderr.txt",
+      "bytes": 1523,
+      "sha256": "d73f4da2b81f8ea80dda630d6a3f48267078a2748b0d84265a979134f5cb6a76",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/student_cpu.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/student_cpu.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/student_cpu_tests.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/student_cpu_tests.py",
+      "bytes": 13517,
+      "sha256": "5637a323211b0af4aed9b8d242deab0ffef2f4111a5cd94777acdef2aa7956ed",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/supervision/select_windows.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/supervision/select_windows.py",
+      "bytes": 14643,
+      "sha256": "875e7a1bab260905eab6e0d86330d541c77fde72b465cca754553ab8a24f967f",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/supervision/teacher_metadata_20261007.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/supervision/teacher_metadata_20261007.json",
+      "bytes": 15332,
+      "sha256": "ae025c43728abcdc79c306d63fcc80f0425e8f505cf49026c8c9442f74600731",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/supervision/teacher_prompt.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/supervision/teacher_prompt.txt",
+      "bytes": 3762,
+      "sha256": "653399bcb1ce8fea19a5ce366666f73a463063265405f994c6b1a25e12e7084c",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/supervision/teacher_response.schema.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/supervision/teacher_response.schema.json",
+      "bytes": 2246,
+      "sha256": "896406a6066f2d31923cd3832532a1d6aa03b71e3734a3f000984dbdb22f18f4",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/supervision/validate_teacher.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/supervision/validate_teacher.py",
+      "bytes": 19081,
+      "sha256": "3fc9af6d0040ed926cba6073a45d1d868b3fa0ed5c5739eb6cbeafe6fbf7a2b4",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/teacher_cpu.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/teacher_cpu.stderr.txt",
+      "bytes": 1039,
+      "sha256": "68b49aeb8cee953668fbe258f34d95e0ff04471e374cfd4af3665389d1e39f6e",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/teacher_cpu.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/teacher_cpu.stdout.txt",
+      "bytes": 189,
+      "sha256": "8147c9933c525e0b1f1c8325fd5237a5f1e00cb8ef6e3388839aef36140b7d47",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/teacher_cpu_tests.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/teacher_cpu_tests.py",
+      "bytes": 12649,
+      "sha256": "9986f5be6229c44330c75b1c62f84fad618a33efbdfe0a818ef123c855580fed",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/teacher_label.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/teacher_label.py",
+      "bytes": 60940,
+      "sha256": "bbeddbc18f52bb9ef9397475aea82eabf5e1f602513b5df825d3f29561627c39",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/teacher_prompt.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/teacher_prompt.txt",
+      "bytes": 3762,
+      "sha256": "653399bcb1ce8fea19a5ce366666f73a463063265405f994c6b1a25e12e7084c",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/train_student.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v6/train_student.py",
+      "bytes": 62520,
+      "sha256": "c4cf329ac2cc9c4d8e1fe8e76e3a2aedee774e908c1c6f885b853065d811e519",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/CONTINUE.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/CONTINUE.md",
+      "bytes": 1252,
+      "sha256": "acc1cf68610f7de0b4e1b4de1a57bbb774977ca52f7dcc4f70a0407a1241a323",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/PROTOCOL.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/PROTOCOL.md",
+      "bytes": 2706,
+      "sha256": "34acf549df24a4d6617dbf8ed7f1d7a9b54f5b780e48af130c599c95c683bb70",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/accepted_resume_manifest.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/accepted_resume_manifest.json",
+      "bytes": 698,
+      "sha256": "13628e32f6533b03ef6769a18965bf9636ffe5bd65296e0ba9d3b952480dd44a",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/audit_cpu.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/audit_cpu.stderr.txt",
+      "bytes": 1623,
+      "sha256": "798d65f3b9024687cacd4d65c6445197e10895029a6578a70d1e5e865daca1a1",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/audit_cpu.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/audit_cpu.stdout.txt",
+      "bytes": 210,
+      "sha256": "d34f2146f6b5d631a30dc15d02a09e346df21304abbafdf6a737caea0c28dcff",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/audit_cpu_acceptance.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/audit_cpu_acceptance.json",
+      "bytes": 226,
+      "sha256": "aa335ecb50c9054d9677d0636a468f9fc018e8b876d50db97ebb0bd9d7180054",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/audit_cpu_tests.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/audit_cpu_tests.py",
+      "bytes": 10585,
+      "sha256": "e419d5a46ebab4d1a53b96b225cf64759975b3970698e559d864e849508b47d6",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/authorization.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/authorization.json",
+      "bytes": 1211,
+      "sha256": "0dda04d70ed72170a0595a714957c99f21d4771fda345281be1db13b6941f5bf",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/autopilot_common.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/autopilot_common.py",
+      "bytes": 2094,
+      "sha256": "67ac86119d1edb5c68e348aa719ec7d23176c8ace6a030a067eb17181b8490ef",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/clock_cpu.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/clock_cpu.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/clock_cpu.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/clock_cpu.stdout.txt",
+      "bytes": 196,
+      "sha256": "e3c528a86d68dce0c62c1107bd11946537275e3971dd68f810142b8b61495de7",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/clock_cpu_tests.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/clock_cpu_tests.py",
+      "bytes": 2025,
+      "sha256": "b7fdbab1b72b171c2b1be9a4ce23cc4cace367f2e791a3cde05cce5f9320b5d1",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/config.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/config.json",
+      "bytes": 3670,
+      "sha256": "8860c085404516d5912d3f17686e1599eef528a12b597f66518f6f8c3edc17e9",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/controller.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/controller.py",
+      "bytes": 22319,
+      "sha256": "9f48811a7bafb568ae58f99cd36b33dfda6e846ebca6c4bc9c0c483343686c89",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/cost_contract.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/cost_contract.py",
+      "bytes": 2454,
+      "sha256": "dc513138c4401f126ea58d310c1cde84a84ca83ccee0c94d81d7c3469dbf28ac",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/ffprobe_cpu.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/ffprobe_cpu.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/ffprobe_cpu.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/ffprobe_cpu.stdout.txt",
+      "bytes": 296,
+      "sha256": "3b65b9c4aab0c53111078ee05b383ae7ccb797bdde2e1236ad9d1b5a2b8d5451",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/ffprobe_cpu_tests.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/ffprobe_cpu_tests.py",
+      "bytes": 1459,
+      "sha256": "36018afbfbfe0eabcb7ed87664485458a2f271302b7f3b0753cc5b6c6ebb16f2",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/native_segment_contract.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/native_segment_contract.py",
+      "bytes": 948,
+      "sha256": "1bc5dd05235ecb32994da8d227e940f0cef21ff19c9c620f3e0a736227d91637",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/pilot.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/pilot.py",
+      "bytes": 9977,
+      "sha256": "20f0bf946893358b4c3ea2a8eba464af3b0cc9dfcc34c0b2fcb65bdc5ee065e6",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/pilot_01/distribution.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/pilot_01/distribution.json",
+      "bytes": 1746,
+      "sha256": "417e061de9efd63a0924633d29431719d3db74ba421fd7b0c23483fd928cab65",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/pilot_01/progress.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/pilot_01/progress.json",
+      "bytes": 168,
+      "sha256": "f666a34d923d7c368e2cfd844b65144da4d990b70898a5ffdd90a1b07b3ccd18",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/pilot_selection/manifest.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/pilot_selection/manifest.json",
+      "bytes": 1214,
+      "sha256": "287a89d32d6af273d6e45d0330823271b821df453cb31ba744a2edc9c51c1fd8",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/pilot_selection/selection_receipt.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/pilot_selection/selection_receipt.json",
+      "bytes": 2908,
+      "sha256": "944b8b4de90df644c60ce8daf81941e7e92b212457d00dd0c916f2801c62f133",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/precision_helpers/constrained_json.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/precision_helpers/constrained_json.py",
+      "bytes": 12079,
+      "sha256": "69d6a5e66907a21799274351dc27b73c5e0806e547ad2a5eac4b4d145ac69a8a",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/precision_helpers/contracts.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/precision_helpers/contracts.py",
+      "bytes": 8522,
+      "sha256": "4b0359e2e507b97ee987c61e1f317f64dbb739d4327cd663a62b61031a7d4768",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/precision_helpers/engine.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/precision_helpers/engine.py",
+      "bytes": 15273,
+      "sha256": "71ab2e87df072bf2b7d4a7b652c9d84dfd14dc442a8ba5cdae9d8c381b916812",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/precision_helpers/training_target.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/precision_helpers/training_target.py",
+      "bytes": 3478,
+      "sha256": "1f4bd875d358e67cd400585a00fb23b9395122624fdb2b8719f5d1b275d4c564",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/preflight.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/preflight.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/preflight.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/preflight.stdout.txt",
+      "bytes": 91,
+      "sha256": "d45194cdbe25442f1616d7ba06e1bcb2c788ffd6113d7d744e021f3127261858",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/production_t.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/production_t.py",
+      "bytes": 15832,
+      "sha256": "969f9ffc6a7a305a5ced21101905d75ec5cee7a6625b7ba8da4b8389506c116c",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/progress.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/progress.json",
+      "bytes": 218,
+      "sha256": "728d5c5ac7f09991d97ac8f4d95099d1d56774e69af015a01719c4f83a326409",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/real_bridge.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/real_bridge.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/real_bridge.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/real_bridge.stdout.txt",
+      "bytes": 895,
+      "sha256": "4b54f3e2934b41bcf70275e52d46f5ffc9abdaa43b621d5eca8cf8b70e41b3a0",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/real_bridge_cpu_acceptance.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/real_bridge_cpu_acceptance.json",
+      "bytes": 1007,
+      "sha256": "69fb479cbc8e809191b4ced731347a36206df043fb23f12cf580a38cbab3123d",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/real_bridge_cpu_audit.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/real_bridge_cpu_audit.py",
+      "bytes": 3754,
+      "sha256": "fb122bb199d5b2dc932fdcac651ed9d68fcb183733b1b1e4146737f202b6bd55",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/recipe_cpu.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/recipe_cpu.stderr.txt",
+      "bytes": 919,
+      "sha256": "9af78b3adaf3633dfd1ea2abf499c44afba7226a886baf01232236a93e4558fa",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/recipe_cpu.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/recipe_cpu.stdout.txt",
+      "bytes": 195,
+      "sha256": "02fbf096358a50607f8be19afa144b0ddecab8235a4efdcf95eca331bbde8ebf",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/recipe_cpu_acceptance.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/recipe_cpu_acceptance.json",
+      "bytes": 211,
+      "sha256": "7f397dca6203dbcb8431dcef107c47fbc178e27a5cf0f87c7b47ca42cc80396a",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/recipe_cpu_tests.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/recipe_cpu_tests.py",
+      "bytes": 6050,
+      "sha256": "0728c6ad1b763a9222fee97bef4fdaa6f999b7c9dc7869a48568c66db56453f0",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/registration.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/registration.json",
+      "bytes": 245,
+      "sha256": "6ca361bfda19327acadaf0eff1c8ae03fe207e79e29e27a3ee0cb9aba1c5fbb7",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/review_prompt.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/review_prompt.txt",
+      "bytes": 2481,
+      "sha256": "e39545f3fd66c0a8472f576d195e317bc2e5426a2d4ec5a9603493f6bb06236c",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/runtime_schema_check.cpp",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/runtime_schema_check.cpp",
+      "bytes": 2041,
+      "sha256": "61592d49fabba1a3ea12d660a3497dcba06be9d65b979338daefcec1c870088c",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/schema_cpu.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/schema_cpu.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/schema_cpu.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/schema_cpu.stdout.txt",
+      "bytes": 291,
+      "sha256": "114eea493ab06865110a20ec60ec8ef380f9be8859c38533145568a939846426",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/schema_cpu_acceptance.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/schema_cpu_acceptance.json",
+      "bytes": 307,
+      "sha256": "167455990eb5bd104e5c93504857eb0c630105dc41ec97a9eee4d533dfd2e766",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/schema_cpu_tests.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/schema_cpu_tests.py",
+      "bytes": 5338,
+      "sha256": "7b14b6ace3754658041378aeb91103a07837640fb621d54cabf02c108ad525e6",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/source_lock.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/source_lock.json",
+      "bytes": 51941,
+      "sha256": "70fb36cd016c30dd837f134b907ee75f8582cc957c172ee57a57034d42d4f3dc",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/start_receipt.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/start_receipt.json",
+      "bytes": 648,
+      "sha256": "78036ffafeab2ab510bb1140d0056b667c7e93af5f41bd098696f36a57a89964",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/student_cpu.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/student_cpu.stderr.txt",
+      "bytes": 1523,
+      "sha256": "e9f6fe66506d7873e591d8acb5c60a9863d17050d86f6bc559c450cbfd60aa0c",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/student_cpu.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/student_cpu.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/student_cpu_tests.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/student_cpu_tests.py",
+      "bytes": 13517,
+      "sha256": "5637a323211b0af4aed9b8d242deab0ffef2f4111a5cd94777acdef2aa7956ed",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/supervision/select_windows.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/supervision/select_windows.py",
+      "bytes": 14643,
+      "sha256": "875e7a1bab260905eab6e0d86330d541c77fde72b465cca754553ab8a24f967f",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/supervision/teacher_metadata_20261007.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/supervision/teacher_metadata_20261007.json",
+      "bytes": 15332,
+      "sha256": "ae025c43728abcdc79c306d63fcc80f0425e8f505cf49026c8c9442f74600731",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/supervision/teacher_prompt.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/supervision/teacher_prompt.txt",
+      "bytes": 3762,
+      "sha256": "653399bcb1ce8fea19a5ce366666f73a463063265405f994c6b1a25e12e7084c",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/supervision/teacher_response.schema.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/supervision/teacher_response.schema.json",
+      "bytes": 2246,
+      "sha256": "896406a6066f2d31923cd3832532a1d6aa03b71e3734a3f000984dbdb22f18f4",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/supervision/validate_teacher.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/supervision/validate_teacher.py",
+      "bytes": 19081,
+      "sha256": "3fc9af6d0040ed926cba6073a45d1d868b3fa0ed5c5739eb6cbeafe6fbf7a2b4",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/teacher_cpu.stderr.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/teacher_cpu.stderr.txt",
+      "bytes": 1039,
+      "sha256": "0f3bae0daa0e78e00ff14ce50a749add5ecd48e8c4fb9913f005c508b1e7a902",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/teacher_cpu.stdout.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/teacher_cpu.stdout.txt",
+      "bytes": 189,
+      "sha256": "8147c9933c525e0b1f1c8325fd5237a5f1e00cb8ef6e3388839aef36140b7d47",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/teacher_cpu_tests.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/teacher_cpu_tests.py",
+      "bytes": 12649,
+      "sha256": "9986f5be6229c44330c75b1c62f84fad618a33efbdfe0a818ef123c855580fed",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/teacher_label.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/teacher_label.py",
+      "bytes": 62194,
+      "sha256": "9d1173eef5ab0e74761f24dc3c41d199aadec5c03e7e77037911b685dd723696",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/teacher_prompt.txt",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/teacher_prompt.txt",
+      "bytes": 3762,
+      "sha256": "653399bcb1ce8fea19a5ce366666f73a463063265405f994c6b1a25e12e7084c",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/train_student.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/train_student.py",
+      "bytes": 62520,
+      "sha256": "1c5fd1d303ddba18a9ed94280f58c4ba0af90f6150b5f2a17aad7c0509600d34",
+      "category": "project_code_or_configuration"
     }
   ],
   "project_code_count": 930,
@@ -13063,5 +14022,6 @@
   "autopilot_v5_live_stage": "RUNNING_TEACHER_PILOT",
   "autopilot_v5_pilot_completed_windows": 3,
   "autopilot_v5_pilot_failed_windows": 0,
-  "autopilot_v5_pilot_quality_pass": false
+  "autopilot_v5_pilot_quality_pass": false,
+  "updated_utc": "2026-10-07T15:43:25.398917+00:00"
 }

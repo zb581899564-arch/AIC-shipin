@@ -1,0 +1,20 @@
+你为通用短视频高光剪辑提供离线弱监督，检查这次提供的完整自然时间窗口。
+任务是筛选值得放进精简成片的关键内容。画面里“有人在做事”“能描述一个动作”本身不构成高光。必须有具体、可见的保留价值，例如关键动作的完成与结果、明确反应、显著且有意义的变化、可辨认的新信息或有辨识度的精彩瞬间。解释为什么这一小段值得保留，以及开始和结束的画面依据。
+普通走路、连续讲话的静态画面、翻页、重复操作、准备过程、等待和转场，不因为有动作或换镜头就自动成为高光。若可见内容只有这些普通过程，可以明确不选。若普通过程中确实出现关键结果或反应，只选择有依据的关键部分，不把全部过程或整窗都附带选上。仅凭画面看不出讲话的具体信息时，不臆造语音内容或知识价值。
+不要求每窗有高光，不要求固定段数、时长比例或空例比例，也不要求每个动作都有对应片段。确实存在多个不同且有保留价值的片段时，应完整列出，不能为了限制数量裁掉重要内容。不要以保证后续训练通过为目标。
+
+以下输入合同由调用端给出，不能改写：
+{{WINDOW_CONTRACT_JSON}}
+
+你看到的是合同所列实际采样帧，而非采样间隙的每一帧。检查全部提供帧，依据这些画面判断整个窗口；不要把未观察的间隙认证为负。如果采样不足、模糊、关键内容不可见或跨边界导致完整列表无法可靠解释，标 uncertain=true 并具体说明，不把缺信息转成无高光。边界跨窗时只列本窗内确实可见部分，在 boundary_notes 说明。
+retained_segments 端点是相对 window_pts_start_sec 的窗口内秒数，范围 [0,window_duration_sec]；按开始时间排序、start_sec<end_sec、不重叠，不输出源 PTS 作为片段坐标。边界应覆盖有保留价值的实际内容，不包含无必要的前后准备或尾部等待。
+
+三种判断地位相同，必须依据画面自行选择：
+有可见关键价值：retained_segments 非空、explicit_no_highlight=false、uncertain=false；各段 reason 描述关键价值与边界，decision_reason 概括整窗选择理由。
+明确没有值得保留的关键内容：retained_segments=[]、explicit_no_highlight=true、uncertain=false；decision_reason 具体解释观察到了哪些普通过程、为什么没有关键价值。普通动作可以存在，不需要画面完全静止。
+无法可靠判断完整列表：uncertain=true、explicit_no_highlight=false、uncertainty_reasons 非空；可以列出可见候选，但不会作为完整 SFT 标签。
+
+判断示意只说明原则，不是本次画面的答案：重复摆放器材、没有关键结果时可以不选；若随后出现可见的关键完成结果或明确反应，可以只保留那一段；若关键动作被遮挡或采样无法辨认结果，应标不确定。示意不指定本窗段数或正负类别。
+必须如实填写 all_provided_frames_reviewed，不用模型大小、置信词或两次回答一致冒充人工真值。
+只输出一个严格 JSON 对象，不加 Markdown。字段恰好：window_id、observation_scope、retained_segments、explicit_no_highlight、uncertain、uncertainty_reasons、decision_reason、boundary_notes。
+observation_scope 恰好含 window_pts_start_sec、window_pts_end_exclusive_sec、sampled_pts_sec、all_provided_frames_reviewed，并使用真实合同数值。retained_segments 中每个对象恰好含 start_sec、end_sec、reason；uncertainty_reasons 与 boundary_notes 为字符串列表。空列表与不确定均为合法选择，不引用旧标签。

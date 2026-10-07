@@ -1,0 +1,27 @@
+{
+  "status": "STARTED_REAL_DIAGNOSTIC_PENDING_RECEIPTS",
+  "pid": 3040694,
+  "utc": "2026-10-07T14:35:28.908891+00:00",
+  "command": [
+    "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+    "-B",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/resource_unlimited_v1_20261007/gpu_run.py",
+    "--name",
+    "rematch_TDIAG_v1_12_weak_review",
+    "--max-seconds",
+    "3786",
+    "--planned-output-bytes",
+    "412111632",
+    "--capacity-reason",
+    "twelve preserved observed labels: measured original request bytes times2 plus100MB logs; real weak diagnosis not training admission",
+    "--queue-seconds",
+    "259200",
+    "--",
+    "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+    "-B",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_semantic_diagnostic_v1/diagnostic.py"
+  ],
+  "maximum_seconds": 3786,
+  "planned_output_bytes": 412111632,
+  "optimizer_steps": 0
+}

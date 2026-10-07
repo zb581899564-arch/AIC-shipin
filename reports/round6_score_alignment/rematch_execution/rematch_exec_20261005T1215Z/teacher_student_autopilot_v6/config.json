@@ -1,0 +1,43 @@
+{
+  "schema": "AIC_LINUX_ONCE_ONLY_TEACHER_STUDENT_AUTOPILOT_V6",
+  "selection_dir": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1/supervision_v2/selection_02",
+  "registered_B_train_report": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_full_v1/train_01/train_report.json",
+  "student_input_contract": {
+    "max_frames": 64,
+    "video_size": {
+      "shortest_edge": 4096,
+      "longest_edge": 25165824
+    },
+    "max_input_tokens": 16384,
+    "clock": "REAL_SOURCE_PRESENTATION_PTS_RELATIVE_TO_WINDOW_START",
+    "sampling": "SELECTED_WINDOW_INTEGER_FLOOR_ENDPOINTS",
+    "decoder": "SEQUENTIAL_PYAV_RGB24_WITH_ACTUAL_PTS_AND_PIXEL_SHA",
+    "allow_empty": true,
+    "prompt": "NEXT_ROUND_0_TO_5",
+    "truncation": false,
+    "same_contract_train_dev_production": true,
+    "endpoint_precision": "EXACT_FINITE_DECIMAL_UP_TO_18_FRACTIONAL_DIGITS_NO_ROUNDING",
+    "positive_segment_realizability": "ACTUAL_SOURCE_PTS_HALF_OPEN_NONEMPTY"
+  },
+  "official_upload_authorized": false,
+  "automatic_return": false,
+  "teacher_download": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher32b_linux_download_v1/completion.json",
+  "teacher_runtime": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher32b_runtime_v2/runtime_build_completion.json",
+  "teacher_probe_is_not_quality_acceptance": true,
+  "teacher_review_mode": "same 32B second sampled-window weak review; not human truth",
+  "resource_strategy": "ACTUAL_CAPACITY_ONLY; shared GPU lock; append ledger; preserve7200s",
+  "T_frame_selection": "ALL_BRANCH_NATIVE_PTS_BISECT_HALF_OPEN",
+  "checkpoint_selection": "weak video macro temporal F1; exact tie lower epoch; no official score reconstruction",
+  "ffprobe_path": "/home/inspur/anaconda3/envs/Andy/bin/ffprobe",
+  "ffprobe_sha256": "e2024d389cff86bac7b40180c02dfe3b48e1eca6e955ba195346681f6009b444",
+  "repair_scope": "Comprehensive engineering audit: lossless teacher/student decimal bridge, explicit owned helper modules, shared native-frame realizability, measured incremental disk estimate, preserved phase server receipts; v5 scientific prompt and gates unchanged",
+  "teacher_boundary_generation": "PROVIDED_WINDOW_LOCAL_PTS_PLUS_0_AND_WINDOW_DURATION_ENUM",
+  "accepted_resume_manifest_sha256": "13628e32f6533b03ef6769a18965bf9636ffe5bd65296e0ba9d3b952480dd44a",
+  "teacher_recipe": "V5_VISIBLE_KEY_VALUE_NO_EVENT_EQUALS_HIGHLIGHT",
+  "pilot_selection": "SHA256(window_id)_ASCENDING_8TRAIN_4DEV_NO_LABEL_ACCESS",
+  "teacher_prompt_sha256": "653399bcb1ce8fea19a5ce366666f73a463063265405f994c6b1a25e12e7084c",
+  "review_prompt_sha256": "e5e15b48602ace5c5280aefe540163fd3c70efce11727c80ae4a89d49abedc21",
+  "launch_admitted": false,
+  "known_scientific_stop": "V5 twelve pilot labels contain no justified empty; diagnostic review is separate, engineering repair cannot waive the gate",
+  "student_endpoint_precision": "EXACT_FINITE_DECIMAL_UP_TO_18_FRACTIONAL_DIGITS_NO_ROUNDING"
+}

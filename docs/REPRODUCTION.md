@@ -39,3 +39,11 @@ python tools/verify_publication.py
 ## 现有提交包验收范围
 
 仓库内 ZIP 已逐个核验 SHA、字节数、CRC 和唯一 `predictions.jsonl` 成员。Linux8B 与 4B 完整包的严格 loader 验收见原 delivery 证据。发布验证不会访问官网，不代表重新提交或评分，也不重新加载比赛媒体。
+
+## 当前v7工程修复复现范围
+
+2026-10-07 23:38 UTC+8：全面核查后的 [v7 接续入口](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/CONTINUE.md) 已单次启动。修复了真实 PTS 到学生目标的精度冲突、helper身份、开发/生产实帧合同、成本与回执等问题；94项CPU合同、10302真实端点、12原目标无损回放及两条真实视频解码通过。旧serializer拒绝11/12，新拒绝0，标签数值变化0。
+
+真实小试12/12全部正、空例0，分布门 `STOP_PILOT_DISTRIBUTION`；第二弱复查2/12、2支持，其余仍在运行，不能宣称字段顺序校准解决质量问题。T更新0、无新T ZIP。完整诊断后保留原科学门，不造空/删样本/盲目全量重跑。详见[全链审计](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/COMPREHENSIVE_AUDIT_20261007.md)。
+
+当前运行234文件锁SHA `70fb36cd016c30dd837f134b907ee75f8582cc957c172ee57a57034d42d4f3dc`。v6/v7测试、precision_helpers、native_segment_contract、cost_contract、真实元数据回放脚本和冻结协议均随仓库发布；媒体、逐样本标签和权重不分发。CPU回放与真实decode证据不冒充CUDA训练或第20步重载。恢复资产后应另建目录和锁，不执行历史一次性launcher。

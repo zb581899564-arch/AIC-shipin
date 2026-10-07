@@ -1,5 +1,14 @@
 # 发布仓库约定
 
+## 当前v7（2026-10-07 23:38 UTC+8）
+
+2026-10-07 23:38 UTC+8：全面核查后的 [v7 接续入口](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/CONTINUE.md) 已单次启动。修复了真实 PTS 到学生目标的精度冲突、helper身份、开发/生产实帧合同、成本与回执等问题；94项CPU合同、10302真实端点、12原目标无损回放及两条真实视频解码通过。旧serializer拒绝11/12，新拒绝0，标签数值变化0。
+
+真实小试12/12全部正、空例0，分布门 `STOP_PILOT_DISTRIBUTION`；第二弱复查2/12、2支持，其余仍在运行，不能宣称字段顺序校准解决质量问题。T更新0、无新T ZIP。完整诊断后保留原科学门，不造空/删样本/盲目全量重跑。详见[全链审计](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/COMPREHENSIVE_AUDIT_20261007.md)。
+
+下方所有较早状态为历史快照，不作为当前入口或存活证据。不得改234运行绑定文件、重复launcher或把弱审核/格式通过写成质量/官方分。
+
+
 ## 当前v3真实教师坐标修复（2026-10-07 13:43 UTC+8）
 
 v2已真实载入32B/处理64帧/生成响应，但源PTS与窗口内时间混用，被strict validator拒绝并STOP，0合格标签/0 T更新。当前teacher_student_autopilot_v3/CONTINUE.md维持原源帧/PNG/模型/主提示词/validator，逐帧明确窗口内时间，生成端点限定到实际采样PTS或窗口端点，不事后修改错误响应，不强造空/确定标签；端点生成粒度单独登记。逐窗时间数组统计修复。38项CPU与preflight通过，历史PID2441375注册已写出并实查存活，158锁SHA273f796cf3f30fb309226fa98cd8f8b284a16b76b4eb92b73beb27acf75623ca；阶段与完成门按实际回执，禁止重开/改锁。下方v1/v2状态为历史，旧失败保留。无Mac、无自动回传/官网上传、仅真实容量/共享任务准入及新大流量先确认边界继续。

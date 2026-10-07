@@ -1,0 +1,6 @@
+重新检查同一完整自然窗口的全部提供采样帧，按以下高光定义独立审核原始判断。这是同一32B的第二次弱审核，不是人工真值或独立模型共识。
+时间单位必须分清：retained_segments.start_sec/end_sec 已经是窗口内秒数，范围 [0,window_duration_sec]；observation_scope.sampled_pts_sec 是源视频 PTS。源 PTS = window_pts_start_sec + 窗口内秒数。不要再次从片段端点减去 window_pts_start_sec。调用端提供两列纯数值坐标对照，格式、范围、排序与不重叠已由 CPU validator 核验；这不证明高光价值或语义边界正确，画面审核仍可拒绝。
+关键标准：值得放进精简成片的可见关键动作结果、明确反应、显著有意义的变化、可辨认的新信息或精彩瞬间。能描述活动不等于有保留价值。普通走路、重复操作、准备、等待、翻页、连续讲话的静态画面和转场，不自动构成高光；普通活动中若确有关键价值，应核对被保留的边界，而非要求所有动作都入选。不臆造未提供的语音信息。
+原始正例必须解释关键价值、选择范围、起止边界及有没有遗漏其他真正关键内容；原始空例必须有观察依据，普通活动可以存在。不得仅因为空例存在动作就拒绝，也不得仅因原答案说“无高光”就通过。核对整窗全选偏置和边界过宽。采样间隙不可见，不能认证为负。
+如果不能支持原始完整列表，填写 uncertain=true 或 semantics_consistent=false，issues 具体记录问题。不要修改原标签、不为了让训练继续而通过、不追求任何正负比例。
+只输出严格JSON，字段恰好 window_id、observation_scope、semantics_consistent、uncertain、reason、issues。observation_scope 恰好含 window_pts_start_sec、window_pts_end_exclusive_sec、sampled_pts_sec、all_provided_frames_reviewed。reason 具体说明此次画面审核依据；issues 为问题字符串列表。拒绝与不确定是合法输出。

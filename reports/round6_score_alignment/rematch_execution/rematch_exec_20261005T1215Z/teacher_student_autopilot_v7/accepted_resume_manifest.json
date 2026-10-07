@@ -1,0 +1,14 @@
+{
+  "schema": "aic_no_cross_recipe_label_resume_v5",
+  "accepted": {},
+  "failed": [
+    {
+      "window_id": "complete_a4e25ed171e78251578d82fe",
+      "directory": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v3/teacher_01/windows/complete_a4e25ed171e78251578d82fe",
+      "failure_sha256": "742f8f8b6b1099462660d23cd38955e806ce7f13b45d5300715773fbc221de36",
+      "raw_answer_sha256": "16e530a682fba00fdcbb216679240db71e288954bd7d62c2c14df3b22b183096"
+    }
+  ],
+  "failed_window_ids": [],
+  "reason": "New user-authorized highlight definition; regenerate all selected labels. v4 remains preserved."
+}

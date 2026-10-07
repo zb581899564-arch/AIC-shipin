@@ -1,5 +1,16 @@
 # Linux 后台接续登记
 
+## 2026-10-07 23:38 UTC+8：全链工程修复验收；v7分布未通过，继续真实诊断复查
+
+当前唯一入口 teacher_student_autopilot_v7/CONTINUE.md，234文件锁SHA70fb36cd016c30dd837f134b907ee75f8582cc957c172ee57a57034d42d4f3dc。23:13:35单次启动历史PID3086278，23:38实查完整controller、wrapper、pilot及所属32B server命令身份均存活。12/12新配方真实标注完成、0工程失败，全部12条关键文件逐SHA通过；8train/4dev均正、真实空例均0，distribution=STOP_PILOT_DISTRIBUTION。真实第二弱复查已完成2/12、2支持，余项继续，根/小试completion尚未写出。分布拒绝已确定，不能宣称本次字段顺序校准解决了全正现象，也不能宣称后续将自动开训；T更新0、无新T ZIP。机器继续完成诊断，原质量门拒绝保留STOP，不造空例、不盲目重跑。
+
+本次全面核查已在独立v6/v7修复教师→学生端点精度（旧代码拒绝真实12条中的11条）、旧helper加载身份、dev/生产实帧可行性、probe/pilot容量重复计费、合法全空空间成本、服务器会话回执覆盖、fresh probe缓存误计及复查时间单位等问题。原grammar的all_provided_frames_reviewed=true是结构常量，不证明自主完整观察。v6未准入启动，旧复查prompt SHA元数据不回写；v7绑定实际新SHA并核验。临时监控误过滤python -B也已修复，新inspect_autopilot_live.py按完整路径/父进程/PGID捕获，读取实际teacher/student/NONTEST/rematch回执路径，不改234冻结文件。
+
+Linux实际94项CPU合同、160元数据窗10302端点/12原目标无损回放及两条真实native视频719/720全源PTS、64帧pixel SHA通过；没有修改原标签数值。CPU合同不是8B CUDA更新或第20步真实重载，运行时门保持。v5已于22:18 STOP，独立诊断12条为3支持/9拒绝或不确定，其中部分拒绝有可证实时间算术误判；不把同教师弱审核当真值。
+
+详细问题/证据/限制见 controller/COMPREHENSIVE_AUDIT_20261007.md；实时快照 controller/monitor_aic_linux/latest.json。原B37.63/4B33.81/Mac33.46仍绑定各自旧包，无T官方分。每小时aic-linux已更新v7，正常安静，工程异常立即修复，质量门拒绝先核可证实错误。原完整门通过后才允许160标注/弱复查→B LoRA lr1e-5最多3epochs→开发→NONTEST8→426/strict ZIP；最终包留Linux，不自动回传/官网提交，Mac不参与，实际容量与共享锁/账本保持。旧时间预测和下方运行快照均按历史理解。
+
+
 ## 2026-10-07 21:55 UTC+8：用户授权高光定义修正，独立v5已单次启动
 
 22:06 UTC+8实时补充：v5实际controller及32B server命令身份存活，GPU97%、37290MiB；真实小试3/12、0逐窗失败，三条均PASS弱完整窗口标签、关键文件逐SHA通过，耗时77.995/76.059/79.397秒。目前已观察三个正例，完整12窗分布与真实第二弱复查仍待完成，不宣称小试科学门通过；T更新0、无新T ZIP。后续已自动登记，机器计算无需Windows保持在线。

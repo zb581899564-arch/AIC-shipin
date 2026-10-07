@@ -1,5 +1,14 @@
 # 方案、证据与当前状态
 
+## 当前教师监督接续：工程已修，标签分布未通过
+
+2026-10-07 23:38 UTC+8：全面核查后的 [v7 接续入口](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/CONTINUE.md) 已单次启动。修复了真实 PTS 到学生目标的精度冲突、helper身份、开发/生产实帧合同、成本与回执等问题；94项CPU合同、10302真实端点、12原目标无损回放及两条真实视频解码通过。旧serializer拒绝11/12，新拒绝0，标签数值变化0。
+
+真实小试12/12全部正、空例0，分布门 `STOP_PILOT_DISTRIBUTION`；第二弱复查2/12、2支持，其余仍在运行，不能宣称字段顺序校准解决质量问题。T更新0、无新T ZIP。完整诊断后保留原科学门，不造空/删样本/盲目全量重跑。详见[全链审计](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/COMPREHENSIVE_AUDIT_20261007.md)。
+
+以下运行数字和资产准备状态按各段历史时点理解；旧B37.63、4B33.81、退役Mac33.46各自绑定原包。
+
+
 ## 复赛 A：4B / 33.81
 
 沿用已训练 P2-T2 时间 adapter，以未微调 Qwen 做空间定位。复赛共有 426 视频、521 时间窗口；CFR/native 时间戳分支保持源身份。受约束 JSON 生成恢复原解析失败；空间随机定位的 8 个身份失败以顺序解码补算，原成功对象保留。

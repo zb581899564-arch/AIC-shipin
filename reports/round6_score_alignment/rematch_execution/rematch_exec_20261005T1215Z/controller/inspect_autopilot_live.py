@@ -1,0 +1,110 @@
+"""Capture bounded live evidence; never start/stop a job or edit frozen code."""
+import argparse
+from collections import Counter
+import datetime
+import hashlib
+import json
+from pathlib import Path
+import shutil
+import socket
+import subprocess
+
+RUN = Path('/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z')
+
+
+def read(path):
+    if not path.exists():
+        return None
+    return json.loads(path.read_text(encoding='utf-8'))
+
+
+def capture(version):
+    if socket.gethostname() != 'inspur-NP5570M5':
+        raise RuntimeError('unexpected training host')
+    here = RUN / ('teacher_student_autopilot_' + version)
+    if not here.is_dir():
+        raise RuntimeError('unregistered version directory')
+    now = datetime.datetime.now(datetime.timezone.utc)
+    process_lines = subprocess.check_output(
+        ['ps', '-eo', 'pid,ppid,pgid,etimes,pcpu,pmem,args'], text=True).splitlines()
+    # python -B is a genuine controller/worker command, never filter it out.
+    processes = [line.strip() for line in process_lines if str(here) + '/' in line]
+    owned_ids = {int(line.split()[0]) for line in processes}
+    servers = [line.strip() for line in process_lines if 'llama-server' in line
+               and any(int(line.split()[i]) in owned_ids for i in (1, 2))]
+    windows = []
+    for directory in sorted((here / 'teacher_01/windows').glob('*')):
+        done, failure = read(directory / 'done.json'), read(directory / 'failure.json')
+        if not done and not failure:
+            continue
+        record = read(directory / 'validated_record.json') or {}
+        checks = {}
+        for name, expected in (done or {}).get('files', {}).items():
+            path = directory / name
+            checks[name] = path.is_file() and hashlib.sha256(path.read_bytes()).hexdigest() == expected
+        windows.append({'window_id': directory.name, 'done_status': (done or {}).get('status'),
+                        'completed_utc': (done or {}).get('completed_utc'),
+                        'wall_sec': (done or {}).get('wall_sec'), 'failure': failure,
+                        'status': record.get('status'), 'split': record.get('split'),
+                        'sft_eligible': record.get('sft_eligible'),
+                        'explicit_no_highlight': record.get('explicit_no_highlight'),
+                        'uncertain': record.get('uncertain'),
+                        'segment_count': len(record.get('retained_segments', [])),
+                        'file_sha_checks': checks})
+    states = Counter()
+    for row in windows:
+        if row['failure']:
+            states['engineering_failure'] += 1
+        elif row['explicit_no_highlight'] is True:
+            states['explicit_empty'] += 1
+        elif row['uncertain'] is True:
+            states['uncertain'] += 1
+        elif row['segment_count']:
+            states['positive'] += 1
+        else:
+            states['unclassified'] += 1
+    snapshot = {'utc': now.isoformat(), 'host': socket.gethostname(), 'version': version,
+                'processes': processes, 'owned_servers': servers,
+                'gpu': subprocess.check_output(['nvidia-smi', '--query-gpu=index,name,utilization.gpu,memory.used,memory.total',
+                                                '--format=csv,noheader'], text=True).strip(),
+                'memory': subprocess.check_output(['free', '-m'], text=True).strip(),
+                'disk': dict(zip(('total', 'used', 'free'), shutil.disk_usage(RUN))),
+                'window_counts': dict(states), 'window_receipts': windows,
+                'all_completed_window_file_sha_pass': all(all(w['file_sha_checks'].values()) and w['file_sha_checks']
+                                                          for w in windows if w['done_status']),
+                'new_zip_paths': [str(p.relative_to(here)) for p in here.glob('**/candidate_T_8B.zip')]}
+    snapshot['review_counts'] = {}
+    for phase in ('pilot_01', 'teacher_01'):
+        reviews = [read(p) for p in sorted((here / phase / 'reviews').glob('*/review_receipt.json'))]
+        snapshot['review_counts'][phase] = dict(Counter(r.get('review_status', 'missing_status') for r in reviews))
+    for key, relative in {'registration': 'registration.json', 'progress': 'progress.json',
+                          'completion': 'completion.json', 'pilot_progress': 'pilot_01/progress.json',
+                          'pilot_completion': 'pilot_01/completion.json', 'distribution': 'pilot_01/distribution.json',
+                          'semantic_quality': 'pilot_01/pilot_semantic_quality.json',
+                          'teacher_progress': 'teacher_01/progress.json', 'teacher_completion': 'teacher_01/teacher_completion.json',
+                          'teacher_semantic_review': 'teacher_01/semantic_review.json',
+                          'teacher_stop': 'teacher_01/teacher_stop.json',
+                          'student_progress': 'student_01/progress.json', 'student_report': 'student_01/student_completion.json',
+                          'nontest8_package': 'nontest_01/package.stage.json',
+                          'nontest8_strict': 'nontest_01/independent_validation.json',
+                          'rematch_package': 'rematch_01/package.stage.json',
+                          'rematch_strict': 'rematch_01/independent_validation.json'}.items():
+        snapshot[key] = read(here / relative)
+    snapshot['production_stage_receipts'] = {
+        scope: {p.name: read(p) for p in sorted((here / scope).glob('*.stage.json'))}
+        for scope in ('nontest_01', 'rematch_01')}
+    monitor = RUN / 'controller/monitor_aic_linux'
+    monitor.mkdir(exist_ok=True)
+    data = json.dumps(snapshot, ensure_ascii=False, indent=2) + '\n'
+    snapshot_path = monitor / ('comprehensive_' + version + '_' + now.strftime('%Y%m%dT%H%M%SZ') + '.json')
+    snapshot_path.write_text(data, encoding='utf-8')
+    (monitor / 'latest.json').write_text(data, encoding='utf-8')
+    return snapshot_path, snapshot
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--version', choices=['v7'], default='v7')
+    args = parser.parse_args()
+    path, snapshot = capture(args.version)
+    print(json.dumps({'snapshot_path': str(path), 'snapshot': snapshot}, ensure_ascii=False))
