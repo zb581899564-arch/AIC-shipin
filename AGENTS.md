@@ -1,5 +1,9 @@
 # 发布仓库约定
 
+## v2工具路径修复（2026-10-07 13:24 UTC+8）
+
+v1总控已13:10因裸ffprobe不在PATH而STOP，尚无教师GPU调用/标签/T更新；旧失败保留。新teacher_student_autopilot_v2/CONTINUE.md仅绑定既有ffprobe绝对路径/SHA到预估和教师CLI，160真实非测试窗口工具调用/参数4项及教师10/学生16 CPU、preflight通过。单次后台注册实际写出，历史PID2421099；153文件锁SHA71d59c5627f3ca0e77b63033d71126bd8ccf96f63d4636d4953ebc6ba532c7b0，运行中不改锁或重复launcher。Z已在全源调度后因旧51GiB检查STOP；当前真实容量充足，新T不以Z成功为门，继续真实容量策略，不重开Z。教师权重/运行时已就绪，T尚无更新；其他流量与最终一个ZIP留Linux的授权边界继续。下方v1状态是历史。
+
 ## 最新接续与流量授权（2026-10-07 13:04 UTC+8）
 
 用户已批准本次Linux原地下载固定32B教师约19.52GiB及标注、8B微调、封包自动接续；Windows旧下载/上传桥接/Z回传继续停止，Mac不参与，不恢复下方历史传输入口。新入口teacher_student_autopilot_v1/CONTINUE.md，Linux控制器历史PID2397312，149文件锁SHA7a65ff88936295e7c51bdb37e1fbd1c2f76c965bdf8212b71eaba8ecf85fbd07。以实时进程和progress/completion判断，禁止重开注册或修改冻结源码。教师运行时已编译，两权重13:06:38完整SHA通过；总控等待Z终态，T尚无训练更新。最终一个选定ZIP留Linux，取包先说明大小；官网由用户上传，其他大流量传输须先说明并获确认。实际容量策略与共享锁保持。

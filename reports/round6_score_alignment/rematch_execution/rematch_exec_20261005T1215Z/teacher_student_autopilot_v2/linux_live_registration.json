@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-07T05:25:46.629324+00:00",
+  "registration.json": {
+    "pid": 2421099,
+    "utc": "2026-10-07T05:23:45.173219+00:00",
+    "source_lock_sha256": "71d59c5627f3ca0e77b63033d71126bd8ccf96f63d4636d4953ebc6ba532c7b0",
+    "config_sha256": "1ed6d98c7cb67aff647bda73e6f732bf9d23eb224d56a981bfc50b603fb7f04d"
+  },
+  "progress.json": null,
+  "completion.json": null,
+  "live_process": "PID STAT     ELAPSED %CPU COMMAND\n2421099 Rs         03:26  100 /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v2/controller.py"
+}

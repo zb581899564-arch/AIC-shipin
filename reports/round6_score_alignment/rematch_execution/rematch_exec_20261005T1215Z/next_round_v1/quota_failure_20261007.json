@@ -1,0 +1,9 @@
+{
+  "stage": "STOP_NEXT8B_V1",
+  "utc": "2026-10-07T05:08:35.703305+00:00",
+  "pid": 2234812,
+  "uploaded": false,
+  "failure_type": "ResourceAdmissionError",
+  "failure": "Linux occupancy plus planned outputs exceeds frozen quota",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1/controller.py\", line 60, in main\n    if anchors:gpu('production.py','spatial',scope,out,maximum,planned)\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1/controller.py\", line 20, in gpu\n    verify();evidence=capacity(planned)\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1/controller.py\", line 17, in capacity\n    return admit_capacity(read(HERE/'quota_plan.json'),linux,shutil.disk_usage(ROOT).free,planned,base_dir=HERE)\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1/resource_contract.py\", line 164, in admit_capacity\n    _require(linux_peak <= plan[\"linux_limit_bytes\"], \"Linux occupancy plus planned outputs exceeds frozen quota\")\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1/resource_contract.py\", line 32, in _require\n    raise ResourceAdmissionError(message)\nresource_contract.ResourceAdmissionError: Linux occupancy plus planned outputs exceeds frozen quota\n"
+}

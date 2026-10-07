@@ -1,0 +1,26 @@
+{
+  "status": "PASS_V2_CPU_AND_REAL_FFPROBE_ROUTE",
+  "utc": "2026-10-07T05:21:43.861612+00:00",
+  "checks": [
+    {
+      "name": "ffprobe_cpu",
+      "exit_code": 0
+    },
+    {
+      "name": "teacher_cpu",
+      "exit_code": 0
+    },
+    {
+      "name": "student_cpu",
+      "exit_code": 0
+    },
+    {
+      "name": "controller_preflight",
+      "exit_code": 0
+    }
+  ],
+  "bound_files": 153,
+  "source_lock_sha256": "71d59c5627f3ca0e77b63033d71126bd8ccf96f63d4636d4953ebc6ba532c7b0",
+  "source_bundle_bytes": 74714,
+  "GPU_started": false
+}

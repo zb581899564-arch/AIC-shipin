@@ -1,4 +1,6 @@
-> 最新授权（2026-10-07）：用户已明确允许本次Linux原地下载约19.52GiB固定教师权重，并自动接续标注、8B微调和封包。单次入口已转为../teacher_student_autopilot_v1/CONTINUE.md，Linux控制器历史PID2397312、149文件锁SHA7a65ff88936295e7c51bdb37e1fbd1c2f76c965bdf8212b71eaba8ecf85fbd07；须核registration/progress及实际进程，禁止重复启动。下方Windows下载与上传桥接为已暂停的历史方案，不恢复。运行时编译已PASS，教师真实探针与T训练尚未开始，最终ZIP只留Linux，不自动回传/官网上传。
+> 13:22 UTC+8入口修复：v1已因后台裸ffprobe缺失STOP，0教师GPU调用/标签/T更新；新../teacher_student_autopilot_v2/CONTINUE.md只绑定既有ffprobe绝对路径及SHA，160窗口真实元数据/CLI4检查、教师10/学生16 CPU及总控preflight通过。单次启动历史PID2421099，153文件锁SHA71d59c5627f3ca0e77b63033d71126bd8ccf96f63d4636d4953ebc6ba532c7b0；实际注册/阶段须核验，不重开。教师权重完整SHA和CUDA运行时均已就绪，Z因旧51GiB检查STOP并保留，不是T质量门；T仍用真实容量运行器。下方v1启动和Windows桥接均是历史。
+
+> 最新授权（2026-10-07）：用户已明确允许本次Linux原地下载约19.52GiB固定教师权重，并自动接续标注、8B微调和封包。下方Windows下载与上传桥接为已暂停的历史方案，不恢复。最终ZIP只留Linux，不自动回传/官网上传。
 
 > 2026-10-07用户新增流量约束，优先于下方历史自动传输安排：Windows权重下载50872与上传等待27724均已按身份暂停，不自动重开。约13.7GiB部分文件保留但未验收完整SHA。其他新的大流量下载/上传/回传先说明方向、规模、链路及可能机场消耗，等确认后继续；SSH别名直连不代表网络不经代理。中间结果留Linux，最终只交付一个选定ZIP。详见../controller/network_transfer_policy_20261007.json及两份user_network_pause.json。
 # 取消人为额度后的接续

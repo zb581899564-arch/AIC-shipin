@@ -1,0 +1,21 @@
+{
+  "status": "STOP_AUTOPILOT_PRESERVED",
+  "utc": "2026-10-07T05:10:45.800594+00:00",
+  "last_progress": {
+    "stage": "WAITING_REGISTERED_LINUX_PREPARATION_AND_EXISTING_Z_TERMINAL",
+    "utc": "2026-10-07T05:07:57.834010+00:00",
+    "pid": 2397312,
+    "uploaded": false,
+    "automatic_return": false,
+    "download_ready": true,
+    "runtime_ready": true,
+    "Z_terminal": false,
+    "Z_quality_required": false,
+    "model_payload_download_host": "Linux",
+    "Windows_bulk_transfer": false
+  },
+  "error_type": "FileNotFoundError",
+  "reason": "[Errno 2] No such file or directory: 'ffprobe'",
+  "uploaded": false,
+  "automatic_return": false
+}
