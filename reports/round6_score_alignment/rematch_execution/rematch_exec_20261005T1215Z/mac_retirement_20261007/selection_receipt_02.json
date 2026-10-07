@@ -1,0 +1,64 @@
+{
+  "schema": "aic_complete_window_selection_receipt_v2",
+  "started_utc": "2026-10-07T02:59:42.756483+00:00",
+  "status": "PASS_CPU_SELECTION_UNLABELLED",
+  "tier": "first",
+  "counts_requested": {
+    "train": 128,
+    "dev": 32
+  },
+  "seed": "aic-complete-window-supervision-20261007-v1",
+  "manifests": {
+    "train": {
+      "path": "/home/inspur/aic_video_work/round6_score_alignment/r7_temporal_pool/round7_temporal_pool_20260921T090903Z/inputs/train_temporal.jsonl",
+      "sha256": "ef427866153a9601be01b6e12356951c2fb56730525b0d7b7c353651c2930ddf",
+      "rows": 704,
+      "youtube_groups": 602
+    },
+    "dev": {
+      "path": "/home/inspur/aic_video_work/round6_score_alignment/r7_temporal_pool/round7_temporal_pool_20260921T090903Z/inputs/dev_temporal.jsonl",
+      "sha256": "53f7053fc3df698ce96c94b04f1af3b5c0c210ce93ecd3269b6306daf4c0a700",
+      "rows": 104,
+      "youtube_groups": 96
+    }
+  },
+  "confirm_opened": false,
+  "contest_assets_opened": false,
+  "gpu_used": false,
+  "labels_generated": false,
+  "old_label_values_used_for_selection": false,
+  "old_r7_json_loaded_only_to_extract_whitelisted_identity_fields": true,
+  "selection_unit": "ONE_NATURAL_WINDOW_PER_DISTINCT_YOUTUBE_GROUP",
+  "first_is_prefix_of_expanded": true,
+  "not_all_windows_in_source_are_sent_to_teacher": true,
+  "source_clock_scan": "FULL_SOURCE_PRESENTATION_TIMESTAMPS_NO_PIXEL_INFERENCE",
+  "selector_revision": "NATURAL_GRID_NONEMPTY_PTS_SELECTION_V2",
+  "selection_geometry_change_from_v1": "SOURCE_STRATA_USE_ACTUAL_NONEMPTY_PTS_CELLS; ORIGINAL_30S_TIME_GRID_AND_SOURCE_ORDER_UNCHANGED",
+  "non_sampleable_cells_are_not_empty_labels": true,
+  "sources_silently_skipped": false,
+  "frame_pts_fabricated": false,
+  "counts": {
+    "train": 128,
+    "dev": 32
+  },
+  "structural_strata": {
+    "train": {
+      "source_beginning": 43,
+      "interior": 43,
+      "source_end": 42
+    },
+    "dev": {
+      "source_beginning": 11,
+      "interior": 11,
+      "source_end": 10
+    }
+  },
+  "non_sampleable_time_cell_count": 94,
+  "sources_with_non_sampleable_time_cells": 94,
+  "all_sources_have_actual_pts_grid_coverage": true,
+  "files": {
+    "selected_train.jsonl": "32c6e043443755f8eaef62b56dcc455e10dad7f6c66d883a8ed0044342545477",
+    "selected_dev.jsonl": "2ad65a6d36f2e5a2ca2e62b8802bcf93ba7f9675f1988cd66b5d0804c691d3c2",
+    "source_clocks.jsonl": "5941bb526fdeb0e4536c75a31338d6e2bc0ee6a1619d742879cc2ef2686e32a6"
+  }
+}

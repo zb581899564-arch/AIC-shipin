@@ -1,0 +1,28 @@
+{
+  "schema": "AIC_OFFICIAL_SCORE_USER_SCREENSHOT_V1",
+  "recorded_utc": "2026-10-07T03:13:03.018988+00:00",
+  "stage": "复赛",
+  "方案": "Mac独立8B 64帧低分辨率SFT，Linux CUDA推理",
+  "score": 33.46,
+  "status_shown": "DONE",
+  "entry_name_shown": "round6",
+  "date_shown": "2026-10-07",
+  "time_visible_prefix": "10:30",
+  "full_score_time": null,
+  "rank": null,
+  "website_independently_verified": false,
+  "source": "User screenshot and explicit identification as yesterday Mac package",
+  "package": "reports\\round6_score_alignment\\rematch_execution\\rematch_exec_20261005T1215Z\\mac8b_delivery_v2\\delivery_01\\candidate_MAC_8B.zip",
+  "package_sha256": "7f49ff90b5a21fd71a6036d8da0a1b78f3ab9c1d900ab2f81bc1f319e9d4533d",
+  "package_bytes": 300152,
+  "comparison": {
+    "A_4B": 33.81,
+    "B_LINUX8B": 37.63,
+    "MAC8B": 33.46,
+    "MAC_minus_A": -0.35,
+    "MAC_minus_B": -4.17
+  },
+  "historical_delivery_receipt_unchanged": true,
+  "screenshot_sha256": "11a3668bdfb0ae97644ed0bcf1f13ecf9ad3c89d0255b93474b451b7946d6378",
+  "uploaded_by": "USER"
+}

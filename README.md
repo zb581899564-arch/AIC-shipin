@@ -1,8 +1,8 @@
 # AIC 视频高光剪辑
 
-AIC 产业命题赛「基于视频大模型的通用视频高光剪辑」的项目代码、实验方案、验收记录和提交包归档。当前复赛已确认成绩：**4B 33.81，Linux 8B 37.63（+3.82）**。初赛最佳已确认成绩 **43.94**。初赛与复赛的视频集合不同，分数不直接比较。
+AIC 产业命题赛「基于视频大模型的通用视频高光剪辑」的项目代码、实验方案、验收记录和提交包归档。当前复赛已确认成绩：**Linux 8B 37.63，4B 33.81，Mac 8B 33.46**。初赛最佳已确认成绩 **43.94**。初赛与复赛的视频集合不同，分数不直接比较。
 
-本仓库是从工作项目导出的发布快照。保留核心代码原始字节和目录结构；数据集、弱标签逐样本清单、基座/adapter 权重、运行环境、缓存和原始逐帧中间结果没有随仓库分发。原工作目录及正在运行的冻结作业未被修改。
+本仓库是从工作项目导出的发布快照。保留核心代码原始字节和目录结构；数据集、弱标签逐样本清单、基座/adapter 权重、运行环境、缓存和原始逐帧中间结果没有随仓库分发。已评分源码及正在运行的冻结作业保持原字节；工作项目文档追加最新状态。
 
 ## 提交包与官方成绩
 
@@ -10,7 +10,7 @@ AIC 产业命题赛「基于视频大模型的通用视频高光剪辑」的项�
 | --- | --- | ---: | --- |
 | 复赛 | A：4B / P2-T2 时间模型，native PTS 与帧身份恢复 | **33.81** | [candidate_A_PTS.zip][zip-a] |
 | 复赛 | B：Linux 8B 区间 JSON SFT，最终 5 轮，同 8B 空间基座 | **37.63** | [candidate_B_8B.zip][zip-b] |
-| 复赛 | Mac 8B：64 帧低分辨率区间 SFT | **尚无官方成绩** | [candidate_MAC_8B.zip](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_01/candidate_MAC_8B.zip)；03:14 已交付，待用户提交 |
+| 复赛 | Mac 8B：64 帧低分辨率区间 SFT | **33.46** | [candidate_MAC_8B.zip](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_01/candidate_MAC_8B.zip)；用户已提交，方案停止 |
 | 初赛 | 未微调 Qwen3-VL 单片段基线 | 41.09 | [baseline ZIP](submissions/qwen3vl_baseline_20260910/baseline_qwen3vl_20260910.zip) |
 | 初赛 | 未微调 Qwen3-VL 多片段 reader | 41.22 | [multi-reader ZIP](submissions/qwen3vl_multi_reader_20260910/aic-qwen3vl-multi-20260910.zip) |
 | 初赛 | 历史 Qwen3-VL LoRA reader | 43.48 | [LoRA-reader ZIP](submissions/qwen3vl_lora_reader_20260912/aic-qwen3vl-lora-reader-20260912.zip) |
@@ -23,9 +23,13 @@ AIC 产业命题赛「基于视频大模型的通用视频高光剪辑」的项�
 
 已按采纳结论建立独立 [next_round_v1](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1)。145项CPU合同、真实processor逐张量一致、全空426独立strict及真实CUDA空生成/空assistant有限CE损失已通过。修复严格0..1000坐标、合法空与失败分离、原生PTS训练目标、生产一致开发输入、全源空间场和Mac离线预留。旧已评分包不变。
 
-Linux一次性接续已注册并通过真实合成GPU探针，随后执行B/Z开放开发比较、NONTEST8和Z原生8B完整复赛推理封包；当前没有已交付Z包/官方分。T新完整监督微调因32B容量与真实标签门未准入，未重训旧LoRA；S缺合格双比例构图参考。准确路线、状态及边界见 [协议](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1/PROTOCOL.md) 和 [执行状态](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1/EXECUTION_STATUS.md)。
+Linux一次性接续已注册并通过真实合成GPU探针，随后执行B/Z开放开发比较、NONTEST8和Z原生8B完整复赛推理封包；11:22 UTC+8实查NONTEST8已通过，正在426条复赛时间推理；当前没有已交付Z包/官方分。Mac已退出并释放26.13GiB，后续32B容量投影通过；须等当前Z冻结任务完成，再核实际写入范围与教师运行。128train/32dev未标注窗口选择通过，真实标签尚无，T尚未训练；S缺合格双比例构图参考。准确路线、状态及边界见 [协议](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1/PROTOCOL.md) 和 [执行状态](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1/EXECUTION_STATUS.md)。
 
 不需要本地复刻AIC官方总分；非测试诊断和格式/身份检查保留。正式得分来自官网每日最多5次提交，阶段最高有效分排名。内部弱教师F1不能替代官方分。[复赛通知](https://www.aicomp.cn/notice/notice-3/5307.html)
+
+## Mac 已退出（2026-10-07）
+
+用户截图确认 Mac 包 **33.46 / DONE**，比 Linux 8B 低 **4.17**。按用户要求停止 Mac 训练、推理和中转；已将重要源码、训练记录及 LoRA 私有归档，逐442成员核 SHA/大小后删除我们在唯一工作根的项目、环境、模型、媒体与缓存，释放约 **26.13 GiB**，仅剩3个工作说明/启动文件约12 KiB。Linux任务继续，交付等待已改为既有SSH别名直连；未改SSH/Tailscale或他人文件。详见[清理与接续记录](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac_retirement_20261007/CONTINUE_AFTER_MAC_RETIREMENT.md)。
 
 ## 当前方案
 

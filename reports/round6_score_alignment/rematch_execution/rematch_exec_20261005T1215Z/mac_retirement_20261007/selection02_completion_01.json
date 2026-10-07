@@ -1,0 +1,29 @@
+{
+  "schema": "aic_selection02_cpu_registration_v1",
+  "registered_utc": "2026-10-07T02:59:42.274386+00:00",
+  "controller_pid": 2239360,
+  "hostname": "inspur-NP5570M5",
+  "source_lock_sha256": "c76e3482f044da2500c265b0ad1e8fbd7994cfafc56c2673b2dffdc139f9486e",
+  "gpu_used": false,
+  "models_loaded": false,
+  "status": "PASS_CPU_SELECTION02_UNLABELLED_128_32",
+  "counts": {
+    "train": 128,
+    "dev": 32
+  },
+  "resource": {
+    "checked_utc": "2026-10-07T02:59:42.404390+00:00",
+    "linux_work_bytes": 50908573696,
+    "mac_work_bytes": 28053655552,
+    "planned_output_bytes": 8388608,
+    "linux_quota_bytes": 54760833024,
+    "combined_cap_bytes": 85899345920,
+    "free_bytes": 229272600576
+  },
+  "updated_utc": "2026-10-07T03:06:00.209783+00:00",
+  "selector_pid": 2239364,
+  "completed_utc": "2026-10-07T03:06:00.240978+00:00",
+  "selection_receipt_sha256": "ecf72676c2d46cbe7dea3b8bd3aab1bbedec765e431ce53731b22dd394705ead",
+  "cpu_contract_result_sha256": "8e36021c51be11faa293649d37dbef1ca0329684fcfb59ca79bac45e52a3046e",
+  "labels_generated": false
+}

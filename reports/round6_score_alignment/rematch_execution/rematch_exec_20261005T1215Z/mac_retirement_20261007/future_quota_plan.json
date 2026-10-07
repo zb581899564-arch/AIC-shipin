@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "plan_id": "AIC_MAC_RETIRED_FUTURE_LINUX_79G_20261007",
+  "frozen_at": "2026-10-07T11:24:08.699422+08:00",
+  "timezone": "Asia/Taipei",
+  "total_budget_bytes": 85899345920,
+  "mac": {
+    "workspace_root": "/Users/choubk/codex-workspace",
+    "known_work_bytes": 12288,
+    "occupancy_reserve_bytes": 16384,
+    "registered_remaining_write_bytes": 0,
+    "new_write_limit_bytes": 0,
+    "reservation_bytes": 16384,
+    "training_completed": true,
+    "remaining_write_bound_reliable": true,
+    "active_new_tasks": []
+  },
+  "shared_temporary_limit_bytes": 1073741824,
+  "linux_limit_bytes": 84825587712,
+  "proofs": {
+    "mac_capacity": {
+      "path": "future_quota_evidence.json",
+      "sha256": "3bdec3a3a9f6678d2685960f97a7077712762a49bfeb8f7527bd87872f7976b1",
+      "observed_at": "2026-10-07T11:17:30.728561+08:00",
+      "timezone": "Asia/Taipei",
+      "assertions": {
+        "workspace_root": "/mac/workspace_root",
+        "known_work_bytes": "/mac/known_work_bytes",
+        "observed_at": "/observed_at",
+        "timezone": "/timezone"
+      }
+    },
+    "mac_training_completed": {
+      "path": "future_quota_evidence.json",
+      "sha256": "3bdec3a3a9f6678d2685960f97a7077712762a49bfeb8f7527bd87872f7976b1",
+      "observed_at": "2026-10-07T11:17:30.728561+08:00",
+      "timezone": "Asia/Taipei",
+      "assertions": {
+        "completed": "/mac/training_completed",
+        "observed_at": "/observed_at",
+        "timezone": "/timezone"
+      }
+    },
+    "mac_write_bound": {
+      "path": "future_quota_evidence.json",
+      "sha256": "3bdec3a3a9f6678d2685960f97a7077712762a49bfeb8f7527bd87872f7976b1",
+      "observed_at": "2026-10-07T11:17:30.728561+08:00",
+      "timezone": "Asia/Taipei",
+      "assertions": {
+        "registered_remaining_write_bytes": "/mac/registered_remaining_write_bytes",
+        "new_write_limit_bytes": "/mac/new_write_limit_bytes",
+        "remaining_write_bound_reliable": "/mac/remaining_write_bound_reliable",
+        "active_new_tasks": "/mac/active_new_tasks",
+        "observed_at": "/observed_at",
+        "timezone": "/timezone"
+      }
+    },
+    "quota_registration": {
+      "path": "future_quota_evidence.json",
+      "sha256": "3bdec3a3a9f6678d2685960f97a7077712762a49bfeb8f7527bd87872f7976b1",
+      "observed_at": "2026-10-07T11:17:30.728561+08:00",
+      "timezone": "Asia/Taipei",
+      "assertions": {
+        "occupancy_reserve_bytes": "/mac/occupancy_reserve_bytes",
+        "reservation_bytes": "/mac/reservation_bytes",
+        "shared_temporary_limit_bytes": "/shared_temporary_limit_bytes",
+        "linux_limit_bytes": "/linux_limit_bytes",
+        "observed_at": "/observed_at",
+        "timezone": "/timezone"
+      }
+    }
+  },
+  "frozen_plan_sha256": "e09d4bfc92a84a4ff485287bd9a2cef26d9e55ec8cff40be2cd32d26ffe4b3b1",
+  "instructions": [
+    "Future jobs only; never substitute this plan into the running next_round_v1 Z job.",
+    "Mac is retired by explicit user instruction. No new compute, staging, cache or data writes on Mac.",
+    "AIC transfers use configured aic-inspur-home directly; preserve strict host verification and existing connection configuration.",
+    "The approved combined occupancy remains 80 GiB; refresh Linux resources before any future admission.",
+    "This capacity plan does not start a download, qualify a teacher runtime, create labels, or authorize a GPU job. Shared lock and append-only ledger are unchanged."
+  ]
+}

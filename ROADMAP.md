@@ -1,5 +1,15 @@
 # AIC 冲击 50+ 分路线图
 
+## 当前：Mac退出与空间释放（2026-10-07）
+
+用户截图确认Mac8B复赛33.46 / DONE，绑定candidate_MAC_8B.zip SHA `7f49ff90b5a21fd71a6036d8da0a1b78f3ab9c1d900ab2f81bc1f319e9d4533d`；比4B 33.81低0.35、比Linux8B 37.63低4.17。成绩来源为用户截图与包指认；不补造完整评分时间或名次，不改历史交付receipt。
+
+按用户“以后我们不用mac了”和释放占用授权，Mac唯一工作根内本项目数据、模型、环境、缓存及我们安装的辅助程序已移除，占用从28,053,655,552降至12,288字节，释放约26.13GiB。仅保留AGENTS.md、README.md和bin/run三个小文件。源码、记录、账本与LoRA已先归档到Windows并逐442成员SHA/大小核验，最终Mac LoRA在Linux也逐SHA确认；未触及根外用户文件、系统、SSH或Tailscale。
+
+本项目停止Mac计算与中转；Windows与Linux今后使用既有aic-inspur-home直接传输，这是用户本次明确变更，覆盖本项目此前Mac跳板要求。旧Windows Mac交付等待已按命令身份停止；新next_round_v1/direct_delivery_v2独立交付等待历史PID45736已登记，实际直连scp通过。当前Linux Z控制器2234812继续，103文件冻结锁和51GiB单次配额不改、不重开。11:22 UTC+8实查已通过NONTEST8并进入426条复赛时间推理，尚无Z交付包。
+
+独立mac_retirement_20261007/future_quota_plan.json为后续作业登记Mac16KiB、共享1GiB、Linux79GiB减16KiB，合计仍80GiB；32B权重容量投影通过。它不替换当前运行Z的旧配额，必须等Z结束并重新核实时容量/实际工具写入范围后再下载教师；当前32B未下载、新标签未生成、T训练未开始。128train/32dev自然窗口选择已CPU验收通过，仅为未标注输入。清理、备份、传输及容量证据见同目录，旧Mac目录与环境存在性描述自本条起均为历史。
+
 ## 下一轮v1已实际启动（2026-10-07 11:00 UTC+8）
 
 用户采纳新结论，授权先修代码、制定路线并执行。新独立入口`next_round_v1/CONTINUE.md`、协议`PROTOCOL.md`；旧37.63 Linux B及Mac包/冻结运行文件不改。Linux103文件源锁SHA`9a4159496083dfa36cbcae703644aea1a44d1e31c6ac0f3c29627e5fd0f9e8e2`，主控历史启动PID2234812、Windows独立交付等待PID60188，须实时核活，不重复launcher。

@@ -98,14 +98,14 @@
     ]
   },
   {
-    "id": "rematch-mac8b-delivered-unscored",
+    "id": "rematch-mac8b-33.46",
     "stage": "复赛",
-    "official_score": null,
-    "scheme": "Mac MPS训练64帧低分辨率8B区间SFT；Linux CUDA开发与推理，同8B空间基座；已交付未评分",
+    "official_score": 33.46,
+    "scheme": "Mac MPS训练64帧低分辨率8B区间SFT；Linux CUDA开发与推理，同8B空间基座；用户截图33.46，Mac方案停止",
     "package": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_01/candidate_MAC_8B.zip",
     "zip_sha256": "7f49ff90b5a21fd71a6036d8da0a1b78f3ab9c1d900ab2f81bc1f319e9d4533d",
     "zip_bytes": 300152,
-    "evidence": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_completion.json",
+    "evidence": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/official_score_MAC_33_46_20261007.json",
     "crc": "PASS",
     "archive_members": [
       "predictions.jsonl"

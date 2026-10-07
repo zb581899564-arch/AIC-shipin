@@ -1,0 +1,24 @@
+{
+  "schema": "AIC_MAC_RETIRED_FUTURE_QUOTA_EVIDENCE_V1",
+  "observed_at": "2026-10-07T11:17:30.728561+08:00",
+  "timezone": "Asia/Taipei",
+  "mac": {
+    "workspace_root": "/Users/choubk/codex-workspace",
+    "known_work_bytes": 12288,
+    "occupancy_reserve_bytes": 16384,
+    "registered_remaining_write_bytes": 0,
+    "new_write_limit_bytes": 0,
+    "reservation_bytes": 16384,
+    "training_completed": true,
+    "remaining_write_bound_reliable": true,
+    "active_new_tasks": []
+  },
+  "shared_temporary_limit_bytes": 1073741824,
+  "linux_limit_bytes": 84825587712,
+  "cleanup_receipt_sha256": "afded7d21625a6c7a5bdd4c0869508c73479e4b30a87aebfdda4597df245d404",
+  "archive_acceptance_sha256": "e89263a6d1e7185bed4386692d70ffe141fd5e35bdfa5742bdeef1abe5de6012",
+  "previous_training_completed_evidence_sha256": "e1b497cb4f11b2182b3de1593933b419a9eacb64ea5a547434dc9c564a39bf4a",
+  "user_authorization_sha256": "b4513cfafa06f2fa3377cec5c9675e1c6b9e8b2df6832a28946e29fab6d8a398",
+  "transport_policy": "DIRECT_WINDOWS_LINUX_USER_RETIREMENT_OVERRIDE",
+  "active_Z_quota_unchanged": true
+}

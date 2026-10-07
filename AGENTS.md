@@ -8,6 +8,10 @@
 - 新提交包须有完整来源数量、严格格式检查、ZIP CRC、大小与 SHA-256；官网提交与打包是独立状态。
 - 源工作项目的操作约束快照在 `docs/history/AGENTS_workspace_snapshot.md`。其中远端地址/PID是历史上下文，不能视为当前资源或连接证据。
 
+## Mac退出和当前传输（2026-10-07）
+
+Mac8B官方33.46已按用户截图独立登记；该机器的本项目资产、环境与缓存已核验备份后清理，禁止重启Mac任务或重建其占用。本项目后续使用既有aic-inspur-home直接传输，这是用户明确变更，覆盖历史Mac跳板规则。其他项目/系统的连接配置不修改。当前Linux Z的103文件锁和51GiB单次配额保持；新direct_delivery_v2只替换Windows交付等待。未来独立作业可使用mac_retirement_20261007/future_quota_plan.json，实际容量仍需重新核验，不在当前Z运行中下载19.52GiB教师。
+
 ## 下一轮接续
 
-2026-10-07独立next_round_v1已实际进入Linux B/Z生产一致开发。它和supervision_v2的source_lock、一次性注册不得重开/修改。145+19 CPU与真实CUDA探针通过仅为工程事实。T缺32B容量/新标签、S无绑定双比例参考，均未准入。官网评分与内部弱F1分别记录；新Z尚未交付。查看next_round_v1/CONTINUE.md及supervision_v2/EXECUTION_REGISTRATION_20261007.md。
+2026-10-07独立next_round_v1已实际进入Linux B/Z生产一致开发。它和supervision_v2的source_lock、一次性注册不得重开/修改。145+19 CPU与真实CUDA探针通过仅为工程事实。清理后未来32B容量投影通过，128/32未标注选择验收通过；T缺教师运行与真实新标签、S无绑定双比例参考，均未准入。官网评分与内部弱F1分别记录；新Z尚未交付。查看next_round_v1/CONTINUE.md及supervision_v2/EXECUTION_REGISTRATION_20261007.md。

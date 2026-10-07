@@ -11,6 +11,7 @@
 | 初赛 | `initial-p2final-43.94` | **43.94** | P2-T2时间LoRA + 未微调Qwen镜头内稀疏空间锚点 | [ZIP](../submissions/round6_p2t2_qwen_sparse_20260920/round6_p2t2_qwen_sparse_candidate.zip) | [记录](../submissions/round6_p2t2_qwen_sparse_20260920/submission_record.json) |
 | 复赛 | `rematch-4b-33.81` | **33.81** | A：4B/P2-T2 + native PTS兼容、受约束JSON、帧身份恢复 | [ZIP](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/delivery_A_SPATIAL_IDENTITY_01/recover_01/candidate_A_PTS.zip) | [记录](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/official_score_A_33_81_20261006.json) |
 | 复赛 | `rematch-linux8b-37.63` | **37.63** | B：Linux 8B区间JSON SFT最终5轮模型 + 同8B无adapter空间链；v3推理上下文修复 | [ZIP](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_sft8b_package_v3/delivery_01/candidate_B_8B.zip) | [记录](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/official_score_B_LINUX_37_63_20261006.json) |
+| 复赛 | `rematch-mac8b-33.46` | **33.46** | Mac64帧低分辨率SFT，Linux CUDA推理；方案停止 | [ZIP](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_01/candidate_MAC_8B.zip) | [记录](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/official_score_MAC_33_46_20261007.json) |
 
 ## 每包字节身份
 
@@ -69,14 +70,14 @@
 
 复赛 A：426 视频、93,155 帧、13,022 空间锚点。复赛 B：426 视频、101,985 帧、13,947 空间锚点；比 A 官方成绩增加 **3.82**。初赛 P2-Final：174 视频、36,345 帧、5,065 锚点，43.94 比 43.48 增加 **0.46**。
 
-Mac8B现已完整交付，官网尚未上传、官方分数未知。
+Mac8B已由用户提交并截图确认 **33.46 / DONE**，比4B低0.35、比Linux8B低4.17。按用户要求停止Mac方案和机器占用。
 
 
-## Mac8B 新交付包（2026-10-07）
+## rematch-mac8b-33.46（2026-10-07）
 
 - [candidate_MAC_8B.zip](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_01/candidate_MAC_8B.zip)
-- 方案：Mac MPS训练64帧低分辨率8B区间SFT；Linux CUDA开发与推理，同8B空间基座；已交付未评分
-- 官方分数：**未知，尚未提交/评分**。
+- 方案：Mac MPS训练64帧低分辨率8B区间SFT；Linux CUDA开发与推理，同8B空间基座；用户提交得分33.46，Mac方案停止
+- 官方分数：**33.46 / DONE**。来源为[用户截图记录](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/official_score_MAC_33_46_20261007.json)和[原截图](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/official_score_MAC_33_46_20261007.png)；作品名round6，日期2026-10-07、时间可见前缀10:30，完整时间/名次未知，官网未独立核验。原交付收据的uploaded=false保持历史字节。
 - 426视频 / 101880帧 / 14007空间锚点。
 - 大小：300152字节；SHA-256：`7f49ff90b5a21fd71a6036d8da0a1b78f3ab9c1d900ab2f81bc1f319e9d4533d`。
 - [本机交付收据](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_completion.json)；[独立严格验证](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_01/local_independent_validation.json)。
