@@ -1,0 +1,27 @@
+{
+  "utc": "2026-10-07T05:59:47.682464+00:00",
+  "progress": {
+    "stage": "RUNNING_TEACHER_FULL",
+    "utc": "2026-10-07T05:49:47.947295+00:00",
+    "pid": 2441375,
+    "uploaded": false,
+    "automatic_return": false,
+    "maximum_seconds": 70554,
+    "planned_output_bytes": 26347101120
+  },
+  "labels_progress": {
+    "status": "REAL_TEACHER_LABELS_RUNNING",
+    "completed_windows": 8,
+    "selected_windows": 160,
+    "last_window_id": "complete_b12a3dc69b465916fa5908af",
+    "updated_utc": "2026-10-07T05:59:10.605155+00:00"
+  },
+  "completion": null,
+  "probe_status": "PASS_REAL_NONTEST_TEACHER_PROBE",
+  "probe_per_window_sec": [
+    74.42515804804862,
+    74.81408010143787
+  ],
+  "failed_windows": 0,
+  "process_identity_verified": true
+}

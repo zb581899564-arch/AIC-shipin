@@ -23,7 +23,7 @@ AIC 产业命题赛「基于视频大模型的通用视频高光剪辑」的项�
 
 已按采纳结论建立独立 [next_round_v1](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1)。145项CPU合同、真实processor逐张量一致、全空426独立strict及真实CUDA空生成/空assistant有限CE损失已通过。修复严格0..1000坐标、合法空与失败分离、原生PTS训练目标、生产一致开发输入、全源空间场和Mac离线预留。旧已评分包不变。
 
-2026-10-07 13:43 UTC+8实查：固定32B教师权重与运行时就绪。v1的ffprobe路径遗漏已修复；v2真实小试成功载入32B、处理64帧并生成回答，但把源PTS139.514375/150混入本窗0..30秒区间，原strict validator拒绝后STOP。0合格标签/0 T更新，原始响应和输入保留。当前独立[v3总控](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v3/CONTINUE.md)已写出一次性注册并实查存活，158绑定文件、38项CPU与preflight通过，正在准备新的真实探针；还不能宣称监督或T训练通过。
+2026-10-07 13:59 UTC+8实查：固定32B教师权重与运行时就绪，v3两条真实视频小试均通过原strict validator，每窗约74.4/74.8秒。13:49已进入完整标注，最新完成8/160自然窗口、0失败，控制器命令身份存活。8B T微调尚未开始，新T ZIP不存在；标注和弱复查通过后自动接续训练、开发、NONTEST8与426推理/strict ZIP。当前入口为[v3总控](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v3/CONTINUE.md)，158绑定文件保持冻结。v1路径失败及v2源PTS混用失败保留，未修补原错误回答。
 
 v3维持同一自然窗口、源帧、PNG、固定权重、主提示词和validator。逐帧文本明确窗口内秒数，结构化生成将区间端点限定到实测窗口内采样PTS或0/窗口末端；输入身份metadata固定，空/不确定/高光语义及all_provided_frames_reviewed仍由模型选择。不修补旧响应或放宽validator，端点粒度作为新教师配方登记；另修复probe逐窗耗时数组的统计接口。
 

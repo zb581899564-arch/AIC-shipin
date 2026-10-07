@@ -11137,8 +11137,8 @@
     {
       "path": "docs/history/AGENTS_workspace_snapshot.md",
       "source_relative_path": "AGENTS.md",
-      "bytes": 58617,
-      "sha256": "8fe31082ce840cbd5c0dbcaa2c01b519d07e47e5b21c311d1bec2fca855a0a29",
+      "bytes": 59295,
+      "sha256": "faa4a055c3bb7d0cf104adbb739712a38876134df6d88a7e2639032b203556db",
       "category": "delivered_MAC8B_package_or_updated_status"
     },
     {
@@ -12012,8 +12012,8 @@
     {
       "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/STATUS_AUTOPILOT_20261007.md",
       "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/STATUS_AUTOPILOT_20261007.md",
-      "bytes": 3886,
-      "sha256": "92b8d400a07bf21153b9fbf2fc34c4a8c3e409be113a4d5233a63aa7c49bed96",
+      "bytes": 4564,
+      "sha256": "0fdb543f584b0c767946181973bcc9ed333d3e6fe7003403d8f8db656d881bc0",
       "category": "aggregate_receipt_or_frozen_configuration"
     },
     {
@@ -12491,6 +12491,27 @@
       "bytes": 59796,
       "sha256": "af751c50ab326123b9a19312dbefa62d1dd376b70f944bf833a3dc7bb7325c15",
       "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v3/real_teacher_full_start_verified.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v3/real_teacher_full_start_verified.json",
+      "bytes": 780,
+      "sha256": "556d8c35a93c2901828a7d716af2c9955884f49b049122b5701a7e376571c468",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v3/real_probe_receipt_snapshot.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v3/real_probe_receipt_snapshot.json",
+      "bytes": 551,
+      "sha256": "14db55c9cc9c5577845efbc9f98a868d4ec4013c383f429d365dcb86d2e625e2",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v3/probe_receipt_emission_audit.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v3/probe_receipt_emission_audit.json",
+      "bytes": 939,
+      "sha256": "96b70f6149dc9a60f4500ca54b6425e42e3b43e0fdd8b47d5c41c83f1c15cfa8",
+      "category": "aggregate_receipt_or_frozen_configuration"
     }
   ],
   "project_code_count": 930,
@@ -12543,5 +12564,10 @@
   "parent_autopilot_status": "STOP_BEFORE_TEACHER_GPU_FFPROBE_NOT_IN_PATH",
   "autopilot_v3_update_utc": "2026-10-07T05:45:58.224326+00:00",
   "autopilot_v3_source_lock_sha256": "273f796cf3f30fb309226fa98cd8f8b284a16b76b4eb92b73beb27acf75623ca",
-  "parent_v2_status": "STOP_INVALID_MIXED_SOURCE_AND_WINDOW_LOCAL_TIMESTAMPS"
+  "parent_v2_status": "STOP_INVALID_MIXED_SOURCE_AND_WINDOW_LOCAL_TIMESTAMPS",
+  "autopilot_v3_live_status_utc": "2026-10-07T05:59:47.682464+00:00",
+  "autopilot_v3_live_stage": "RUNNING_TEACHER_FULL",
+  "autopilot_v3_completed_label_windows": 8,
+  "autopilot_v3_selected_label_windows": 160,
+  "autopilot_v3_failed_label_windows": 0
 }

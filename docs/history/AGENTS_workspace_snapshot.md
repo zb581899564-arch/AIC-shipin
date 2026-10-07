@@ -2,6 +2,8 @@
 
 ## 当前自动接续v3：真实教师坐标错误修复（2026-10-07 13:41 UTC+8）
 
+2026-10-07 13:59 UTC+8实时验收：两条真实教师探针均PASS_REAL_NONTEST_TEACHER_PROBE，逐窗耗时74.425/74.814秒；v3总控命令身份存活，13:49:47已进入RUNNING_TEACHER_FULL，最新13:59:10完成8/160自然窗口、0失败。8B T尚未开始优化器更新，最终T ZIP不存在。后续标注、同教师弱复查、微调、开发、NONTEST8、426推理/strict ZIP已自动接续登记，不依赖Windows在线。按实测和既有同8B成本粗估剩余标注/复查5–7小时、训练/开发1–2小时、全量推理/封包6–8小时，预计8B今晚20–23点、ZIP次日02–07点；这是速度外推，须各门通过，不是完成承诺。
+
 v2已完成真实32B载入/64帧处理与首条生成（14,179输入token，GPU峰值37,096MiB，prompt15.85秒/generate46.20秒），但模型把源PTS139.514375/150混进本窗0..30秒区间，原strict validator13:29拒绝并STOP；没有合格标签/T更新。原始HTTP、PNG、输入合同和失败均留Linux，不裁段、裁数或转空。v1路径错误与Z旧额度STOP也保留。
 
 新独立 `teacher_student_autopilot_v3/CONTINUE.md` 保持原窗口、源帧、PNG、教师/学生权重、主提示词和validator字节；逐帧文本明确窗口内秒数，生成schema将区间端点限定为真实采样的窗口内PTS及0/窗口末端，只固定输入身份metadata，模型仍自行选择高光/空/不确定及all_provided_frames_reviewed。端点生成粒度是单独登记的新教师配方，不宣称只修路径。另修复真实probe.per_window_wall_sec数组的max统计。新38项CPU（clock8/ffprobe4/teacher10/student16）与总控preflight在Linux通过；CPU不代表教师标签质量通过。

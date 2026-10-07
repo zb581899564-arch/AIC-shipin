@@ -1,0 +1,21 @@
+{
+  "status": "REAL_PROBE_ITEM_TIMINGS_PRESERVED_PARENT_EMISSION_REPLACED_BY_CACHED_PHASE_ALL",
+  "utc": "2026-10-07T05:54:27.945718+00:00",
+  "old_cost_reference_sha256": "09a34217a9c0deb5b7dc7dd42f6658a0b91b4fa3ede90ad0053f978b8bf12533",
+  "current_cached_emission_sha256": "14db55c9cc9c5577845efbc9f98a868d4ec4013c383f429d365dcb86d2e625e2",
+  "reference_emission_changed": true,
+  "actual_item_times_sec": [
+    74.42515804804862,
+    74.81408010143787
+  ],
+  "old_emission_bytes_not_reconstructed": true,
+  "label_eligibility_not_based_on_phase_wall_time": true,
+  "actual_probe_window_ids": [
+    "complete_1ca5dafbf4af1f0d713434de",
+    "complete_1871532967174b70e24091d0"
+  ],
+  "actual_probe_item_sha256": {
+    "complete_1ca5dafbf4af1f0d713434de": "225dae3249bb9c60744889059cf1553783263b98008f83080484d63753631b25",
+    "complete_1871532967174b70e24091d0": "53b333a211c58c1a3f73c682ffbe767cec23c32645b59ae936b417ec0066afc1"
+  }
+}
