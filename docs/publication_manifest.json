@@ -11137,8 +11137,8 @@
     {
       "path": "docs/history/AGENTS_workspace_snapshot.md",
       "source_relative_path": "AGENTS.md",
-      "bytes": 64580,
-      "sha256": "f1530887f46df06d706fd98c0fe82c3a95cd774968f4c436f8646320d72c4603",
+      "bytes": 65019,
+      "sha256": "a07196c4655f49e6d478a0684d0285cdcfedab6923251fbd54a844edd4e26ea4",
       "category": "project_documentation"
     },
     {
@@ -12012,8 +12012,8 @@
     {
       "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/STATUS_AUTOPILOT_20261007.md",
       "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/STATUS_AUTOPILOT_20261007.md",
-      "bytes": 9797,
-      "sha256": "88c4d3192c26ae382e1632bfc9cb260f511bea4a83ef51d776334ee86ee93710",
+      "bytes": 10236,
+      "sha256": "9f4a51e1ca330f8deadee64a74d89dc625c5816d659c717b17553db3a1d7c543",
       "category": "project_documentation"
     },
     {
@@ -12974,6 +12974,20 @@
       "bytes": 3339,
       "sha256": "31c7ddade07498a87eed747dee66c4ce8592948ed5bc91010fadef4d2ca81b0c",
       "category": "project_documentation"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v5/real_pipeline_check_20261007.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v5/real_pipeline_check_20261007.json",
+      "bytes": 1913,
+      "sha256": "125980abe115f6276d9b0fa4db0cf831c997ebf650d53aaf356ff4de7264140e",
+      "category": "aggregate_receipt_or_frozen_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v5/linux_registration.json",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v5/linux_registration.json",
+      "bytes": 245,
+      "sha256": "93a0992e9329a9bb0869809b29a24b37911264c6beac029c8f1004e275ce66a2",
+      "category": "aggregate_receipt_or_frozen_configuration"
     }
   ],
   "project_code_count": 930,
@@ -13044,5 +13058,10 @@
   "autopilot_v5_source_lock_sha256": "0735f2d7f3c81857e09242f48ca905df9d07f7b132457e5002fb555dd8450057",
   "autopilot_v5_recipe": "VISIBLE_KEY_RETENTION_VALUE_WITH_12_WINDOW_PILOT",
   "autopilot_v5_student_updates": 0,
-  "autopilot_v5_large_transfer": false
+  "autopilot_v5_large_transfer": false,
+  "autopilot_v5_live_status_utc": "2026-10-07T14:06:13.502604+00:00",
+  "autopilot_v5_live_stage": "RUNNING_TEACHER_PILOT",
+  "autopilot_v5_pilot_completed_windows": 3,
+  "autopilot_v5_pilot_failed_windows": 0,
+  "autopilot_v5_pilot_quality_pass": false
 }

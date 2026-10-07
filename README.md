@@ -27,7 +27,7 @@ AIC 产业命题赛「基于视频大模型的通用视频高光剪辑」的项�
 
 用户随后授权修正高光定义并完成后续。[v5入口](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v5/CONTINUE.md)将可描述活动与有可见关键保留价值分开，同步修改弱复查提示。预先按window_id SHA256选择8train/4dev小试，不参考旧标签；原validator规则、固定模型、64nativePTS及学生lr1e-5/最多3epochs保持。小试原validator/真实弱复查通过后，再全量160新配方标签/完整科学门→微调→开发选点→NONTEST8→426/strict ZIP。跨提示词配方不复用v4标签，没有强制空例比例。另修复学生/检查点输出所有权写死v1的工程问题。
 
-79项CPU合同与200文件源码/模型preflight通过，v5已单次启动、实际controller命令身份存活；尚在启动完整SHA核验，真实小试和T更新以最新回执为准，不能将启动当质量或交付通过。[新配方协议](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v5/PROTOCOL.md)记录改动、原门与传输边界。
+79项CPU合同与200文件源码/模型preflight通过，v5已单次启动、实际controller命令身份存活；22:06实查真实32B GPU生成，小试3/12、0工程失败，三条原validator与关键SHA通过，每窗约76–79秒；目前三个正例，完整小试分布/第二弱复查待完成，T更新0、无T ZIP。不能将格式通过当科学质量或交付通过。[新配方协议](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v5/PROTOCOL.md)记录改动、原门与传输边界。
 
 v3维持同一自然窗口、源帧、PNG、固定权重、主提示词和validator。逐帧文本明确窗口内秒数，结构化生成将区间端点限定到实测窗口内采样PTS或0/窗口末端；输入身份metadata固定，空/不确定/高光语义及all_provided_frames_reviewed仍由模型选择。不修补旧响应或放宽validator，端点粒度作为新教师配方登记；另修复probe逐窗耗时数组的统计接口。
 

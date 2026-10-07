@@ -1,0 +1,49 @@
+{
+  "utc": "2026-10-07T14:06:13.502604+00:00",
+  "status": "RUNNING_REAL_V5_TEACHER_RECIPE_PILOT",
+  "historical_start_pid": 2985662,
+  "live_controller_command": "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v5/controller.py ",
+  "live_controller_identity_matches": true,
+  "registration": {
+    "pid": 2985662,
+    "utc": "2026-10-07T13:57:01.405261+00:00",
+    "source_lock_sha256": "0735f2d7f3c81857e09242f48ca905df9d07f7b132457e5002fb555dd8450057",
+    "config_sha256": "598bf9771d21d32c853118a8be5792fa24234972323171906f122eeabc1b3e6d"
+  },
+  "progress": {
+    "stage": "RUNNING_TEACHER_PILOT",
+    "utc": "2026-10-07T14:00:09.365387+00:00",
+    "pid": 2985662,
+    "uploaded": false,
+    "automatic_return": false,
+    "maximum_seconds": 10800,
+    "planned_output_bytes": 6455316480
+  },
+  "pilot_progress": {
+    "stage": "REAL_PILOT_LABELS",
+    "completed_windows": 3,
+    "total_windows": 12,
+    "last_window_id": "complete_47c0dd5636aff0e0ebbc37a1",
+    "utc": "2026-10-07T14:05:43.631803+00:00",
+    "optimizer_steps": 0
+  },
+  "completed_new_prompt_windows": 3,
+  "label_status_counts": {
+    "PASS_WEAK_COMPLETE_WINDOW_TARGET": 3
+  },
+  "all_completed_annotation_file_sha_pass": true,
+  "per_window_wall_sec": [
+    77.99472802504897,
+    76.05851174052805,
+    79.39689725264907
+  ],
+  "failure_count": 0,
+  "real_GPU": "97 %, 37290 MiB, 46068 MiB\n",
+  "new_T_optimizer_updates": 0,
+  "new_T_ZIP_ready": false,
+  "pipeline_after_pilot_and_full_science_gates": "160 reviewed labels -> B LoRA T continuation -> dev checkpoint -> NONTEST8 ->426 strict ZIP",
+  "automatic_return": false,
+  "official_upload": false,
+  "source_lock_sha256": "0735f2d7f3c81857e09242f48ca905df9d07f7b132457e5002fb555dd8450057",
+  "no_quality_completion_claim": true
+}
