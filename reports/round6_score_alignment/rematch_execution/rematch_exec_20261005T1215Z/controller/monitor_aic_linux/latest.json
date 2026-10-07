@@ -1,18 +1,19 @@
 {
-  "utc": "2026-10-07T19:37:05.949555+00:00",
+  "utc": "2026-10-07T19:43:50.620090+00:00",
   "host": "inspur-NP5570M5",
   "version": "v4",
   "entry": "b_score_aligned_package_v4",
   "processes": [
-    "3965729       1 3965729     262 67.6  0.0 /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/controller.py"
+    "3965729       1 3965729     666 35.6  0.0 /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/controller.py",
+    "3976161 3965729 3965729     180  259  4.1 /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/production.py scheduling rematch /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/rematch_01"
   ],
   "owned_servers": [],
   "gpu": "0, NVIDIA RTX 6000 Ada Generation, 0 %, 182 MiB, 46068 MiB",
-  "memory": "总计         已用        空闲      共享    缓冲/缓存    可用\n内存：      128557        7105       54479          74       66973      120341\n交换：      131071        1939      129132",
+  "memory": "总计         已用        空闲      共享    缓冲/缓存    可用\n内存：      128557       12312       49212          74       67033      115133\n交换：      131071        1939      129132",
   "disk": {
     "total": 943412031488,
-    "used": 694233329664,
-    "free": 201179090944
+    "used": 694274576384,
+    "free": 201137844224
   },
   "window_counts": {},
   "window_receipts": [],
@@ -144,7 +145,49 @@
   },
   "b2_probe_receipt_sha256": "ab1f5222e393007731960fd8207f34b397ed726a3b997935b2527576f5040119",
   "active_gpu_job": null,
-  "b2_resource_receipts": {},
+  "b2_resource_receipts": {
+    "rematch_B2_v4_rematch_recover_01.resource.json": {
+      "name": "rematch_B2_v4_rematch_recover_01",
+      "command": [
+        "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+        "-B",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/recovery.py",
+        "recover",
+        "rematch",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/rematch_01"
+      ],
+      "started_utc": "2026-10-07T19:37:24.761094+00:00",
+      "runner_pid": 3971213,
+      "reserved_seconds": 3600,
+      "teardown_reserve_seconds": 120,
+      "prior_charged_seconds": 158088.37151255785,
+      "gpu_time_mode": "UNLIMITED",
+      "max_total_gpu_seconds": null,
+      "resource_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
+      "disk_before": {
+        "free_bytes": 201178800128,
+        "work_bytes": 79003344896
+      },
+      "planned_output_bytes": 60000000,
+      "capacity_reason": "Measured current same-8B outputs and complete source-field counts; actual capacity only, no Mac or quota",
+      "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+      "project_disk_limit_bytes": null,
+      "project_ram_limit_bytes": null,
+      "project_vram_limit_bytes": null,
+      "runner_source_sha256": "9997d41fbe2bb51726914b4698b874cf939c52aac02048fa9b3bb753c64c6cec",
+      "child_pid": 3971265,
+      "finished_utc": "2026-10-07T19:40:08.632759+00:00",
+      "charged_seconds": 163.8717517144978,
+      "exit_code": 0,
+      "stop_reason": null,
+      "sampled_peak_memory_mib": 21890,
+      "status": "completed",
+      "disk_after": {
+        "free_bytes": 201169690624,
+        "work_bytes": 79012339712
+      }
+    }
+  },
   "b2_queue_receipts": {},
   "b2_artifact_activity": {
     "probe_01": {
@@ -232,6 +275,14 @@
       }
     },
     "rematch_01": {
+      "model_identity.json": {
+        "bytes": 462,
+        "mtime_ns": 1791401942864753316
+      },
+      "progress.json": {
+        "bytes": 191,
+        "mtime_ns": 1791402212875857904
+      },
       "provider_temporal.jsonl": {
         "bytes": 8570734,
         "mtime_ns": 1791401802881256759
@@ -243,6 +294,18 @@
       "recovery_manifest.json": {
         "bytes": 2733,
         "mtime_ns": 1791401802945256521
+      },
+      "selected.jsonl": {
+        "bytes": 31633897,
+        "mtime_ns": 1791402093800242698
+      },
+      "temporal.jsonl": {
+        "bytes": 8595699,
+        "mtime_ns": 1791401952880718497
+      },
+      "temporal.stage.json": {
+        "bytes": 1575,
+        "mtime_ns": 1791401998400562032
       }
     }
   },
@@ -502,7 +565,13 @@
     "actual_previous_sources_or_outputs_changed": false
   },
   "b2_recovery_failure": null,
-  "b2_recovered_raw_receipts": {},
+  "b2_recovered_raw_receipts": {
+    "97_0.json": {
+      "bytes": 40480,
+      "mtime_ns": 1791401952412720121,
+      "sha256": "df9ff18d3f2ce92b3ffd082f73fdee52c622aa0ede85778be814f977a584b636"
+    }
+  },
   "review_counts": {
     "pilot_01": {},
     "teacher_01": {}
@@ -517,8 +586,8 @@
     "uploaded": false
   },
   "progress": {
-    "utc": "2026-10-07T19:36:14.752810+00:00",
-    "stage": "WAITING_VALID_B2_V1_TEMPORAL",
+    "utc": "2026-10-07T19:40:50.369425+00:00",
+    "stage": "RUNNING_REMATCH_SCHEDULING",
     "pid": 3965729,
     "source_lock_sha256": "52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db",
     "automatic_return": false,
@@ -726,6 +795,51 @@
         },
         "source_lock_sha256": "0c63bc55df1ec3a34773dc543f4241241a646ac55249b320c72df02fab598d2c",
         "wall_seconds": 5237.485004105605,
+        "optimizer_updates": 0,
+        "official_score": null
+      },
+      "temporal.stage.json": {
+        "status": "PASS_TEMPORAL_EXECUTION",
+        "videos": 426,
+        "windows": 521,
+        "invalid_windows": 0,
+        "output_sha256": "9437a04e53c1c3f6aa623a8cbc8ec4f29051a396e1b2af5baf438ef70ef4971f",
+        "logical_parameters": 8782459120,
+        "adapter_enabled": true,
+        "selected_adapter_sha256": "8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23",
+        "allow_empty": false,
+        "input_contract": {
+          "sampling": "INTEGER_FLOOR_64_NATIVE_ORDINAL_ENDPOINTS",
+          "clock": "ACTUAL_NATIVE_PTS_ALL_FORMAT_BRANCHES",
+          "decoder": "SEQUENTIAL_PYAV_RGB24",
+          "prompt": "UNCHANGED_B_1_TO_5",
+          "allow_empty": false,
+          "truncation": false,
+          "max_input_tokens": 16384,
+          "video_size": {
+            "shortest_edge": 4096,
+            "longest_edge": 25165824
+          }
+        },
+        "source_lock_sha256": "52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db",
+        "wall_seconds": 5292.052783437073,
+        "original_provider_wall_seconds": 5237.485004105605,
+        "actual_recovery_wall_seconds": 54.567779331468046,
+        "original_successful_windows_reused": 520,
+        "original_record_raw_lines_exact": 425,
+        "new_generation_calls": 1,
+        "original_failed_windows": 1,
+        "failures_to_empty_conversions": 0,
+        "original_failure_stage_sha256": "d077ca5d3017ad25f387b6a4479fe0300620104c79d11b88b4002a3695e21ffb",
+        "recovery": [
+          {
+            "video_id": "97",
+            "index": 0,
+            "status": "MODEL_OK",
+            "original_window_sha256": "02aa351edac45b5ad0d926d81c119a308d3fadd2a00a32f6dd8decdd8c3777bd",
+            "seconds": 8.460342932492495
+          }
+        ],
         "optimizer_updates": 0,
         "official_score": null
       }

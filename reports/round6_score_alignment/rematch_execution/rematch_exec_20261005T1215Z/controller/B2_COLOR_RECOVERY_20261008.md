@@ -4,6 +4,8 @@
 
 v4只新增可证实工程修复：新模型返回原文先写独立不可覆盖raw回执，再做有效性校验；异常另写failure/traceback。3项CPU分别验证无效响应拒绝后原文仍在、有效响应保留、重复写入拒绝。9转换CPU/69原CPU/真实processor/8非测试源pixel SHA和全preflight通过。下面v3转换/失败恢复配方、模型/提示词/时长/采样/生成算法及全部门保持，不重复任何新成功生成。当前进程/阶段与原provider实际进度见monitor_aic_linux/latest.json，CPU与启动不代表ZIP完成。
 
+03:41 UTC+8真实独立恢复验收：426/521时间PASS、0无效。原425成功记录整行字节与520成功窗口对象逐一相等，仅97新生成一窗MODEL_OK，raw先落盘且与接受窗相等，旧失败与STOP原样。完整NONTEST8独立11检查全部true。实际wrapper completed/exit0/stop_reason null、GPU charge163.8717517144978秒；恢复生成及冻结复核wall54.567779331468046秒，与旧原provider wall分别登记，不将生成wall充作全部GPU费用。新时间SHA9437a04e53c1c3f6aa623a8cbc8ec4f29051a396e1b2af5baf438ef70ef4971f。证据controller/B2_v4_recovery_acceptance_20261008.json；全源CPU/空间与426 ZIP尚待完整验收，不重复成功生成。
+
 ## v3配方与历史验收
 
 用户完全自主授权，期间静默。v1真实时间生成中，video97在送入processor/模型前发生errno95：PyAV17.1/libswscale9拒绝yuv420p/unknown颜色空间与原色/log316 transfer。原窗口无模型回答，所有旧raw/失败保持。434来源元数据仅一项为此profile；源SHA8ec893eb5378452de6223f6c8e5878bcea044cb2f9e4feaabf708fa364871722。OpenCV也打印相同转换错误，其read返回不能冒充正确RGB。

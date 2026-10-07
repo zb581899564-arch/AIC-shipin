@@ -34,6 +34,17 @@ def main():
     cpu=json.loads((RUN/entry/'cpu_acceptance.json').read_text())
     lock=json.loads((RUN/entry/'source_lock.json').read_text())
     phase=(snapshot.get('progress') or {}).get('stage','CPU/SHA核验')
+    completion=snapshot.get('completion') or {}
+    strict=[snapshot.get(key) or {} for key in ('nontest8_strict','rematch_strict')]
+    final_ready=(completion.get('stage')=='PASS_COMPLETE_426_B2_8B_ZIP_ON_LINUX' and
+        completion.get('crc_pass') is True and completion.get('videos')==426 and
+        completion.get('archive_names')==['predictions.jsonl'] and
+        all(row.get('status')=='PASS_INDEPENDENT_STRICT_VALIDATION' and len(row.get('checks',{}))==11 and
+            all(value is True for value in row['checks'].values()) for row in strict))
+    package_state=('Linux最终ZIP终态与NONTEST8/426全部独立strict登记已PASS。'
+        f'包 `{completion["candidate"]}`，实际 `{completion["zip_bytes"]}` 字节，SHA256 `{completion["zip_sha256"]}`。'
+        '包仍留Linux，尚无新官网分。' if final_ready else
+        '完整NONTEST8/426严格包分别看实际回执，尚未宣称最终ZIP完成。')
     probe=snapshot.get('b2_probe') or {}
     cuda=('实际B LoRA长输入CUDA已PASS：12048token、288 adapter张量与保存值相等、全基座SHA与原训练相等，选择token分数有限；0优化器更新。'
           if probe.get('status')=='PASS_B2_ACTUAL_TRAINED_ADAPTER_LONG_CUDA_INFERENCE' else '实际长输入CUDA尚待真实回执。')
@@ -46,7 +57,7 @@ def main():
         '旧raw/失败/科学STOP保存；不再盲试同配方，不造空或弱化原监督门。B2是保留已经训练B的可交付路线，不冒充新教师T训练。\n\n'
         f'{cpu["tests"]}项CPU、434来源/529真实自然窗/33447样本端点、12原目标无损回放与实际processor/HD/8非测试源重开pixel SHA通过。'
         f'{len(lock["files"])}文件锁 `{snapshot["source_lock_sha256"]}`，单次launcher历史PID `{(snapshot.get("launch_receipt") or {}).get("pid")}`；'
-        f'本次快照阶段 `{phase}`、实际命令进程 `{len(snapshot["processes"])}`。'+cuda+'完整NONTEST8/426严格包分别看实际回执，尚未宣称ZIP完成。\n\n'
+        f'本次快照阶段 `{phase}`、实际命令进程 `{len(snapshot["processes"])}`。'+cuda+package_state+'\n\n'
         '旧Z时间实际adapter=False，521旧时间不能复用B2。非测试全源CPU/同基座空间只在输入/算法/关键SHA与完整回执一致后原样复用；'
         '复赛旧CPU域与新native源域不同，不准入复用，真实重算全源CPU/空间。后台真实B长输入CUDA→NONTEST8→426/521时间/全源空间→独立strict ZIP。'
         '最终只有真实B2 completion PASS、8/426独立strict全部true、大小/SHA/CRC/唯一JSONL/426身份验收才可提交。\n\n'
@@ -71,10 +82,18 @@ def main():
             common+=('v4另修复恢复失败证据丢失：新返回原文先写独立且不可覆盖raw，再做有效性校验，异常另记failure/traceback；'
                 '3项CPU验收无效原文保留/有效原文保留/重复覆盖拒绝通过。v3只停止等待controller，未开始恢复GPU，旧锁与产物保留。'
                 '冻结源码不回写，生成/色彩/时间配方保持v3，不重复任何成功推理。\n\n')
+            temporal=(snapshot.get('production_stage_receipts') or {}).get('rematch_01',{}).get('temporal.stage.json') or {}
+            if temporal.get('status')=='PASS_TEMPORAL_EXECUTION':
+                common+=(f'完整426/521时间已PASS、无效{temporal["invalid_windows"]}；'
+                    f'原{temporal["original_record_raw_lines_exact"]}成功记录整行字节/{temporal["original_successful_windows_reused"]}成功窗口相等，'
+                    f'仅为已登记送模型前失败实际新生成{temporal["new_generation_calls"]}窗MODEL_OK，原失败和STOP保留。'
+                    '原raw与接受窗、全部分母及NONTEST8/11 strict均经独立验收；实际GPU费用单独按wrapper账本核。'
+                    f'见[真实恢复验收]({REL}/controller/B2_v4_recovery_acceptance_20261008.json)。\n\n')
     def readme(text):
         before,rest=text.split('旧已评分包不变。',1)
         _,tail=rest.split('## 资源策略已取消人为额度',1)
-        row='| 复赛 | B2：保留Linux B最终LoRA、native输入与全源空间场 | 未评分 | [代码与生成状态]('+REL+'/'+entry+'/CONTINUE.md)；ZIP验收中 |\n'
+        package_label='`candidate_B2_8B.zip` 已在Linux严格验收' if final_ready else 'ZIP验收中'
+        row='| 复赛 | B2：保留Linux B最终LoRA、native输入与全源空间场 | 未评分 | [代码与生成状态]('+REL+'/'+entry+'/CONTINUE.md)；'+package_label+' |\n'
         if '| B2：' not in before:
             start=before.index('| 复赛 | Mac 8B：')
             before=before[:start]+row+before[start:]
@@ -98,6 +117,7 @@ def main():
         'B2_COLOR_RECOVERY_20261008.md','test_b2_handoff_cpu.py')]
     selected += [p for pattern in ('B2_v3_*_cpu_20261008.json','B2_v4_*_cpu_20261008.json')
                  for p in (RUN/'controller').glob(pattern) if p.is_file()]
+    selected += [p for p in [RUN/'controller/B2_v4_recovery_acceptance_20261008.json'] if p.is_file()]
     selected += [RUN/'controller/autonomy_registration_20261008.json']
     history=[name for name in ('b_score_aligned_package_v2','b_score_aligned_package_v3') if name!=entry and (RUN/name).is_dir()]
     selected += [path for name in [*history,entry] for path in (RUN/name).iterdir()

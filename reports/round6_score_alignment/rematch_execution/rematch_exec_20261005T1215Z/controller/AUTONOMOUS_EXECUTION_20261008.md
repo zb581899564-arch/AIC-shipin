@@ -4,7 +4,7 @@
 
 ## 当前入口与真实状态
 
-## 2026-10-08 03:37 UTC+8：自主B2接续与15分钟静默巡检
+## 2026-10-08 03:43 UTC+8：自主B2接续与15分钟静默巡检
 
 用户完全放权科学/工程裁决、立即修复并接续到一个最终ZIP；中途不参与/不发阶段通知。新大流量仍须许可，Mac不参与，最终包留Linux、不自动回传或AIC提交。
 
@@ -12,7 +12,7 @@
 
 自主选择B2：保留已评分37.63的B最终8B LoRA，以修复的原生PTS/合法坐标/全源空间场完成新候选。不是新的教师微调，不延长旧LoRA。旧37.63仍绑定旧B ZIP，新B2官方分未知；旧Z时间无B LoRA，不能复用B2。源CPU/同基座空间只在身份/算法/所有SHA及完整回执一致后原样复用。
 
-当前入口b_score_aligned_package_v4/CONTINUE.md，571文件锁SHA52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db。69项CPU合同、434来源/529真实元数据窗、原12目标无损回放；实际processor/HD默认张量相等/8非测试源重开pixel SHA验收状态PASS_B2_REAL_PROCESSOR_AND_NATIVE_SOURCE。一次launcher历史PID3965729，03:37实核完整路径进程1，阶段WAITING_VALID_B2_V1_TEMPORAL，completion=尚未写出。CUDA长输入/完整NONTEST8/426封包分别以真实回执为准，CPU或启动不当最终验收。
+当前入口b_score_aligned_package_v4/CONTINUE.md，571文件锁SHA52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db。69项CPU合同、434来源/529真实元数据窗、原12目标无损回放；实际processor/HD默认张量相等/8非测试源重开pixel SHA验收状态PASS_B2_REAL_PROCESSOR_AND_NATIVE_SOURCE。一次launcher历史PID3965729，03:43实核完整路径进程2，阶段RUNNING_REMATCH_SCHEDULING，completion=尚未写出。CUDA长输入/完整NONTEST8/426封包分别以真实回执为准，CPU或启动不当最终验收。
 
 后台控制器完整接续真实B LoRA长输入CUDA→NONTEST8→426/521时间/全源空间→独立strict ZIP；真实容量、共享GPU锁/追加账本/7200保持。无100confirm/本地复刻官网分/手看复赛调参。异常立即独立版本修复，运行冻结源码不改/launcher不重复，CPU SHA、顺序解码和共享队列可能合法。
 
@@ -21,6 +21,8 @@
 v4保留v2统一canonical duration：529窗56差异/29误拒绝已复现，529端点/529越界仍拒绝、529计划原生序号/PTS/参数相同；没有epsilon/裁值。额外修复一条送模型前errno95：97源log316在PyAV17/libswscale9无法转RGB，模型回答0。仅绑定该SHA/profile登记临时UNSPECIFIED transfer/限定范围ITU601样本映射，恢复frame元数据；源YUV/range/尺寸/PTS不变，不声称摄影gamma真值，其他源默认转换保持。9转换CPU/实际64RGB与空间BGR一致、真实processor/8非测试pixel SHA，11独立所有权mock/6真实失败分类均PASS。v2仅停止等待controller，独立owned_stop回执；不打断v1有效GPU生成。此快照原provider时间521/521、失败1；v4完整NONTEST8/strict后等待provider终态/追加账本，严格核所有成功原validator/输入/SHA，仅登记97送模型前失败在新目录实际生成一次，原成功行字节和旧失败STOP不改。新完整时间PASS才全源CPU/同转换空间/426严格ZIP；额外错误STOP立即独立诊断，不能放宽color白名单。详细controller/B2_COLOR_RECOVERY_20261008.md；571冻结文件不改，不重复launcher。
 
 v4另修复真实恢复回答的失败证据保存：原始返回在有效性校验前以独立且不可覆盖raw回执落盘，异常另记failure/traceback。3项CPU真实症状测试通过：无效响应拒绝后原文仍在、有效响应保留、重复写入拒绝。v3仅按完整命令/唯一PGID停止等待controller，未开始恢复GPU；旧568文件与STOP/成功物保持。v4色彩配方/生成算法/时长修复与v3相同，只生成已登记失败窗，不重复成功生成。
+
+本次真实恢复时间已PASS：426源/521窗、无效0；原425成功记录整行字节与520成功窗口保持，只真实新生成1窗，旧失败与STOP保持，失败转空0。新时间SHA9437a04e53c1c3f6aa623a8cbc8ec4f29051a396e1b2af5baf438ef70ef4971f，恢复wall54.568秒；实际GPU账本另核resource receipt，不能把仅生成wall当全部GPU开销。独立原字节/完整分母/原raw与接受窗/11项NONTEST8验收见controller/B2_v4_recovery_acceptance_20261008.json。后续全源CPU/空间/426 ZIP仍以真实当前阶段和终态为准，不重复任何成功生成。
 
 ## 必须继续到最终ZIP的工作
 

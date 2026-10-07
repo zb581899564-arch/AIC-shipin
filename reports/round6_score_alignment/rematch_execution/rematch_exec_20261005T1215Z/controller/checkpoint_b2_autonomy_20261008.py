@@ -80,6 +80,15 @@ print(json.dumps({'snapshot':snapshot,'remote_snapshot_path':str(snapshot_path),
                 '3项CPU真实症状测试通过：无效响应拒绝后原文仍在、有效响应保留、重复写入拒绝。'
                 'v3仅按完整命令/唯一PGID停止等待controller，未开始恢复GPU；旧568文件与STOP/成功物保持。'
                 'v4色彩配方/生成算法/时长修复与v3相同，只生成已登记失败窗，不重复成功生成。\n\n')
+            temporal=(snapshot.get('production_stage_receipts') or {}).get('rematch_01',{}).get('temporal.stage.json') or {}
+            if temporal.get('status')=='PASS_TEMPORAL_EXECUTION':
+                intro+=(f'本次真实恢复时间已PASS：{temporal["videos"]}源/{temporal["windows"]}窗、无效{temporal["invalid_windows"]}；'
+                    f'原{temporal["original_record_raw_lines_exact"]}成功记录整行字节与{temporal["original_successful_windows_reused"]}成功窗口保持，'
+                    f'只真实新生成{temporal["new_generation_calls"]}窗，旧失败与STOP保持，失败转空{temporal["failures_to_empty_conversions"]}。'
+                    f'新时间SHA{temporal["output_sha256"]}，恢复wall{temporal["actual_recovery_wall_seconds"]:.3f}秒；'
+                    '实际GPU账本另核resource receipt，不能把仅生成wall当全部GPU开销。'
+                    '独立原字节/完整分母/原raw与接受窗/11项NONTEST8验收见controller/B2_v4_recovery_acceptance_20261008.json。'
+                    '后续全源CPU/空间/426 ZIP仍以真实当前阶段和终态为准，不重复任何成功生成。\n\n')
     workspace=RUN.parents[3]
     for path,anchor in ((workspace/'AGENTS.md','# AIC 高光剪辑项目执行约定'),(RUN/'STATUS_AUTOPILOT_20261007.md','# Linux 后台接续登记')):
         content=path.read_bytes().decode('utf-8-sig');ending='\r\n' if '\r\n' in content else '\n'
