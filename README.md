@@ -23,13 +23,17 @@ AIC 产业命题赛「基于视频大模型的通用视频高光剪辑」的项�
 
 已按采纳结论建立独立 [next_round_v1](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1)。145项CPU合同、真实processor逐张量一致、全空426独立strict及真实CUDA空生成/空assistant有限CE损失已通过。修复严格0..1000坐标、合法空与失败分离、原生PTS训练目标、生产一致开发输入、全源空间场和Mac离线预留。旧已评分包不变。
 
-2026-10-07 17:22 UTC+8实查：v3于14:03在第11个列表窗口因字段缺失STOP，进度10/160。固定运行时要求response_format.json_schema.schema，旧同级schema被忽略。新独立[v4入口](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v4/CONTINUE.md)纠正嵌套、等价保留正/空/不确定三状态，校验服务实际grammar。32个运行时格式用例及原CPU合同/preflight通过；三个真实窗口（含原失败窗）和审核格式通过，每窗约75–80秒，17:20已自动恢复完整标注，最新11/160、0失败，控制器/GPU实查在跑。旧成功回执逐SHA/原validator核验后原样引用，失败raw保持；新T优化器更新0、无T ZIP。真实格式通过尚不代表160标签/语义复查或新训练质量通过。
+2026-10-07 21:55 UTC+8：v4已完成160/160标注、0工程失败，但所有原回答均选正，真实空例train/dev各0；第二次弱复查、T更新和新ZIP均0，科学门正确STOP。旧结果保存，没有把普通正例、失败或UNKNOWN改为空。
+
+用户随后授权修正高光定义并完成后续。[v5入口](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v5/CONTINUE.md)将可描述活动与有可见关键保留价值分开，同步修改弱复查提示。预先按window_id SHA256选择8train/4dev小试，不参考旧标签；原validator规则、固定模型、64nativePTS及学生lr1e-5/最多3epochs保持。小试原validator/真实弱复查通过后，再全量160新配方标签/完整科学门→微调→开发选点→NONTEST8→426/strict ZIP。跨提示词配方不复用v4标签，没有强制空例比例。另修复学生/检查点输出所有权写死v1的工程问题。
+
+79项CPU合同与200文件源码/模型preflight通过，v5已单次启动、实际controller命令身份存活；尚在启动完整SHA核验，真实小试和T更新以最新回执为准，不能将启动当质量或交付通过。[新配方协议](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v5/PROTOCOL.md)记录改动、原门与传输边界。
 
 v3维持同一自然窗口、源帧、PNG、固定权重、主提示词和validator。逐帧文本明确窗口内秒数，结构化生成将区间端点限定到实测窗口内采样PTS或0/窗口末端；输入身份metadata固定，空/不确定/高光语义及all_provided_frames_reviewed仍由模型选择。不修补旧响应或放宽validator，端点粒度作为新教师配方登记；另修复probe逐窗耗时数组的统计接口。
 
 Z已完成426条/521窗口时间和全源CPU调度，但13:08被旧冻结51GiB额度拒绝空间阶段而STOP，旧失败与源码保留，未生成Z包。机器实际尚有约193GiB空间；新T使用真实容量运行器，不以Z成功/评分为前提。Windows旧下载、上传桥接和Z回传停止，Mac不参与。用户批准的Linux原地下载与自动标注、微调、封包授权继续有效。
 
-T路线是32B离线教师观察128train/32dev自然窗口、生成并复查完整窗口弱标签，然后从已取得37.63的B最终LoRA以lr1e-5接续最多3epochs；第20更新做真实重载验收，每轮固定弱开发选择检查点，通过NONTEST8后做426复赛推理和strict ZIP。训练、开发、生产共用原生PTS选帧与0..5段输入合同；允许合法空，失败不转空。32B不进入比赛部署链，部署仍为8,782,459,120参数。详见[T协议](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v3/PROTOCOL.md)和[接续状态](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/STATUS_AUTOPILOT_20261007.md)。本轮未取得新官方分。
+T路线是32B离线教师观察128train/32dev自然窗口、生成并复查完整窗口弱标签，然后从已取得37.63的B最终LoRA以lr1e-5接续最多3epochs；第20更新做真实重载验收，每轮固定弱开发选择检查点，通过NONTEST8后做426复赛推理和strict ZIP。训练、开发、生产共用原生PTS选帧与0..5段输入合同；允许合法空，失败不转空。32B不进入比赛部署链，部署仍为8,782,459,120参数。详见[T协议](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v5/PROTOCOL.md)和[接续状态](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/STATUS_AUTOPILOT_20261007.md)。本轮未取得新官方分。
 
 中间产物和最终新ZIP先留Linux，用户只取一个选定提交包，取包前说明实际大小；其他新大流量传输须先说明规模、链路及可能机场消耗并取得确认。计算不依赖Windows持续在线，Mac不参与。磁盘/RAM/VRAM没有项目人为额度，新作业按真实容量和共享任务冲突安排；已注册旧作业与失败证据保持。S仍缺合格双比例构图参考。
 

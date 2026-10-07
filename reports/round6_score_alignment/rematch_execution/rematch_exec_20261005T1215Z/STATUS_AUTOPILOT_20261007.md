@@ -1,5 +1,19 @@
 # Linux 后台接续登记
 
+## 2026-10-07 21:55 UTC+8：用户授权高光定义修正，独立v5已单次启动
+
+用户“那你去修正，然后完成后续”授权新配方。v5把“可描述活动”与“值得保留的可见关键内容”分开，并同步弱复查标准；不定空例比例、不造标签。按window_id SHA256升序事先登记8train/4dev真实小试，小试仅允许后续160全量，不直接开训；完整train/dev各真实正/空、20更新前缀与全部eligible弱复查等原科学门保持。旧v4标签/STOP全部保留，跨配方不复用。
+
+另修复学生输出、20更新adapter重载及失败回执所有权误写死v1目录，以及probe admission父引用覆盖。原validator/select_windows/schema/教师身份逐字节保持；新prompt目录显式绑定。79项CPU检查（新配方9、teacher10、student16、clock8、ffprobe4、固定runtime grammar32）与完整200文件源码/模型preflight通过。Linux仅部署280324字节小量控制代码，教师权重原地使用。
+
+独立入口teacher_student_autopilot_v5/CONTINUE.md，200文件锁SHA0735f2d7f3c81857e09242f48ca905df9d07f7b132457e5002fb555dd8450057。21:55:36单次启动历史PID2985662，21:56:45实查完整controller命令身份存活，尚在启动模型/源码SHA核验，registration/真实GPU与小试标签未写出；此时T更新0、无T ZIP，不把启动当验收。Linux自动小试→重输入probe→160标签/完整弱复查→原37.63 B LoRA续训T（lr1e-5/最多3epochs）→开发选点→NONTEST8→426/独立strict ZIP。
+
+监控已更新到v5并保持原每小时频率；正常状态保持安静，异常立即定位修复。Mac不参与，实际容量与共享GPU锁/追加账本保持，100confirm不读；不自动回传/官网上传/新增大流量下载。最终只有completion PASS_AUTOPILOT_FINAL_T_ZIP_ON_LINUX加426strict全部通过及大小/SHA/CRC核验才可提交。旧预计时间失效，待有效小试实测速率重估。
+
+## 2026-10-07 20:37 UTC+8：v4完整标注后科学门STOP
+
+v4于20:26:47停止，控制器与教师退出。160/160标注完成、0工程失败；98train/27dev合格正例，35条超过5段排除保留；真实空例train/dev均0。第二次真实弱审核尚未生成，T更新0、无T ZIP。三个真实schema的固定grammar空/不确定CPU测试和原teacher CPU10项通过，151新窗口关键文件SHA通过；未发现可修复工程错误，不将失败/排除/普通正例强造为空，不删科学门。待用户选择新提示词小试或独立自然窗口扩选，提案controller/TEACHER_RECIPE_DECISION_20261007.md；旧预计训练/ZIP时间失效。监控保持启用，已确认停止未变时不重复通知，所有旧成功与失败保留。
+
 ## 2026-10-07 17:09 UTC+8：v3格式STOP，独立v4已启动验证
 
 17:22 UTC+8实时补充：v4三个真实标注窗口（含原失败窗）均通过原strict validator与实际生成grammar检验，耗时74.694/74.398/79.833秒；真实审核请求格式亦PASS，可表达拒绝，不当语义质量通过。17:20:53自动进入RUNNING_TEACHER_FULL，17:21:57列表11/160、0失败，17:22实查控制器命令身份存活、GPU计算中。新T optimizer更新仍0、无新T ZIP；粗估训练完成今晚23点至次日02点，ZIP次日05–10点，须后续门通过。v4 probe completion原字节已保持，成本引用SHA一致；缓存阶段仍覆盖其child teacher_admission父引用文件，原字节无法还原，另存probe_parent_reference_audit.json，不冒充引用完全不变。原始逐窗模型/源帧/raw/耗时与冻结validator链保持，训练资格不依赖该缓存父引用。

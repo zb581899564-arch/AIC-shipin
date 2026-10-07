@@ -1,0 +1,30 @@
+{
+  "status": "PASS_PREREGISTERED_LABEL_INDEPENDENT_PILOT",
+  "window_ids": [
+    "complete_7757d020fcdef4d4db1f4dbc",
+    "complete_cd3e09529324acc16114d2fa",
+    "complete_47c0dd5636aff0e0ebbc37a1",
+    "complete_af54d88f8f48732039b514c3",
+    "complete_a1a6619c8af6732ef6c4798f",
+    "complete_6927d8eafbda6602e0b6e7a6",
+    "complete_c3ef08d0ae9c755915b0ec00",
+    "complete_946fa65d6ef10a8f021a408d",
+    "complete_86bf69d3ade2a644b9c19095",
+    "complete_999f44661e0ad2ba0fc003ab",
+    "complete_e1e3a1030b7e5f5e7f4b9fb2",
+    "complete_229ff0be5322a3810fc9d4dd"
+  ],
+  "counts": {
+    "train": 8,
+    "dev": 4
+  },
+  "rule": "SHA256_WINDOW_ID_ASCENDING_8TRAIN_4DEV",
+  "parent_files_sha256": {
+    "selected_train.jsonl": "32c6e043443755f8eaef62b56dcc455e10dad7f6c66d883a8ed0044342545477",
+    "selected_dev.jsonl": "2ad65a6d36f2e5a2ca2e62b8802bcf93ba7f9675f1988cd66b5d0804c691d3c2",
+    "selection_receipt.json": "ecf72676c2d46cbe7dea3b8bd3aab1bbedec765e431ce53731b22dd394705ead"
+  },
+  "selection_receipt_sha256": "944b8b4de90df644c60ce8daf81941e7e92b212457d00dd0c916f2801c62f133",
+  "no_label_access": true,
+  "teacher_prompt_sha256": "653399bcb1ce8fea19a5ce366666f73a463063265405f994c6b1a25e12e7084c"
+}

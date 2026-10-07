@@ -1,0 +1,35 @@
+{
+  "status": "PASS_V5_CPU_CONTRACTS",
+  "results": [
+    {
+      "name": "pilot_prepare",
+      "returncode": 0
+    },
+    {
+      "name": "recipe_cpu",
+      "returncode": 0
+    },
+    {
+      "name": "teacher_cpu",
+      "returncode": 0
+    },
+    {
+      "name": "student_cpu",
+      "returncode": 0
+    },
+    {
+      "name": "clock_cpu",
+      "returncode": 0
+    },
+    {
+      "name": "ffprobe_cpu",
+      "returncode": 0
+    },
+    {
+      "name": "schema_cpu",
+      "returncode": 0
+    }
+  ],
+  "GPU_started": false,
+  "semantic_quality_pending": true
+}
