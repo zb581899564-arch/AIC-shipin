@@ -1,0 +1,40 @@
+{
+  "status": "PASS_B2_CPU_CONTRACTS",
+  "tests": 65,
+  "additional_contract_cases": 29,
+  "inherited_tests": 36,
+  "actual_metadata_sources": 434,
+  "actual_natural_windows": 529,
+  "actual_sampled_native_endpoints": 33447,
+  "original_target_values_replayed": 12,
+  "original_target_values_changed": 0,
+  "original_target_file_sha256": "7d6891ac51d61e4c26d04877ddf5178027794b33c57e8107c50f052f659e1aa1",
+  "cases": [
+    {
+      "scope": "nontest",
+      "sources": 8,
+      "all_metadata_windows_plannable": true
+    },
+    {
+      "scope": "rematch",
+      "sources": 426,
+      "all_metadata_windows_plannable": true
+    }
+  ],
+  "helper_bindings": {
+    "contracts": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/contracts.py",
+    "constrained_json": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/constrained_json.py",
+    "package_contract": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/package_contract.py",
+    "frame_contract": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/frame_contract.py",
+    "field_contract": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/field_contract.py",
+    "video_contract": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/video_contract.py",
+    "native_segment_contract": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/native_segment_contract.py",
+    "native_input": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/native_input.py"
+  },
+  "actual_CUDA_started": false,
+  "optimizer_updates": 0,
+  "teacher_quality_not_admitted": true,
+  "source_media_pixels_read": false,
+  "official_score_reconstruction": false,
+  "confirm_read": false
+}

@@ -1,20 +1,18 @@
 # AIC 高光剪辑项目执行约定
 
-## 2026-10-08 01:02 UTC+8：自主裁决与15分钟静默监控已登记
+## 2026-10-08 01:58 UTC+8：自主B2接续与15分钟静默巡检
 
-用户完全放权到最终ZIP；工程修复、科学路线、独立新版本和接续均自主完成，阶段证据写项目，最后验收报告一次。新大流量仍先许可，Mac不参与，最终包留Linux、不自动回传或官网上传。
+用户完全放权科学/工程裁决、立即修复并接续到一个最终ZIP；中途不参与/不发阶段通知。新大流量仍须许可，Mac不参与，最终包留Linux、不自动回传或AIC提交。
 
-v7已于10月7日23:49:31科学STOP：12/12正、空0、工程失败0，第二真实弱复查10支持/2拒绝；原标签与234冻结文件保持。没有T更新或T ZIP，不重开旧配方。
+32B context v3已01:02:48完整8/8请求、0工程失败，3正均弱复查支持、唯一NO被拒绝，真实受支持空例0；原raw/审核/科学STOP均保留，T更新0。审核声称背景只到119.0189秒，但实际overview末PTS149.98316666666668、13帧>=120；该事实性错误与其他语义争议同时保留，不能翻转拒绝。
 
-当前入口teacher_context_diagnostic_v3/CONTINUE.md，312文件锁SHAf95f3a60b3ab2ac673f899103c5960f4a80ac04667f0287c4144cce2b93b9f6c。324项Linux CPU合同（含289实际runtime grammar）和原记录逐SHA/validator回放通过，51,512字节小量控制代码直接SSH部署。一次launcher历史PID3210273，01:02实际完整路径捕获进程2、所属server1，阶段REAL_RELATIVE_SUMMARY_WEAK_REVIEW，真实判断4/4、复查3/4，全源背景回执4/4。完成回执尚未写出。诊断输出不是训练标签，不宣称上下文已解决科学阻塞。
+自主选择B2：保留已评分37.63的B最终8B LoRA，以修复的原生PTS/合法坐标/全源空间场完成新候选。不是新的教师微调，不延长旧LoRA。旧37.63仍绑定旧B ZIP，新B2官方分未知；旧Z时间无B LoRA，不能复用B2。源CPU/同基座空间只在身份/算法/所有SHA及完整回执一致后原样复用。
 
-v1首请求将ordinal1723错配另一帧时间，差0.5005秒，独立诊断validator正确拒绝；独立v2/v3绑定每帧ordinal/time完整anyOf，使用原始十进制字符串和Decimal验证。固定C++ converter数字常量变位已CPU复现；当前256真实native时间无损通过，全部旧失败保持。
+当前入口b_score_aligned_package_v1/CONTINUE.md，527文件锁SHA0c63bc55df1ec3a34773dc543f4241241a646ac55249b320c72df02fab598d2c。65项CPU合同、434来源/529真实元数据窗、原12目标无损回放；实际processor/HD默认张量相等/8非测试源重开pixel SHA验收状态PASS_B2_REAL_PROCESSOR_AND_NATIVE_SOURCE。一次launcher历史PID3295213，01:58实核完整路径进程3，阶段RUNNING_NONTEST_TEMPORAL，completion=尚未写出。CUDA长输入/完整NONTEST8/426封包分别以真实回执为准，CPU或启动不当最终验收。
 
-v2实际4/4判断完成，两个有/无整段overview配对均正、状态未变，0工程失败；不能声称添加背景已解决分布。独立v3改变科学任务为先说明整段可见主内容与窗外对比，再判断摘要必要性。原校准剩余来源按split/window_id SHA各取两条，共4判断+全部4真实弱复查；不按旧标签或拒绝筛选，无类别/时长配额。旧校准不冒充未触碰验证。
+后台控制器完整接续真实B LoRA长输入CUDA→NONTEST8→426/521时间/全源空间→独立strict ZIP；真实容量、共享GPU锁/追加账本/7200保持。无100confirm/本地复刻官网分/手看复赛调参。异常立即独立版本修复，运行冻结源码不改/launcher不重复，CPU SHA、顺序解码和共享队列可能合法。
 
-完整诊断后按证据自主登记下一监督或可交付方案，并继续原完整质量门→B LoRA lr1e-5最多3epochs→开发→NONTEST8→426独立strict ZIP。诊断若不支持则不重复盲试，不造空或弱化门。详细接续controller/AUTONOMOUS_EXECUTION_20261008.md，实际快照controller/monitor_aic_linux/latest.json。
-
-aic-linux每15分钟静默检查；完成前不发阶段通知，异常立即自主处理。Windows开机且Codex运行才能唤醒本地检查，Linux后台计算独立继续。旧时间预测和下方快照均历史。
+只有PASS_COMPLETE_426_B2_8B_ZIP_ON_LINUX加NONTEST8/426独立strict全部true、实际ZIP大小/SHA/CRC/唯一JSONL/426身份通过，才最后报告一次并删除aic-linux。不伪写T完成。详细决策controller/NEXT_ACTION_B2_20261008.md，快照controller/monitor_aic_linux/latest.json。Windows开机且Codex运行才能唤醒巡检，Linux后台独立计算；旧预测/下方历史快照均按历史理解。
 
 ## 2026-10-0723:38 UTC+8：全链工程修复验收；v7分布未通过，继续真实诊断复查
 

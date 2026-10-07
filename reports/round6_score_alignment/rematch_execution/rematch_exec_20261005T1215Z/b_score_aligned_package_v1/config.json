@@ -1,0 +1,66 @@
+{
+  "schema": "AIC_B2_SCORE_ALIGNED_PACKAGE_V1",
+  "model_dir": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/models/Qwen3-VL-8B-Instruct",
+  "model_receipt": {
+    "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/model_download_v2_status.json",
+    "sha256": "ab3e30b18dc54ceb7cb90b07194eff30449db75653483da5b213807137d8da70"
+  },
+  "b_adapter": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_full_v1/train_01/adapter",
+  "b_adapter_sha256": "8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23",
+  "open_dev_contract": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_dev_v1/input_contract.json",
+  "video_size": {
+    "shortest_edge": 4096,
+    "longest_edge": 25165824
+  },
+  "max_input_tokens": 16384,
+  "max_sampled_frames": 64,
+  "inputs": {
+    "nontest": {
+      "manifest": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/baseline_pts_v4/nontest_registry_01/clean_manifest_v2.json",
+      "manifest_sha256": "ba34a284183e8a079054ffe811d7ec096e6b47c94e6edf812a37fd11b92d8dd7",
+      "registry": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/baseline_pts_v4/nontest_registry_01/clock_registry.json",
+      "registry_sha256": "7f57785312c94b1658cb002b2432d09b318ae2943e3297a0c45536d1bd8cd3ea"
+    },
+    "rematch": {
+      "manifest": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/baseline_pts_v4/scan_01/clean_manifest_v2.json",
+      "manifest_sha256": "ceb91ee9434ce3de6a55abf727e613b83368b547d3be3d1e71b46414c2f019f8",
+      "registry": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/baseline_pts_v4/scan_01/clock_registry.json",
+      "registry_sha256": "1058aba02e5e959bc8e4842cbde0eadced192a8201d5c833ae50a7c0aac07909"
+    }
+  },
+  "candidate_arm": "B2_TRAINED_B_NATIVE_PTS_SOURCE_FIELD",
+  "empty_training_enabled_only_after_observed_supervision": true,
+  "official_score_reconstruction": false,
+  "old_artifacts_unchanged": true,
+  "temporal_adapter_enabled": true,
+  "new_optimizer_updates": 0,
+  "new_T_training_started": false,
+  "whole_teacher_supervision_admitted": false,
+  "official_score": null,
+  "original_scored_B_zip_sha256": "86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54",
+  "model_revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+  "expected_base_sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+  "base_parameters": 8767123696,
+  "complete_parameters": 8782459120,
+  "trained_B_report": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_full_v1/train_01/train_report.json",
+  "existing_B_dev_decision": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_dev_v1/decision.json",
+  "cpu_cache_root": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1",
+  "current_runner": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/resource_unlimited_v1_20261007/gpu_run.py",
+  "b2_input_contract": {
+    "sampling": "INTEGER_FLOOR_64_NATIVE_ORDINAL_ENDPOINTS",
+    "clock": "ACTUAL_NATIVE_PTS_ALL_FORMAT_BRANCHES",
+    "decoder": "SEQUENTIAL_PYAV_RGB24",
+    "prompt": "UNCHANGED_B_1_TO_5",
+    "allow_empty": false,
+    "truncation": false,
+    "max_input_tokens": 16384,
+    "video_size": {
+      "shortest_edge": 4096,
+      "longest_edge": 25165824
+    }
+  },
+  "developer_repeated": false,
+  "confirm_read": false,
+  "automatic_return": false,
+  "uploaded": false
+}

@@ -10,6 +10,7 @@ AIC 产业命题赛「基于视频大模型的通用视频高光剪辑」的项�
 | --- | --- | ---: | --- |
 | 复赛 | A：4B / P2-T2 时间模型，native PTS 与帧身份恢复 | **33.81** | [candidate_A_PTS.zip][zip-a] |
 | 复赛 | B：Linux 8B 区间 JSON SFT，最终 5 轮，同 8B 空间基座 | **37.63** | [candidate_B_8B.zip][zip-b] |
+| 复赛 | B2：保留Linux B最终LoRA、native输入与全源空间场 | 未评分 | [代码与生成状态](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/CONTINUE.md)；ZIP验收中 |
 | 复赛 | Mac 8B：64 帧低分辨率区间 SFT | **33.46** | [candidate_MAC_8B.zip](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_01/candidate_MAC_8B.zip)；用户已提交，方案停止 |
 | 初赛 | 未微调 Qwen3-VL 单片段基线 | 41.09 | [baseline ZIP](submissions/qwen3vl_baseline_20260910/baseline_qwen3vl_20260910.zip) |
 | 初赛 | 未微调 Qwen3-VL 多片段 reader | 41.22 | [multi-reader ZIP](submissions/qwen3vl_multi_reader_20260910/aic-qwen3vl-multi-20260910.zip) |
@@ -23,23 +24,15 @@ AIC 产业命题赛「基于视频大模型的通用视频高光剪辑」的项�
 
 已按采纳结论建立独立 [next_round_v1](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1)。145项CPU合同、真实processor逐张量一致、全空426独立strict及真实CUDA空生成/空assistant有限CE损失已通过。修复严格0..1000坐标、合法空与失败分离、原生PTS训练目标、生产一致开发输入、全源空间场和Mac离线预留。旧已评分包不变。
 
-2026-10-08 01:02 UTC+8：用户已授权完全自主裁决、修复和接续至最终 ZIP，已有监控改为每15分钟静默检查。v7于10月7日23:49:31科学STOP：12/12均正、真实空0，第二真实弱复查12/12为10支持/2拒绝，工程失败0；旧失败与标签保持，T更新0，无新T ZIP。
+2026-10-08 01:58 UTC+8：当前自主接续为[B2已微调8B生产对齐](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/CONTINUE.md)。保留已评分37.63的B最终LoRA，不增加训练更新；时间使用B adapter、空间同8B原生基座，总逻辑参数8,782,459,120。B2采用所有分支实际native PTS/floor64帧/顺序PyAV/16384长输入、精确端点与全源空间场，仍用B原1–5段提示与greedy。旧37.63仍绑定旧B包，新B2官网分未知。
 
-当前独立 [相对全源摘要必要性诊断v3](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v3/CONTINUE.md)：v2完整4次有/无背景配对均正、状态未变，因此v3改为先说明整段可见主内容、与窗外比较再判断目标保留价值。剩余校准来源只按split内window_id SHA各选2条，不按旧标签或内容筛选；4次判断后全部4次真实弱复查，无配额。校准不是未触碰验证，诊断回答不成为训练标签或人工真值。324项Linux CPU（289实际固定runtime grammar、256真实native时间）和原记录逐SHA/validator回放通过；312文件锁 `f95f3a60b3ab2ac673f899103c5960f4a80ac04667f0287c4144cce2b93b9f6c`，单次launcher历史PID `3210273`。该次实查阶段 `REAL_RELATIVE_SUMMARY_WEAK_REVIEW`，判断 `4/4`、复查 `3/4`、实际命令进程 `2`、所属server `1`。
+32B context v3已经完整8/8真实请求、0工程失败，三正被弱审核支持，唯一NO被拒绝；没有受支持真实空例，T更新0。审核声称overview仅到119.0189秒，实际完整源回执末PTS149.98316666666668、13帧>=120；事实性错误和语义争议同时保留，不能将拒绝改PASS或空标签当真值。旧raw/失败/科学STOP保存；不再盲试同配方，不造空或弱化原监督门。B2是保留已经训练B的可交付路线，不冒充新教师T训练。
 
-诊断v1首请求错配frame ordinal与另一帧的秒数，差0.5005秒，被独立validator正确拒绝。v2以每帧完整ordinal/time对象anyOf固定配对，时间用源数据的完整十进制字符串与Decimal验证；固定C++ JSON/runtime numeric常量变位已复现，原失败不改写/复用。见[独立修复](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_context_diagnostic_v2/REPAIR.md)、[科学决策](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/RELATIVE_SUMMARY_DECISION_20261008.md)和[自主接续](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/AUTONOMOUS_EXECUTION_20261008.md)。
+65项CPU、434来源/529真实自然窗/33447样本端点、12原目标无损回放与实际processor/HD/8非测试源重开pixel SHA通过。527文件锁 `0c63bc55df1ec3a34773dc543f4241241a646ac55249b320c72df02fab598d2c`，单次launcher历史PID `3295213`；本次快照阶段 `RUNNING_NONTEST_TEMPORAL`、实际命令进程 `3`。实际B LoRA长输入CUDA已PASS：12048token、288 adapter张量与保存值相等、全基座SHA与原训练相等，选择token分数有限；0优化器更新。完整NONTEST8/426严格包分别看实际回执，尚未宣称ZIP完成。
 
-完整八请求后按证据独立登记下一监督或可交付8B方案。T仍经原完整质量门推进B LoRA lr1e-5/最多3epochs、第20更新实际重载、开发、NONTEST8、426独立strict ZIP。不重复已证伪配方、不造空或弱化科学门。最终只交付一个Linux ZIP，不自动回传/官网上传；新大流量先许可，Mac不参与。Linux后台计算独立运行；本地定时诊断/修复需要Windows开机且Codex运行。旧预测失效，官网新分未知。
+旧Z时间实际adapter=False，521旧时间不能复用B2。非测试全源CPU/同基座空间只在输入/算法/关键SHA与完整回执一致后原样复用；复赛旧CPU域与新native源域不同，不准入复用，真实重算全源CPU/空间。后台真实B长输入CUDA→NONTEST8→426/521时间/全源空间→独立strict ZIP。最终只有真实B2 completion PASS、8/426独立strict全部true、大小/SHA/CRC/唯一JSONL/426身份验收才可提交。
 
-v7的94项CPU、10302实际端点、12原目标无损及两条真实native解码验收仍有效；工程通过不代表标签分布或CUDA训练通过。[全链审计](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/COMPREHENSIVE_AUDIT_20261007.md)保留全部问题与限制。
-
-Z已完成426条/521窗口时间和全源CPU调度，但13:08被旧冻结51GiB额度拒绝空间阶段而STOP，旧失败与源码保留，未生成Z包。机器实际尚有约193GiB空间；新T使用真实容量运行器，不以Z成功/评分为前提。Windows旧下载、上传桥接和Z回传停止，Mac不参与。用户批准的Linux原地下载与自动标注、微调、封包授权继续有效。
-
-T路线是32B离线教师观察128train/32dev自然窗口、生成并复查完整窗口弱标签，然后从已取得37.63的B最终LoRA以lr1e-5接续最多3epochs；第20更新做真实重载验收，每轮固定弱开发选择检查点，通过NONTEST8后做426复赛推理和strict ZIP。训练、开发、生产共用原生PTS选帧与0..5段输入合同；允许合法空，失败不转空。32B不进入比赛部署链，部署仍为8,782,459,120参数。详见[T协议](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7/PROTOCOL.md)和[接续状态](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/STATUS_AUTOPILOT_20261007.md)。本轮未取得新官方分。
-
-中间产物和最终新ZIP先留Linux，用户只取一个选定提交包，取包前说明实际大小；其他新大流量传输须先说明规模、链路及可能机场消耗并取得确认。计算不依赖Windows持续在线，Mac不参与。磁盘/RAM/VRAM没有项目人为额度，新作业按真实容量和共享任务冲突安排；已注册旧作业与失败证据保持。S仍缺合格双比例构图参考。
-
-不需要本地复刻AIC官方总分；非测试诊断和格式/身份检查保留。正式得分来自官网每日最多5次提交，阶段最高有效分排名。内部弱教师F1不能替代官方分。[复赛通知](https://www.aicomp.cn/notice/notice-3/5307.html)
+已有监控每15分钟静默核查、自主修复并更新证据，最后汇报一次。Linux后台独立运行，本地巡检需要Windows开机且Codex运行。最终只有一个选定ZIP留Linux，不自动回传或AIC上传；新大流量先许可、Mac退出，实际容量与共享GPU锁/账本/7200保持。见[B2决策](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/NEXT_ACTION_B2_20261008.md)、[协议](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1/PROTOCOL.md)、[实时接续](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/STATUS_AUTOPILOT_20261007.md)。
 
 ## 资源策略已取消人为额度（2026-10-07）
 
@@ -69,6 +62,7 @@ Mac 版本保留相同监督、r16、学习率和训练曝光量，改为最多 
 | Mac 低内存训练与 MPS 修复 | [mac_sft8b_64_lowres_v8][mac-train]：`train_mac.py`、`mac_inputs.py`、`mps_deepstack.py` |
 | Mac 最终 adapter 的 CUDA 开发与提交包 | [mac8b_delivery_v2][mac-delivery]：`lowres.py`、`runtime.py`、`dev/evaluate.py`、`production.py` |
 | PTS 合同、顺序帧解码、CPU 镜头与空间锚点 | [baseline_a_pts_v1][pts-code]；JSON 约束在同级 `baseline_a_format_recovery_v1` |
+| B2已训练B生产对齐 | [b_score_aligned_package_v1](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v1)：`engine.py`、`native_input.py`、`cache_contract.py`、`production.py`、`controller.py` |
 | 新教师/8B全链与审计修复 | [v7源码](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v7)：`teacher_label.py`、`train_student.py`、`precision_helpers`、`production_t.py`、`controller.py` |
 | 共享 GPU 作业锁、资源证据与追加账本 | [controller/gpu_run.py][gpu-run] |
 | Qwen 原生基线实现 | [inference/baseline_qwen3vl.py](inference/baseline_qwen3vl.py) |

@@ -23,7 +23,7 @@ def capture(version, entry=None):
     if socket.gethostname() != 'inspur-NP5570M5':
         raise RuntimeError('unexpected training host')
     entry = entry or ('teacher_student_autopilot_' + version)
-    if not re.fullmatch(r'teacher_(?:student_autopilot|context_diagnostic)_v[1-9][0-9]*', entry):
+    if not re.fullmatch(r'(?:teacher_(?:student_autopilot|context_diagnostic)|b_score_aligned_package)_v[1-9][0-9]*', entry):
         raise RuntimeError('unexpected inspection entry')
     here = RUN / entry
     if not here.is_dir():
@@ -76,10 +76,26 @@ def capture(version, entry=None):
                 'window_counts': dict(states), 'window_receipts': windows,
                 'all_completed_window_file_sha_pass': all(all(w['file_sha_checks'].values()) and w['file_sha_checks']
                                                           for w in windows if w['done_status']),
-                'new_zip_paths': [str(p.relative_to(here)) for p in here.glob('**/candidate_T_8B.zip')],
+                'new_zip_paths': [str(p.relative_to(here)) for pattern in ('**/candidate_T_8B.zip','**/candidate_B2_8B.zip')
+                                  for p in here.glob(pattern)],
                 'source_lock_sha256': hashlib.sha256((here/'source_lock.json').read_bytes()).hexdigest()
                     if (here/'source_lock.json').is_file() else None,
-                'launch_receipt': read(here/'start_receipt.json')}
+                'launch_receipt': read(here/'start_receipt.json') or read(here/'launch.json')}
+    if entry.startswith('b_score_aligned_package_'):
+        snapshot['b2_cpu_acceptance'] = read(here/'cpu_acceptance.json')
+        snapshot['b2_processor_acceptance'] = read(here/'processor_acceptance.json')
+        snapshot['b2_probe'] = read(here/'probe_01/probe.stage.json')
+        snapshot['b2_probe_receipt_sha256'] = hashlib.sha256((here/'probe_01/probe.stage.json').read_bytes()).hexdigest() \
+            if (here/'probe_01/probe.stage.json').is_file() else None
+        snapshot['active_gpu_job'] = read(RUN.parents[2]/'improvement_round1/active_gpu_job.json')
+        snapshot['b2_resource_receipts'] = {p.name:read(p) for p in
+            sorted((RUN/'controller').glob('rematch_B2_'+entry.rsplit('_',1)[1]+'*.resource.json'))}
+        snapshot['b2_queue_receipts'] = {p.name:read(p) for p in
+            sorted((RUN/'controller').glob('rematch_B2_'+entry.rsplit('_',1)[1]+'*.queue.json'))}
+        snapshot['b2_artifact_activity'] = {
+            scope:{p.name:{'bytes':p.stat().st_size,'mtime_ns':p.stat().st_mtime_ns}
+            for p in sorted((here/scope).glob('*')) if p.is_file()}
+            for scope in ('probe_01','nontest_01','rematch_01')}
     if entry.startswith('teacher_context_diagnostic_'):
         snapshot['context_diagnostic_requests'] = [
             {'window_id': row['window_id'], 'arm': row['arm'], 'status': row['status'],
