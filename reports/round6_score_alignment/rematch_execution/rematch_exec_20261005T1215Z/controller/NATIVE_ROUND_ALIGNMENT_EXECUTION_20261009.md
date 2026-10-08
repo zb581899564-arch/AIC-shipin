@@ -19,3 +19,13 @@ GitHub仅明确白名单核心/协议/工程聚合和receiptSHA，不含source_l
 2026-10-08T22:25:18.766192+00:00完整120消费者CPU准入PASS：110变化输入实际decoder/processor与10原成功exact引用，2000 ordinal性质/4固定门/521旧V14原raw validator及2修改拒绝、samecount/firstlast/grid与交集RGB全部通过，实际maxinput=6761，grid变化0，新model/optimizer/32B0。完整私有CPU proof SHA0d21fc806693fcc5a5879bc1286b266451100955db1d903de205397753f3ee0f留Linux，不回传，不重复。新跨消费者完整B0 processor prompt独立纯CPU合同receipt SHA b453ea5815fa293e8a5b925448c1197df213b2de6900378f3c938022f2f2a0cd 已通过；不是重复旧V14正式验收。
 
 冻结18607文件，source_lock SHA212b0f9a2b66f7837d0f29572e2af2ffdc4044ae3fb5cd0b00718b6cb032da48，完整冻结preflight通过。2026-10-08T22:29:33.846469+00:00单次launcher启动，历史PID/PGID3752386仅启动回执，后续必须实时核完整命令/父子PGID/IO/fds。CPU和启动新模型调用0，尚无426包；当前进度以实时monitor为准，不能拿计划110调用或历史PID当真实成功。
+
+## 实际科学终态与有限证据收尾
+
+2026-10-08T22:56:24.915648UTC完整开发104记录/96来源组/112窗自然完成：102真实新Q、10输入完全相同的原B0成功exact引用，逐窗failure0；新Q总110包含NONTEST8。22:56:30.538376UTC开发wrapper自然completed/exit0/stop_reason null，真实charge710.77324480284秒/peak20414MiB唯一ledger163；NONTEST原175.13144869171083秒/ledger162与7200历史offset保持。全102新开发独立CPU回放通过，receipt SHA181b5a4a8f013ea0b8f5dbdd8984b259b0c5968cd5bcb0a55225e2982ed58b43，不重复模型、decoder/processor或已完成验收。
+
+23:04:22.897042UTC固定report拒绝：all104 Q-B0=0.0028675084249248947，扩展72组=-0.011370797431947438，40输出集合改变、16组下降；CI只报告，弱输出一致性不是官网质量或人工真值。扩展组>0门失败，23:04:23.735389UTC原scientific_stop保持，未生产新的426 ZIP，没有root completion或新官网分。
+
+23:13:27.408173UTC独立STOP收尾PASS_INDEPENDENT_FINITE_SCIENTIFIC_STOP_RAW_AGGREGATE_AND_ACCOUNTING：完整18607冻结SHA、全部104原raw重建matched、同seed10000组bootstrap/原固定门、102已接受CPU done SHA、10原exact引用、GPU自然终态唯一账本和NONTEST8全部11strict/ZIP原字节再核一致。新decoder/processor/model/optimizer调用0；不是重复CPU回放，也不是最终426包验收。私有receipt SHAa05f23057153e7782d100a42c0c45e58d07cc05664734d33ead7fdbd0585fede，report SHA6b20ec2f62906bc24f5be09390703194632d08a0cff3ad08d439f9efc4f6ceb9，STOP SHA076311b4da5fd4083f025f563d1002302d88f38cecbeeecafbce14d9771179ee。
+
+23:10实际owned完整命令0、shared active null、旧所有终态保持。有限已登记输入机制证据已耗尽，保留原B37.63最佳包；更好完整426包的目标尚未取得，不称完成。23:14:03UTC通过Codex app实际删除已无剩余作业的aic-linux监控，未归档聊天，没有更改外部任务、共享锁、账本或连接服务。仅筛选核心/协议/终态工程聚合更新GitHub，原raw/弱标签/逐帧CPU/模型/非测试ZIP不发布。

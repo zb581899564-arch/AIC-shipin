@@ -1,14 +1,14 @@
 {
   "status": "CURATED_NATIVE_NEAREST_ENGINEERING_NOT_QUALITY_TRUTH",
-  "snapshot_utc": "2026-10-08T22:29:55.790595+00:00",
+  "snapshot_utc": "2026-10-08T23:10:29.158406+00:00",
   "entry": "native_round_alignment_v1",
   "source_lock_sha256": "212b0f9a2b66f7837d0f29572e2af2ffdc4044ae3fb5cd0b00718b6cb032da48",
   "frozen_files": 18607,
-  "current_stage": "CONTROLLER_SOURCE_PREFLIGHT_CPU_ACTUAL_COMMAND_AND_IO",
-  "actual_new_nearest_done": 0,
+  "current_stage": "STOP_ROUND_ALIGNMENT_INVESTMENT_FINITE_EVIDENCE_EXHAUSTED",
+  "actual_new_nearest_done": 110,
   "done_by_scope": {
-    "nontest_01": 0,
-    "developer_01": 0,
+    "nontest_01": 8,
+    "developer_01": 102,
     "rematch_01": 0
   },
   "new_failure_count": 0,
@@ -52,6 +52,122 @@
   "actual_spatial_grid_changed_windows": 0,
   "private_CPU_receipt_sha256": "0d21fc806693fcc5a5879bc1286b266451100955db1d903de205397753f3ee0f",
   "source_lock_resume_frames_raw_reference_rows_labels_weights_ZIP_exported": false,
+  "first_real_independent_CPU": {
+    "status": "PASS_REAL_FIRST_NATIVE_ROUND_ALIGNMENT_AND_INDEPENDENT_CPU_REPLAY",
+    "utc": "2026-10-08T22:34:15.740864+00:00",
+    "input_tokens": 5312,
+    "actual_native_processor_raw_validator_equal": true,
+    "new_model_calls": 0,
+    "new_optimizer_updates": 0,
+    "private_receipt_sha256": "34e6faf39fb80c175f122046b14f1c37195fc83356a59d1e122069895b85fc64"
+  },
+  "full_developer_aggregate": {
+    "status": "STOP_NATIVE_ROUND_ALIGNMENT_INVESTMENT",
+    "utc": "2026-10-08T23:04:22.897042+00:00",
+    "records": 104,
+    "groups": 96,
+    "windows": 112,
+    "new_round_alignment_calls": 102,
+    "exact_original_success_reused": 10,
+    "original_B0_reused": 112,
+    "all104_Q_minus_B0": {
+      "mean": 0.0028675084249248947,
+      "ci95": [
+        -0.03560765390434146,
+        0.038973738491221696
+      ],
+      "resampling_units": 96,
+      "point_estimator": "VIDEO_MACRO_RECOMPUTED_AFTER_SOURCE_GROUP_RESAMPLE",
+      "draws": 10000,
+      "seed": 20261009,
+      "CI_is_report_only": true
+    },
+    "expanded72_Q_minus_B0": {
+      "mean": -0.011370797431947438,
+      "ci95": [
+        -0.05964563371762155,
+        0.03140317901040649
+      ],
+      "resampling_units": 72,
+      "point_estimator": "VIDEO_MACRO_RECOMPUTED_AFTER_SOURCE_GROUP_RESAMPLE",
+      "draws": 10000,
+      "seed": 20261009,
+      "CI_is_report_only": true
+    },
+    "changed_native_sets": 40,
+    "groups_down": 16,
+    "reference_coverage": "UNKNOWN",
+    "metric_is_closed_world_weak_output_agreement_not_quality_truth": true,
+    "observed_development_not_new_holdout": true,
+    "original_total_video_pixel_budget_unchanged": true,
+    "same_physical_count_grid_first_last": true,
+    "native_PTS_not_rounded": true,
+    "old_floor64_references_unchanged": true,
+    "new_optimizer_updates": 0,
+    "official_score": null,
+    "no_post_result_retuning": true
+  },
+  "independent_scientific_stop": {
+    "status": "PASS_INDEPENDENT_FINITE_SCIENTIFIC_STOP_RAW_AGGREGATE_AND_ACCOUNTING",
+    "utc": "2026-10-08T23:13:27.408173+00:00",
+    "private_receipt_sha256": "a05f23057153e7782d100a42c0c45e58d07cc05664734d33ead7fdbd0585fede",
+    "raw_reconstructed_records": 104,
+    "source_groups": 96,
+    "windows": 112,
+    "new_developer_calls": 102,
+    "exact_original_calls_reused": 10,
+    "accepted_CPU_done_SHA_count": 102,
+    "original_fixed_gate_pass": false,
+    "new_decoder_processor_calls": 0,
+    "new_model_calls": 0,
+    "new_optimizer_updates": 0,
+    "new_final_426_ZIP": false,
+    "finite_registered_input_mechanisms_exhausted": true
+  },
+  "NONTEST_independent": {
+    "status": "PASS_INDEPENDENT_STRICT_VALIDATION",
+    "checks": {
+      "strict_loader_ok": true,
+      "video_record_set_exact": true,
+      "selected_key_set_exact": true,
+      "ratio_fields_exact": true,
+      "frames_sorted": true,
+      "provenance_key_set_exact": true,
+      "provenance_boxes_match_predictions": true,
+      "provenance_all_legal": true,
+      "provenance_sources_allowed": true,
+      "archive_single_file": true,
+      "archive_roundtrip_exact": true
+    },
+    "video_records": 8,
+    "prediction_frames": 449,
+    "actual_archive": {
+      "bytes": 1961,
+      "sha256": "203344b3d6f8185cb75f664d8c096799ab91f7ea08ba0468a9ac1faa3138ef72",
+      "CRC_failure": null,
+      "raw_predictions_bytes_equal": true,
+      "package_and_independent_SHA_match": true,
+      "actual_size_matches_package": true
+    },
+    "is_final426_submission": false
+  },
   "new_final426_complete": false,
-  "resources": {}
+  "resources": {
+    "nontest": {
+      "status": "completed",
+      "exit_code": 0,
+      "stop_reason": null,
+      "charged_seconds": 175.13144869171083,
+      "started_utc": "2026-10-08T22:31:55.206435+00:00",
+      "finished_utc": "2026-10-08T22:34:50.337796+00:00"
+    },
+    "developer": {
+      "status": "completed",
+      "exit_code": 0,
+      "stop_reason": null,
+      "charged_seconds": 710.77324480284,
+      "started_utc": "2026-10-08T22:44:39.765221+00:00",
+      "finished_utc": "2026-10-08T22:56:30.538376+00:00"
+    }
+  }
 }

@@ -1032,7 +1032,7 @@ def publish_native_round_alignment_v1():
         'freeze.py','packager.py','final_acceptance.py','controller.py','launch.py','CONTINUE.md','PROTOCOL.md')
     selected=[here/n for n in names]+[RUN/'controller'/n for n in ('register_native_round_alignment_v1.py',
         'checkpoint_native_round_alignment_v1.py','inspect_native_round_alignment_v1.py','record_native_round_alignment_execution_20261009.py',
-        'NATIVE_ROUND_ALIGNMENT_EXECUTION_20261009.md','publish_b2_snapshot.py')]
+        'accept_native_round_scientific_stop_20261009.py','NATIVE_ROUND_ALIGNMENT_EXECUTION_20261009.md','publish_b2_snapshot.py')]
     for name in names:
         remote='/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/'+entry+'/'+name
         assert hashlib.sha256((here/name).read_bytes()).hexdigest()==lock['new_core_locked_sha'][remote]
@@ -1067,6 +1067,22 @@ def publish_native_round_alignment_v1():
         aggregate['first_real_independent_CPU']['private_receipt_sha256']=first['private_receipt_sha256']
     report=snapshot['stages'].get('developer_01/report.json')
     if report:aggregate['full_developer_aggregate']=report
+    stop_receipt=RUN/'controller/NRA_scientific_stop_acceptance_20261009_summary.json'
+    if stop_receipt.exists():
+        accepted=json.loads(stop_receipt.read_bytes())
+        assert accepted['status']=='PASS_INDEPENDENT_FINITE_SCIENTIFIC_STOP_RAW_AGGREGATE_AND_ACCOUNTING'
+        aggregate['independent_scientific_stop']={k:accepted[k] for k in ('status','utc','private_receipt_sha256',
+            'raw_reconstructed_records','source_groups','windows','new_developer_calls','exact_original_calls_reused',
+            'accepted_CPU_done_SHA_count','original_fixed_gate_pass','new_decoder_processor_calls','new_model_calls',
+            'new_optimizer_updates','new_final_426_ZIP','finite_registered_input_mechanisms_exhausted')}
+    nontest=snapshot['stages'].get('nontest_01/independent_validation.json')
+    if nontest:
+        aggregate['NONTEST_independent']={k:nontest[k] for k in ('status','checks','video_records','prediction_frames')}
+        actual=snapshot.get('actual_archives',{}).get('nontest')
+        if actual:
+            aggregate['NONTEST_independent']['actual_archive']={k:actual[k] for k in ('bytes','sha256','CRC_failure',
+                'raw_predictions_bytes_equal','package_and_independent_SHA_match','actual_size_matches_package')}
+        aggregate['NONTEST_independent']['is_final426_submission']=False
     final=snapshot['stages'].get('final_acceptance.json')
     aggregate['new_final426_complete']=bool(final)
     if final:
@@ -1087,6 +1103,11 @@ def publish_native_round_alignment_v1():
         '历史最佳原B旧包37.63保持；用户已上传V14并反馈比最佳少0.03，37.60只是该反馈的推算，未独立核验官网。'
         f'见[协议]({REL}/{entry}/PROTOCOL.md)和[筛选聚合]({REL}/{entry}/aggregate_execution.json)。新官网分未知。\n\n<!-- END_CURRENT_NATIVE_ROUND_ALIGNMENT -->\n')
     if final:body=body.replace('新官网分未知。',f'最终426包已独立验收，实际{final["zip_bytes"]}字节、SHA256`{final["zip_sha256"]}`，Linux路径`{final["candidate"]}`；新官网分未知。')
+    elif report:
+        body=body.replace('新官网分未知。',
+            f'本轮完整102新开发回答与10原exact引用、全102独立CPU回放通过；all104弱差{report["all104_Q_minus_B0"]["mean"]}，'
+            f'扩展72组弱差{report["expanded72_Q_minus_B0"]["mean"]}，扩展组门拒绝，未生产新的426包。'
+            '有限已登记输入机制已结束，保留原B最佳包；更好包的目标尚未实现，新官网分未知。')
     def front(t):
         first,rest=t.split('\n',1)
         if '<!-- END_CURRENT_NATIVE_ROUND_ALIGNMENT -->' in rest:rest=rest.split('<!-- END_CURRENT_NATIVE_ROUND_ALIGNMENT -->',1)[1]
