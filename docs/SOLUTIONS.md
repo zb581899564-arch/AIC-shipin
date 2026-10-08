@@ -1,13 +1,15 @@
 # 方案、证据与当前状态
 
-## 当前教师工程修复与真实接续
+## 当前最终交付与真实选点
 
-32B教师完整160标签与160盲第二选择已真实完成，132新复查、28原成功精确复用，工程失败0。弱支持正65、空14、UNKNOWN81；实际支持65train/14dev，全部160分母与原raw保持，同教师一致性不是人工真值。V13学生CPU准入错误拒绝原pilot24的diagnostic标记。V14在独立exact manifest下仅允许原pilot24精确成功回执跨阶段，原标记/STOP/成本不改；旧consumer失败、新完整160 consumer与11拒绝合同已真实CPU验收，不重复教师生成。实际快照2026-10-08T12:47:49.786701+00:00阶段 `RUNNING_STUDENT_ADMISSION`，新8B T实际更新0，没有新最终ZIP，新官网分未知。原B37.63与B2用户37.32/DONE继续绑定各自旧ZIP。见[协议](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/PROTOCOL.md)与[聚合验收](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/aggregate_stage_handoff_acceptance.json)。
+32B教师推理完整160标签与160盲第二选择、真实8B微调及最终Linux ZIP均已完成独立验收。教师未微调32B；同教师一致性为弱监督，支持65train/14dev，UNKNOWN81与原160分母保留。修复了证据/边界编号、生成约束及probe/all/review、canonical键顺序、validator metadata、pilot diagnostic精确阶段移交。8B学生完成3epochs、15次真实optimizer更新、195次样本反向；4更新前缀、288adapter独立CPU重载与冻结基座通过。弱14dev的原B与epoch1同分，epoch2/3较低，按登记规则选择epoch0原B；新权重未胜出，不宣称新T提高。NONTEST8与426复赛各11项独立strict全true，完整426源/521时间窗/无效0、102470预测帧，ZIP CRC/唯一JSONL/身份/原字节通过。时间为本次真实生成，空间精确复用原B2完整源场，本候选新空间模型调用0、原成本保留。最终Linux包：`/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/rematch_01/candidate_T_8B.zip`，实际308278字节，SHA256 `95173d936d09cfcf84bcff5755336e50dbfff94ac5a7e4cfba2953064022f3a2`。包未自动回传或提交官网，新官网分未知。原B37.63绑定旧包SHA `86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54`；B2用户37.32/DONE绑定317401字节旧包SHA `0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3`。见[协议](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/PROTOCOL.md)与[最终聚合验收](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/aggregate_final_acceptance.json)。
 
 <!-- END_CURRENT_V8 -->
-## 当前自主B2接续
+以下B2、context v3与Z/T/S段落保留对应日期的历史状态；当前V14训练和最终ZIP以上方终态验收为准。
 
-2026-10-08 09:45 UTC+8：当前路线为[B2已微调8B生产对齐](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/CONTINUE.md)。保留已评分37.63的B最终LoRA，不增加训练更新；时间使用B adapter、空间同8B原生基座，总逻辑参数8,782,459,120。B2采用所有分支实际native PTS/floor64帧/顺序PyAV/16384长输入、精确端点与全源空间场，仍用B原1–5段提示与greedy。旧37.63仍绑定旧B包，B2用户回报官网37.32/DONE。
+## 已交付B2历史
+
+2026-10-08 09:45 UTC+8历史：当时路线为[B2已微调8B生产对齐](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/CONTINUE.md)。保留已评分37.63的B最终LoRA，不增加训练更新；时间使用B adapter、空间同8B原生基座，总逻辑参数8,782,459,120。B2采用所有分支实际native PTS/floor64帧/顺序PyAV/16384长输入、精确端点与全源空间场，仍用B原1–5段提示与greedy。旧37.63仍绑定旧B包，B2用户回报官网37.32/DONE。
 
 32B context v3已经完整8/8真实请求、0工程失败，三正被弱审核支持，唯一NO被拒绝；没有受支持真实空例，T更新0。审核声称overview仅到119.0189秒，实际完整源回执末PTS149.98316666666668、13帧>=120；事实性错误和语义争议同时保留，不能将拒绝改PASS或空标签当真值。旧raw/失败/科学STOP保存；不再盲试同配方，不造空或弱化原监督门。B2是保留已经训练B的可交付路线，不冒充新教师T训练。
 
@@ -68,7 +70,7 @@ v1 在容量时间戳兼容处停止。v2 NONTEST8 通过，但误将训练 8192
 
 详见原始 `ROADMAP.md`、各版本 `PROTOCOL.md`、`decision.json` 和报告。目标 50/55+ 是项目目标，尚未达到，不是收益承诺。
 
-## 下一轮Z/T/S（2026-10-07）
+## Z/T/S计划历史（2026-10-07）
 
 独立next_round_v1已修坐标单位、合法空、空目标/原生PTS、统一生产输入、完整源空间场及离线Mac容量。145主合同与19选择器合同通过；真实processor旧默认逐张量一致、全空426独立strict和实际CUDA有限空CE通过。Z为原生8B、保留B的时间提示与受约束解码，但空间实现同步修复，因此官网比较是整套配方比较。一次性Linux接续已通过B/Z同输入工程开发及NONTEST8完整门，11:22 UTC+8实查处于426条时间推理；新独立直连交付等待替代Mac桥接，运行源码/配额不修改。当前Z无已交付包/官方分。
 

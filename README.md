@@ -1,10 +1,12 @@
 # AIC 视频高光剪辑
 
-## 当前教师工程修复与真实接续
+## 当前最终交付与真实选点
 
-32B教师完整160标签与160盲第二选择已真实完成，132新复查、28原成功精确复用，工程失败0。弱支持正65、空14、UNKNOWN81；实际支持65train/14dev，全部160分母与原raw保持，同教师一致性不是人工真值。V13学生CPU准入错误拒绝原pilot24的diagnostic标记。V14在独立exact manifest下仅允许原pilot24精确成功回执跨阶段，原标记/STOP/成本不改；旧consumer失败、新完整160 consumer与11拒绝合同已真实CPU验收，不重复教师生成。实际快照2026-10-08T12:47:49.786701+00:00阶段 `RUNNING_STUDENT_ADMISSION`，新8B T实际更新0，没有新最终ZIP，新官网分未知。原B37.63与B2用户37.32/DONE继续绑定各自旧ZIP。见[协议](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/PROTOCOL.md)与[聚合验收](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/aggregate_stage_handoff_acceptance.json)。
+32B教师推理完整160标签与160盲第二选择、真实8B微调及最终Linux ZIP均已完成独立验收。教师未微调32B；同教师一致性为弱监督，支持65train/14dev，UNKNOWN81与原160分母保留。修复了证据/边界编号、生成约束及probe/all/review、canonical键顺序、validator metadata、pilot diagnostic精确阶段移交。8B学生完成3epochs、15次真实optimizer更新、195次样本反向；4更新前缀、288adapter独立CPU重载与冻结基座通过。弱14dev的原B与epoch1同分，epoch2/3较低，按登记规则选择epoch0原B；新权重未胜出，不宣称新T提高。NONTEST8与426复赛各11项独立strict全true，完整426源/521时间窗/无效0、102470预测帧，ZIP CRC/唯一JSONL/身份/原字节通过。时间为本次真实生成，空间精确复用原B2完整源场，本候选新空间模型调用0、原成本保留。最终Linux包：`/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/rematch_01/candidate_T_8B.zip`，实际308278字节，SHA256 `95173d936d09cfcf84bcff5755336e50dbfff94ac5a7e4cfba2953064022f3a2`。包未自动回传或提交官网，新官网分未知。原B37.63绑定旧包SHA `86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54`；B2用户37.32/DONE绑定317401字节旧包SHA `0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3`。见[协议](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/PROTOCOL.md)与[最终聚合验收](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/aggregate_final_acceptance.json)。
 
 <!-- END_CURRENT_V8 -->
+以下B2、context v3与Z/T/S段落保留对应日期的历史状态；当前V14训练和最终ZIP以上方终态验收为准。
+
 AIC 产业命题赛「基于视频大模型的通用视频高光剪辑」的项目代码、实验方案、验收记录和提交包归档。当前复赛已确认成绩：**Linux 8B 37.63，4B 33.81，Mac 8B 33.46**。初赛最佳已确认成绩 **43.94**。初赛与复赛的视频集合不同，分数不直接比较。
 
 本仓库是从工作项目导出的发布快照。保留核心代码原始字节和目录结构；数据集、弱标签逐样本清单、基座/adapter 权重、运行环境、缓存和原始逐帧中间结果没有随仓库分发。已评分源码及正在运行的冻结作业保持原字节；工作项目文档追加最新状态。
@@ -25,11 +27,11 @@ AIC 产业命题赛「基于视频大模型的通用视频高光剪辑」的项�
 
 每个 ZIP 仅包含 `predictions.jsonl`。完整 SHA-256、大小、成绩来源与状态见 [提交包清单](docs/SUBMISSIONS.md) 和 [机器可读清单](docs/submission_packages.json)。只有已确认结果才填官方分数；未评分候选不继承其他包的分数。复赛成绩由用户报告/截图提供，未另行核验官网。Linux 8B 截图显示 `37.63 / DONE`，裁切部分不足以确认完整时间或名次。
 
-## 下一轮代码修复与自主执行（2026-10-08）
+## B2与前期教师诊断历史（2026-10-08上午）
 
 已按采纳结论建立独立 [next_round_v1](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1)。145项CPU合同、真实processor逐张量一致、全空426独立strict及真实CUDA空生成/空assistant有限CE损失已通过。修复严格0..1000坐标、合法空与失败分离、原生PTS训练目标、生产一致开发输入、全源空间场和Mac离线预留。旧已评分包不变。
 
-2026-10-08 09:45 UTC+8：当前路线为[B2已微调8B生产对齐](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/CONTINUE.md)。保留已评分37.63的B最终LoRA，不增加训练更新；时间使用B adapter、空间同8B原生基座，总逻辑参数8,782,459,120。B2采用所有分支实际native PTS/floor64帧/顺序PyAV/16384长输入、精确端点与全源空间场，仍用B原1–5段提示与greedy。旧37.63仍绑定旧B包，B2用户回报官网37.32/DONE。
+2026-10-08 09:45 UTC+8历史：当时路线为[B2已微调8B生产对齐](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/CONTINUE.md)。保留已评分37.63的B最终LoRA，不增加训练更新；时间使用B adapter、空间同8B原生基座，总逻辑参数8,782,459,120。B2采用所有分支实际native PTS/floor64帧/顺序PyAV/16384长输入、精确端点与全源空间场，仍用B原1–5段提示与greedy。旧37.63仍绑定旧B包，B2用户回报官网37.32/DONE。
 
 32B context v3已经完整8/8真实请求、0工程失败，三正被弱审核支持，唯一NO被拒绝；没有受支持真实空例，T更新0。审核声称overview仅到119.0189秒，实际完整源回执末PTS149.98316666666668、13帧>=120；事实性错误和语义争议同时保留，不能将拒绝改PASS或空标签当真值。旧raw/失败/科学STOP保存；不再盲试同配方，不造空或弱化原监督门。B2是保留已经训练B的可交付路线，不冒充新教师T训练。
 

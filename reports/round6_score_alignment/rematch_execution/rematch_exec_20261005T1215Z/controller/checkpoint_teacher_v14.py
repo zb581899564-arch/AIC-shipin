@@ -29,6 +29,8 @@ def delta_summary(previous, value):
         complete_teacher_manifest=current.get('complete_teacher_manifest_summary'),
         all_complete_teacher_review_SHA_pass=current.get('all_complete_teacher_review_file_SHA_pass'),
         complete_teacher_handoff=current.get('full_resume_handoff'),
+        student_stage_receipts=current.get('student_stage_receipts'),
+        student_prefix_gate=current.get('v8_stage_receipts',{}).get('prefix'),
         original_V13_terminal=current.get('original_V13_terminal'),
         changed_artifact_count=len(changed),added_artifact_count=len(set(new)-set(old)),
         net_artifact_byte_delta=sum(v['bytes'] for v in new.values())-sum(v['bytes'] for v in old.values()),
@@ -78,7 +80,12 @@ print(json.dumps({'snapshot_path':str(target),'snapshot':snapshot},ensure_ascii=
         'completion':snap.get('completion'),'progress':snap.get('progress'),
         'visual_status':visual.get('status'),'visual_case_count':len(visual.get('cases',[])),
         'teacher_probe':stages.get('teacher_probe'),'teacher_progress':snap.get('teacher_progress'),
-        'pilot_progress':snap.get('pilot_progress'),'review_progress':stages.get('review_progress'),'first_review_generation':stages.get('first_review_generation'),'student_progress':snap.get('student_progress')},ensure_ascii=False))
+        'pilot_progress':snap.get('pilot_progress'),'review_progress':stages.get('review_progress'),
+        'first_review_generation':stages.get('first_review_generation'),
+        'student_progress':{key:(snap.get('student_progress') or {}).get(key) for key in
+            ('status','optimizer_steps','backward_examples','prefix_updates','total_planned_updates',
+             'prefix_required_updates','failure','checked_utc')},
+        'student_prefix_status':(stages.get('prefix') or {}).get('status')},ensure_ascii=False))
 
 
 if __name__=='__main__': main()

@@ -1,8 +1,8 @@
 {
-  "status": "ACTUAL_V14_EXACT_STAGE_HANDOFF_AND_STUDENT_CONTINUATION_NOT_FINAL_ZIP",
-  "snapshot_utc": "2026-10-08T12:47:49.786701+00:00",
+  "status": "ACTUAL_V14_FINAL_ZIP_INDEPENDENTLY_ACCEPTED_ORIGINAL_B_SELECTED",
+  "snapshot_utc": "2026-10-08T15:44:11.798663+00:00",
   "entry": "teacher_student_autopilot_v14",
-  "stage": "RUNNING_STUDENT_ADMISSION",
+  "stage": "PASS_AUTOPILOT_FINAL_T_ZIP_ON_LINUX",
   "source_lock_sha256": "5295e8bc0f2b6a651e73321a5798b259816ccbe9a0582753dc3c200b5ef080e0",
   "frozen_file_count": 16502,
   "original_labels": 160,
@@ -72,12 +72,106 @@
     "all_original_bytes_unchanged": true
   },
   "independent_runtime_handoff_receipt_sha256": "4499b54944b39fb110d1709ea87db5b4e4aef51ca4223683fa48941c6513add2",
-  "actual_new_T_optimizer_updates": 0,
-  "final_ZIP_complete": false,
+  "actual_new_T_optimizer_updates": 15,
+  "final_ZIP_complete": true,
   "new_official_score": null,
   "B2_user_official_score": 37.32,
   "original_B_official_score": 37.63,
   "B2_ZIP_sha256": "0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3",
   "original_B_ZIP_sha256": "86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54",
-  "new_ZIP_raw_labels_and_per_frame_data_exported": false
+  "new_ZIP_raw_labels_and_per_frame_data_exported": false,
+  "independent_final_acceptance_sha256": "f8f17dcad75dd96ff0ddcc89caf9f6531ebdcb9e0965fae81a7d4236c2ecc027",
+  "final_candidate": {
+    "videos": 426,
+    "prediction_frames": 102470,
+    "strict_checks": {
+      "strict_loader_ok": true,
+      "video_record_set_exact": true,
+      "selected_key_set_exact": true,
+      "ratio_fields_exact": true,
+      "frames_sorted": true,
+      "provenance_key_set_exact": true,
+      "provenance_boxes_match_predictions": true,
+      "provenance_all_legal": true,
+      "provenance_sources_allowed": true,
+      "archive_single_file": true,
+      "archive_roundtrip_exact": true
+    },
+    "independent_report_sha256": "4059655c82ba1544c0f722241dbcbe426a193f768c6833b4d13f7334ed379967",
+    "manifest_sha256": "ceb91ee9434ce3de6a55abf727e613b83368b547d3be3d1e71b46414c2f019f8",
+    "registry_sha256": "1058aba02e5e959bc8e4842cbde0eadced192a8201d5c833ae50a7c0aac07909",
+    "candidate": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/rematch_01/candidate_T_8B.zip",
+    "zip_bytes": 308278,
+    "zip_sha256": "95173d936d09cfcf84bcff5755336e50dbfff94ac5a7e4cfba2953064022f3a2",
+    "predictions_sha256": "9ebd31540b905e08da3352709cf1ff38eb241b3be6b55ea087dff7df9304c4e4",
+    "provenance_sha256": "02c4745f2a0eef209d83a694a86eb4dfe3fe2ec5f32b9c470a3df3f8a58040e6",
+    "crc_pass": true,
+    "archive_names": [
+      "predictions.jsonl"
+    ],
+    "archive_roundtrip_exact": true,
+    "source_ids_exact": true,
+    "duplicate_source_ids": 0,
+    "temporal_windows": 521,
+    "invalid_temporal_windows": 0,
+    "source_anchors": 31295,
+    "new_spatial_model_calls": 0,
+    "original_spatial_wall_seconds": 18723.876517390832
+  },
+  "actual_training": {
+    "epochs": 3,
+    "optimizer_updates": 15,
+    "backward_examples": 195,
+    "prefix_updates": 4,
+    "original_independent_CPU_288_adapter_reload_pass": true
+  },
+  "selected_epoch": 0,
+  "selected_original_B": true,
+  "trained_candidate_selected": false,
+  "selected_adapter_sha256": "8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23",
+  "weak_dev_candidates": [
+    {
+      "epoch": 0,
+      "video_macro_f1": 0.3786251362162477
+    },
+    {
+      "epoch": 1,
+      "video_macro_f1": 0.3786251362162477
+    },
+    {
+      "epoch": 2,
+      "video_macro_f1": 0.3596785770535768
+    },
+    {
+      "epoch": 3,
+      "video_macro_f1": 0.36453995670744305
+    }
+  ],
+  "new_T_improvement_claim": false,
+  "resources": {
+    "rematch_TAUTO_v14_student_train": {
+      "receipt_sha256": "86a8e8535380e9b33f340a71808dbcbd41a67e96594d9db2ef8146ef56ef1e66",
+      "charged_seconds": 2231.7791278334334,
+      "sampled_peak_memory_mib": 21484,
+      "ledger_exact": true,
+      "exit_code": 0,
+      "stop_reason": null
+    },
+    "rematch_TAUTO_v14_nontest_temporal": {
+      "receipt_sha256": "ebb409130e66281ee9c0379ef8369ac2438ff5e87e7befcad2161c17fbfdf64f",
+      "charged_seconds": 164.55463389214128,
+      "sampled_peak_memory_mib": 19306,
+      "ledger_exact": true,
+      "exit_code": 0,
+      "stop_reason": null
+    },
+    "rematch_TAUTO_v14_rematch_temporal": {
+      "receipt_sha256": "2fe4e7f9954aaec03276a1265ffb1d7c7b86335c63b5d68b2bb72597d4c6667c",
+      "charged_seconds": 5430.027779461816,
+      "sampled_peak_memory_mib": 25338,
+      "ledger_exact": true,
+      "exit_code": 0,
+      "stop_reason": null
+    }
+  }
 }

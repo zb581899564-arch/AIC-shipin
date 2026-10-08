@@ -1,16 +1,16 @@
-## 2026-10-08：V14完整教师回执与学生diagnostic阶段移交修复
+## 2026-10-08：V14最终Linux ZIP已独立完整验收，生产选原B
 
-当前唯一入口 `teacher_student_autopilot_v14/CONTINUE.md`、`PROTOCOL.md`。V13原160标签与160盲第二选择已完整自然成功：原28复查逐SHA保留、新132真实复查、工程失败0；completed/exit0/stop_reason null，真实GPU charge5493.750158078037秒已追加账本，原V11失败charge6748.806357712485秒仍保持。独立全量CPU验收SHA `437c9eb71f75384df85f0d218b46e62714eadb5661fa0912935b2b2d54dcbe74` 核160原validator、HTTP构造/实际processor/应用GBNF/raw、10181物理PNG/RGB和全部绑定SHA，CPU新调用0，同教师一致性只是弱证据。支持正65(train55/dev10)、空14(train10/dev4)、UNKNOWN81；支持准入实际65train/14dev，原128/32及160全分母不减。
+生产控制器于2026-10-08T15:16:10.653385+00:00自然完成，completion=`PASS_AUTOPILOT_FINAL_T_ZIP_ON_LINUX`。独立终态验收UTC `2026-10-08T15:49:24.511694+00:00`、状态 `PASS_INDEPENDENT_V14_FINAL_ZIP_TRAINING_SELECTION_AND_ACCOUNTING`，证据controller/V14_final_acceptance_20261008.json SHA `f8f17dcad75dd96ff0ddcc89caf9f6531ebdcb9e0965fae81a7d4236c2ecc027`。独立核全部16502冻结文件、当前模型/训练/选点/8与426分母/产物字节/ZIP/资源账本，验收新模型调用0、优化器更新0；当前所属进程0。名称中的T表示此执行路线，不代表新微调权重被选用。
 
-V13学生于2026-10-08T12:11:31.394857UTC在GPU前CPU准入STOP：完整教师复用的pilot24仍有diagnostic_only=True，学生旧consumer却只接受False。原标记/raw/支持/UNKNOWN/STOP不回写。V14仅允许完整exact160 manifest批准的原pilot24精确成功回执跨阶段作为弱监督，修改/外部/非pilot diagnostic仍STOP，不把UNKNOWN转空/负、不重复任何教师成功生成。旧consumer原症状/新完整160 consumer及11拒绝合同实际CPU通过；原训练、输入、prompt、validator与生产配方保持。完整教师manifest SHA `e777c7becb8df25051d14181cd7684d23813a51aaf40529583945cb8bd6c8be8` 仅Linux原地，逐帧/教师raw不导出。
+最终包留Linux：`/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/rematch_01/candidate_T_8B.zip`。实际 `308278` 字节，SHA256 `95173d936d09cfcf84bcff5755336e50dbfff94ac5a7e4cfba2953064022f3a2`。NONTEST8与426复赛各11项独立strict全true；426源/521时间窗/时间无效0、102470预测帧、ZIP CRC通过、仅一个predictions.jsonl、426身份及原字节完全相等。未自动回传或提交官网；新官网分未知。
 
-V14冻结 `16502` 文件，锁 `5295e8bc0f2b6a651e73321a5798b259816ccbe9a0582753dc3c200b5ef080e0`；单次launcher `2026-10-08T12:37:29.702336+00:00`、历史PID/PGID `1101256`。实际快照 `2026-10-08T12:47:49.786701+00:00` 阶段 `RUNNING_STUDENT_ADMISSION`，完整路径进程2/server0。新教师调用0、新T实际optimizer更新 `0`，无新最终ZIP。CPU SHA/原validator重开/资源排队可能合法，历史PID和GPU闲不作存活/卡死证据；冻结源码不改，launcher/成功生成不重开。
+32B教师是推理弱监督，未微调32B：完整160标签/160盲第二选择工程失败0，支持65train/14dev，UNKNOWN81及160全分母保留，同教师一致性不是人工真值。8B学生确已完成3epochs/15次真实optimizer更新/195次样本反向；有限loss/梯度、288adapter逐更新变化、冻结基座保持、4更新前缀同optimizer/RNG继续及原独立CPU288adapter重载均通过。开发含原B candidate0并与production输入一致，弱14dev的原B/epoch1同为0.3786251362162477，epoch2/3为0.3596785770535768/0.36453995670744305；按登记同分取较早epoch的规则选epoch0原B，adapter SHA `8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23`，trained_candidate_selected=false，不声称新T提升或新官方成绩。
 
-本次完整教师运行时移交实际状态 `PASS_EXACT_V13_COMPLETE_TEACHER_HANDOFF_NO_NEW_CALLS`、UTC `2026-10-08T12:46:18.337907+00:00`；独立原9个聚合/准入文件逐字节、原24诊断标记及全部原authority与新core SHA验收SHA `4499b54944b39fb110d1709ea87db5b4e4aef51ca4223683fa48941c6513add2`，CPU新模型调用0，移交不是GPU训练或新ZIP。
+NONTEST时间8/8与复赛时间426/521为本次真实生成。空间完整源场/31295真实原锚点仅在算法、请求、模型、源身份及全部SHA一致后原样复用，空间本候选新模型调用0，原GPU/CPU成本保持；先全源插值再按时间筛选，禁止把缓存复用当新生成。实际GPU终态训练/非测试时间/复赛时间charge分别2231.7791278334334/164.55463389214128/5430.027779461816秒，均completed/exit0/stop_reason null并与追加账本唯一记录一致，7200历史offset保留。
 
-自动接续：完整教师CPU移交→学生准入→2–4真实更新同optimizer/RNG/288adapter重载→旧B candidate0开发→NONTEST8→426全部11独立strict ZIP。原B胜出如实保留；科学不足按已授权独立B/C实现，不等待用户、不盲换prompt。B2用户37.32/DONE（317401字节SHA0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3）；旧B37.63仍绑定86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54。新分未知。
+教师B/F证据与边界编号、生成约束、probe/all/review阶段衔接、canonical键顺序、原validator metadata部署与pilot diagnostic精确跨阶段准入已修复。V14仅在完整exact160 manifest下许可原pilot24精确成功回执；原诊断标记、raw、各旧STOP、UNKNOWN和成功记录不改，不重复成功调用。冻结锁 `5295e8bc0f2b6a651e73321a5798b259816ccbe9a0582753dc3c200b5ef080e0` 与12:37:29单次launcher保持。教师完整验收SHA `437c9eb71f75384df85f0d218b46e62714eadb5661fa0912935b2b2d54dcbe74`、运行时移交SHA `4499b54944b39fb110d1709ea87db5b4e4aef51ca4223683fa48941c6513add2`保持。网络修复仅既有用户授权本地精确范围，当前SSH已恢复，仍为DERP中继。
 
-每15分钟aic-linux静默入口controller/checkpoint_teacher_v14.py，逐次核真实完整命令/父子PGID/IO、原终态、学生/dev/strict、共享锁/账本7200与实际容量，比artifact字节/mtime。Mac退出、小量控制直SSH授权；新大流量先许可，100confirm不读、不手看复赛调参、不改外部任务/连接/服务。只有最终ZIP真实全验收后一次通知、删除监控、不归档，包留Linux。
+历史线上分数分开绑定：原B37.63为旧包SHA86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54；B2用户37.32/DONE为317401字节旧包SHA0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3。当前新包官网分未知。最终发布仅筛选核心代码、协议、聚合验收和包路径/大小/SHA，不导出ZIP、模型、逐帧数据、教师raw或弱标签。完成发布与交付后删除aic-linux，不归档聊天。
 
 <!-- END_CURRENT_TEACHER_V14 -->
 

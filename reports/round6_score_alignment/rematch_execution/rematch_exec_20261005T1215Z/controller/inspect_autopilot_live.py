@@ -205,7 +205,8 @@ def capture(version, entry=None):
         snapshot['visual_case_results'] = {p.parent.name:read(p) for p in sorted((here/'visual_probe_01/cases').glob('*/case_result.json'))}
         snapshot['artifact_activity'] = {
             scope:{str(p.relative_to(here/scope)):{'bytes':p.stat().st_size,'mtime_ns':p.stat().st_mtime_ns}
-                for p in sorted((here/scope).rglob('*')) if p.is_file() and p.suffix in ('.json','.jsonl','.log')}
+                for p in sorted((here/scope).rglob('*')) if p.is_file() and
+                (p.suffix in ('.json','.jsonl','.log') or scope == 'student_01' and p.suffix in ('.pt','.safetensors'))}
             for scope in ('visual_probe_01','teacher_01','pilot_01','student_01','nontest_01','rematch_01')}
     if entry in ('teacher_student_autopilot_v12','teacher_student_autopilot_v13','teacher_student_autopilot_v14'):
         snapshot['source_lock_file_count'] = len((read(here/'source_lock.json') or {}).get('files',{}))
@@ -263,6 +264,32 @@ def capture(version, entry=None):
                 for name, digest in manifest['all_receipt_files'].items())
         snapshot['full_resume_handoff'] = read(here / 'full_resume_handoff.json')
         snapshot['full_resume_CPU_acceptance'] = read(here / 'full_resume_cpu_acceptance.json')
+        snapshot['cpu_stage_logs'] = {
+            p.name: dict(bytes=p.stat().st_size, mtime_ns=p.stat().st_mtime_ns,
+                         sha256=hashlib.sha256(p.read_bytes()).hexdigest(), tail=p.read_text()[-6000:])
+            for p in sorted(here.glob('*.cpu.log'))}
+        student = here / 'student_01'
+        snapshot['student_stage_receipts'] = {
+            'read_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+            'dev_metrics': {p.name: read(p) for p in sorted(student.glob('*.metrics.json'))},
+            'prefix_adapter_reload': read(student / 'prefix_adapter_reload.json'),
+            'snapshot_is_sequential_not_atomic': True}
+        evidence = student / 'example_evidence.jsonl'
+        if evidence.exists():
+            data = evidence.read_bytes()
+            complete_lines = data.split(b'\n')[:-1]
+            rows = [json.loads(line) for line in complete_lines if line.strip()]
+            snapshot['student_stage_receipts']['backward_evidence'] = dict(
+                bytes=len(data), sha256=hashlib.sha256(data).hexdigest(),
+                mtime_ns=evidence.stat().st_mtime_ns, actual_flushed_examples=len(rows),
+                partial_last_line_not_counted=bool(data.split(b'\n')[-1]),
+                last_examples=[{key: row.get(key) for key in ('epoch','optimizer_update','loss','accumulation_denominator')}
+                               for row in rows[-3:]],
+                backward_examples_are_not_completed_optimizer_updates=True)
+        train_log = RUN / 'controller/rematch_TAUTO_v14_student_train.log'
+        snapshot['student_stage_receipts']['runtime_log'] = (
+            dict(bytes=train_log.stat().st_size, mtime_ns=train_log.stat().st_mtime_ns,
+                 tail=train_log.read_text()[-6000:]) if train_log.exists() else None)
     snapshot['production_stage_receipts'] = {
         scope: {p.name: read(p) for p in sorted((here / scope).glob('*.stage.json'))}
         for scope in ('nontest_01', 'rematch_01')}

@@ -547,6 +547,14 @@ def publish_teacher_v13():
 def publish_teacher_v14():
     entry='teacher_student_autopilot_v14';here=RUN/entry
     snapshot=json.loads((RUN/'controller/monitor_teacher_v14/latest.json').read_bytes())['snapshot']
+    finalpath=RUN/'controller/V14_final_acceptance_20261008.json'
+    final=json.loads(finalpath.read_bytes()) if finalpath.exists() else None
+    if final:
+        assert final['status']=='PASS_INDEPENDENT_V14_FINAL_ZIP_TRAINING_SELECTION_AND_ACCOUNTING'
+        assert final['source_lock_sha256']==snapshot['source_lock_sha256']
+        assert (snapshot.get('completion') or {}).get('status')==final['completion_status']
+        assert all(all(scope['strict_checks'].values()) for scope in final['scopes'].values())
+        assert hashlib.sha256((RUN/'controller/verify_v14_final_20261008.py').read_bytes()).hexdigest()==final['verifier_source_sha256']
     cpu=json.loads((here/'full_resume_cpu_acceptance.json').read_bytes())
     assert cpu['status']=='PASS_V14_EXACT_PILOT_DIAGNOSTIC_STAGE_HANDOFF_CPU' and cpu['rejection_tests']>=11
     allowed=lambda p:p.suffix=='.py' or p.name in ('config.json','authorization.json','PROTOCOL.md','CONTINUE.md','teacher_prompt.txt','review_prompt.txt','runtime_schema_check.cpp')
@@ -558,6 +566,7 @@ def publish_teacher_v14():
         'inspect_autopilot_live.py','publish_b2_snapshot.py','V14_DIAGNOSTIC_STAGE_REPRODUCTION_20261008.json',
         'V8_REPAIR_AND_EXECUTION_20261008.md','AUTONOMOUS_EXECUTION_20261008.md')]
     selected += [WORKSPACE/'AGENTS.md',RUN/'STATUS_AUTOPILOT_20261007.md']
+    if final:selected += [RUN/'controller/verify_v14_final_20261008.py']
     for path in selected:
         target=PUB/path.relative_to(WORKSPACE);target.parent.mkdir(parents=True,exist_ok=True)
         shutil.copyfile(path,target);assert target.read_bytes()==path.read_bytes()
@@ -566,7 +575,8 @@ def publish_teacher_v14():
     stage=(snapshot.get('completion') or {}).get('status') or (snapshot.get('progress') or {}).get('stage')
     if stage is None and snapshot.get('processes') and not snapshot.get('registration'):
         stage='SOURCE_PREFLIGHT_CPU_PENDING_REGISTRATION'
-    aggregate=dict(status='ACTUAL_V14_EXACT_STAGE_HANDOFF_AND_STUDENT_CONTINUATION_NOT_FINAL_ZIP',
+    aggregate=dict(status=('ACTUAL_V14_FINAL_ZIP_INDEPENDENTLY_ACCEPTED_ORIGINAL_B_SELECTED' if final else
+        'ACTUAL_V14_EXACT_STAGE_HANDOFF_AND_STUDENT_CONTINUATION_NOT_FINAL_ZIP'),
         snapshot_utc=snapshot['utc'],entry=entry,stage=stage,source_lock_sha256=snapshot['source_lock_sha256'],
         frozen_file_count=snapshot['source_lock_file_count'],original_labels=160,original_reviews=160,
         original_pilot_diagnostic_flags_preserved=24,actual_new_teacher_calls=0,
@@ -586,10 +596,23 @@ def publish_teacher_v14():
         independent_runtime_handoff_receipt_sha256=hashlib.sha256((RUN/'controller/V14_real_handoff_acceptance_20261008.json').read_bytes()).hexdigest()
             if (RUN/'controller/V14_real_handoff_acceptance_20261008.json').exists() else None,
         actual_new_T_optimizer_updates=(snapshot.get('student_progress') or {}).get('optimizer_steps',0),
-        final_ZIP_complete=False,new_official_score=None,B2_user_official_score=37.32,original_B_official_score=37.63,
+        final_ZIP_complete=bool(final),new_official_score=None,B2_user_official_score=37.32,original_B_official_score=37.63,
         B2_ZIP_sha256='0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3',
         original_B_ZIP_sha256='86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54',
         new_ZIP_raw_labels_and_per_frame_data_exported=False)
+    finalderived=None
+    if final:
+        aggregate.update(independent_final_acceptance_sha256=hashlib.sha256(finalpath.read_bytes()).hexdigest(),
+            final_candidate=final['scopes']['rematch'],
+            actual_training={'epochs':final['epochs_completed'],'optimizer_updates':final['actual_T_optimizer_updates'],
+                'backward_examples':final['actual_backward_examples'],'prefix_updates':final['prefix_updates'],
+                'original_independent_CPU_288_adapter_reload_pass':final['independent_CPU_reload_was_288_adapter_PASS']},
+            selected_epoch=final['selected_epoch'],selected_original_B=final['selected_original_B'],
+            trained_candidate_selected=final['trained_candidate_selected'],selected_adapter_sha256=final['selected_adapter_sha256'],
+            weak_dev_candidates=final['weak_dev_candidates'],new_T_improvement_claim=False,
+            resources=final['resources'])
+        finalderived=PUB/REL/entry/'aggregate_final_acceptance.json'
+        finalderived.write_bytes(finalpath.read_bytes())
     derived=PUB/REL/entry/'aggregate_stage_handoff_acceptance.json'
     derived.write_text(json.dumps(aggregate,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     body=('32B教师完整160标签与160盲第二选择已真实完成，132新复查、28原成功精确复用，工程失败0。'
@@ -599,10 +622,31 @@ def publish_teacher_v14():
         f'实际快照{snapshot["utc"]}阶段 `{stage}`，新8B T实际更新{aggregate["actual_new_T_optimizer_updates"]}，没有新最终ZIP，新官网分未知。'
         '原B37.63与B2用户37.32/DONE继续绑定各自旧ZIP。'
         f'见[协议]({REL}/{entry}/PROTOCOL.md)与[聚合验收]({REL}/{entry}/aggregate_stage_handoff_acceptance.json)。\n\n')
+    if final:
+        candidate=final['scopes']['rematch']
+        body=('32B教师推理完整160标签与160盲第二选择、真实8B微调及最终Linux ZIP均已完成独立验收。'
+            '教师未微调32B；同教师一致性为弱监督，支持65train/14dev，UNKNOWN81与原160分母保留。'
+            '修复了证据/边界编号、生成约束及probe/all/review、canonical键顺序、validator metadata、pilot diagnostic精确阶段移交。'
+            '8B学生完成3epochs、15次真实optimizer更新、195次样本反向；4更新前缀、288adapter独立CPU重载与冻结基座通过。'
+            '弱14dev的原B与epoch1同分，epoch2/3较低，按登记规则选择epoch0原B；新权重未胜出，不宣称新T提高。'
+            'NONTEST8与426复赛各11项独立strict全true，完整426源/521时间窗/无效0、102470预测帧，ZIP CRC/唯一JSONL/身份/原字节通过。'
+            '时间为本次真实生成，空间精确复用原B2完整源场，本候选新空间模型调用0、原成本保留。'
+            f'最终Linux包：`{candidate["candidate"]}`，实际{candidate["zip_bytes"]}字节，SHA256 `{candidate["zip_sha256"]}`。'
+            '包未自动回传或提交官网，新官网分未知。原B37.63绑定旧包SHA `86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54`；'
+            'B2用户37.32/DONE绑定317401字节旧包SHA `0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3`。'
+            f'见[协议]({REL}/{entry}/PROTOCOL.md)与[最终聚合验收]({REL}/{entry}/aggregate_final_acceptance.json)。\n\n')
     def front(text):
         first,rest=text.split('\n',1)
         if '<!-- END_CURRENT_V8 -->' in rest:rest=rest.split('<!-- END_CURRENT_V8 -->',1)[1].lstrip('\n')
-        return first+'\n\n## 当前教师工程修复与真实接续\n\n'+body+'<!-- END_CURRENT_V8 -->\n'+rest
+        if final:
+            rest=rest.replace('## 当前自主B2接续','## 已交付B2历史')
+            rest=rest.replace('## 当前B2复现范围','## 已交付B2历史复现范围')
+            rest=rest.replace('## 下一轮代码修复与自主执行（2026-10-08）','## B2与前期教师诊断历史（2026-10-08上午）')
+            rest=rest.replace('## 下一轮Z/T/S（2026-10-07）','## Z/T/S计划历史（2026-10-07）')
+            rest=rest.replace('2026-10-08 09:45 UTC+8：当前路线','2026-10-08 09:45 UTC+8历史：当时路线')
+            note='以下B2、context v3与Z/T/S段落保留对应日期的历史状态；当前V14训练和最终ZIP以上方终态验收为准。\n\n'
+            if not rest.startswith(note):rest=note+rest
+        return first+'\n\n## '+('当前最终交付与真实选点' if final else '当前教师工程修复与真实接续')+'\n\n'+body+'<!-- END_CURRENT_V8 -->\n'+rest
     edit(PUB/'README.md',front)
     for name in ('SOLUTIONS.md','REPRODUCTION.md'):
         edit(PUB/'docs'/name,lambda text:front(text).replace(']('+REL,'](../'+REL))
@@ -610,6 +654,7 @@ def publish_teacher_v14():
     items={v['path']:v for v in manifest['files']}
     additions=[(p.relative_to(WORKSPACE).as_posix(),p.relative_to(WORKSPACE).as_posix()) for p in selected]
     additions.append((derived.relative_to(PUB).as_posix(),None))
+    if finalderived:additions.append((finalderived.relative_to(PUB).as_posix(),None))
     for relative,source in additions:
         if relative not in items:
             row=dict(path=relative,source_relative_path=source,bytes=0,sha256='',category='project_code_or_configuration' if relative.endswith('.py') else 'experiment_protocol_or_acceptance')
