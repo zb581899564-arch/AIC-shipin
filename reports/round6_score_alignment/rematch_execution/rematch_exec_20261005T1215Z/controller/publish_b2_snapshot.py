@@ -667,12 +667,94 @@ def publish_teacher_v14():
     print(json.dumps(dict(status='PASS_CURATED_V14_CORE_AND_AGGREGATE_ONLY',selected_files=len(selected),new_ZIP_or_labels_or_frames_exported=False)))
 
 
+def publish_context_advisory_v1():
+    entry='context_advisory_v1'; here=RUN/entry
+    snapshot=json.loads((RUN/'controller/monitor_context_advisory_v1/latest.json').read_bytes())
+    lock=json.loads((here/'source_lock.json').read_bytes())
+    assert hashlib.sha256((here/'source_lock.json').read_bytes()).hexdigest()==snapshot['source_lock_sha256']
+    selected=[p for p in here.iterdir() if p.is_file() and (p.suffix=='.py' or p.name in ('PROTOCOL.md','CONTINUE.md','DEVELOPMENT_EVIDENCE.md'))]
+    selected += [RUN/'controller'/n for n in ('register_context_advisory_v1.py','checkpoint_context_advisory_v1.py',
+        'inspect_context_advisory_v1.py','record_context_advisory_execution_20261009.py','accept_context_advisory_first_real.py',
+        'CONTEXT_ADVISORY_EXECUTION_20261009.md','publish_b2_snapshot.py')]
+    for path in selected:
+        target=PUB/path.relative_to(WORKSPACE);target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(path,target);assert target.read_bytes()==path.read_bytes()
+    cpu=json.loads((here/'draft_preflight.json').read_bytes())
+    assert cpu['status']=='PASS_REAL_CPU_NATIVE_PROCESSOR_CONTRACTS_NO_GPU_CALLS' and len(cpu['non_test_proofs'])==8
+    completion=snapshot['stages'].get('completion.json')
+    aggregate={'status':'CURATED_CONTEXT_ADVISORY_ACTUAL_ENGINEERING_AND_PROGRESS_NOT_QUALITY',
+        'snapshot_utc':snapshot['utc'],'entry':entry,'source_lock_sha256':snapshot['source_lock_sha256'], 'frozen_files':len(lock['files']),
+        'actual_CPU':{k:cpu[k] for k in ('status','valid_boundary_pairs','explicit_invalid_cases','tokenizer_candidate_count','tokenizer_ascii_contexts')},
+        'actual_CPU_nontest_sources':8,'processor_tensor_equal_all_five_arms':True,'B0_all_tensors_equal_actual_V14':True,
+        'done_count':snapshot['done_count'],'failure_count':len(snapshot['failures']),'done_bound_SHA_pass':snapshot['all_done_bound_SHA_pass'],
+        'current_stage':(snapshot['stages'].get('progress.json') or {}).get('stage','SOURCE_IDENTITY_CPU_PENDING_STAGE'),
+        'actual_new_training_updates':0,'actual_new_32B_calls':0,'models':'EXISTING_8B_BASE_OVERVIEW_ORIGINAL_B_LOCAL_ADAPTER',
+        'logical_parameters':8782459120,'developer_files':104,'source_groups':96,'developer_local_windows':112,
+        'Pro_persistent_used':3,'new_Pro_calls':0,'Gemini_effective_responses':0,'actual_ordinary_rounds':2,
+        'final_metadata_MD_sha256':'586d95e6a92c4b17008d9c60c6d30aeff0fe69f51ecb5eb082af3f8221875765',
+        'decision_source':'MAIN_CONTROLLER_BUDGET_EXHAUSTED_FALLBACK_NOT_PRO_OR_MAJORITY_TRUTH',
+        'new_final_ZIP_complete':bool(completion),'completion':completion,'new_official_score':None,
+        'original_B_official_score':37.63,'original_B_ZIP_sha256':'86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54',
+        'V14_user_delta':-.03,'V14_score_inferred_not_independently_read':37.60,'V14_ZIP_sha256':'95173d936d09cfcf84bcff5755336e50dbfff94ac5a7e4cfba2953064022f3a2',
+        'B2_user_official_score':37.32,'B2_ZIP_sha256':'0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3',
+        'teacher_reference_coverage_complete':'UNKNOWN','semantic_quality_or_hallucination_rate':'UNKNOWN',
+        'raw_frames_labels_weights_new_ZIP_exported':False}
+    aggregate['done_by_kind']=snapshot.get('done_by_kind',{})
+    aggregate['local_done_by_arm']=snapshot.get('local_done_by_arm',{})
+    proof_path=RUN/'controller/C_ADVISORY_first_real_acceptance_20261009.json'
+    if proof_path.exists():
+        proof=json.loads(proof_path.read_bytes())
+        assert proof['status']=='PASS_INDEPENDENT_FIRST_REAL_C_ADVISORY_CPU_REPLAY' and proof['source_lock_sha256']==snapshot['source_lock_sha256']
+        assert proof['new_acceptance_model_calls']==proof['new_acceptance_optimizer_updates']==0
+        aggregate['first_real_CPU_replay']={k:proof[k] for k in ('status','utc','all_frozen_files_SHA','new_acceptance_model_calls',
+            'new_acceptance_optimizer_updates','actual_NONTEST_GPU_charge_seconds','ledger_unique_terminal_match','not_semantic_truth_or_official_score')}
+        aggregate['first_real_CPU_replay']['private_receipt_sha256']=hashlib.sha256(proof_path.read_bytes()).hexdigest()
+    aggregate['resources']={name:{k:r['resource'][k] for k in ('status','exit_code','stop_reason','charged_seconds','started_utc','finished_utc') if k in r['resource']}
+        for name,r in snapshot['resources'].items() if r.get('resource')}
+    for name in ('nontest_01/independent_validation.json','nontest_01/nontest.report.json','developer_01/full.report.json'):
+        value=snapshot['stages'].get(name)
+        if value:aggregate[name]={k:value[k] for k in ('status','records','source_groups','checks','issues',
+            'R_N_changed_native_sets','R_X_changed_native_sets','weak_reference_used','comparisons',
+            'R_N_all_native_selected_sets_identical','material_negative_investment_rule','nonnegative_registered_four_direction_rule') if k in value}
+    derived=PUB/REL/entry/'aggregate_execution.json'
+    derived.write_text(json.dumps(aggregate,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    body=(f'\n## 新探索C-advisory（实际快照{snapshot["utc"]}）\n\n'
+        '同既有8B全源粗览＋原B局部全部自然窗，先NONTEST8五臂、固定24五臂，再完整104/96四臂对照；只有固定投入规则准入才一个探索ZIP。'
+        '旧最佳B37.63保护。用户V14少0.03，37.60为差值推算，非独立官网读数。新分未知，原V14训练15更新但选原B事实保留。'
+        'Tibo/Sol/Grok两轮实际讨论与最终完整卷宗同步；Pro研究项目连续额度3次已用，新0，Gemini无有效答复，主控独立兜底不冒充共识。'
+        f'当前阶段`{aggregate["current_stage"]}`、粗览/局部完成{aggregate["done_by_kind"]}、失败{len(snapshot["failures"])}；实际模型回执与独立CPU回放分别计，CPU验收和启动不当新生成。'
+        '闭世界教师一致性仅投入排序，真实质量/幻觉率未知，不保证超过最佳。'
+        f'见[固定协议]({REL}/{entry}/PROTOCOL.md)和[筛选聚合]({REL}/{entry}/aggregate_execution.json)。\n\n<!-- END_CURRENT_C_ADVISORY -->\n')
+    def front(text):
+        first,rest=text.split('\n',1)
+        if '<!-- END_CURRENT_C_ADVISORY -->' in rest:rest=rest.split('<!-- END_CURRENT_C_ADVISORY -->',1)[1]
+        rest=rest.replace('## 当前最终交付与真实选点','## V14历史交付与真实选点')
+        return first+'\n'+body+rest
+    edit(PUB/'README.md',front)
+    for name in ('SOLUTIONS.md','REPRODUCTION.md'):edit(PUB/'docs'/name,lambda t:front(t).replace(']('+REL,'](../'+REL))
+    mp=PUB/'docs/publication_manifest.json';original=mp.read_bytes();ending='\r\n' if b'\r\n' in original else '\n';manifest=json.loads(original)
+    rows={x['path']:x for x in manifest['files']}
+    for path in selected+[derived]:
+        is_derived=path==derived;relative=path.relative_to(PUB if is_derived else WORKSPACE).as_posix()
+        if relative not in rows:
+            row=dict(path=relative,source_relative_path=None if is_derived else relative,bytes=0,sha256='',
+                category='aggregate_acceptance_no_frame_data' if is_derived else ('project_code_or_configuration' if path.suffix=='.py' else 'experiment_protocol_or_acceptance'))
+            manifest['files'].append(row);rows[relative]=row
+    for row in manifest['files']:
+        path=PUB/row['path'];row['bytes']=path.stat().st_size;row['sha256']=hashlib.sha256(path.read_bytes()).hexdigest()
+    manifest['updated_utc']=dt.datetime.now(dt.timezone.utc).isoformat()
+    mp.write_bytes((json.dumps(manifest,ensure_ascii=False,indent=2)+'\n').replace('\n',ending).encode())
+    print(json.dumps({'status':'PASS_CURATED_C_ADVISORY_CORE_AND_AGGREGATE','selected_files':len(selected),'new_ZIP_frames_raw_labels_models_exported':False}))
+
+
 if __name__=='__main__':
     import argparse
     parser=argparse.ArgumentParser()
     for v in ('v8','v9','v10','v11','v12','v13','v14'):parser.add_argument('--teacher-'+v,action='store_true')
+    parser.add_argument('--context-advisory',action='store_true')
     args=parser.parse_args()
-    if args.teacher_v14:publish_teacher_v14()
+    if args.context_advisory:publish_context_advisory_v1()
+    elif args.teacher_v14:publish_teacher_v14()
     elif args.teacher_v13:publish_teacher_v13()
     elif args.teacher_v12:publish_teacher_v12()
     elif args.teacher_v8 or args.teacher_v9 or args.teacher_v10 or args.teacher_v11:

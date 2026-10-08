@@ -1,0 +1,87 @@
+{
+  "status": "CURATED_CONTEXT_ADVISORY_ACTUAL_ENGINEERING_AND_PROGRESS_NOT_QUALITY",
+  "snapshot_utc": "2026-10-08T17:52:32.875638+00:00",
+  "entry": "context_advisory_v1",
+  "source_lock_sha256": "461f292a2943c8442db596a49b97b67777c0989c5df6e65eba46bf3f45bd25c6",
+  "frozen_files": 16628,
+  "actual_CPU": {
+    "status": "PASS_REAL_CPU_NATIVE_PROCESSOR_CONTRACTS_NO_GPU_CALLS",
+    "valid_boundary_pairs": 2145,
+    "explicit_invalid_cases": 10,
+    "tokenizer_candidate_count": 82111,
+    "tokenizer_ascii_contexts": 3
+  },
+  "actual_CPU_nontest_sources": 8,
+  "processor_tensor_equal_all_five_arms": true,
+  "B0_all_tensors_equal_actual_V14": true,
+  "done_count": 48,
+  "failure_count": 0,
+  "done_bound_SHA_pass": true,
+  "current_stage": "RUNNING_CPU_NONTEST_FINISH",
+  "actual_new_training_updates": 0,
+  "actual_new_32B_calls": 0,
+  "models": "EXISTING_8B_BASE_OVERVIEW_ORIGINAL_B_LOCAL_ADAPTER",
+  "logical_parameters": 8782459120,
+  "developer_files": 104,
+  "source_groups": 96,
+  "developer_local_windows": 112,
+  "Pro_persistent_used": 3,
+  "new_Pro_calls": 0,
+  "Gemini_effective_responses": 0,
+  "actual_ordinary_rounds": 2,
+  "final_metadata_MD_sha256": "586d95e6a92c4b17008d9c60c6d30aeff0fe69f51ecb5eb082af3f8221875765",
+  "decision_source": "MAIN_CONTROLLER_BUDGET_EXHAUSTED_FALLBACK_NOT_PRO_OR_MAJORITY_TRUTH",
+  "new_final_ZIP_complete": false,
+  "completion": null,
+  "new_official_score": null,
+  "original_B_official_score": 37.63,
+  "original_B_ZIP_sha256": "86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54",
+  "V14_user_delta": -0.03,
+  "V14_score_inferred_not_independently_read": 37.6,
+  "V14_ZIP_sha256": "95173d936d09cfcf84bcff5755336e50dbfff94ac5a7e4cfba2953064022f3a2",
+  "B2_user_official_score": 37.32,
+  "B2_ZIP_sha256": "0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3",
+  "teacher_reference_coverage_complete": "UNKNOWN",
+  "semantic_quality_or_hallucination_rate": "UNKNOWN",
+  "raw_frames_labels_weights_new_ZIP_exported": false,
+  "done_by_kind": {
+    "overview": 8,
+    "local": 40
+  },
+  "local_done_by_arm": {
+    "B1": 8,
+    "B0": 8,
+    "N": 8,
+    "R": 8,
+    "X": 8
+  },
+  "first_real_CPU_replay": {
+    "status": "PASS_INDEPENDENT_FIRST_REAL_C_ADVISORY_CPU_REPLAY",
+    "utc": "2026-10-08T17:51:04.296320+00:00",
+    "all_frozen_files_SHA": 16628,
+    "new_acceptance_model_calls": 0,
+    "new_acceptance_optimizer_updates": 0,
+    "actual_NONTEST_GPU_charge_seconds": 318.90547957085073,
+    "ledger_unique_terminal_match": true,
+    "not_semantic_truth_or_official_score": true,
+    "private_receipt_sha256": "946358871073eba9081102114504492990cf9e374f30d65d90f641f963b74f7a"
+  },
+  "resources": {
+    "nontest": {
+      "status": "completed",
+      "exit_code": 0,
+      "stop_reason": null,
+      "charged_seconds": 318.90547957085073,
+      "started_utc": "2026-10-08T17:41:16.071266+00:00",
+      "finished_utc": "2026-10-08T17:46:34.976656+00:00"
+    }
+  },
+  "nontest_01/nontest.report.json": {
+    "status": "PASS_LABEL_BLIND_MECHANISM_REPORT_NOT_QUALITY",
+    "records": 8,
+    "source_groups": 8,
+    "R_N_changed_native_sets": 7,
+    "R_X_changed_native_sets": 0,
+    "weak_reference_used": false
+  }
+}

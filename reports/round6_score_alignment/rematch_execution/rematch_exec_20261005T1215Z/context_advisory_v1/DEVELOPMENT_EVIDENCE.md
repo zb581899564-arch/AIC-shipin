@@ -1,0 +1,17 @@
+# 冻结前工程证据
+
+2026-10-08 UTC：三席最终回执确认最终卷宗真实字节，Grok指出104记录/96来源组的观察范围风险。
+只读核实际input_contract：104 records、104不同source_sha256、104文件、96youtube_id。原草案误把96group当96文件；在所有新模型调用前修为104独立源文件粗览，24只选24组各一个SHA固定文件，来源组抽样仍96。禁止不同文件共享或合并粗览，原许可clip计分范围不变，完整源观察为本次用户授权的开放源文件，不声称局部参考覆盖全源。
+
+冻结前stdlib CPU验收：2145合法边界对、10显式非法例、全部真实前缀、8事件上限、80描述上限、不可覆盖raw均通过；GPU/新模型/优化器调用0。
+首次Windows测试发现overview prompt末尾引号语法错，尚未部署/调用模型，已更正并真实通过CPU测试。
+首次Linux draft prepare在GPU前CPU import STOP：旧V14 helper_paths把旧prepare.py排在新代码前，`from prepare import source_clock`误加载旧prepare。原失败输出保留于本任务工具记录。新代码按绝对新路径/独立模块名绑定prepare/tests，不能只依据同名模块或路径优先级复用。此次失败发生在input目录创建与新模型调用前。
+
+Mac现实时只读hostname返回choubkdeMac-Mini.local，不能继续声称实时离线。本项目已有“Mac不参与、小量控制直接SSH授权”精确例外用于本次约49KB控制代码，不扩展到数据/模型/ZIP大流量；未使用Mac文件或修改其设置。
+# 20261009 开跑前实际CPU与部署终态补充
+
+实际draft_preflight为PASS_REAL_CPU_NATIVE_PROCESSOR_CONTRACTS_NO_GPU_CALLS：2145合法边界对、10显式非法、真实tokenizer82111候选/3上下文、8实际非测试源顺解RGB/processor、五臂视觉tensor相同、B0全部tensor与原V14相同。模型调用0/优化器更新0。engineering_checks实际PASS，5投入边界、非均衡group bootstrap estimator与actual V14 model engine接口/下游模块load核验。原processor源码mtime早于实际proof且精确SHA相同，复用CPUproof不冒称再运行。
+
+开跑前失败保留：未部署前runtime语法错误；prepare被旧helper同名遮蔽而ImportError；NONTEST先创建input目录导致developer预条件拒绝；104顺解完成后唯一三位小数尾端150.017超过物理150.016533而CPU拒绝。均为GPU/新模型0。前两接口/预条件修复仅独立草稿，原失败stdout/stderr保留；尾端只精确原record/SHA准入，不裁值/epsilon/补帧，104原完整clock receipts逐SHA/geometry/native/rational重核复用。
+
+本目录在这些修复时尚未source_lock/start/registration，不改旧V14任何冻结文件。最终小量控制16文件101439bytes直接SSH部署按既有明确小量控制授权；Mac实际在线，未声称离线或使用其目录。新GPU是否开始与终态只读实际start/registration/raw/资源账，不由本CPU记录推断。

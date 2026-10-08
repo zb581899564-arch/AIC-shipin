@@ -1,6 +1,13 @@
 # AIC 视频高光剪辑
 
-## 当前最终交付与真实选点
+## 新探索C-advisory（实际快照2026-10-08T17:52:32.875638+00:00）
+
+同既有8B全源粗览＋原B局部全部自然窗，先NONTEST8五臂、固定24五臂，再完整104/96四臂对照；只有固定投入规则准入才一个探索ZIP。旧最佳B37.63保护。用户V14少0.03，37.60为差值推算，非独立官网读数。新分未知，原V14训练15更新但选原B事实保留。Tibo/Sol/Grok两轮实际讨论与最终完整卷宗同步；Pro研究项目连续额度3次已用，新0，Gemini无有效答复，主控独立兜底不冒充共识。当前阶段`RUNNING_CPU_NONTEST_FINISH`、粗览/局部完成{'overview': 8, 'local': 40}、失败0；实际模型回执与独立CPU回放分别计，CPU验收和启动不当新生成。闭世界教师一致性仅投入排序，真实质量/幻觉率未知，不保证超过最佳。见[固定协议](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/context_advisory_v1/PROTOCOL.md)和[筛选聚合](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/context_advisory_v1/aggregate_execution.json)。
+
+<!-- END_CURRENT_C_ADVISORY -->
+
+
+## V14历史交付与真实选点
 
 32B教师推理完整160标签与160盲第二选择、真实8B微调及最终Linux ZIP均已完成独立验收。教师未微调32B；同教师一致性为弱监督，支持65train/14dev，UNKNOWN81与原160分母保留。修复了证据/边界编号、生成约束及probe/all/review、canonical键顺序、validator metadata、pilot diagnostic精确阶段移交。8B学生完成3epochs、15次真实optimizer更新、195次样本反向；4更新前缀、288adapter独立CPU重载与冻结基座通过。弱14dev的原B与epoch1同分，epoch2/3较低，按登记规则选择epoch0原B；新权重未胜出，不宣称新T提高。NONTEST8与426复赛各11项独立strict全true，完整426源/521时间窗/无效0、102470预测帧，ZIP CRC/唯一JSONL/身份/原字节通过。时间为本次真实生成，空间精确复用原B2完整源场，本候选新空间模型调用0、原成本保留。最终Linux包：`/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/rematch_01/candidate_T_8B.zip`，实际308278字节，SHA256 `95173d936d09cfcf84bcff5755336e50dbfff94ac5a7e4cfba2953064022f3a2`。包未自动回传或提交官网，新官网分未知。原B37.63绑定旧包SHA `86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54`；B2用户37.32/DONE绑定317401字节旧包SHA `0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3`。见[协议](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/PROTOCOL.md)与[最终聚合验收](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/aggregate_final_acceptance.json)。
 
