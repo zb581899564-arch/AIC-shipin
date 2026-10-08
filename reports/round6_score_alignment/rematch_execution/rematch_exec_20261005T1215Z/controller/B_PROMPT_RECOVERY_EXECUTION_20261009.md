@@ -1,0 +1,13 @@
+# Independent historical B1 prompt recovery
+
+Full C and32B boundary diagnostics are complete and preserved. The matched boundary result rejects training:3/16 consistent temporal overlaps, only2 fixed external directions and both negative, macro−0.11320021399718093. Original semantic identity and coverage stay UNKNOWN.
+
+The main agent uses one previously registered but unexpanded historical B1 control as an independent finite alternative. It restores the complete existing historical prompt plus1..5 grammar, not a new template search and not cardinality-only causality. Current native decoder/processor/floor64, original B8B weights/288 adapters and natural windows stay. No32B/overview/optimizer.
+
+Exact prepare UTC20:10:56.193731 passed104records/96groups/112windows, cached26B1+112B0 and NONTEST8B1/8B0. Only86 missing developer B1 scheduled. One gate is registered before B1 reference direction: full104 difference>=0, expanded72>0, real native set change, material-negative rule mean<=−.05 and>=75percent groups down. CI is report-only; coverageUNKNOWN/weak closed-world output agreement not official-quality truth. No cherry-picking/retuning.
+
+Actual CPU20:11:49.585187 passed missing-source native B1/B0 vision identity with original B0,5292/5329tokens, nonempty grammar rejection/5 parser cases/3 altered-cache contract rejections, plus original8-source five-arm CPU proof identity reuse. New model/optimizer calls0. Generic report import collision failed prefreeze, raw failure log kept; brec_report namespace repair passed.
+
+Controller automatically missing86 realB1→independent remaining85 CPU replay+preserved first proof→fixed gate→exact cached B1 NONTEST8 spatial/11strict→426/521 native B1→spatial exact reuse/all11strict/ZIP/ledger independent final. All old success is byte referenced, no old launcher/teacher/65CE repeated. Engineering failure needs independent new version; scientific STOP does not invent a finalZIP. Only final accepted426+curated publication notifies and deletes monitor.
+
+Freeze completed18126 files, source_lock SHA671118a9b62c16900773d792bf60399e185d5e7183db9c46c71c3ecd4324dd64, followed by one launcher20:17:20.369275 UTC historicalPID/PGID2689151. Actual20:17:49.341943 snapshot confirms complete controller command/-B with active source byte CPU checks; registration/progress and new B1 done not yet written. This is legitimate preflight, not model generation or a hang. CPU acceptance was actually executed20:11:49; freeze/preflight rebinds that exact proof with new processor/modelcalls0. Original cached154 receipts/raw are all SHA true. Final package absent, no train/32B/overview.

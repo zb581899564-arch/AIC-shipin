@@ -1,11 +1,11 @@
 {
   "status": "CURATED_MATCHED_BOUNDARY_ENGINEERING_NOT_TRUTH_TRAINING_OR_FINAL_ZIP",
-  "snapshot_utc": "2026-10-08T19:24:36.958552+00:00",
+  "snapshot_utc": "2026-10-08T19:59:32.822622+00:00",
   "entry": "b_boundary_diagnostic_v1",
   "source_lock_sha256": "361e94f665be087d0bc81001122e05eecb8bdb33047799da488df5e3c69b5463",
   "frozen_files": 18101,
-  "current_stage": "RUNNING_REAL_MATCHED_32B_DIAGNOSTIC",
-  "actual_successful_32B_context_calls": 4,
+  "current_stage": "BOUNDARY_DIAGNOSTIC_COMPLETE_AGENT_CONTINUES_FROM_EVIDENCE",
+  "actual_successful_32B_context_calls": 42,
   "failure_count": 0,
   "all_done_bound_SHA_pass": true,
   "all_done_teacher_recipe_SHA_match": true,
@@ -55,7 +55,16 @@
     "private_receipt_sha256": "63247a90c0ef6cd3d34121065c498bc74aac6f99a215cced3e54e34ef3b91423",
     "all_physical_request_raw_validator_replays_equal": true
   },
-  "resources": {},
+  "resources": {
+    "diagnostic": {
+      "status": "completed",
+      "exit_code": 0,
+      "stop_reason": null,
+      "charged_seconds": 1998.8051604395732,
+      "started_utc": "2026-10-08T19:18:28.171779+00:00",
+      "finished_utc": "2026-10-08T19:51:46.976850+00:00"
+    }
+  },
   "original_C_terminal": {
     "status": "STOP_C_PRODUCTION_INVESTMENT",
     "records": 104,
@@ -146,5 +155,28 @@
     "material_negative_investment_rule": false,
     "nonnegative_registered_four_direction_rule": false
   },
-  "original_C_STOP_preserved": true
+  "original_C_STOP_preserved": true,
+  "complete_diagnostic": {
+    "status": "PASS_REAL_MATCHED_32B_BOUNDARY_DIAGNOSTIC_AND_CPU_ACCOUNTING",
+    "utc": "2026-10-08T19:56:55.665808+00:00",
+    "events": 16,
+    "context_attempts": 42,
+    "engineering_failures": 0,
+    "all_contexts_unique_temporal_overlap_events": 3,
+    "spread_within_original_sample_gap_events": 3,
+    "independent_weak_direction_events": 2,
+    "external_weak_event_macro_delta": -0.11320021399718093,
+    "reference_coverage_and_semantic_truth": "UNKNOWN",
+    "stability_is_not_boundary_truth": true,
+    "training_admitted": false,
+    "new_optimizer_updates": 0,
+    "new_8B_calls": 0,
+    "actual_new_32B_calls": 42,
+    "actual_GPU_charge_seconds": 1998.8051604395732,
+    "new_CPU_acceptance_model_calls": 0,
+    "ledger_unique_terminal_match": true,
+    "ledger_historical_offset": 7200,
+    "no_final_426_ZIP": true,
+    "private_receipt_sha256": "3b0f6d315d6dd5042abb73024ca1e3c33b32d5d48d632e407afef7d993a2a7d1"
+  }
 }

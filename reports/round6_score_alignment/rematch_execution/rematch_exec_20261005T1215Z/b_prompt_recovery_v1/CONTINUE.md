@@ -1,0 +1,3 @@
+# Sole B prompt recovery entry
+
+Read PROTOCOL.md and source_lock/start/registration/progress/preflight/resume bindings before acting. One controller; never repeat launch or successful generation. Modules use brec_ names to avoid shadowing frozen helpers. Existing C B1/B0 success is referenced by original bytes, not copied or recounted as fresh calls. The new full developer stage only generates missing B1. CPU/plan/start are not real inference or quality. A scientific gate can reject production; completion requires final_acceptance PASS and8/426 all11 strict plus ZIP and terminal accounting. The main agent owns independent continuation.

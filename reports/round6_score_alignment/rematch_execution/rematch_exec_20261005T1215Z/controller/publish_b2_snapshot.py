@@ -816,6 +816,18 @@ def publish_boundary_diagnostic_v1():
         'comparisons','R_N_all_native_selected_sets_identical','material_negative_investment_rule',
         'nonnegative_registered_four_direction_rule') if k in upstream['report']}
     aggregate['original_C_STOP_preserved']=True
+    terminal=snapshot['stages'].get('diagnostic_completion.json')
+    if terminal:
+        actual=json.loads((here/'diagnostic_completion.json').read_bytes())
+        assert actual==terminal and actual['status']=='PASS_REAL_MATCHED_32B_BOUNDARY_DIAGNOSTIC_AND_CPU_ACCOUNTING'
+        keys=('status','utc','events','context_attempts','engineering_failures',
+            'all_contexts_unique_temporal_overlap_events','spread_within_original_sample_gap_events',
+            'independent_weak_direction_events','external_weak_event_macro_delta',
+            'reference_coverage_and_semantic_truth','stability_is_not_boundary_truth','training_admitted',
+            'new_optimizer_updates','new_8B_calls','actual_new_32B_calls','actual_GPU_charge_seconds',
+            'new_CPU_acceptance_model_calls','ledger_unique_terminal_match','ledger_historical_offset','no_final_426_ZIP')
+        aggregate['complete_diagnostic']={k:actual[k] for k in keys}
+        aggregate['complete_diagnostic']['private_receipt_sha256']=hashlib.sha256((here/'diagnostic_completion.json').read_bytes()).hexdigest()
     derived=PUB/REL/entry/'aggregate_execution.json'
     derived.write_text(json.dumps(aggregate,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     body=(f'\n## 当前边界诊断（实际快照{snapshot["utc"]}）\n\n'
@@ -847,14 +859,95 @@ def publish_boundary_diagnostic_v1():
         'context_reference_raw_frames_labels_weights_ZIP_exported':False}))
 
 
+def publish_b_prompt_recovery_v1():
+    """Explicit source/aggregate whitelist; original per-frame manifests stay private."""
+    publish_boundary_diagnostic_v1()
+    entry='b_prompt_recovery_v1';here=RUN/entry
+    snapshot=json.loads((RUN/'controller/monitor_b_prompt_recovery_v1/latest.json').read_bytes())
+    assert snapshot['entry']==entry
+    assert hashlib.sha256((here/'source_lock.json').read_bytes()).hexdigest()==snapshot['source_lock_sha256']
+    selected=[p for p in here.iterdir() if p.is_file() and p.suffix in ('.py','.md')]
+    selected += [RUN/'controller'/n for n in ('register_b_prompt_recovery_v1.py','checkpoint_b_prompt_recovery_v1.py',
+        'inspect_b_prompt_recovery_v1.py','record_b_prompt_recovery_execution_20261009.py',
+        'B_PROMPT_RECOVERY_EXECUTION_20261009.md','publish_b2_snapshot.py')]
+    for path in selected:
+        target=PUB/path.relative_to(WORKSPACE);target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(path,target);assert target.read_bytes()==path.read_bytes()
+    cpu=json.loads((here/'cpu_acceptance.json').read_bytes())
+    prepared=json.loads((here/'prepared.json').read_bytes())
+    assert cpu['status']=='PASS_ACTUAL_NEW_B1_NATIVE_PROCESSOR_AND_EXACT_RESUME'
+    stage=(snapshot['stages'].get('progress.json') or {}).get('stage')
+    if stage is None:stage='SOURCE_PREFLIGHT_CPU' if snapshot['processes'] else 'FROZEN_PENDING_SINGLE_LAUNCH'
+    aggregate={'status':'CURATED_HISTORICAL_B1_PROMPT_AND_GRAMMAR_EXPLORATION_NOT_QUALITY_TRUTH',
+        'snapshot_utc':snapshot['utc'],'entry':entry,'source_lock_sha256':snapshot['source_lock_sha256'],
+        'frozen_files':snapshot['frozen_files'],'stage':stage,'actual_new_B1_done':snapshot['done_count'],
+        'new_failure_count':len(snapshot['failures']),'all_new_done_bound_SHA_pass':snapshot['all_done_bound_SHA_pass'],
+        'all_exact_original_resume_SHA_pass':snapshot['all_original_resume_bindings_SHA_pass'],
+        'original_resume_counts':snapshot['resume_counts'],'private_resume_manifest_sha256':snapshot['original_resume_manifest_sha256'],
+        'records':prepared['records'],'source_groups':prepared['groups'],'natural_windows':prepared['windows'],
+        'planned_missing_B1_calls':prepared['missing_B1'],'new_optimizer_updates':0,'new_32B_calls':0,
+        'new_overview_calls':0,'production_weight':'ORIGINAL_B_8B','coupled_prompt_and_grammar_not_cardinality_only':True,
+        'old_37_63_ZIP_byte_identity_claimed':False,'weak_reference_coverage':'UNKNOWN','official_score':None,
+        'forced_nonempty_contract_risk_retained':True,'old_teacher_or_C_or_65_CE_repeated':False,
+        'actual_CPU':{k:cpu[k] for k in ('status','utc','original_NONTEST8_five_arm_proof_reused',
+            'original_proof_sha256','input_tokens','B1_B0_actual_video_tensor_equal','original_native_pixel_SHA_equal',
+            'actual_B1_empty_rejected','original_parser_cases','changed_cache_contract_rejections','new_model_calls','new_optimizer_updates')},
+        'private_CPU_receipt_sha256':hashlib.sha256((here/'cpu_acceptance.json').read_bytes()).hexdigest(),
+        'raw_frames_reference_rows_weak_labels_models_ZIP_exported':False}
+    report=snapshot['stages'].get('developer_01/report.json')
+    if report:aggregate['full_developer_investment_report']=report
+    first=snapshot['stages'].get('first_real_acceptance.json')
+    if first:
+        aggregate['first_real_CPU_acceptance']={k:first[k] for k in ('status','utc','input_tokens',
+            'native_decoder_processor_actual_prefix_raw_validator_equal','new_model_calls','new_optimizer_updates')}
+        aggregate['first_real_CPU_acceptance']['private_receipt_sha256']=hashlib.sha256((here/'first_real_acceptance.json').read_bytes()).hexdigest()
+    final=snapshot['stages'].get('final_acceptance.json')
+    aggregate['new_final_426_ZIP_complete']=bool(final)
+    if final:
+        assert final['status']=='PASS_INDEPENDENT_HISTORICAL_B1_FINAL'
+        aggregate['final_package']={k:final[k] for k in ('status','utc','candidate','zip_bytes','zip_sha256','new_optimizer_updates','official_score')}
+        aggregate['final_package']['all_8_and_426_strict']=all(all(v['all_11_checks'].values()) for v in final['reports'].values())
+    aggregate['resources']={n:{k:v['resource'][k] for k in ('status','exit_code','stop_reason','charged_seconds',
+        'started_utc','finished_utc') if k in v['resource']} for n,v in snapshot['resources'].items() if v.get('resource')}
+    derived=PUB/REL/entry/'aggregate_execution.json';derived.write_text(json.dumps(aggregate,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    body=(f'\n## 当前历史B提示恢复探索（实际快照{snapshot["utc"]}）\n\n'
+        'C固定门已拒绝生产；32B边界16事件/42上下文完整工程通过，但仅3事件在所有上下文唯一重叠，2固定弱方向均负，宏差−0.11320021399718093，未准入边界训练。'
+        '主控独立恢复已有完整B1历史提示及1..5语法，以原B8B权重和当前native输入对照B0；这是耦合合同替代，不声称旧37.63包逐字节复现或cardinality单因果。'
+        '固定104/96/112及原24/72来源组，精确复用26已完成B1与112 B0，仅生成86缺失B1，NONTEST各8也原字节引用。无粗览、32B新调用或训练。'
+        f'当前`{stage}`、本阶段实际新done{snapshot["done_count"]}、工程失败{len(snapshot["failures"])}；CPU与启动不冒充生成。'
+        '完整104及新增72的事前弱输出集合投入门通过后才NONTEST11strict和426/521完整候选；覆盖及真值未知，不保证高于37.63，新官网分未知。'
+        f'见[协议]({REL}/{entry}/PROTOCOL.md)和[筛选聚合]({REL}/{entry}/aggregate_execution.json)。\n\n<!-- END_CURRENT_B_PROMPT_RECOVERY -->\n')
+    def front(t):
+        first,rest=t.split('\n',1)
+        if '<!-- END_CURRENT_B_PROMPT_RECOVERY -->' in rest:rest=rest.split('<!-- END_CURRENT_B_PROMPT_RECOVERY -->',1)[1]
+        return first+'\n'+body+rest
+    edit(PUB/'README.md',front)
+    for name in ('SOLUTIONS.md','REPRODUCTION.md'):edit(PUB/'docs'/name,lambda t:front(t).replace(']('+REL,'](../'+REL))
+    mp=PUB/'docs/publication_manifest.json';raw=mp.read_bytes();ending='\r\n' if b'\r\n' in raw else '\n';manifest=json.loads(raw)
+    present={x['path'] for x in manifest['files']}
+    for path in selected+[derived]:
+        is_derived=path==derived;rel=path.relative_to(PUB if is_derived else WORKSPACE).as_posix()
+        if rel not in present:
+            manifest['files'].append(dict(path=rel,source_relative_path=None if is_derived else rel,bytes=0,sha256='',
+                category='aggregate_acceptance_no_frame_data' if is_derived else ('project_code_or_configuration' if path.suffix=='.py' else 'experiment_protocol_or_acceptance')))
+    for row in manifest['files']:
+        data=(PUB/row['path']).read_bytes();row.update(bytes=len(data),sha256=hashlib.sha256(data).hexdigest())
+    manifest['updated_utc']=dt.datetime.now(dt.timezone.utc).isoformat()
+    mp.write_bytes((json.dumps(manifest,ensure_ascii=False,indent=2)+'\n').replace('\n',ending).encode())
+    print(json.dumps({'status':'PASS_CURATED_B_PROMPT_RECOVERY_CORE_AND_AGGREGATE','selected_files':len(selected),
+        'raw_frames_reference_rows_models_new_ZIP_exported':False}))
+
+
 if __name__=='__main__':
     import argparse
     parser=argparse.ArgumentParser()
     for v in ('v8','v9','v10','v11','v12','v13','v14'):parser.add_argument('--teacher-'+v,action='store_true')
     parser.add_argument('--context-advisory',action='store_true')
     parser.add_argument('--boundary-diagnostic',action='store_true')
+    parser.add_argument('--b-prompt-recovery',action='store_true')
     args=parser.parse_args()
-    if args.boundary_diagnostic:publish_boundary_diagnostic_v1()
+    if args.b_prompt_recovery:publish_b_prompt_recovery_v1()
+    elif args.boundary_diagnostic:publish_boundary_diagnostic_v1()
     elif args.context_advisory:publish_context_advisory_v1()
     elif args.teacher_v14:publish_teacher_v14()
     elif args.teacher_v13:publish_teacher_v13()

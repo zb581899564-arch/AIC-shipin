@@ -14455,8 +14455,8 @@
     {
       "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/publish_b2_snapshot.py",
       "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/publish_b2_snapshot.py",
-      "bytes": 79904,
-      "sha256": "43bca8746f83635b8464db9549923822c8a762adb5b2534ed66aba0118fc36db",
+      "bytes": 88438,
+      "sha256": "f57b3748933461ff6c34be90a0883223b699e350342e0f8a4da68ef3999ff185",
       "category": "project_code_or_configuration"
     },
     {
@@ -18151,15 +18151,141 @@
     {
       "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/B_BOUNDARY_EXECUTION_20261009.md",
       "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/B_BOUNDARY_EXECUTION_20261009.md",
-      "bytes": 6904,
-      "sha256": "96d503261a42c9154ea28cc70e6da879b4bb243284a8eb5e25fa187b3642a5b8",
+      "bytes": 10735,
+      "sha256": "d1f6a3e54facbfed85037a5ade89a8347cb370a9d43743f17b0d43919a166310",
       "category": "experiment_protocol_or_acceptance"
     },
     {
       "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/aggregate_execution.json",
       "source_relative_path": null,
-      "bytes": 5382,
-      "sha256": "901e8d44efb0e2ff11997bc4a92384b45e7951f4a2cba0093b05b3bda9911d96",
+      "bytes": 6669,
+      "sha256": "08c573719831ed27df90d9042f3a7f363c28edac1efad867d6623c978eab231d",
+      "category": "aggregate_acceptance_no_frame_data"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/brec_common.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/brec_common.py",
+      "bytes": 3910,
+      "sha256": "881209ee74f6cc601aaa12dabc918a8eae56fa6b4814cd4229ff9fff9411c557",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/brec_engine.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/brec_engine.py",
+      "bytes": 6050,
+      "sha256": "183554215ad62dc59ff1a7d8d6b51d00abc6639857835a8b99854bb4c6b854ec",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/brec_report.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/brec_report.py",
+      "bytes": 4082,
+      "sha256": "9c964f76d87e1627c169fad53ab077b3b1adb61447aa3876eb5f376d21a60977",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/CONTINUE.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/CONTINUE.md",
+      "bytes": 644,
+      "sha256": "d0bc3f3e942d07ff610c494e37cfa6386973e09ab351e324689c080d19655c11",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/controller.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/controller.py",
+      "bytes": 3767,
+      "sha256": "25f162ebe1d3638f5a0407077e089057313ef5af7d1ba36672a30878b5143424",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/cpu_checks.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/cpu_checks.py",
+      "bytes": 4841,
+      "sha256": "adcf44f5d70bb22049b88f258d9abf4eeeb9ad447a706a305f19cbbb80642e68",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/final_acceptance.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/final_acceptance.py",
+      "bytes": 4113,
+      "sha256": "c74c34855f8831e4603a60d3878b7d9d21320981ec602985b574011989274ab5",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/freeze.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/freeze.py",
+      "bytes": 1838,
+      "sha256": "72073319c043fa18d45d670fca053e54271c83a52a626098cede676e33ef512c",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/launch.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/launch.py",
+      "bytes": 1373,
+      "sha256": "dfb8fc84d2e0b0dfc1c9f521bc2c975e1daee3441392b306fb5131a663621a79",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/packager.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/packager.py",
+      "bytes": 6223,
+      "sha256": "1f1a6be4ab3cb71c341a3761bf62b62e44b34088a062c43a1ca73a261c4a1a1c",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/prepare.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/prepare.py",
+      "bytes": 5099,
+      "sha256": "51065580723f5e9afd46b057b7d3bb8d51fa86702b8a8c8207f0753fa8a33c0f",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/PROTOCOL.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/PROTOCOL.md",
+      "bytes": 4133,
+      "sha256": "c745e181962088624e797196c8e9a89057869a2ac71e2e61cdfdd12be285f527",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/register_b_prompt_recovery_v1.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/register_b_prompt_recovery_v1.py",
+      "bytes": 3378,
+      "sha256": "60378c7fb0ed46c3eef2e80747e810f94832d7d264fcf2d2adbcf3aaafff6e1e",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/checkpoint_b_prompt_recovery_v1.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/checkpoint_b_prompt_recovery_v1.py",
+      "bytes": 2638,
+      "sha256": "2d75c660e84bc7f6a97d44ef92dda78212f030641907e7e9f110aa83944ec4e9",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/inspect_b_prompt_recovery_v1.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/inspect_b_prompt_recovery_v1.py",
+      "bytes": 3565,
+      "sha256": "6c8761f0bd83ea31317181dc263b922d6e1b8c564cd83dc740fdb4f483fe9165",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/record_b_prompt_recovery_execution_20261009.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/record_b_prompt_recovery_execution_20261009.py",
+      "bytes": 3671,
+      "sha256": "8ace25e990165bdaaff7a393d82efb299df9df9b93564aab10341afca4231d5f",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/B_PROMPT_RECOVERY_EXECUTION_20261009.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/B_PROMPT_RECOVERY_EXECUTION_20261009.md",
+      "bytes": 2662,
+      "sha256": "f7eecc07604a0fc0edc1d7d0c8c105ecdd2d986e556578746034d87339924f93",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/aggregate_execution.json",
+      "source_relative_path": null,
+      "bytes": 2084,
+      "sha256": "1a5fa3adc945a1665a4927269873010f5538768a0c2dc59bb7ff278e744b6a25",
       "category": "aggregate_acceptance_no_frame_data"
     }
   ],
@@ -18237,5 +18363,5 @@
   "autopilot_v5_pilot_completed_windows": 3,
   "autopilot_v5_pilot_failed_windows": 0,
   "autopilot_v5_pilot_quality_pass": false,
-  "updated_utc": "2026-10-08T19:25:32.191127+00:00"
+  "updated_utc": "2026-10-08T20:18:17.467173+00:00"
 }
