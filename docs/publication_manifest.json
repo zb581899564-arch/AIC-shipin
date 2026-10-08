@@ -14455,8 +14455,8 @@
     {
       "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/publish_b2_snapshot.py",
       "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/publish_b2_snapshot.py",
-      "bytes": 88438,
-      "sha256": "f57b3748933461ff6c34be90a0883223b699e350342e0f8a4da68ef3999ff185",
+      "bytes": 96446,
+      "sha256": "f82fc792ddda019112e4052f3292a00fdec50d57839de7e367712e127dc8a106",
       "category": "project_code_or_configuration"
     },
     {
@@ -18277,15 +18277,155 @@
     {
       "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/B_PROMPT_RECOVERY_EXECUTION_20261009.md",
       "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/B_PROMPT_RECOVERY_EXECUTION_20261009.md",
-      "bytes": 2662,
-      "sha256": "f7eecc07604a0fc0edc1d7d0c8c105ecdd2d986e556578746034d87339924f93",
+      "bytes": 6258,
+      "sha256": "cf76b79c7b1361bc4966a8947b1b65c094e955c8b75a3cfd4862250f3fe6dc4a",
       "category": "experiment_protocol_or_acceptance"
     },
     {
       "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/aggregate_execution.json",
       "source_relative_path": null,
-      "bytes": 2084,
-      "sha256": "1a5fa3adc945a1665a4927269873010f5538768a0c2dc59bb7ff278e744b6a25",
+      "bytes": 4186,
+      "sha256": "516cb5728a47f305993e52cfc434d52c878e63e1846ef66f55e1c70e2298c3a3",
+      "category": "aggregate_acceptance_no_frame_data"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/nd_common.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/nd_common.py",
+      "bytes": 4539,
+      "sha256": "707afaa989f5f18c79c21a6e400c4bce0183c9386aa9d888949dbb1d0195698e",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/nd_native.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/nd_native.py",
+      "bytes": 6705,
+      "sha256": "ac3bf1f72aa5c8138cafa500ff69e0ea7ca8bd787759f9fa40004c7ad37cfa45",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/nd_video.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/nd_video.py",
+      "bytes": 2482,
+      "sha256": "e8ff5ae3fa193109bf7ff06625c098011910016dc9f927c7e4547ee1402f22e8",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/nd_prepare.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/nd_prepare.py",
+      "bytes": 4988,
+      "sha256": "e4de4085e995349c32891925025f277faa7787e87405f7af9fb96c8288ecb64c",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/nd_cpu.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/nd_cpu.py",
+      "bytes": 3141,
+      "sha256": "b966c4d48975cb938ec77622ccdc0e36b5fbcaba346720e50d898924300e8b0c",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/nd_engine.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/nd_engine.py",
+      "bytes": 6499,
+      "sha256": "da093113d329140f0092418f596d653959974e115e7ed635f98e768a70731e9f",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/nd_report.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/nd_report.py",
+      "bytes": 3994,
+      "sha256": "d715b0ee3ae70989c683da13bd9ba550fd6a238e9411375433b7479809922024",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/freeze.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/freeze.py",
+      "bytes": 1974,
+      "sha256": "91eae8ee048cd1c125377caae799576fb18e3f8b3b328b132a4ecaf88b95b58b",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/packager.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/packager.py",
+      "bytes": 6111,
+      "sha256": "073972a43c723f89b11729529c808bdc7d43cdf5a46ba0acbeb9fede9f039490",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/final_acceptance.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/final_acceptance.py",
+      "bytes": 7664,
+      "sha256": "7f6a000d5bbbae859d142f86cb2389eede08060bbc0adf6c3d915a683b97a136",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/controller.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/controller.py",
+      "bytes": 3911,
+      "sha256": "4db08f062fca53924526a2810fccbb9e53878cdeb6a6c192c6341842f3e3bd86",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/launch.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/launch.py",
+      "bytes": 1343,
+      "sha256": "504245363c463e9eb23ecdab4d976b0ce1017972553dd732a4991d6b13890413",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/CONTINUE.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/CONTINUE.md",
+      "bytes": 646,
+      "sha256": "178a4fc62b42d811efdac9d3237d07db5c6ba646ca6dd2f1d86546f64c8e5fbd",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/PROTOCOL.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/PROTOCOL.md",
+      "bytes": 5074,
+      "sha256": "1940a0de5248df4690f7643249266c2e4178251a1541db6b8b9cb2b8d07f8a4f",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/register_nested_density_v1.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/register_nested_density_v1.py",
+      "bytes": 4003,
+      "sha256": "50371c82dd23c1ad3a937cf747ea6aba2a2f5b36b58d1fc681f8f9e1bc9cce73",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/checkpoint_nested_density_v1.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/checkpoint_nested_density_v1.py",
+      "bytes": 2628,
+      "sha256": "6dfeca4fe4f474f044cce1dd4486f3d05bf9ceb777664a2e467e1bb9a55b02e7",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/inspect_nested_density_v1.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/inspect_nested_density_v1.py",
+      "bytes": 5666,
+      "sha256": "c98eb2e2d7c427012dd148899d0a5ab47200e01d6220815bba8b24d507ccd746",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/record_nested_density_execution_20261009.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/record_nested_density_execution_20261009.py",
+      "bytes": 4017,
+      "sha256": "7fd5948bf5b8b848668f7a0f3a2fb22399fcd278f18990ccb3e656f89d52d4df",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/NESTED_DENSITY_EXECUTION_20261009.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/NESTED_DENSITY_EXECUTION_20261009.md",
+      "bytes": 6888,
+      "sha256": "cb7fdc85d00b1b88418881cc664d3af55e3e98f6971cbd74cd7d391d4d4913ed",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/aggregate_execution.json",
+      "source_relative_path": null,
+      "bytes": 1965,
+      "sha256": "53e946e3e629f3eed008794b03da83a1836e055b5a2b0372cd1d813caed4115e",
       "category": "aggregate_acceptance_no_frame_data"
     }
   ],
@@ -18363,5 +18503,5 @@
   "autopilot_v5_pilot_completed_windows": 3,
   "autopilot_v5_pilot_failed_windows": 0,
   "autopilot_v5_pilot_quality_pass": false,
-  "updated_utc": "2026-10-08T20:18:17.467173+00:00"
+  "updated_utc": "2026-10-08T21:08:09.342488+00:00"
 }

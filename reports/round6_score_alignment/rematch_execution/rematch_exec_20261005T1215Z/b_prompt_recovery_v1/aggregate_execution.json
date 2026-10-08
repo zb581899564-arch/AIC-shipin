@@ -1,11 +1,11 @@
 {
   "status": "CURATED_HISTORICAL_B1_PROMPT_AND_GRAMMAR_EXPLORATION_NOT_QUALITY_TRUTH",
-  "snapshot_utc": "2026-10-08T20:17:49.341943+00:00",
+  "snapshot_utc": "2026-10-08T20:43:27.052698+00:00",
   "entry": "b_prompt_recovery_v1",
   "source_lock_sha256": "671118a9b62c16900773d792bf60399e185d5e7183db9c46c71c3ecd4324dd64",
   "frozen_files": 18126,
-  "stage": "SOURCE_PREFLIGHT_CPU",
-  "actual_new_B1_done": 0,
+  "stage": "STOP_B1_INVESTMENT_AGENT_CONTINUES",
+  "actual_new_B1_done": 86,
   "new_failure_count": 0,
   "all_new_done_bound_SHA_pass": true,
   "all_exact_original_resume_SHA_pass": true,
@@ -49,6 +49,68 @@
   },
   "private_CPU_receipt_sha256": "131d27a45d8283c9dac0fccc29d6ea84fab30135abbd679082a15c96d37dab89",
   "raw_frames_reference_rows_weak_labels_models_ZIP_exported": false,
+  "full_developer_investment_report": {
+    "status": "STOP_HISTORICAL_B1_INVESTMENT",
+    "utc": "2026-10-08T20:36:58.080203+00:00",
+    "records": 104,
+    "groups": 96,
+    "windows": 112,
+    "new_B1_calls": 86,
+    "original_B1_reused": 26,
+    "original_B0_reused": 112,
+    "all104_B1_minus_B0": {
+      "mean": -0.009816273304981254,
+      "ci95": [
+        -0.044712957000221126,
+        0.02175948524205064
+      ],
+      "resampling_units": 96,
+      "point_estimator": "VIDEO_MACRO_RECOMPUTED_AFTER_SOURCE_GROUP_RESAMPLE",
+      "draws": 10000,
+      "seed": 20261009,
+      "CI_is_report_only": true
+    },
+    "expanded72_B1_minus_B0": {
+      "mean": -0.01620639512922189,
+      "ci95": [
+        -0.06163263024070689,
+        0.021107792619441623
+      ],
+      "resampling_units": 72,
+      "point_estimator": "VIDEO_MACRO_RECOMPUTED_AFTER_SOURCE_GROUP_RESAMPLE",
+      "draws": 10000,
+      "seed": 20261009,
+      "CI_is_report_only": true
+    },
+    "changed_native_sets": 49,
+    "groups_down": 21,
+    "B1_legal_empty_records": 0,
+    "B0_legal_empty_records": 0,
+    "reference_coverage": "UNKNOWN",
+    "metric_is_closed_world_weak_output_agreement_not_quality_truth": true,
+    "new_optimizer_updates": 0,
+    "coupled_prompt_and_grammar_alternative": true,
+    "official_score": null,
+    "no_post_result_retuning": true
+  },
+  "first_real_CPU_acceptance": {
+    "status": "PASS_REAL_FIRST_MISSING_B1_AND_INDEPENDENT_CPU_REPLAY",
+    "utc": "2026-10-08T20:21:58.414878+00:00",
+    "input_tokens": 5292,
+    "native_decoder_processor_actual_prefix_raw_validator_equal": true,
+    "new_model_calls": 0,
+    "new_optimizer_updates": 0,
+    "private_receipt_sha256": "264517da92b3923e50a6d8c1859c0949a05772c479adaab2c003a8d70ecc23ca"
+  },
   "new_final_426_ZIP_complete": false,
-  "resources": {}
+  "resources": {
+    "developer": {
+      "status": "completed",
+      "exit_code": 0,
+      "stop_reason": null,
+      "charged_seconds": 628.2130209468305,
+      "started_utc": "2026-10-08T20:19:41.322267+00:00",
+      "finished_utc": "2026-10-08T20:30:09.535202+00:00"
+    }
+  }
 }

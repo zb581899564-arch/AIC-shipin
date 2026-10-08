@@ -1,8 +1,14 @@
 # 方案、证据与当前状态
 
-## 当前历史B提示恢复探索（实际快照2026-10-08T20:17:49.341943+00:00）
+## 当前嵌套原生帧密度探索（实际快照2026-10-08T21:07:42.206096+00:00）
 
-C固定门已拒绝生产；32B边界16事件/42上下文完整工程通过，但仅3事件在所有上下文唯一重叠，2固定弱方向均负，宏差−0.11320021399718093，未准入边界训练。主控独立恢复已有完整B1历史提示及1..5语法，以原B8B权重和当前native输入对照B0；这是耦合合同替代，不声称旧37.63包逐字节复现或cardinality单因果。固定104/96/112及原24/72来源组，精确复用26已完成B1与112 B0，仅生成86缺失B1，NONTEST各8也原字节引用。无粗览、32B新调用或训练。当前`SOURCE_PREFLIGHT_CPU`、本阶段实际新done0、工程失败0；CPU与启动不冒充生成。完整104及新增72的事前弱输出集合投入门通过后才NONTEST11strict和426/521完整候选；覆盖及真值未知，不保证高于37.63，新官网分未知。见[协议](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/PROTOCOL.md)和[筛选聚合](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/aggregate_execution.json)。
+原C/32B边界/历史B1固定科学拒绝保持；B1完整86新回答和CPU回放工程通过，但all104差−0.009816273304981254、扩展72差−0.01620639512922189，未生产426包。本独立实验保留原floor64物理观察，再加入每对非连续相邻序号的一个原生中点，最多127物理帧；原B8B/B0提示/0..5语法及全部原自然窗保持。固定总video像素预算带来时间密度与空间grid的取舍，真实记录，不称视频tensor相同。120实际CPU接口已核，CPU与启动不是生成。当前`CONTROLLER_SOURCE_PREFLIGHT_CPU_ACTUAL_COMMAND_AND_IO`，实际新密度done0，失败0；训练/32B/粗览新调用0。原开发集合已被观察，弱输出集合门仅投入证据，覆盖与真值UNKNOWN，不保证超过37.63，新官网分未知。见[协议](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/PROTOCOL.md)和[筛选聚合](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/nested_density_v1/aggregate_execution.json)。
+
+<!-- END_CURRENT_NESTED_DENSITY -->
+
+## 当前历史B提示恢复探索（实际快照2026-10-08T20:43:27.052698+00:00）
+
+C固定门已拒绝生产；32B边界16事件/42上下文完整工程通过，但仅3事件在所有上下文唯一重叠，2固定弱方向均负，宏差−0.11320021399718093，未准入边界训练。主控独立恢复已有完整B1历史提示及1..5语法，以原B8B权重和当前native输入对照B0；这是耦合合同替代，不声称旧37.63包逐字节复现或cardinality单因果。固定104/96/112及原24/72来源组，精确复用26已完成B1与112 B0，仅生成86缺失B1，NONTEST各8也原字节引用。无粗览、32B新调用或训练。当前`STOP_B1_INVESTMENT_AGENT_CONTINUES`、本阶段实际新done86、工程失败0；CPU与启动不冒充生成。完整104及新增72的事前弱输出集合投入门通过后才NONTEST11strict和426/521完整候选；覆盖及真值未知，不保证高于37.63，新官网分未知。见[协议](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/PROTOCOL.md)和[筛选聚合](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_prompt_recovery_v1/aggregate_execution.json)。
 
 <!-- END_CURRENT_B_PROMPT_RECOVERY -->
 
@@ -17,6 +23,9 @@ C-advisory完整104/96组已自然完成，新增72组R−N为−0.0005824552995
 同既有8B全源粗览＋原B局部全部自然窗，先NONTEST8五臂、固定24五臂，再完整104/96四臂对照；只有固定投入规则准入才一个探索ZIP。旧最佳B37.63保护。用户V14少0.03，37.60为差值推算，非独立官网读数。新分未知，原V14训练15更新但选原B事实保留。Tibo/Sol/Grok两轮实际讨论与最终完整卷宗同步；Pro研究项目连续额度3次已用，新0，Gemini无有效答复，主控独立兜底不冒充共识。当前阶段`WAITING_AGENT_CONCRETE_B_BOUNDARY_CONTINUATION`、粗览/局部完成{'overview': 112, 'local': 514}、失败0；实际模型回执与独立CPU回放分别计，CPU验收和启动不当新生成。闭世界教师一致性仅投入排序，真实质量/幻觉率未知，不保证超过最佳。见[固定协议](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/context_advisory_v1/PROTOCOL.md)和[筛选聚合](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/context_advisory_v1/aggregate_execution.json)。
 
 <!-- END_CURRENT_C_ADVISORY -->
+
+
+
 
 
 
