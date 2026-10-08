@@ -1,8 +1,8 @@
 # 运行和资产说明
 
-## 当前教师独立修复
+## 当前教师工程修复与真实接续
 
-2026-10-08：用户截图指认已交付B2复赛成绩 **37.32 / DONE**，较原Linux B 37.63低0.31；两分各自绑定旧包。旧科学STOP保留。按用户提供审计另登记独立修复，已修真实probe→all缓存误拒绝、短边界ID与精确PTS映射、盲二次选择/全分母/UNKNOWN分离、新128/32与固定24、新2–4更新前缀与原B开发candidate0。Linux92项CPU验收和1189文件绑定通过，锁 `0ae09ec38ff589baa5e15e16b84457b06442195de502ec7ef6a19bab9b715578`，单次launcher已登记。v8曾在B2缓存status/stage字段衔接处调用教师前STOP，GPU/标签/T更新均0；旧480文件和STOP保持。v9沿用同配方未标注选择原字节，修复实际回执适配与完整缓存身份绑定，并实际复现旧失败/验证两个scopeCPU桥接。V11修B/F独立编号与每段模型所选物理证据的生成约束；原V10真实8接口/2成功重输入回执仅核SHA与原validator引用，不当新调用；同24首个原失败窗真实验证新格式再继续，全部原失败与成功原字节保留。当前v11接续逐条24标注/盲选择→科学分路A/B/C；启动/CPU不是32B质量或新训练通过。新T实际更新数 `0`。当前实际阶段 `RUNNING_TEACHER_PILOT`。每15分钟静默巡检自动修复；最终真实完整验收后交付，官网新分未知。见[修复与范围](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/V8_REPAIR_AND_EXECUTION_20261008.md)、[新协议](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v11/PROTOCOL.md)、[聚合验收](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v11/aggregate_repair_launch_acceptance.json)。
+V11已真实完整标注160/160（全量阶段新134、原SHA复用26），盲第二选择28条完成。全量复查在旧成功JSONL对象键排序导致canonical字符串SHA误拒绝处工程停止，原raw/标签/成功回执/STOP保持。V12修复投影的原始对象序列顺序，随后因部署漏原validator metadata在GPU前自然STOP，所有原失败保持。V13补齐原metadata/schema字节并CPU执行完整28条当前blind validator，原160/28经过原validator及全部输入/物理帧SHA验收后引用；剩132独立盲选择，新label调用0，不重复成功生成，原GPU成本6748.806357712485秒保留。当前实际阶段 `RUNNING_TEACHER_REVIEW`，新T实际更新0，没有新最终ZIP/新官网分。B2用户37.32/DONE与原B37.63各绑定各自包。CPU/启动/同教师一致性不是人工真值或新模型训练。见[协议](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v13/PROTOCOL.md)与[聚合验收](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v13/aggregate_resume_acceptance.json)。
 
 <!-- END_CURRENT_V8 -->
 ## 已包含

@@ -190,16 +190,58 @@ def capture(version, entry=None):
         'pilot_decision':'pilot_01/completion.json','pilot_semantic':'pilot_01/pilot_semantic_quality.json',
         'prefix':'student_01/prefix_gate.json','teacher_probe':'teacher_01/teacher_probe_completion.json',
         'teacher_semantic':'teacher_01/semantic_review.json',
-        'legacy_handoff':'legacy_handoff.json','new_format_real_probe':'pilot_01/new_format_real_probe.json'}.items()}
-    if entry in ('teacher_student_autopilot_v8','teacher_student_autopilot_v9','teacher_student_autopilot_v10','teacher_student_autopilot_v11'):
+        'legacy_handoff':'legacy_handoff.json','new_format_real_probe':'pilot_01/new_format_real_probe.json',
+        'resume_handoff':'resume_handoff.json','review_progress':'teacher_01/review_progress.json',
+        'first_review_generation':'teacher_01/first_review_generation.json','review_cost':'teacher_review_cost_registration.json'}.items()}
+    if entry in ('teacher_student_autopilot_v8','teacher_student_autopilot_v9','teacher_student_autopilot_v10','teacher_student_autopilot_v11','teacher_student_autopilot_v12','teacher_student_autopilot_v13'):
         snapshot['active_gpu_job'] = read(RUN.parents[2] / 'improvement_round1/active_gpu_job.json')
         snapshot['resource_receipts'] = {p.name:read(p) for p in sorted((RUN/'controller').glob('rematch_TAUTO_'+entry.rsplit('_',1)[1]+'_*.resource.json'))}
         snapshot['queue_receipts'] = {p.name:read(p) for p in sorted((RUN/'controller').glob('rematch_TAUTO_'+entry.rsplit('_',1)[1]+'_*.queue.json'))}
+        ledger_path=RUN.parents[2]/'improvement_round1/gpu_ledger.jsonl'
+        if ledger_path.exists():
+            ledger_bytes=ledger_path.read_bytes();ledger_rows=[json.loads(line) for line in ledger_bytes.splitlines() if line.strip()]
+            snapshot['gpu_ledger_summary']=dict(records=len(ledger_rows),sha256=hashlib.sha256(ledger_bytes).hexdigest(),last_record=ledger_rows[-1] if ledger_rows else None,historical_offset_seconds=7200)
+
         snapshot['visual_case_results'] = {p.parent.name:read(p) for p in sorted((here/'visual_probe_01/cases').glob('*/case_result.json'))}
         snapshot['artifact_activity'] = {
             scope:{str(p.relative_to(here/scope)):{'bytes':p.stat().st_size,'mtime_ns':p.stat().st_mtime_ns}
                 for p in sorted((here/scope).rglob('*')) if p.is_file() and p.suffix in ('.json','.jsonl','.log')}
             for scope in ('visual_probe_01','teacher_01','pilot_01','student_01','nontest_01','rematch_01')}
+    if entry in ('teacher_student_autopilot_v12','teacher_student_autopilot_v13'):
+        snapshot['source_lock_file_count'] = len((read(here/'source_lock.json') or {}).get('files',{}))
+        def file_sha_matches(name,digest):
+            p=Path(name)
+            return p.is_file() and hashlib.sha256(p.read_bytes()).hexdigest()==digest
+        provider=RUN/'teacher_student_autopilot_v11'
+        snapshot['resume_provider'] = dict(entry=provider.name,
+            processes=[line.strip() for line in process_lines if str(provider)+'/' in line],
+            completion=read(provider/'completion.json'), teacher_completion=read(provider/'teacher_01/teacher_completion.json'),
+            teacher_stop=read(provider/'teacher_01/teacher_stop.json'),
+            original_resource=read(RUN/'controller/rematch_TAUTO_v11_teacher_full.resource.json'))
+        snapshot['resume_manifest_summary'] = None
+        manifest=read(here/'v11_resume_manifest.json')
+        if manifest:
+            snapshot['resume_manifest_summary'] = dict(status=manifest['status'],labels=len(manifest['labels']),
+                completed_reviews=len(manifest['reviews']),remaining_review_calls=manifest['remaining_review_calls'],
+                manifest_sha256=hashlib.sha256((here/'v11_resume_manifest.json').read_bytes()).hexdigest())
+            snapshot['all_original_resume_file_sha_pass'] = all(
+                file_sha_matches(name,digest) for name,digest in manifest['all_receipt_files'].items())
+    if entry in ('teacher_student_autopilot_v12','teacher_student_autopilot_v13'):
+        fresh=[]
+        for directory in sorted((here/'teacher_01/reviews').glob('*')):
+            if not directory.is_dir():continue
+            done=read(directory/'done.json');failure=read(directory/'failure.json');review=read(directory/'review_receipt.json')
+            checks={name:(directory/name).is_file() and hashlib.sha256((directory/name).read_bytes()).hexdigest()==expected
+                for name,expected in (done or {}).get('files',{}).items()}
+            fresh.append(dict(window_id=directory.name,done=bool(done),failure=failure,
+                done_sha256=hashlib.sha256((directory/'done.json').read_bytes()).hexdigest() if done else None,
+                file_sha_checks=checks,support_class=(review or {}).get('support_class'),
+                raw_answer_sha256=hashlib.sha256((directory/'raw_answer.txt').read_bytes()).hexdigest() if (directory/'raw_answer.txt').is_file() else None))
+        snapshot['fresh_review_receipts']=fresh
+        snapshot['fresh_review_done_count']=sum(item['done'] for item in fresh)
+        snapshot['fresh_review_failure_count']=sum(bool(item['failure']) for item in fresh)
+        snapshot['all_fresh_completed_review_SHA_pass']=all(item['file_sha_checks'] and all(item['file_sha_checks'].values()) for item in fresh if item['done'])
+        snapshot['original_V12_pre_GPU_STOP']=read(RUN/'teacher_student_autopilot_v12/completion.json') if entry.endswith('v13') else None
     snapshot['production_stage_receipts'] = {
         scope: {p.name: read(p) for p in sorted((here / scope).glob('*.stage.json'))}
         for scope in ('nontest_01', 'rematch_01')}

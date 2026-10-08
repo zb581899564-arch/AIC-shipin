@@ -1,10 +1,38 @@
+## 2026-10-08：V13修复canonical键顺序衔接，原160标签与28盲复查保留
+
+当前唯一入口 `teacher_student_autopilot_v13/CONTINUE.md` 与 `PROTOCOL.md`。原V11完整160标注已自然成功（本阶段新134/逐SHA复用26）；全量第二选择第五条后在09:15:44 UTC工程STOP。已复现：旧V10成功原JSON文件验证通过，排序JSONL读出对象与原对象完全相等，但parsed对象键顺序不同，再序列化得到不同canonical SHA而误拒绝。原回答、canonical字串、窗口端点、标签对象、原STOP均保持。
+
+V12仅从exact SHA和隔离原validator批准的原文件读取canonical投影顺序。V12于10:12:57 UTC在CPU移交因部署遗漏原validator metadata自然STOP、GPU/新标注/新复查0，原14562锁和日志保持。V13补齐V11原metadata/schema完全相同字节，完整当前28条blind validator再CPU回放，并保留Linux原地原validator/输入及PNG/RGB核160/28、2真实旧排序回归与13拒绝合同，CPU/复用新调用0。冻 `14567` 文件，锁 `620df12b8cd6bb85d3bf64fc120314d400d30aa9887dfc0a58d0d4152ede8159`；单次launcher `2026-10-08T10:24:43.088819+00:00`，历史PID/PGID `958640`。实际 `2026-10-08T10:41:48.514446+00:00` 所属完整命令进程3、server1，阶段 `RUNNING_TEACHER_REVIEW`。历史PID、GPU闲或旧progress均不代表持续存活/卡死。
+
+原160标签/28盲选择只按完整exact manifest/SHA/原validator复用，剩132独立第二选择；新label调用0。原full失败wrapper自然exit1/stop_reason null，真实charge6748.806357712485秒已追加账本，未发送任何旧/外部进程信号。新/旧review锁只准入原160记录与28原reviewexact授权，不泛化旧回答。固定160/24/语义prompt/BF grammar/输入/原validator/学生和生产配方保持。首个阻塞窗真实新review状态 `PASS_REAL_BLOCKED_LEGACY_BLIND_REVIEW_NOT_TRAINING_OR_TRUTH`；实际新review进度 `{'status': 'REAL_MISSING_BLIND_REVIEWS_RUNNING', 'utc': '2026-10-08T10:41:38.917582+00:00', 'selected_denominator': 160, 'original_completed_reviews': 28, 'fresh_model_calls': 5, 'total_completed_reviews': 33, 'new_label_calls': 0, 'last_window_id': 'complete_14bcc13b9810424959ac41f3', 'last_review_reused': False, 'new_T_optimizer_updates': 0}`。首个实际新盲选择的独立CPU回放已通过：真实HTTP构造/实际processor/应用grammar/原raw与全部SHA/物理帧及原validator核一致，CPU新调用0，证据SHA `1c3edf2b668cb247767c63be74640392bb6bb18c1f3bd4a9ed590de99683ae92`，实际14016输入token、HTTP wall26.858058秒。原支持/UNKNOWN不改，同教师一致性不是人工真值。
+
+自动接续剩复查→原监督科学门→可靠完整窗口路线A学生2–4真实更新同optimizer/RNG、旧B candidate0开发→NONTEST8→426/11独立strict ZIP。边界可靠仅准入独立路线B；观察仍不可靠按授权登记C同8B全源粗览/局部非测试匹配。B/C以实际协议/回执为准，不假称运行；新T实际更新 `0`，当前没有新最终ZIP。禁止改冻结源码或重复launcher/成功生成；CPU SHA与顺序解码/共享等待可能合法。
+
+B2用户37.32/DONE（317401字节SHA0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3），旧B37.63绑定旧包SHA86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54，各旧成绩原样保留。每15分钟aic-linux静默入口controller/checkpoint_teacher_v13.py，只记录实时实际命令/PGID/IO、原provider终态、新复查/学生/strict/resource/queue与artifact bytes/mtime。新大流量先许可，小量控制直SSH、Mac退出，100confirm不读、复赛不手看调参，共享锁/账本7200与外部任务/连接/服务保持。仅最终ZIP全部真实验收后一次通知、删除监控、不归档；最终包留Linux，新官网分未知。
+
+<!-- END_CURRENT_TEACHER_V13 -->
+
+## 2026-10-08：V12修复canonical键顺序衔接，原160标签与28盲复查保留
+
+当前唯一入口 `teacher_student_autopilot_v12/CONTINUE.md` 与 `PROTOCOL.md`。原V11完整160标注已自然成功（本阶段新134/逐SHA复用26）；全量第二选择第五条后在09:15:44 UTC工程STOP。已复现：旧V10成功原JSON文件验证通过，排序JSONL读出对象与原对象完全相等，但parsed对象键顺序不同，再序列化得到不同canonical SHA而误拒绝。原回答、canonical字串、窗口端点、标签对象、原STOP均保持。
+
+V12仅从exact SHA和隔离原validator批准的原文件读取canonical投影顺序。Linux原地原validator/全部输入及PNG/RGB核160/28，2真实旧排序失败回放与13拒绝合同通过，CPU/复用新调用0。冻 `14562` 文件，锁 `5f9f246790c62982d198f429b98b4b3e04f5f5cbdf8e5e7db0a310a52e24be22`；单次launcher `2026-10-08T10:05:15.343331+00:00`，历史PID/PGID `937470`。实际 `2026-10-08T10:10:54.576266+00:00` 所属完整命令进程1、server0，阶段 `SOURCE_PREFLIGHT_CPU`。历史PID、GPU闲或旧progress均不代表持续存活/卡死。
+
+原160标签/28盲选择只按完整exact manifest/SHA/原validator复用，剩132独立第二选择；新label调用0。原full失败wrapper自然exit1/stop_reason null，真实charge6748.806357712485秒已追加账本，未发送任何旧/外部进程信号。新/旧review锁只准入原160记录与28原reviewexact授权，不泛化旧回答。固定160/24/语义prompt/BF grammar/输入/原validator/学生和生产配方保持。首个阻塞窗真实新review状态 `PENDING_REAL_GENERATION`；实际新review进度 `{}`。原支持/UNKNOWN不改，同教师一致性不是人工真值。
+
+自动接续剩复查→原监督科学门→可靠完整窗口路线A学生2–4真实更新同optimizer/RNG、旧B candidate0开发→NONTEST8→426/11独立strict ZIP。边界可靠仅准入独立路线B；观察仍不可靠按授权登记C同8B全源粗览/局部非测试匹配。B/C以实际协议/回执为准，不假称运行；新T实际更新 `0`，当前没有新最终ZIP。禁止改冻结源码或重复launcher/成功生成；CPU SHA与顺序解码/共享等待可能合法。
+
+B2用户37.32/DONE（317401字节SHA0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3），旧B37.63绑定旧包SHA86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54，各旧成绩原样保留。每15分钟aic-linux静默入口controller/checkpoint_teacher_v12.py，只记录实时实际命令/PGID/IO、原provider终态、新复查/学生/strict/resource/queue与artifact bytes/mtime。新大流量先许可，小量控制直SSH、Mac退出，100confirm不读、复赛不手看调参，共享锁/账本7200与外部任务/连接/服务保持。仅最终ZIP全部真实验收后一次通知、删除监控、不归档；最终包留Linux，新官网分未知。
+
+<!-- END_CURRENT_TEACHER_V12 -->
+
 ## 2026-10-08：V11证据编号与阶段衔接修复，已登记自主接续
 
-当前唯一入口 `teacher_student_autopilot_v11/CONTINUE.md` 与 `PROTOCOL.md`。Linux `92` 项CPU与固定runtime/原validator/真实旧成功SHA验收后冻结 `1189` 文件，SHA `0ae09ec38ff589baa5e15e16b84457b06442195de502ec7ef6a19bab9b715578`，一次launcher 2026-10-08T06:38:42.955326+00:00 历史PID/PGID `559263`。2026-10-08T06:51:40.860301+00:00实时所属完整命令进程 `4`、server `1`，实际阶段 `RUNNING_TEACHER_PILOT`。原PID/旧progress/CPU/启动不当存活、标签质量、训练或新ZIP。
+当前唯一入口 `teacher_student_autopilot_v11/CONTINUE.md` 与 `PROTOCOL.md`。Linux `92` 项CPU与固定runtime/原validator/真实旧成功SHA验收后冻结 `1189` 文件，SHA `0ae09ec38ff589baa5e15e16b84457b06442195de502ec7ef6a19bab9b715578`，一次launcher 2026-10-08T06:38:42.955326+00:00 历史PID/PGID `559263`。2026-10-08T08:45:53.136310+00:00实时所属完整命令进程 `3`、server `1`，实际阶段 `RUNNING_TEACHER_FULL`。原PID/旧progress/CPU/启动不当存活、标签质量、训练或新ZIP。
 
 V10真实视觉8/8和2条非测试重输入通过，但首个pilot的[15,21)、[42,50)缺少模型所选实际证据帧而STOP；原raw SHA9977638522f91aa2661fd70b5179a7aed557ea816d5f451f6f50b010114f65fa、639锁、所有失败与成功保持。V11仅注册B边界/F物理帧独立编号和每段模型自行所选见证生成约束，所有合法1..5段/证据子集保持，原高光定义与原validator/16024输入字节不改，无后补证据/裁段/造空/UNKNOWN负类。
 
-旧2成功只在完整160内（不在pilot24）通过孤立原validator/全SHA原字节引用，新旧接口由exact manifest分开核；视觉8只在8实际HTTP构造CPU相等及模型/运行时/输入身份相同后引用，不重复成功生成、旧cost保留、引用新调用0。本次首个原失败窗口于 2026-10-08T06:50:06.959165+00:00 已真实新生成通过 `PASS_REAL_BF_PER_SEGMENT_EVIDENCE_GENERATION_NOT_SEMANTIC_ACCEPTANCE`；新调用1、旧成功重调用0，原raw/源帧/原validator独立CPU回放通过，尚不构成语义或训练准入。 后台继续剩余23窗与盲第二选择。来源/PTS/模型确错工程STOP；语义争议逐条UNKNOWN并保留全分母；不要求小试必须出现空例，不把同教师一致性叫真值。
+旧2成功只在完整160内（不在pilot24）通过孤立原validator/全SHA原字节引用，新旧接口由exact manifest分开核；视觉8只在8实际HTTP构造CPU相等及模型/运行时/输入身份相同后引用，不重复成功生成、旧cost保留、引用新调用0。本次首个原失败窗口于 2026-10-08T06:50:06.959165+00:00 已真实新生成通过 `PASS_REAL_BF_PER_SEGMENT_EVIDENCE_GENERATION_NOT_SEMANTIC_ACCEPTANCE`；新调用1、旧成功重调用0，原raw/源帧/原validator独立CPU回放通过，尚不构成语义或训练准入。 小试实际终态 `PASS_REAL_PILOT_READY_FOR_FULL_RELABEL`，已完成标注24/24、复查24/24；弱支持统计 `{'UNKNOWN': 12, 'SUPPORTED_COMPLETE_WINDOW_POSITIVE': 8, 'SUPPORTED_COMPLETE_WINDOW_NO_HIGHLIGHT': 4}`，路由 `COLLECT_COMPLETE_WINDOW_WEAK_SUPERVISION`。同教师一致性仍非真值，后续完整160复查和学生训练准入门保持。 当前完整160主链进度 `REAL_TEACHER_LABELS_RUNNING`，已遍历117/160、本阶段新调用101、已核复用16；存量小试24及旧成功2按原SHA核验，计数不能当本阶段新生成。 来源/PTS/模型确错工程STOP；语义争议逐条UNKNOWN并保留全分母；不要求小试必须出现空例，不把同教师一致性叫真值。
 
 继续可靠完整窗口监督→完整160/复查→原B LoRA lr1e-5最多3epochs/前缀2–4真实更新保持optimizer/RNG→开发candidate0旧B→NONTEST8→426独立strict ZIP。监督只可靠边界时自主登记B边界精修；教师不可靠自主实现C同8B全源粗览/局部非测试匹配对照。路线B/C当前以协议为准，不假称运行。新T实际更新 `0`，原教师科学STOP保持。
 

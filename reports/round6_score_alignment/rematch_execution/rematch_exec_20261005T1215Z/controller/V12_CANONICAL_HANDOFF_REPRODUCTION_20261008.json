@@ -1,0 +1,37 @@
+{
+  "status": "REPRODUCED_V11_CANONICAL_KEY_ORDER_HANDOFF_ENGINEERING_FAILURE",
+  "utc": "2026-10-08T09:52:43.640125+00:00",
+  "original_completion_status": "STOP_AUTOPILOT_PRESERVED",
+  "actual_teacher_label_completion": "PASS_VALIDATED_WEAK_TEACHER_LABELS",
+  "labels": 160,
+  "full_phase_new_label_calls": 134,
+  "verified_reused_labels": 26,
+  "old_labels_preserved": true,
+  "completed_blind_review_directories": 28,
+  "partial_sorted_review_aggregate": 5,
+  "remaining_blind_reviews": 132,
+  "reproduced": {
+    "window_id": "complete_087af79e4b421be308d6cf6f",
+    "original_file_projection_pass": true,
+    "sorted_JSONL_projection_pass": false,
+    "error": "ValueError: canonical response is not the exact native ID projection",
+    "objects_equal": true,
+    "original_canonical_sha256": "8fb22067cd548d70687e44ac9e0c8dce5747094a95c8b131e909a1779548303b",
+    "sorted_parsed_serialization_sha256": "a3e7b7bfbca38c2d71368e54ba9cda6f3bf14e299265713afe4a2a930e63a185"
+  },
+  "old_runtime_completed_naturally": true,
+  "owned_processes_at_093550": 0,
+  "external_signals": 0,
+  "original_full_resource": {
+    "status": "failed",
+    "exit_code": 1,
+    "stop_reason": null,
+    "charged_seconds": 6748.806357712485
+  },
+  "repair_entry": "teacher_student_autopilot_v12",
+  "repair_pending_CPU_and_frozen_start": true,
+  "new_T_optimizer_updates": 0,
+  "no_new_label_or_review_model_calls": true,
+  "frozen_V11_source_lock_sha256": "0ae09ec38ff589baa5e15e16b84457b06442195de502ec7ef6a19bab9b715578",
+  "snapshot": "controller/monitor_teacher_v11/comprehensive_teacher_student_autopilot_v11_20261008T093550Z.json"
+}

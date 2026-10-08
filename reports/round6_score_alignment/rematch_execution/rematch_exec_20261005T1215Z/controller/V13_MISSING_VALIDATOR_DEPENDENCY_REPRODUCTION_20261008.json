@@ -1,0 +1,39 @@
+{
+  "status": "REPRODUCED_V12_MISSING_ORIGINAL_VALIDATOR_METADATA_BEFORE_GPU",
+  "utc": "2026-10-08T10:15:43.129002+00:00",
+  "actual_STOP": {
+    "status": "STOP_AUTOPILOT_PRESERVED",
+    "utc": "2026-10-08T10:12:57.754297+00:00",
+    "last_progress": {
+      "stage": "RUNNING_VERIFIED_V11_FULL_LABEL_AND_REVIEW_HANDOFF",
+      "utc": "2026-10-08T10:11:39.671751+00:00",
+      "pid": 937470,
+      "uploaded": false,
+      "automatic_return": false
+    },
+    "error_type": "RuntimeError",
+    "reason": "CPU stage did not complete: verified_v11_full_label_and_review_handoff",
+    "uploaded": false,
+    "automatic_return": false
+  },
+  "actual_owned_commands": [],
+  "old_source_lock_sha256": "5f9f246790c62982d198f429b98b4b3e04f5f5cbdf8e5e7db0a310a52e24be22",
+  "actual_CPU_failure_log_sha256": "a8c8d7a11a0d94cae06f7484ce43122b43730bcded169a3f9d1abf0edf750538",
+  "missing_original_dependencies": [
+    "supervision/teacher_metadata_20261007.json",
+    "supervision/teacher_response.schema.json"
+  ],
+  "original_dependency_SHA": {
+    "supervision/teacher_metadata_20261007.json": "ae025c43728abcdc79c306d63fcc80f0425e8f505cf49026c8c9442f74600731",
+    "supervision/teacher_response.schema.json": "2a9dc71cb1a6087601fc7cfdd4934a62227e92f401ad0d0f00a015fe5f869bfa"
+  },
+  "new_GPU_calls": 0,
+  "new_teacher_labels": 0,
+  "new_reviews": 0,
+  "new_T_optimizer_updates": 0,
+  "old_files_changed": false,
+  "gpu": "0, NVIDIA RTX 6000 Ada Generation, 0 %, 182 MiB, 46068 MiB\n",
+  "memory": "              总计         已用        空闲      共享    缓冲/缓存    可用\n内存：      128557        7066       49216          74       72274      120379\n交换：      131071        1942      129129\n",
+  "disk_free_bytes": 194815229952,
+  "shared_gpu_job": null
+}

@@ -387,7 +387,170 @@ def publish_teacher_v8(entry="teacher_student_autopilot_v8"):
         'raw_labels_or_per_frame_data_exported':False,'models_videos_environment_or_new_zip_exported':False}))
 
 
+def publish_teacher_v12():
+    """Use the same curated core/aggregate publication workflow for exact resume."""
+    entry='teacher_student_autopilot_v12';here=RUN/entry
+    snapshot=json.loads((RUN/'controller/monitor_teacher_v12/latest.json').read_bytes())['snapshot']
+    registration=json.loads((here/'start_receipt.json').read_bytes())
+    cpu=json.loads((here/'resume_cpu_acceptance.json').read_bytes())
+    assert cpu['status']=='PASS_V12_ACTUAL_SORTED_LEGACY_PROJECTION_AND_EXACT_RESUME_CPU'
+    assert snapshot['source_lock_sha256']==registration['source_lock_sha256']
+    selected=[p for p in here.rglob('*') if p.is_file()
+        and not any(x in p.relative_to(here).parts for x in ('__pycache__','prelock_repairs','selection_01','pilot_selection'))
+        and (p.suffix in ('.py','.cpp','.md') or p.name in ('config.json','authorization.json','teacher_prompt.txt','review_prompt.txt',
+            'teacher_metadata_20261007.json','teacher_response.schema.json'))]
+    selected += [RUN/'controller'/n for n in ('register_autopilot_v12.py','checkpoint_teacher_v12.py',
+        'record_teacher_v12_execution_20261008.py','inspect_autopilot_live.py','publish_b2_snapshot.py',
+        'V12_CANONICAL_HANDOFF_REPRODUCTION_20261008.json','V8_REPAIR_AND_EXECUTION_20261008.md','AUTONOMOUS_EXECUTION_20261008.md')]
+    selected += [WORKSPACE/'AGENTS.md',RUN/'STATUS_AUTOPILOT_20261007.md']
+    for path in selected:
+        target=PUB/path.relative_to(WORKSPACE);target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(path,target);assert target.read_bytes()==path.read_bytes()
+    stage=(snapshot.get('completion') or {}).get('status') or (snapshot.get('progress') or {}).get('stage','SOURCE_PREFLIGHT_CPU')
+    parts=snapshot.get('v8_stage_receipts') or {};first=parts.get('first_review_generation') or {}
+    aggregate=dict(status='PASS_EXACT_CPU_REPAIR_AND_SINGLE_LINUX_REVIEW_CONTINUATION_NOT_FINAL_QUALITY',
+        snapshot_utc=snapshot['utc'],entry=entry,source_lock_sha256=snapshot['source_lock_sha256'],
+        frozen_file_count=snapshot.get('source_lock_file_count'),launch_utc=registration['utc'],
+        launch_historical_pid=registration['pid'],stage=stage,owned_process_count=len(snapshot['processes']),
+        original_complete_labels=160,original_completed_reviews=28,remaining_registered_reviews=132,new_label_calls=0,
+        actual_new_review_progress=parts.get('review_progress'),
+        first_actual_review={k:first[k] for k in ('status','utc','fresh_review_model_calls','new_label_calls','old_success_repeated','new_T_optimizer_updates') if k in first},
+        actual_original_records_CPU_checked=cpu['actual_original_records_checked'],actual_original_reviews_CPU_checked=cpu['completed_reviews_replayed'],
+        actual_sorted_legacy_regressions=cpu['legacy_JSONL_regressions'],rejection_contracts=cpu['rejection_tests'],
+        original_CPU_receipt_sha256=hashlib.sha256((here/'resume_cpu_acceptance.json').read_bytes()).hexdigest(),
+        exact_resume_manifest_sha256=(snapshot.get('resume_manifest_summary') or {}).get('manifest_sha256'),
+        all_original_receipt_SHA_pass=snapshot.get('all_original_resume_file_sha_pass'),original_V11_STOP_kept=True,
+        original_V11_full_GPU_charged_seconds=6748.806357712485,original_full_label_fresh_calls=134,original_full_label_reused=26,
+        new_T_optimizer_updates=(snapshot.get('student_progress') or {}).get('optimizer_steps',0),
+        same_teacher_consistency_not_human_truth=True,new_official_score=None,
+        B2_user_score=37.32,B2_zip_bytes=317401,B2_zip_sha256='0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3',
+        prior_B_user_score=37.63,prior_B_zip_sha256='86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54',
+        raw_labels_or_per_frame_data_exported=False,models_videos_environment_or_new_zip_exported=False)
+    derived=PUB/REL/entry/'aggregate_resume_acceptance.json';derived.write_text(json.dumps(aggregate,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    body=(f'V11已真实完整标注160/160（全量阶段新134、原SHA复用26），盲第二选择28条完成。'
+        '全量复查在旧成功JSONL对象键排序导致canonical字符串SHA误拒绝处工程停止，原raw/标签/成功回执/STOP保持。'
+        'V12独立修复投影的原始对象序列顺序，原160/28经过原validator及全部输入/物理帧SHA验收后引用；'
+        '剩132独立盲选择，新label调用0，不重复成功生成，原GPU成本6748.806357712485秒保留。'
+        f'当前实际阶段 `{stage}`，新T实际更新{aggregate["new_T_optimizer_updates"]}，没有新最终ZIP/新官网分。'
+        'B2用户37.32/DONE与原B37.63各绑定各自包。CPU/启动/同教师一致性不是人工真值或新模型训练。'
+        f'见[协议]({REL}/{entry}/PROTOCOL.md)与[聚合验收]({REL}/{entry}/aggregate_resume_acceptance.json)。\n\n')
+    def front(text):
+        if '<!-- END_CURRENT_V8 -->' in text:
+            first,rest=text.split('\n',1);rest=rest.split('<!-- END_CURRENT_V8 -->',1)[1].lstrip('\n')
+        else:first,rest=text.split('\n',1)
+        return first+'\n\n## 当前教师工程修复与真实接续\n\n'+body+'<!-- END_CURRENT_V8 -->\n'+rest
+    edit(PUB/'README.md',front)
+    for name in ('SOLUTIONS.md','REPRODUCTION.md'):
+        edit(PUB/'docs'/name,lambda text:front(text).replace(']('+REL,'](../'+REL))
+    mp=PUB/'docs/publication_manifest.json';original=mp.read_bytes();ending='\r\n' if b'\r\n' in original else '\n';manifest=json.loads(original)
+    items={v['path']:v for v in manifest['files']}
+    additions=[(p.relative_to(WORKSPACE).as_posix(),p.relative_to(WORKSPACE).as_posix()) for p in selected]
+    additions.append((derived.relative_to(PUB).as_posix(),None))
+    for relative,source in additions:
+        if relative not in items:
+            row=dict(path=relative,source_relative_path=source,bytes=0,sha256='',category='project_code_or_configuration' if relative.endswith('.py') else 'experiment_protocol_or_acceptance')
+            manifest['files'].append(row);items[relative]=row
+        if source is None:items[relative]['category']='aggregate_acceptance_no_frame_data'
+    for row in manifest['files']:
+        path=PUB/row['path'];row['bytes']=path.stat().st_size;row['sha256']=hashlib.sha256(path.read_bytes()).hexdigest()
+    manifest['updated_utc']=dt.datetime.now(dt.timezone.utc).isoformat()
+    mp.write_bytes((json.dumps(manifest,ensure_ascii=False,indent=2)+'\n').replace('\n',ending).encode())
+    print(json.dumps(dict(status='PASS_CURATED_V12_CORE_AND_AGGREGATE_ONLY',selected_files=len(selected),new_ZIP_or_labels_or_frames_exported=False)))
+
+
+def publish_teacher_v13():
+    """Use the same curated core/aggregate publication workflow for exact resume."""
+    entry='teacher_student_autopilot_v13';here=RUN/entry
+    snapshot=json.loads((RUN/'controller/monitor_teacher_v13/latest.json').read_bytes())['snapshot']
+    registration=json.loads((here/'start_receipt.json').read_bytes())
+    cpu=json.loads((here/'resume_cpu_acceptance.json').read_bytes())
+    assert cpu['status']=='PASS_V13_ACTUAL_SORTED_LEGACY_PROJECTION_AND_EXACT_RESUME_CPU'
+    assert snapshot['source_lock_sha256']==registration['source_lock_sha256']
+    selected=[p for p in here.rglob('*') if p.is_file()
+        and not any(x in p.relative_to(here).parts for x in ('__pycache__','prelock_repairs','selection_01','pilot_selection'))
+        and (p.suffix in ('.py','.cpp','.md') or p.name in ('config.json','authorization.json','teacher_prompt.txt','review_prompt.txt',
+            'teacher_metadata_20261007.json','teacher_response.schema.json'))]
+    selected += [RUN/'controller'/n for n in ('register_autopilot_v13.py','checkpoint_teacher_v13.py',
+        'record_teacher_v13_execution_20261008.py','inspect_autopilot_live.py','publish_b2_snapshot.py',
+        'V12_CANONICAL_HANDOFF_REPRODUCTION_20261008.json','V13_MISSING_VALIDATOR_DEPENDENCY_REPRODUCTION_20261008.json','V13_frozen_preflight_acceptance_20261008.json','V8_REPAIR_AND_EXECUTION_20261008.md','AUTONOMOUS_EXECUTION_20261008.md')]
+    first_proof=RUN/'controller/V13_real_first_review_acceptance_20261008.json'
+    if first_proof.exists():selected += [RUN/'controller/verify_teacher_v13_first_review_20261008.py']
+    selected += [WORKSPACE/'AGENTS.md',RUN/'STATUS_AUTOPILOT_20261007.md']
+    for path in selected:
+        target=PUB/path.relative_to(WORKSPACE);target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(path,target);assert target.read_bytes()==path.read_bytes()
+    stage=(snapshot.get('completion') or {}).get('status') or (snapshot.get('progress') or {}).get('stage','SOURCE_PREFLIGHT_CPU')
+    parts=snapshot.get('v8_stage_receipts') or {};first=parts.get('first_review_generation') or {}
+    aggregate=dict(status='PASS_EXACT_CPU_REPAIR_AND_SINGLE_LINUX_REVIEW_CONTINUATION_NOT_FINAL_QUALITY',
+        snapshot_utc=snapshot['utc'],entry=entry,source_lock_sha256=snapshot['source_lock_sha256'],
+        frozen_file_count=snapshot.get('source_lock_file_count'),launch_utc=registration['utc'],
+        launch_historical_pid=registration['pid'],stage=stage,owned_process_count=len(snapshot['processes']),
+        original_complete_labels=160,original_completed_reviews=28,remaining_registered_reviews=132,new_label_calls=0,
+        actual_new_review_progress=parts.get('review_progress'),
+        first_actual_review={k:first[k] for k in ('status','utc','fresh_review_model_calls','new_label_calls','old_success_repeated','new_T_optimizer_updates') if k in first},
+        actual_original_records_CPU_checked=cpu['actual_original_records_checked'],actual_original_reviews_CPU_checked=cpu['completed_reviews_replayed'],
+        actual_current_full_blind_validator_CPU_replayed=cpu['actual_current_blind_validator_replayed'],
+        exact_original_dependencies=cpu['exact_original_dependency_files'],original_V12_pre_GPU_STOP_kept=True,
+        actual_sorted_legacy_regressions=cpu['legacy_JSONL_regressions'],rejection_contracts=cpu['rejection_tests'],
+        original_CPU_receipt_sha256=hashlib.sha256((here/'resume_cpu_acceptance.json').read_bytes()).hexdigest(),
+        exact_resume_manifest_sha256=(snapshot.get('resume_manifest_summary') or {}).get('manifest_sha256'),
+        all_original_receipt_SHA_pass=snapshot.get('all_original_resume_file_sha_pass'),original_V11_STOP_kept=True,
+        original_V11_full_GPU_charged_seconds=6748.806357712485,original_full_label_fresh_calls=134,original_full_label_reused=26,
+        new_T_optimizer_updates=(snapshot.get('student_progress') or {}).get('optimizer_steps',0),
+        same_teacher_consistency_not_human_truth=True,new_official_score=None,
+        B2_user_score=37.32,B2_zip_bytes=317401,B2_zip_sha256='0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3',
+        prior_B_user_score=37.63,prior_B_zip_sha256='86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54',
+        raw_labels_or_per_frame_data_exported=False,models_videos_environment_or_new_zip_exported=False)
+    if first_proof.exists():
+        actual=json.loads(first_proof.read_bytes())
+        public_keys=('status','utc','source_lock_sha256','actual_new_review_model_calls','new_label_model_calls',
+            'old_success_generation_repeated','independent_CPU_revalidation_model_calls',
+            'original_validator_and_input_and_raw_SHA_pass','physical_frame_and_native_clock_SHA_pass',
+            'actual_HTTP_request_processor_applied_grammar_and_response_SHA_pass',
+            'actual_review_HTTP_wall_seconds','actual_teacher_weight_and_runtime_identity_pass',
+            'original_label_record_unchanged','actual_prompt_tokens','new_T_optimizer_updates',
+            'semantic_training_admitted','same_teacher_comparison_not_human_truth')
+        aggregate['independent_first_real_review_acceptance']={k:actual[k] for k in public_keys}
+        aggregate['independent_first_real_review_acceptance']['private_receipt_sha256']=hashlib.sha256(first_proof.read_bytes()).hexdigest()
+    derived=PUB/REL/entry/'aggregate_resume_acceptance.json';derived.write_text(json.dumps(aggregate,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    body=(f'V11已真实完整标注160/160（全量阶段新134、原SHA复用26），盲第二选择28条完成。'
+        '全量复查在旧成功JSONL对象键排序导致canonical字符串SHA误拒绝处工程停止，原raw/标签/成功回执/STOP保持。'
+        'V12修复投影的原始对象序列顺序，随后因部署漏原validator metadata在GPU前自然STOP，所有原失败保持。V13补齐原metadata/schema字节并CPU执行完整28条当前blind validator，原160/28经过原validator及全部输入/物理帧SHA验收后引用；'
+        '剩132独立盲选择，新label调用0，不重复成功生成，原GPU成本6748.806357712485秒保留。'
+        f'当前实际阶段 `{stage}`，新T实际更新{aggregate["new_T_optimizer_updates"]}，没有新最终ZIP/新官网分。'
+        'B2用户37.32/DONE与原B37.63各绑定各自包。CPU/启动/同教师一致性不是人工真值或新模型训练。'
+        f'见[协议]({REL}/{entry}/PROTOCOL.md)与[聚合验收]({REL}/{entry}/aggregate_resume_acceptance.json)。\n\n')
+    def front(text):
+        if '<!-- END_CURRENT_V8 -->' in text:
+            first,rest=text.split('\n',1);rest=rest.split('<!-- END_CURRENT_V8 -->',1)[1].lstrip('\n')
+        else:first,rest=text.split('\n',1)
+        return first+'\n\n## 当前教师工程修复与真实接续\n\n'+body+'<!-- END_CURRENT_V8 -->\n'+rest
+    edit(PUB/'README.md',front)
+    for name in ('SOLUTIONS.md','REPRODUCTION.md'):
+        edit(PUB/'docs'/name,lambda text:front(text).replace(']('+REL,'](../'+REL))
+    mp=PUB/'docs/publication_manifest.json';original=mp.read_bytes();ending='\r\n' if b'\r\n' in original else '\n';manifest=json.loads(original)
+    items={v['path']:v for v in manifest['files']}
+    additions=[(p.relative_to(WORKSPACE).as_posix(),p.relative_to(WORKSPACE).as_posix()) for p in selected]
+    additions.append((derived.relative_to(PUB).as_posix(),None))
+    for relative,source in additions:
+        if relative not in items:
+            row=dict(path=relative,source_relative_path=source,bytes=0,sha256='',category='project_code_or_configuration' if relative.endswith('.py') else 'experiment_protocol_or_acceptance')
+            manifest['files'].append(row);items[relative]=row
+        if source is None:items[relative]['category']='aggregate_acceptance_no_frame_data'
+    for row in manifest['files']:
+        path=PUB/row['path'];row['bytes']=path.stat().st_size;row['sha256']=hashlib.sha256(path.read_bytes()).hexdigest()
+    manifest['updated_utc']=dt.datetime.now(dt.timezone.utc).isoformat()
+    mp.write_bytes((json.dumps(manifest,ensure_ascii=False,indent=2)+'\n').replace('\n',ending).encode())
+    print(json.dumps(dict(status='PASS_CURATED_V13_CORE_AND_AGGREGATE_ONLY',selected_files=len(selected),new_ZIP_or_labels_or_frames_exported=False)))
+
+
 if __name__=='__main__':
     import argparse
-    parser=argparse.ArgumentParser();parser.add_argument('--teacher-v8',action='store_true');parser.add_argument('--teacher-v9',action='store_true');parser.add_argument('--teacher-v10',action='store_true');parser.add_argument('--teacher-v11',action='store_true');args=parser.parse_args()
-    publish_teacher_v8('teacher_student_autopilot_v11' if args.teacher_v11 else ('teacher_student_autopilot_v10' if args.teacher_v10 else ('teacher_student_autopilot_v9' if args.teacher_v9 else 'teacher_student_autopilot_v8'))) if args.teacher_v8 or args.teacher_v9 or args.teacher_v10 or args.teacher_v11 else main()
+    parser=argparse.ArgumentParser()
+    for v in ('v8','v9','v10','v11','v12','v13'):parser.add_argument('--teacher-'+v,action='store_true')
+    args=parser.parse_args()
+    if args.teacher_v13:publish_teacher_v13()
+    elif args.teacher_v12:publish_teacher_v12()
+    elif args.teacher_v8 or args.teacher_v9 or args.teacher_v10 or args.teacher_v11:
+        publish_teacher_v8('teacher_student_autopilot_v11' if args.teacher_v11 else ('teacher_student_autopilot_v10' if args.teacher_v10 else ('teacher_student_autopilot_v9' if args.teacher_v9 else 'teacher_student_autopilot_v8')))
+    else:main()
