@@ -1,0 +1,115 @@
+{
+  "status": "PASS_INDEPENDENT_B2_FINAL_ZIP_ACCEPTANCE",
+  "utc": "2026-10-08T01:48:51.821625+00:00",
+  "host": "inspur-NP5570M5",
+  "entry": "b_score_aligned_package_v4",
+  "source_lock_sha256": "52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db",
+  "frozen_files": 571,
+  "verifier_source_sha256": "d4c3bc07e8cca5977b59e75328e64914e8252da9f9e52052bbcc4272ae9b7d41",
+  "completion_sha256": "10363fb09a4a2e2b82da4dc28bfcb2b14fced316a5eff2e230f880809b508a0d",
+  "completion_stage": "PASS_COMPLETE_426_B2_8B_ZIP_ON_LINUX",
+  "scopes": {
+    "nontest": {
+      "videos": 8,
+      "prediction_frames": 444,
+      "strict_checks": {
+        "strict_loader_ok": true,
+        "video_record_set_exact": true,
+        "selected_key_set_exact": true,
+        "ratio_fields_exact": true,
+        "frames_sorted": true,
+        "provenance_key_set_exact": true,
+        "provenance_boxes_match_predictions": true,
+        "provenance_all_legal": true,
+        "provenance_sources_allowed": true,
+        "archive_single_file": true,
+        "archive_roundtrip_exact": true
+      },
+      "independent_report_sha256": "bf97dc0b3ad887de9de36d4a3ddcb423553ae1571ec38980bfe1b13b2d02786c",
+      "manifest_sha256": "ba34a284183e8a079054ffe811d7ec096e6b47c94e6edf812a37fd11b92d8dd7",
+      "registry_sha256": "7f57785312c94b1658cb002b2432d09b318ae2943e3297a0c45536d1bd8cd3ea",
+      "candidate": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/nontest_01/candidate_B2_8B.zip",
+      "zip_bytes": 1964,
+      "zip_sha256": "614ce2a826505925d7ac74eec92ca16de50abb4bde4010f3ae1a50cfe38b9a3e",
+      "predictions_sha256": "b81449580f34264d1ea24dc0e183df2d7d9b6351db3a247d94268958bea44c6f",
+      "provenance_sha256": "d342cc6790bc4a046def0b7923b8a336dc8a47025a411f51c3418c367a1922f9",
+      "crc_pass": true,
+      "archive_names": [
+        "predictions.jsonl"
+      ],
+      "archive_roundtrip_exact": true,
+      "source_ids_exact": true,
+      "duplicate_source_ids": 0
+    },
+    "rematch": {
+      "videos": 426,
+      "prediction_frames": 105075,
+      "strict_checks": {
+        "strict_loader_ok": true,
+        "video_record_set_exact": true,
+        "selected_key_set_exact": true,
+        "ratio_fields_exact": true,
+        "frames_sorted": true,
+        "provenance_key_set_exact": true,
+        "provenance_boxes_match_predictions": true,
+        "provenance_all_legal": true,
+        "provenance_sources_allowed": true,
+        "archive_single_file": true,
+        "archive_roundtrip_exact": true
+      },
+      "independent_report_sha256": "db195ac4f821f4313babe803020014295de1faf9443604a5f6657663a21f65ea",
+      "manifest_sha256": "ceb91ee9434ce3de6a55abf727e613b83368b547d3be3d1e71b46414c2f019f8",
+      "registry_sha256": "1058aba02e5e959bc8e4842cbde0eadced192a8201d5c833ae50a7c0aac07909",
+      "candidate": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/rematch_01/candidate_B2_8B.zip",
+      "zip_bytes": 317401,
+      "zip_sha256": "0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3",
+      "predictions_sha256": "0c0777a24ce84ae662221f2a04ed259cef6a3c0d67671e5238a3048c1ae700f4",
+      "provenance_sha256": "bb4e19f44f285c83cef7c45c6a177f120096760f06ced1b8b35a2ded4c7c125e",
+      "crc_pass": true,
+      "archive_names": [
+        "predictions.jsonl"
+      ],
+      "archive_roundtrip_exact": true,
+      "source_ids_exact": true,
+      "duplicate_source_ids": 0
+    }
+  },
+  "anchors_verified": 31295,
+  "temporal_videos": 426,
+  "temporal_windows": 521,
+  "invalid_temporal_windows": 0,
+  "original_successful_windows_unchanged": 520,
+  "original_successful_record_lines_unchanged": 425,
+  "actual_recovered_windows": 1,
+  "failures_to_empty_conversions": 0,
+  "original_provider_stop_preserved": true,
+  "whole_source_field_frames": 234158,
+  "source_field_precedes_temporal_filter": true,
+  "resources": {
+    "rematch_B2_v4_rematch_recover_01": {
+      "receipt_sha256": "b8746061fcb7892303748a37fd8640da105cc2400968075e72b62ac70598d059",
+      "charged_seconds": 163.8717517144978,
+      "sampled_peak_memory_mib": 21890,
+      "ledger_exact": true
+    },
+    "rematch_B2_v4_rematch_spatial_01": {
+      "receipt_sha256": "fd3b6692d6381d1cd03489a55576c6f16a7805a7a22faa1ecd834bab12cd9baf",
+      "charged_seconds": 18833.365533651784,
+      "sampled_peak_memory_mib": 17384,
+      "ledger_exact": true
+    }
+  },
+  "owned_processes": [],
+  "actual_training": "PRESERVED_ALREADY_TRAINED_B_5_EPOCHS_227_UPDATES",
+  "temporal_adapter_sha256": "8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23",
+  "complete_pipeline_parameters": 8782459120,
+  "new_T_training_started": false,
+  "new_optimizer_updates": 0,
+  "official_score": null,
+  "teacher_quality_stop_preserved": true,
+  "per_frame_data_exported": false,
+  "raw_answers_exported": false,
+  "automatic_return": false,
+  "uploaded": false,
+  "large_file_transfers": 0
+}

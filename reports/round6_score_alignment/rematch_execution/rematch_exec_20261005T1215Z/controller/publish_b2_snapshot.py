@@ -41,6 +41,12 @@ def main():
         completion.get('archive_names')==['predictions.jsonl'] and
         all(row.get('status')=='PASS_INDEPENDENT_STRICT_VALIDATION' and len(row.get('checks',{}))==11 and
             all(value is True for value in row['checks'].values()) for row in strict))
+    if final_ready and entry == 'b_score_aligned_package_v4':
+        final_acceptance=json.loads((RUN/'controller/B2_v4_final_acceptance_20261008.json').read_text())
+        assert final_acceptance['status']=='PASS_INDEPENDENT_B2_FINAL_ZIP_ACCEPTANCE'
+        assert final_acceptance['source_lock_sha256']==snapshot['source_lock_sha256']
+        assert final_acceptance['scopes']['rematch']['zip_sha256']==completion['zip_sha256']
+        assert final_acceptance['scopes']['rematch']['zip_bytes']==completion['zip_bytes']
     package_state=('Linux最终ZIP终态与NONTEST8/426全部独立strict登记已PASS。'
         f'包 `{completion["candidate"]}`，实际 `{completion["zip_bytes"]}` 字节，SHA256 `{completion["zip_sha256"]}`。'
         '包仍留Linux，尚无新官网分。' if final_ready else
@@ -49,7 +55,9 @@ def main():
     cuda=('实际B LoRA长输入CUDA已PASS：12048token、288 adapter张量与保存值相等、全基座SHA与原训练相等，选择token分数有限；0优化器更新。'
           if probe.get('status')=='PASS_B2_ACTUAL_TRAINED_ADAPTER_LONG_CUDA_INFERENCE' else '实际长输入CUDA尚待真实回执。')
     when=dt.datetime.fromisoformat(snapshot['utc']).astimezone(dt.timezone(dt.timedelta(hours=8)))
-    common=(f'2026-10-08 {when:%H:%M} UTC+8：当前自主接续为[B2已微调8B生产对齐]({REL}/{entry}/CONTINUE.md)。'
+    monitor_state=('最终ZIP已完整验收，本轮巡检在交付时结束。' if final_ready else
+                   '已有监控每15分钟静默核查、自主修复并更新证据，最后汇报一次。')
+    common=(f'2026-10-08 {when:%H:%M} UTC+8：当前路线为[B2已微调8B生产对齐]({REL}/{entry}/CONTINUE.md)。'
         '保留已评分37.63的B最终LoRA，不增加训练更新；时间使用B adapter、空间同8B原生基座，总逻辑参数8,782,459,120。'
         'B2采用所有分支实际native PTS/floor64帧/顺序PyAV/16384长输入、精确端点与全源空间场，仍用B原1–5段提示与greedy。旧37.63仍绑定旧B包，新B2官网分未知。\n\n'
         '32B context v3已经完整8/8真实请求、0工程失败，三正被弱审核支持，唯一NO被拒绝；没有受支持真实空例，T更新0。'
@@ -61,9 +69,11 @@ def main():
         '旧Z时间实际adapter=False，521旧时间不能复用B2。非测试全源CPU/同基座空间只在输入/算法/关键SHA与完整回执一致后原样复用；'
         '复赛旧CPU域与新native源域不同，不准入复用，真实重算全源CPU/空间。后台真实B长输入CUDA→NONTEST8→426/521时间/全源空间→独立strict ZIP。'
         '最终只有真实B2 completion PASS、8/426独立strict全部true、大小/SHA/CRC/唯一JSONL/426身份验收才可提交。\n\n'
-        '已有监控每15分钟静默核查、自主修复并更新证据，最后汇报一次。Linux后台独立运行，本地巡检需要Windows开机且Codex运行。'
+        f'{monitor_state}Linux后台独立运行，本地巡检需要Windows开机且Codex运行。'
         '最终只有一个选定ZIP留Linux，不自动回传或AIC上传；新大流量先许可、Mac退出，实际容量与共享GPU锁/账本/7200保持。'
         f'见[B2决策]({REL}/controller/NEXT_ACTION_B2_20261008.md)、[协议]({REL}/{entry}/PROTOCOL.md)、[实时接续]({REL}/STATUS_AUTOPILOT_20261007.md)。\n\n')
+    if final_ready and entry == 'b_score_aligned_package_v4':
+        common+=f'最终实物ZIP、8/426身份与全部strict、31,295个真实锚点及GPU追加账本已独立复核，见[最终验收]({REL}/controller/B2_v4_final_acceptance_20261008.json)。\n\n'
     if entry == 'b_score_aligned_package_v2':
         common+=('v2独立修复统一canonical duration：真实529窗56处差异，原29合法全端点误拒绝逐一复现；'
             '新529全端点/529 nextafter上界拒绝、原529输入相等全部通过。原v1有效GPU生成继续到完整426/521；'
@@ -112,12 +122,13 @@ def main():
     selected=[WORKSPACE/'AGENTS.md',RUN/'STATUS_AUTOPILOT_20261007.md']
     selected += [RUN/'controller'/name for name in ('NEXT_ACTION_B2_20261008.md','AUTONOMOUS_EXECUTION_20261008.md',
         'RELATIVE_SUMMARY_DECISION_20261008.md','inspect_autopilot_live.py','checkpoint_b2_autonomy_20261008.py',
-        'register_b2_package_v1.py','build_b2_control.py','publish_b2_snapshot.py',
+        'register_b2_package_v1.py','build_b2_control.py','publish_b2_snapshot.py','verify_b2_final_20261008.py',
         'build_b2_duration_repair.py','B2_DURATION_REPAIR_20261008.md','build_b2_color_repair.py',
         'B2_COLOR_RECOVERY_20261008.md','test_b2_handoff_cpu.py')]
     selected += [p for pattern in ('B2_v3_*_cpu_20261008.json','B2_v4_*_cpu_20261008.json')
                  for p in (RUN/'controller').glob(pattern) if p.is_file()]
-    selected += [p for p in [RUN/'controller/B2_v4_recovery_acceptance_20261008.json'] if p.is_file()]
+    selected += [p for p in [RUN/'controller/B2_v4_recovery_acceptance_20261008.json',
+                            RUN/'controller/B2_v4_final_acceptance_20261008.json'] if p.is_file()]
     selected += [RUN/'controller/autonomy_registration_20261008.json']
     history=[name for name in ('b_score_aligned_package_v2','b_score_aligned_package_v3') if name!=entry and (RUN/name).is_dir()]
     selected += [path for name in [*history,entry] for path in (RUN/name).iterdir()

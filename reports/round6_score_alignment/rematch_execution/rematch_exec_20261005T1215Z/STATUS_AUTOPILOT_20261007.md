@@ -1,6 +1,16 @@
 # Linux 后台接续登记
 
-## 2026-10-08 03:43 UTC+8：自主B2接续与15分钟静默巡检
+## 2026-10-08 09:52 UTC+8：B2最终Linux ZIP已完整验收
+
+当前B2已自然结束，completion=PASS_COMPLETE_426_B2_8B_ZIP_ON_LINUX，实际所属进程0。NONTEST8与426复赛全部11项独立strict通过；完整426源/521时间窗、31,295真实空间锚点、105,075预测帧，时间/空间无效均0。实际ZIP大小/SHA/CRC、唯一predictions.jsonl、8/426身份、原字节匹配及GPU追加账本已由独立验收再核通过。
+
+最终包仅在Linux：`/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/rematch_01/candidate_B2_8B.zip`，实际317401字节，SHA256 `0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3`。独立聚合证据为controller/B2_v4_final_acceptance_20261008.json，SHA256 a365d7737e62084ab42b9883aa15d08921d2cd1c97c3e3128544744955e0e829。包未自动回传、未上传官网；新B2分未知，旧37.63仍绑定旧B包。
+
+保留已训练B最终8B LoRA；时间使用B adapter、空间使用同8B基座，8782459120逻辑参数。新T训练未开始、更新0，教师监督质量STOP保持。原520成功窗/425成功记录原字节保留，仅恢复1个登记送模型前失败；全源CPU/空间真实完成，不重复任何成功生成。全部571冻结文件保持，不重新启动launcher。
+
+核心代码、协议与最终聚合验收按既有GitHub筛选流程发布；新ZIP、逐帧数据、教师raw/标签、视频、权重和环境不发布。本轮监控在最终交付时删除，不归档聊天。后续获取ZIP仍按既有流量许可规则，Mac不参与。
+
+## 2026-10-08 09:45 UTC+8：自主B2接续与15分钟静默巡检
 
 用户完全放权科学/工程裁决、立即修复并接续到一个最终ZIP；中途不参与/不发阶段通知。新大流量仍须许可，Mac不参与，最终包留Linux、不自动回传或AIC提交。
 
@@ -8,7 +18,7 @@
 
 自主选择B2：保留已评分37.63的B最终8B LoRA，以修复的原生PTS/合法坐标/全源空间场完成新候选。不是新的教师微调，不延长旧LoRA。旧37.63仍绑定旧B ZIP，新B2官方分未知；旧Z时间无B LoRA，不能复用B2。源CPU/同基座空间只在身份/算法/所有SHA及完整回执一致后原样复用。
 
-当前入口b_score_aligned_package_v4/CONTINUE.md，571文件锁SHA52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db。69项CPU合同、434来源/529真实元数据窗、原12目标无损回放；实际processor/HD默认张量相等/8非测试源重开pixel SHA验收状态PASS_B2_REAL_PROCESSOR_AND_NATIVE_SOURCE。一次launcher历史PID3965729，03:43实核完整路径进程2，阶段RUNNING_REMATCH_SCHEDULING，completion=尚未写出。CUDA长输入/完整NONTEST8/426封包分别以真实回执为准，CPU或启动不当最终验收。
+当前入口b_score_aligned_package_v4/CONTINUE.md，571文件锁SHA52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db。69项CPU合同、434来源/529真实元数据窗、原12目标无损回放；实际processor/HD默认张量相等/8非测试源重开pixel SHA验收状态PASS_B2_REAL_PROCESSOR_AND_NATIVE_SOURCE。一次launcher历史PID3965729，09:45实核完整路径进程0，阶段PASS_COMPLETE_426_B2_8B_ZIP_ON_LINUX，completion=PASS_COMPLETE_426_B2_8B_ZIP_ON_LINUX。CUDA长输入/完整NONTEST8/426封包分别以真实回执为准，CPU或启动不当最终验收。
 
 后台控制器完整接续真实B LoRA长输入CUDA→NONTEST8→426/521时间/全源空间→独立strict ZIP；真实容量、共享GPU锁/追加账本/7200保持。无100confirm/本地复刻官网分/手看复赛调参。异常立即独立版本修复，运行冻结源码不改/launcher不重复，CPU SHA、顺序解码和共享队列可能合法。
 

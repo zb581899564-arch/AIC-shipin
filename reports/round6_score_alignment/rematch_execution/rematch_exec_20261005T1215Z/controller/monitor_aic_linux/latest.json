@@ -1,24 +1,22 @@
 {
-  "utc": "2026-10-07T19:43:50.620090+00:00",
+  "utc": "2026-10-08T01:45:31.963987+00:00",
   "host": "inspur-NP5570M5",
   "version": "v4",
   "entry": "b_score_aligned_package_v4",
-  "processes": [
-    "3965729       1 3965729     666 35.6  0.0 /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/controller.py",
-    "3976161 3965729 3965729     180  259  4.1 /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/production.py scheduling rematch /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/rematch_01"
-  ],
+  "processes": [],
   "owned_servers": [],
   "gpu": "0, NVIDIA RTX 6000 Ada Generation, 0 %, 182 MiB, 46068 MiB",
-  "memory": "总计         已用        空闲      共享    缓冲/缓存    可用\n内存：      128557       12312       49212          74       67033      115133\n交换：      131071        1939      129132",
+  "memory": "总计         已用        空闲      共享    缓冲/缓存    可用\n内存：      128557        7056       53883          74       67618      120390\n交换：      131071        1937      129134",
   "disk": {
     "total": 943412031488,
-    "used": 694274576384,
-    "free": 201137844224
+    "used": 694453223424,
+    "free": 200959197184
   },
   "window_counts": {},
   "window_receipts": [],
   "all_completed_window_file_sha_pass": true,
   "new_zip_paths": [
+    "rematch_01/candidate_B2_8B.zip",
     "nontest_01/candidate_B2_8B.zip"
   ],
   "source_lock_sha256": "52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db",
@@ -186,6 +184,47 @@
         "free_bytes": 201169690624,
         "work_bytes": 79012339712
       }
+    },
+    "rematch_B2_v4_rematch_spatial_01.resource.json": {
+      "name": "rematch_B2_v4_rematch_spatial_01",
+      "command": [
+        "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+        "-B",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/production.py",
+        "spatial",
+        "rematch",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/rematch_01"
+      ],
+      "started_utc": "2026-10-07T20:28:51.028881+00:00",
+      "runner_pid": 4059444,
+      "reserved_seconds": 39090,
+      "teardown_reserve_seconds": 120,
+      "prior_charged_seconds": 158252.24326427234,
+      "gpu_time_mode": "UNLIMITED",
+      "max_total_gpu_seconds": null,
+      "resource_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
+      "disk_before": {
+        "free_bytes": 200997138432,
+        "work_bytes": 79174152192
+      },
+      "planned_output_bytes": 470457500,
+      "capacity_reason": "Measured current same-8B outputs and complete source-field counts; actual capacity only, no Mac or quota",
+      "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+      "project_disk_limit_bytes": null,
+      "project_ram_limit_bytes": null,
+      "project_vram_limit_bytes": null,
+      "runner_source_sha256": "9997d41fbe2bb51726914b4698b874cf939c52aac02048fa9b3bb753c64c6cec",
+      "child_pid": 4059448,
+      "finished_utc": "2026-10-08T01:42:44.394328+00:00",
+      "charged_seconds": 18833.365533651784,
+      "exit_code": 0,
+      "stop_reason": null,
+      "sampled_peak_memory_mib": 17384,
+      "status": "completed",
+      "disk_after": {
+        "free_bytes": 200987996160,
+        "work_bytes": 79193149440
+      }
     }
   },
   "b2_queue_receipts": {},
@@ -275,13 +314,53 @@
       }
     },
     "rematch_01": {
+      "anchor_output.jsonl": {
+        "bytes": 13899278,
+        "mtime_ns": 1791423753303845428
+      },
+      "anchor_requests.jsonl": {
+        "bytes": 16303691,
+        "mtime_ns": 1791404888150055705
+      },
+      "candidate_B2_8B.zip": {
+        "bytes": 317401,
+        "mtime_ns": 1791423875800014644
+      },
+      "field_frames.jsonl": {
+        "bytes": 70474620,
+        "mtime_ns": 1791404886894044600
+      },
+      "field_shots.jsonl": {
+        "bytes": 42343919,
+        "mtime_ns": 1791404887898053480
+      },
+      "independent_validation.json": {
+        "bytes": 1142,
+        "mtime_ns": 1791423878692104790
+      },
+      "metadata.json": {
+        "bytes": 261645,
+        "mtime_ns": 1791423875452003771
+      },
       "model_identity.json": {
         "bytes": 462,
         "mtime_ns": 1791401942864753316
       },
+      "package.stage.json": {
+        "bytes": 1337,
+        "mtime_ns": 1791423878852109769
+      },
+      "predictions.jsonl": {
+        "bytes": 4282709,
+        "mtime_ns": 1791423874343969123
+      },
       "progress.json": {
-        "bytes": 191,
-        "mtime_ns": 1791402212875857904
+        "bytes": 159,
+        "mtime_ns": 1791423753303845428
+      },
+      "provenance.jsonl": {
+        "bytes": 23792839,
+        "mtime_ns": 1791423874931987521
       },
       "provider_temporal.jsonl": {
         "bytes": 8570734,
@@ -295,9 +374,17 @@
         "bytes": 2733,
         "mtime_ns": 1791401802945256521
       },
+      "schedule.stage.json": {
+        "bytes": 562,
+        "mtime_ns": 1791404888458058423
+      },
       "selected.jsonl": {
         "bytes": 31633897,
         "mtime_ns": 1791402093800242698
+      },
+      "spatial.stage.json": {
+        "bytes": 555,
+        "mtime_ns": 1791423753307845575
       },
       "temporal.jsonl": {
         "bytes": 8595699,
@@ -586,14 +673,55 @@
     "uploaded": false
   },
   "progress": {
-    "utc": "2026-10-07T19:40:50.369425+00:00",
-    "stage": "RUNNING_REMATCH_SCHEDULING",
+    "utc": "2026-10-08T01:44:41.250690+00:00",
+    "stage": "PASS_COMPLETE_426_B2_8B_ZIP_ON_LINUX",
     "pid": 3965729,
     "source_lock_sha256": "52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db",
     "automatic_return": false,
-    "uploaded": false
+    "uploaded": false,
+    "candidate": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/rematch_01/candidate_B2_8B.zip",
+    "zip_bytes": 317401,
+    "zip_sha256": "0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3",
+    "crc_pass": true,
+    "predictions_sha256": "0c0777a24ce84ae662221f2a04ed259cef6a3c0d67671e5238a3048c1ae700f4",
+    "archive_names": [
+      "predictions.jsonl"
+    ],
+    "videos": 426,
+    "official_score": null,
+    "temporal_adapter_sha256": "8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23",
+    "actual_training": "PRESERVED_ALREADY_TRAINED_B_5_EPOCHS_227_UPDATES",
+    "new_optimizer_updates": 0,
+    "new_T_training_started": false,
+    "teacher_quality_stop_preserved": true,
+    "nontest_package_receipt_sha256": "cf487cf020f2a07f2d7af9101f898894cefdb8532952da350b945741955cfbb1",
+    "independent_validation_sha256": "db195ac4f821f4313babe803020014295de1faf9443604a5f6657663a21f65ea"
   },
-  "completion": null,
+  "completion": {
+    "utc": "2026-10-08T01:44:41.251204+00:00",
+    "stage": "PASS_COMPLETE_426_B2_8B_ZIP_ON_LINUX",
+    "pid": 3965729,
+    "source_lock_sha256": "52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db",
+    "automatic_return": false,
+    "uploaded": false,
+    "candidate": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/rematch_01/candidate_B2_8B.zip",
+    "zip_bytes": 317401,
+    "zip_sha256": "0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3",
+    "crc_pass": true,
+    "predictions_sha256": "0c0777a24ce84ae662221f2a04ed259cef6a3c0d67671e5238a3048c1ae700f4",
+    "archive_names": [
+      "predictions.jsonl"
+    ],
+    "videos": 426,
+    "official_score": null,
+    "temporal_adapter_sha256": "8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23",
+    "actual_training": "PRESERVED_ALREADY_TRAINED_B_5_EPOCHS_227_UPDATES",
+    "new_optimizer_updates": 0,
+    "new_T_training_started": false,
+    "teacher_quality_stop_preserved": true,
+    "nontest_package_receipt_sha256": "cf487cf020f2a07f2d7af9101f898894cefdb8532952da350b945741955cfbb1",
+    "independent_validation_sha256": "db195ac4f821f4313babe803020014295de1faf9443604a5f6657663a21f65ea"
+  },
   "pilot_progress": null,
   "pilot_completion": null,
   "distribution": null,
@@ -671,8 +799,73 @@
       "predictions.jsonl"
     ]
   },
-  "rematch_package": null,
-  "rematch_strict": null,
+  "rematch_package": {
+    "video_records": 426,
+    "prediction_frames": 105075,
+    "issues": [],
+    "official_status": "NOT_SCORED_NOT_UPLOADED",
+    "legal_empty_supported": true,
+    "weak_roi_inputs_used": 0,
+    "old_test_boxes_used": 0,
+    "silent_fallbacks": 0,
+    "zip_sha256": "0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3",
+    "predictions_sha256": "0c0777a24ce84ae662221f2a04ed259cef6a3c0d67671e5238a3048c1ae700f4",
+    "zip_bytes": 317401,
+    "archive_names": [
+      "predictions.jsonl"
+    ],
+    "uploaded": false,
+    "status": "PASS_COMPLETE_B2_8B_PACKAGE_ON_LINUX",
+    "candidate": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/rematch_01/candidate_B2_8B.zip",
+    "scope": "rematch",
+    "complete_pipeline_parameters": 8782459120,
+    "shared_base_counted_once": true,
+    "official_score": null,
+    "old_B_package_unchanged": true,
+    "time_independent_source_field": true,
+    "strict_coordinate_units": true,
+    "comparison_to_B": "PRESERVED_TRAINED_B_NATIVE_INPUT_AND_SOURCE_FIELD_RECIPE",
+    "selected_adapter_sha256": "8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23",
+    "new_optimizer_updates": 0,
+    "new_T_training_started": false,
+    "automatic_return": false,
+    "source_lock_sha256": "52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db"
+  },
+  "rematch_strict": {
+    "status": "PASS_INDEPENDENT_STRICT_VALIDATION",
+    "official_status": "NOT_SCORED_NOT_UPLOADED",
+    "checks": {
+      "strict_loader_ok": true,
+      "video_record_set_exact": true,
+      "selected_key_set_exact": true,
+      "ratio_fields_exact": true,
+      "frames_sorted": true,
+      "provenance_key_set_exact": true,
+      "provenance_boxes_match_predictions": true,
+      "provenance_all_legal": true,
+      "provenance_sources_allowed": true,
+      "archive_single_file": true,
+      "archive_roundtrip_exact": true
+    },
+    "strict_loader_issues": [],
+    "video_records": 426,
+    "expected_frames": 105075,
+    "prediction_frames": 105075,
+    "duplicate_frames": 0,
+    "missing": 0,
+    "extra": 0,
+    "ratios": {
+      "16:9": 303,
+      "9:16": 123
+    },
+    "strict_loader_sha256": "34ea6d198acba95a8651d687be84ccbc2281039083a560fa122ec42c101d84c9",
+    "predictions_sha256": "0c0777a24ce84ae662221f2a04ed259cef6a3c0d67671e5238a3048c1ae700f4",
+    "provenance_sha256": "bb4e19f44f285c83cef7c45c6a177f120096760f06ced1b8b35a2ded4c7c125e",
+    "zip_sha256": "0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3",
+    "archive_names": [
+      "predictions.jsonl"
+    ]
+  },
   "production_stage_receipts": {
     "nontest_01": {
       "package.stage.json": {
@@ -770,6 +963,38 @@
       }
     },
     "rematch_01": {
+      "package.stage.json": {
+        "video_records": 426,
+        "prediction_frames": 105075,
+        "issues": [],
+        "official_status": "NOT_SCORED_NOT_UPLOADED",
+        "legal_empty_supported": true,
+        "weak_roi_inputs_used": 0,
+        "old_test_boxes_used": 0,
+        "silent_fallbacks": 0,
+        "zip_sha256": "0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3",
+        "predictions_sha256": "0c0777a24ce84ae662221f2a04ed259cef6a3c0d67671e5238a3048c1ae700f4",
+        "zip_bytes": 317401,
+        "archive_names": [
+          "predictions.jsonl"
+        ],
+        "uploaded": false,
+        "status": "PASS_COMPLETE_B2_8B_PACKAGE_ON_LINUX",
+        "candidate": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/rematch_01/candidate_B2_8B.zip",
+        "scope": "rematch",
+        "complete_pipeline_parameters": 8782459120,
+        "shared_base_counted_once": true,
+        "official_score": null,
+        "old_B_package_unchanged": true,
+        "time_independent_source_field": true,
+        "strict_coordinate_units": true,
+        "comparison_to_B": "PRESERVED_TRAINED_B_NATIVE_INPUT_AND_SOURCE_FIELD_RECIPE",
+        "selected_adapter_sha256": "8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23",
+        "new_optimizer_updates": 0,
+        "new_T_training_started": false,
+        "automatic_return": false,
+        "source_lock_sha256": "52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db"
+      },
       "provider_temporal.stage.json": {
         "status": "STOP_TEMPORAL_FAILURES",
         "videos": 426,
@@ -797,6 +1022,37 @@
         "wall_seconds": 5237.485004105605,
         "optimizer_updates": 0,
         "official_score": null
+      },
+      "schedule.stage.json": {
+        "status": "PASS_TIME_INDEPENDENT_SOURCE_FIELD",
+        "selected_frames": 105075,
+        "field_frames": 234158,
+        "anchors": 31295,
+        "temporal_selection_used_for_boundaries": false,
+        "max_gap": 8,
+        "whole_batch_empty": false,
+        "empty_spatial_calls": null,
+        "field_frames_sha256": "17ba37aadc4cf705e1ff95a78a58d8befcab9e34f7132ef0775f1ed1df0d8bca",
+        "shots_sha256": "8e81df10c685527145069cd9c65316ab6341c9da7d6e39bb282ed6c60ce12f1e",
+        "requests_sha256": "9cb7c4e36597dc8ae723ac3b686b2c3b1f04d5982503478fdf19ee72b18c4798",
+        "wall_seconds": 2794.1717110630125
+      },
+      "spatial.stage.json": {
+        "status": "PASS_STRICT_SOURCE_FIELD_SPATIAL",
+        "rows": 31295,
+        "invalid": 0,
+        "model_calls": 31295,
+        "wall_seconds": 18723.876517390832,
+        "measured_seconds_per_anchor": 0.5982288746538813,
+        "logical_parameters": 8767123696,
+        "base_hash": {
+          "sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+          "parameters": 8767123696,
+          "method": "sorted canonical names and all unique frozen parameter bytes"
+        },
+        "strict_units": "INTEGER_0_TO_1000",
+        "time_adapter_enabled": false,
+        "failure_to_empty_conversions": 0
       },
       "temporal.stage.json": {
         "status": "PASS_TEMPORAL_EXECUTION",

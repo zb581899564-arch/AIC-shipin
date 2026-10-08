@@ -42,15 +42,17 @@ python tools/verify_publication.py
 
 ## 当前B2复现范围
 
-2026-10-08 03:43 UTC+8：当前自主接续为[B2已微调8B生产对齐](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/CONTINUE.md)。保留已评分37.63的B最终LoRA，不增加训练更新；时间使用B adapter、空间同8B原生基座，总逻辑参数8,782,459,120。B2采用所有分支实际native PTS/floor64帧/顺序PyAV/16384长输入、精确端点与全源空间场，仍用B原1–5段提示与greedy。旧37.63仍绑定旧B包，新B2官网分未知。
+2026-10-08 09:45 UTC+8：当前路线为[B2已微调8B生产对齐](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/CONTINUE.md)。保留已评分37.63的B最终LoRA，不增加训练更新；时间使用B adapter、空间同8B原生基座，总逻辑参数8,782,459,120。B2采用所有分支实际native PTS/floor64帧/顺序PyAV/16384长输入、精确端点与全源空间场，仍用B原1–5段提示与greedy。旧37.63仍绑定旧B包，新B2官网分未知。
 
 32B context v3已经完整8/8真实请求、0工程失败，三正被弱审核支持，唯一NO被拒绝；没有受支持真实空例，T更新0。审核声称overview仅到119.0189秒，实际完整源回执末PTS149.98316666666668、13帧>=120；事实性错误和语义争议同时保留，不能将拒绝改PASS或空标签当真值。旧raw/失败/科学STOP保存；不再盲试同配方，不造空或弱化原监督门。B2是保留已经训练B的可交付路线，不冒充新教师T训练。
 
-69项CPU、434来源/529真实自然窗/33447样本端点、12原目标无损回放与实际processor/HD/8非测试源重开pixel SHA通过。571文件锁 `52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db`，单次launcher历史PID `3965729`；本次快照阶段 `RUNNING_REMATCH_SCHEDULING`、实际命令进程 `2`。实际B LoRA长输入CUDA已PASS：12048token、288 adapter张量与保存值相等、全基座SHA与原训练相等，选择token分数有限；0优化器更新。完整NONTEST8/426严格包分别看实际回执，尚未宣称最终ZIP完成。
+69项CPU、434来源/529真实自然窗/33447样本端点、12原目标无损回放与实际processor/HD/8非测试源重开pixel SHA通过。571文件锁 `52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db`，单次launcher历史PID `3965729`；本次快照阶段 `PASS_COMPLETE_426_B2_8B_ZIP_ON_LINUX`、实际命令进程 `0`。实际B LoRA长输入CUDA已PASS：12048token、288 adapter张量与保存值相等、全基座SHA与原训练相等，选择token分数有限；0优化器更新。Linux最终ZIP终态与NONTEST8/426全部独立strict登记已PASS。包 `/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/rematch_01/candidate_B2_8B.zip`，实际 `317401` 字节，SHA256 `0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3`。包仍留Linux，尚无新官网分。
 
 旧Z时间实际adapter=False，521旧时间不能复用B2。非测试全源CPU/同基座空间只在输入/算法/关键SHA与完整回执一致后原样复用；复赛旧CPU域与新native源域不同，不准入复用，真实重算全源CPU/空间。后台真实B长输入CUDA→NONTEST8→426/521时间/全源空间→独立strict ZIP。最终只有真实B2 completion PASS、8/426独立strict全部true、大小/SHA/CRC/唯一JSONL/426身份验收才可提交。
 
-已有监控每15分钟静默核查、自主修复并更新证据，最后汇报一次。Linux后台独立运行，本地巡检需要Windows开机且Codex运行。最终只有一个选定ZIP留Linux，不自动回传或AIC上传；新大流量先许可、Mac退出，实际容量与共享GPU锁/账本/7200保持。见[B2决策](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/NEXT_ACTION_B2_20261008.md)、[协议](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/PROTOCOL.md)、[实时接续](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/STATUS_AUTOPILOT_20261007.md)。
+最终ZIP已完整验收，本轮巡检在交付时结束。Linux后台独立运行，本地巡检需要Windows开机且Codex运行。最终只有一个选定ZIP留Linux，不自动回传或AIC上传；新大流量先许可、Mac退出，实际容量与共享GPU锁/账本/7200保持。见[B2决策](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/NEXT_ACTION_B2_20261008.md)、[协议](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/PROTOCOL.md)、[实时接续](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/STATUS_AUTOPILOT_20261007.md)。
+
+最终实物ZIP、8/426身份与全部strict、31,295个真实锚点及GPU追加账本已独立复核，见[最终验收](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/B2_v4_final_acceptance_20261008.json)。
 
 v4保持canonical时长修复，新加SHA绑定的97送模型前log316/errno95转换修复：临时UNSPECIFIED transfer/限定范围ITU601样本映射后恢复frame元数据，原源/YUV/range/尺寸/PTS不变，不声称恢复摄影gamma曲线。其他源默认转换保持，9转换CPU/64实际帧RGB与空间BGR完全对应、69原CPU/实际processor/8非测试pixel SHA通过；11独立所有权mock及6实际失败分类CPU通过。v1有效GPU计算不打断，v4新NONTEST8后等待完整provider和记账，所有成功原validator/输入/SHA核验原字节保留，只为登记送模型前错误真正生成一次；旧失败STOP保留，不转空/减426分母。见[显式转换与恢复](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/B2_COLOR_RECOVERY_20261008.md)。
 
