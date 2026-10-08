@@ -582,6 +582,9 @@ def publish_teacher_v14():
         complete_teacher_manifest=(snapshot.get('complete_teacher_manifest_summary') or {}),
         all_original_receipt_SHA_pass=snapshot.get('all_original_resume_file_sha_pass'),
         all_complete_teacher_review_file_SHA_pass=snapshot.get('all_complete_teacher_review_file_SHA_pass'),
+        actual_runtime_complete_teacher_handoff=snapshot.get('full_resume_handoff'),
+        independent_runtime_handoff_receipt_sha256=hashlib.sha256((RUN/'controller/V14_real_handoff_acceptance_20261008.json').read_bytes()).hexdigest()
+            if (RUN/'controller/V14_real_handoff_acceptance_20261008.json').exists() else None,
         actual_new_T_optimizer_updates=(snapshot.get('student_progress') or {}).get('optimizer_steps',0),
         final_ZIP_complete=False,new_official_score=None,B2_user_official_score=37.32,original_B_official_score=37.63,
         B2_ZIP_sha256='0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3',
@@ -593,7 +596,7 @@ def publish_teacher_v14():
         '弱支持正65、空14、UNKNOWN81；实际支持65train/14dev，全部160分母与原raw保持，同教师一致性不是人工真值。'
         'V13学生CPU准入错误拒绝原pilot24的diagnostic标记。V14在独立exact manifest下仅允许原pilot24精确成功回执跨阶段，原标记/STOP/成本不改；'
         '旧consumer失败、新完整160 consumer与11拒绝合同已真实CPU验收，不重复教师生成。'
-        f'当前实际阶段 `{stage}`，新8B T实际更新{aggregate["actual_new_T_optimizer_updates"]}，没有新最终ZIP，新官网分未知。'
+        f'实际快照{snapshot["utc"]}阶段 `{stage}`，新8B T实际更新{aggregate["actual_new_T_optimizer_updates"]}，没有新最终ZIP，新官网分未知。'
         '原B37.63与B2用户37.32/DONE继续绑定各自旧ZIP。'
         f'见[协议]({REL}/{entry}/PROTOCOL.md)与[聚合验收]({REL}/{entry}/aggregate_stage_handoff_acceptance.json)。\n\n')
     def front(text):

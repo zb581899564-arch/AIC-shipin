@@ -4,7 +4,9 @@
 
 V13学生于2026-10-08T12:11:31.394857UTC在GPU前CPU准入STOP：完整教师复用的pilot24仍有diagnostic_only=True，学生旧consumer却只接受False。原标记/raw/支持/UNKNOWN/STOP不回写。V14仅允许完整exact160 manifest批准的原pilot24精确成功回执跨阶段作为弱监督，修改/外部/非pilot diagnostic仍STOP，不把UNKNOWN转空/负、不重复任何教师成功生成。旧consumer原症状/新完整160 consumer及11拒绝合同实际CPU通过；原训练、输入、prompt、validator与生产配方保持。完整教师manifest SHA `e777c7becb8df25051d14181cd7684d23813a51aaf40529583945cb8bd6c8be8` 仅Linux原地，逐帧/教师raw不导出。
 
-V14冻结 `16502` 文件，锁 `5295e8bc0f2b6a651e73321a5798b259816ccbe9a0582753dc3c200b5ef080e0`；单次launcher `2026-10-08T12:37:29.702336+00:00`、历史PID/PGID `1101256`。实际快照 `2026-10-08T12:37:50.245164+00:00` 阶段 `SOURCE_PREFLIGHT_CPU_PENDING_REGISTRATION`，完整路径进程1/server0。新教师调用0、新T实际optimizer更新 `0`，无新最终ZIP。CPU SHA/原validator重开/资源排队可能合法，历史PID和GPU闲不作存活/卡死证据；冻结源码不改，launcher/成功生成不重开。
+V14冻结 `16502` 文件，锁 `5295e8bc0f2b6a651e73321a5798b259816ccbe9a0582753dc3c200b5ef080e0`；单次launcher `2026-10-08T12:37:29.702336+00:00`、历史PID/PGID `1101256`。实际快照 `2026-10-08T12:47:49.786701+00:00` 阶段 `RUNNING_STUDENT_ADMISSION`，完整路径进程2/server0。新教师调用0、新T实际optimizer更新 `0`，无新最终ZIP。CPU SHA/原validator重开/资源排队可能合法，历史PID和GPU闲不作存活/卡死证据；冻结源码不改，launcher/成功生成不重开。
+
+本次完整教师运行时移交实际状态 `PASS_EXACT_V13_COMPLETE_TEACHER_HANDOFF_NO_NEW_CALLS`、UTC `2026-10-08T12:46:18.337907+00:00`；独立原9个聚合/准入文件逐字节、原24诊断标记及全部原authority与新core SHA验收SHA `4499b54944b39fb110d1709ea87db5b4e4aef51ca4223683fa48941c6513add2`，CPU新模型调用0，移交不是GPU训练或新ZIP。
 
 自动接续：完整教师CPU移交→学生准入→2–4真实更新同optimizer/RNG/288adapter重载→旧B candidate0开发→NONTEST8→426全部11独立strict ZIP。原B胜出如实保留；科学不足按已授权独立B/C实现，不等待用户、不盲换prompt。B2用户37.32/DONE（317401字节SHA0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3）；旧B37.63仍绑定86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54。新分未知。
 

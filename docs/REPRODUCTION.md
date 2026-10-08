@@ -2,7 +2,7 @@
 
 ## 当前教师工程修复与真实接续
 
-32B教师完整160标签与160盲第二选择已真实完成，132新复查、28原成功精确复用，工程失败0。弱支持正65、空14、UNKNOWN81；实际支持65train/14dev，全部160分母与原raw保持，同教师一致性不是人工真值。V13学生CPU准入错误拒绝原pilot24的diagnostic标记。V14在独立exact manifest下仅允许原pilot24精确成功回执跨阶段，原标记/STOP/成本不改；旧consumer失败、新完整160 consumer与11拒绝合同已真实CPU验收，不重复教师生成。当前实际阶段 `SOURCE_PREFLIGHT_CPU_PENDING_REGISTRATION`，新8B T实际更新0，没有新最终ZIP，新官网分未知。原B37.63与B2用户37.32/DONE继续绑定各自旧ZIP。见[协议](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/PROTOCOL.md)与[聚合验收](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/aggregate_stage_handoff_acceptance.json)。
+32B教师完整160标签与160盲第二选择已真实完成，132新复查、28原成功精确复用，工程失败0。弱支持正65、空14、UNKNOWN81；实际支持65train/14dev，全部160分母与原raw保持，同教师一致性不是人工真值。V13学生CPU准入错误拒绝原pilot24的diagnostic标记。V14在独立exact manifest下仅允许原pilot24精确成功回执跨阶段，原标记/STOP/成本不改；旧consumer失败、新完整160 consumer与11拒绝合同已真实CPU验收，不重复教师生成。实际快照2026-10-08T12:47:49.786701+00:00阶段 `RUNNING_STUDENT_ADMISSION`，新8B T实际更新0，没有新最终ZIP，新官网分未知。原B37.63与B2用户37.32/DONE继续绑定各自旧ZIP。见[协议](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/PROTOCOL.md)与[聚合验收](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/aggregate_stage_handoff_acceptance.json)。
 
 <!-- END_CURRENT_V8 -->
 ## 已包含

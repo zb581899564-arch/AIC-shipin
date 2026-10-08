@@ -33,6 +33,9 @@ print(json.dumps({n:base64.b64encode((h/n).read_bytes()).decode() for n in names
     full = snap.get('complete_teacher_manifest_summary') or {}
     proof = RUN / 'controller/V13_real_full_review_acceptance_20261008.json'
     proof_sha = hashlib.sha256(proof.read_bytes()).hexdigest()
+    runtime_handoff = snap.get('full_resume_handoff')
+    handoff_proof = RUN / 'controller/V14_real_handoff_acceptance_20261008.json'
+    handoff_proof_sha = hashlib.sha256(handoff_proof.read_bytes()).hexdigest() if handoff_proof.exists() else None
     receipt = dict(status='ACTUAL_V14_COMPLETE_TEACHER_HANDOFF_AND_STUDENT_CONTINUATION_NOT_FINAL_ZIP',
         utc=dt.datetime.now(dt.timezone.utc).isoformat(), snapshot_utc=snap['utc'], entry=ENTRY,
         source_lock_sha256=snap['source_lock_sha256'], frozen_files=snap['source_lock_file_count'],
@@ -40,6 +43,8 @@ print(json.dumps({n:base64.b64encode((h/n).read_bytes()).decode() for n in names
         complete_teacher_manifest=full, all_original_SHA_pass=snap.get('all_original_resume_file_sha_pass'),
         all_complete_review_SHA_pass=snap.get('all_complete_teacher_review_file_SHA_pass'),
         independent_full_teacher_acceptance_sha256=proof_sha, original_labels=160, original_reviews=160,
+        runtime_complete_teacher_handoff=runtime_handoff,
+        independent_runtime_handoff_acceptance_sha256=handoff_proof_sha,
         supported_by_split={'train': 65, 'dev': 14}, unknown_count=81,
         original_pilot_diagnostic_flags_preserved=24, original_V13_STOP_preserved=True,
         new_teacher_calls=0, actual_new_T_optimizer_updates=steps,
@@ -53,6 +58,8 @@ print(json.dumps({n:base64.b64encode((h/n).read_bytes()).decode() for n in names
 V13学生于2026-10-08T12:11:31.394857UTC在GPU前CPU准入STOP：完整教师复用的pilot24仍有diagnostic_only=True，学生旧consumer却只接受False。原标记/raw/支持/UNKNOWN/STOP不回写。V14仅允许完整exact160 manifest批准的原pilot24精确成功回执跨阶段作为弱监督，修改/外部/非pilot diagnostic仍STOP，不把UNKNOWN转空/负、不重复任何教师成功生成。旧consumer原症状/新完整160 consumer及11拒绝合同实际CPU通过；原训练、输入、prompt、validator与生产配方保持。完整教师manifest SHA `{full.get('manifest_sha256')}` 仅Linux原地，逐帧/教师raw不导出。
 
 V14冻结 `{snap['source_lock_file_count']}` 文件，锁 `{snap['source_lock_sha256']}`；单次launcher `{start['utc']}`、历史PID/PGID `{start['pid']}`。实际快照 `{snap['utc']}` 阶段 `{stage}`，完整路径进程{len(snap.get('processes', []))}/server{len(snap.get('owned_servers', []))}。新教师调用0、新T实际optimizer更新 `{steps}`，无新最终ZIP。CPU SHA/原validator重开/资源排队可能合法，历史PID和GPU闲不作存活/卡死证据；冻结源码不改，launcher/成功生成不重开。
+
+本次完整教师运行时移交实际状态 `{(runtime_handoff or {}).get('status', 'PENDING')}`、UTC `{(runtime_handoff or {}).get('utc')}`；独立原9个聚合/准入文件逐字节、原24诊断标记及全部原authority与新core SHA验收SHA `{handoff_proof_sha}`，CPU新模型调用0，移交不是GPU训练或新ZIP。
 
 自动接续：完整教师CPU移交→学生准入→2–4真实更新同optimizer/RNG/288adapter重载→旧B candidate0开发→NONTEST8→426全部11独立strict ZIP。原B胜出如实保留；科学不足按已授权独立B/C实现，不等待用户、不盲换prompt。B2用户37.32/DONE（317401字节SHA0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3）；旧B37.63仍绑定86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54。新分未知。
 

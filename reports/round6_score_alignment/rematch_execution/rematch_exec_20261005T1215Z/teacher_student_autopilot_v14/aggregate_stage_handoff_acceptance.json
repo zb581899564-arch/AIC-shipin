@@ -1,8 +1,8 @@
 {
   "status": "ACTUAL_V14_EXACT_STAGE_HANDOFF_AND_STUDENT_CONTINUATION_NOT_FINAL_ZIP",
-  "snapshot_utc": "2026-10-08T12:37:50.245164+00:00",
+  "snapshot_utc": "2026-10-08T12:47:49.786701+00:00",
   "entry": "teacher_student_autopilot_v14",
-  "stage": "SOURCE_PREFLIGHT_CPU_PENDING_REGISTRATION",
+  "stage": "RUNNING_STUDENT_ADMISSION",
   "source_lock_sha256": "5295e8bc0f2b6a651e73321a5798b259816ccbe9a0582753dc3c200b5ef080e0",
   "frozen_file_count": 16502,
   "original_labels": 160,
@@ -53,6 +53,25 @@
   },
   "all_original_receipt_SHA_pass": true,
   "all_complete_teacher_review_file_SHA_pass": true,
+  "actual_runtime_complete_teacher_handoff": {
+    "status": "PASS_EXACT_V13_COMPLETE_TEACHER_HANDOFF_NO_NEW_CALLS",
+    "utc": "2026-10-08T12:46:18.337907+00:00",
+    "manifest_sha256": "e777c7becb8df25051d14181cd7684d23813a51aaf40529583945cb8bd6c8be8",
+    "original_labels": 160,
+    "original_reviews": 160,
+    "registered_pilot_diagnostic_flags_preserved": 24,
+    "supported_by_split": {
+      "train": 65,
+      "dev": 14
+    },
+    "unknown_count": 81,
+    "new_teacher_calls": 0,
+    "new_T_updates_by_handoff": 0,
+    "original_GPU_charged_seconds": 5493.750158078037,
+    "same_teacher_consistency_not_human_truth": true,
+    "all_original_bytes_unchanged": true
+  },
+  "independent_runtime_handoff_receipt_sha256": "4499b54944b39fb110d1709ea87db5b4e4aef51ca4223683fa48941c6513add2",
   "actual_new_T_optimizer_updates": 0,
   "final_ZIP_complete": false,
   "new_official_score": null,
