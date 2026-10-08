@@ -1,10 +1,10 @@
 ## 2026-10-08：V11证据编号与阶段衔接修复，已登记自主接续
 
-当前唯一入口 `teacher_student_autopilot_v11/CONTINUE.md` 与 `PROTOCOL.md`。Linux `92` 项CPU与固定runtime/原validator/真实旧成功SHA验收后冻结 `1189` 文件，SHA `0ae09ec38ff589baa5e15e16b84457b06442195de502ec7ef6a19bab9b715578`，一次launcher 2026-10-08T06:38:42.955326+00:00 历史PID/PGID `559263`。2026-10-08T06:40:46.137115+00:00实时所属完整命令进程 `1`、server `0`，实际阶段 `SOURCE_PREFLIGHT_CPU`。原PID/旧progress/CPU/启动不当存活、标签质量、训练或新ZIP。
+当前唯一入口 `teacher_student_autopilot_v11/CONTINUE.md` 与 `PROTOCOL.md`。Linux `92` 项CPU与固定runtime/原validator/真实旧成功SHA验收后冻结 `1189` 文件，SHA `0ae09ec38ff589baa5e15e16b84457b06442195de502ec7ef6a19bab9b715578`，一次launcher 2026-10-08T06:38:42.955326+00:00 历史PID/PGID `559263`。2026-10-08T06:51:40.860301+00:00实时所属完整命令进程 `4`、server `1`，实际阶段 `RUNNING_TEACHER_PILOT`。原PID/旧progress/CPU/启动不当存活、标签质量、训练或新ZIP。
 
 V10真实视觉8/8和2条非测试重输入通过，但首个pilot的[15,21)、[42,50)缺少模型所选实际证据帧而STOP；原raw SHA9977638522f91aa2661fd70b5179a7aed557ea816d5f451f6f50b010114f65fa、639锁、所有失败与成功保持。V11仅注册B边界/F物理帧独立编号和每段模型自行所选见证生成约束，所有合法1..5段/证据子集保持，原高光定义与原validator/16024输入字节不改，无后补证据/裁段/造空/UNKNOWN负类。
 
-旧2成功只在完整160内（不在pilot24）通过孤立原validator/全SHA原字节引用，新旧接口由exact manifest分开核；视觉8只在8实际HTTP构造CPU相等及模型/运行时/输入身份相同后引用，不重复成功生成、旧cost保留、引用新调用0。首个原失败pilot窗在新格式必须真实新生成通过，随后继续剩余23窗与盲第二选择。来源/PTS/模型确错工程STOP；语义争议逐条UNKNOWN并保留全分母；不要求小试必须出现空例，不把同教师一致性叫真值。
+旧2成功只在完整160内（不在pilot24）通过孤立原validator/全SHA原字节引用，新旧接口由exact manifest分开核；视觉8只在8实际HTTP构造CPU相等及模型/运行时/输入身份相同后引用，不重复成功生成、旧cost保留、引用新调用0。本次首个原失败窗口于 2026-10-08T06:50:06.959165+00:00 已真实新生成通过 `PASS_REAL_BF_PER_SEGMENT_EVIDENCE_GENERATION_NOT_SEMANTIC_ACCEPTANCE`；新调用1、旧成功重调用0，原raw/源帧/原validator独立CPU回放通过，尚不构成语义或训练准入。 后台继续剩余23窗与盲第二选择。来源/PTS/模型确错工程STOP；语义争议逐条UNKNOWN并保留全分母；不要求小试必须出现空例，不把同教师一致性叫真值。
 
 继续可靠完整窗口监督→完整160/复查→原B LoRA lr1e-5最多3epochs/前缀2–4真实更新保持optimizer/RNG→开发candidate0旧B→NONTEST8→426独立strict ZIP。监督只可靠边界时自主登记B边界精修；教师不可靠自主实现C同8B全源粗览/局部非测试匹配对照。路线B/C当前以协议为准，不假称运行。新T实际更新 `0`，原教师科学STOP保持。
 

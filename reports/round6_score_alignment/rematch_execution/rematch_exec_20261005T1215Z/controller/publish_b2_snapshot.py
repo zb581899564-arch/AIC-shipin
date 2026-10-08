@@ -239,6 +239,9 @@ def publish_teacher_v8(entry="teacher_student_autopilot_v8"):
         selected += [RUN/'controller'/n for n in ('register_autopilot_v11.py','checkpoint_teacher_v11.py',
             'record_teacher_v11_execution_20261008.py','autonomy_v11_registration_20261008.json',
             'V11_cpu_repair_acceptance_20261008.json','V11_frozen_preflight_acceptance_20261008.json')]
+        first_proof=RUN/'controller/V11_real_first_generation_acceptance_20261008.json'
+        if first_proof.is_file():
+            selected += [first_proof,RUN/'controller/verify_teacher_v11_first_generation_20261008.py']
     for path in selected:
         target=PUB/path.relative_to(WORKSPACE);target.parent.mkdir(parents=True,exist_ok=True)
         shutil.copyfile(path,target);assert target.read_bytes()==path.read_bytes()
@@ -310,6 +313,14 @@ def publish_teacher_v8(entry="teacher_student_autopilot_v8"):
         actual=snapshot['v8_stage_receipts'].get('new_format_real_probe') or {}
         aggregate['actual_new_format_probe']={key:value for key,value in actual.items()
             if key in ('status','fresh_model_calls','old_success_model_calls','optimizer_steps','utc')}
+        if first_proof.is_file():
+            proof=json.loads(first_proof.read_bytes())
+            assert proof['source_lock_sha256']==snapshot['source_lock_sha256'] and proof['independent_revalidation_model_calls']==0
+            aggregate['actual_new_format_independent_CPU_replay']={key:proof[key] for key in (
+                'status','actual_new_model_calls','original_success_new_calls','original_validator_and_canonical_record_byte_identity_pass',
+                'complete_source_and_input_SHA_pass','physical_frame_SHA_pass','actual_label_status','actual_prompt_tokens',
+                'actual_generation_wall_sec','new_T_optimizer_updates','semantic_quality_or_training_admitted')}
+            aggregate['actual_new_format_independent_CPU_replay']['receipt_sha256']=hashlib.sha256(first_proof.read_bytes()).hexdigest()
         aggregate['original_V10_failed_evidence_raw_and_STOP_preserved']=True
     derived=PUB/REL/entry/'aggregate_repair_launch_acceptance.json'
     derived.write_text(json.dumps(aggregate,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

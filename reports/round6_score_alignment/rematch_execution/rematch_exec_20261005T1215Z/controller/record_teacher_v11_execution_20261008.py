@@ -38,6 +38,8 @@ print(json.dumps({n:base64.b64encode((p/n).read_bytes()).decode() for n in
     visual = (snap.get('v8_stage_receipts') or {}).get('visual_completion') or {}
     probe = (snap.get('v8_stage_receipts') or {}).get('teacher_probe') or {}
     handoff = (snap.get('v8_stage_receipts') or {}).get('legacy_handoff') or {}
+    real_format = (snap.get('v8_stage_receipts') or {}).get('new_format_real_probe') or {}
+    pilot_progress = snap.get('pilot_progress') or {}
     evidence = json.loads((RUN/ENTRY/'evidence_boundary_cpu_acceptance.json').read_bytes())
     legacy = json.loads((RUN/ENTRY/'legacy_reuse_cpu_acceptance.json').read_bytes())
     cost = json.loads((RUN/ENTRY/'legacy_cost_cpu_acceptance.json').read_bytes())
@@ -50,17 +52,21 @@ print(json.dumps({n:base64.b64encode((p/n).read_bytes()).decode() for n in
         actual_stage=stage, completion_status=finished.get('status'),
         actual_visual_status=visual.get('status'), actual_probe_status=probe.get('status'),
         actual_legacy_handoff_status=handoff.get('status'),
+        actual_new_format_status=real_format.get('status'),
+        actual_new_format_fresh_model_calls=real_format.get('fresh_model_calls',0),
+        actual_pilot_progress=pilot_progress,
         new_T_optimizer_updates=steps, old_STOP_preserved=True,
         raw_labels_or_per_frame_data_exported=False, large_transfers=0, automatic_return=False, uploaded=False)
     (RUN/'controller/autonomy_v11_registration_20261008.json').write_bytes(
         (json.dumps(receipt,ensure_ascii=False,indent=2)+'\n').encode())
+    format_state = (f"本次首个原失败窗口于 {real_format['utc']} 已真实新生成通过 `{real_format['status']}`；新调用1、旧成功重调用0，原raw/源帧/原validator独立CPU回放通过，尚不构成语义或训练准入。" if real_format else "首个原失败窗口的新格式真实生成仍以当前实际回执为准，CPU/复用不当新生成。")
     top = f'''## 2026-10-08：V11证据编号与阶段衔接修复，已登记自主接续
 
 当前唯一入口 `{ENTRY}/CONTINUE.md` 与 `PROTOCOL.md`。Linux `{cpu_count}` 项CPU与固定runtime/原validator/真实旧成功SHA验收后冻结 `{len(lock['files'])}` 文件，SHA `{digest}`，一次launcher {start['utc']} 历史PID/PGID `{start['pid']}`。{snap['utc']}实时所属完整命令进程 `{len(snap.get('processes',[]))}`、server `{len(snap.get('owned_servers',[]))}`，实际阶段 `{stage}`。原PID/旧progress/CPU/启动不当存活、标签质量、训练或新ZIP。
 
 V10真实视觉8/8和2条非测试重输入通过，但首个pilot的[15,21)、[42,50)缺少模型所选实际证据帧而STOP；原raw SHA9977638522f91aa2661fd70b5179a7aed557ea816d5f451f6f50b010114f65fa、639锁、所有失败与成功保持。V11仅注册B边界/F物理帧独立编号和每段模型自行所选见证生成约束，所有合法1..5段/证据子集保持，原高光定义与原validator/16024输入字节不改，无后补证据/裁段/造空/UNKNOWN负类。
 
-旧2成功只在完整160内（不在pilot24）通过孤立原validator/全SHA原字节引用，新旧接口由exact manifest分开核；视觉8只在8实际HTTP构造CPU相等及模型/运行时/输入身份相同后引用，不重复成功生成、旧cost保留、引用新调用0。首个原失败pilot窗在新格式必须真实新生成通过，随后继续剩余23窗与盲第二选择。来源/PTS/模型确错工程STOP；语义争议逐条UNKNOWN并保留全分母；不要求小试必须出现空例，不把同教师一致性叫真值。
+旧2成功只在完整160内（不在pilot24）通过孤立原validator/全SHA原字节引用，新旧接口由exact manifest分开核；视觉8只在8实际HTTP构造CPU相等及模型/运行时/输入身份相同后引用，不重复成功生成、旧cost保留、引用新调用0。{format_state} 后台继续剩余23窗与盲第二选择。来源/PTS/模型确错工程STOP；语义争议逐条UNKNOWN并保留全分母；不要求小试必须出现空例，不把同教师一致性叫真值。
 
 继续可靠完整窗口监督→完整160/复查→原B LoRA lr1e-5最多3epochs/前缀2–4真实更新保持optimizer/RNG→开发candidate0旧B→NONTEST8→426独立strict ZIP。监督只可靠边界时自主登记B边界精修；教师不可靠自主实现C同8B全源粗览/局部非测试匹配对照。路线B/C当前以协议为准，不假称运行。新T实际更新 `{steps}`，原教师科学STOP保持。
 

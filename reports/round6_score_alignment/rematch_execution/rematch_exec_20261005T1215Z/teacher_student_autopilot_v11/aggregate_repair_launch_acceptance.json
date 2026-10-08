@@ -1,6 +1,6 @@
 {
   "status": "PASS_CPU_REPAIR_AND_ONCE_LINUX_LAUNCH_NOT_TEACHER_QUALITY",
-  "snapshot_utc": "2026-10-08T06:40:46.137115+00:00",
+  "snapshot_utc": "2026-10-08T06:51:40.860301+00:00",
   "entry": "teacher_student_autopilot_v11",
   "source_lock_sha256": "0ae09ec38ff589baa5e15e16b84457b06442195de502ec7ef6a19bab9b715578",
   "bound_file_count": 1189,
@@ -17,8 +17,8 @@
     "dev": 32
   },
   "all_new_groups_exclude_old160_and_context": true,
-  "stage": "SOURCE_PREFLIGHT_CPU",
-  "owned_process_count": 1,
+  "stage": "RUNNING_TEACHER_PILOT",
+  "owned_process_count": 4,
   "completion_status": null,
   "launch_utc": "2026-10-08T06:38:42.955326+00:00",
   "launch_historical_pid": 559263,
@@ -78,7 +78,34 @@
     "full160_only_not_pilot24": true,
     "original_success_calls_not_repeated": true
   },
-  "legacy_handoff": {},
-  "actual_new_format_probe": {},
+  "legacy_handoff": {
+    "status": "PASS_VERIFIED_LEGACY_INTERFACE_AND_CAPACITY_NOT_NEW_GENERATION",
+    "original_visual_calls": 8,
+    "original_probe_calls": 2,
+    "fresh_model_calls": 0,
+    "pilot_old_success_reuse_count": 0,
+    "new_T_optimizer_updates": 0
+  },
+  "actual_new_format_probe": {
+    "status": "PASS_REAL_BF_PER_SEGMENT_EVIDENCE_GENERATION_NOT_SEMANTIC_ACCEPTANCE",
+    "fresh_model_calls": 1,
+    "old_success_model_calls": 0,
+    "optimizer_steps": 0,
+    "utc": "2026-10-08T06:50:06.959165+00:00"
+  },
+  "actual_new_format_independent_CPU_replay": {
+    "status": "PASS_V11_REAL_FAILED_WINDOW_BF_GENERATION_INDEPENDENT_CPU_REPLAY_NOT_SEMANTIC_OR_TRAINING",
+    "actual_new_model_calls": 1,
+    "original_success_new_calls": 0,
+    "original_validator_and_canonical_record_byte_identity_pass": true,
+    "complete_source_and_input_SHA_pass": true,
+    "physical_frame_SHA_pass": true,
+    "actual_label_status": "PASS_WEAK_COMPLETE_WINDOW_TARGET",
+    "actual_prompt_tokens": 12828,
+    "actual_generation_wall_sec": 41.95158846396953,
+    "new_T_optimizer_updates": 0,
+    "semantic_quality_or_training_admitted": false,
+    "receipt_sha256": "a79ac50f3760c9baf7d879cad78e055ed5178f4f42c99ff74e361322f2d4152e"
+  },
   "original_V10_failed_evidence_raw_and_STOP_preserved": true
 }
