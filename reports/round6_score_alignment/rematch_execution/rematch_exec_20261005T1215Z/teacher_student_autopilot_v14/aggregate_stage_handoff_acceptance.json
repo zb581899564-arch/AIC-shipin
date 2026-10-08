@@ -1,0 +1,64 @@
+{
+  "status": "ACTUAL_V14_EXACT_STAGE_HANDOFF_AND_STUDENT_CONTINUATION_NOT_FINAL_ZIP",
+  "snapshot_utc": "2026-10-08T12:37:50.245164+00:00",
+  "entry": "teacher_student_autopilot_v14",
+  "stage": "SOURCE_PREFLIGHT_CPU_PENDING_REGISTRATION",
+  "source_lock_sha256": "5295e8bc0f2b6a651e73321a5798b259816ccbe9a0582753dc3c200b5ef080e0",
+  "frozen_file_count": 16502,
+  "original_labels": 160,
+  "original_reviews": 160,
+  "original_pilot_diagnostic_flags_preserved": 24,
+  "actual_new_teacher_calls": 0,
+  "supported_by_split": {
+    "train": 65,
+    "dev": 14
+  },
+  "supported_positive_by_split": {
+    "train": 55,
+    "dev": 10
+  },
+  "supported_empty_by_split": {
+    "train": 10,
+    "dev": 4
+  },
+  "unknown_count": 81,
+  "UNKNOWN_never_negative": true,
+  "old_consumer_actual_failure_reproduced": true,
+  "exact_foreign_or_changed_rejection_contracts": 11,
+  "same_teacher_consistency_is_weak_not_truth": true,
+  "independent_full_teacher_receipt_sha256": "437c9eb71f75384df85f0d218b46e62714eadb5661fa0912935b2b2d54dcbe74",
+  "independent_full_teacher_engineering": {
+    "full_selected_denominator": 160,
+    "actual_fresh_review_model_calls": 132,
+    "engineering_failure_count": 0,
+    "all_actual_HTTP_processor_grammar_raw_pass": true,
+    "original_validator_and_exact_native_projection_pass": true,
+    "physical_PNG_and_RGB_SHA_pass": true,
+    "physical_frames_checked": 10181,
+    "actual_GPU_charged_seconds": 5493.750158078037,
+    "actual_wrapper_status": "completed",
+    "exit_code": 0,
+    "stop_reason": null,
+    "independent_CPU_model_calls": 0
+  },
+  "complete_teacher_manifest": {
+    "schema": "AIC_EXACT_V13_COMPLETE_TEACHER_STAGE_HANDOFF_V1",
+    "manifest_sha256": "e777c7becb8df25051d14181cd7684d23813a51aaf40529583945cb8bd6c8be8",
+    "original_labels": 160,
+    "original_reviews": 160,
+    "prior_V13_fresh_calls": 132,
+    "registered_pilot_diagnostic_review_count": 24,
+    "original_GPU_charged_seconds": 5493.750158078037,
+    "new_teacher_calls": 0
+  },
+  "all_original_receipt_SHA_pass": true,
+  "all_complete_teacher_review_file_SHA_pass": true,
+  "actual_new_T_optimizer_updates": 0,
+  "final_ZIP_complete": false,
+  "new_official_score": null,
+  "B2_user_official_score": 37.32,
+  "original_B_official_score": 37.63,
+  "B2_ZIP_sha256": "0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3",
+  "original_B_ZIP_sha256": "86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54",
+  "new_ZIP_raw_labels_and_per_frame_data_exported": false
+}

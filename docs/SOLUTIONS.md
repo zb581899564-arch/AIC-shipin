@@ -2,7 +2,7 @@
 
 ## 当前教师工程修复与真实接续
 
-V11已真实完整标注160/160（全量阶段新134、原SHA复用26），盲第二选择28条完成。全量复查在旧成功JSONL对象键排序导致canonical字符串SHA误拒绝处工程停止，原raw/标签/成功回执/STOP保持。V12修复投影的原始对象序列顺序，随后因部署漏原validator metadata在GPU前自然STOP，所有原失败保持。V13补齐原metadata/schema字节并CPU执行完整28条当前blind validator，原160/28经过原validator及全部输入/物理帧SHA验收后引用；剩132独立盲选择，新label调用0，不重复成功生成，原GPU成本6748.806357712485秒保留。当前实际阶段 `RUNNING_TEACHER_REVIEW`，新T实际更新0，没有新最终ZIP/新官网分。B2用户37.32/DONE与原B37.63各绑定各自包。CPU/启动/同教师一致性不是人工真值或新模型训练。见[协议](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v13/PROTOCOL.md)与[聚合验收](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v13/aggregate_resume_acceptance.json)。
+32B教师完整160标签与160盲第二选择已真实完成，132新复查、28原成功精确复用，工程失败0。弱支持正65、空14、UNKNOWN81；实际支持65train/14dev，全部160分母与原raw保持，同教师一致性不是人工真值。V13学生CPU准入错误拒绝原pilot24的diagnostic标记。V14在独立exact manifest下仅允许原pilot24精确成功回执跨阶段，原标记/STOP/成本不改；旧consumer失败、新完整160 consumer与11拒绝合同已真实CPU验收，不重复教师生成。当前实际阶段 `SOURCE_PREFLIGHT_CPU_PENDING_REGISTRATION`，新8B T实际更新0，没有新最终ZIP，新官网分未知。原B37.63与B2用户37.32/DONE继续绑定各自旧ZIP。见[协议](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/PROTOCOL.md)与[聚合验收](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/aggregate_stage_handoff_acceptance.json)。
 
 <!-- END_CURRENT_V8 -->
 ## 当前自主B2接续

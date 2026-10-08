@@ -544,12 +544,88 @@ def publish_teacher_v13():
     print(json.dumps(dict(status='PASS_CURATED_V13_CORE_AND_AGGREGATE_ONLY',selected_files=len(selected),new_ZIP_or_labels_or_frames_exported=False)))
 
 
+def publish_teacher_v14():
+    entry='teacher_student_autopilot_v14';here=RUN/entry
+    snapshot=json.loads((RUN/'controller/monitor_teacher_v14/latest.json').read_bytes())['snapshot']
+    cpu=json.loads((here/'full_resume_cpu_acceptance.json').read_bytes())
+    assert cpu['status']=='PASS_V14_EXACT_PILOT_DIAGNOSTIC_STAGE_HANDOFF_CPU' and cpu['rejection_tests']>=11
+    allowed=lambda p:p.suffix=='.py' or p.name in ('config.json','authorization.json','PROTOCOL.md','CONTINUE.md','teacher_prompt.txt','review_prompt.txt','runtime_schema_check.cpp')
+    selected=[p for p in here.iterdir() if p.is_file() and allowed(p)]
+    selected += [p for p in (here/'precision_helpers').glob('*.py')]
+    selected += [here/'supervision'/n for n in ('select_windows.py','validate_teacher.py','teacher_metadata_20261007.json','teacher_response.schema.json')]
+    selected += [RUN/'controller'/n for n in ('register_autopilot_v14.py','checkpoint_teacher_v14.py',
+        'record_teacher_v14_execution_20261008.py','verify_teacher_v13_full_review_20261008.py',
+        'inspect_autopilot_live.py','publish_b2_snapshot.py','V14_DIAGNOSTIC_STAGE_REPRODUCTION_20261008.json',
+        'V8_REPAIR_AND_EXECUTION_20261008.md','AUTONOMOUS_EXECUTION_20261008.md')]
+    selected += [WORKSPACE/'AGENTS.md',RUN/'STATUS_AUTOPILOT_20261007.md']
+    for path in selected:
+        target=PUB/path.relative_to(WORKSPACE);target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(path,target);assert target.read_bytes()==path.read_bytes()
+    fullproof=RUN/'controller/V13_real_full_review_acceptance_20261008.json'
+    actual=json.loads(fullproof.read_bytes())
+    stage=(snapshot.get('completion') or {}).get('status') or (snapshot.get('progress') or {}).get('stage')
+    if stage is None and snapshot.get('processes') and not snapshot.get('registration'):
+        stage='SOURCE_PREFLIGHT_CPU_PENDING_REGISTRATION'
+    aggregate=dict(status='ACTUAL_V14_EXACT_STAGE_HANDOFF_AND_STUDENT_CONTINUATION_NOT_FINAL_ZIP',
+        snapshot_utc=snapshot['utc'],entry=entry,stage=stage,source_lock_sha256=snapshot['source_lock_sha256'],
+        frozen_file_count=snapshot['source_lock_file_count'],original_labels=160,original_reviews=160,
+        original_pilot_diagnostic_flags_preserved=24,actual_new_teacher_calls=0,
+        supported_by_split=cpu['supported_by_split'],supported_positive_by_split=cpu['supported_positive_by_split'],
+        supported_empty_by_split=cpu['supported_empty_by_split'],unknown_count=81,UNKNOWN_never_negative=True,
+        old_consumer_actual_failure_reproduced=True,exact_foreign_or_changed_rejection_contracts=cpu['rejection_tests'],
+        same_teacher_consistency_is_weak_not_truth=True,
+        independent_full_teacher_receipt_sha256=hashlib.sha256(fullproof.read_bytes()).hexdigest(),
+        independent_full_teacher_engineering={k:actual[k] for k in ('full_selected_denominator',
+            'actual_fresh_review_model_calls','engineering_failure_count','all_actual_HTTP_processor_grammar_raw_pass',
+            'original_validator_and_exact_native_projection_pass','physical_PNG_and_RGB_SHA_pass',
+            'physical_frames_checked','actual_GPU_charged_seconds','actual_wrapper_status','exit_code','stop_reason','independent_CPU_model_calls')},
+        complete_teacher_manifest=(snapshot.get('complete_teacher_manifest_summary') or {}),
+        all_original_receipt_SHA_pass=snapshot.get('all_original_resume_file_sha_pass'),
+        all_complete_teacher_review_file_SHA_pass=snapshot.get('all_complete_teacher_review_file_SHA_pass'),
+        actual_new_T_optimizer_updates=(snapshot.get('student_progress') or {}).get('optimizer_steps',0),
+        final_ZIP_complete=False,new_official_score=None,B2_user_official_score=37.32,original_B_official_score=37.63,
+        B2_ZIP_sha256='0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3',
+        original_B_ZIP_sha256='86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54',
+        new_ZIP_raw_labels_and_per_frame_data_exported=False)
+    derived=PUB/REL/entry/'aggregate_stage_handoff_acceptance.json'
+    derived.write_text(json.dumps(aggregate,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    body=('32B教师完整160标签与160盲第二选择已真实完成，132新复查、28原成功精确复用，工程失败0。'
+        '弱支持正65、空14、UNKNOWN81；实际支持65train/14dev，全部160分母与原raw保持，同教师一致性不是人工真值。'
+        'V13学生CPU准入错误拒绝原pilot24的diagnostic标记。V14在独立exact manifest下仅允许原pilot24精确成功回执跨阶段，原标记/STOP/成本不改；'
+        '旧consumer失败、新完整160 consumer与11拒绝合同已真实CPU验收，不重复教师生成。'
+        f'当前实际阶段 `{stage}`，新8B T实际更新{aggregate["actual_new_T_optimizer_updates"]}，没有新最终ZIP，新官网分未知。'
+        '原B37.63与B2用户37.32/DONE继续绑定各自旧ZIP。'
+        f'见[协议]({REL}/{entry}/PROTOCOL.md)与[聚合验收]({REL}/{entry}/aggregate_stage_handoff_acceptance.json)。\n\n')
+    def front(text):
+        first,rest=text.split('\n',1)
+        if '<!-- END_CURRENT_V8 -->' in rest:rest=rest.split('<!-- END_CURRENT_V8 -->',1)[1].lstrip('\n')
+        return first+'\n\n## 当前教师工程修复与真实接续\n\n'+body+'<!-- END_CURRENT_V8 -->\n'+rest
+    edit(PUB/'README.md',front)
+    for name in ('SOLUTIONS.md','REPRODUCTION.md'):
+        edit(PUB/'docs'/name,lambda text:front(text).replace(']('+REL,'](../'+REL))
+    mp=PUB/'docs/publication_manifest.json';original=mp.read_bytes();ending='\r\n' if b'\r\n' in original else '\n';manifest=json.loads(original)
+    items={v['path']:v for v in manifest['files']}
+    additions=[(p.relative_to(WORKSPACE).as_posix(),p.relative_to(WORKSPACE).as_posix()) for p in selected]
+    additions.append((derived.relative_to(PUB).as_posix(),None))
+    for relative,source in additions:
+        if relative not in items:
+            row=dict(path=relative,source_relative_path=source,bytes=0,sha256='',category='project_code_or_configuration' if relative.endswith('.py') else 'experiment_protocol_or_acceptance')
+            manifest['files'].append(row);items[relative]=row
+        if source is None:items[relative]['category']='aggregate_acceptance_no_frame_data'
+    for row in manifest['files']:
+        path=PUB/row['path'];row['bytes']=path.stat().st_size;row['sha256']=hashlib.sha256(path.read_bytes()).hexdigest()
+    manifest['updated_utc']=dt.datetime.now(dt.timezone.utc).isoformat()
+    mp.write_bytes((json.dumps(manifest,ensure_ascii=False,indent=2)+'\n').replace('\n',ending).encode())
+    print(json.dumps(dict(status='PASS_CURATED_V14_CORE_AND_AGGREGATE_ONLY',selected_files=len(selected),new_ZIP_or_labels_or_frames_exported=False)))
+
+
 if __name__=='__main__':
     import argparse
     parser=argparse.ArgumentParser()
-    for v in ('v8','v9','v10','v11','v12','v13'):parser.add_argument('--teacher-'+v,action='store_true')
+    for v in ('v8','v9','v10','v11','v12','v13','v14'):parser.add_argument('--teacher-'+v,action='store_true')
     args=parser.parse_args()
-    if args.teacher_v13:publish_teacher_v13()
+    if args.teacher_v14:publish_teacher_v14()
+    elif args.teacher_v13:publish_teacher_v13()
     elif args.teacher_v12:publish_teacher_v12()
     elif args.teacher_v8 or args.teacher_v9 or args.teacher_v10 or args.teacher_v11:
         publish_teacher_v8('teacher_student_autopilot_v11' if args.teacher_v11 else ('teacher_student_autopilot_v10' if args.teacher_v10 else ('teacher_student_autopilot_v9' if args.teacher_v9 else 'teacher_student_autopilot_v8')))

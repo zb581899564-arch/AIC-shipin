@@ -1,0 +1,23 @@
+{
+  "status": "REPRODUCED_V13_STUDENT_DIAGNOSTIC_STAGE_CONTRACT_MISMATCH_NOT_MODEL_OR_TRAINING_FAILURE",
+  "recorded_utc": "2026-10-08T12:25:00.421330+00:00",
+  "original_failure_utc": "2026-10-08T12:11:31.394857+00:00",
+  "original_teacher_reviews": 160,
+  "fresh_V13_teacher_reviews": 132,
+  "original_reused_reviews": 28,
+  "original_pilot_diagnostic_true_flags": 24,
+  "non_diagnostic_review_count": 136,
+  "supported_by_split": {
+    "train": 65,
+    "dev": 14
+  },
+  "unknown_count": 81,
+  "all_original_flags_bytes_and_UNKNOWN_preserved": true,
+  "student_training_started": false,
+  "new_T_updates": 0,
+  "original_complete_teacher_wrapper_status": "completed",
+  "original_teacher_GPU_charged_seconds": 5493.750158078037,
+  "owned_original_controller_student_server_commands": [],
+  "repair_scope": "new V14 exact full160 SHA-bound handoff; narrowly admit original pilot24 diagnostic receipts as weak same-teacher evidence; changed/foreign diagnostic reviews STOP; no teacher regeneration",
+  "new_model_calls_by_reproduction": 0
+}

@@ -193,7 +193,7 @@ def capture(version, entry=None):
         'legacy_handoff':'legacy_handoff.json','new_format_real_probe':'pilot_01/new_format_real_probe.json',
         'resume_handoff':'resume_handoff.json','review_progress':'teacher_01/review_progress.json',
         'first_review_generation':'teacher_01/first_review_generation.json','review_cost':'teacher_review_cost_registration.json'}.items()}
-    if entry in ('teacher_student_autopilot_v8','teacher_student_autopilot_v9','teacher_student_autopilot_v10','teacher_student_autopilot_v11','teacher_student_autopilot_v12','teacher_student_autopilot_v13'):
+    if entry in ('teacher_student_autopilot_v8','teacher_student_autopilot_v9','teacher_student_autopilot_v10','teacher_student_autopilot_v11','teacher_student_autopilot_v12','teacher_student_autopilot_v13','teacher_student_autopilot_v14'):
         snapshot['active_gpu_job'] = read(RUN.parents[2] / 'improvement_round1/active_gpu_job.json')
         snapshot['resource_receipts'] = {p.name:read(p) for p in sorted((RUN/'controller').glob('rematch_TAUTO_'+entry.rsplit('_',1)[1]+'_*.resource.json'))}
         snapshot['queue_receipts'] = {p.name:read(p) for p in sorted((RUN/'controller').glob('rematch_TAUTO_'+entry.rsplit('_',1)[1]+'_*.queue.json'))}
@@ -207,7 +207,7 @@ def capture(version, entry=None):
             scope:{str(p.relative_to(here/scope)):{'bytes':p.stat().st_size,'mtime_ns':p.stat().st_mtime_ns}
                 for p in sorted((here/scope).rglob('*')) if p.is_file() and p.suffix in ('.json','.jsonl','.log')}
             for scope in ('visual_probe_01','teacher_01','pilot_01','student_01','nontest_01','rematch_01')}
-    if entry in ('teacher_student_autopilot_v12','teacher_student_autopilot_v13'):
+    if entry in ('teacher_student_autopilot_v12','teacher_student_autopilot_v13','teacher_student_autopilot_v14'):
         snapshot['source_lock_file_count'] = len((read(here/'source_lock.json') or {}).get('files',{}))
         def file_sha_matches(name,digest):
             p=Path(name)
@@ -242,6 +242,27 @@ def capture(version, entry=None):
         snapshot['fresh_review_failure_count']=sum(bool(item['failure']) for item in fresh)
         snapshot['all_fresh_completed_review_SHA_pass']=all(item['file_sha_checks'] and all(item['file_sha_checks'].values()) for item in fresh if item['done'])
         snapshot['original_V12_pre_GPU_STOP']=read(RUN/'teacher_student_autopilot_v12/completion.json') if entry.endswith('v13') else None
+    if entry == 'teacher_student_autopilot_v14':
+        original = RUN / 'teacher_student_autopilot_v13'
+        snapshot['original_V13_terminal'] = dict(
+            processes=[line.strip() for line in process_lines if str(original) + '/' in line],
+            completion=read(original / 'completion.json'),
+            student_admission_log=(original / 'student_admission.cpu.log').read_text(),
+            teacher_resource=read(RUN / 'controller/rematch_TAUTO_v13_teacher_review.resource.json'))
+        full_manifest_path = here / 'v13_full_resume_manifest.json'
+        manifest = read(full_manifest_path)
+        if manifest:
+            snapshot['complete_teacher_manifest_summary'] = dict(
+                schema=manifest['schema'], manifest_sha256=hashlib.sha256(full_manifest_path.read_bytes()).hexdigest(),
+                original_labels=manifest['original_label_count'], original_reviews=manifest['original_review_count'],
+                prior_V13_fresh_calls=manifest['V13_actual_new_review_calls'],
+                registered_pilot_diagnostic_review_count=len(manifest['approved_pilot_review_ids']),
+                original_GPU_charged_seconds=manifest['original_gpu_charged_seconds'], new_teacher_calls=0)
+            snapshot['all_complete_teacher_review_file_SHA_pass'] = all(
+                Path(name).is_file() and hashlib.sha256(Path(name).read_bytes()).hexdigest() == digest
+                for name, digest in manifest['all_receipt_files'].items())
+        snapshot['full_resume_handoff'] = read(here / 'full_resume_handoff.json')
+        snapshot['full_resume_CPU_acceptance'] = read(here / 'full_resume_cpu_acceptance.json')
     snapshot['production_stage_receipts'] = {
         scope: {p.name: read(p) for p in sorted((here / scope).glob('*.stage.json'))}
         for scope in ('nontest_01', 'rematch_01')}
