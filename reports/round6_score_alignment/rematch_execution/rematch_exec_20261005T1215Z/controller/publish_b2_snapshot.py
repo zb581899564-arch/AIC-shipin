@@ -675,6 +675,7 @@ def publish_context_advisory_v1():
     selected=[p for p in here.iterdir() if p.is_file() and (p.suffix=='.py' or p.name in ('PROTOCOL.md','CONTINUE.md','DEVELOPMENT_EVIDENCE.md'))]
     selected += [RUN/'controller'/n for n in ('register_context_advisory_v1.py','checkpoint_context_advisory_v1.py',
         'inspect_context_advisory_v1.py','record_context_advisory_execution_20261009.py','accept_context_advisory_first_real.py',
+        'accept_context_advisory_pilot.py',
         'CONTEXT_ADVISORY_EXECUTION_20261009.md','publish_b2_snapshot.py')]
     for path in selected:
         target=PUB/path.relative_to(WORKSPACE);target.parent.mkdir(parents=True,exist_ok=True)
@@ -709,9 +710,22 @@ def publish_context_advisory_v1():
         aggregate['first_real_CPU_replay']={k:proof[k] for k in ('status','utc','all_frozen_files_SHA','new_acceptance_model_calls',
             'new_acceptance_optimizer_updates','actual_NONTEST_GPU_charge_seconds','ledger_unique_terminal_match','not_semantic_truth_or_official_score')}
         aggregate['first_real_CPU_replay']['private_receipt_sha256']=hashlib.sha256(proof_path.read_bytes()).hexdigest()
+    pilot_proof_path=RUN/'controller/C_ADVISORY_pilot_acceptance_20261009.json'
+    if pilot_proof_path.exists():
+        pilot_proof=json.loads(pilot_proof_path.read_bytes())
+        assert pilot_proof['status']=='PASS_INDEPENDENT_COMPLETE_PILOT_CPU_NATIVE_PROCESSOR_REPLAY'
+        assert pilot_proof['source_lock_sha256']==snapshot['source_lock_sha256']
+        assert pilot_proof['new_acceptance_model_calls']==pilot_proof['new_acceptance_optimizer_updates']==0
+        aggregate['complete_pilot_CPU_replay']={k:pilot_proof[k] for k in ('status','utc','all_frozen_files_SHA',
+            'pilot_videos','pilot_source_groups','native_local_windows','original_new_overview_calls','original_new_local_calls',
+            'overview_event_counts','all_original_requests_raw_output_tokens_native_RGB_processor_validator_equal',
+            'R_N_changed_native_sets','R_X_changed_native_sets','actual_GPU_charge_seconds','ledger_unique_terminal_match',
+            'new_acceptance_model_calls','new_acceptance_optimizer_updates','not_semantic_truth_or_official_score',
+            'full104_investment_rule_still_required')}
+        aggregate['complete_pilot_CPU_replay']['private_receipt_sha256']=hashlib.sha256(pilot_proof_path.read_bytes()).hexdigest()
     aggregate['resources']={name:{k:r['resource'][k] for k in ('status','exit_code','stop_reason','charged_seconds','started_utc','finished_utc') if k in r['resource']}
         for name,r in snapshot['resources'].items() if r.get('resource')}
-    for name in ('nontest_01/independent_validation.json','nontest_01/nontest.report.json','developer_01/full.report.json'):
+    for name in ('nontest_01/independent_validation.json','nontest_01/nontest.report.json','developer_01/pilot.report.json','developer_01/full.report.json'):
         value=snapshot['stages'].get(name)
         if value:aggregate[name]={k:value[k] for k in ('status','records','source_groups','checks','issues',
             'R_N_changed_native_sets','R_X_changed_native_sets','weak_reference_used','comparisons',
@@ -747,13 +761,101 @@ def publish_context_advisory_v1():
     print(json.dumps({'status':'PASS_CURATED_C_ADVISORY_CORE_AND_AGGREGATE','selected_files':len(selected),'new_ZIP_frames_raw_labels_models_exported':False}))
 
 
+def publish_boundary_diagnostic_v1():
+    """Export code and explicit aggregate fields; never export context/reference rows."""
+    publish_context_advisory_v1()
+    entry='b_boundary_diagnostic_v1';here=RUN/entry
+    snapshot=json.loads((RUN/'controller/monitor_b_boundary_diagnostic_v1/latest.json').read_bytes())
+    lock=json.loads((here/'source_lock.json').read_bytes())
+    assert snapshot['entry']==entry
+    assert hashlib.sha256((here/'source_lock.json').read_bytes()).hexdigest()==snapshot['source_lock_sha256']
+    selected=[here/n for n in ('bdiag_common.py','bdiag_engine.py','prepare.py','cpu_checks.py','freeze.py',
+        'report.py','controller.py','launch.py','CONTINUE.md','PROTOCOL.md')]
+    selected += [RUN/'controller'/n for n in ('register_b_boundary_diagnostic_v1.py',
+        'checkpoint_b_boundary_diagnostic_v1.py','inspect_b_boundary_diagnostic_v1.py',
+        'record_b_boundary_execution_20261009.py','B_BOUNDARY_EXECUTION_20261009.md','publish_b2_snapshot.py')]
+    for path in selected:
+        target=PUB/path.relative_to(WORKSPACE);target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(path,target);assert target.read_bytes()==path.read_bytes()
+    cpu=json.loads((here/'cpu_acceptance.json').read_bytes())
+    assert cpu['status']=='PASS_EXACT_C_STOP_AND_B_MATCHED_NATIVE_CPU_INTERFACES'
+    aggregate={'status':'CURATED_MATCHED_BOUNDARY_ENGINEERING_NOT_TRUTH_TRAINING_OR_FINAL_ZIP',
+        'snapshot_utc':snapshot['utc'],'entry':entry,'source_lock_sha256':snapshot['source_lock_sha256'],
+        'frozen_files':len(lock['files']),'current_stage':(snapshot['stages'].get('progress.json') or {}).get('stage'),
+        'actual_successful_32B_context_calls':snapshot['done_count'],'failure_count':len(snapshot['failures']),
+        'all_done_bound_SHA_pass':snapshot['all_done_bound_SHA_pass'],
+        'all_done_teacher_recipe_SHA_match':snapshot['all_done_teacher_recipe_SHA_match'],
+        'teacher_recipe_sha256':snapshot['actual_teacher_recipe_sha256'],
+        'model':'EXISTING_QWEN3_VL_32B_Q4_K_M_WITH_F16_PROJECTOR_INFERENCE',
+        'teacher_context_length':65536,'actual_new_8B_calls':0,'actual_new_optimizer_updates':0,
+        'teacher_finetuned':False,'training_admitted':False,'new_final_426_ZIP_complete':False,
+        'new_official_score':None,'same_event_semantic_identity':'UNKNOWN',
+        'independent_human_boundary_truth':'UNKNOWN','external_reference_coverage':'UNKNOWN',
+        'endpoint_stability_is_truth':False,'context_reference_raw_frames_labels_weights_exported':False,
+        'actual_CPU':{k:cpu[k] for k in ('status','utc','C_full_original_frozen_files','C_full_source_files',
+            'C_full_groups','C_original_local_windows','C_full_actual_GPU_charge_seconds',
+            'C_all_raw_validator_native_rows_and_frozen_rule_equal','C_report_sha256','C_original_STOP_preserved',
+            'fixed_B_events','fixed_context_variants','actual_pinned_runtime_grammar_cases',
+            'new_32B_calls','new_8B_calls','optimizer_updates','training_admitted')},
+        'private_CPU_receipt_sha256':hashlib.sha256((here/'cpu_acceptance.json').read_bytes()).hexdigest()}
+    first=snapshot['stages'].get('first_real_acceptance.json')
+    if first:
+        first_path=here/'first_real_acceptance.json'
+        assert json.loads(first_path.read_bytes())==first
+        assert first['status']=='PASS_REAL_FIRST_MATCHED_CONTEXTS_AND_INDEPENDENT_CPU_REPLAY'
+        assert all(row['source_native_PNG_RGB_HTTP_prompt_raw_validator_equal'] is True for row in first['proofs'])
+        aggregate['first_real_acceptance']={k:first[k] for k in ('status','utc','event_denominator','context_denominator',
+            'actual_new_32B_calls','CPU_replay_new_model_calls','optimizer_updates','semantic_identity_and_boundary_truth')}
+        aggregate['first_real_acceptance']['private_receipt_sha256']=hashlib.sha256(first_path.read_bytes()).hexdigest()
+        aggregate['first_real_acceptance']['all_physical_request_raw_validator_replays_equal']=True
+    aggregate['resources']={name:{k:value['resource'][k] for k in ('status','exit_code','stop_reason',
+        'charged_seconds','started_utc','finished_utc') if k in value['resource']}
+        for name,value in snapshot['resources'].items() if value.get('resource')}
+    upstream=snapshot['upstream_C']
+    aggregate['original_C_terminal']={k:upstream['report'][k] for k in ('status','records','source_groups',
+        'comparisons','R_N_all_native_selected_sets_identical','material_negative_investment_rule',
+        'nonnegative_registered_four_direction_rule') if k in upstream['report']}
+    aggregate['original_C_STOP_preserved']=True
+    derived=PUB/REL/entry/'aggregate_execution.json'
+    derived.write_text(json.dumps(aggregate,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    body=(f'\n## 当前边界诊断（实际快照{snapshot["utc"]}）\n\n'
+        'C-advisory完整104/96组已自然完成，新增72组R−N为−0.000582455299541034，固定投入门拒绝C生产；原STOP与成功回答保持，无C426包。'
+        '主控已实现独立32B候选边界匹配诊断，固定16事件/42原及平移上下文，现有权重原地推理。'
+        f'当前`{aggregate["current_stage"]}`，实际成功32B上下文{snapshot["done_count"]}/42，工程失败{len(snapshot["failures"])}。'
+        'CPU核验、首个真实生成、独立回放和终态成本分别登记；时间重叠与稳定不证明同事件或正确边界，弱外部参考覆盖未知。'
+        '本诊断无8B更新、无新426提交包，不宣称提升；下一路线由实际证据另行登记。旧B最佳37.63、V14用户差值推算37.60及B2用户37.32各原包绑定保持。'
+        f'见[边界协议]({REL}/{entry}/PROTOCOL.md)及[筛选聚合]({REL}/{entry}/aggregate_execution.json)。\n\n<!-- END_CURRENT_B_BOUNDARY -->\n')
+    def front(text):
+        first,rest=text.split('\n',1)
+        if '<!-- END_CURRENT_B_BOUNDARY -->' in rest:rest=rest.split('<!-- END_CURRENT_B_BOUNDARY -->',1)[1]
+        return first+'\n'+body+rest
+    edit(PUB/'README.md',front)
+    for name in ('SOLUTIONS.md','REPRODUCTION.md'):edit(PUB/'docs'/name,lambda t:front(t).replace(']('+REL,'](../'+REL))
+    mp=PUB/'docs/publication_manifest.json';original=mp.read_bytes();ending='\r\n' if b'\r\n' in original else '\n'
+    manifest=json.loads(original);rows={x['path']:x for x in manifest['files']}
+    for path in selected+[derived]:
+        is_derived=path==derived;relative=path.relative_to(PUB if is_derived else WORKSPACE).as_posix()
+        if relative not in rows:
+            manifest['files'].append(dict(path=relative,source_relative_path=None if is_derived else relative,
+                bytes=0,sha256='',category='aggregate_acceptance_no_frame_data' if is_derived else
+                ('project_code_or_configuration' if path.suffix=='.py' else 'experiment_protocol_or_acceptance')))
+    for row in manifest['files']:
+        path=PUB/row['path'];row['bytes']=path.stat().st_size;row['sha256']=hashlib.sha256(path.read_bytes()).hexdigest()
+    manifest['updated_utc']=dt.datetime.now(dt.timezone.utc).isoformat()
+    mp.write_bytes((json.dumps(manifest,ensure_ascii=False,indent=2)+'\n').replace('\n',ending).encode())
+    print(json.dumps({'status':'PASS_CURATED_B_BOUNDARY_CORE_AND_AGGREGATE','selected_files':len(selected),
+        'context_reference_raw_frames_labels_weights_ZIP_exported':False}))
+
+
 if __name__=='__main__':
     import argparse
     parser=argparse.ArgumentParser()
     for v in ('v8','v9','v10','v11','v12','v13','v14'):parser.add_argument('--teacher-'+v,action='store_true')
     parser.add_argument('--context-advisory',action='store_true')
+    parser.add_argument('--boundary-diagnostic',action='store_true')
     args=parser.parse_args()
-    if args.context_advisory:publish_context_advisory_v1()
+    if args.boundary_diagnostic:publish_boundary_diagnostic_v1()
+    elif args.context_advisory:publish_context_advisory_v1()
     elif args.teacher_v14:publish_teacher_v14()
     elif args.teacher_v13:publish_teacher_v13()
     elif args.teacher_v12:publish_teacher_v12()

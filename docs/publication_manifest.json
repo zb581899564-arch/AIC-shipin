@@ -14455,8 +14455,8 @@
     {
       "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/publish_b2_snapshot.py",
       "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/publish_b2_snapshot.py",
-      "bytes": 70994,
-      "sha256": "3725c5478d343c6e569431cb5b7a76d866b0e2bfb8997133df7a7dac21526381",
+      "bytes": 79904,
+      "sha256": "43bca8746f83635b8464db9549923822c8a762adb5b2534ed66aba0118fc36db",
       "category": "project_code_or_configuration"
     },
     {
@@ -18011,29 +18011,29 @@
     {
       "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/inspect_context_advisory_v1.py",
       "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/inspect_context_advisory_v1.py",
-      "bytes": 5929,
-      "sha256": "7fa4a5a19b49576f7128d4ed619663917338661613634a93bd63b568b5a86e04",
+      "bytes": 6774,
+      "sha256": "fa744c59ea0391579cffbb4064da586c5055abf4ec8e4a00f3591690f495da26",
       "category": "project_code_or_configuration"
     },
     {
       "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/record_context_advisory_execution_20261009.py",
       "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/record_context_advisory_execution_20261009.py",
-      "bytes": 4629,
-      "sha256": "1d813c9ba0cb43db46213af09d48b0fd07ec3daa896b4e3f52ecf257240ee11c",
+      "bytes": 6897,
+      "sha256": "dc26e234ac1cf5e841c9969f3a9c53bf92916aa25f3e57f8605dc30bb9a451cf",
       "category": "project_code_or_configuration"
     },
     {
       "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/CONTEXT_ADVISORY_EXECUTION_20261009.md",
       "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/CONTEXT_ADVISORY_EXECUTION_20261009.md",
-      "bytes": 3318,
-      "sha256": "720cb82fa816b84abf6620fde27a443074ee012fc0e8dd8d1595c7db0e13dc3d",
+      "bytes": 7326,
+      "sha256": "19a4282c723ed06df5cfbf3acfb22d3972109a79a8155dd8ef93224df4744e6d",
       "category": "experiment_protocol_or_acceptance"
     },
     {
       "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/context_advisory_v1/aggregate_execution.json",
       "source_relative_path": null,
-      "bytes": 3286,
-      "sha256": "204c543e6824ea7c369969d46e95c270a681352b373e87cb8746acbbd50be7e8",
+      "bytes": 8391,
+      "sha256": "6da1dee8a839a424a985a02900f023041a2f33ab3fd1d6c484d2b02a53733ea2",
       "category": "aggregate_acceptance_no_frame_data"
     },
     {
@@ -18042,6 +18042,125 @@
       "bytes": 7210,
       "sha256": "9dd28c0a904a5cc22e2adc958d5b8b0fb876ca9eb7495d503c613765b2c08679",
       "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/accept_context_advisory_pilot.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/accept_context_advisory_pilot.py",
+      "bytes": 8288,
+      "sha256": "34d9b829be7732a99f5291e2263c69ae695608834e917a9b8a7754cfa5a17a49",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/bdiag_common.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/bdiag_common.py",
+      "bytes": 5212,
+      "sha256": "37a16a2e63c043a4b5711ad91be904655b5e8a6f4397d0057518aa9f2ff0b58a",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/bdiag_engine.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/bdiag_engine.py",
+      "bytes": 9339,
+      "sha256": "54fe732ae0c21dc2a08fa2f545beed817cf010d9e8d5f5180db004f2b3f14db1",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/prepare.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/prepare.py",
+      "bytes": 3928,
+      "sha256": "76e7364602d9ecf4ac5f390dd54326bd7c7f7ed608478f0216fe58634c951613",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/cpu_checks.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/cpu_checks.py",
+      "bytes": 7268,
+      "sha256": "c1a4b462a898e3ed94744a167b5d454dbfff3b93b9931a0008193462df0ea5e6",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/freeze.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/freeze.py",
+      "bytes": 2080,
+      "sha256": "7b6aff1883d731a5907347a9cf891eb22482d2cbb545a28680530ed181cc82d9",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/report.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/report.py",
+      "bytes": 4209,
+      "sha256": "3bdf3513ce274285a38e4b467cd7480661e6c0ba4f72a7f1c724a3350abb52ec",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/controller.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/controller.py",
+      "bytes": 2241,
+      "sha256": "4a495f2f39494404f48a4f708d8a06a93311b4710e7c04e775e23bfb69d422cb",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/launch.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/launch.py",
+      "bytes": 1344,
+      "sha256": "122d76c100a6a21f48da1cdbc4ee241420a366faa849871cab05b6e99d9c99b7",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/CONTINUE.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/CONTINUE.md",
+      "bytes": 1208,
+      "sha256": "5243c5bdc93a54ce464fb3a407b0811c7538f22deb1a474c2903d9c6441c8b70",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/PROTOCOL.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/PROTOCOL.md",
+      "bytes": 5088,
+      "sha256": "27b031e32fe44da7e234ee9622749ee22b46a1993ca03a0689503070f2cf1b62",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/register_b_boundary_diagnostic_v1.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/register_b_boundary_diagnostic_v1.py",
+      "bytes": 3278,
+      "sha256": "29291bf908a525a5c32542764f2d7413d63b05ad47e895a85e70a55d9a13db68",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/checkpoint_b_boundary_diagnostic_v1.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/checkpoint_b_boundary_diagnostic_v1.py",
+      "bytes": 2619,
+      "sha256": "9cc704d1694c5c3c893b873415ff222de37bb4c941fd7e8f917aca385ee898b4",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/inspect_b_boundary_diagnostic_v1.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/inspect_b_boundary_diagnostic_v1.py",
+      "bytes": 3399,
+      "sha256": "a27d5da8bdc7113a69248123b3ad63a3c7a49a3e22f42a9d158bcb41860c4f32",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/record_b_boundary_execution_20261009.py",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/record_b_boundary_execution_20261009.py",
+      "bytes": 3659,
+      "sha256": "621d6cd1f22b74b9329d56157930d32d9bab4ee81ebb8593d64043c8351e5e94",
+      "category": "project_code_or_configuration"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/B_BOUNDARY_EXECUTION_20261009.md",
+      "source_relative_path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/B_BOUNDARY_EXECUTION_20261009.md",
+      "bytes": 6904,
+      "sha256": "96d503261a42c9154ea28cc70e6da879b4bb243284a8eb5e25fa187b3642a5b8",
+      "category": "experiment_protocol_or_acceptance"
+    },
+    {
+      "path": "reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/aggregate_execution.json",
+      "source_relative_path": null,
+      "bytes": 5382,
+      "sha256": "901e8d44efb0e2ff11997bc4a92384b45e7951f4a2cba0093b05b3bda9911d96",
+      "category": "aggregate_acceptance_no_frame_data"
     }
   ],
   "project_code_count": 930,
@@ -18118,5 +18237,5 @@
   "autopilot_v5_pilot_completed_windows": 3,
   "autopilot_v5_pilot_failed_windows": 0,
   "autopilot_v5_pilot_quality_pass": false,
-  "updated_utc": "2026-10-08T17:53:11.455454+00:00"
+  "updated_utc": "2026-10-08T19:25:32.191127+00:00"
 }

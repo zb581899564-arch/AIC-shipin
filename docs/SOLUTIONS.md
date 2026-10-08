@@ -1,10 +1,17 @@
 # 方案、证据与当前状态
 
-## 新探索C-advisory（实际快照2026-10-08T17:52:32.875638+00:00）
+## 当前边界诊断（实际快照2026-10-08T19:24:36.958552+00:00）
 
-同既有8B全源粗览＋原B局部全部自然窗，先NONTEST8五臂、固定24五臂，再完整104/96四臂对照；只有固定投入规则准入才一个探索ZIP。旧最佳B37.63保护。用户V14少0.03，37.60为差值推算，非独立官网读数。新分未知，原V14训练15更新但选原B事实保留。Tibo/Sol/Grok两轮实际讨论与最终完整卷宗同步；Pro研究项目连续额度3次已用，新0，Gemini无有效答复，主控独立兜底不冒充共识。当前阶段`RUNNING_CPU_NONTEST_FINISH`、粗览/局部完成{'overview': 8, 'local': 40}、失败0；实际模型回执与独立CPU回放分别计，CPU验收和启动不当新生成。闭世界教师一致性仅投入排序，真实质量/幻觉率未知，不保证超过最佳。见[固定协议](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/context_advisory_v1/PROTOCOL.md)和[筛选聚合](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/context_advisory_v1/aggregate_execution.json)。
+C-advisory完整104/96组已自然完成，新增72组R−N为−0.000582455299541034，固定投入门拒绝C生产；原STOP与成功回答保持，无C426包。主控已实现独立32B候选边界匹配诊断，固定16事件/42原及平移上下文，现有权重原地推理。当前`RUNNING_REAL_MATCHED_32B_DIAGNOSTIC`，实际成功32B上下文4/42，工程失败0。CPU核验、首个真实生成、独立回放和终态成本分别登记；时间重叠与稳定不证明同事件或正确边界，弱外部参考覆盖未知。本诊断无8B更新、无新426提交包，不宣称提升；下一路线由实际证据另行登记。旧B最佳37.63、V14用户差值推算37.60及B2用户37.32各原包绑定保持。见[边界协议](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/PROTOCOL.md)及[筛选聚合](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_boundary_diagnostic_v1/aggregate_execution.json)。
+
+<!-- END_CURRENT_B_BOUNDARY -->
+
+## 新探索C-advisory（实际快照2026-10-08T18:52:18.828604+00:00）
+
+同既有8B全源粗览＋原B局部全部自然窗，先NONTEST8五臂、固定24五臂，再完整104/96四臂对照；只有固定投入规则准入才一个探索ZIP。旧最佳B37.63保护。用户V14少0.03，37.60为差值推算，非独立官网读数。新分未知，原V14训练15更新但选原B事实保留。Tibo/Sol/Grok两轮实际讨论与最终完整卷宗同步；Pro研究项目连续额度3次已用，新0，Gemini无有效答复，主控独立兜底不冒充共识。当前阶段`WAITING_AGENT_CONCRETE_B_BOUNDARY_CONTINUATION`、粗览/局部完成{'overview': 112, 'local': 514}、失败0；实际模型回执与独立CPU回放分别计，CPU验收和启动不当新生成。闭世界教师一致性仅投入排序，真实质量/幻觉率未知，不保证超过最佳。见[固定协议](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/context_advisory_v1/PROTOCOL.md)和[筛选聚合](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/context_advisory_v1/aggregate_execution.json)。
 
 <!-- END_CURRENT_C_ADVISORY -->
+
 
 
 ## V14历史交付与真实选点

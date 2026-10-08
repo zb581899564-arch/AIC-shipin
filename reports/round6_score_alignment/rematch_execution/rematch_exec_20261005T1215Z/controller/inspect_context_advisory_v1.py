@@ -53,15 +53,22 @@ def capture():
         processes.append(row)
     artifacts={str(p.relative_to(here)):{'bytes':p.stat().st_size,'mtime_ns':p.stat().st_mtime_ns}
         for p in here.rglob('*') if p.is_file() and 'prelock_repairs' not in p.parts and '__pycache__' not in p.parts}
-    stages={}
+    stages={};stage_read_utc={}
     names=['progress.json','completion.json','execution_failure.json','scientific_stop.json','registration.json','start.json',
         'prepared.json','preflight.json','cpu_build_acceptance.json','fallback_s_inventory.json','fallback_b_diagnostic_handoff.json',
         'nontest_01/progress.json','nontest_01/nontest.completion.json','nontest_01/nontest.report.json','nontest_01/package.stage.json',
         'nontest_01/independent_validation.json','developer_01/progress.json','developer_01/pilot.completion.json','developer_01/full.completion.json',
         'developer_01/pilot.report.json','developer_01/full.report.json','rematch_01/progress.json','rematch_01/rematch.completion.json',
-        'rematch_01/package.stage.json','rematch_01/independent_validation.json','final_acceptance.json']
+        'rematch_01/package.stage.json','rematch_01/independent_validation.json','final_acceptance.json',
+        'nontest_01/nontest.model.json','developer_01/pilot.model.json','developer_01/full.model.json',
+        'rematch_01/rematch.model.json']
     for name in names:
-        if (here/name).is_file():stages[name]=read(here/name)
+        if (here/name).is_file():
+            stages[name]=read(here/name)
+            stage_read_utc[name]=dt.datetime.now(dt.timezone.utc).isoformat()
+    model_receipts={name:{'sha256':sha(here/name),'model_identity':value,
+        'read_utc':stage_read_utc[name]} for name,value in stages.items() if name.endswith('.model.json')}
+    model_identities=[r['model_identity'] for r in model_receipts.values()]
     done=[];failures=[]
     for p in here.rglob('done.json'):
         row=read(p); bindings=row.get('bound_files',{})
@@ -69,6 +76,7 @@ def capture():
             'kind':'overview' if 'overview' in p.parts else 'local', 'arm':row.get('arm'),
             'status':row.get('status'), 'events_count':len(row.get('events',{}).get('events',[])) if 'overview' in p.parts else None,
             'bound_files_SHA_pass':all(Path(k).is_file() and sha(k)==v for k,v in bindings.items()),
+            'model_identity_matches_actual_receipt':bool(model_identities) and all(row.get('model_identity')==m for m in model_identities),
             'request_sha256':row.get('request_sha256'),'input_tokens':row.get('input_tokens'),
             'output_tokens':row.get('output_tokens'),'generation_seconds':row.get('generation_seconds')})
     for p in here.rglob('*.failure.json'):failures.append({'path':str(p),'sha256':sha(p),'failure':read(p)})
@@ -82,6 +90,8 @@ def capture():
     snapshot={'utc':dt.datetime.now(dt.timezone.utc).isoformat(),'host':socket.gethostname(),'entry':ENTRY,
         'source_lock_sha256':sha(here/'source_lock.json') if lock else None,'frozen_files':len(lock['files']) if lock else 0,
         'processes':processes,'process_sample_is_not_persistent_identity':True,'artifacts':artifacts,'stages':stages,
+        'stage_read_utc':stage_read_utc,'model_receipts':model_receipts,
+        'all_done_model_identity_matches_actual_receipts':all(x['model_identity_matches_actual_receipt'] for x in done),
         'done_count':len(done),'done':done,
         'done_by_kind':{kind:sum(x['kind']==kind for x in done) for kind in ('overview','local')},
         'local_done_by_arm':{arm:sum(x['arm']==arm for x in done) for arm in ('B1','B0','N','R','X')},
