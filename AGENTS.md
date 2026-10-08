@@ -1,3 +1,45 @@
+## 2026-10-08：V11证据编号与阶段衔接修复，已登记自主接续
+
+当前唯一入口 `teacher_student_autopilot_v11/CONTINUE.md` 与 `PROTOCOL.md`。Linux `92` 项CPU与固定runtime/原validator/真实旧成功SHA验收后冻结 `1189` 文件，SHA `0ae09ec38ff589baa5e15e16b84457b06442195de502ec7ef6a19bab9b715578`，一次launcher 2026-10-08T06:38:42.955326+00:00 历史PID/PGID `559263`。2026-10-08T06:40:46.137115+00:00实时所属完整命令进程 `1`、server `0`，实际阶段 `SOURCE_PREFLIGHT_CPU`。原PID/旧progress/CPU/启动不当存活、标签质量、训练或新ZIP。
+
+V10真实视觉8/8和2条非测试重输入通过，但首个pilot的[15,21)、[42,50)缺少模型所选实际证据帧而STOP；原raw SHA9977638522f91aa2661fd70b5179a7aed557ea816d5f451f6f50b010114f65fa、639锁、所有失败与成功保持。V11仅注册B边界/F物理帧独立编号和每段模型自行所选见证生成约束，所有合法1..5段/证据子集保持，原高光定义与原validator/16024输入字节不改，无后补证据/裁段/造空/UNKNOWN负类。
+
+旧2成功只在完整160内（不在pilot24）通过孤立原validator/全SHA原字节引用，新旧接口由exact manifest分开核；视觉8只在8实际HTTP构造CPU相等及模型/运行时/输入身份相同后引用，不重复成功生成、旧cost保留、引用新调用0。首个原失败pilot窗在新格式必须真实新生成通过，随后继续剩余23窗与盲第二选择。来源/PTS/模型确错工程STOP；语义争议逐条UNKNOWN并保留全分母；不要求小试必须出现空例，不把同教师一致性叫真值。
+
+继续可靠完整窗口监督→完整160/复查→原B LoRA lr1e-5最多3epochs/前缀2–4真实更新保持optimizer/RNG→开发candidate0旧B→NONTEST8→426独立strict ZIP。监督只可靠边界时自主登记B边界精修；教师不可靠自主实现C同8B全源粗览/局部非测试匹配对照。路线B/C当前以协议为准，不假称运行。新T实际更新 `0`，原教师科学STOP保持。
+
+B2用户指认37.32/DONE，317401字节SHA0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3；旧B37.63绑定旧包，两分差-0.31。每15分钟aic-linux静默巡检/自助修复，controller/checkpoint_teacher_v11.py记录CPU/GPU/RAM/disk/真实命令父子PGID、resource/queue与逐窗/semantic/student/strict。CPU SHA、顺序解码与共享等待可能合法；冻结源码不改/launcher不重复/外部任务不抢占。新大流量先许可，控制小量直SSH，Mac退出、100confirm不读、复赛不手看调参；最终ZIP留Linux、不自动官网提交，完整验收后汇报并删除监控，不归档。下面入口/PID为历史。
+
+<!-- END_CURRENT_TEACHER_V10 -->
+
+## 当前V9：旧缓存阶段衔接已复现并修复，冻结后的CPU预检已通过
+
+v8于2026-10-08T04:25:08.980485+00:00因B2 completion的status/stage字段误读在教师前STOP；GPU/新标签/T更新0，480冻结文件与STOP原样保留，不重开v8。当前唯一接续teacher_student_autopilot_v9/CONTINUE.md、PROTOCOL.md，556文件锁SHA a3dc4e4f1e35c45624adaaa66fe0ede5a055e314d8a68d11a6aecaaef831c0b3。64项Linux CPU合同（原55+身份9）、actual旧函数失败复现和actual新函数两scope桥接均PASS，冻结后preflight也PASS；一次launcher于2026-10-08T04:52:26.280264+00:00登记历史PID/PGID 434000；2026-10-08T04:53:28.229813+00:00实查完整controller命令存活，CPU约100%正在核冻结字节，progress/completion尚未写出，为合法CPU预检。历史PID不是持续存活证据；GPU、教师接口与标签仍待真实回执，不把启动当验收。CPU不是教师质量或新T更新。
+
+同v8科学配方的160/24未标注输入在Linux内部逐文件原字节移交，不重选样。新128train/32dev/固定24来自完整排除旧160/context的来源组；旧成功标签不跨配方复用。短KEEP/NO_HIGHLIGHT/UNKNOWN与边界/证据帧ID由程序精确映射nativePTS；原回答先落盘，盲第二选择按全分母逐条比较，不造空、不把UNKNOWN当负。当前新T更新0、官网新分未知。
+
+额外缓存验收补固定11strict键/状态/8与426分母/issues、终态内部SHA/当前输入/真实基座/实际ZIP大小SHA CRC原字节/原缓存链。NONTEST不存在的base_hash不补造；真正新空间预测前实际验全基座SHA。完整field与锚点请求及重组已真实CPU核一致，只复用空间不复用时间。
+
+实际主链是8个合成视觉接口（含64帧正反序，非高光标签）→两条真实heavy probe→新24盲标注复查→按证据A完整160/新T lr1e-5最多3epochs、同optimizer/RNG前缀2..4更新与原B开发candidate0；证据不足走B边界可行性或C同8B全局→局部非测试匹配对照，不无限换prompt。原B胜出则如实保留原B，不宣称T提升。每15分钟aic-linux静默巡检、自助修复，实际入口controller/checkpoint_teacher_v9.py与monitor_teacher_v9/latest.json。最终完整ZIP验收后一次汇报并删除监控，不归档。
+
+B2用户指认37.32/DONE，包SHA0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3，317401字节；原B37.63保持原包SHA86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54，两分分开绑定。固定32B/8B在Linux原地用，Mac退出；小量控制SSH授权，新大流量仍先许可。共享GPU锁/追加账本7200/实际容量保持，不抢占外部任务、不改连接或服务、不读100confirm或手看复赛调参。Linux独立后台，本地定时检查需Windows/Codex在线。
+
+<!-- END_CURRENT_TEACHER_V9 -->
+
+## 2026-10-08 12:23 UTC+8：按用户审计修复，v8已单次Linux接续
+
+当前唯一新实验入口teacher_student_autopilot_v8/CONTINUE.md与PROTOCOL.md；480文件锁SHA `f67587ae9446a678a888aecc33bdaa609bfafc84d9005fe08fecc97d985b69f6`。Linux55项CPU验收全部PASS（教师10/学生23/选择20/生产2）；实际新128train/32dev原生PTS选择、固定新24=16train8dev完成，来源组全部排除旧160/context。原v7实际probe→all缓存误拒绝已复现并修；短边界ID/证据帧ID→程序精确nativePTS、原模型raw先独立保存、盲二次选择/逐条全分母/UNKNOWN分离、2..4真实更新前缀与原B开发candidate0已独立登记。CPU与mock不当真实32B质量/新8B训练。
+
+一次launcher于2026-10-08T04:22:07.221824+00:00登记历史PID/PGID 400355；04:22:49 UTC实时完整命令核到控制器CPU101%正在核SHA，completion/progress尚未写出，这是合法启动校验。历史PID只作登记，后续读真实命令/父子PGID；不得重开launcher或改480冻结文件。后续8项真实视觉接口（含64帧正反序）→两条fresh重输入probe→新24盲复查→A完整160/学生最多3epochs/同optimizer前缀；质量不足按真实route_decision自主登记B边界可行性或C8B全源粗事件→局部匹配对照，不盲换prompt/造空/UNKNOWN当负。旧v7/context科学STOP保持，当前新T更新0。
+
+已创建并核aic-linux每15分钟静默heartbeat（ACTIVE，failed_runs_only）；中间进展/故障/修复写项目、不通知，最终完整真实验收后一次汇报并删除监控、不归档。Linux独立后台，Windows/Codex在线才唤醒本地巡检；当前轻量入口controller/checkpoint_teacher_v8.py，快照controller/monitor_teacher_v8/latest.json。详见controller/V8_REPAIR_AND_EXECUTION_20261008.md。
+
+B2已实际交付并由用户截图指认37.32/DONE，317401字节，SHA0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3；较旧B37.63低0.31，两成绩各自绑定各自旧包，B2不是新教师T。其历史“新B2分未知/包未回传”仅为当时状态，旧receipt不回写。新实验官网分未知。
+
+固定32B/8B权重原地用；Mac不用，必要小量控制代码直接SSH授权，新大流量仍先说明方向/字节/链路/可能机场消耗并等许可；不自动回传新包或AIC提交。共享GPU锁/追加账本7200/实际容量保持，不抢占外部任务、不改连接/服务、不读100confirm或手看复赛调参。只有实际新路线完整completion PASS、NONTEST8/426全部独立strict及ZIP大小/SHA/CRC/唯一JSONL/426身份通过才交付；candidate0明确原B胜出与真实T更新，不冒充新T提升。
+
+下方记录保持历史，不据历史入口/PID/分数未知或20更新旧门推断当前状态。
+
 # AIC 高光剪辑项目执行约定
 
 ## 2026-10-08 09:52 UTC+8：B2最终Linux ZIP已完整验收

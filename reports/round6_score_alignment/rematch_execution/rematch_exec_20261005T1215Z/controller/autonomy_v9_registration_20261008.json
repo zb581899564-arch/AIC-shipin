@@ -1,0 +1,23 @@
+{
+  "status": "REGISTERED_AUTONOMOUS_V9_AND_15MIN_SILENT_MONITOR_NOT_QUALITY",
+  "automation_id": "aic-linux",
+  "automation_kind": "heartbeat",
+  "notification_policy": "failed_runs_only",
+  "entry": "teacher_student_autopilot_v9",
+  "source_lock_sha256": "a3dc4e4f1e35c45624adaaa66fe0ede5a055e314d8a68d11a6aecaaef831c0b3",
+  "frozen_files": 556,
+  "launch_historical_pid": 434000,
+  "launch_utc": "2026-10-08T04:52:26.280264+00:00",
+  "first_live_snapshot_utc": "2026-10-08T04:53:28.229813+00:00",
+  "first_live_controller_command": [
+    "434000       1  434000      62 99.8  0.0 /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v9/controller.py"
+  ],
+  "cpu_checks": 64,
+  "actual_old_B2_stage_key_failure_reproduced": true,
+  "actual_new_two_scope_CPU_bridge_passed": true,
+  "new_T_optimizer_updates": 0,
+  "old_STOP_preserved": true,
+  "large_transfers": 0,
+  "automatic_return": false,
+  "uploaded": false
+}

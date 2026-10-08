@@ -1,0 +1,391 @@
+{
+  "schema": "aic_readonly_32b_teacher_metadata_v1",
+  "checked_utc": "2026-10-07T02:41:41.050334+00:00",
+  "metadata_only": true,
+  "weight_bytes_downloaded": 0,
+  "gpu_used": false,
+  "models": [
+    {
+      "repo": "Qwen/Qwen3-VL-32B-Instruct",
+      "revision": "0cfaf48183f594c314753d30a4c4974bc75f3ccb",
+      "metadata_url": "https://huggingface.co/api/models/Qwen/Qwen3-VL-32B-Instruct/revision/0cfaf48183f594c314753d30a4c4974bc75f3ccb?blobs=true",
+      "model_card_url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/blob/0cfaf48183f594c314753d30a4c4974bc75f3ccb/README.md",
+      "authority": "OFFICIAL_QWEN_PUBLISHER",
+      "last_modified": "2025-10-21T18:26:34.000Z",
+      "license_declared": "apache-2.0",
+      "safetensors_parameters": {
+        "parameters": {
+          "BF16": 33357390064
+        },
+        "total": 33357390064
+      },
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size_bytes": 1519,
+          "lfs_sha256": null
+        },
+        {
+          "path": "README.md",
+          "size_bytes": 7140,
+          "lfs_sha256": null
+        },
+        {
+          "path": "chat_template.json",
+          "size_bytes": 5499,
+          "lfs_sha256": null
+        },
+        {
+          "path": "config.json",
+          "size_bytes": 1474,
+          "lfs_sha256": null
+        },
+        {
+          "path": "generation_config.json",
+          "size_bytes": 269,
+          "lfs_sha256": null
+        },
+        {
+          "path": "merges.txt",
+          "size_bytes": 1671839,
+          "lfs_sha256": null
+        },
+        {
+          "path": "model-00001-of-00014.safetensors",
+          "size_bytes": 4932328944,
+          "lfs_sha256": "6b9dfbc930e505402ae9d7e5091a9d7d656cda5f34614f01cfe70bfb0cca27cb"
+        },
+        {
+          "path": "model-00002-of-00014.safetensors",
+          "size_bytes": 4875990528,
+          "lfs_sha256": "d8bb44b4ff303fe76fe9e894022fb3dc71b15a2e716592790fe0e3c3e60478fa"
+        },
+        {
+          "path": "model-00003-of-00014.safetensors",
+          "size_bytes": 4875990552,
+          "lfs_sha256": "54f22e8b3168f8dc962fac0d313607ebf52a12b433d4cf3098a0d82d9f042940"
+        },
+        {
+          "path": "model-00004-of-00014.safetensors",
+          "size_bytes": 4875990584,
+          "lfs_sha256": "ad09c74d3c13ee29b5d0d84548fd8a3424a651564eaccd519946c296e59c557f"
+        },
+        {
+          "path": "model-00005-of-00014.safetensors",
+          "size_bytes": 4875990584,
+          "lfs_sha256": "fc993c8a0e2a5b0570f383e1a95dc3a1281d1b224b6f3ee908f4827941e1dfc2"
+        },
+        {
+          "path": "model-00006-of-00014.safetensors",
+          "size_bytes": 4875990584,
+          "lfs_sha256": "82f05620d1f718a90c362b221d6a184ff1a0f53301d706882d3df49695fa1974"
+        },
+        {
+          "path": "model-00007-of-00014.safetensors",
+          "size_bytes": 4875990584,
+          "lfs_sha256": "fb91da8cb01ff4de3eef0eab1c3e769a734b3a1aafc61734068638a0d6c86934"
+        },
+        {
+          "path": "model-00008-of-00014.safetensors",
+          "size_bytes": 4875990584,
+          "lfs_sha256": "431ca56535c8781944ce3801f5eb61c45531e853ecc5846d936ebaf4761b764f"
+        },
+        {
+          "path": "model-00009-of-00014.safetensors",
+          "size_bytes": 4875990584,
+          "lfs_sha256": "3825e3f4302f4d2f7d76aa7430d2ce0864fde6b9e540a5806bf0d8e38e4d9f47"
+        },
+        {
+          "path": "model-00010-of-00014.safetensors",
+          "size_bytes": 4875990584,
+          "lfs_sha256": "aded5a4d1d5e22dbd8b6f79266b6eb88c840411b09527c53917a1419ace22e2f"
+        },
+        {
+          "path": "model-00011-of-00014.safetensors",
+          "size_bytes": 4875990584,
+          "lfs_sha256": "3820ffe8d8d6477f6fe8d614ef3c87abb264ee39accebf43a1507b970d80946f"
+        },
+        {
+          "path": "model-00012-of-00014.safetensors",
+          "size_bytes": 4875990584,
+          "lfs_sha256": "05ad2d08ce71963121c9b03f1d9ec5d7641052f4b23c6c12b80d71065eb8e98e"
+        },
+        {
+          "path": "model-00013-of-00014.safetensors",
+          "size_bytes": 4875990584,
+          "lfs_sha256": "b64f2289871261fdd1abbd3b78bcd66011b341de3dc8eeb2ed1a473ee7c8d95c"
+        },
+        {
+          "path": "model-00014-of-00014.safetensors",
+          "size_bytes": 3270697008,
+          "lfs_sha256": "e45b6c9998c77ee5a6577f9f47bc76416c1d4d387169e50c4c9d3134ea51b13b"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size_bytes": 97831,
+          "lfs_sha256": null
+        },
+        {
+          "path": "preprocessor_config.json",
+          "size_bytes": 390,
+          "lfs_sha256": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size_bytes": 7032403,
+          "lfs_sha256": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size_bytes": 10868,
+          "lfs_sha256": null
+        },
+        {
+          "path": "video_preprocessor_config.json",
+          "size_bytes": 385,
+          "lfs_sha256": null
+        },
+        {
+          "path": "vocab.json",
+          "size_bytes": 2776833,
+          "lfs_sha256": null
+        }
+      ],
+      "all_repo_weight_files_bytes": 66714912872,
+      "config": {
+        "architectures": [
+          "Qwen3VLForConditionalGeneration"
+        ],
+        "image_token_id": 151655,
+        "model_type": "qwen3_vl",
+        "text_config": {
+          "attention_bias": false,
+          "attention_dropout": 0.0,
+          "bos_token_id": 151643,
+          "dtype": "bfloat16",
+          "eos_token_id": 151645,
+          "head_dim": 128,
+          "hidden_act": "silu",
+          "hidden_size": 5120,
+          "initializer_range": 0.02,
+          "intermediate_size": 25600,
+          "max_position_embeddings": 262144,
+          "model_type": "qwen3_vl_text",
+          "num_attention_heads": 64,
+          "num_hidden_layers": 64,
+          "num_key_value_heads": 8,
+          "rms_norm_eps": 1e-06,
+          "rope_scaling": {
+            "mrope_interleaved": true,
+            "mrope_section": [
+              24,
+              20,
+              20
+            ],
+            "rope_type": "default"
+          },
+          "rope_theta": 5000000,
+          "use_cache": true,
+          "vocab_size": 151936
+        },
+        "tie_word_embeddings": false,
+        "transformers_version": "4.57.0.dev0",
+        "video_token_id": 151656,
+        "vision_config": {
+          "deepstack_visual_indexes": [
+            8,
+            16,
+            24
+          ],
+          "depth": 27,
+          "hidden_act": "gelu_pytorch_tanh",
+          "hidden_size": 1152,
+          "in_channels": 3,
+          "initializer_range": 0.02,
+          "intermediate_size": 4304,
+          "model_type": "qwen3_vl",
+          "num_heads": 16,
+          "num_position_embeddings": 2304,
+          "out_hidden_size": 5120,
+          "patch_size": 16,
+          "spatial_merge_size": 2,
+          "temporal_patch_size": 2
+        },
+        "vision_end_token_id": 151653,
+        "vision_start_token_id": 151652
+      },
+      "config_url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/config.json",
+      "bf16_selected_weight_files": [
+        {
+          "path": "model-00001-of-00014.safetensors",
+          "size_bytes": 4932328944,
+          "lfs_sha256": "6b9dfbc930e505402ae9d7e5091a9d7d656cda5f34614f01cfe70bfb0cca27cb"
+        },
+        {
+          "path": "model-00002-of-00014.safetensors",
+          "size_bytes": 4875990528,
+          "lfs_sha256": "d8bb44b4ff303fe76fe9e894022fb3dc71b15a2e716592790fe0e3c3e60478fa"
+        },
+        {
+          "path": "model-00003-of-00014.safetensors",
+          "size_bytes": 4875990552,
+          "lfs_sha256": "54f22e8b3168f8dc962fac0d313607ebf52a12b433d4cf3098a0d82d9f042940"
+        },
+        {
+          "path": "model-00004-of-00014.safetensors",
+          "size_bytes": 4875990584,
+          "lfs_sha256": "ad09c74d3c13ee29b5d0d84548fd8a3424a651564eaccd519946c296e59c557f"
+        },
+        {
+          "path": "model-00005-of-00014.safetensors",
+          "size_bytes": 4875990584,
+          "lfs_sha256": "fc993c8a0e2a5b0570f383e1a95dc3a1281d1b224b6f3ee908f4827941e1dfc2"
+        },
+        {
+          "path": "model-00006-of-00014.safetensors",
+          "size_bytes": 4875990584,
+          "lfs_sha256": "82f05620d1f718a90c362b221d6a184ff1a0f53301d706882d3df49695fa1974"
+        },
+        {
+          "path": "model-00007-of-00014.safetensors",
+          "size_bytes": 4875990584,
+          "lfs_sha256": "fb91da8cb01ff4de3eef0eab1c3e769a734b3a1aafc61734068638a0d6c86934"
+        },
+        {
+          "path": "model-00008-of-00014.safetensors",
+          "size_bytes": 4875990584,
+          "lfs_sha256": "431ca56535c8781944ce3801f5eb61c45531e853ecc5846d936ebaf4761b764f"
+        },
+        {
+          "path": "model-00009-of-00014.safetensors",
+          "size_bytes": 4875990584,
+          "lfs_sha256": "3825e3f4302f4d2f7d76aa7430d2ce0864fde6b9e540a5806bf0d8e38e4d9f47"
+        },
+        {
+          "path": "model-00010-of-00014.safetensors",
+          "size_bytes": 4875990584,
+          "lfs_sha256": "aded5a4d1d5e22dbd8b6f79266b6eb88c840411b09527c53917a1419ace22e2f"
+        },
+        {
+          "path": "model-00011-of-00014.safetensors",
+          "size_bytes": 4875990584,
+          "lfs_sha256": "3820ffe8d8d6477f6fe8d614ef3c87abb264ee39accebf43a1507b970d80946f"
+        },
+        {
+          "path": "model-00012-of-00014.safetensors",
+          "size_bytes": 4875990584,
+          "lfs_sha256": "05ad2d08ce71963121c9b03f1d9ec5d7641052f4b23c6c12b80d71065eb8e98e"
+        },
+        {
+          "path": "model-00013-of-00014.safetensors",
+          "size_bytes": 4875990584,
+          "lfs_sha256": "b64f2289871261fdd1abbd3b78bcd66011b341de3dc8eeb2ed1a473ee7c8d95c"
+        },
+        {
+          "path": "model-00014-of-00014.safetensors",
+          "size_bytes": 3270697008,
+          "lfs_sha256": "e45b6c9998c77ee5a6577f9f47bc76416c1d4d387169e50c4c9d3134ea51b13b"
+        }
+      ],
+      "bf16_total_weight_bytes": 66714912872
+    },
+    {
+      "repo": "Qwen/Qwen3-VL-32B-Instruct-GGUF",
+      "revision": "e3e1fe0c76de7ee58ea65db420c643adfe2e457c",
+      "metadata_url": "https://huggingface.co/api/models/Qwen/Qwen3-VL-32B-Instruct-GGUF/revision/e3e1fe0c76de7ee58ea65db420c643adfe2e457c?blobs=true",
+      "model_card_url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct-GGUF/blob/e3e1fe0c76de7ee58ea65db420c643adfe2e457c/README.md",
+      "authority": "OFFICIAL_QWEN_PUBLISHER",
+      "last_modified": "2025-11-01T03:20:18.000Z",
+      "license_declared": "apache-2.0",
+      "safetensors_parameters": null,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size_bytes": 1976,
+          "lfs_sha256": null
+        },
+        {
+          "path": "Qwen3VL-32B-Instruct-F16-split-00001-of-00002.gguf",
+          "size_bytes": 49871765120,
+          "lfs_sha256": "ceeb368043020e21061cc2da909946a7dfa863c4f8576b7a79e315abb36b9dc9"
+        },
+        {
+          "path": "Qwen3VL-32B-Instruct-F16-split-00002-of-00002.gguf",
+          "size_bytes": 15659811424,
+          "lfs_sha256": "794a32ad8e73f04c8d952f62511ab3617448f02a165779c952b9a13f4b18fe6c"
+        },
+        {
+          "path": "Qwen3VL-32B-Instruct-Q4_K_M.gguf",
+          "size_bytes": 19762150432,
+          "lfs_sha256": "5cf0136e721d6294718ec71fd8c93b17ab5dd4e2714d6079e83fa46571ad94c8"
+        },
+        {
+          "path": "Qwen3VL-32B-Instruct-Q8_0.gguf",
+          "size_bytes": 34817720352,
+          "lfs_sha256": "936dcdc564cf9f907af80cc581c53e01a275725b29d06ad753b923c1463f6751"
+        },
+        {
+          "path": "README.md",
+          "size_bytes": 7860,
+          "lfs_sha256": null
+        },
+        {
+          "path": "mmproj-Qwen3VL-32B-Instruct-F16.gguf",
+          "size_bytes": 1196795040,
+          "lfs_sha256": "8617824839df91f84b4840ad5084dcf50a1403a435a1f4cfc4d8c84ce6cac2fc"
+        },
+        {
+          "path": "mmproj-Qwen3VL-32B-Instruct-Q8_0.gguf",
+          "size_bytes": 772360224,
+          "lfs_sha256": "c01734a97adc350c1eebb957ed433afee4e376ebd0949163f659c76d8dcf20ca"
+        }
+      ],
+      "all_repo_weight_files_bytes": 122080602592,
+      "selected_recipe": "Q4_K_M_LANGUAGE_PLUS_F16_VISION_PROJECTOR",
+      "selected_weight_files": [
+        {
+          "path": "Qwen3VL-32B-Instruct-Q4_K_M.gguf",
+          "size_bytes": 19762150432,
+          "lfs_sha256": "5cf0136e721d6294718ec71fd8c93b17ab5dd4e2714d6079e83fa46571ad94c8"
+        },
+        {
+          "path": "mmproj-Qwen3VL-32B-Instruct-F16.gguf",
+          "size_bytes": 1196795040,
+          "lfs_sha256": "8617824839df91f84b4840ad5084dcf50a1403a435a1f4cfc4d8c84ce6cac2fc"
+        }
+      ],
+      "selected_weight_bytes": 20958945472
+    }
+  ],
+  "capacity": {
+    "status": "STOP_32B_TEACHER_CAPACITY",
+    "download_admitted": false,
+    "capacity_evidence_kind": "MAIN_CONTROLLER_LIVE_MEASUREMENT_RELAYED_20261007",
+    "linux_work_bytes": 50907619328,
+    "mac_work_bytes": 28053655552,
+    "combined_work_bytes": 78961274880,
+    "cap_bytes": 85899345920,
+    "cap_gib": 80,
+    "remaining_bytes_before_new_teacher": 6938071040,
+    "remaining_gib_before_new_teacher": 6.461582183837891,
+    "selected_final_weight_bytes": 20958945472,
+    "selected_final_weight_gib": 19.519539058208466,
+    "ideal_zero_duplicate_zero_cache_lower_bound_new_bytes": 20958945472,
+    "ideal_combined_peak_lower_bound_bytes": 99920220352,
+    "ideal_shortfall_bytes": 14020874432,
+    "conservative_hub_cache_plus_local_copy_plus_one_stale_largest_partial_bytes": 61680041376,
+    "cache_estimate_is_not_actual_runtime_peak": true,
+    "cache_estimation_notes": [
+      "A same-filesystem streaming .incomplete-to-final rename could avoid a second copy; this route has not been verified",
+      "A hub blob cache plus independent local model copy duplicates weights; one stale largest partial is separately reserved in the conservative scenario",
+      "Xet chunk cache, runtime installation, temporary decode frames, tokenizer/config files and generation receipts need additional explicit accounting",
+      "Even the impossible zero-overhead lower bound exceeds current headroom; no downloader is admitted",
+      "Never download BF16 weights first to quantize, download the whole GGUF repository, delete assets or silently replace the 32B teacher with the same 8B"
+    ],
+    "gpu_or_ram_runtime_feasibility": "NOT_VERIFIED_NO_WEIGHT_LOAD_OR_GPU_PROBE",
+    "runtime_blocker": "Existing inspected Linux environment has no llama-cpp-python or llama-cli; no environment installation authorized",
+    "next_action": "Deliver CPU preparation only. Without explainable positive/explicit-empty supervision by first workday, STOP_T and proceed with Z; M already delivered"
+  },
+  "installed_or_deleted_anything": false,
+  "same_8b_teacher_fallback": false
+}

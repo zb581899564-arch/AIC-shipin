@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aic_complete_window_teacher_response_v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["window_id", "observation_scope", "retained_segments", "explicit_no_highlight", "uncertain", "uncertainty_reasons", "decision_reason", "boundary_notes"],
+  "properties": {
+    "window_id": {"type": "string", "minLength": 1},
+    "observation_scope": {
+      "type": "object", "additionalProperties": false,
+      "required": ["window_pts_start_sec", "window_pts_end_exclusive_sec", "sampled_pts_sec", "all_provided_frames_reviewed"],
+      "properties": {
+        "window_pts_start_sec": {"type": "number"},
+        "window_pts_end_exclusive_sec": {"type": "number"},
+        "sampled_pts_sec": {"type": "array", "minItems": 1, "maxItems": 64, "items": {"type": "number"}},
+        "all_provided_frames_reviewed": {"const": true}
+      }
+    },
+    "retained_segments": {
+      "type": "array",
+      "items": {"type": "object", "additionalProperties": false, "required": ["start_sec", "end_sec", "reason"],
+        "properties": {"start_sec": {"type": "number", "minimum": 0}, "end_sec": {"type": "number", "exclusiveMinimum": 0}, "reason": {"type": "string", "minLength": 1}}}
+    },
+    "explicit_no_highlight": {"type": "boolean"},
+    "uncertain": {"type": "boolean"},
+    "uncertainty_reasons": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "decision_reason": {"type": "string", "minLength": 1},
+    "boundary_notes": {"type": "array", "items": {"type": "string", "minLength": 1}}
+  },
+  "allOf": [
+    {"if": {"properties": {"uncertain": {"const": true}}}, "then": {"properties": {"explicit_no_highlight": {"const": false}, "uncertainty_reasons": {"minItems": 1}}}},
+    {"if": {"properties": {"uncertain": {"const": false}}}, "then": {"properties": {"uncertainty_reasons": {"maxItems": 0}}}},
+    {"if": {"properties": {"explicit_no_highlight": {"const": true}}}, "then": {"properties": {"retained_segments": {"maxItems": 0}, "uncertain": {"const": false}}}},
+    {"if": {"properties": {"uncertain": {"const": false}, "explicit_no_highlight": {"const": false}}}, "then": {"properties": {"retained_segments": {"minItems": 1}}}}
+  ]
+}

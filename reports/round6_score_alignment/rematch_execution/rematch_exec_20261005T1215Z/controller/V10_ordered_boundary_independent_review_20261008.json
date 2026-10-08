@@ -1,0 +1,26 @@
+{
+  "status": "PASS_V10_ORDERED_GBNF_INDEPENDENT_READONLY_REVIEW",
+  "utc": "2026-10-08T05:24:09.503052+00:00",
+  "GBNF_preserves_all_legal_1_to_5_segments_by_finite_state_induction": true,
+  "ordered_nonoverlap_halfopen_physical_domain": true,
+  "actual_pinned_CPP_checker_examples": 20,
+  "all_examples_match": true,
+  "actual_66_boundary_grammar_sha256": "362d36ac827d32c758d766f7a00487faf53936c258920925b96cb09aaf528194",
+  "actual_grammar_bytes": 594030,
+  "actual_grammar_rules": 2336,
+  "actual_legal_physical_pairs": 2144,
+  "old_real_raw_rejected": true,
+  "NO_UNKNOWN_empty_segments_preserved": true,
+  "annotation_and_blind_review_grammar_only": true,
+  "synthetic_probe_response_format_only": true,
+  "original_validator_chain_preserved": true,
+  "remaining_validator_rejections": [
+    "duplicate evidence",
+    "no selected evidence inside a segment",
+    "blank reason"
+  ],
+  "files_changed": false,
+  "GPU_started": false,
+  "real_generation_verified": false,
+  "scientific_quality_verified": false
+}

@@ -1,0 +1,84 @@
+{
+  "status": "PASS_CPU_REPAIR_AND_ONCE_LINUX_LAUNCH_NOT_TEACHER_QUALITY",
+  "snapshot_utc": "2026-10-08T06:40:46.137115+00:00",
+  "entry": "teacher_student_autopilot_v11",
+  "source_lock_sha256": "0ae09ec38ff589baa5e15e16b84457b06442195de502ec7ef6a19bab9b715578",
+  "bound_file_count": 1189,
+  "cpu_tests": {
+    "teacher_boundary_cpu_tests.py": 0,
+    "student_cpu_tests.py": 0,
+    "student_v8_cpu_tests.py": 0,
+    "selection_cpu_tests.py": 0,
+    "pipeline_cpu_tests.py": 0
+  },
+  "cpu_test_count": 92,
+  "new_selection_counts": {
+    "train": 128,
+    "dev": 32
+  },
+  "all_new_groups_exclude_old160_and_context": true,
+  "stage": "SOURCE_PREFLIGHT_CPU",
+  "owned_process_count": 1,
+  "completion_status": null,
+  "launch_utc": "2026-10-08T06:38:42.955326+00:00",
+  "launch_historical_pid": 559263,
+  "new_T_optimizer_updates": 0,
+  "teacher_visual_status": null,
+  "synthetic_not_highlight_supervision": true,
+  "same_teacher_review_not_human_truth": true,
+  "B2_user_official_score": 37.32,
+  "B2_zip_sha256": "0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3",
+  "prior_B_user_official_score": 37.63,
+  "new_candidate_official_score": null,
+  "raw_labels_or_per_frame_data_exported": false,
+  "models_videos_environment_or_new_zip_exported": false,
+  "additional_cache_identity_tests": 9,
+  "actual_B2_cache_bridge_CPU": {
+    "status": "PASS_ACTUAL_B2_COMPLETE_CACHE_BRIDGE_CPU",
+    "original_actual_failure_reproduced": true,
+    "same_actual_B2_final_JSON_stage_key_used": true,
+    "actual_cache_models_input_and_all_artifact_SHA_verified": true,
+    "GPU_started": false,
+    "old_data_changed": false,
+    "receipt_sha256": "7952d637e789e5160283a5a82ee4a57413854086ae499c74c176f79ca4b3a09b"
+  },
+  "v8_original_pre_GPU_STOP_preserved": true,
+  "same_v8_unlabelled_selection_recipe_and_bytes": true,
+  "preregistered_pilot_counts": {
+    "train": 16,
+    "dev": 8
+  },
+  "ordered_boundary_CPU": {
+    "status": "PASS_FIXED_RUNTIME_ORDERED_BOUNDARY_CPU",
+    "old_raw_rejected": true,
+    "GPU_started": false,
+    "total_contract_tests": 72,
+    "receipt_sha256": "5adae1a1ccd83ffdff2acb2f2e1123c313467e88c465f7042c7f7b88af3757fd"
+  },
+  "original_V9_invalid_probe_preserved": true,
+  "same_preregistered_inputs_not_new_unseen_24": true,
+  "original_probe_cost_handoff_CPU": {
+    "status": "PASS_EXPLICIT_ORIGINAL_PROBE_COST_CPU",
+    "tests_run": 4,
+    "GPU_started": false,
+    "old_bytes_changed": false,
+    "receipt_sha256": "bb3cf50c972be0732db2e4ea471f2ec3df7ee41f7282f15e35b26bd2e4bbae5d"
+  },
+  "BF_witness_interface_CPU": {
+    "status": "PASS_FIXED_RUNTIME_BF_PER_SEGMENT_EVIDENCE_CPU",
+    "GPU_started": false,
+    "old_raw_rejected": true,
+    "legacy_visual_requests_equal_actual_count": 8
+  },
+  "legacy_reuse_CPU": {
+    "status": "PASS_EXACT_V10_SUCCESS_REUSE_CPU",
+    "GPU_started": false,
+    "exact_original_success_count": 2,
+    "accepted_manifest_sha256": "eb46303856f980c12add957d1293f87f8f5d9bcfedc3a19c10d571e56301f19b",
+    "full160_only_not_pilot24": true,
+    "original_success_calls_not_repeated": true
+  },
+  "legacy_handoff": {},
+  "actual_new_format_probe": {},
+  "original_V10_failed_evidence_raw_and_STOP_preserved": true
+}

@@ -1,0 +1,46 @@
+{
+  "status": "PASS_V11_92_CPU_CONTRACTS_BEFORE_FREEZE_NOT_NEW_MODEL_GENERATION",
+  "utc": "2026-10-08T06:33:39.535789+00:00",
+  "tests_run": 92,
+  "GPU_started": false,
+  "new_T_optimizer_updates": 0,
+  "receipts": {
+    "cpu_acceptance.json": {
+      "sha256": "00f1c46cfd3d8b345049bd1ef6d818bdcb7cf039fb2f97c6543fc5b236519b26",
+      "status": "PASS_V8_CPU_STAGE_AND_CONTRACT_TESTS"
+    },
+    "v9_cache_identity_cpu_acceptance.json": {
+      "sha256": "40e46ede213800302fa426cc4cff2bd33c54426ce53c82fb77adce0fa32ea937",
+      "status": "PASS_V9_ACTUAL_CACHE_IDENTITY_AND_BRIDGE_CPU"
+    },
+    "real_cache_bridge_cpu_acceptance.json": {
+      "sha256": "7952d637e789e5160283a5a82ee4a57413854086ae499c74c176f79ca4b3a09b",
+      "status": "PASS_ACTUAL_B2_COMPLETE_CACHE_BRIDGE_CPU"
+    },
+    "ordered_boundary_cpu_acceptance.json": {
+      "sha256": "5adae1a1ccd83ffdff2acb2f2e1123c313467e88c465f7042c7f7b88af3757fd",
+      "status": "PASS_FIXED_RUNTIME_ORDERED_BOUNDARY_CPU"
+    },
+    "evidence_boundary_cpu_acceptance.json": {
+      "sha256": "a5c1e233cc38669438afa98be546283ea21e3169bea1c9a7731f84883806ada0",
+      "status": "PASS_FIXED_RUNTIME_BF_PER_SEGMENT_EVIDENCE_CPU"
+    },
+    "legacy_reuse_cpu_acceptance.json": {
+      "sha256": "f85cf601db898228ac5c0ce0afaf6e1ba609000c7595ecd159658da9670e7812",
+      "status": "PASS_EXACT_V10_SUCCESS_REUSE_CPU"
+    },
+    "legacy_cost_cpu_acceptance.json": {
+      "sha256": "bb3cf50c972be0732db2e4ea471f2ec3df7ee41f7282f15e35b26bd2e4bbae5d",
+      "status": "PASS_EXPLICIT_ORIGINAL_PROBE_COST_CPU"
+    }
+  },
+  "old_invalid_raw_rejected_not_salvaged": true,
+  "old_success_count": 2,
+  "old_successes_in_pilot24": 0,
+  "visual_request_constructor_cases_exact": 8,
+  "original_static_prompts_and_validator_unchanged": true,
+  "fixed_checker_binary_unchanged": true,
+  "full4356_pair_domain_unchanged": true,
+  "raw_frames_labels_or_models_exported": false,
+  "initial_test_timeout_and_stale_test_fixture_archived": true
+}

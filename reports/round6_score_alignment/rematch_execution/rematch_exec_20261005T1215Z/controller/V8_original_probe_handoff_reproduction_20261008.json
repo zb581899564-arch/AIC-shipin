@@ -1,0 +1,17 @@
+{
+  "status": "PASS_REPRODUCED_ORIGINAL_PHASE_HANDOFF_DEFECT_CPU",
+  "utc": "2026-10-08T03:59:31.025629+00:00",
+  "original_source": "G:\\ai\\AIC\u89c6\u9891\\reports\\round6_score_alignment\\rematch_execution\\rematch_exec_20261005T1215Z\\teacher_student_autopilot_v7\\teacher_label.py",
+  "original_source_sha256": "9d1173eef5ab0e74761f24dc3c41d199aadec5c03e7e77037911b685dd723696",
+  "actual_original_function": "teacher_label.annotate",
+  "actual_exception": "fresh real generation required; an existing done cache cannot count as a new heavy-input probe",
+  "calls_in_real_controller": [
+    "probe",
+    "all"
+  ],
+  "original_phase_all_reenters_fresh_guard": true,
+  "synthetic_fixture_not_real_labels": true,
+  "old_sources_or_outputs_modified": false,
+  "GPU_started": false,
+  "attached_repro_sha256": "3a64941dc85ae0dd33479c3e8e9f532abc724dcaffecbeddb3a6de14db20e7ee"
+}

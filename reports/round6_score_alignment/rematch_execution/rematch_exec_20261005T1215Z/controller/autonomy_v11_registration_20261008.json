@@ -1,0 +1,27 @@
+{
+  "status": "REGISTERED_AUTONOMOUS_V11_AND_15MIN_SILENT_MONITOR_NOT_QUALITY",
+  "utc": "2026-10-08T06:40:48.843406+00:00",
+  "entry": "teacher_student_autopilot_v11",
+  "automation_id": "aic-linux",
+  "source_lock_sha256": "0ae09ec38ff589baa5e15e16b84457b06442195de502ec7ef6a19bab9b715578",
+  "frozen_files": 1189,
+  "cpu_checks": 92,
+  "launch_historical_pid": 559263,
+  "launch_utc": "2026-10-08T06:38:42.955326+00:00",
+  "snapshot_utc": "2026-10-08T06:40:46.137115+00:00",
+  "actual_controller_commands": [
+    "559263       1  559263     123  100  0.0 /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v11/controller.py"
+  ],
+  "actual_owned_server_count": 0,
+  "actual_stage": "SOURCE_PREFLIGHT_CPU",
+  "completion_status": null,
+  "actual_visual_status": null,
+  "actual_probe_status": null,
+  "actual_legacy_handoff_status": null,
+  "new_T_optimizer_updates": 0,
+  "old_STOP_preserved": true,
+  "raw_labels_or_per_frame_data_exported": false,
+  "large_transfers": 0,
+  "automatic_return": false,
+  "uploaded": false
+}

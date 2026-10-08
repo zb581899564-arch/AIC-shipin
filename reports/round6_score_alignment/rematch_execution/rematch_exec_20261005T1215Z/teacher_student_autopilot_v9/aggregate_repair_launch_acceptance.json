@@ -1,0 +1,57 @@
+{
+  "status": "STOP_REAL_PROBE_OVERLAPPING_BOUNDARY_OUTPUT_PRESERVED",
+  "snapshot_utc": "2026-10-08T04:57:42.034069+00:00",
+  "entry": "teacher_student_autopilot_v9",
+  "source_lock_sha256": "a3dc4e4f1e35c45624adaaa66fe0ede5a055e314d8a68d11a6aecaaef831c0b3",
+  "bound_file_count": 556,
+  "cpu_tests": {
+    "teacher_boundary_cpu_tests.py": 0,
+    "student_cpu_tests.py": 0,
+    "student_v8_cpu_tests.py": 0,
+    "selection_cpu_tests.py": 0,
+    "pipeline_cpu_tests.py": 0
+  },
+  "cpu_test_count": 64,
+  "new_selection_counts": {
+    "train": 128,
+    "dev": 32
+  },
+  "untouched_pilot_counts": {
+    "train": 16,
+    "dev": 8
+  },
+  "all_new_groups_exclude_old160_and_context": true,
+  "stage": "STOP_AUTOPILOT_PRESERVED",
+  "owned_process_count": 0,
+  "completion_status": "STOP_AUTOPILOT_PRESERVED",
+  "launch_utc": "2026-10-08T04:52:26.280264+00:00",
+  "launch_historical_pid": 434000,
+  "new_T_optimizer_updates": 0,
+  "teacher_visual_status": "PASS_REAL_SYNTHETIC_VISUAL_INTERFACE",
+  "synthetic_not_highlight_supervision": true,
+  "same_teacher_review_not_human_truth": true,
+  "B2_user_official_score": 37.32,
+  "B2_zip_sha256": "0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3",
+  "prior_B_user_official_score": 37.63,
+  "new_candidate_official_score": null,
+  "raw_labels_or_per_frame_data_exported": false,
+  "models_videos_environment_or_new_zip_exported": false,
+  "additional_cache_identity_tests": 9,
+  "actual_B2_cache_bridge_CPU": {
+    "status": "PASS_ACTUAL_B2_COMPLETE_CACHE_BRIDGE_CPU",
+    "original_actual_failure_reproduced": true,
+    "same_actual_B2_final_JSON_stage_key_used": true,
+    "actual_cache_models_input_and_all_artifact_SHA_verified": true,
+    "GPU_started": false,
+    "old_data_changed": false,
+    "receipt_sha256": "4e77567ce3ce5b66bf7e5267ad700b54897c99c3f8ff687fcae7d6f51ffd0577"
+  },
+  "v8_original_pre_GPU_STOP_preserved": true,
+  "same_v8_unlabelled_selection_recipe_and_bytes": true,
+  "stop_utc": "2026-10-08T05:01:52.092713+00:00",
+  "stop_error_type": "RuntimeError",
+  "stop_reason": "unordered or overlapping native boundary segments",
+  "real_visual_cases": 8,
+  "actual_invalid_probe_decisions": 1,
+  "stale_launch_snapshot_superseded": true
+}

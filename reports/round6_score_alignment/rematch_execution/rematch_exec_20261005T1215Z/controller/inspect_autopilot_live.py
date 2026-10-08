@@ -4,6 +4,7 @@ from collections import Counter
 import datetime
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import shutil
@@ -30,10 +31,28 @@ def capture(version, entry=None):
         raise RuntimeError('unregistered version directory')
     now = datetime.datetime.now(datetime.timezone.utc)
     process_lines = subprocess.check_output(
-        ['ps', '-eo', 'pid,ppid,pgid,etimes,pcpu,pmem,args'], text=True).splitlines()
+        ['ps', '-eo', 'pid,ppid,pgid,etimes,pcpu,pmem,args', '--width', '10000'], text=True).splitlines()
     # python -B is a genuine controller/worker command, never filter it out.
     processes = [line.strip() for line in process_lines if str(here) + '/' in line]
     owned_ids = {int(line.split()[0]) for line in processes}
+    process_io = {}
+    for pid in sorted(owned_ids):
+        proc = Path('/proc') / str(pid)
+        try:
+            counters = {key.strip(): int(value.strip()) for key,value in
+                        (line.split(':',1) for line in (proc/'io').read_text().splitlines())}
+            opened = {}
+            for descriptor in (proc/'fd').iterdir():
+                try:
+                    target = os.readlink(descriptor)
+                    if target.startswith('/home/inspur/aic_video_work/'):
+                        opened[descriptor.name] = target
+                except FileNotFoundError:
+                    pass
+            process_io[str(pid)] = {'counters':counters, 'opened_project_files':opened}
+        except (FileNotFoundError, PermissionError):
+            # Exiting between ps and /proc inspection is a normal race.
+            process_io[str(pid)] = {'unavailable_after_process_snapshot':True}
     servers = [line.strip() for line in process_lines if 'llama-server' in line
                and any(int(line.split()[i]) in owned_ids for i in (1, 2))]
     windows = []
@@ -68,7 +87,7 @@ def capture(version, entry=None):
         else:
             states['unclassified'] += 1
     snapshot = {'utc': now.isoformat(), 'host': socket.gethostname(), 'version': version, 'entry': entry,
-                'processes': processes, 'owned_servers': servers,
+                'processes': processes, 'owned_servers': servers, 'process_io':process_io,
                 'gpu': subprocess.check_output(['nvidia-smi', '--query-gpu=index,name,utilization.gpu,memory.used,memory.total',
                                                 '--format=csv,noheader'], text=True).strip(),
                 'memory': subprocess.check_output(['free', '-m'], text=True).strip(),
@@ -166,6 +185,21 @@ def capture(version, entry=None):
                           'rematch_package': 'rematch_01/package.stage.json',
                           'rematch_strict': 'rematch_01/independent_validation.json'}.items():
         snapshot[key] = read(here / relative)
+    snapshot['v8_stage_receipts'] = {name: read(here / relative) for name,relative in {
+        'visual_progress':'visual_probe_01/progress.json','visual_completion':'visual_probe_01/completion.json',
+        'pilot_decision':'pilot_01/completion.json','pilot_semantic':'pilot_01/pilot_semantic_quality.json',
+        'prefix':'student_01/prefix_gate.json','teacher_probe':'teacher_01/teacher_probe_completion.json',
+        'teacher_semantic':'teacher_01/semantic_review.json',
+        'legacy_handoff':'legacy_handoff.json','new_format_real_probe':'pilot_01/new_format_real_probe.json'}.items()}
+    if entry in ('teacher_student_autopilot_v8','teacher_student_autopilot_v9','teacher_student_autopilot_v10','teacher_student_autopilot_v11'):
+        snapshot['active_gpu_job'] = read(RUN.parents[2] / 'improvement_round1/active_gpu_job.json')
+        snapshot['resource_receipts'] = {p.name:read(p) for p in sorted((RUN/'controller').glob('rematch_TAUTO_'+entry.rsplit('_',1)[1]+'_*.resource.json'))}
+        snapshot['queue_receipts'] = {p.name:read(p) for p in sorted((RUN/'controller').glob('rematch_TAUTO_'+entry.rsplit('_',1)[1]+'_*.queue.json'))}
+        snapshot['visual_case_results'] = {p.parent.name:read(p) for p in sorted((here/'visual_probe_01/cases').glob('*/case_result.json'))}
+        snapshot['artifact_activity'] = {
+            scope:{str(p.relative_to(here/scope)):{'bytes':p.stat().st_size,'mtime_ns':p.stat().st_mtime_ns}
+                for p in sorted((here/scope).rglob('*')) if p.is_file() and p.suffix in ('.json','.jsonl','.log')}
+            for scope in ('visual_probe_01','teacher_01','pilot_01','student_01','nontest_01','rematch_01')}
     snapshot['production_stage_receipts'] = {
         scope: {p.name: read(p) for p in sorted((here / scope).glob('*.stage.json'))}
         for scope in ('nontest_01', 'rematch_01')}

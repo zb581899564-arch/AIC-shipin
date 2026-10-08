@@ -1,0 +1,51 @@
+{
+  "status": "PASS_V10_REAL_VISUAL8_AND_HEAVY2_ENGINEERING_NOT_SEMANTIC_OR_TRAINING",
+  "utc": "2026-10-08T05:47:24.097767+00:00",
+  "source_lock_sha256": "b36e260ece5abc0267f24cedf534add67588fb01ebc3c10e1e7f8ea5d65960cc",
+  "real_visual_calls": 8,
+  "all_eight_visual_expected_equal_actual": true,
+  "visual64_forward_and_reverse_pass": true,
+  "real_fresh_non_test_probe_calls": 2,
+  "real_probe_status": "PASS_REAL_NONTEST_TEACHER_PROBE",
+  "real_probe_wall_sec": 86.94051442295313,
+  "real_probe_per_window_wall_sec": [
+    35.252787795849144,
+    39.18102522846311
+  ],
+  "max_real_prompt_tokens": 13675,
+  "probe_original_validator_and_all_done_file_SHA_revalidated": true,
+  "accepted_probe_label_status_counts": {
+    "PASS_WEAK_COMPLETE_WINDOW_TARGET": 2
+  },
+  "probe_bound_file_hash_count": 34,
+  "raw_and_successful_records_unchanged": true,
+  "independent_revalidation_CPU_only": true,
+  "independent_revalidation_inference_calls": 0,
+  "independent_inspector_initial_container_and_hash_target_errors_corrected": true,
+  "production_error_or_source_change_by_inspector": false,
+  "original_invalid_V9_raw_and_STOP_kept": true,
+  "synthetic_never_training_labels": true,
+  "same_teacher_review_not_ground_truth": true,
+  "semantic_quality_or_training_admitted_by_this_check": false,
+  "new_T_optimizer_updates": 0,
+  "resource_receipts": {
+    "teacher_visual_interface": {
+      "status": "completed",
+      "charged_seconds": 81.9754777699709,
+      "exit_code": 0,
+      "stop_reason": null,
+      "sampled_peak_memory_mib": 37072,
+      "original_receipt_sha256": "0ce0a287239d51478f98009d67bdfe748ab2dfb7454284e43ba4dd9cc5d84339"
+    },
+    "teacher_probe": {
+      "status": "completed",
+      "charged_seconds": 143.48592570517212,
+      "exit_code": 0,
+      "stop_reason": null,
+      "sampled_peak_memory_mib": 37092,
+      "original_receipt_sha256": "dfa9df6bff90d72c01ea344bea7533d67531b76b24fd62816081d5bd593736b0"
+    }
+  },
+  "raw_labels_or_per_frame_data_exported": false,
+  "large_transfers": 0
+}

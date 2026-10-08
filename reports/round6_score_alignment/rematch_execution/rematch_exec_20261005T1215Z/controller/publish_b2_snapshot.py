@@ -207,5 +207,176 @@ def main():
         selected_files=len(selected),per_frame_data_exported=False,raw_labels_or_weights_exported=False)))
 
 
+
+def publish_teacher_v8(entry="teacher_student_autopilot_v8"):
+    """Explicit small code/config allowlist and aggregate metadata only."""
+    assert entry in ('teacher_student_autopilot_v8','teacher_student_autopilot_v9','teacher_student_autopilot_v10','teacher_student_autopilot_v11')
+    here=RUN/entry;version=entry.rsplit('_',1)[1]
+    lock=json.loads((here/'source_lock.json').read_text());cpu=json.loads((here/'cpu_acceptance.json').read_text())
+    registration=json.loads((here/'start_receipt.json').read_text())
+    snapshot=json.loads((RUN/('controller/monitor_teacher_'+version+'/latest.json')).read_text())['snapshot']
+    assert cpu['status']=='PASS_V8_CPU_STAGE_AND_CONTRACT_TESTS'
+    assert snapshot['source_lock_sha256']==registration['source_lock_sha256']
+    approved_json={'config.json','authorization.json','accepted_resume_manifest.json',
+                   'teacher_metadata_20261007.json','teacher_response.schema.json'}
+    if version=='v11':approved_json.remove('accepted_resume_manifest.json')
+    selected=[p for p in here.rglob('*') if p.is_file()
+        and not any(x in p.relative_to(here).parts for x in ('__pycache__','prelock_repairs','selection_01','pilot_selection'))
+        and (p.suffix in ('.py','.cpp','.md') or p.name in approved_json
+             or p.name in ('teacher_prompt.txt','review_prompt.txt'))]
+    selected += [WORKSPACE/'AGENTS.md',RUN/'STATUS_AUTOPILOT_20261007.md']
+    selected += [RUN/'controller'/n for n in ('V8_REPAIR_AND_EXECUTION_20261008.md',
+        'V8_original_probe_handoff_reproduction_20261008.json','official_score_B2_LINUX_37_32_20261008.json',
+        'register_autopilot_v8.py','checkpoint_teacher_v8.py','register_autopilot_v9.py','checkpoint_teacher_v9.py','inspect_autopilot_live.py',
+        'publish_b2_snapshot.py','AUTONOMOUS_EXECUTION_20261008.md','autonomy_v9_registration_20261008.json','V9_visual_and_overlap_acceptance_20261008.json')]
+    if version in ('v10','v11'):
+        selected += [RUN/'controller'/n for n in ('register_autopilot_v10.py','checkpoint_teacher_v10.py',
+            'record_teacher_v10_execution_20261008.py','V10_monitor_guard_repair_20261008.json',
+            'autonomy_v10_registration_20261008.json','V10_ordered_boundary_independent_review_20261008.json',
+            'P0_user_minimal_reproduction_20261008.json',
+            'verify_teacher_v10_probe_20261008.py','V10_real_interface_probe_acceptance_20261008.json')]
+    if version=='v11':
+        selected += [RUN/'controller'/n for n in ('register_autopilot_v11.py','checkpoint_teacher_v11.py',
+            'record_teacher_v11_execution_20261008.py','autonomy_v11_registration_20261008.json',
+            'V11_cpu_repair_acceptance_20261008.json','V11_frozen_preflight_acceptance_20261008.json')]
+    for path in selected:
+        target=PUB/path.relative_to(WORKSPACE);target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(path,target);assert target.read_bytes()==path.read_bytes()
+    aggregate={'status':'PASS_CPU_REPAIR_AND_ONCE_LINUX_LAUNCH_NOT_TEACHER_QUALITY',
+        'snapshot_utc':snapshot['utc'],'entry':entry,'source_lock_sha256':snapshot['source_lock_sha256'],
+        'bound_file_count':len(lock['files']),'cpu_tests':cpu['tests'],'cpu_test_count':json.loads((here/'ordered_boundary_cpu_acceptance.json').read_text())['total_contract_tests'] if version in ('v10','v11') else (64 if version=='v9' else 55),
+        'new_selection_counts':{'train':128,'dev':32},'untouched_pilot_counts':{'train':16,'dev':8},
+        'all_new_groups_exclude_old160_and_context':True,
+        'stage':(snapshot.get('completion') or {}).get('status') or (snapshot.get('progress') or {}).get('stage','SOURCE_PREFLIGHT_CPU'),
+        'owned_process_count':len(snapshot['processes']),'completion_status':(snapshot.get('completion') or {}).get('status'),'launch_utc':registration['utc'],
+        'launch_historical_pid':registration['pid'],
+        'new_T_optimizer_updates':(snapshot.get('student_progress') or {}).get('optimizer_steps',0),
+        'teacher_visual_status':(snapshot['v8_stage_receipts'].get('visual_completion') or {}).get('status'),
+        'synthetic_not_highlight_supervision':True,'same_teacher_review_not_human_truth':True,
+        'B2_user_official_score':37.32,'B2_zip_sha256':'0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3',
+        'prior_B_user_official_score':37.63,'new_candidate_official_score':None,
+        'raw_labels_or_per_frame_data_exported':False,'models_videos_environment_or_new_zip_exported':False}
+    if version in ('v9','v10','v11'):
+        identity=json.loads((here/'v9_cache_identity_cpu_acceptance.json').read_text())
+        assert identity['status']=='PASS_V9_ACTUAL_CACHE_IDENTITY_AND_BRIDGE_CPU'
+        aggregate['additional_cache_identity_tests']=identity['new_contract_tests']
+        bridge=json.loads((here/'real_cache_bridge_cpu_acceptance.json').read_text())
+        assert bridge['status']=='PASS_ACTUAL_B2_COMPLETE_CACHE_BRIDGE_CPU'
+        assert bridge['production_controller_sha256']==hashlib.sha256((here/'controller.py').read_bytes()).hexdigest()
+        stopped=json.loads((RUN/'teacher_student_autopilot_v8/completion.json').read_text())
+        assert stopped['status']=='STOP_AUTOPILOT_PRESERVED'
+        aggregate['actual_B2_cache_bridge_CPU']={key:bridge[key] for key in (
+            'status','original_actual_failure_reproduced','same_actual_B2_final_JSON_stage_key_used',
+            'actual_cache_models_input_and_all_artifact_SHA_verified','GPU_started','old_data_changed')}
+        aggregate['actual_B2_cache_bridge_CPU']['receipt_sha256']=hashlib.sha256((here/'real_cache_bridge_cpu_acceptance.json').read_bytes()).hexdigest()
+        aggregate['v8_original_pre_GPU_STOP_preserved']=True
+        aggregate['same_v8_unlabelled_selection_recipe_and_bytes']=True
+    if version in ('v10','v11'):
+        aggregate['preregistered_pilot_counts']=aggregate.pop('untouched_pilot_counts')
+        ordered=json.loads((here/'ordered_boundary_cpu_acceptance.json').read_text())
+        assert ordered['status']=='PASS_FIXED_RUNTIME_ORDERED_BOUNDARY_CPU' and ordered['old_raw_rejected'] is True
+        aggregate['ordered_boundary_CPU']={key:ordered[key] for key in ('status','old_raw_rejected','GPU_started','total_contract_tests')}
+        aggregate['ordered_boundary_CPU']['receipt_sha256']=hashlib.sha256((here/'ordered_boundary_cpu_acceptance.json').read_bytes()).hexdigest()
+        aggregate['original_V9_invalid_probe_preserved']=True
+        aggregate['same_preregistered_inputs_not_new_unseen_24']=True
+    if version=='v10':
+        proof=json.loads((RUN/'controller/V10_real_interface_probe_acceptance_20261008.json').read_text())
+        aggregate['real_visual_and_heavy_acceptance']={key:proof[key] for key in (
+            'status','real_visual_calls','real_fresh_non_test_probe_calls','max_real_prompt_tokens',
+            'probe_original_validator_and_all_done_file_SHA_revalidated','raw_and_successful_records_unchanged',
+            'semantic_quality_or_training_admitted_by_this_check','new_T_optimizer_updates')}
+        if aggregate['completion_status']=='STOP_AUTOPILOT_PRESERVED':
+            aggregate['status']='STOP_REAL_PILOT_EVIDENCE_ID_RELATION_PRESERVED'
+            aggregate['actual_invalid_pilot_decisions']=1
+            aggregate['original_failed_raw_not_salvaged']=True
+    if version=='v11':
+        evidence=json.loads((here/'evidence_boundary_cpu_acceptance.json').read_text())
+        legacy=json.loads((here/'legacy_reuse_cpu_acceptance.json').read_text())
+        assert evidence['status']=='PASS_FIXED_RUNTIME_BF_PER_SEGMENT_EVIDENCE_CPU'
+        assert legacy['status']=='PASS_EXACT_V10_SUCCESS_REUSE_CPU'
+        cost=json.loads((here/'legacy_cost_cpu_acceptance.json').read_text())
+        assert cost['status']=='PASS_EXPLICIT_ORIGINAL_PROBE_COST_CPU' and cost['GPU_started'] is False
+        aggregate['cpu_test_count']=evidence['total_contract_tests']+legacy['tests_run']+cost['tests_run']
+        aggregate['original_probe_cost_handoff_CPU']={key:cost[key] for key in (
+            'status','tests_run','GPU_started','old_bytes_changed')}
+        aggregate['original_probe_cost_handoff_CPU']['receipt_sha256']=hashlib.sha256((here/'legacy_cost_cpu_acceptance.json').read_bytes()).hexdigest()
+        aggregate['BF_witness_interface_CPU']={key:evidence[key] for key in (
+            'status','GPU_started','old_raw_rejected','legacy_visual_requests_equal_actual_count')}
+        aggregate['legacy_reuse_CPU']={'status':legacy['status'],'GPU_started':False,
+            'exact_original_success_count':2,'accepted_manifest_sha256':hashlib.sha256((here/'accepted_resume_manifest.json').read_bytes()).hexdigest(),
+            'full160_only_not_pilot24':True,'original_success_calls_not_repeated':True}
+        aggregate['legacy_handoff']={key:value for key,value in (snapshot['v8_stage_receipts'].get('legacy_handoff') or {}).items()
+            if key in ('status','fresh_model_calls','original_visual_calls','original_probe_calls','pilot_old_success_reuse_count','new_T_optimizer_updates')}
+        actual=snapshot['v8_stage_receipts'].get('new_format_real_probe') or {}
+        aggregate['actual_new_format_probe']={key:value for key,value in actual.items()
+            if key in ('status','fresh_model_calls','old_success_model_calls','optimizer_steps','utc')}
+        aggregate['original_V10_failed_evidence_raw_and_STOP_preserved']=True
+    derived=PUB/REL/entry/'aggregate_repair_launch_acceptance.json'
+    derived.write_text(json.dumps(aggregate,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    derived_items=[derived]
+    if version=='v9':
+        history=PUB/REL/'teacher_student_autopilot_v8/aggregate_repair_launch_acceptance.json'
+        assert history.is_file(), 'publish reviewed V8 code history before V9 snapshot'
+        value=json.loads(history.read_text())
+        value.update(status='STOP_PRE_GPU_B2_STAGE_KEY_HANDOFF_PRESERVED',stage='STOP_AUTOPILOT_PRESERVED',
+            completion_status=stopped['status'],stop_utc=stopped['utc'],stop_error_type=stopped['error_type'],
+            stop_reason=stopped['reason'],owned_process_count=0,new_T_optimizer_updates=0,
+            actual_teacher_GPU_calls=0,actual_new_labels=0,stale_launch_snapshot_superseded=True,
+            historical_STOP_kept_original_bytes=True)
+        history.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        derived_items.append(history)
+    if version=='v10':
+        history=PUB/REL/'teacher_student_autopilot_v9/aggregate_repair_launch_acceptance.json'
+        assert history.is_file()
+        current=json.loads((RUN/'controller/monitor_teacher_v9/latest.json').read_text())['snapshot']
+        value=json.loads(history.read_text())
+        value.update(status='STOP_REAL_PROBE_OVERLAPPING_BOUNDARY_OUTPUT_PRESERVED', stage='STOP_AUTOPILOT_PRESERVED',
+            completion_status=current['completion']['status'], stop_utc=current['completion']['utc'],
+            stop_error_type=current['completion']['error_type'], stop_reason='unordered or overlapping native boundary segments',
+            owned_process_count=0,new_T_optimizer_updates=0,teacher_visual_status='PASS_REAL_SYNTHETIC_VISUAL_INTERFACE',
+            real_visual_cases=8,actual_invalid_probe_decisions=1,stale_launch_snapshot_superseded=True)
+        history.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');derived_items.append(history)
+    paragraph=('2026-10-08：用户截图指认已交付B2复赛成绩 **37.32 / DONE**，较原Linux B 37.63低0.31；两分各自绑定旧包。'
+        '旧科学STOP保留。按用户提供审计另登记独立修复，已修真实probe→all缓存误拒绝、短边界ID与精确PTS映射、'
+        '盲二次选择/全分母/UNKNOWN分离、新128/32与固定24、新2–4更新前缀与原B开发candidate0。'
+        f'Linux{aggregate["cpu_test_count"]}项CPU验收和{len(lock["files"])}文件绑定通过，锁 `{snapshot["source_lock_sha256"]}`，单次launcher已登记。'
+        'v8曾在B2缓存status/stage字段衔接处调用教师前STOP，GPU/标签/T更新均0；旧480文件和STOP保持。v9沿用同配方未标注选择原字节，修复实际回执适配与完整缓存身份绑定，并实际复现旧失败/验证两个scopeCPU桥接。' +
+        ('v9真实视觉8/8通过，但首条非测试探针返回重叠区间，被原validator拒绝且保持STOP/T0。v10登记有限状态GBNF生成合法1..5非重叠原生边界，原prompt/validator/高光标准/16024输入不改，不合并裁段修补旧原答。' if version=='v10' else '') +
+        ('V11修B/F独立编号与每段模型所选物理证据的生成约束；原V10真实8接口/2成功重输入回执仅核SHA与原validator引用，不当新调用；同24首个原失败窗真实验证新格式再继续，全部原失败与成功原字节保留。' if version=='v11' else '') +
+        f'当前{version}接续逐条24标注/盲选择→科学分路A/B/C；启动/CPU不是32B质量或新训练通过。新T实际更新数 `{aggregate["new_T_optimizer_updates"]}`。'
+        f'当前实际阶段 `{aggregate["stage"]}`。每15分钟静默巡检自动修复；最终真实完整验收后交付，官网新分未知。'
+        f'见[修复与范围]({REL}/controller/V8_REPAIR_AND_EXECUTION_20261008.md)、[新协议]({REL}/{entry}/PROTOCOL.md)、'
+        f'[聚合验收]({REL}/{entry}/aggregate_repair_launch_acceptance.json)。\n\n')
+    def front(text,title,body):
+        if '<!-- END_CURRENT_V8 -->' in text:
+            _,rest=text.split('\n',1);rest=rest.split('<!-- END_CURRENT_V8 -->',1)[1]
+            text=text.split('\n',1)[0]+'\n'+rest.lstrip('\n')
+        first,rest=text.split('\n',1)
+        return first+'\n\n'+title+'\n\n'+body+'<!-- END_CURRENT_V8 -->\n'+rest.lstrip('\n')
+    edit(PUB/'README.md',lambda text:front(text,'## 当前教师修复与B2官网结果',paragraph))
+    edit(PUB/'README.md',lambda text:'\n'.join(line.replace('| 未评分 |','| 37.32 |') if line.startswith('| 复赛 | B2：') else line for line in text.split('\n')))
+    for name in ('SOLUTIONS.md','REPRODUCTION.md'):
+        edit(PUB/'docs'/name,lambda text:front(text,'## 当前教师独立修复',paragraph.replace(']('+REL,'](../'+REL)))
+    for path in (PUB/'README.md',PUB/'docs/SOLUTIONS.md',PUB/'docs/REPRODUCTION.md'):
+        edit(path,lambda text:text.replace('新B2官网分未知','B2用户回报官网37.32/DONE').replace('包仍留Linux，尚无新官网分。','B2已交付，用户回报37.32/DONE。'))
+    manifest_path=PUB/'docs/publication_manifest.json';old_manifest=manifest_path.read_bytes();ending='\r\n' if b'\r\n' in old_manifest else '\n';manifest=json.loads(old_manifest)
+    items={row['path']:row for row in manifest['files']}
+    additions=[(path.relative_to(WORKSPACE).as_posix(),path.relative_to(WORKSPACE).as_posix()) for path in selected]
+    additions.extend((path.relative_to(PUB).as_posix(),None) for path in derived_items)
+    for relative,source in additions:
+        if relative not in items:
+            row=dict(path=relative,source_relative_path=source,bytes=0,sha256='',category='project_code_or_configuration' if relative.endswith('.py') else 'experiment_protocol_or_acceptance')
+            manifest['files'].append(row);items[relative]=row
+        if source is None:items[relative]['category']='aggregate_acceptance_no_frame_data'
+    for row in manifest['files']:
+        path=PUB/row['path'];row['bytes']=path.stat().st_size;row['sha256']=hashlib.sha256(path.read_bytes()).hexdigest()
+    manifest['updated_utc']=dt.datetime.now(dt.timezone.utc).isoformat()
+    manifest_path.write_bytes((json.dumps(manifest,ensure_ascii=False,indent=2)+'\n').replace('\n',ending).encode())
+    print(json.dumps({'status':'PASS_CURATED_TEACHER_CORE_AND_AGGREGATES','entry':entry,'selected_files':len(selected),
+        'raw_labels_or_per_frame_data_exported':False,'models_videos_environment_or_new_zip_exported':False}))
+
+
 if __name__=='__main__':
-    main()
+    import argparse
+    parser=argparse.ArgumentParser();parser.add_argument('--teacher-v8',action='store_true');parser.add_argument('--teacher-v9',action='store_true');parser.add_argument('--teacher-v10',action='store_true');parser.add_argument('--teacher-v11',action='store_true');args=parser.parse_args()
+    publish_teacher_v8('teacher_student_autopilot_v11' if args.teacher_v11 else ('teacher_student_autopilot_v10' if args.teacher_v10 else ('teacher_student_autopilot_v9' if args.teacher_v9 else 'teacher_student_autopilot_v8'))) if args.teacher_v8 or args.teacher_v9 or args.teacher_v10 or args.teacher_v11 else main()

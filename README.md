@@ -1,5 +1,10 @@
 # AIC 视频高光剪辑
 
+## 当前教师修复与B2官网结果
+
+2026-10-08：用户截图指认已交付B2复赛成绩 **37.32 / DONE**，较原Linux B 37.63低0.31；两分各自绑定旧包。旧科学STOP保留。按用户提供审计另登记独立修复，已修真实probe→all缓存误拒绝、短边界ID与精确PTS映射、盲二次选择/全分母/UNKNOWN分离、新128/32与固定24、新2–4更新前缀与原B开发candidate0。Linux92项CPU验收和1189文件绑定通过，锁 `0ae09ec38ff589baa5e15e16b84457b06442195de502ec7ef6a19bab9b715578`，单次launcher已登记。v8曾在B2缓存status/stage字段衔接处调用教师前STOP，GPU/标签/T更新均0；旧480文件和STOP保持。v9沿用同配方未标注选择原字节，修复实际回执适配与完整缓存身份绑定，并实际复现旧失败/验证两个scopeCPU桥接。V11修B/F独立编号与每段模型所选物理证据的生成约束；原V10真实8接口/2成功重输入回执仅核SHA与原validator引用，不当新调用；同24首个原失败窗真实验证新格式再继续，全部原失败与成功原字节保留。当前v11接续逐条24标注/盲选择→科学分路A/B/C；启动/CPU不是32B质量或新训练通过。新T实际更新数 `0`。当前实际阶段 `SOURCE_PREFLIGHT_CPU`。每15分钟静默巡检自动修复；最终真实完整验收后交付，官网新分未知。见[修复与范围](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/V8_REPAIR_AND_EXECUTION_20261008.md)、[新协议](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v11/PROTOCOL.md)、[聚合验收](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v11/aggregate_repair_launch_acceptance.json)。
+
+<!-- END_CURRENT_V8 -->
 AIC 产业命题赛「基于视频大模型的通用视频高光剪辑」的项目代码、实验方案、验收记录和提交包归档。当前复赛已确认成绩：**Linux 8B 37.63，4B 33.81，Mac 8B 33.46**。初赛最佳已确认成绩 **43.94**。初赛与复赛的视频集合不同，分数不直接比较。
 
 本仓库是从工作项目导出的发布快照。保留核心代码原始字节和目录结构；数据集、弱标签逐样本清单、基座/adapter 权重、运行环境、缓存和原始逐帧中间结果没有随仓库分发。已评分源码及正在运行的冻结作业保持原字节；工作项目文档追加最新状态。
@@ -10,7 +15,7 @@ AIC 产业命题赛「基于视频大模型的通用视频高光剪辑」的项�
 | --- | --- | ---: | --- |
 | 复赛 | A：4B / P2-T2 时间模型，native PTS 与帧身份恢复 | **33.81** | [candidate_A_PTS.zip][zip-a] |
 | 复赛 | B：Linux 8B 区间 JSON SFT，最终 5 轮，同 8B 空间基座 | **37.63** | [candidate_B_8B.zip][zip-b] |
-| 复赛 | B2：保留Linux B最终LoRA、native输入与全源空间场 | 未评分 | [代码与生成状态](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/CONTINUE.md)；`candidate_B2_8B.zip` 已在Linux严格验收 |
+| 复赛 | B2：保留Linux B最终LoRA、native输入与全源空间场 | 37.32 | [代码与生成状态](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/CONTINUE.md)；`candidate_B2_8B.zip` 已在Linux严格验收 |
 | 复赛 | Mac 8B：64 帧低分辨率区间 SFT | **33.46** | [candidate_MAC_8B.zip](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/mac8b_delivery_v2/delivery_01/candidate_MAC_8B.zip)；用户已提交，方案停止 |
 | 初赛 | 未微调 Qwen3-VL 单片段基线 | 41.09 | [baseline ZIP](submissions/qwen3vl_baseline_20260910/baseline_qwen3vl_20260910.zip) |
 | 初赛 | 未微调 Qwen3-VL 多片段 reader | 41.22 | [multi-reader ZIP](submissions/qwen3vl_multi_reader_20260910/aic-qwen3vl-multi-20260910.zip) |
@@ -24,11 +29,11 @@ AIC 产业命题赛「基于视频大模型的通用视频高光剪辑」的项�
 
 已按采纳结论建立独立 [next_round_v1](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/next_round_v1)。145项CPU合同、真实processor逐张量一致、全空426独立strict及真实CUDA空生成/空assistant有限CE损失已通过。修复严格0..1000坐标、合法空与失败分离、原生PTS训练目标、生产一致开发输入、全源空间场和Mac离线预留。旧已评分包不变。
 
-2026-10-08 09:45 UTC+8：当前路线为[B2已微调8B生产对齐](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/CONTINUE.md)。保留已评分37.63的B最终LoRA，不增加训练更新；时间使用B adapter、空间同8B原生基座，总逻辑参数8,782,459,120。B2采用所有分支实际native PTS/floor64帧/顺序PyAV/16384长输入、精确端点与全源空间场，仍用B原1–5段提示与greedy。旧37.63仍绑定旧B包，新B2官网分未知。
+2026-10-08 09:45 UTC+8：当前路线为[B2已微调8B生产对齐](reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/CONTINUE.md)。保留已评分37.63的B最终LoRA，不增加训练更新；时间使用B adapter、空间同8B原生基座，总逻辑参数8,782,459,120。B2采用所有分支实际native PTS/floor64帧/顺序PyAV/16384长输入、精确端点与全源空间场，仍用B原1–5段提示与greedy。旧37.63仍绑定旧B包，B2用户回报官网37.32/DONE。
 
 32B context v3已经完整8/8真实请求、0工程失败，三正被弱审核支持，唯一NO被拒绝；没有受支持真实空例，T更新0。审核声称overview仅到119.0189秒，实际完整源回执末PTS149.98316666666668、13帧>=120；事实性错误和语义争议同时保留，不能将拒绝改PASS或空标签当真值。旧raw/失败/科学STOP保存；不再盲试同配方，不造空或弱化原监督门。B2是保留已经训练B的可交付路线，不冒充新教师T训练。
 
-69项CPU、434来源/529真实自然窗/33447样本端点、12原目标无损回放与实际processor/HD/8非测试源重开pixel SHA通过。571文件锁 `52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db`，单次launcher历史PID `3965729`；本次快照阶段 `PASS_COMPLETE_426_B2_8B_ZIP_ON_LINUX`、实际命令进程 `0`。实际B LoRA长输入CUDA已PASS：12048token、288 adapter张量与保存值相等、全基座SHA与原训练相等，选择token分数有限；0优化器更新。Linux最终ZIP终态与NONTEST8/426全部独立strict登记已PASS。包 `/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/rematch_01/candidate_B2_8B.zip`，实际 `317401` 字节，SHA256 `0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3`。包仍留Linux，尚无新官网分。
+69项CPU、434来源/529真实自然窗/33447样本端点、12原目标无损回放与实际processor/HD/8非测试源重开pixel SHA通过。571文件锁 `52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db`，单次launcher历史PID `3965729`；本次快照阶段 `PASS_COMPLETE_426_B2_8B_ZIP_ON_LINUX`、实际命令进程 `0`。实际B LoRA长输入CUDA已PASS：12048token、288 adapter张量与保存值相等、全基座SHA与原训练相等，选择token分数有限；0优化器更新。Linux最终ZIP终态与NONTEST8/426全部独立strict登记已PASS。包 `/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/rematch_01/candidate_B2_8B.zip`，实际 `317401` 字节，SHA256 `0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3`。B2已交付，用户回报37.32/DONE。
 
 旧Z时间实际adapter=False，521旧时间不能复用B2。非测试全源CPU/同基座空间只在输入/算法/关键SHA与完整回执一致后原样复用；复赛旧CPU域与新native源域不同，不准入复用，真实重算全源CPU/空间。后台真实B长输入CUDA→NONTEST8→426/521时间/全源空间→独立strict ZIP。最终只有真实B2 completion PASS、8/426独立strict全部true、大小/SHA/CRC/唯一JSONL/426身份验收才可提交。
 

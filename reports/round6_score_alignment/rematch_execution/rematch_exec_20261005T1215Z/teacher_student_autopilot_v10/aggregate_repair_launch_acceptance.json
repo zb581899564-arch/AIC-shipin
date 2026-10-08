@@ -1,0 +1,72 @@
+{
+  "status": "STOP_REAL_PILOT_EVIDENCE_ID_RELATION_PRESERVED",
+  "snapshot_utc": "2026-10-08T05:59:23.128613+00:00",
+  "entry": "teacher_student_autopilot_v10",
+  "source_lock_sha256": "b36e260ece5abc0267f24cedf534add67588fb01ebc3c10e1e7f8ea5d65960cc",
+  "bound_file_count": 639,
+  "cpu_tests": {
+    "teacher_boundary_cpu_tests.py": 0,
+    "student_cpu_tests.py": 0,
+    "student_v8_cpu_tests.py": 0,
+    "selection_cpu_tests.py": 0,
+    "pipeline_cpu_tests.py": 0
+  },
+  "cpu_test_count": 72,
+  "new_selection_counts": {
+    "train": 128,
+    "dev": 32
+  },
+  "all_new_groups_exclude_old160_and_context": true,
+  "stage": "STOP_AUTOPILOT_PRESERVED",
+  "owned_process_count": 0,
+  "completion_status": "STOP_AUTOPILOT_PRESERVED",
+  "launch_utc": "2026-10-08T05:32:57.506841+00:00",
+  "launch_historical_pid": 480562,
+  "new_T_optimizer_updates": 0,
+  "teacher_visual_status": "PASS_REAL_SYNTHETIC_VISUAL_INTERFACE",
+  "synthetic_not_highlight_supervision": true,
+  "same_teacher_review_not_human_truth": true,
+  "B2_user_official_score": 37.32,
+  "B2_zip_sha256": "0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3",
+  "prior_B_user_official_score": 37.63,
+  "new_candidate_official_score": null,
+  "raw_labels_or_per_frame_data_exported": false,
+  "models_videos_environment_or_new_zip_exported": false,
+  "additional_cache_identity_tests": 9,
+  "actual_B2_cache_bridge_CPU": {
+    "status": "PASS_ACTUAL_B2_COMPLETE_CACHE_BRIDGE_CPU",
+    "original_actual_failure_reproduced": true,
+    "same_actual_B2_final_JSON_stage_key_used": true,
+    "actual_cache_models_input_and_all_artifact_SHA_verified": true,
+    "GPU_started": false,
+    "old_data_changed": false,
+    "receipt_sha256": "4b0864edfde9787a0e6fd0521c4b73a926106d669ac3350422f34cb4473b45ab"
+  },
+  "v8_original_pre_GPU_STOP_preserved": true,
+  "same_v8_unlabelled_selection_recipe_and_bytes": true,
+  "preregistered_pilot_counts": {
+    "train": 16,
+    "dev": 8
+  },
+  "ordered_boundary_CPU": {
+    "status": "PASS_FIXED_RUNTIME_ORDERED_BOUNDARY_CPU",
+    "old_raw_rejected": true,
+    "GPU_started": false,
+    "total_contract_tests": 72,
+    "receipt_sha256": "2a88af66b921f20a85dc340a95374c8d2c7d185c65b08898ca29bfa617dd97d2"
+  },
+  "original_V9_invalid_probe_preserved": true,
+  "same_preregistered_inputs_not_new_unseen_24": true,
+  "real_visual_and_heavy_acceptance": {
+    "status": "PASS_V10_REAL_VISUAL8_AND_HEAVY2_ENGINEERING_NOT_SEMANTIC_OR_TRAINING",
+    "real_visual_calls": 8,
+    "real_fresh_non_test_probe_calls": 2,
+    "max_real_prompt_tokens": 13675,
+    "probe_original_validator_and_all_done_file_SHA_revalidated": true,
+    "raw_and_successful_records_unchanged": true,
+    "semantic_quality_or_training_admitted_by_this_check": false,
+    "new_T_optimizer_updates": 0
+  },
+  "actual_invalid_pilot_decisions": 1,
+  "original_failed_raw_not_salvaged": true
+}

@@ -1,0 +1,8 @@
+你观察的是与8B学生相同的局部自然时间窗，按给出的顺序查看全部图片。只依据当前窗口可见内容判断，不推断窗口外剧情、不做全源去重。
+可见关键内容包括明确的关键动作、结果、状态变化、互动或具有信息价值的场面；普通连续活动本身不自动值得保留。不能确定关键价值、事件身份或边界时选择UNKNOWN。
+只输出短JSON，字段恰好为state、segments、evidence_frame_ids、reason。state只能是KEEP、NO_HIGHLIGHT或UNKNOWN。不要输出时间戳、源帧号、身份元数据或“已看懂全部帧”的声明。
+KEEP：1到5个片段；每段只有start_boundary_id、end_boundary_id，按顺序、非重叠，边界采用半开区间[start,end)。每段至少选一个真正显示相关事件的evidence_frame_id。
+NO_HIGHLIGHT：segments为空；表示当前提供的全部样本没有值得保留的关键内容，reason简要描述可见普通内容及理由，列出代表性证据帧。图片间未观测区间不能被证明为负。
+UNKNOWN：segments为空，reason简述具体不确定性，仍列出相关证据帧；它不构成空目标。
+边界编号与证据帧编号是两种独立编号。图片文字会注明二者对应；窗口末端边界没有图片，绝不能作为evidence_frame_id。reason最多600字，描述可见事实和选择原因。
+本地输入合同：{{WINDOW_CONTRACT_JSON}}

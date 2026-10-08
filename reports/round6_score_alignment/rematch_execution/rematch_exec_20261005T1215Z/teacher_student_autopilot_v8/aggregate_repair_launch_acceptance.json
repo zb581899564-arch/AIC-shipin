@@ -1,0 +1,46 @@
+{
+  "status": "STOP_PRE_GPU_B2_STAGE_KEY_HANDOFF_PRESERVED",
+  "snapshot_utc": "2026-10-08T04:24:18.787377+00:00",
+  "entry": "teacher_student_autopilot_v8",
+  "source_lock_sha256": "f67587ae9446a678a888aecc33bdaa609bfafc84d9005fe08fecc97d985b69f6",
+  "bound_file_count": 480,
+  "cpu_tests": {
+    "teacher_boundary_cpu_tests.py": 0,
+    "student_cpu_tests.py": 0,
+    "student_v8_cpu_tests.py": 0,
+    "selection_cpu_tests.py": 0,
+    "pipeline_cpu_tests.py": 0
+  },
+  "cpu_test_count": 55,
+  "new_selection_counts": {
+    "train": 128,
+    "dev": 32
+  },
+  "untouched_pilot_counts": {
+    "train": 16,
+    "dev": 8
+  },
+  "all_new_groups_exclude_old160_and_context": true,
+  "stage": "STOP_AUTOPILOT_PRESERVED",
+  "owned_process_count": 0,
+  "launch_utc": "2026-10-08T04:22:07.221824+00:00",
+  "launch_historical_pid": 400355,
+  "new_T_optimizer_updates": 0,
+  "teacher_visual_status": null,
+  "synthetic_not_highlight_supervision": true,
+  "same_teacher_review_not_human_truth": true,
+  "B2_user_official_score": 37.32,
+  "B2_zip_sha256": "0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3",
+  "prior_B_user_official_score": 37.63,
+  "new_candidate_official_score": null,
+  "raw_labels_or_per_frame_data_exported": false,
+  "models_videos_environment_or_new_zip_exported": false,
+  "completion_status": "STOP_AUTOPILOT_PRESERVED",
+  "stop_utc": "2026-10-08T04:25:08.980485+00:00",
+  "stop_error_type": "KeyError",
+  "stop_reason": "'status'",
+  "actual_teacher_GPU_calls": 0,
+  "actual_new_labels": 0,
+  "stale_launch_snapshot_superseded": true,
+  "historical_STOP_kept_original_bytes": true
+}
