@@ -6,6 +6,16 @@ def main():
     s=json.loads((RUN/'controller/monitor_nested_density_v1/latest.json').read_bytes())
     stage=s.get('actual_execution_stage') or (s['stages'].get('progress.json') or {}).get('stage') or ('PREFREEZE_ACTUAL_CPU_ADMISSION' if s['processes'] else 'PREPARED_PENDING_CPU')
     marker='<!-- END_CURRENT_NESTED_DENSITY -->';up=s['upstream_B1'];report=up['report']
+    resource_summary={}
+    for name,pair in s.get('resources',{}).items():
+        value=pair.get('resource')
+        if value:
+            resource_summary[name]={k:value.get(k) for k in ('status','finished_utc','exit_code','stop_reason','charged_seconds')}
+            if value.get('status')=='completed':
+                resource_summary[name]['unique_ledger_match']=sum(row==value for row in s['GPU_ledger']['owned_rows'])==1
+    replay_summary={scope:{k:value.get(k) for k in ('status','actual_proof_count','first_proof_sha256','full_private_receipt_sha256')}
+        for scope in ('nontest_01','developer_01')
+        if (value:=s['stages'].get(scope+'/replay_acceptance.json'))}
     body=(f'## 20261009单次嵌套原生帧密度探索（实际快照{s["utc"]}）\n\n'
         '原C/32B边界/历史B1科学拒绝均保留。B1实际完整86新/26旧/112B0与全部CPU回放工程失败0，'
         f'固定all104差{report["all104_B1_minus_B0"]["mean"]}、扩展72组差{report["expanded72_B1_minus_B0"]["mean"]}，'
@@ -20,7 +30,10 @@ def main():
         f'当前stage={stage}，冻结文件{s["frozen_files"]}、锁SHA={s["source_lock_sha256"]}；'
         f'完整所属命令{len(s["processes"])}、实际D done{s["done_count"]}、逐窗failure{len(s["failures"])}、'
         f'已done绑定SHA{s["all_done_bound_SHA_pass"]}、原120B0及86B1保留SHA{s.get("all_original_resume_bindings_SHA_pass")}。'
-        f'实际scope计数{s.get("done_by_scope")}；CPU与计划/冻结/启动不是生成，活跃作业费用待自然终态，不写0成本。'
+        f'实际scope计数{s.get("done_by_scope")}；CPU与计划/冻结/启动不是生成。'
+        f'各实际GPU回执{resource_summary}；ledger{s["GPU_ledger"]["lines"]}/历史offset{s["GPU_ledger"]["historical_offset"]}保持，'
+        '尚未终态的活跃GPU作业费用待自然终态追加，已完成费用按真实回执记录，不写0成本。'
+        f'实际独立CPU回放聚合{replay_summary}；已完成的回放和成功生成不重复。'
         '组件各自UTC/bytes/mtime与完整命令/-B/父子PGID/IO/fds及资源账本见private monitor，不凭GPU闲或短暂无回执认卡死。\n\n'
         'aic-linux每15分钟failed_runs_only静默，入口controller/checkpoint_nested_density_v1.py。'
         '冻源码/旧raw/STOP/UNKNOWN/成功验收/外部任务/共享锁/7200账本/连接保留；工程异常仅新版本真实复现修复与exact成功复用。'

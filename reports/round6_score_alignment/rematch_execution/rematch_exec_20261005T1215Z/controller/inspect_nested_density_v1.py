@@ -2,6 +2,7 @@
 import datetime as dt
 import importlib.util
 import json
+import zipfile
 from pathlib import Path
 
 ROOT=Path('/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z')
@@ -23,8 +24,9 @@ def capture():
     value=m.capture();here=ROOT/ENTRY
     for name in ('cpu_acceptance.json','first_real_acceptance.json','developer_01/developer.completion.json',
         'developer_01/report.json','nontest_01/replay_acceptance.json','developer_01/replay_acceptance.json',
-        'nontest_01/temporal.stage.json','nontest_01/spatial.stage.json','nontest_01/scheduling.stage.json',
-        'rematch_01/temporal.stage.json','rematch_01/spatial.stage.json','rematch_01/scheduling.stage.json'):
+        'nontest_01/temporal.stage.json','nontest_01/spatial.stage.json','nontest_01/schedule.stage.json',
+        'nontest_01/cache_reuse_receipt.json','rematch_01/temporal.stage.json','rematch_01/spatial.stage.json',
+        'rematch_01/schedule.stage.json','rematch_01/cache_reuse_receipt.json'):
         if (here/name).is_file():
             data=m.read(here/name)
             if isinstance(data,dict) and 'proofs' in data:
@@ -46,6 +48,20 @@ def capture():
         row['actual_video_grid_thw']=data['video_identity']['video_grid_thw']
     value['all_done_model_identity_matches_actual_receipts']=all(r['model_identity_matches_actual_receipt'] for r in value['done'])
     value['all_done_registered_subset_pass']=all(r['old64_subset_preserved'] for r in value['done'])
+    value['actual_archives']={}
+    for scope in ('nontest','rematch'):
+        folder=here/(scope+'_01');archive=folder/'candidate_NESTED_DENSITY_8B.zip'
+        if not archive.is_file():continue
+        pack=m.read(folder/'package.stage.json') or {};strict=m.read(folder/'independent_validation.json') or {}
+        digest=m.sha(archive)
+        with zipfile.ZipFile(archive) as z:
+            names=z.namelist();crc=z.testzip()
+            raw_equal=names==['predictions.jsonl'] and z.read('predictions.jsonl')==(folder/'predictions.jsonl').read_bytes()
+        value['actual_archives'][scope]={'path':str(archive),'bytes':archive.stat().st_size,'sha256':digest,
+            'archive_names':names,'CRC_failure':crc,'raw_predictions_bytes_equal':raw_equal,
+            'package_and_independent_SHA_match':digest==pack.get('actual_zip_sha256')==strict.get('zip_sha256'),
+            'actual_size_matches_package':archive.stat().st_size==pack.get('actual_zip_bytes'),
+            'read_utc':dt.datetime.now(dt.timezone.utc).isoformat()}
     value['local_done_by_arm']={'D':sum(r['arm']=='D' for r in value['done'])}
     value['done_by_scope']={s:sum('/'+s+'/' in r['path'] for r in value['done']) for s in ('nontest_01','developer_01','rematch_01')}
     resume=m.read(here/'input_01/resume_manifest.json')
@@ -66,6 +82,17 @@ def capture():
         'report':m.read(upstream/'developer_01/report.json'),
         'replay_status':m.read(upstream/'developer_01/replay_acceptance.json')['status'],
         'resource':m.read(ROOT/'controller/aic_BREC_v1_developer.resource.json')}
+    value['prior_routes']={}
+    for entry,files in (('context_advisory_v1',('scientific_stop.json','developer_01/full.completion.json')),
+        ('b_boundary_diagnostic_v1',('diagnostic_completion.json','inference_completion.json')),
+        ('teacher_student_autopilot_v14',('completion.json','final_acceptance.json'))):
+        receipts={}
+        for name in files:
+            path=ROOT/entry/name
+            if path.is_file():
+                data=m.read(path)
+                receipts[name]={'sha256':m.sha(path),**{k:data.get(k) for k in ('status','utc')}}
+        value['prior_routes'][entry]={'actual_owned_commands':prior_commands(entry),'receipts':receipts}
     progress=value['stages'].get('progress.json') or {};start=value['stages'].get('start.json') or {}
     phase=progress.get('stage')
     if phase=='CPU_DENSITY_ACTUAL_INPUTS' and value['stages'].get('cpu_acceptance.json') and start and any(

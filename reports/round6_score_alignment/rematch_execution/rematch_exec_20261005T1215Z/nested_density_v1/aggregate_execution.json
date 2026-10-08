@@ -1,14 +1,14 @@
 {
   "status": "CURATED_NESTED_NATIVE_DENSITY_ENGINEERING_NOT_QUALITY_TRUTH",
-  "snapshot_utc": "2026-10-08T21:07:42.206096+00:00",
+  "snapshot_utc": "2026-10-08T22:01:31.326996+00:00",
   "entry": "nested_density_v1",
   "source_lock_sha256": "7249d3fda860cf56ba13f825fa85482b4fa367b55769493fd1bbf149709327c6",
   "frozen_files": 18325,
-  "current_stage": "CONTROLLER_SOURCE_PREFLIGHT_CPU_ACTUAL_COMMAND_AND_IO",
-  "actual_new_density_done": 0,
+  "current_stage": "STOP_DENSITY_INVESTMENT_AGENT_CONTINUES",
+  "actual_new_density_done": 120,
   "done_by_scope": {
-    "nontest_01": 0,
-    "developer_01": 0,
+    "nontest_01": 8,
+    "developer_01": 112,
     "rematch_01": 0
   },
   "new_failure_count": 0,
@@ -45,6 +45,75 @@
   "actual_spatial_grid_changed_windows": 112,
   "private_CPU_receipt_sha256": "e888bd189664063dbe4fb3d1b0802919a23e00ceb3c961c3e26cd07a6536f479",
   "source_lock_resume_frames_raw_reference_rows_labels_weights_ZIP_exported": false,
+  "first_real_independent_CPU": {
+    "status": "PASS_REAL_FIRST_NESTED_DENSITY_AND_INDEPENDENT_CPU_REPLAY",
+    "utc": "2026-10-08T21:10:23.717228+00:00",
+    "input_tokens": 10464,
+    "actual_native_processor_raw_validator_equal": true,
+    "new_model_calls": 0,
+    "new_optimizer_updates": 0,
+    "private_receipt_sha256": "e51362e9cdd991512f2a4a231e8cd76aea467f1740c8b1b2f1470b418ef84189"
+  },
+  "full_developer_aggregate": {
+    "status": "STOP_NESTED_DENSITY_INVESTMENT",
+    "utc": "2026-10-08T21:48:19.868233+00:00",
+    "records": 104,
+    "groups": 96,
+    "windows": 112,
+    "new_density_calls": 112,
+    "original_B0_reused": 112,
+    "all104_D_minus_B0": {
+      "mean": -0.0011019550696133747,
+      "ci95": [
+        -0.04594426653162337,
+        0.04428385708939373
+      ],
+      "resampling_units": 96,
+      "point_estimator": "VIDEO_MACRO_RECOMPUTED_AFTER_SOURCE_GROUP_RESAMPLE",
+      "draws": 10000,
+      "seed": 20261009,
+      "CI_is_report_only": true
+    },
+    "expanded72_D_minus_B0": {
+      "mean": -0.008962509660797473,
+      "ci95": [
+        -0.06506877371352239,
+        0.04595839154933079
+      ],
+      "resampling_units": 72,
+      "point_estimator": "VIDEO_MACRO_RECOMPUTED_AFTER_SOURCE_GROUP_RESAMPLE",
+      "draws": 10000,
+      "seed": 20261009,
+      "CI_is_report_only": true
+    },
+    "changed_native_sets": 82,
+    "groups_down": 37,
+    "reference_coverage": "UNKNOWN",
+    "metric_is_closed_world_weak_output_agreement_not_quality_truth": true,
+    "observed_development_not_new_holdout": true,
+    "original_total_video_pixel_budget_unchanged": true,
+    "physical64_subset_retained": true,
+    "new_optimizer_updates": 0,
+    "official_score": null,
+    "no_post_result_retuning": true
+  },
   "new_final426_complete": false,
-  "resources": {}
+  "resources": {
+    "nontest": {
+      "status": "completed",
+      "exit_code": 0,
+      "stop_reason": null,
+      "charged_seconds": 206.10976109094918,
+      "started_utc": "2026-10-08T21:07:59.670402+00:00",
+      "finished_utc": "2026-10-08T21:11:25.780071+00:00"
+    },
+    "developer": {
+      "status": "completed",
+      "exit_code": 0,
+      "stop_reason": null,
+      "charged_seconds": 1030.6187106659636,
+      "started_utc": "2026-10-08T21:21:19.952551+00:00",
+      "finished_utc": "2026-10-08T21:38:30.571169+00:00"
+    }
+  }
 }

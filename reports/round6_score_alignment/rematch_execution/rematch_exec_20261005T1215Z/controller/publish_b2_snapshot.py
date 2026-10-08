@@ -1020,6 +1020,92 @@ def publish_nested_density_v1():
     print(json.dumps(dict(status='PASS_CURATED_NESTED_DENSITY_CORE_AND_AGGREGATE',selected_files=len(selected),raw_frames_reference_rows_models_new_ZIP_exported=False)))
 
 
+def publish_native_round_alignment_v1():
+    """Only explicitly selected core, protocols and aggregate engineering evidence."""
+    publish_nested_density_v1()
+    entry='native_round_alignment_v1';here=RUN/entry
+    snapshot=json.loads((RUN/'controller/monitor_native_round_alignment_v1/latest.json').read_bytes())
+    assert snapshot['entry']==entry and snapshot['source_lock_sha256']
+    lock=json.loads((here/'source_lock_summary.json').read_bytes())
+    assert lock['actual_core_SHA_pass'] and lock['source_lock_sha256']==snapshot['source_lock_sha256']
+    names=('nr_common.py','nr_native.py','nr_video.py','nr_prepare.py','nr_cpu.py','nr_engine.py','nr_report.py',
+        'freeze.py','packager.py','final_acceptance.py','controller.py','launch.py','CONTINUE.md','PROTOCOL.md')
+    selected=[here/n for n in names]+[RUN/'controller'/n for n in ('register_native_round_alignment_v1.py',
+        'checkpoint_native_round_alignment_v1.py','inspect_native_round_alignment_v1.py','record_native_round_alignment_execution_20261009.py',
+        'NATIVE_ROUND_ALIGNMENT_EXECUTION_20261009.md','publish_b2_snapshot.py')]
+    for name in names:
+        remote='/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/'+entry+'/'+name
+        assert hashlib.sha256((here/name).read_bytes()).hexdigest()==lock['new_core_locked_sha'][remote]
+    for path in selected:
+        target=PUB/path.relative_to(WORKSPACE);target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(path,target);assert target.read_bytes()==path.read_bytes()
+    cpu=snapshot['stages']['cpu_acceptance.json']
+    assert cpu['status']=='PASS_ALL120_NATIVE_NEAREST_PROCESSOR_AND_COMMON_PIXEL_IDENTITY' and cpu['actual_proof_count']==120
+    stage=snapshot.get('actual_execution_stage') or (snapshot['stages'].get('progress.json') or {}).get('stage')
+    aggregate=dict(status='CURATED_NATIVE_NEAREST_ENGINEERING_NOT_QUALITY_TRUTH',
+        snapshot_utc=snapshot['utc'],entry=entry,source_lock_sha256=snapshot['source_lock_sha256'],frozen_files=snapshot['frozen_files'],
+        current_stage=stage,actual_new_nearest_done=snapshot['done_count'],done_by_scope=snapshot['done_by_scope'],
+        new_failure_count=len(snapshot['failures']),all_new_done_bound_SHA_pass=snapshot['all_done_bound_SHA_pass'],
+        all_new_model_receipts_match=snapshot['all_done_model_identity_matches_actual_receipts'],
+        original120_baseline_and120_density_bindings_SHA_pass=snapshot['all_original_resume_bindings_SHA_pass'],
+        same_physical_count_first_last_grid=True,nearest_physical_frames_max=64,total_video_pixel_budget_unchanged=True,
+        native_PTS_not_rounded=True,old64_subset_claimed=False,identical_video_tensors_claimed=False,
+        observed_development_not_fresh_holdout=True,reference_coverage='UNKNOWN',quality_truth='UNKNOWN',
+        production_weight='ORIGINAL_B_8B',new_optimizer_updates=0,new_32B_calls=0,new_overview_calls=0,new_spatial_calls=0,
+        official_score=None,not_guaranteed_to_exceed37_63=True,
+        actual_CPU={k:cpu[k] for k in ('status','utc','physical_sampling_contract_cases','registered_gate_cases','max_input_tokens',
+            'actual_all120_inputs_not_estimated','new_model_calls','new_optimizer_updates','new_32B_calls')},
+        actual_CPU_input_count=cpu['actual_proof_count'],changed_inputs_decoded_and_encoded=cpu['changed_inputs_decoded_and_encoded'],
+        exact_unchanged_successes_referenced=cpu['exact_unchanged_successes_referenced'],
+        registered_changed_windows=snapshot['registered_changed_windows'],actual_spatial_grid_changed_windows=cpu['spatial_grid_changed_windows'],
+        private_CPU_receipt_sha256=cpu['full_private_receipt_sha256'],
+        source_lock_resume_frames_raw_reference_rows_labels_weights_ZIP_exported=False)
+    first=snapshot['stages'].get('first_real_acceptance.json')
+    if first:
+        aggregate['first_real_independent_CPU']={k:first[k] for k in ('status','utc','input_tokens',
+            'actual_native_processor_raw_validator_equal','new_model_calls','new_optimizer_updates')}
+        aggregate['first_real_independent_CPU']['private_receipt_sha256']=first['private_receipt_sha256']
+    report=snapshot['stages'].get('developer_01/report.json')
+    if report:aggregate['full_developer_aggregate']=report
+    final=snapshot['stages'].get('final_acceptance.json')
+    aggregate['new_final426_complete']=bool(final)
+    if final:
+        assert final['status']=='PASS_INDEPENDENT_NATIVE_ROUND_ALIGNMENT_FINAL'
+        aggregate['final_package']={k:final[k] for k in ('status','utc','candidate','zip_bytes','zip_sha256','new_optimizer_updates','official_score')}
+        aggregate['final_package']['all8_and426_11strict']=all(all(r['all_11_checks'].values()) for r in final['reports'].values())
+        aggregate['final_package']['private_final_receipt_sha256']=hashlib.sha256((here/'final_acceptance.json').read_bytes()).hexdigest()
+    aggregate['resources']={n:{k:v['resource'][k] for k in ('status','exit_code','stop_reason','charged_seconds','started_utc','finished_utc') if k in v['resource']}
+        for n,v in snapshot['resources'].items() if v.get('resource')}
+    derived=PUB/REL/entry/'aggregate_execution.json';derived.write_text(json.dumps(aggregate,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    body=(f'\n## 当前单次 native nearest64 对齐（实际快照{snapshot["utc"]}）\n\n'
+        '原密度完整112新开发/全CPU工程通过，但固定all104差−0.0011019550696133747、扩展72差−0.008962509660797473，未生产426包。'
+        '只读历史机制审计发现训练nearest64与native floor64在102/112窗改变内部观察ordinal；既有112历史raw全部当前grammar接受，不据此放松语法。'
+        '本路线仅单次同数量/first-last/grid的native nearest64对齐，原B8B/B0提示/0..5语法保持；不是PTS舍入或旧37.63包精确复现，不称原64子集或tensor相同。'
+        '完整120 CPU消费者移交含110变化窗实际decoder/processor和10原成功exact引用；原开发已经观察，弱输出集合门仅投入证据。'
+        f'当前`{stage}`、本路线实际新Q done{snapshot["done_count"]}、失败{len(snapshot["failures"])}；新训练/32B/粗览/空间0。'
+        '固定all104>=0且扩展72>0及输出集合改变门仅允许一个风险426包；覆盖、真值与官网质量UNKNOWN，不保证超过37.63。'
+        '历史最佳原B旧包37.63保持；用户已上传V14并反馈比最佳少0.03，37.60只是该反馈的推算，未独立核验官网。'
+        f'见[协议]({REL}/{entry}/PROTOCOL.md)和[筛选聚合]({REL}/{entry}/aggregate_execution.json)。新官网分未知。\n\n<!-- END_CURRENT_NATIVE_ROUND_ALIGNMENT -->\n')
+    if final:body=body.replace('新官网分未知。',f'最终426包已独立验收，实际{final["zip_bytes"]}字节、SHA256`{final["zip_sha256"]}`，Linux路径`{final["candidate"]}`；新官网分未知。')
+    def front(t):
+        first,rest=t.split('\n',1)
+        if '<!-- END_CURRENT_NATIVE_ROUND_ALIGNMENT -->' in rest:rest=rest.split('<!-- END_CURRENT_NATIVE_ROUND_ALIGNMENT -->',1)[1]
+        return first+'\n'+body+rest
+    edit(PUB/'README.md',front)
+    for name in ('SOLUTIONS.md','REPRODUCTION.md'):edit(PUB/'docs'/name,lambda t:front(t).replace(']('+REL,'](../'+REL))
+    mp=PUB/'docs/publication_manifest.json';raw=mp.read_bytes();ending='\r\n' if b'\r\n' in raw else '\n';manifest=json.loads(raw)
+    present={x['path'] for x in manifest['files']}
+    for path in selected+[derived]:
+        is_derived=path==derived;rel=path.relative_to(PUB if is_derived else WORKSPACE).as_posix()
+        if rel not in present:manifest['files'].append(dict(path=rel,source_relative_path=None if is_derived else rel,bytes=0,sha256='',
+            category='aggregate_acceptance_no_frame_data' if is_derived else ('project_code_or_configuration' if path.suffix=='.py' else 'experiment_protocol_or_acceptance')))
+    for row in manifest['files']:
+        data=(PUB/row['path']).read_bytes();row.update(bytes=len(data),sha256=hashlib.sha256(data).hexdigest())
+    manifest['updated_utc']=dt.datetime.now(dt.timezone.utc).isoformat()
+    mp.write_bytes((json.dumps(manifest,ensure_ascii=False,indent=2)+'\n').replace('\n',ending).encode())
+    print(json.dumps(dict(status='PASS_CURATED_NATIVE_ROUND_ALIGNMENT_CORE_AND_AGGREGATE',selected_files=len(selected),raw_frames_reference_rows_models_new_ZIP_exported=False)))
+
+
 if __name__=='__main__':
     import argparse
     parser=argparse.ArgumentParser()
@@ -1028,8 +1114,10 @@ if __name__=='__main__':
     parser.add_argument('--boundary-diagnostic',action='store_true')
     parser.add_argument('--b-prompt-recovery',action='store_true')
     parser.add_argument('--nested-density',action='store_true')
+    parser.add_argument('--native-round-alignment',action='store_true')
     args=parser.parse_args()
-    if args.nested_density:publish_nested_density_v1()
+    if args.native_round_alignment:publish_native_round_alignment_v1()
+    elif args.nested_density:publish_nested_density_v1()
     elif args.b_prompt_recovery:publish_b_prompt_recovery_v1()
     elif args.boundary_diagnostic:publish_boundary_diagnostic_v1()
     elif args.context_advisory:publish_context_advisory_v1()

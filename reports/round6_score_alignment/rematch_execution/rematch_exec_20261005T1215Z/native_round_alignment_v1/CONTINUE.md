@@ -1,0 +1,9 @@
+# 唯一接续入口
+
+先读根AGENTS.md、STATUS_AUTOPILOT_20261007.md、controller/NATIVE_ROUND_ALIGNMENT_EXECUTION_20261009.md和本目录PROTOCOL.md。当前native_round_alignment_v1是独立新协议；source_lock/start/registration及阶段以实际回执为准，不能以历史PID、CPU或计划判已生成。
+
+CPU完整消费者移交、冻结preflight通过后仅允许一次launch.py；不得重启launcher、修改冻结文件、重复成功模型调用或已完成CPU回放。完整旧密度112已CPU通过并科学拒绝，保留原18325锁、120成功/STOP/费用；只读机制审计已完成不重跑。Q固定same-count nearest64，变化开发102新调用，旧10 exact引用，NONTEST和未来426 fresh/reuse各自记录，不把调用数当records或optimizer。
+
+通过controller/checkpoint_native_round_alignment_v1.py只读巡检，controller/monitor_native_round_alignment_v1/latest.json/latest_delta.json保留真实组件UTC。record_native_round_alignment_execution_20261009.py只更新非锁内AGENTS/STATUS/handoff；需保护全部历史files/production_files schemas。工程问题独立复现新版本修复，科学STOP有限证据耗尽保留B，禁止无限扫配方或强造更好包。
+
+每15分钟静默，正常/CPU/队列/科学裁决/修复只写项目；最终真实426全部11strict/ZIP字节身份账本/独立final与筛选发布完成才一次报告，删除aic-linux，不归档。新包官网分未知、留Linux、不自动回传或提交。小量控制直接SSH例外保持，大流量先许可，共享外部任务和连接服务保留。

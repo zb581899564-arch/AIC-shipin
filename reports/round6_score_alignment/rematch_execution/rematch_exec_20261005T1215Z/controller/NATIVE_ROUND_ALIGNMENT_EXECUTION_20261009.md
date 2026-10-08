@@ -1,0 +1,21 @@
+# 独立单次 native nearest64 接续
+
+本记录位于所有历史冻结锁外。用户已授权主控独立科学/工程裁决与睡眠期间持续接手；每15分钟静默，最终真实完整新426 ZIP全部验收后一次汇报。授权不扩大文件传输流量或系统/外部任务权限。
+
+原 nested_density_v1 21:48:19UTC完整112开发/104记录/120总成功，全独立CPU回放通过，逐窗failure0。原固定all104 D-B0=-0.0011019550696133747、扩展72组=-0.008962509660797473，科学门STOP保持。NT GPU206.10976109094918秒、开发GPU1030.6187106659636秒各自然completed/exit0/null、唯一追加账本160/161、7200offset保持。原18325锁7249d3fda860cf56ba13f825fa85482b4fa367b55769493fd1bbf149709327c6与120成功raw、完整CPU回执不改不重跑。独立开发CPU receipt SHA8c47e8dc6d4c0bb41364b5537ad310f3eaacfb0fe583b261f294cb52d26ac933。原非测试2198字节ZIP/504帧/8身份/11strict仅8源，不能提交426。
+
+22:08:47UTC真实只读机制审计receipt SHA c75ede8d7c63d0c368065863cece1b48974e20ba9b835f7fd9bb57807009919e：原112历史raw全部当前grammar可接受，无单独空白误拒绝；历史与当前空间/时间grid112/112相等；训练nearest64与native floor64在102/112原eligible窗改变3054观察ordinal。原112历史弱宏.6777229641052717/当前B0.671274536235406只是既有弱参考一致性，不是官网或质量。审计新model/decoder/optimizer0，原证据不重复验收，具体唯一有限nearest64假设在PROTOCOL.md预登记，不开展grammar/prompt/density/pixel扫描。
+
+新协议保留原B8B/B0 prompt/0..5 grammar/greedy/原自然窗/nativePTS/精确色彩，samecount/first-last/grid，将内部ordinal改为整数nearest。CPU变化窗实际解码与processor、交集RGB/完整PTS、token、2000算术合同/4固定门与旧V14完整521原raw validator/model/input合同先核验。新开发102变化真实调用/10原精确成功引用，NONTEST8另计；没有新训练/32B/overview/spatial，成本逐作业真实计。原开发已观察，coverage/人工真值/独立幻觉率/官网质量UNKNOWN；原固定完整all104>=0且扩展72>0及实际输出集合变化才GO一个426/521风险包，不保证超过37.63。
+
+当前具体source_lock/start/registration/CPU/调用/终态及完整命令父子PGID/IO/fds由controller/monitor_native_round_alignment_v1/latest.json和latest_delta.json实时核。CPU或启动不代表生成，不凭GPU闲或暂缺回执认卡死。冻结后不改任何运行源码/旧raw/已验收CPU、不重开launcher；未知工程问题保留证据后独立新版本修复，科学STOP有限证据耗尽保留B。新最终426必须根completion/独立final/全部8与426各11strict/实际ZIP大小SHA CRC唯一JSONL/426身份原字节/全部GPU自然终态唯一账本与筛选GitHub通过，包留Linux，新官网分UNKNOWN，不自动回传或提交。
+
+本轮预冻结发现模板namespace替换曾误改bind_helpers/bound_files/end_sec，未部署前已复现并修正，原本地版本归档prelock_repairs与controller/NRA_prefreeze_namespace_correction_20261009.json保存；新调用0。后续实际V14旧temporal的input_tokens位于video_identity内，真实只读metadata复核后精确修正新alias消费者读取，旧字节不改。代码、CPU与真实生成分别登记，不能把模板制作当实验完成。
+
+GitHub仅明确白名单核心/协议/工程聚合和receiptSHA，不含source_lock/resume/逐帧CPU/raw/weak/matched/参考细节/模型视频环境hosts备份/新ZIP；提交前实际origin/gh/author/committer核验、只审本任务文件/WIP保留、不force历史，push后核remoteHEAD。最后既有31174d74c1e7f20e62bd6dda9207a354f0751921公开21:07:42是旧密度历史snapshot，不当当前live核验。小量直接SSH项目控制既有例外保持，Mac在线不参与；大流量先许可，外部任务/锁/7200offset/连接服务不动。
+
+## 实际CPU准入、冻结与单次启动
+
+2026-10-08T22:25:18.766192+00:00完整120消费者CPU准入PASS：110变化输入实际decoder/processor与10原成功exact引用，2000 ordinal性质/4固定门/521旧V14原raw validator及2修改拒绝、samecount/firstlast/grid与交集RGB全部通过，实际maxinput=6761，grid变化0，新model/optimizer/32B0。完整私有CPU proof SHA0d21fc806693fcc5a5879bc1286b266451100955db1d903de205397753f3ee0f留Linux，不回传，不重复。新跨消费者完整B0 processor prompt独立纯CPU合同receipt SHA b453ea5815fa293e8a5b925448c1197df213b2de6900378f3c938022f2f2a0cd 已通过；不是重复旧V14正式验收。
+
+冻结18607文件，source_lock SHA212b0f9a2b66f7837d0f29572e2af2ffdc4044ae3fb5cd0b00718b6cb032da48，完整冻结preflight通过。2026-10-08T22:29:33.846469+00:00单次launcher启动，历史PID/PGID3752386仅启动回执，后续必须实时核完整命令/父子PGID/IO/fds。CPU和启动新模型调用0，尚无426包；当前进度以实时monitor为准，不能拿计划110调用或历史PID当真实成功。
