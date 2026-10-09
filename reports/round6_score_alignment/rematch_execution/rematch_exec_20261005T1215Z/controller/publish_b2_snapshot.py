@@ -1242,8 +1242,12 @@ if __name__=='__main__':
     parser.add_argument('--nested-density',action='store_true')
     parser.add_argument('--native-round-alignment',action='store_true')
     parser.add_argument('--spatial-gap8-slot4',action='store_true')
+    parser.add_argument('--balanced-two-window-risk',action='store_true')
     args=parser.parse_args()
-    if args.spatial_gap8_slot4:publish_spatial_gap8_slot4_v2()
+    if args.balanced_two_window_risk:
+        from publish_balanced_two_window_snapshot import publish
+        publish()
+    elif args.spatial_gap8_slot4:publish_spatial_gap8_slot4_v2()
     elif args.native_round_alignment:publish_native_round_alignment_v1()
     elif args.nested_density:publish_nested_density_v1()
     elif args.b_prompt_recovery:publish_b_prompt_recovery_v1()

@@ -1,0 +1,172 @@
+{
+  "status": "CURATED_BALANCED_TWO_WINDOW_ENGINEERING_SNAPSHOT",
+  "snapshot_utc": "2026-10-09T05:57:45.505062+00:00",
+  "entry": "balanced_two_window_risk_v3",
+  "source_lock_sha256": "66668c77abf824e95892989f507a7ccd8ffce234da45ed3af2b0ac324322f490",
+  "frozen_files": 19515,
+  "all_frozen_SHA_pass": true,
+  "stage": "PASS_COMPLETE_426_BALANCED_TWO_WINDOW_RISK_ZIP_ON_LINUX",
+  "cpu": {
+    "cpu_status": "PASS_ALL_CHANGED_BALANCED_NATIVE_PROCESSOR_AND_EXACT_BOUNDARIES",
+    "cpu_counts": {
+      "nontest": 0,
+      "developer": 16,
+      "rematch": 116
+    },
+    "max_input_tokens": 12716,
+    "cpu_receipt_sha256": "cc6117d720ad8c472ed60c48f79ff22640dbf54395242f6c737a38bf5b342fdf"
+  },
+  "exact_planned_new_calls_this_version": {
+    "developer": 15,
+    "rematch": 116
+  },
+  "exact_recovered_prior_calls": 1,
+  "planned_route_actual_calls": 132,
+  "exact_old_calls": {
+    "nontest": 8,
+    "developer": 96,
+    "rematch": 405
+  },
+  "source_records": {
+    "nontest": 8,
+    "developer": 104,
+    "rematch": 426
+  },
+  "local_windows": {
+    "nontest": 8,
+    "developer": 112,
+    "rematch": 521
+  },
+  "production_weight": "ORIGINAL_B_8B",
+  "logical_parameters": 8782459120,
+  "adapter_saved_equality": 288,
+  "new_optimizer_updates": 0,
+  "new_teacher_32B_calls": 0,
+  "new_overview_calls": 0,
+  "new_spatial_calls": 0,
+  "scopes": {
+    "nontest": {
+      "read_utc": "2026-10-09T05:56:35.529822+00:00",
+      "fresh_done": 0,
+      "recovered_exact_prior_done": 0,
+      "accepted_route_done": 0,
+      "raw": 0,
+      "failures": 0,
+      "all_done_bound_sha": true,
+      "independent_status": "PASS_INDEPENDENT_STRICT_VALIDATION",
+      "all11_checks": {
+        "strict_loader_ok": true,
+        "video_record_set_exact": true,
+        "selected_key_set_exact": true,
+        "ratio_fields_exact": true,
+        "frames_sorted": true,
+        "provenance_key_set_exact": true,
+        "provenance_boxes_match_predictions": true,
+        "provenance_all_legal": true,
+        "provenance_sources_allowed": true,
+        "archive_single_file": true,
+        "archive_roundtrip_exact": true
+      },
+      "candidate_archives": [
+        {
+          "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/balanced_two_window_risk_v3/nontest_01/candidate_BALANCED_TWO_WINDOW_8B.zip",
+          "bytes": 1977,
+          "sha256": "27fc62d2f164d82dbc3cadd3ec9b5e05dcdfcc8896c8e00cf7fe0ae5fd2c56a0"
+        }
+      ]
+    },
+    "developer": {
+      "read_utc": "2026-10-09T05:56:35.545449+00:00",
+      "fresh_done": 15,
+      "recovered_exact_prior_done": 1,
+      "accepted_route_done": 16,
+      "raw": 15,
+      "failures": 0,
+      "all_done_bound_sha": true,
+      "accepted_new_CPU_replays": 16,
+      "candidate_archives": []
+    },
+    "rematch": {
+      "read_utc": "2026-10-09T05:56:35.668039+00:00",
+      "fresh_done": 116,
+      "recovered_exact_prior_done": 0,
+      "accepted_route_done": 116,
+      "raw": 116,
+      "failures": 0,
+      "all_done_bound_sha": true,
+      "accepted_new_CPU_replays": 116,
+      "independent_status": "PASS_INDEPENDENT_STRICT_VALIDATION",
+      "all11_checks": {
+        "strict_loader_ok": true,
+        "video_record_set_exact": true,
+        "selected_key_set_exact": true,
+        "ratio_fields_exact": true,
+        "frames_sorted": true,
+        "provenance_key_set_exact": true,
+        "provenance_boxes_match_predictions": true,
+        "provenance_all_legal": true,
+        "provenance_sources_allowed": true,
+        "archive_single_file": true,
+        "archive_roundtrip_exact": true
+      },
+      "candidate_archives": [
+        {
+          "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/balanced_two_window_risk_v3/rematch_01/candidate_BALANCED_TWO_WINDOW_8B.zip",
+          "bytes": 306167,
+          "sha256": "07730c9e02e68d1a1ce54e7ef5a8aa616346cf8f2f8d78426ed36bc3eb481496"
+        }
+      ]
+    }
+  },
+  "resources": {
+    "developer": {
+      "status": "completed",
+      "exit_code": 0,
+      "stop_reason": null,
+      "charged_seconds": 226.98856798466295,
+      "receipt_sha256": "33beb2868e0bd17d2116ff74c752fa329c1fef2399dc704a6c6aff208f62f692",
+      "unique_terminal_match": true
+    },
+    "rematch": {
+      "status": "completed",
+      "exit_code": 0,
+      "stop_reason": null,
+      "charged_seconds": 1589.5093126064166,
+      "receipt_sha256": "1b6ee2abb33c51a7734df7d70d4a0ad29463b67d05bdd40deab976cfb3411d08",
+      "unique_terminal_match": true
+    }
+  },
+  "ledger": {
+    "lines": 168,
+    "sha256": "da3dd15b25f6923e6b5427e0376c0fe1e7b0da67a6ad3e5fbf2d1266f19b7867",
+    "read_utc": "2026-10-09T05:56:35.678183+00:00",
+    "historical_offset": 7200
+  },
+  "user_explicitly_accepted_experiment_risk": true,
+  "independent_quality_reference": "UNKNOWN",
+  "official_score": null,
+  "old_B_best_score": 37.63,
+  "old_B_best_ZIP_SHA": "86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54",
+  "complete_426": true,
+  "final_status": "PASS_INDEPENDENT_BALANCED_TWO_WINDOW_RISK_FINAL",
+  "final_candidate": {
+    "candidate": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/balanced_two_window_risk_v3/rematch_01/candidate_BALANCED_TWO_WINDOW_8B.zip",
+    "zip_bytes": 306167,
+    "zip_sha256": "07730c9e02e68d1a1ce54e7ef5a8aa616346cf8f2f8d78426ed36bc3eb481496"
+  },
+  "final_acceptance_sha256": "8aff803c79f9bf291b919f4c81061aa5e28a056dbb0f9b20dd60010f030eec05",
+  "completion_sha256": "5302e9350d2e664d4a4a25742d3c915b8636f5a3ad40db2ff11394f9d577ba64",
+  "prior_failed_GPU": {
+    "sha256": "1b4a5ac95e9f5bb08f776eeb3e36e04e405ea25a16576bc207de48708c222d18",
+    "charged_seconds": 144.4350819280371
+  },
+  "frame_effect_vs_V14": {
+    "new_selected_frames": 102112,
+    "original_V14_selected_frames": 102470,
+    "added_keys": 6681,
+    "removed_keys": 7039,
+    "selected_key_set_changed": true,
+    "identity_audit_not_quality_metric": true
+  },
+  "raw_frames_private_plans_weak_labels_full_discussion_model_or_ZIP_exported": false
+}

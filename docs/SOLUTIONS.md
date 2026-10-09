@@ -1,5 +1,11 @@
 # 方案、证据与当前状态
 
+## 当前双窗均衡风险实验（快照UTC 2026-10-09T05:57:45.505062+00:00）
+
+用户明确接受试验不确定性后，执行网页讨论中的双窗均衡分区候选。仅原30秒主窗加短尾、总长严格30至60秒的两窗改为精确中点等长两窗；保留原B权重、B0提示/grammar、native时钟/floor64和原完整空间源场。新训练更新0。非测试16和复赛116个变化窗口的真实回答及全部132项独立CPU回放已完成，其中本工程版新生成131个、原有效回答exact恢复1个；其余请求按完整身份及SHA引用。完整426候选已独立验收：306167字节，SHA256 `07730c9e02e68d1a1ce54e7ef5a8aa616346cf8f2f8d78426ed36bc3eb481496`，Linux路径 `/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/balanced_two_window_risk_v3/rematch_01/candidate_BALANCED_TWO_WINDOW_8B.zip`。 非测试和最终包工程通过不等于提分，独立质量参考和新官网分未知，可能低于旧最佳37.63。见[协议](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/balanced_two_window_risk_v3/PROTOCOL.md)和[工程聚合](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/balanced_two_window_risk_v3/aggregate_execution.json)。包留Linux，不自动回传或官网提交。
+
+<!-- END_CURRENT_BALANCED_TWO_WINDOW_RISK -->
+
 ## 本轮空间 PCHIP 有限探索已结束（验收UTC 2026-10-09T02:37:07.014620+00:00）
 
 重新一锅炖后已按固定协议实际执行：原8B空间基座、adapter OFF，8来源组/56隔离探针，53次真实新生成与53份独立CPU回放、3条旧成功exact引用，工程失败0。v1装载后grad标志准入错误已在独立v2修复，原失败和成本保留。确认组只有3/6为正，未达到至少4/6；确认均值-0.002695057、全8组均值-0.002307551，全部固定数值门未通过，独立原raw/有理数重算及真实账本验收一致。**本版NO_426，未生成新提交包，更好包的目标尚未实现。** 该指标只表示同模型逐帧重建一致性，不是人工构图质量或官网分。不按结果更换来源、公式或阈值；原B历史最高37.63及其旧包保持。V14用户反馈低0.03，约37.60仅差值推算。后续质量路线需要合法可用、源隔离的原生目标比例独立构图参考。本轮未新增训练/32B/时间/粗览；Pro新增5次额度已用1次，余4次。见[协议](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/spatial_gap8_pchip_slot4_v2/PROTOCOL.md)、[工程聚合](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/spatial_gap8_pchip_slot4_v2/aggregate_execution.json)和[有限结论](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/SG8_FINITE_CONCLUSION_20261009.md)。
