@@ -1127,6 +1127,111 @@ def publish_native_round_alignment_v1():
     print(json.dumps(dict(status='PASS_CURATED_NATIVE_ROUND_ALIGNMENT_CORE_AND_AGGREGATE',selected_files=len(selected),raw_frames_reference_rows_models_new_ZIP_exported=False)))
 
 
+def publish_spatial_gap8_slot4_v2():
+    """Publish only SG8 code/protocol and finite aggregate, never probe rows."""
+    from register_b2_package_v1 import remote, REMOTE
+    entry='spatial_gap8_pchip_slot4_v2';here=RUN/entry
+    snapshot=json.loads((RUN/'controller/monitor_spatial_gap8_slot4_v2/latest.json').read_bytes())
+    closure=json.loads((RUN/'controller/SG8_scientific_stop_acceptance_20261009_summary.json').read_bytes())
+    assert snapshot['route']==entry and not snapshot['processes'] and not snapshot['failures']
+    assert closure['status']=='PASS_INDEPENDENT_SG8_FINITE_NO_426_RAW_GATE_AND_ACCOUNTING'
+    assert closure['source_lock_sha256']==snapshot['source_lock_sha256'] and closure['all_frozen_bytes_SHA_pass']
+    assert closure['new_final_426_ZIP'] is False and closure['finite_registered_route_exhausted']
+    names=('sg8_common.py','sg8_math.py','sg8_independent_math.py','sg8_sampling.py',
+        'sg8_field.py','sg8_independent_field.py','sg8_prepare.py','sg8_engine.py','sg8_replay.py',
+        'sg8_report.py','sg8_packager.py','sg8_final.py','sg8_controller.py','sg8_launch.py',
+        'sg8_engineering_register.py','PROTOCOL.md')
+    script="""import hashlib,json,socket
+from pathlib import Path
+assert socket.gethostname()=='inspur-NP5570M5'
+p=Path(%r)/%r;lock=json.loads((p/'source_lock.json').read_bytes())
+expected=%r
+assert hashlib.sha256((p/'source_lock.json').read_bytes()).hexdigest()==expected
+result={}
+for name in %r:
+ path=p/name;actual=hashlib.sha256(path.read_bytes()).hexdigest()
+ assert actual==lock['files'][str(path)],'frozen public core changed'
+ result[name]=actual
+print(json.dumps(dict(source_lock_sha256=expected,actual_core_locked_sha=result)))
+"""%(REMOTE,entry,snapshot['source_lock_sha256'],names)
+    actual=json.loads(remote(script,echo=False))
+    for name in names:
+        assert hashlib.sha256((here/name).read_bytes()).hexdigest()==actual['actual_core_locked_sha'][name],name
+    actual['verified_utc']=dt.datetime.now(dt.timezone.utc).isoformat()
+    (RUN/'controller/SG8_publication_core_source_check_20261009.json').write_text(
+        json.dumps(actual,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    selected=[here/n for n in names]+[RUN/'controller'/n for n in (
+        'checkpoint_spatial_gap8_slot4_v2.py','inspect_spatial_gap8_slot4_v2.py',
+        'record_spatial_gap8_slot4_v2_execution_20261009.py','accept_spatial_gap8_scientific_stop_20261009.py',
+        'SG8_FINITE_CONCLUSION_20261009.md','publish_b2_snapshot.py')]
+    for path in selected:
+        target=PUB/path.relative_to(WORKSPACE);target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(path,target);assert target.read_bytes()==path.read_bytes()
+    fields=('status','utc','source_lock_sha256','frozen_files','all_frozen_bytes_SHA_pass','observations',
+        'source_groups','engineering_groups','confirmation_groups','phases_per_group','new_space_calls',
+        'exact_old_probe_references','accepted_CPU_proofs','original_supports','probe_used_as_support',
+        'confirmation_positive_groups','required_confirmation_positive_groups','confirmation_mean',
+        'all8_mean','checks','independent_original_raw_parser_and_polynomial_reconstruction',
+        'report_sha256','scientific_stop_sha256','inference_completion_sha256','resources','ledger_records',
+        'historical_offset_preserved','original_space_cost_seconds_preserved','owned_processes',
+        'new_decoder_processor_calls','new_model_calls_in_acceptance','new_optimizer_updates',
+        'new_final_426_ZIP','new_full_NONTEST_field','quality_truth','official_new_score',
+        'original_best_B_score','finite_registered_route_exhausted','conclusion','next_evidence')
+    aggregate={k:closure[k] for k in fields}
+    aggregate.update(snapshot_utc=snapshot['utc'],entry=entry,
+        private_acceptance_sha256=closure['private_receipt_sha256'],
+        publication_core_source_verification_utc=actual['verified_utc'],
+        actual_core_source_SHA_pass=True,space_model_parameters=8767123696,space_adapter_enabled=False,
+        base_canonical_sha256='74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59',
+        new_teacher_32B_calls=0,new_time_calls=0,new_overview_calls=0,
+        metric='same_model_framewise_reconstruction_agreement',
+        composition_truth='UNKNOWN',official_score_prediction=False,
+        Pro_new_used=1,Pro_new_granted=5,Pro_new_remaining=4,
+        old_best_B_ZIP_sha256='86bd5301f6f6771a8451b32063781e214cdd70245ae5513f2a767eaecb9ebe54',
+        V14_user_feedback_minus_best=0.03,V14_score37_60_is_inferred=True,
+        raw_per_frame_probe_answers_support_rows_sample_plan_discussion_models_ZIP_exported=False)
+    derived=PUB/REL/entry/'aggregate_execution.json'
+    derived.write_text(json.dumps(aggregate,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    body=(f'\n## 本轮空间 PCHIP 有限探索已结束（验收UTC {closure["utc"]}）\n\n'
+        '重新一锅炖后已按固定协议实际执行：原8B空间基座、adapter OFF，8来源组/56隔离探针，'
+        '53次真实新生成与53份独立CPU回放、3条旧成功exact引用，工程失败0。'
+        'v1装载后grad标志准入错误已在独立v2修复，原失败和成本保留。'
+        f'确认组只有{closure["confirmation_positive_groups"]}/6为正，未达到至少4/6；'
+        f'确认均值{closure["confirmation_mean"]["display_float"]:.9f}、全8组均值{closure["all8_mean"]["display_float"]:.9f}，'
+        '全部固定数值门未通过，独立原raw/有理数重算及真实账本验收一致。'
+        '**本版NO_426，未生成新提交包，更好包的目标尚未实现。** '
+        '该指标只表示同模型逐帧重建一致性，不是人工构图质量或官网分。'
+        '不按结果更换来源、公式或阈值；原B历史最高37.63及其旧包保持。'
+        'V14用户反馈低0.03，约37.60仅差值推算。'
+        '后续质量路线需要合法可用、源隔离的原生目标比例独立构图参考。'
+        '本轮未新增训练/32B/时间/粗览；Pro新增5次额度已用1次，余4次。'
+        f'见[协议]({REL}/{entry}/PROTOCOL.md)、[工程聚合]({REL}/{entry}/aggregate_execution.json)和'
+        f'[有限结论]({REL}/controller/SG8_FINITE_CONCLUSION_20261009.md)。\n\n'
+        '<!-- END_CURRENT_SG8_SLOT4 -->\n')
+    def front(t):
+        first,rest=t.split('\n',1)
+        if '<!-- END_CURRENT_SG8_SLOT4 -->' in rest:rest=rest.split('<!-- END_CURRENT_SG8_SLOT4 -->',1)[1]
+        return first+'\n'+body+rest
+    edit(PUB/'README.md',front)
+    for name in ('SOLUTIONS.md','REPRODUCTION.md'):
+        edit(PUB/'docs'/name,lambda t:front(t).replace(']('+REL,'](../'+REL))
+    mp=PUB/'docs/publication_manifest.json';raw=mp.read_bytes()
+    ending='\r\n' if b'\r\n' in raw else '\n';manifest=json.loads(raw)
+    present={x['path'] for x in manifest['files']}
+    for path in selected+[derived]:
+        is_derived=path==derived;rel=path.relative_to(PUB if is_derived else WORKSPACE).as_posix()
+        if rel not in present:
+            manifest['files'].append(dict(path=rel,source_relative_path=None if is_derived else rel,bytes=0,sha256='',
+                category='aggregate_acceptance_no_frame_data' if is_derived else
+                    ('project_code_or_configuration' if path.suffix=='.py' else 'experiment_protocol_or_acceptance')))
+    for row in manifest['files']:
+        data=(PUB/row['path']).read_bytes();row.update(bytes=len(data),sha256=hashlib.sha256(data).hexdigest())
+    manifest['updated_utc']=dt.datetime.now(dt.timezone.utc).isoformat()
+    mp.write_bytes((json.dumps(manifest,ensure_ascii=False,indent=2)+'\n').replace('\n',ending).encode())
+    print(json.dumps(dict(status='PASS_CURATED_SG8_FINITE_CORE_PROTOCOL_AND_AGGREGATE',selected_files=len(selected),
+        raw_probe_answers_per_frame_sample_model_new_ZIP_exported=False)))
+
+
 if __name__=='__main__':
     import argparse
     parser=argparse.ArgumentParser()
@@ -1136,8 +1241,10 @@ if __name__=='__main__':
     parser.add_argument('--b-prompt-recovery',action='store_true')
     parser.add_argument('--nested-density',action='store_true')
     parser.add_argument('--native-round-alignment',action='store_true')
+    parser.add_argument('--spatial-gap8-slot4',action='store_true')
     args=parser.parse_args()
-    if args.native_round_alignment:publish_native_round_alignment_v1()
+    if args.spatial_gap8_slot4:publish_spatial_gap8_slot4_v2()
+    elif args.native_round_alignment:publish_native_round_alignment_v1()
     elif args.nested_density:publish_nested_density_v1()
     elif args.b_prompt_recovery:publish_b_prompt_recovery_v1()
     elif args.boundary_diagnostic:publish_boundary_diagnostic_v1()

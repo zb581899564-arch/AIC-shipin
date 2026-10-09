@@ -1,5 +1,11 @@
 # 运行和资产说明
 
+## 本轮空间 PCHIP 有限探索已结束（验收UTC 2026-10-09T02:37:07.014620+00:00）
+
+重新一锅炖后已按固定协议实际执行：原8B空间基座、adapter OFF，8来源组/56隔离探针，53次真实新生成与53份独立CPU回放、3条旧成功exact引用，工程失败0。v1装载后grad标志准入错误已在独立v2修复，原失败和成本保留。确认组只有3/6为正，未达到至少4/6；确认均值-0.002695057、全8组均值-0.002307551，全部固定数值门未通过，独立原raw/有理数重算及真实账本验收一致。**本版NO_426，未生成新提交包，更好包的目标尚未实现。** 该指标只表示同模型逐帧重建一致性，不是人工构图质量或官网分。不按结果更换来源、公式或阈值；原B历史最高37.63及其旧包保持。V14用户反馈低0.03，约37.60仅差值推算。后续质量路线需要合法可用、源隔离的原生目标比例独立构图参考。本轮未新增训练/32B/时间/粗览；Pro新增5次额度已用1次，余4次。见[协议](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/spatial_gap8_pchip_slot4_v2/PROTOCOL.md)、[工程聚合](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/spatial_gap8_pchip_slot4_v2/aggregate_execution.json)和[有限结论](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/SG8_FINITE_CONCLUSION_20261009.md)。
+
+<!-- END_CURRENT_SG8_SLOT4 -->
+
 ## 当前单次 native nearest64 对齐（实际快照2026-10-08T23:10:29.158406+00:00）
 
 原密度完整112新开发/全CPU工程通过，但固定all104差−0.0011019550696133747、扩展72差−0.008962509660797473，未生产426包。只读历史机制审计发现训练nearest64与native floor64在102/112窗改变内部观察ordinal；既有112历史raw全部当前grammar接受，不据此放松语法。本路线仅单次同数量/first-last/grid的native nearest64对齐，原B8B/B0提示/0..5语法保持；不是PTS舍入或旧37.63包精确复现，不称原64子集或tensor相同。完整120 CPU消费者移交含110变化窗实际decoder/processor和10原成功exact引用；原开发已经观察，弱输出集合门仅投入证据。当前`STOP_ROUND_ALIGNMENT_INVESTMENT_FINITE_EVIDENCE_EXHAUSTED`、本路线实际新Q done110、失败0；新训练/32B/粗览/空间0。固定all104>=0且扩展72>0及输出集合改变门仅允许一个风险426包；覆盖、真值与官网质量UNKNOWN，不保证超过37.63。历史最佳原B旧包37.63保持；用户已上传V14并反馈比最佳少0.03，37.60只是该反馈的推算，未独立核验官网。见[协议](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/native_round_alignment_v1/PROTOCOL.md)和[筛选聚合](../reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/native_round_alignment_v1/aggregate_execution.json)。本轮完整102新开发回答与10原exact引用、全102独立CPU回放通过；all104弱差0.0028675084249248947，扩展72组弱差-0.011370797431947438，扩展组门拒绝，未生产新的426包。有限已登记输入机制已结束，保留原B最佳包；更好包的目标尚未实现，新官网分未知。
