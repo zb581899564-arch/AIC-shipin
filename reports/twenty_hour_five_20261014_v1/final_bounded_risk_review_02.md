@@ -1,0 +1,7 @@
+主代理与 final_package_admission_review_01 的有界风险审查
+
+固定 combine/renderer 机制未发现具体新增严重事实问题：无效或越原生域决策报错；KEEP/UNKNOWN保持原端点，双端冲突恢复原区间；D8原长度padding条件保持；SOURCE只开放实际改变的REFINE一侧；VERIFY按事件去除、重叠并集仍保留、整源为空恢复原D8。实际封包仍必须重现122050帧基线、426非空、原PTS/连续源场/保留框、11strict、9B限制与历史/彼此真实预测去重。
+
+此结论仅支持人类已授权的效果未知合理探索包，不证明安全提分。SOURCE padding可能超局部观察支持，VERIFY及端点移动可能降低召回；没有当前密集人工高光真值资格化这些生产预测。1992模型和独立QA/49自然批只证明工程完成，UNKNOWN不作为安全证据。旧科学FAILED、原40源UNKNOWN和失败门保持，旧拒绝的空间/缩框/base-only路线不复活；不看测试预测内容、视频或GT来选择方案，不据排行调参。
+
+真实technical/source锁及自然终态未过时不得写package_admission；单包任何工程/格式/完整性/真实差异不符仍拒绝。后续回执明确UNVERIFIED_EXPLICIT_RISK、quality_pass_claimed=false、official_score=UNKNOWN，不自动官网提交。

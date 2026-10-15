@@ -1,0 +1,22 @@
+{
+  "stage": "CPU_INPUTS_ACCEPTED_FIXED_ASYMMETRIC_RULE_AWAITING_INDEPENDENT_REVIEW",
+  "utc": "2026-10-12T00:37:31.627240+00:00",
+  "baseline_candidate": "BOUNDARY_CONTEXT_050",
+  "baseline_user_reported_score": 40.26,
+  "baseline_zip_sha256": "200a3ef337eefd9fe296c781a2335ed16696f3539ee2602601da45f1cceef32b",
+  "candidate": "ASYMMETRIC_BOUNDARY_PRE075_POST050_8B",
+  "padding_exact": [
+    "3/4",
+    "1/2"
+  ],
+  "protocol": "reports/boundary_refinement_20261012_v1/PROTOCOL.json",
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "new_video_decodes": 0,
+  "new_processor_encodes": 0,
+  "official_score": null,
+  "quality_pass": false,
+  "source_quality_reference": "FAILED_PRESERVED",
+  "heartbeat_status": "OLD_AIC_DELETED_NOT_RESTARTED",
+  "next": "One new local CPU package after independent review and source freeze; verify426 baseline-preserving native membership and11strict, then deliver ZIP."
+}

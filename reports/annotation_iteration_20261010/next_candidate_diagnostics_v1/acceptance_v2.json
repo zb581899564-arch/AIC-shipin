@@ -1,0 +1,71 @@
+{
+  "status": "CPU_DIAGNOSTICS_ACCEPTED_CANDIDATE_ADMISSION_BLOCKED_BY_REFERENCE_GAPS",
+  "utc": "2026-10-10T13:59:35.705056+00:00",
+  "engineering_checks": {
+    "six_actual_unit_tests_passed": true,
+    "independent_geometry_review_accepted": true,
+    "independent_temporal_review_fixes_accepted": true,
+    "original_reports_and_engineering_failure_preserved": true
+  },
+  "diagnostics": {
+    "temporal": "temporal_binding_v2.json",
+    "spatial": "spatial_geometry_v2.json",
+    "B_exposure": "B_exposure.json"
+  },
+  "baseline": {
+    "path": "G:\\ai\\AIC视频\\deliveries\\ANNOTATION_ITERATION_20261010\\SAFE_37_66\\candidate_SAFE_37_66.zip",
+    "bytes": 306167,
+    "sha256": "07730c9e02e68d1a1ce54e7ef5a8aa616346cf8f2f8d78426ed36bc3eb481496",
+    "records": 426,
+    "CRC_ok": true
+  },
+  "old_scale_STOP": {
+    "path": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_execution\\rematch_exec_20261005T1215Z\\next_round_v1\\scale_reference_gate_01.json",
+    "sha256": "28c4a022bdff7319c165d57cd41bcd6880a346564e48b2ae374475a9ab190b44"
+  },
+  "frozen_quality_protocol": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\frozen_protocol_v2_explicit_empty_gate.json",
+    "sha256": "5fd35d48d4caa867f0f53cbd56f76f0e36dcebfd56160f55cff3053a80ff213d"
+  },
+  "source_and_result_SHAs": {
+    "acceptance.json": "449ff582ecaaa22d9dad3d46de8f8008e4da2001e76a9901d7cc4b26306ac568",
+    "audit_B_exposure.py": "0fd2f57224dca702f5415e2f9ccda5031396cf9d3d7618393bbd8ad16dc6c840",
+    "B_exposure.json": "08d8096dfd277b334d9eb0bf6f7b200cac85dbedb1a1460205ccacab28b09467",
+    "B_exposure_engineering_v1_failure.json": "f69df9b19ea2e39e3bf31880f598376da0264cf3225c85cabb193a593b397cfa",
+    "close_diagnostics.py": "b5331ffee3da47e1aaa82f5fd9625d98eb58502d3028215742088fdff401cd3d",
+    "ENGINEERING_ERRATUM.json": "4199a0e0abbdc958ac55c8cf0af07bb563b30121e6a9ce6fabf7e4dad6bbe901",
+    "geometry_diagnostic.py": "7cdc35d7d756ce9e64981719d29aa544fbb23a7595afd1c4654965a87b1363b7",
+    "PROTOCOL.md": "431f214c17136e34e229c16ef6fb6d97072f38cec39fb9c79c3eff240a41d27a",
+    "reference_gaps.json": "44a6f3c8ed2a786f999079b4f349576209a08042f0ba498250b45bbc0ab6122d",
+    "RESULT.md": "d0d894e551321188fd788347c63be2dc6136f229a04f66d7076d10c2b42ddd34",
+    "seal_code_repair.py": "cc80ba578b5606265c7c9f04349a31cc7de50c8d1ee409e72dfa8d12e55db4b0",
+    "spatial_geometry.json": "2e10efff7d03cd1b82cbfb73b519d377d06828af796adedd39d5a853f7d0ccec",
+    "spatial_geometry_v2.json": "1e8b86f94429dafb47b9ce04c89c32ffcc81c51da1a18c438b00504c30b65254",
+    "temporal_binding.json": "34751db5f98d5f1e960e1f3ce795456438abb7b4edaf9c83585db2045ca60102",
+    "temporal_binding_v2.json": "8e65dcce7b52aacb3412e7fd1f2332d1fceb03f5f413c186e80d6ae482f0a291",
+    "temporal_reference_diagnostic.py": "d910bdd8b1be94e5274a159e36307c643420c4745956c6690f2da231cc4893b1",
+    "test_geometry.py": "20aa25fe170af09d5ae9159b54bd07eb65fcabba5ea346e2548a05c08926110a",
+    "test_temporal.py": "8e08d42579f78e3c1b639df027b3da72d1c85be0eb0fa42d8d8be9c2989e68ba"
+  },
+  "quality_gate_pass": false,
+  "training_admitted": false,
+  "new_candidate_generated": false,
+  "new_model_calls": 0,
+  "new_GPU_jobs": 0,
+  "new_optimizer_updates": 0,
+  "new_426_calls": 0,
+  "new_uploads": 0,
+  "Pro_used": 6,
+  "Pro_cap": 8,
+  "existing_jobs_restarted": false,
+  "remote_state_snapshot": {
+    "utc": "2026-10-10T13:52:23.287909+00:00",
+    "active_project_processes": [],
+    "GPU_compute_processes": []
+  },
+  "requested_next_qualified_package": "NOT_ACHIEVED",
+  "next_required_artifact": "Qualified task-matching independent reference; see reference_gaps.json",
+  "previous_acceptance_sha256": "449ff582ecaaa22d9dad3d46de8f8008e4da2001e76a9901d7cc4b26306ac568",
+  "amendment": "B exposure completion receipt now pinned before reading. Current receipt byte SHA independently matched. Existing successful diagnostics are referenced unchanged, not rerun.",
+  "completion_fixed_SHA_before_read": true
+}

@@ -1,0 +1,950 @@
+{
+  "utc": "2026-10-10T17:39:01.269296+00:00",
+  "call": 2,
+  "windows": [
+    {
+      "job_index": 6,
+      "window_id": "37rzWOQsNIw:SLOT6:0",
+      "status": "REJECTED_OR_INCOMPLETE_KEEP_RAW",
+      "window_tool_sequence_complete": false,
+      "CLI_terminal_exit_code": 1,
+      "completed_fact_groups": [],
+      "native_read_done": [],
+      "clip_read_done": false,
+      "student_preview_read_done": [],
+      "bound_rows": 0,
+      "schema_issues": [
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 0,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 1,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 2,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 3,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 4,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 5,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 6,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 7,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 8,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 9,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 10,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 11,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 12,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 13,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 14,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 15,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        }
+      ],
+      "proposal_issues": [
+        {
+          "reason": "PROPOSAL_SCHEMA_OR_COVERAGE",
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        }
+      ],
+      "proposal_sha256": null,
+      "program_bound_facts_sha256": "f3e6d1fae15d38980ec7cab52301517044c454061b9d8dae88260efdbb92a0ec",
+      "actual_supply": [],
+      "native_geometry": [
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ]
+      ],
+      "student_geometry": [
+        [
+          640,
+          352
+        ],
+        [
+          640,
+          352
+        ],
+        [
+          640,
+          352
+        ],
+        [
+          640,
+          352
+        ],
+        [
+          640,
+          352
+        ],
+        [
+          640,
+          352
+        ],
+        [
+          640,
+          352
+        ],
+        [
+          640,
+          352
+        ]
+      ],
+      "semantic_correctness": "UNVERIFIED_PENDING_ROOT_AND_INDEPENDENT_STUDENT_REVIEW",
+      "training_admitted": false
+    },
+    {
+      "job_index": 7,
+      "window_id": "37rzWOQsNIw:SLOT6:4",
+      "status": "REJECTED_OR_INCOMPLETE_KEEP_RAW",
+      "window_tool_sequence_complete": false,
+      "CLI_terminal_exit_code": 1,
+      "completed_fact_groups": [],
+      "native_read_done": [],
+      "clip_read_done": false,
+      "student_preview_read_done": [],
+      "bound_rows": 0,
+      "schema_issues": [
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 0,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 1,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 2,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 3,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 4,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 5,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 6,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 7,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 8,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 9,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 10,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 11,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 12,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 13,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 14,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        },
+        {
+          "reason": "FACT_SCHEMA_OR_MISSING",
+          "group": 15,
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        }
+      ],
+      "proposal_issues": [
+        {
+          "reason": "PROPOSAL_SCHEMA_OR_COVERAGE",
+          "error": "FileNotFoundError(2, 'No such file or directory')"
+        }
+      ],
+      "proposal_sha256": null,
+      "program_bound_facts_sha256": "361d1d99cd69c56ee4b4497860a42ce9a9b97bdfa747def7111f1d52b24ff1bb",
+      "actual_supply": [],
+      "native_geometry": [
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ],
+        [
+          640,
+          360
+        ]
+      ],
+      "student_geometry": [
+        [
+          640,
+          352
+        ],
+        [
+          640,
+          352
+        ],
+        [
+          640,
+          352
+        ],
+        [
+          640,
+          352
+        ],
+        [
+          640,
+          352
+        ],
+        [
+          640,
+          352
+        ],
+        [
+          640,
+          352
+        ],
+        [
+          640,
+          352
+        ]
+      ],
+      "semantic_correctness": "UNVERIFIED_PENDING_ROOT_AND_INDEPENDENT_STUDENT_REVIEW",
+      "training_admitted": false
+    }
+  ],
+  "tool_issues": [
+    {
+      "reason": "SUPPLY_ORDER_BARRIER_OR_WHITELIST",
+      "expected_count": 181,
+      "actual_count": 0,
+      "first_mismatches": [
+        {
+          "index": 0,
+          "expected": [
+            "view_file",
+            "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call02\\index.json"
+          ],
+          "actual": null
+        },
+        {
+          "index": 1,
+          "expected": [
+            "view_file",
+            "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\06_37rzwoqsniw_w00\\frames\\f00_o000000.png"
+          ],
+          "actual": null
+        },
+        {
+          "index": 2,
+          "expected": [
+            "view_file",
+            "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\06_37rzwoqsniw_w00\\frames\\f01_o000014.png"
+          ],
+          "actual": null
+        },
+        {
+          "index": 3,
+          "expected": [
+            "view_file",
+            "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\06_37rzwoqsniw_w00\\frames\\f02_o000028.png"
+          ],
+          "actual": null
+        },
+        {
+          "index": 4,
+          "expected": [
+            "view_file",
+            "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\06_37rzwoqsniw_w00\\frames\\f03_o000042.png"
+          ],
+          "actual": null
+        },
+        {
+          "index": 5,
+          "expected": [
+            "write_to_file",
+            "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call02\\w06_group00.json"
+          ],
+          "actual": null
+        },
+        {
+          "index": 6,
+          "expected": [
+            "view_file",
+            "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\06_37rzwoqsniw_w00\\frames\\f04_o000057.png"
+          ],
+          "actual": null
+        },
+        {
+          "index": 7,
+          "expected": [
+            "view_file",
+            "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\06_37rzwoqsniw_w00\\frames\\f05_o000071.png"
+          ],
+          "actual": null
+        },
+        {
+          "index": 8,
+          "expected": [
+            "view_file",
+            "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\06_37rzwoqsniw_w00\\frames\\f06_o000085.png"
+          ],
+          "actual": null
+        },
+        {
+          "index": 9,
+          "expected": [
+            "view_file",
+            "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\06_37rzwoqsniw_w00\\frames\\f07_o000099.png"
+          ],
+          "actual": null
+        },
+        {
+          "index": 10,
+          "expected": [
+            "write_to_file",
+            "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call02\\w06_group01.json"
+          ],
+          "actual": null
+        },
+        {
+          "index": 11,
+          "expected": [
+            "view_file",
+            "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\06_37rzwoqsniw_w00\\frames\\f08_o000114.png"
+          ],
+          "actual": null
+        },
+        {
+          "index": 12,
+          "expected": [
+            "view_file",
+            "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\06_37rzwoqsniw_w00\\frames\\f09_o000128.png"
+          ],
+          "actual": null
+        },
+        {
+          "index": 13,
+          "expected": [
+            "view_file",
+            "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\06_37rzwoqsniw_w00\\frames\\f10_o000142.png"
+          ],
+          "actual": null
+        },
+        {
+          "index": 14,
+          "expected": [
+            "view_file",
+            "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\06_37rzwoqsniw_w00\\frames\\f11_o000156.png"
+          ],
+          "actual": null
+        }
+      ]
+    }
+  ],
+  "self_reads": {},
+  "unfinished_tool_attempts": [],
+  "error_message_steps": [],
+  "expected_tool_calls": 181,
+  "actual_nonself_tool_calls": 0,
+  "actual_result_status": "ERROR",
+  "actual_result_error": "Eligibility check failed: failed to get load code assist response: Post \"https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist\": EOF",
+  "actual_result_usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "thinking_tokens": 0,
+    "cache_read_tokens": 0,
+    "total_tokens": 0
+  },
+  "terminal_sha256": "30997703c50ef9766bff61e657459ab6a4be33477545105968b4dda370330cb0",
+  "stream_sha256": "f97f2ccdcf4cf997d6e9756df7deb7c3aca1ba321726f906e559860b192ec02d",
+  "freeze_sha256": "6b894da1fec13ffbc33f8cb1970274778f6f22edf5da0e0cd981007f9b0c17bb",
+  "CLI_after": 28,
+  "cash_cost": "UNKNOWN_NOT_ZERO",
+  "automatic_retry": false,
+  "new_model_training": 0
+}

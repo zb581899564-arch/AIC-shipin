@@ -1,0 +1,1 @@
+三份显式风险ZIP已全部Windows交付，禁止再次packager/recovery或重复传输。当前请求已满足；原合格科学目标2/3保持，不改旧门。1000width数据准备为独立合法后台链，继续按reports/gnmc_width_sft1000_iteration_20261013_v1/current_state.json，别因此重启已有launcher。人类随后反馈分数只绑定具体ZIP，不能反向构造测试规则或把试分当独立非测试验证。

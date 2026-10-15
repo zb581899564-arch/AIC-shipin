@@ -1,0 +1,8 @@
+{
+  "train_rows": 181,
+  "nonidentity_rows": 143,
+  "identity_calibration_rows": 38,
+  "train_source_groups": 40,
+  "validation_rows": 148,
+  "selection": "One original-image target per source in deterministic round-robin, then second targets until 38; same fixed source split. No new labels."
+}

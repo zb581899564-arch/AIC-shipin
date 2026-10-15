@@ -1,0 +1,33 @@
+{
+  "status": "PASS_READ_ONLY_REMAINING_MECHANISM_PROVENANCE_AUDIT",
+  "old_records": 104,
+  "current_records": 104,
+  "windows": 112,
+  "historical_free_decoder_weak_macro_recomputed": 0.6777229641052717,
+  "current_native_B0_weak_macro_recomputed": 0.671274536235406,
+  "original_report_macro": 0.6777229641052717,
+  "historical_raw_already_canonical_grammar_accepts": 112,
+  "historical_raw_rejected_only_for_json_whitespace": 0,
+  "historical_raw_other_grammar_rejections": 0,
+  "historical_raw_contains_whitespace": 0,
+  "old_current_video_grids_equal": 112,
+  "old_current_temporal_grid_equal": 112,
+  "native_floor_vs_training_nearest_windows_changed": 102,
+  "native_floor_vs_training_nearest_ordinals_changed": 3054,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "new_decoder_replays": 0,
+  "reference_coverage": "UNKNOWN",
+  "observed_dev_not_new_holdout": true,
+  "source_bindings": {
+    "original_SFT8B_output": "154c4edd0715f8e5bacbcf8e88011c8d436ae772f803e969a9435e4524df143b",
+    "C_plan": "10a3f4cf6aadc00c7394537323af8ab8b6ea80ab670c5dcaf8523e7ed97aca6d",
+    "density_report": "9127bcb88265d4cfe7c4a00ad9df4608e06b6580174f5b1998ab6b92c81a1157",
+    "grammar": "7b5698ab321f6f848c0b817dec05e62cdf1561905824aa1c24248cf9f547896c"
+  },
+  "utc": "2026-10-08T22:08:47.109144+00:00",
+  "scientific_decision": "REGISTER_ONE_FINITE_NATIVE_NEAREST_64_ALIGNMENT_HYPOTHESIS_NO_PROMPT_PIXEL_DENSITY_SWEEP",
+  "old_vs_current_other_factors_remain_coupled": true,
+  "prediction_or_official_improvement_proven": false,
+  "private_receipt_sha256": "c75ede8d7c63d0c368065863cece1b48974e20ba9b835f7fd9bb57807009919e"
+}

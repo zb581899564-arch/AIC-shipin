@@ -1,0 +1,23 @@
+{
+  "status": "PASS_ROOT_READ_ALL_SELECTED_FRESH_FACTS_AND_ACTUAL_BINDINGS_NOT_ALL64_CAPTION_CERTIFICATION",
+  "utc": "2026-10-10T20:13:18.335874+00:00",
+  "bounded_reinspection": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\10_byxOvuiIJV0_W02.student_bounded_reinspection_v1.json",
+    "sha256": "1bfbedde85f84710df8c704360e3ccdfce5bf0e335ebdc357872f03ffa72a90b"
+  },
+  "original_blind_student": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\10_byxOvuiIJV0_W02.independent_student64_review_v1.json",
+    "sha256": "7bac9a3bf2e874891249d8a896a24a9b48b41536759b150b0704737e19fd1ab8"
+  },
+  "actual_selected_images": 12,
+  "current_selected_png_rgb_pts_bindings_checked": true,
+  "detail_qualifications": {
+    "0": "Scene and clothing/person core match. Original right-side person labelled female is not securely identifiable by gender from this slot; fresh fact uses person. This qualification does not establish a changed actor or event.",
+    "42": "Pose core matches, but fresh observation qualifies arms as one arm side-out bent and the other lower, rather than a broad both-arm description."
+  },
+  "teacher_exposure": false,
+  "root_direct_new_image_views": 0,
+  "old_initial_not_relabelled_blind": true,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0
+}

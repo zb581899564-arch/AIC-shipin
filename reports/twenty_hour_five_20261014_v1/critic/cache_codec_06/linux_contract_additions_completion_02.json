@@ -1,0 +1,22 @@
+{
+  "control_bytes": 11490,
+  "control_sha256": "cf74079f7d44faae02db6a2fddd3431110e2a4ff55615ca1def15122d2166c58",
+  "result": {
+    "status": "PASS_FINAL_GRAPH_AND_ORIGINAL_LEASE_SHA_GUARDS_PURE_SYNTHETIC",
+    "checks": [
+      "missing_frozen_RGB_graph_rejected",
+      "missing_consumer_rejected",
+      "duplicate_consumer_rejected",
+      "escaped_frozen_RGB_path_rejected",
+      "tampered_empty_lease_rejected_before_release"
+    ],
+    "additional_RGB_releases": 0,
+    "real_media_processor_model_production_calls": 0,
+    "old_success_deletions": 0,
+    "code_sha256": {
+      "codec.py": "55e98c43ebb8f9b701cce557cf8c4dbffa15692dc252b6cdadeff9ffeb9e356d",
+      "check_contract_additions.py": "f1bc204fa8f3288e87527c094090ad1165e4ed9b629d9bb430f5f65b53937afb",
+      "leases.py": "a8dd067442a67aad9b0d16f9ff5a0f56bd17ac00a01c8d39358760445d99b3dc"
+    }
+  }
+}

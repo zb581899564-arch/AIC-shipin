@@ -1,0 +1,39 @@
+{
+  "utc": "2026-10-09T04:42:35.922923+00:00",
+  "previous_utc": "2026-10-09T04:31:26.674221+00:00",
+  "stage": "STOP_ENGINEERING_AGENT_REPAIRS_IN_NEW_VERSION",
+  "scopes": {
+    "nontest": {
+      "fresh_done": 0,
+      "raw": 0,
+      "failures": 0,
+      "accepted_new_requests": null
+    },
+    "developer": {
+      "fresh_done": 0,
+      "raw": 1,
+      "failures": 0,
+      "accepted_new_requests": null
+    },
+    "rematch": {
+      "fresh_done": 0,
+      "raw": 0,
+      "failures": 0,
+      "accepted_new_requests": null
+    }
+  },
+  "owned_process_count": 0,
+  "all_new_done_bound_sha": true,
+  "all_frozen_sha_pass": true,
+  "added": 18,
+  "changed": 22,
+  "net_bytes": 1146649,
+  "completion": null,
+  "execution_failure": {
+    "utc": "2026-10-09T04:36:13.202594+00:00",
+    "error": "ValueError: actual GPU terminal failed",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/balanced_two_window_risk_v2/controller.py\", line 37, in main\n    charges['developer']=gpu('developer',[c.HERE/'bw_engine.py','developer'],14400,400<<20)\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/balanced_two_window_risk_v2/controller.py\", line 24, in gpu\n    c.require(result.returncode==0 and v['status']=='completed' and v['exit_code']==0 and v['stop_reason'] is None and v['charged_seconds']>0,'actual GPU terminal failed')\n  File \"/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/balanced_two_window_risk_v2/bw_common.py\", line 15, in require\n    if not ok:raise ValueError(reason)\nValueError: actual GPU terminal failed\n",
+    "successful_raw_unchanged": true,
+    "resources": {}
+  }
+}

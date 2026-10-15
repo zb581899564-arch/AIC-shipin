@@ -1,0 +1,57 @@
+{
+  "schema": "CHARADES_AUTHOR_SUBJECT_SEMANTICS_AND_REGISTERED_ROSTER_AUDIT_01",
+  "status": "SUBJECT_IS_AUTHOR_PARTICIPANT_GROUP_ORIGINAL20_CROSS_GROUP_OVERLAP_FOUND",
+  "read_only": true,
+  "source_zip_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/metadata_01/Charades.zip",
+  "source_zip_sha256": "c616913ef79c2ddde06d9c562eae57bb8901d459d7568a0d27bf09cbf33ae866",
+  "author_readme": {
+    "zip_member": "Charades/README.txt",
+    "field_line_1based": 75,
+    "definition_line_1based": 76,
+    "definition": "Unique identifier for each subject in the dataset",
+    "member_sha256": "a75c27daa0aeacdbaac6b99e022f8257a8c38e1c03848470a9088933c7fc12a0",
+    "first_party_url": "https://prior.allenai.org/projects/data/charades/README.txt"
+  },
+  "primary_paper": {
+    "title": "Hollywood in Homes: Crowdsourcing Data Collection for Activity Understanding",
+    "authors": "Sigurdsson, Varol, Wang, Farhadi, Laptev, Gupta",
+    "url": "https://ai2-website.s3.amazonaws.com/publications/hollywood-homes.pdf",
+    "read_method": "Primary AI2-hosted paper through web PDF text; arxiv Jina access block recorded, no article content inferred from the block",
+    "evidence": [
+      {"page_1based": 5, "section": "2.2 Generating Videos", "finding": "AMT workers themselves record videos following supplied scripts; repeated submissions from workers are discussed on page6"},
+      {"page_1based": 7, "section": "4 Applications / Train-test set", "finding": "Author split groups workers to prevent the same worker from being in both train and test; worker-balanced test constraints are described"},
+      {"page_1based": 1, "section": "Abstract", "finding": "267 recording people, with more than15 percent of videos containing more than one person"}
+    ],
+    "short_verbatim_split_clause": "the same worker should not appear in both training and test"
+  },
+  "cached_author_CSV_counts": {
+    "train": {"member": "Charades/Charades_v1_train.csv", "rows": 7985, "unique_subjects": 214, "subject_missing": 0, "member_sha256": "59273c6dc2139ec7eb95b980fd26bc8529774b1ede0602f6ca90b546ed12f0fc"},
+    "test": {"member": "Charades/Charades_v1_test.csv", "rows": 1863, "unique_subjects": 53, "subject_missing": 0, "member_sha256": "8b8b207b55fb95b949018027f69d83bd46cd844d15834f8f592ee8e7446173eb"},
+    "train_test_subject_intersection_count": 0,
+    "all_author_unique_subjects": 267,
+    "read_columns": ["id", "subject"]
+  },
+  "operational_semantics": {
+    "confirmed": "subject is the author-defined dataset participant/subject identifier, suitable for grouping source videos by recording worker/participant",
+    "mapping_basis": "author subject definition plus original workers split design and actual214+53 distinct/disjoint subject groups matching267 recording participants; do not claim the README literally calls the column an AMT-account identifier",
+    "not_inferred_from": ["names", "gender", "appearance", "a person", "action class", "script", "descriptions"],
+    "cannot_claim": "all physical actors, family/guest identities or households are independently isolated; multi-person videos exist and subject does not enumerate every visible person"
+  },
+  "original_registered60": {
+    "manifest_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/metadata_01/source_manifest_01.json",
+    "manifest_sha256": "87970014547b2f1d29137594d51e38b9bf6ad55c0ba2dad892acfc3c2baf0947",
+    "unique_subjects": 36,
+    "original_dev_unique_subjects": 10,
+    "original_confirm_unique_subjects": 10,
+    "original_dev_confirm_subject_intersection_count": 1,
+    "shared_participant_groups_as_source_id_lists": [["PE4BQ", "2IC8O"]],
+    "original20_subject_independent": false
+  },
+  "recommendation": "Before media/GPU, create source_registry_02 within the already fixed60 SHA order using subject only. A deterministic first20 distinct-subject selection supplies10dev/10confirm with disjoint worker groups; preserve metadata_01 and original roster unchanged. Recompute selected media byte budget from the index. Do not call this complete visual-actor isolation or use action/GT quality/model output in source choice",
+  "new_HTTP_requests_to_annotation_or_archive": 0,
+  "new_media_reads": 0,
+  "new_model_calls": 0,
+  "author_messages": 0,
+  "original_metadata_files_modified": false,
+  "subject_values_exported": false
+}

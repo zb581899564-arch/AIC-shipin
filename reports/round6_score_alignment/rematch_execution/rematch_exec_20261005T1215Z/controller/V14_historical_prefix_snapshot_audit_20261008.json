@@ -1,0 +1,21 @@
+{
+  "status": "PASS_HISTORICAL_CAPTURED_PREFIX_RECEIPT_INTERNAL_CONSISTENCY_NOT_LIVE_BYTE_RECHECK",
+  "utc": "2026-10-08T14:16:35.772206+00:00",
+  "snapshot_utc": "2026-10-08T13:12:45.093449+00:00",
+  "snapshot_sha256": "66a744220940c588f95209ec2be53a46a6974593efe7dfe3edff3e529c6375d3",
+  "source_lock_sha256": "5295e8bc0f2b6a651e73321a5798b259816ccbe9a0582753dc3c200b5ef080e0",
+  "actual_updates_at_original_capture": 5,
+  "actual_backward_examples_at_original_capture": 65,
+  "prefix_required_and_completed": 4,
+  "independent_CPU_reload_checked_utc": "2026-10-08T13:10:16.889310+00:00",
+  "prefix_adapter_SHA": "623e3721af6bdd629881d01d6e6f83c5b2599ab42846b0772955c684b077d836",
+  "prefix_state_SHA": "b0da6fea62453437191176a3fa32e246996d800a3f38779ed635b88eecc6099d",
+  "original_base_frozen_SHA": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+  "same_optimizer_RNG_contract_reported_PASS": true,
+  "weak_dev14_original_B_and_epoch1_tied": true,
+  "model_calls": 0,
+  "optimizer_updates_by_this_audit": 0,
+  "physical_files_reopened_now": false,
+  "current_remote_status": "UNKNOWN_SSH_CONNECT_TIMEOUT",
+  "final_ZIP_accepted": false
+}

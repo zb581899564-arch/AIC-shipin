@@ -1,0 +1,128 @@
+{
+  "status": "MANUAL38_API_ACCESS_RECOVERED_ONE_FINITE_REFERENCE_ACCEPTED_W22_SCHEMA_STOP_W23_PENDING_NOT_TRAINING",
+  "utc": "2026-10-11T10:00:40.032743+00:00",
+  "human_authorization": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\manual_CLI38_user_retry_authorization_v1.json",
+    "sha256": "41f737a89232b04d688f4686dc84a380fc4a3c110aae086f38e3ffb9774d9a76"
+  },
+  "actual_model": "gemini-3.8-flash-high",
+  "API_access_observed": true,
+  "actual_successful_tool_DONE": 140,
+  "actual_media_DONE": 97,
+  "actual_native_images_DONE": 88,
+  "actual_tool_ERROR": 0,
+  "first_schema_failure": {
+    "job_index": 22,
+    "group": 4,
+    "actual_DONE_step": 203,
+    "original_payload_type": "list",
+    "expected_outer_object_keys": [
+      "group",
+      "items"
+    ],
+    "diagnosis": "Bare four-item array omitted the required group/items outer object; the closed original validator raised TypeError on dict array entries.",
+    "original_payload": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\manual_CLI38_retry_v1\\call38\\first_failed_fact_original_bytes.json",
+      "sha256": "fba9595ea6d41ef07152e854f58b97a72bc271a5d65a72a6caef0bb4ae167f20"
+    },
+    "validation": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\manual_CLI38_retry_v1\\call38\\w22_g04_immediate_fact_schema.json",
+      "sha256": "9b3b3ab7956e9c7bfd2e37024e6431d0714bdfe0656761411199148ea0f669f1"
+    },
+    "later_grace_output_group05_preserved": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\manual_CLI38_retry_v1\\call38\\w22_group05.json",
+      "sha256": "455f3d63ab68036a070fc483cfc65786dffb2967e067c54b532c03ce685c89b5"
+    },
+    "no_automatic_reformat_or_acceptance": true
+  },
+  "windows": {
+    "21": {
+      "completed_scope": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\manual_CLI38_retry_v1\\call38\\w21_completed_scope_audit.json",
+        "sha256": "21a2becde78123aa6416e1d018546edc7b96607980131b1b1e98ff557435fcf1"
+      },
+      "semantic_adjudication": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\21_cjibt_w16_root_eval_decision_CLI38_v1.json",
+        "sha256": "d09cfc48891e1ca06980f8bd3de38f49c13146bd57cd5f29def08d88516d7183"
+      },
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\21_cjibt_w16_complete_reference_CLI38_v1.json",
+        "sha256": "21bfb2f7c2558ee0d544f32c957b95164d0d2baeea3c52b2b8a3e4888429cd87"
+      },
+      "original_contract_acceptance": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\21_cjibt_w16_complete_reference_CLI38_v1_acceptance.json",
+        "sha256": "86f36eec0c4e2f03b7479f6a1dcd6022ffc75ffa4a406b486e62d68b5ba49c64"
+      },
+      "raw_teacher_all_NO_not_adopted": true,
+      "finite_preteacher_events": 3,
+      "consequential_UNKNOWN_preserved": true,
+      "training_admitted": false
+    },
+    "22": {
+      "native_images_DONE": 24,
+      "full_native64_completed": false,
+      "full_proposal_completed": false,
+      "reference_admitted": false
+    },
+    "23": {
+      "started": false,
+      "reference_admitted": false
+    }
+  },
+  "terminal": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\manual_CLI38_retry_v1\\call38\\terminal.json",
+    "sha256": "88fc941246102d66539e1fb6deb942a5f7f5606e7f38c4bd3dd33d3850ffc894"
+  },
+  "whole_audit": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\manual_CLI38_retry_v1\\call38\\audit.json",
+    "sha256": "e7e20681eb5effc83f81fe2f0a9e2891bcdac953ba4bd00a18eb2a96d00c671f"
+  },
+  "owned_stop": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\manual_CLI38_retry_v1\\call38\\owned_stop_request.json",
+    "sha256": "4eae5f7524ffae5241a0e0c2adb4b48848bbe1814ce242a018cc53fcf1e63a14"
+  },
+  "actual_cost": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\manual_CLI38_retry_v1\\call38\\actual_terminal_cost.json",
+    "sha256": "fd8be2af7d2784e38aee59890eee1fb2f36315ea0e448246af2fe55e4ed5e597"
+  },
+  "wall_seconds": 1098.1560000000027,
+  "cash_cost": "UNKNOWN_NOT_ZERO",
+  "unique_global_terminal_verified": true,
+  "ledger": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\global_CLI_ledger.jsonl",
+    "sha256": "c8169df3b383b7b22d8092cbc690136f914165b7342b915705892b2247d939c2"
+  },
+  "registry": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\denominator24_v19.json",
+    "sha256": "3f1c89c8f2d6aa98d44c92bc75ff35ec7f0e3f182ed6e8a5281060279a69d9c3"
+  },
+  "qualified_references": 18,
+  "rejected_references": 4,
+  "pending_references": 2,
+  "accepted_train_windows": 8,
+  "new_optimizer_updates": 0,
+  "new_submission_zip": false,
+  "no39": true,
+  "automatic_retry": false,
+  "ROOT_scope_verifier_erratum": {
+    "original_helper": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\accept_teacher_manual38_scope_binding_v1.py",
+      "sha256": "2d68f0d47e5f5d0b1e1785fee886cd62579040650d71e177cdc2bc5a17a8bd44"
+    },
+    "preserved_failure_log": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\plan_review\\ROOT_manual38_w21_wrapper_execution_v1.log",
+      "sha256": "4921f240ea0a2601559023ac9b48e710c99bae7f40a983f5f6e1388d3a1cf7bb"
+    },
+    "correction_helper": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\accept_teacher_manual38_scope_binding_v2.py",
+      "sha256": "545f4587df3d5d579ad53cb7b6df7d2d4bc9b77867b9bcf113e8e83a879650b8"
+    },
+    "correction": "Only JSON-normalize CPU tuple/list representation for equality to persisted scope; scalar values and all strict checks unchanged.",
+    "first_attempt_stdout_session_metadata_not_retained": true,
+    "successful_execution_log": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\plan_review\\ROOT_manual38_w21_wrapper_execution_v2.log",
+      "sha256": "1618ae8fb5afc7482678a3ad343b930ec3cb7e9a1ecc18166a38ac534dbd950b"
+    }
+  },
+  "next_work": "Before another model call: explicit new bounded dispatch record, per-group closed schema reminder, preserve completed21 and all old failures; complete22/23 and all evaluation reference gates before actual Linux preflight/training."
+}

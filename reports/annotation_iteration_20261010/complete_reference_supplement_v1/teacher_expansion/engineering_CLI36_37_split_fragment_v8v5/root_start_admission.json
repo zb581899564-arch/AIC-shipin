@@ -1,0 +1,64 @@
+{
+  "status": "ROOT_APPROVED_START_FRAGMENTED_SPLIT36_37_FIXED19_23",
+  "utc": "2026-10-11T04:15:17.957658+00:00",
+  "execution_binding_sha256": "b1548edd764f8a03c7cae27c1d8862b9562a48008ad4b26e8a58877f6e5b3f91",
+  "dry_run_sha256": "ddde64ea2e18d888064787ebc8909bef3f2fcd863fe9086e00e3e5f9fabc9569",
+  "negative_receipt_sha256": "5a81511285825104a70a511cb836f0196d01a1f03bc1e74bce7454cb305db1ac",
+  "independent_review": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\plan_review\\v8v5_independent_start_review_v1.json",
+    "sha256": "7851e6579be3adf14f4e4bc889a8e3731c7f024a20726d81041a9b3cd678455a"
+  },
+  "root_verifier_source": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\root_admit_fragmented_teacher_split_v8.py",
+    "sha256": "1bd14c7b482605c452464f671905cb8412fdd11b464417f7176d1df8116613b6"
+  },
+  "calls": [
+    {
+      "CLI": 36,
+      "jobs": [
+        19,
+        20
+      ],
+      "inputs": 1035,
+      "freeze": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\call36\\freeze.json",
+        "sha256": "4f9cc904d7f7c1e7dcd4ed051f052eecb2b17dd6ffc3a044153ff91c9ca11ae5"
+      },
+      "argv_UTF16_units": 776,
+      "core": 202
+    },
+    {
+      "CLI": 37,
+      "jobs": [
+        21,
+        22,
+        23
+      ],
+      "inputs": 1128,
+      "freeze": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\call37\\freeze.json",
+        "sha256": "c858885aa2b7873b4c522940272249fdfde008e68257166dc72d90aca79d3a7a"
+      },
+      "argv_UTF16_units": 776,
+      "core": 302
+    }
+  ],
+  "actual_360_media_byte_bindings_checked": 360,
+  "original_360_RGB_geometry_acceptance_exact_reused": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\root_start_admission.json",
+    "sha256": "d7897a9acd18ee38a9c02df4bf81e315a8dae9ee44b640df70b3443998d3f9bb"
+  },
+  "prospective_route": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_dispatch_capacity_v5_split_recovery_authorization.json",
+    "sha256": "6ea3f2bcbffe9ac9083610f1965b894da044204b9fb6bb27d43fd3e0de9b7650"
+  },
+  "strict_continuation": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_split_v5_continuation_constraints.json",
+    "sha256": "7ce78ca785723e5f4468b189cf981d47d644ba30e676b83cdaf40aad0f4cfe34"
+  },
+  "old_failures_and_frozen_inputs_preserved": true,
+  "source_upload_authorized_by_gate": false,
+  "training_or_semantic_admission": false,
+  "new_model_calls_by_this_verification": 0,
+  "new_video_decode": 0
+}

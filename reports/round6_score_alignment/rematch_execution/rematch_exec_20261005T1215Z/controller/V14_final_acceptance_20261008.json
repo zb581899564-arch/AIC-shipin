@@ -1,0 +1,171 @@
+{
+  "status": "PASS_INDEPENDENT_V14_FINAL_ZIP_TRAINING_SELECTION_AND_ACCOUNTING",
+  "utc": "2026-10-08T15:49:24.511694+00:00",
+  "host": "inspur-NP5570M5",
+  "entry": "teacher_student_autopilot_v14",
+  "source_lock_sha256": "5295e8bc0f2b6a651e73321a5798b259816ccbe9a0582753dc3c200b5ef080e0",
+  "frozen_files_verified": 16502,
+  "verifier_source_sha256": "11479e89d5e62e4a1fdad24a2a2c7eddb54163942c364c6126a61f5079e15d53",
+  "completion_sha256": "ca072f6ef922a7abd2c93684543da0caf3c427b6ca5706dd4c615ae42a190d7c",
+  "completion_status": "PASS_AUTOPILOT_FINAL_T_ZIP_ON_LINUX",
+  "scopes": {
+    "nontest": {
+      "videos": 8,
+      "prediction_frames": 447,
+      "strict_checks": {
+        "strict_loader_ok": true,
+        "video_record_set_exact": true,
+        "selected_key_set_exact": true,
+        "ratio_fields_exact": true,
+        "frames_sorted": true,
+        "provenance_key_set_exact": true,
+        "provenance_boxes_match_predictions": true,
+        "provenance_all_legal": true,
+        "provenance_sources_allowed": true,
+        "archive_single_file": true,
+        "archive_roundtrip_exact": true
+      },
+      "independent_report_sha256": "3fd7c8d3c2e640f4d1f9781b768008bbbfb5337b5da448dfb20ebd8328cb3e0b",
+      "manifest_sha256": "ba34a284183e8a079054ffe811d7ec096e6b47c94e6edf812a37fd11b92d8dd7",
+      "registry_sha256": "7f57785312c94b1658cb002b2432d09b318ae2943e3297a0c45536d1bd8cd3ea",
+      "candidate": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/nontest_01/candidate_T_8B.zip",
+      "zip_bytes": 1977,
+      "zip_sha256": "dda5699db366ac62ab55ac3fef8145d77f954f4aff8b126f21a86fb233e503be",
+      "predictions_sha256": "cf94275b0c31a6e978991bf489f157c37c54ade815355e0f87499a414c5dc71d",
+      "provenance_sha256": "b57cdde4a2a2b14af2aca0c56ff15545b442f2e8523e5d0bd047d3e507d29caf",
+      "crc_pass": true,
+      "archive_names": [
+        "predictions.jsonl"
+      ],
+      "archive_roundtrip_exact": true,
+      "source_ids_exact": true,
+      "duplicate_source_ids": 0,
+      "temporal_windows": 8,
+      "invalid_temporal_windows": 0,
+      "source_anchors": 206,
+      "new_spatial_model_calls": 0,
+      "original_spatial_wall_seconds": 124.7222928898409
+    },
+    "rematch": {
+      "videos": 426,
+      "prediction_frames": 102470,
+      "strict_checks": {
+        "strict_loader_ok": true,
+        "video_record_set_exact": true,
+        "selected_key_set_exact": true,
+        "ratio_fields_exact": true,
+        "frames_sorted": true,
+        "provenance_key_set_exact": true,
+        "provenance_boxes_match_predictions": true,
+        "provenance_all_legal": true,
+        "provenance_sources_allowed": true,
+        "archive_single_file": true,
+        "archive_roundtrip_exact": true
+      },
+      "independent_report_sha256": "4059655c82ba1544c0f722241dbcbe426a193f768c6833b4d13f7334ed379967",
+      "manifest_sha256": "ceb91ee9434ce3de6a55abf727e613b83368b547d3be3d1e71b46414c2f019f8",
+      "registry_sha256": "1058aba02e5e959bc8e4842cbde0eadced192a8201d5c833ae50a7c0aac07909",
+      "candidate": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/rematch_01/candidate_T_8B.zip",
+      "zip_bytes": 308278,
+      "zip_sha256": "95173d936d09cfcf84bcff5755336e50dbfff94ac5a7e4cfba2953064022f3a2",
+      "predictions_sha256": "9ebd31540b905e08da3352709cf1ff38eb241b3be6b55ea087dff7df9304c4e4",
+      "provenance_sha256": "02c4745f2a0eef209d83a694a86eb4dfe3fe2ec5f32b9c470a3df3f8a58040e6",
+      "crc_pass": true,
+      "archive_names": [
+        "predictions.jsonl"
+      ],
+      "archive_roundtrip_exact": true,
+      "source_ids_exact": true,
+      "duplicate_source_ids": 0,
+      "temporal_windows": 521,
+      "invalid_temporal_windows": 0,
+      "source_anchors": 31295,
+      "new_spatial_model_calls": 0,
+      "original_spatial_wall_seconds": 18723.876517390832
+    }
+  },
+  "actual_T_optimizer_updates": 15,
+  "actual_backward_examples": 195,
+  "epochs_completed": 3,
+  "finite_loss_gradient_all_updates": true,
+  "changed_adapter_tensors_each_update": 288,
+  "frozen_base_runtime_sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+  "frozen_base_receipts_equal": true,
+  "prefix_state_current_sha256": "b0da6fea62453437191176a3fa32e246996d800a3f38779ed635b88eecc6099d",
+  "prefix_updates": 4,
+  "original_independent_CPU_reload_sha256": "ab0dd5b0274346ac4d8fb7cbad3e49e921deaa5c0226ef53d243d2346f96962e",
+  "independent_CPU_reload_was_288_adapter_PASS": true,
+  "CPU_reload_repeated_by_this_audit": false,
+  "candidate_artifact_SHAs_pass": true,
+  "weak_dev_candidates": [
+    {
+      "epoch": 0,
+      "video_macro_f1": 0.3786251362162477
+    },
+    {
+      "epoch": 1,
+      "video_macro_f1": 0.3786251362162477
+    },
+    {
+      "epoch": 2,
+      "video_macro_f1": 0.3596785770535768
+    },
+    {
+      "epoch": 3,
+      "video_macro_f1": 0.36453995670744305
+    }
+  ],
+  "independent_selection_recomputed": true,
+  "selected_epoch": 0,
+  "selected_original_B": true,
+  "trained_candidate_selected": false,
+  "selected_adapter_sha256": "8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23",
+  "new_T_improvement_claim": false,
+  "teacher_original_labels": 160,
+  "teacher_original_reviews": 160,
+  "supported_train": 65,
+  "supported_dev": 14,
+  "UNKNOWN_preserved": 81,
+  "same_teacher_consistency_weak_not_truth": true,
+  "resources": {
+    "rematch_TAUTO_v14_student_train": {
+      "receipt_sha256": "86a8e8535380e9b33f340a71808dbcbd41a67e96594d9db2ef8146ef56ef1e66",
+      "charged_seconds": 2231.7791278334334,
+      "sampled_peak_memory_mib": 21484,
+      "ledger_exact": true,
+      "exit_code": 0,
+      "stop_reason": null
+    },
+    "rematch_TAUTO_v14_nontest_temporal": {
+      "receipt_sha256": "ebb409130e66281ee9c0379ef8369ac2438ff5e87e7befcad2161c17fbfdf64f",
+      "charged_seconds": 164.55463389214128,
+      "sampled_peak_memory_mib": 19306,
+      "ledger_exact": true,
+      "exit_code": 0,
+      "stop_reason": null
+    },
+    "rematch_TAUTO_v14_rematch_temporal": {
+      "receipt_sha256": "2fe4e7f9954aaec03276a1265ffb1d7c7b86335c63b5d68b2bb72597d4c6667c",
+      "charged_seconds": 5430.027779461816,
+      "sampled_peak_memory_mib": 25338,
+      "ledger_exact": true,
+      "exit_code": 0,
+      "stop_reason": null
+    }
+  },
+  "gpu_ledger_records": 154,
+  "gpu_ledger_sha256": "fce49c2d3d1ab170ee6df9315deceb0bd65cebe626d898232cf68b09919152d8",
+  "gpu_ledger_not_modified": true,
+  "historical_offset_seconds_preserved": 7200,
+  "owned_processes": [],
+  "logical_parameters": 8782459120,
+  "model_calls_by_this_audit": 0,
+  "optimizer_updates_by_this_audit": 0,
+  "teacher_calls_by_this_audit": 0,
+  "per_frame_data_exported": false,
+  "raw_answers_exported": false,
+  "large_transfer_bytes": 0,
+  "official_score": null,
+  "automatic_return": false,
+  "uploaded": false
+}

@@ -1,0 +1,41 @@
+{
+  "scope": "Existing GNMC human train metadata and old status/training report only; no original images, RGB, tensors, per-input proof bodies, dev/confirm media or new confirmation labels read",
+  "linux_host": "inspur-NP5570M5",
+  "paths": {
+    "old_train": "/home/inspur/aic_video_work/gnmc_width_sft_iteration_20261013_v1/train_inputs.json",
+    "more_accepted": "/home/inspur/aic_video_work/gnmc_width_sft1000_iteration_20261013_v1/accepted_train.jsonl",
+    "old_CPU": "/home/inspur/aic_video_work/gnmc_width_sft_iteration_20261013_v1/cpu_acceptance.json",
+    "old_train_report": "/home/inspur/aic_video_work/gnmc_width_sft_iteration_20261013_v1/train/train_report.json",
+    "more_failure": "/home/inspur/aic_video_work/gnmc_width_sft1000_iteration_20261013_v1/prepare_failure.json"
+  },
+  "old_train": {
+    "rows": 200,
+    "target_bins_le750_751to950_gt950": [35, 51, 114],
+    "min_target": 379,
+    "max_target": 1000,
+    "target_eq1000": 26,
+    "target_ge980": 77
+  },
+  "more_accepted": {
+    "rows": 602,
+    "target_bins_le750_751to950_gt950": [100, 172, 330],
+    "min_target": 379,
+    "max_target": 1000,
+    "target_eq1000": 87,
+    "target_ge980": 199
+  },
+  "train_rows_do_not_contain_W_H": true,
+  "train_geometry_not_inferred_from_missing_fields": true,
+  "old_train_report": {
+    "optimizer_steps": 50,
+    "microbatches": 400,
+    "seconds": 242.13111980538815,
+    "peak_allocated_mib": 17047.36962890625,
+    "width_bin_draw_counts": [134, 133, 133],
+    "spatial_lora_parameters": 7667712,
+    "integrated_parameters": 8790126832
+  },
+  "observed_more_failure": "HTTPError 504 Gateway Time-out",
+  "new_download_or_decode_or_processor_or_model_or_optimizer_or_old_proof_replay_calls": 0,
+  "this_receipt_grants_execution_or_production": false
+}

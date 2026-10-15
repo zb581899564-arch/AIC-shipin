@@ -1,0 +1,27 @@
+{
+  "status": "PASS_COMPLETE_IMAGE_SCORE_237STEP_8B_EXPERIMENTAL_ZIP",
+  "scope": "nontest",
+  "candidate": "/home/inspur/aic_video_work/runs/annotation_iteration_20261010_v2/contest_v1/nontest_01/candidate_IMAGE_SCORE_237STEP_8B.zip",
+  "zip_bytes": 241,
+  "zip_sha256": "5256ba390a52dbd45e5a75d0c66d9224cdbbbc4b3eea8e14f04d3d394971cc4f",
+  "videos": 8,
+  "selected_frames": 0,
+  "empty_videos": 8,
+  "samples": 32,
+  "blocks": 8,
+  "adapter_sha256": "1f39afb662f77661f008bc6000a054b9d838b988558ef0b762e2d98975d94933",
+  "logical_parameters": 8774791408,
+  "training_optimizer_steps": 237,
+  "old_spatial_source_field": {
+    "field_frames.jsonl": "c4b53cb7d95442ecaa4c8fa6b82b027fd5779370230a2b97f8c8796526386aed",
+    "field_shots.jsonl": "cf4a873053bd2baf24343043eb36f835a5853ce232b409489915329f161c0375",
+    "anchor_requests.jsonl": "f630e725ddff54c590a4062c39b98c1b7233773b8c0a391f271378ac157283a7",
+    "anchor_output.jsonl": "1ffd45d72c723ec71f973d6b24f5e72d052ddf3f6e3b51150a2e68bacfc1532d"
+  },
+  "spatial_model_calls": 0,
+  "official_score": null,
+  "uploaded": false,
+  "production_replaced": false,
+  "independent_validation_sha256": "13a22aee2a8548cdb31376ca75484e4c279d0fc9ac1eba11062b5c557b2af6d4",
+  "quality_evidence": "SEEN_TVSUM_DEVELOPMENT_PROXY_ONLY; NATIVE_PROXY_F_CI_CROSSES_ZERO; AIC_GENERALIZATION_UNKNOWN"
+}

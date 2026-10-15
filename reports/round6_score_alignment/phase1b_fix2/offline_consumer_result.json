@@ -1,0 +1,34 @@
+{
+  "run_id": "round6_p1b_fix2_20260917T0951Z",
+  "scope": "programmatic synthetic interface fixture, not browser download or human label",
+  "python_validator": {
+    "valid": true,
+    "problems": []
+  },
+  "p1a_sparse_only": {
+    "label": "synthetic sparse only",
+    "universe": [
+      "S01"
+    ],
+    "status": "SPARSE_DIAGNOSTIC",
+    "score": null,
+    "sparse_evidence": "SPARSE_EVIDENCE",
+    "reasons": [
+      "reference covers only declared sparse frames; unannotated frames are unverifiable (not negatives), so no full-video joint score, no per-video F1/precision/recall and no whole-video empty judgement are produced"
+    ]
+  },
+  "p1a_with_unannotated": {
+    "label": "synthetic sparse plus unannotated",
+    "universe": [
+      "S01",
+      "S02"
+    ],
+    "status": "NOT_COMPUTABLE",
+    "score": null,
+    "sparse_evidence": null,
+    "reasons": [
+      "reference incomplete for scored videos: missing=1",
+      "reference has unscored videos: extra=0"
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "status": "RECORDED_USER_REPORTED_D8_40_44_D2_40_36",
+  "recorded_utc": "2026-10-13T03:18:31.964393+00:00",
+  "recorded_Asia_Taipei": "2026-10-13T11:18:31.964393+08:00",
+  "user_text": "保守版40.44，激进版本40.36",
+  "binding_basis": "User conservative/aggressive score labels refer to immediately preceding D8/D2 delivery links and descriptions.",
+  "entries": [
+    {
+      "arm": "D8",
+      "user_label": "保守版",
+      "candidate": "DURATION_GUARD_D8_8B",
+      "score": 40.44,
+      "score_decimal": "40.44",
+      "delta_from_previous_best_40_42": 0.02,
+      "candidate_local_zip": "G:\\ai\\AIC视频\\deliveries\\DURATION_GUARD_D8_8B_20261013\\candidate_DURATION_GUARD_D8_8B.zip",
+      "candidate_zip_sha256_from_accepted_delivery": "8aec42ae06a8cacab93aa8e052d89d5df41dc57e56d73a79cdef6dd02c6cb4ad",
+      "candidate_zip_bytes_from_accepted_delivery": 368368,
+      "delivery_receipt": "G:\\ai\\AIC视频\\deliveries\\DURATION_GUARD_D8_8B_20261013\\local_delivery_receipt.json",
+      "score_source": "USER_EXACT_FEEDBACK_WITHOUT_SCREENSHOT",
+      "independently_verified_online": false
+    },
+    {
+      "arm": "D2",
+      "user_label": "激进版本",
+      "candidate": "DURATION_GUARD_D2_8B",
+      "score": 40.36,
+      "score_decimal": "40.36",
+      "delta_from_previous_best_40_42": -0.06,
+      "candidate_local_zip": "G:\\ai\\AIC视频\\deliveries\\DURATION_GUARD_D2_8B_20261013\\candidate_DURATION_GUARD_D2_8B.zip",
+      "candidate_zip_sha256_from_accepted_delivery": "f1347e55649735b135241235382345b6a566501a303735d7cc786bdbee0cf0d9",
+      "candidate_zip_bytes_from_accepted_delivery": 375842,
+      "delivery_receipt": "G:\\ai\\AIC视频\\deliveries\\DURATION_GUARD_D2_8B_20261013\\local_delivery_receipt.json",
+      "score_source": "USER_EXACT_FEEDBACK_WITHOUT_SCREENSHOT",
+      "independently_verified_online": false
+    }
+  ],
+  "current_best": {
+    "arm": "D8",
+    "user_label": "保守版",
+    "candidate": "DURATION_GUARD_D8_8B",
+    "score": 40.44,
+    "score_decimal": "40.44",
+    "delta_from_previous_best_40_42": 0.02,
+    "candidate_local_zip": "G:\\ai\\AIC视频\\deliveries\\DURATION_GUARD_D8_8B_20261013\\candidate_DURATION_GUARD_D8_8B.zip",
+    "candidate_zip_sha256_from_accepted_delivery": "8aec42ae06a8cacab93aa8e052d89d5df41dc57e56d73a79cdef6dd02c6cb4ad",
+    "candidate_zip_bytes_from_accepted_delivery": 368368,
+    "delivery_receipt": "G:\\ai\\AIC视频\\deliveries\\DURATION_GUARD_D8_8B_20261013\\local_delivery_receipt.json",
+    "score_source": "USER_EXACT_FEEDBACK_WITHOUT_SCREENSHOT",
+    "independently_verified_online": false
+  },
+  "historical_comparison_reference_score": 40.42,
+  "historical_protocol_and_completed_receipts_unchanged": true,
+  "score_gain_is_small": true,
+  "not_a_new_parameter_selection_experiment": true,
+  "no_test_content_or_ground_truth_used": true,
+  "new_experiments_started": 0,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "new_packages": 0
+}

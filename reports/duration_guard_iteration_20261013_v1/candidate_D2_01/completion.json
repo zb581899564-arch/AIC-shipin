@@ -1,0 +1,36 @@
+{
+  "status": "PASS_ONE_NEW_DURATION_GUARD_CONFIRM_SCREENED_RISK_ZIP",
+  "candidate": "DURATION_GUARD_D2_8B",
+  "arm": "D2",
+  "padding_exact": {
+    "pre_exact": "3/4",
+    "base_post_exact": "1/2",
+    "extra_post_exact": "1/4",
+    "minimum_original_segment_length_exact": "2"
+  },
+  "zip_path": "G:\\ai\\AIC视频\\reports\\duration_guard_iteration_20261013_v1\\candidate_D2_01\\candidate_DURATION_GUARD_D2_8B.zip",
+  "bytes": 375842,
+  "sha256": "f1347e55649735b135241235382345b6a566501a303735d7cc786bdbee0cf0d9",
+  "frames": 124385,
+  "added": 3119,
+  "removed": 0,
+  "baseline_boxes_unchanged": true,
+  "model_params_b": 8.78245912,
+  "new_model_calls": 0,
+  "optimizer_updates": 0,
+  "official_score": "UNKNOWN",
+  "source_lock_sha256": "d6801c7f88a0ade271ba819936a586921680966d93ee5fb70b5fcb3f31fcdfe3",
+  "independent_validation": "independent_validation.json",
+  "human_summary_proxy_not_official_crop_quality": true,
+  "old_reference_failed_preserved": true,
+  "geometry_checks": {
+    "video_records": 426,
+    "prediction_frames": 124385,
+    "issues": [],
+    "official_status": "NOT_SCORED_NOT_UPLOADED",
+    "legal_empty_supported": true,
+    "weak_roi_inputs_used": 0,
+    "old_test_boxes_used": 0,
+    "silent_fallbacks": 0
+  }
+}

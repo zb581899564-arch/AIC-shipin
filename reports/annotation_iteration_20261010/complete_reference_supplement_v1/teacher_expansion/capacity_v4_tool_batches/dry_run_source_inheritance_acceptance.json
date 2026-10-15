@@ -1,0 +1,110 @@
+{
+  "utc": "2026-10-10T17:27:29.943652+00:00",
+  "status": "PASS_INDEPENDENT_OLD_NEW_SOURCE_SHA_AND_AST_NO_MODEL",
+  "checks": [
+    {
+      "call": 2,
+      "old_input_count": 147,
+      "new_input_count": 162,
+      "all_old_and_new_SHA_exact": true,
+      "clip_SHA_inherited_exact": true
+    },
+    {
+      "call": 3,
+      "old_input_count": 147,
+      "new_input_count": 162,
+      "all_old_and_new_SHA_exact": true,
+      "clip_SHA_inherited_exact": true
+    },
+    {
+      "call": 4,
+      "old_input_count": 147,
+      "new_input_count": 162,
+      "all_old_and_new_SHA_exact": true,
+      "clip_SHA_inherited_exact": true
+    },
+    {
+      "call": 5,
+      "old_input_count": 147,
+      "new_input_count": 162,
+      "all_old_and_new_SHA_exact": true,
+      "clip_SHA_inherited_exact": true
+    },
+    {
+      "call": 6,
+      "old_input_count": 147,
+      "new_input_count": 162,
+      "all_old_and_new_SHA_exact": true,
+      "clip_SHA_inherited_exact": true
+    },
+    {
+      "call": 7,
+      "old_input_count": 147,
+      "new_input_count": 162,
+      "all_old_and_new_SHA_exact": true,
+      "clip_SHA_inherited_exact": true
+    },
+    {
+      "call": 8,
+      "old_input_count": 147,
+      "new_input_count": 162,
+      "all_old_and_new_SHA_exact": true,
+      "clip_SHA_inherited_exact": true
+    },
+    {
+      "call": 9,
+      "old_input_count": 147,
+      "new_input_count": 162,
+      "all_old_and_new_SHA_exact": true,
+      "clip_SHA_inherited_exact": true
+    },
+    {
+      "call": 10,
+      "old_input_count": 147,
+      "new_input_count": 162,
+      "all_old_and_new_SHA_exact": true,
+      "clip_SHA_inherited_exact": true
+    }
+  ],
+  "AST": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\admission.py",
+      "sha256": "e0d753565c41c62467a7e3b7adb172d7b56447c367893bc9ff9c1666549076eb",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\audit_completed_window.py",
+      "sha256": "d4121b6b7a0456a66e2e8c86a7cece2d13f4588e8dba7217a03d9dc84c22ff1f",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\audit_pair.py",
+      "sha256": "b8b12958c2a03461561f9aca80c0b3d13f5189ee47b6fc4b97cc6addce4f595b",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\controller.py",
+      "sha256": "bf5dfdc5915cd14ca7ec157f81e198c91f69aebdb4d9d097eaa2f53b6d2795c2",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\launch.py",
+      "sha256": "6bf313765687b99b1cd905ec637cda1597e3efd24c91a1054e5a00904ad10deb",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\progress.py",
+      "sha256": "23f54df447d945ddfa0279acc84f9c5444657a90119a42eb40034f7cde54d180",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\run_pair.py",
+      "sha256": "ea74f24b7e8f120b50b072ec9d91a7e4a41e357aadb6a79635b6a806855d2811",
+      "AST_PASS": true
+    }
+  ],
+  "dry_run_sha256": "b5ce96789b7c9c60b5e04cec12497b89a335f0b8c0b660bacd66316ebb97543e",
+  "checker_sha256": "acca86b1878c252808cf913174f02de12125f19dad4c55c0fc4f7e58d526c996",
+  "new_model_calls": 0,
+  "current_call01_execution_sources_unchanged": true
+}

@@ -1,0 +1,629 @@
+{
+  "status": "PASS_CPU_ONLY_EXACT_BODY_ROUTE_SCHEMA_NEGATIVES_PENDING_ROOT_NO_START",
+  "sources": {
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v4\\path_projection_recovery_v1\\audit.py": "2671c0d5d23e04bba33c23e14d2f6da71072fb775e1d5ace6ed74af857b486f5",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v4\\path_projection_recovery_v1\\common.py": "824fe6d2e79e843dc1ede7aa75cbdb5c801c0cc6439176111dd09b190f36d732",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v4\\path_projection_recovery_v1\\controller.py": "31927309d67a979cd5c6759884043e9b6034d5c13c653005c5cfee61649b614a",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v4\\path_projection_recovery_v1\\engine.py": "0e5b796a5328218ce8ff90351bcefbc439b34752a35a06587b8c086b2b9e0ebb",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v4\\path_projection_recovery_v1\\launch.py": "43bedb8690f085f4478abc7f9cde83a8452f73a79b2bc9f57a6a0c60f1117ade",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v4\\path_projection_recovery_v1\\observer.py": "982f2f409e5e3e79ffaa7922dee3287b9c96256803f3bd15db9034b44497ecdf",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v4\\path_projection_recovery_v1\\prepare.py": "999be684c97536ba7d80e8b851f06fbf585ffefb39c002bac5ac60002705bc1a",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v4\\path_projection_recovery_v1\\prompt.py": "a3858cdaa446487c2288ca8e9da792fc240d54e8efedca25d858b73a0eac9ec3",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v4\\path_projection_recovery_v1\\run_call.py": "f782b58c3e1aa15bc0f77fa21089fff864484c1b47ca751bc9233af189b4dd08",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v4\\path_projection_recovery_v1\\verify.py": "d6ebd69689e2fb5d2da328e7de129db81d17dae30c19af8f62bd1a7fee70fda2",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v4\\path_projection_recovery_v1\\PROTOCOL.md": "8d58dad52fc552867d4aedf7d1bac42e2f915d80241001b222ae8a148afb8c97"
+  },
+  "routing": [
+    {
+      "CLI": 36,
+      "jobs": [
+        19,
+        20
+      ],
+      "core": 202,
+      "scope_cores": [
+        102,
+        202
+      ]
+    },
+    {
+      "CLI": 37,
+      "jobs": [
+        21,
+        22,
+        23
+      ],
+      "core": 302,
+      "scope_cores": [
+        102,
+        202,
+        302
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "part_id": "main",
+      "CLI": 36,
+      "bytes": 6693,
+      "sha256": "f5fd6fe19aa4db1cd90c0f2bdb1b30485df36620b6da4734d51b946892c6e7da",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w19_header",
+      "CLI": 36,
+      "bytes": 12924,
+      "sha256": "d425db24601c4e0d0baec53806a0ab674773ef0a0017a43b5d278986a1d0afd2",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w19_native00_15",
+      "CLI": 36,
+      "bytes": 25151,
+      "sha256": "6184c5c42eae9a071dab4cc310502756fa54151ddda69400d5b557ff81d223b7",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w19_native16_31",
+      "CLI": 36,
+      "bytes": 25161,
+      "sha256": "da64cfbe3a4c622f2028b5baf2cea8e2de986fd7024c6072183526e788e59701",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w19_native32_47",
+      "CLI": 36,
+      "bytes": 25153,
+      "sha256": "0283279c2af8eeb9b595c17b93c7897ba800d651012032a2337a5f3528d14f80",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w19_native48_63",
+      "CLI": 36,
+      "bytes": 25177,
+      "sha256": "6c341816db9ac934a31009ed51ecc03d708bfa8564c262e509d0cc4d243dd200",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w20_header",
+      "CLI": 36,
+      "bytes": 12952,
+      "sha256": "67a056c7111c602cc80798c914e34db8d68b881b39891f037ed5d76957881238",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w20_native00_15",
+      "CLI": 36,
+      "bytes": 25203,
+      "sha256": "d7d551e53ee8b3f0cfe0c0b13c5bba2c485780d72824bf01a3513e463c810e75",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w20_native16_31",
+      "CLI": 36,
+      "bytes": 25223,
+      "sha256": "e06878880ea2e0f88b1dab52eb127b87695d149f000b2511565484137e69f2a4",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w20_native32_47",
+      "CLI": 36,
+      "bytes": 25241,
+      "sha256": "7cd0c8cbbff630361efa52b9ee9a515c42423ec9c982cb28a7e2e3b0903b8230",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w20_native48_63",
+      "CLI": 36,
+      "bytes": 25247,
+      "sha256": "957f4951e7d2454eae11f9c0750bc262c9c36aa018ced7341e5905db75cd0990",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "main",
+      "CLI": 37,
+      "bytes": 6945,
+      "sha256": "506e2fcab90563c82e7179086234c87f18ff73210e6453b2245bd5a6d4d33449",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w21_header",
+      "CLI": 37,
+      "bytes": 12948,
+      "sha256": "1ac6acb5244c3813eda5cd31e62723ab65b4a82fc79d47f9282eca68953daa78",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w21_native00_15",
+      "CLI": 37,
+      "bytes": 25177,
+      "sha256": "3449c34c141ee0cfe0c707e40a1d4517e73a5b9a181ef0189b9fe40a3e734812",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w21_native16_31",
+      "CLI": 37,
+      "bytes": 25225,
+      "sha256": "1cfdee8993779ac0d2d0dc3de5c87934e8536ce9e8be9ef1d7558ebe70bff2c1",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w21_native32_47",
+      "CLI": 37,
+      "bytes": 25243,
+      "sha256": "9b289d11a7e7d89ee31c249c26b21e0b33501a5d8e6fed405fd8a072ebd3d15e",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w21_native48_63",
+      "CLI": 37,
+      "bytes": 25239,
+      "sha256": "2cebe4708f54889384aaf57028f5f7ca9a1dc44d1e03514068bd5bd993265c81",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w22_header",
+      "CLI": 37,
+      "bytes": 12813,
+      "sha256": "5474cfc00d96b79456d9c67adf77c863ed4f9409752fa26ce04ea2a5fdebc68d",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w22_native00_15",
+      "CLI": 37,
+      "bytes": 24748,
+      "sha256": "d854f92a5c872ed237983c5713eb3645b9ef24cafcfc6d4c05e4915bad446947",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w22_native16_31",
+      "CLI": 37,
+      "bytes": 24770,
+      "sha256": "65169e3381ecf3afbb1fe3bfaca9c43bee9cb904080da1a9f1236a90f0a4cd2c",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w22_native32_47",
+      "CLI": 37,
+      "bytes": 24798,
+      "sha256": "6b5a24c0b77a7d7976f34cd7e6c1e8153dafba8f6f63164cccb966d0be1ba0ad",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w22_native48_63",
+      "CLI": 37,
+      "bytes": 24796,
+      "sha256": "0b3d1f8205629e487055a16803cd10cf19e5d2254f8a59966f7e3ec72f2a5020",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w23_header",
+      "CLI": 37,
+      "bytes": 12817,
+      "sha256": "69e6f8a365d04ce2619505f8ea5101758182560b4d1501e13ea5ce654e2f04e5",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w23_native00_15",
+      "CLI": 37,
+      "bytes": 24762,
+      "sha256": "1875bbc757510f2c3eaa398db1ba1916fed12056e4a858c7a45a9ca8d2dbf628",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w23_native16_31",
+      "CLI": 37,
+      "bytes": 24778,
+      "sha256": "812f5db1320081ad2e934d5474aac789ced5cd851e3584615ccfcc1efb2b04f9",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w23_native32_47",
+      "CLI": 37,
+      "bytes": 24806,
+      "sha256": "3aa3cb019d2174e91045968272d538cb7171417167b68d3a48ab545a7d7a7136",
+      "full_regenerated_body_byte_exact": true
+    },
+    {
+      "part_id": "w23_native48_63",
+      "CLI": 37,
+      "bytes": 24802,
+      "sha256": "85c8fd51c303f0857640344da6c3689db99c17ac75ce66e25228bfb3a93f92ab",
+      "full_regenerated_body_byte_exact": true
+    }
+  ],
+  "negative_cases": [
+    {
+      "name": "complete_natural_SUCCESS_positive",
+      "eligible": true,
+      "whole_success": true,
+      "issues": [],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "network_after_all_STOP_before37",
+      "eligible": false,
+      "whole_success": false,
+      "issues": [
+        "WHOLE_FAILURE_NOT_ELIGIBLE_POST_COMPLETION_NETWORK_ONLY"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "401_after_all_STOP_before37",
+      "eligible": false,
+      "whole_success": false,
+      "issues": [
+        "WHOLE_FAILURE_NOT_ELIGIBLE_POST_COMPLETION_NETWORK_ONLY"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "early_terminal_SUCCESS_STOP_before37",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "EXPLICIT_ERROR_BEFORE_ALL_PROPOSALS"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "media_ERROR_STOP_before37",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "ACTUAL_TOOL_ERROR_OR_UNFINISHED"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "outside_before_STOP_before37",
+      "eligible": false,
+      "whole_success": false,
+      "issues": [
+        "ACTUAL_OTHER_TOOL_OR_WHITELIST_FAILURE",
+        "WHOLE_FAILURE_NOT_ELIGIBLE_POST_COMPLETION_NETWORK_ONLY"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "outside_after_STOP_before37",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "TOOL_AFTER_FINAL_PROPOSAL_TERMINAL_INSTRUCTION"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "repeat_media_STOP_before37",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "REPEATED_SUCCESSFUL_MEDIA"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "rewrite_samebytes_STOP_before37",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "REWRITTEN_SUCCESSFUL_FACT_OR_PROPOSAL"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "byte_drift_STOP_before37",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "OUTPUT_OR_PREFIX_BYTE_DRIFT"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "missing_scope_STOP_before37",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "MISSING_OR_REJECTED_IMMUTABLE_SCOPE"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "zero_scope_STOP_before37",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "MISSING_OR_REJECTED_IMMUTABLE_SCOPE"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "unfinished_tool_STOP_before37",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "ACTUAL_TOOL_ERROR_OR_UNFINISHED"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "timeout_STOP_before37",
+      "eligible": false,
+      "whole_success": false,
+      "issues": [
+        "WHOLE_FAILURE_NOT_ELIGIBLE_POST_COMPLETION_NETWORK_ONLY"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "prespawn_STOP_before37",
+      "eligible": false,
+      "whole_success": false,
+      "issues": [
+        "WHOLE_FAILURE_NOT_ELIGIBLE_POST_COMPLETION_NETWORK_ONLY"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "reported_error_STOP_before37",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "REPORTED_NONMEDIA_ERROR_REQUIRES_STOP"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "full202_tool_memory_fixture_positive",
+      "passed": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "LFminus1",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "LFplus1",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "wrongbytes",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "truncated",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "text_tool_ERROR",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "text_unfinished",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "outside_program_index",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "wrong_ACK_order",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "fact_planned_before_four_DONE",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "four_images_not_same_response",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "media_ERROR",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "rewrite_output_new_tool_identity",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "raw_ERROR_then_same_step_DONE",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "all_native_ACTIVE_missing",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "native_no_forward_planning_response",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "native_ACTIVE_after_DONE",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "ACTIVE_outside_then_legal_DONE",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "ACTIVE_ranged_then_full_DONE",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "ACTIVE_path_variant_then_literal_DONE",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "ACTIVE_toolname_conflict",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "ACTIVE_write_outside_then_legal_DONE",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "effective_eight_serial_responses",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "effective_single_eight_image_batch",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "effective_ACTIVE_missing",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "effective_ACTIVE_after_DONE",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "effective_ACTIVE_identity_conflict",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "effective_no_forward_response",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "proposal_planned_before_all_effective_DONE",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "bounded_exact_selfread_positive_False",
+      "passed": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_oversize30000_False",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_no_tailLF_False",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_CR_added_False",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_wrongbytes_False",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_wrongLF_False",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_truncated_metadata_False",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "bounded_exact_selfread_positive_True",
+      "passed": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_oversize30000_True",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_no_tailLF_True",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_CR_added_True",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_wrongbytes_True",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_wrongLF_True",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_truncated_metadata_True",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "wrong_tail_ACK_marker",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "bool_slot_schema",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "open_fact_schema",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "no_tailLF",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "CR",
+      "rejected": true,
+      "synthetic_memory_only": true
+    }
+  ],
+  "scope_helper_paths": [
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v4\\path_projection_recovery_v1\\common.py",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v4\\path_projection_recovery_v1\\engine.py",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v4\\path_projection_recovery_v1\\audit.py"
+  ],
+  "actual_requests36_37": 0,
+  "new_models": 0,
+  "new_video_decode": 0,
+  "capacity_risk_not_runtime_PASS": true
+}

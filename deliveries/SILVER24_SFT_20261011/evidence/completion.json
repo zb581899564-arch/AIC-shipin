@@ -1,0 +1,22 @@
+{
+  "status": "STOP_SCIENTIFIC_QUALITY_NO426_NO_RETUNING",
+  "utc": "2026-10-11T11:38:41.588598+00:00",
+  "lock_sha256": "8cbea442c9f40d881fe5892f9dfba07c7825b2f282200eebcf5a0c3279789a76",
+  "config_sha256": "ed235026b57bf73be0fb7e8dc75852e79e93b7d9fb48dc49eb5e750b81adbbeb",
+  "costs": {
+    "train": 444.74871196225286,
+    "evaluate": 579.0988871743903
+  },
+  "official_upload": false,
+  "production_replaced": false,
+  "candidate_static_admission": {
+    "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/candidate_static_input_acceptance.json",
+    "sha256": "d3ea1ec1ba1cd945217ac694203a531e0ea7e07e691081d3a0773481b0cad239"
+  },
+  "quality_receipt": {
+    "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/independent_quality_receipt.json",
+    "sha256": "330e2cd6961293ad66ea7b8b9f5632522dc2b8d2def68182ab9fd18344b9d2f0"
+  },
+  "candidate_started": false,
+  "final_adapter_retained": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/train_01/final_adapter"
+}

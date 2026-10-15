@@ -1,0 +1,80 @@
+{
+  "status": "PASS_EXISTING_KNOWN_TRAIN704_B602_TEST426_ALIAS_AND_BYTE_METADATA_COMPARISON_NOT_GLOBAL_INDEPENDENCE",
+  "utc": "2026-10-13T18:47:18.609876+00:00",
+  "sources": 21,
+  "dev": 11,
+  "confirm": 10,
+  "known_training_clips": 704,
+  "known_training_original_groups": 602,
+  "protected_test_metadata_records": 426,
+  "known_distinct_recorded_source_hashes": 1129,
+  "snapshot_path": "/home/inspur/aic_video_work/human_reference_iteration_20261013_v1/known_identity_snapshot_01.json",
+  "snapshot_sha256": "caa86c72a09f039601fd41b93453570e5ee6c5f3f31beb0e77fb583e09ee53c4",
+  "alias_collision_sources": 0,
+  "byte_collision_sources": 0,
+  "actual_cohort_distinct_media_hashes": 21,
+  "dev_unique_worker_subjects": 8,
+  "confirm_unique_worker_subjects": 10,
+  "worker_intersection": [],
+  "worker_groups_disjoint": true,
+  "unknowns": [
+    "Global Qwen/base model pretraining overlap",
+    "Hidden official original identities",
+    "Reencoded/transcoded/edited/excerpt same-source overlap",
+    "All visible actor overlap",
+    "Household or scene overlap"
+  ],
+  "protected_test_media_or_GT_read": false,
+  "new_media_body_reads": 0,
+  "new_media_body_hashes": 0,
+  "new_native_decodes": 0,
+  "new_processor_encodes": 0,
+  "new_model_calls": 0,
+  "new_GPU_launches": 0,
+  "full_receipt_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v2/source_isolation_receipt_02.json",
+  "full_receipt_bytes": 27159,
+  "full_receipt_sha256": "d7537a9f43d5fcf36bcf28934f63bfcbd859b2b2c3e291b412019e5a9ce76650",
+  "native_CPU_preparation": {
+    "terminal_completion_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v2/native_chain_01/completion.json",
+    "terminal_completion_sha256": "a7471b719a9274831b3552d8931b0e9987ae2ad4252d019af598d7d0d54be2c5",
+    "coarse_manifest_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v2/coarse_inputs_01.json",
+    "coarse_manifest_sha256": "9a8a8c0240996e95eb1e7b681781b77b40c8309b732d9dffc6787361e1822c60",
+    "effective_registry_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v2/effective_source_registry_02.json",
+    "effective_registry_sha256": "ab1465d499fafb44f6af3773f2c7f1ca7da7f80aa3220d8e1bee8e6ac1327b2a",
+    "windows": 38,
+    "actual_new_complete_clock_decodes": 10,
+    "actual_first_RGB_decodes": 19,
+    "actual_new_processor_encodes": 34,
+    "inherited_CPU_inputs": 4,
+    "input_token_range": [
+      3245,
+      12085
+    ],
+    "reference_coverage": {
+      "dev": {
+        "sources": 11,
+        "all_actions": 64,
+        "fully_in_domain": 41,
+        "censored_unknown": 23,
+        "zero_eligible_sources": [
+          "J8KES"
+        ]
+      },
+      "confirm": {
+        "sources": 10,
+        "all_actions": 57,
+        "fully_in_domain": 42,
+        "censored_unknown": 15,
+        "zero_eligible_sources": [
+          "IADJE",
+          "PT0L3",
+          "4ZMEW"
+        ]
+      }
+    },
+    "compressed_bytes": 43197028,
+    "raw_member_bytes": 43450502
+  },
+  "full_media_SHA_rows_stay_Linux": true,
+  "GPU_admission_pending_main": true
+}

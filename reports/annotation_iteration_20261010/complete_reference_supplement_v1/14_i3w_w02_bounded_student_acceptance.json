@@ -1,0 +1,35 @@
+{
+  "status": "PASS_ROOT_READ_SELECTED_FACTS_AND_RECHECK_CURRENT_BOUNDINGS_NOT_ALL64_CAPTION_CERTIFICATION",
+  "utc": "2026-10-10T21:50:23.180985+00:00",
+  "window_id": "i3wAGJaaktw:SLOT6:2",
+  "original_blind_review": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\14_i3wAGJaaktw_W02.independent_student64_review_v1.json",
+    "sha256": "15dc0d6dff27ad3545c8b1fbde4e980bf72674e922e6e567ab085fd28cc2ae91"
+  },
+  "bounded_reinspection": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\14_i3wAGJaaktw_W02.student_bounded_reinspection_v1.json",
+    "sha256": "b2b20c89cf02b796467006872462354d61961ed9a24f95b36c64adbc277e3ffb"
+  },
+  "original_review_preserved": true,
+  "root_read_all_selected_fresh_facts": true,
+  "actual_selected_png_rgb_pts_bindings_rechecked": 8,
+  "selected_slots": [
+    0,
+    7,
+    15,
+    23,
+    31,
+    39,
+    47,
+    63
+  ],
+  "detail_qualifications": {
+    "23": "Dog and people/hand position core match. Single static slot shows the hand near the dog's lower jaw; original upward-away movement wording needs adjacent frames and is not independently validated by this bounded slot.",
+    "39": "Dog and people core match. Fresh static fact records hands at the dog's back; original one hand moving up is not independently established by this static slot."
+  },
+  "new_blind_initial": false,
+  "teacher_exposure": false,
+  "root_direct_new_images": 0,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0
+}

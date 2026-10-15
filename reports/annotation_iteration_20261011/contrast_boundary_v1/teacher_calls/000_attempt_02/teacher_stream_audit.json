@@ -1,0 +1,168 @@
+{
+  "schema": "CONTRAST_BOUNDARY_TEACHER_STREAM_AUDIT_V1",
+  "window_id": "0tmA_C6XwfM:CONTRASTQ:0",
+  "source_sha256": "63a2f711416d2a911a4f00166fedb7ce01e2eaab18946c0222071322111b961b",
+  "original_stream": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\teacher_calls\\000_attempt_02\\stdout.jsonl",
+    "sha256": "65b30f299721ebca8cfe38ca9d5df07d898884da34bd689359a596b9402eb87d"
+  },
+  "terminal": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\teacher_calls\\000_attempt_02\\terminal.json",
+    "sha256": "432db0d76612c57f8da5ea5900dfe7d48b34aacf6a34fc1296df6907454c774c"
+  },
+  "proposal": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\teacher_calls\\000_attempt_02\\proposal.json",
+    "sha256": "30240b4f1d5a98280ccd9ca7d5a57d8389961666d1480a0697cbc97101c9d40f"
+  },
+  "contact_sheet_manifest": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\observations\\000\\contact_sheet_manifest.json",
+    "sha256": "ba765b287c3ef335f83a4b178b32b6351f5286288a6da1eb18e879ddb0a3486a"
+  },
+  "sheet_observations": [
+    {
+      "sheet_index": 0,
+      "conversation_id": "6825d7bb-e2ec-4cf5-bb8e-67b5b93ef9b1",
+      "step_index": 2,
+      "tool_call_id": null,
+      "tool_call_id_exposed": false,
+      "tool_image_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\observations\\000\\native_sheets\\native_00.png",
+      "image_sha256": "5f82ddf52c2140d904805e2763846da99dace79d5112091a061b9a524851e400",
+      "successful": true,
+      "raw_image_metadata_visible": false
+    },
+    {
+      "sheet_index": 1,
+      "conversation_id": "6825d7bb-e2ec-4cf5-bb8e-67b5b93ef9b1",
+      "step_index": 4,
+      "tool_call_id": null,
+      "tool_call_id_exposed": false,
+      "tool_image_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\observations\\000\\native_sheets\\native_01.png",
+      "image_sha256": "75d0209e0f9682bd5f8d66cc64189e013e7a551be20b439de9c13d650b86f6a6",
+      "successful": true,
+      "raw_image_metadata_visible": false
+    },
+    {
+      "sheet_index": 2,
+      "conversation_id": "6825d7bb-e2ec-4cf5-bb8e-67b5b93ef9b1",
+      "step_index": 6,
+      "tool_call_id": null,
+      "tool_call_id_exposed": false,
+      "tool_image_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\observations\\000\\native_sheets\\native_02.png",
+      "image_sha256": "2804fe79d264dfe1307ad6de717f0cbd655faa0b749951e18128249e4a2fa963",
+      "successful": true,
+      "raw_image_metadata_visible": false
+    },
+    {
+      "sheet_index": 3,
+      "conversation_id": "6825d7bb-e2ec-4cf5-bb8e-67b5b93ef9b1",
+      "step_index": 8,
+      "tool_call_id": null,
+      "tool_call_id_exposed": false,
+      "tool_image_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\observations\\000\\native_sheets\\native_03.png",
+      "image_sha256": "3d5759359ef833fad47eddec7aa4e9a1161d54a97ee7562c7bfd27685fe4fd8b",
+      "successful": true,
+      "raw_image_metadata_visible": false
+    },
+    {
+      "sheet_index": 4,
+      "conversation_id": "6825d7bb-e2ec-4cf5-bb8e-67b5b93ef9b1",
+      "step_index": 10,
+      "tool_call_id": null,
+      "tool_call_id_exposed": false,
+      "tool_image_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\observations\\000\\native_sheets\\native_04.png",
+      "image_sha256": "d1241918ecf0520952cf1ae834a7db07507682eeda1d61abe5758a15119b1f4c",
+      "successful": true,
+      "raw_image_metadata_visible": false
+    },
+    {
+      "sheet_index": 5,
+      "conversation_id": "6825d7bb-e2ec-4cf5-bb8e-67b5b93ef9b1",
+      "step_index": 12,
+      "tool_call_id": null,
+      "tool_call_id_exposed": false,
+      "tool_image_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\observations\\000\\native_sheets\\native_05.png",
+      "image_sha256": "188ad6fcec30ad702133c18f6f380e8e72110e4aee89f8f8f6277ca38959a280",
+      "successful": true,
+      "raw_image_metadata_visible": false
+    },
+    {
+      "sheet_index": 6,
+      "conversation_id": "6825d7bb-e2ec-4cf5-bb8e-67b5b93ef9b1",
+      "step_index": 14,
+      "tool_call_id": null,
+      "tool_call_id_exposed": false,
+      "tool_image_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\observations\\000\\native_sheets\\native_06.png",
+      "image_sha256": "8baa4c9a1953df9e250a44da0d6e198871ed12bcbb81d417ddce42e54dc6812d",
+      "successful": true,
+      "raw_image_metadata_visible": false
+    },
+    {
+      "sheet_index": 7,
+      "conversation_id": "6825d7bb-e2ec-4cf5-bb8e-67b5b93ef9b1",
+      "step_index": 16,
+      "tool_call_id": null,
+      "tool_call_id_exposed": false,
+      "tool_image_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\observations\\000\\native_sheets\\native_07.png",
+      "image_sha256": "6a26aea671430385ff29f283152e564eb81d9fefbfbfdd2695fbac2e182f8fb6",
+      "successful": true,
+      "raw_image_metadata_visible": false
+    }
+  ],
+  "tool_issues": [],
+  "image_block_claimed": false,
+  "raw_image_metadata_limitations": [
+    "The raw stream may expose only successful view_file terminal names and paths. Absent image blocks, dimensions, MIME metadata and tool_call_id are not inferred. Local PNG pixel verification does not prove model image-byte attention."
+  ],
+  "old_media_workflow_claimed": false,
+  "native_video_delivered": false,
+  "semantic_quality_verified": false,
+  "training_admitted": false,
+  "stream_acceptance": {
+    "successful_sheet_tools": 8,
+    "raw_image_metadata_visible_count": 0,
+    "image_bytes_attention_proven": false
+  },
+  "pixel_acceptance": {
+    "source_pngs_pixel_verified": 64,
+    "unscaled_sheet_tiles_verified": 64,
+    "sheets_pixel_verified": 8,
+    "header_pixels_per_row": 26
+  },
+  "proposal_form_acceptance": {
+    "frame_fact_identity_count": 64,
+    "complete_partition_exact": true,
+    "event_union_equals_keep": true,
+    "event_count": 0,
+    "boundary_count": 0,
+    "boundary_brackets_max_half_second": true,
+    "pure_no": true,
+    "keep_seconds_exact": "0",
+    "no_seconds_exact": "30",
+    "unknown_seconds_exact": "0",
+    "semantic_facts_verified": false,
+    "semantic_boundary_support_verified": false,
+    "semantic_quality_verified": false,
+    "training_admitted": false
+  },
+  "proposal_raw_binding_acceptance": {
+    "parsed_response_equals_saved_proposal": true,
+    "structured_output_fields_equal": true,
+    "response_only_transport_fields": [
+      "toolAction",
+      "toolSummary"
+    ]
+  },
+  "status": "PASS_REAL_STREAM_PIXELS_AND_PROPOSAL_FORM_ONLY",
+  "utc": "2026-10-11T13:49:53.575192+00:00",
+  "usage": {
+    "input_tokens": 50758,
+    "output_tokens": 14607,
+    "thinking_tokens": 11395,
+    "cache_read_tokens": 179170,
+    "total_tokens": 65365
+  },
+  "teacher_cash": "UNKNOWN_NOT_ZERO",
+  "new_teacher_calls": 0,
+  "native_video_decoder_calls": 0,
+  "new_optimizer_updates": 0
+}

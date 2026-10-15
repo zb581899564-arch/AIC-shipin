@@ -1,0 +1,95 @@
+{
+  "utc": "2026-10-15T00:20:27.127878+00:00",
+  "source_order": "Original pre-exposure reserve hash order, exclude all10 prior media identities; first4 plus2 engineering reserves",
+  "selection": [
+    {
+      "video_id": "v_rrNJt73BG_8",
+      "youtube_id": "rrNJt73BG_8",
+      "author_duration_raw": "57.1",
+      "selection_hash": "07c1b3829a1920a538e69c32066104513cce94d8bfe50e670d0a9a44f2051ef0",
+      "provider": {
+        "video_id": "rrNJt73BG_8",
+        "video_url": "https://huggingface.co/buckets/TornadoLabs/staging/resolve/videos/activitynet/rrNJt73BG_8.mp4",
+        "subtitle_url": null,
+        "youtube_url": "https://www.youtube.com/watch?v=rrNJt73BG_8",
+        "size_bytes": 4476707
+      },
+      "group": "confirm"
+    },
+    {
+      "video_id": "v_17nr8u_ze0o",
+      "youtube_id": "17nr8u_ze0o",
+      "author_duration_raw": "57.28",
+      "selection_hash": "0a7d5da7fbf413f2e86c7f8269ec88171a303cf99a00a97a51a2c259b7ff0748",
+      "provider": {
+        "video_id": "17nr8u_ze0o",
+        "video_url": "https://huggingface.co/buckets/TornadoLabs/staging/resolve/videos/activitynet/17nr8u_ze0o.mp4",
+        "subtitle_url": null,
+        "youtube_url": "https://www.youtube.com/watch?v=17nr8u_ze0o",
+        "size_bytes": 8183799
+      },
+      "group": "confirm"
+    },
+    {
+      "video_id": "v_isUCIXYjOXE",
+      "youtube_id": "isUCIXYjOXE",
+      "author_duration_raw": "45.05",
+      "selection_hash": "0ad0b64ab80fa16035db37fd4fe47995bce930d58423b8f6f6e9a27766d451f0",
+      "provider": {
+        "video_id": "isUCIXYjOXE",
+        "video_url": "https://huggingface.co/buckets/TornadoLabs/staging/resolve/videos/activitynet/isUCIXYjOXE.mp4",
+        "subtitle_url": null,
+        "youtube_url": "https://www.youtube.com/watch?v=isUCIXYjOXE",
+        "size_bytes": 4851500
+      },
+      "group": "dev"
+    },
+    {
+      "video_id": "v_IGamNJ5yIh4",
+      "youtube_id": "IGamNJ5yIh4",
+      "author_duration_raw": "39.59",
+      "selection_hash": "0e17e18d638f1066875a5384ac6a595abc08d9d91d7bb28f3f2e70bec6b1ebc7",
+      "provider": {
+        "video_id": "IGamNJ5yIh4",
+        "video_url": "https://huggingface.co/buckets/TornadoLabs/staging/resolve/videos/activitynet/IGamNJ5yIh4.mp4",
+        "subtitle_url": "https://huggingface.co/buckets/TornadoLabs/staging/resolve/videos/activitynet/IGamNJ5yIh4.xml",
+        "youtube_url": "https://www.youtube.com/watch?v=IGamNJ5yIh4",
+        "size_bytes": 2931217
+      },
+      "group": "confirm"
+    }
+  ],
+  "reserves": [
+    {
+      "video_id": "v_NNuIaUFYGCE",
+      "youtube_id": "NNuIaUFYGCE",
+      "author_duration_raw": "52.08",
+      "selection_hash": "1025b63b71c331b9992be0063e829b5b18be66e8e9d300393e3fd5a639d89dfe",
+      "provider": {
+        "video_id": "NNuIaUFYGCE",
+        "video_url": "https://huggingface.co/buckets/TornadoLabs/staging/resolve/videos/activitynet/NNuIaUFYGCE.mp4",
+        "subtitle_url": "https://huggingface.co/buckets/TornadoLabs/staging/resolve/videos/activitynet/NNuIaUFYGCE.xml",
+        "youtube_url": "https://www.youtube.com/watch?v=NNuIaUFYGCE",
+        "size_bytes": 1673389
+      },
+      "group": "dev"
+    },
+    {
+      "video_id": "v_pHZogKGkc9o",
+      "youtube_id": "pHZogKGkc9o",
+      "author_duration_raw": "41.63",
+      "selection_hash": "11d2f69fca07900ef53f8ba07945c7b174c15f9af14707de4fb98f3609c82bf3",
+      "provider": {
+        "video_id": "pHZogKGkc9o",
+        "video_url": "https://huggingface.co/buckets/TornadoLabs/staging/resolve/videos/activitynet/pHZogKGkc9o.mp4",
+        "subtitle_url": null,
+        "youtube_url": "https://www.youtube.com/watch?v=pHZogKGkc9o",
+        "size_bytes": 2275440
+      },
+      "group": "confirm"
+    }
+  ],
+  "maximum_pool_bytes": 24392052,
+  "metrics_or_media_not_yet_read": true,
+  "old_source_registration_sha256": "2521b9901e9e432d5bdd27f0ef57fae3fec6ccc66f659bed06416f0ff838b1ad"
+}

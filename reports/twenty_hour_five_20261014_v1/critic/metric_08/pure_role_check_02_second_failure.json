@@ -1,0 +1,8 @@
+{
+  "status": "FAILED_PURE_ROLE_CHECK_02_SECOND_SYNTHETIC_CASE",
+  "reason": "Initial synthetic BASE [4.5,11.5] contains the coarse/TIME [5,11] supported interval, so correctly removes no comparative support. Corrected to TIME [3.5,12.5] and BASE [4.25,11.75], which improves error but removes TIME-declared action support.",
+  "real_reference_reads": 0,
+  "media_reads": 0,
+  "processor_calls": 0,
+  "model_calls": 0
+}

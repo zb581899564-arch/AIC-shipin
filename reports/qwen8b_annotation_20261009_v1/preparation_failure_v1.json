@@ -1,0 +1,11 @@
+{
+  "status": "ORIGINAL_PREPARATION_COUNT_ASSUMPTION_REJECTED",
+  "source_id": "Se3oxnaPsz0",
+  "actual_decoded_frames": 4166,
+  "published_annotation_vector_length": 4165,
+  "original_error": "ValueError: Native count vs published vector mismatch Se3oxnaPsz0: 4166 vs 4165",
+  "cause": "Published vector length was incorrectly used as native-frame authority",
+  "recovery": "Derive ordinals and sample policy from actual sequential decoder PTS. Preserve old PNGs; compare exact RGB before reuse. Do not pad or silently remap human labels.",
+  "successful_previous_manifests_preserved": true,
+  "original_raw_annotation_labels_modified": false
+}

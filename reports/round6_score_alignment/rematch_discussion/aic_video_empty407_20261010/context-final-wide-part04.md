@@ -1,0 +1,7184 @@
+from contracts import answer_string
+from video_contract import encode
+import json
+
+def from_teacher_record(record):
+    if record.get('status')!='PASS_WEAK_COMPLETE_WINDOW_TARGET' or record.get('sft_eligible') is not True or record.get('uncertain') is not False:
+        raise ValueError('Teacher record is not eligible complete-window supervision')
+    observation=record['actual_observation']
+    if observation.get('all_planned_frames_delivered') is not True or record.get('parsed_answer',{}).get('observation_scope',{}).get('all_provided_frames_reviewed') is not True:
+        raise ValueError('Full provided observation was not reviewed')
+    segments=json.loads(record['target_json'])['segments']
+    if (segments==[]) != (record.get('explicit_no_highlight') is True):
+        raise ValueError('Teacher empty semantics disagree with target')
+    label=dict(observation_complete=True,status='OBSERVED_EMPTY' if not segments else 'OBSERVED_POSITIVE',segments=segments)
+    target_text(label,record['window']['window_duration_sec'])
+    return label
+
+def target_text(label, duration):
+    if label.get('observation_complete') is not True or label.get('status') not in ('OBSERVED_POSITIVE','OBSERVED_EMPTY'):
+        raise ValueError('Only complete observed supervision has an SFT target')
+    segments=label.get('segments')
+    if (label['status']=='OBSERVED_EMPTY') != (segments==[]):
+        raise ValueError('Observed label status disagrees with segment emptiness')
+    return answer_string(segments,duration,allow_empty=True)
+
+def build_target(processor, prompt, frames, metadata, label, duration, video_size, max_input=16384, *, native_plan, source_fps):
+    import torch
+    answer=target_text(label,duration)
+    suffix=answer+'<|im_end|>\n'
+    shared=dict(videos=[frames],video_metadata=[metadata],video_size=video_size,max_input=max_input)
+    from exact_pts import exact_native_pts, verify_native_encoding
+    identities=[]
+    def encoded_text(text):
+        with exact_native_pts(processor,native_plan,source_fps) as identity:
+            value=encode(processor,text=[text],**shared)
+            verify_native_encoding(processor,value,identity)
+        identities.append(identity)
+        return value
+    head=encoded_text(prompt)
+    full=encoded_text(prompt+suffix)
+    prefix=int(head['input_ids'].shape[1])
+    if not torch.equal(full['input_ids'][0,:prefix],head['input_ids'][0]):
+        raise ValueError('Assistant prefix differs from prompt input')
+    for key in ('pixel_values_videos','video_grid_thw'):
+        if not torch.equal(full[key],head[key]):raise ValueError('Video encoding changed between target and prompt')
+    from sft_contract import assistant_labels
+    mask=assistant_labels(full['input_ids'][0].tolist(),full['attention_mask'][0].tolist(),head['input_ids'][0].tolist(),head['attention_mask'][0].tolist())
+    decoded=processor.tokenizer.decode(mask['assistant_token_ids'],skip_special_tokens=False,clean_up_tokenization_spaces=False)
+    if decoded!=suffix:raise ValueError('Exact assistant target token boundary changed')
+    full['labels']=torch.tensor([mask['tail_labels']],dtype=torch.long)
+    full['logits_to_keep']=mask['logits_to_keep']
+    return full,dict(answer=answer,assistant_tokens=int(full['input_ids'].shape[1])-prefix,
+                     input_tokens=int(full['input_ids'].shape[1]),allow_empty=True,exact_pts_encoding=identities)
+
+```
+
+## 新必要原文件全文 reports/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_v1/sft_contract.py
+原始bytes=19501 SHA=c2e762e7deca7cbc15d6d2b158e5251eeb25141b5cf5b02b8996042619c3414d
+
+```
+"""Stdlib-only admission and assistant-interval CE contracts; never imports torch."""
+from __future__ import annotations
+import hashlib
+import json
+import math
+import os
+from pathlib import Path
+import re
+
+MODEL_ID="Qwen/Qwen3-VL-8B-Instruct"
+REVISION="0c351dd01ed87e9c1b53cbc748cba10e6187ff3b"
+SCOPE="TEMPORAL_8B_SFT_SMOKE_NONTEST"
+ROUTE="TEMPORAL_8B_INTERVAL_SFT"
+BASE_PARAMS=8_767_123_696
+LORA_PARAMS=15_335_424
+TOTAL_PARAMS=BASE_PARAMS+LORA_PARAMS
+ORIGINAL_TRAIN_SHA="ef427866153a9601be01b6e12356951c2fb56730525b0d7b7c353651c2930ddf"
+ORIGINAL_TRAIN_RELATIVE="r7_temporal_pool/round7_temporal_pool_20260921T090903Z/inputs/train_temporal.jsonl"
+
+
+class AdmissionRejected(ValueError): pass
+
+
+def require(condition,message):
+    if not condition: raise AdmissionRejected(message)
+
+
+def sha256(path):
+    digest=hashlib.sha256()
+    with Path(path).open("rb") as source:
+        for block in iter(lambda:source.read(8<<20),b""): digest.update(block)
+    return digest.hexdigest()
+
+
+def is_sha(value):
+    return isinstance(value,str) and re.fullmatch("[0-9a-f]{64}",value) is not None
+
+
+def finite(value):
+    return type(value) in (int,float) and math.isfinite(value)
+
+
+def load_original_train(path=None):
+    path=Path(path) if path else Path(__file__).resolve().parents[3]/ORIGINAL_TRAIN_RELATIVE
+    require(path.is_file() and sha256(path)==ORIGINAL_TRAIN_SHA,"fixed original R7 704 train file identity mismatch")
+    rows=[json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+    require(len(rows)==704 and len({row.get("sample_id") for row in rows})==704 and
+            all(row.get("split")=="train" for row in rows),"fixed R7 source is not the original train-only 704")
+    return rows
+
+
+def read_bound(spec,name):
+    require(isinstance(spec,dict) and set(spec)=={"path","sha256"} and is_sha(spec["sha256"]),
+            name+" requires exact path/SHA evidence")
+    path=Path(spec["path"])
+    require(path.is_file() and sha256(path)==spec["sha256"],name+" byte identity mismatch")
+    return path
+
+
+def segments_valid(segments,duration):
+    require(finite(duration) and duration>0 and isinstance(segments,list) and 1<=len(segments)<=5,
+            "illegal target duration/segment count; empty or UNKNOWN is not a target")
+    previous=0.0
+    for segment in segments:
+        require(isinstance(segment,list) and len(segment)==2 and all(finite(x) for x in segment),
+                "nonfinite or nonnumeric target segment")
+        a,b=segment
+        require(0<=a<b<=duration+1e-9 and a>=previous-1e-9,"invalid, overlapping or backward target")
+        require(0<=round(a,4)<round(b,4)<=duration+1e-9,"round4 target becomes invalid")
+        previous=b
+    return segments
+
+
+def answer_string(segments,duration):
+    segments_valid(segments,duration)
+    return json.dumps({"segments":[[round(a,4),round(b,4)] for a,b in segments]},separators=(",",":"))
+
+
+def assistant_labels(full_ids,full_mask,prompt_ids,prompt_mask):
+    """Mask all prompt/video and padding IDs, supporting either padding side."""
+    require(len(full_ids)==len(full_mask) and len(prompt_ids)==len(prompt_mask) and
+            all(x in (0,1) for x in full_mask+prompt_mask),"invalid token attention mask")
+    active=[i for i,mask in enumerate(full_mask) if mask]
+    prompt=[value for value,mask in zip(prompt_ids,prompt_mask) if mask]
+    actual=[full_ids[i] for i in active]
+    require(prompt and actual[:len(prompt)]==prompt,"assistant prompt/token boundary mismatch")
+    require(len(actual)>len(prompt),"no supervised assistant tokens")
+    first=active[len(prompt)]
+    labels=[-100]*len(full_ids)
+    for position in active[len(prompt):]: labels[position]=full_ids[position]
+    keep=len(full_ids)-max(0,first-1)
+    return {"labels":labels,"tail_labels":labels[-keep:],"logits_to_keep":keep,
+            "supervised_tokens":len(actual)-len(prompt),"prompt_tokens":len(prompt),
+            "first_supervised_position":first,"assistant_token_ids":actual[len(prompt):]}
+
+
+def language_target_names(module_names,layer_count):
+    require(type(layer_count) is int and layer_count>0,"invalid language layer count")
+    pattern=re.compile(r"^model\.language_model\.layers\.(\d+)\.self_attn\.(q_proj|k_proj|v_proj|o_proj)$")
+    selected=[name for name in module_names if pattern.fullmatch(name)]
+    expected={f"model.language_model.layers.{i}.self_attn.{projection}"
+              for i in range(layer_count) for projection in ("q_proj","k_proj","v_proj","o_proj")}
+    require(set(selected)==expected and len(selected)==len(expected),"language q/k/v/o target inventory mismatch")
+    return selected
+
+
+def validate_trainable_names(names):
+    require(names and all("lora_" in name and "visual" not in name and "modules_to_save" not in name
+                          and re.search(r"language_model\.layers\.\d+\.self_attn\.(q_proj|k_proj|v_proj|o_proj)\.",name)
+                          for name in names),"unexpected trainable base/vision/head/LoRA target")
+
+
+class EffectiveAccumulation:
+    """Only successful supervised backward calls count; no partial update."""
+    def __init__(self,grad_accum,updates):
+        require(type(grad_accum) is int and grad_accum>0 and type(updates) is int and updates>0,
+                "positive explicit update/accumulation counts required")
+        self.grad_accum,self.updates=grad_accum,updates
+        self.pending=self.completed=self.effective_batches=0
+    def record_backward(self,has_loss,loss_finite=True):
+        if not has_loss: return False
+        require(loss_finite,"nonfinite loss cannot count as an effective batch")
+        require(self.completed<self.updates,"extra batch after fixed updates")
+        self.pending+=1; self.effective_batches+=1
+        return self.pending==self.grad_accum
+    def record_step(self):
+        require(self.pending==self.grad_accum,"partial or empty accumulation cannot step")
+        self.completed+=1; self.pending=0
+    def finish(self):
+        require(self.completed==self.updates and self.pending==0 and
+                self.effective_batches==self.updates*self.grad_accum,"incomplete fixed effective update count")
+
+
+def legacy_clip_plan(row):
+    fps=row["fps_num"]/row["fps_den"]; total=row["n_frames"]
+    sf=int(math.ceil(max(0.0,row["clip_start_sec"])*fps))
+    ef=int(math.floor(row["clip_end_sec"]*fps))
+    sf=max(0,min(sf,total-1)); ef=max(sf+1,min(ef,total-1))
+    count=ef-sf+1; samples=min(64,count)
+    indices=[0] if samples==1 else [int(round(i*((count-1)/(samples-1)))) for i in range(samples)]
+    if samples>1: indices[-1]=count-1
+    return {"source_total_frames":total,"source_fps":fps,"clip_start_frame_abs":sf,
+            "clip_end_frame_abs":ef,"n_frames_in_clip":count,"n_sampled":samples,
+            "clip_local_indices":indices,"absolute_indices":[sf+i for i in indices]}
+
+
+FIXED={"schema":"aic_temporal_sft8b_config_v1","model_id":MODEL_ID,"revision":REVISION,
+       "max_frames":64,"max_pixels":131072,"window_seconds":30,"precision":"bf16",
+       "attn_implementation":"sdpa","lora_rank":16,"lora_alpha":32,"lora_dropout":0.05,
+       "modules_to_save":None,"gradient_checkpointing_use_reentrant":False,
+       "loss":"ASSISTANT_INTERVAL_JSON_CE","optimizer":"AdamW","weight_decay":0.0,"grad_clip_norm":1.0,
+       "adamw_betas":[0.9,0.999],"adamw_eps":1e-8}
+EXTRA={"model_dir","model_receipt","train_manifest","r7_train_registry","temporal_common","r7_core",
+       "out_dir","updates","grad_accum","lr","seed","max_sequence_length","max_wall_seconds"}
+
+
+def verify_model_receipt(model_dir,receipt):
+    controller="completed" in receipt
+    require((receipt.get("repo") if controller else receipt.get("repo_id"))==MODEL_ID and
+            receipt.get("revision")==REVISION,"wrong fixed 8B model receipt")
+    if controller:
+        require(receipt.get("status")=="COMPLETE_HASH_VERIFIED" and
+                Path(receipt.get("model_path","")).resolve()==model_dir.resolve(),"8B receipt incomplete/path mismatch")
+    entries=receipt.get("completed") if controller else receipt.get("files")
+    require(isinstance(entries,list) and entries,"8B model receipt files missing")
+    declared=set()
+    for entry in entries:
+        name=entry.get("name") if controller else entry.get("path")
+        require(isinstance(name,str) and Path(name).name==name and name not in declared,"unsafe/duplicate model file")
+        declared.add(name); source=model_dir/name
+        size=entry.get("bytes") if controller else entry.get("size_bytes")
+        require(type(size) is int and size>=0 and source.is_file() and source.stat().st_size==size and
+                is_sha(entry.get("sha256")) and sha256(source)==entry["sha256"],"fixed model file byte mismatch")
+    required={"config.json","tokenizer.json","tokenizer_config.json","preprocessor_config.json",
+              "video_preprocessor_config.json","model.safetensors.index.json"}
+    required.update(p.name for p in model_dir.iterdir() if p.is_file() and p.suffix in
+                    (".json",".safetensors",".jinja",".txt",".model"))
+    require(required<=declared and any(name.endswith(".safetensors") for name in declared),"unbound model/config/tokenizer file")
+    architecture=json.loads((model_dir/"config.json").read_text())
+    require(architecture.get("model_type")=="qwen3_vl" and architecture.get("text_config",{}).get("hidden_size")==4096,
+            "model architecture is not pinned Qwen3-VL-8B")
+    index=json.loads((model_dir/"model.safetensors.index.json").read_text())
+    require(isinstance(index.get("weight_map"),dict) and index["weight_map"] and
+            set(index["weight_map"].values())<=declared,"unbound model shard index")
+
+
+def admit(config_path,admission_path,here=None):
+    """All authority, code, model and source byte checks precede runtime imports."""
+    here=Path(here or Path(__file__).parent).resolve()
+    admission=json.loads(Path(admission_path).read_text(encoding="utf-8"))
+    require(admission.get("schema")=="aic_temporal_sft8b_admission_v1" and admission.get("scope")==SCOPE and
+            admission.get("authorized") is True and admission.get("registered_route")==ROUTE and
+            admission.get("training_authorized_by_user") is True and
+            admission.get("formal_c_bce_admitted") is False,"SFT smoke route not registered/authorized; C STOP remains")
+    route_path=read_bound(admission.get("training_authorization_evidence"),"user training request and main B registration")
+    choice=json.loads(route_path.read_text(encoding="utf-8"))
+    require(choice.get("authorized") is True and choice.get("route")==ROUTE and choice.get("scope")==SCOPE and
+            choice.get("authority_kind")=="USER_TRAINING_REQUEST_MAIN_REGISTERED_B_ROUTE" and
+            choice.get("user_request_quote")=="然后推理打包开训。" and choice.get("explicit_user_route_choice") is False and
+            choice.get("authorization_inferred_from_nonresponse") is False and choice.get("formal_c_bce_admitted") is False and
+            choice.get("full_training_admitted") is False,
+            "broader user training request/main B protocol evidence does not authorize this smoke")
+    require(admission.get("config_sha256")==sha256(config_path),"SFT config not bound to admission")
+    config=json.loads(Path(config_path).read_text(encoding="utf-8"))
+    require(set(config)==set(FIXED)|EXTRA,"unknown/missing SFT recipe field")
+    for key,value in FIXED.items():
+        require(config[key]==value and type(config[key]) is type(value),"fixed SFT recipe changed: "+key)
+    for key in ("updates","grad_accum","seed","max_sequence_length"):
+        require(type(config[key]) is int and config[key]>0,"invalid explicit SFT "+key)
+    for key in ("lr","max_wall_seconds"):
+        require(finite(config[key]) and config[key]>0,"invalid explicit SFT "+key)
+    require(all(admission.get(key) is True for key in ("resource_preflight_pass","shared_gpu_queue_approved",
+                "disk_peak_within_80gib","budget_runner_required")),"SFT resources/queue not registered")
+    code=admission.get("source_code_sha256")
+    require(isinstance(code,dict) and set(code)=={"sft_contract.py","train_sft.py"} and
+            all(is_sha(digest) and sha256(here/name)==digest for name,digest in code.items()),"SFT source code identity mismatch")
+    bound={name:read_bound(config[name],name) for name in
+           ("model_receipt","train_manifest","r7_train_registry","temporal_common","r7_core")}
+    for key in ("model_receipt","train_manifest","r7_train_registry"):
+        require(admission.get(key+"_sha256")==config[key]["sha256"],"admission does not bind "+key)
+    output=Path(config["out_dir"]).resolve()
+    require(here in output.parents and (not output.exists() or not any(output.iterdir())),"unsafe/nonempty SFT smoke output")
+    # Verify borrowed helpers before importing them, including fixed prompt/IO.
+    common=bound["temporal_common"].read_text(encoding="utf-8")
+    require("MAX_FRAMES = 64" in common and "MAX_PIXELS = 128 * 32 * 32" in common,
+            "R7 temporal preprocessing identity changed")
+    model_dir=Path(config["model_dir"])
+    require(model_dir.is_dir(),"8B model directory missing")
+    verify_model_receipt(model_dir,json.loads(bound["model_receipt"].read_text(encoding="utf-8")))
+    registry=json.loads(bound["r7_train_registry"].read_text(encoding="utf-8"))
+    rows=[json.loads(line) for line in bound["train_manifest"].read_text(encoding="utf-8").splitlines() if line.strip()]
+    original=load_original_train(bound["r7_core"].parent.parent/"inputs/train_temporal.jsonl")
+    sources=validate_training_rows(registry,rows,original)
+    for source,digest in sources.items():
+        require(Path(source).is_file() and sha256(source)==digest,"training source bytes changed before runtime imports")
+    return {"config":config,"admission":admission,"rows":rows,"sources":sources,"bound":bound,
+            "config_sha256":sha256(config_path),"admission_sha256":sha256(admission_path),
+            "origin_train_manifest_sha256":registry["origin_train_manifest_sha256"]}
+
+
+def validate_training_rows(registry,rows,original_rows=None):
+    """Train-only metadata/target join, independent of machine-local paths."""
+    parents=registry.get("records")
+    require(registry.get("schema")=="aic_sft8b_r7_train_registry_v1" and registry.get("expected_parent_count")==704
+            and registry.get("origin_train_manifest_sha256")==ORIGINAL_TRAIN_SHA and isinstance(parents,list) and len(parents)==704,
+            "not the frozen original 704 train parent registry")
+    lookup={r.get("parent_sample_id"):r for r in parents}
+    require(len(lookup)==704 and None not in lookup and all(isinstance(key,str) and key for key in lookup),"duplicate/missing 704 parent ID")
+    original={r["sample_id"]:r for r in (load_original_train() if original_rows is None else original_rows)}
+    require(set(lookup)==set(original) and len(original)==704,"registry replaced original 704 parent set")
+    old_identity=("video_id","source_group","youtube_id","source_path","clip_start_sec","clip_end_sec")
+    for parent in parents:
+        old=original[parent["parent_sample_id"]]
+        require(all(parent.get(key)==old.get(key) for key in old_identity),
+                "registry parent differs from fixed original train source/window")
+        require(parent.get("split")=="train" and parent.get("label_status")=="WEAK_TEACHER" and
+                parent.get("pts_audit_status")=="PASS","dev/confirm/unapproved PTS parent forbidden")
+        old_fps=old.get("source_avg_fps")
+        require(old.get("split")=="train" and old.get("label_status")=="WEAK_TEACHER" and old.get("pts_audit_status")=="PASS" and
+                finite(old_fps) and old_fps>0 and finite(old.get("pts_frame_interval_sec")) and old["pts_frame_interval_sec"]>0 and
+                finite(old.get("pts_max_residual_sec")) and 0<=old["pts_max_residual_sec"]<=1/old_fps+1e-6,
+                "fixed R7 parent lacks its historical approximate CFR evidence")
+        require(parent.get("n_frames")==old.get("decoded_source_frames") and
+                type(parent.get("fps_num")) is int and parent["fps_num"]>0 and
+                type(parent.get("fps_den")) is int and parent["fps_den"]>0 and
+                abs(parent["fps_num"]/parent["fps_den"]-old_fps)<=max(1e-6,old_fps*1e-6),
+                "new source count/FPS differs from original R7 metadata; old byte equality is unproven")
+    require(len({r.get("youtube_id") for r in parents})==602,"frozen 602 original R7 train source groups changed")
+    require(rows and len({r.get("window_id") for r in rows})==len(rows),"empty/duplicate SFT window manifest")
+    identity=("video_id","youtube_id","source_group","source_path","source_sha256","n_frames","fps_num","fps_den","width","height",
+              "source_bytes","source_mtime_ns")
+    sources={}
+    for row in rows:
+        require(row.get("parent_sample_id") in lookup,"SFT sample outside original 704 train")
+        parent=lookup[row["parent_sample_id"]]
+        require(row.get("sample_id")==row["parent_sample_id"] and all(row.get(key)==parent.get(key) for key in identity),
+                "SFT window parent/source identity mismatch")
+        require(row.get("split")=="train" and row.get("label_status")=="WEAK_TEACHER" and row.get("pts_audit_status")=="PASS",
+                "SFT train-only weak/CFR status missing")
+        require(all(type(row.get(key)) is int and row[key]>0 for key in ("n_frames","fps_num","fps_den","width","height"))
+                and row["n_frames"]>=2 and is_sha(row.get("source_sha256")),"invalid source metadata/byte identity")
+        start,end=row.get("clip_start_sec"),row.get("clip_end_sec")
+        require(finite(start) and finite(end) and 0<=start<end<=row["n_frames"]*row["fps_den"]/row["fps_num"]+1e-6
+                and end-start<=30+1e-9,"SFT window violates registered CFR 30s source contract")
+        require(parent["clip_start_sec"]<=start<end<=parent["clip_end_sec"]+1e-9,"SFT window exceeds original parent clip")
+        windows=parent.get("registered_windows",[])
+        registered=[w for w in windows if w.get("window_id")==row["window_id"]]
+        require(len(registered)==1,"window not uniquely registered under its 704 parent")
+        window=registered[0]
+        require(window.get("parent_sample_id",row["parent_sample_id"])==row["parent_sample_id"] and
+                all(window.get(key)==row.get(key) for key in ("clip_start_sec","clip_end_sec","segments_clip_local")),
+                "registered window geometry/canonical target mismatch")
+        segments_valid(row.get("segments_clip_local"),end-start)
+        require(row["source_path"] not in sources or sources[row["source_path"]]==row["source_sha256"],"contradictory source byte bindings")
+        sources[row["source_path"]]=row["source_sha256"]
+    return sources
+
+
+def verify_live_gpu_reservation():
+    require(os.name=="posix","SFT execution requires main's Linux shared GPU wrapper")
+    path=Path("/home/inspur/aic_video_work/improvement_round1/active_gpu_job.json")
+    require(path.is_file(),"shared GPU reservation missing")
+    active=json.loads(path.read_text()); ancestors=set(); pid=os.getpid()
+    for _ in range(32):
+        ancestors.add(pid)
+        if pid<=1: break
+        pid=int(Path(f"/proc/{pid}/stat").read_text().rsplit(")",1)[1].split()[1])
+    require(active.get("child_pid") in ancestors and active.get("runner_pid") in ancestors,
+            "SFT reservation belongs to another process")
+
+```
+
+## 新必要原文件全文 reports/round6_score_alignment/rematch_discussion/aic_video_empty407_20261010/source_exposure_audit.json
+原始bytes=42623 SHA=da7fc191afdba994c280274575ee70120f3ff2a61ee5f34027e7961a11ca9606
+
+```
+{
+  "utc": "2026-10-10T04:55:15.431817+00:00",
+  "status": "PASS_EXISTING_MEDIA_BYTES_AND_HISTORICAL_AUDIT_BINDING",
+  "sources": 50,
+  "human_alignment_eligible": 48,
+  "all_sources_previously_exposed": true,
+  "source_rows": [
+    {
+      "source_id": "-esJrBWj2d8",
+      "source_group": "youtube:-esJrBWj2d8",
+      "category": "DS",
+      "prior_split": "validation",
+      "media_sha256": "811186cdec40ef58049f0cc951c07a9f6f7d2b5cb27511e01094b829bbd10a9e",
+      "media_bytes": 12547350,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\-esJrBWj2d8\\-esJrBWj2d8.mp4",
+      "native_frames": 6912,
+      "duration": 230.4,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "0tmA_C6XwfM",
+      "source_group": "youtube:0tmA_C6XwfM",
+      "category": "GA",
+      "prior_split": "train",
+      "media_sha256": "63a2f711416d2a911a4f00166fedb7ce01e2eaab18946c0222071322111b961b",
+      "media_bytes": 7573592,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\0tmA_C6XwfM\\0tmA_C6XwfM.mp4",
+      "native_frames": 3532,
+      "duration": 141.28,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "37rzWOQsNIw",
+      "source_group": "youtube:37rzWOQsNIw",
+      "category": "MS",
+      "prior_split": "train",
+      "media_sha256": "c4fb034705c03a890fed5cc46ff79d1e9aef5cd9edec1d22dfe7cc653b5fd98a",
+      "media_bytes": 10156252,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\37rzWOQsNIw\\37rzWOQsNIw.mp4",
+      "native_frames": 5742,
+      "duration": 191.5914,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "3eYKfiOEJNs",
+      "source_group": "youtube:3eYKfiOEJNs",
+      "category": "GA",
+      "prior_split": "train",
+      "media_sha256": "d8c2669fbd08e8b2f35ebce82dfe5aa6cbf7e8fbee56df9e971ca12b7dd9e322",
+      "media_bytes": 10488602,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\3eYKfiOEJNs\\3eYKfiOEJNs.mp4",
+      "native_frames": 4853,
+      "duration": 194.12,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "4wU_LUjG5Ic",
+      "source_group": "youtube:4wU_LUjG5Ic",
+      "category": "PR",
+      "prior_split": "validation",
+      "media_sha256": "2779762f2c332931c9fb4e61783b81df6e34b487dc3a94c882781c981e6c4869",
+      "media_bytes": 8815620,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\4wU_LUjG5Ic\\4wU_LUjG5Ic.mp4",
+      "native_frames": 4005,
+      "duration": 167.041875,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "91IHQYk1IQM",
+      "source_group": "youtube:91IHQYk1IQM",
+      "category": "PR",
+      "prior_split": "train",
+      "media_sha256": "327f8cd1ff27ecec1de291e396ac7c40521253fa208f2e3c477c5b1e84964f05",
+      "media_bytes": 5830349,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\91IHQYk1IQM\\91IHQYk1IQM.mp4",
+      "native_frames": 3312,
+      "duration": 110.5104,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "98MoyGZKHXc",
+      "source_group": "youtube:98MoyGZKHXc",
+      "category": "VT",
+      "prior_split": "train",
+      "media_sha256": "e293ceb35a8f1ec514707c579ab9b78e678a0c686f895d25945b9a50432c000c",
+      "media_bytes": 9817234,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\98MoyGZKHXc\\98MoyGZKHXc.mp4",
+      "native_frames": 4688,
+      "duration": 187.52,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "_xMr-HKMfVA",
+      "source_group": "youtube:_xMr-HKMfVA",
+      "category": "FM",
+      "prior_split": "train",
+      "media_sha256": "1d9cd42e19931934ea362f7509bf69f0e98a13da801414998d58296fca4bcbbe",
+      "media_bytes": 8040777,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\_xMr-HKMfVA\\_xMr-HKMfVA.mp4",
+      "native_frames": 4463,
+      "duration": 148.91543333333334,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "akI8YFjEmUw",
+      "source_group": "youtube:akI8YFjEmUw",
+      "category": "VU",
+      "prior_split": "train",
+      "media_sha256": "28f8d4d89a14b30f9066ad5146e8b219c67d45291b9a1588af6d1f6c455acffe",
+      "media_bytes": 7222459,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\akI8YFjEmUw\\akI8YFjEmUw.mp4",
+      "native_frames": 3995,
+      "duration": 133.29983333333334,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "AwmHb44_ouw",
+      "source_group": "youtube:AwmHb44_ouw",
+      "category": "VT",
+      "prior_split": "train",
+      "media_sha256": "82ecca1de0363253060bb3c19e2f5dbd4080bfc0cd790db23c3e73ffd76a602f",
+      "media_bytes": 19246027,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\AwmHb44_ouw\\AwmHb44_ouw.mp4",
+      "native_frames": 10597,
+      "duration": 353.58656666666667,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "b626MiF1ew4",
+      "source_group": "youtube:b626MiF1ew4",
+      "category": "PK",
+      "prior_split": "train",
+      "media_sha256": "66d6dc7720db2ae750c9c85a7f6a0d55416a9a23ce6ca7d151969501d8606e1c",
+      "media_bytes": 12624955,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\b626MiF1ew4\\b626MiF1ew4.mp4",
+      "native_frames": 5661,
+      "duration": 235.875,
+      "human_ordinal_alignment": "NOT_RECORDED",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "Bhxk-O1Y7Ho",
+      "source_group": "youtube:Bhxk-O1Y7Ho",
+      "category": "GA",
+      "prior_split": "train",
+      "media_sha256": "a66202fe5943daee0a0984fd708ff3126168ded35750c099a54ae67705e1ff3f",
+      "media_bytes": 24536587,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\Bhxk-O1Y7Ho\\Bhxk-O1Y7Ho.mp4",
+      "native_frames": 13511,
+      "duration": 450.8170333333333,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "byxOvuiIJV0",
+      "source_group": "youtube:byxOvuiIJV0",
+      "category": "FM",
+      "prior_split": "train",
+      "media_sha256": "b94f772069a7479b54c27b50650bccdfb0b75bb573abf8bda27dba1a5af75abd",
+      "media_bytes": 8234183,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\byxOvuiIJV0\\byxOvuiIJV0.mp4",
+      "native_frames": 3705,
+      "duration": 154.529375,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "cjibtmSLxQ4",
+      "source_group": "youtube:cjibtmSLxQ4",
+      "category": "PK",
+      "prior_split": "validation",
+      "media_sha256": "43183ef7f35bfcbc39c122be797fdee5031103862c7c7da3b9ab74d222c79c9d",
+      "media_bytes": 35194393,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\cjibtmSLxQ4\\cjibtmSLxQ4.mp4",
+      "native_frames": 19406,
+      "duration": 647.5135333333334,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "E11zDS9XGzg",
+      "source_group": "youtube:E11zDS9XGzg",
+      "category": "DS",
+      "prior_split": "train",
+      "media_sha256": "f4370b8fd985c3b41bf5590988669b18794ea64fea3921a8109962a91c324986",
+      "media_bytes": 27524696,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\E11zDS9XGzg\\E11zDS9XGzg.mp4",
+      "native_frames": 15307,
+      "duration": 510.23333333333335,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "EE-bNr36nyA",
+      "source_group": "youtube:EE-bNr36nyA",
+      "category": "BK",
+      "prior_split": "train",
+      "media_sha256": "0e11bb5bb60ac4842b2ee500c9cf985395a083ae92c3f498f1e91f12aa8e1691",
+      "media_bytes": 5274150,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\EE-bNr36nyA\\EE-bNr36nyA.mp4",
+      "native_frames": 2941,
+      "duration": 98.13136666666666,
+      "human_ordinal_alignment": "NOT_RECORDED",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "eQu1rNs0an0",
+      "source_group": "youtube:eQu1rNs0an0",
+      "category": "BT",
+      "prior_split": "train",
+      "media_sha256": "7a3daec4c22feace99c4e193ce72e4a3e17bbedd4f0c6feb39e3e9030e6fb05f",
+      "media_bytes": 8817667,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\eQu1rNs0an0\\eQu1rNs0an0.mp4",
+      "native_frames": 4931,
+      "duration": 164.53103333333334,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "EYqVtI9YWJA",
+      "source_group": "youtube:EYqVtI9YWJA",
+      "category": "BT",
+      "prior_split": "validation",
+      "media_sha256": "6ffcc966ab00a6096d7b256cffd09408efa7db376df7732644f875b8ff27f390",
+      "media_bytes": 10713251,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\EYqVtI9YWJA\\EYqVtI9YWJA.mp4",
+      "native_frames": 5939,
+      "duration": 198.16463333333334,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "fWutDQy1nnY",
+      "source_group": "youtube:fWutDQy1nnY",
+      "category": "PR",
+      "prior_split": "train",
+      "media_sha256": "d50d740e77517611ea231e844d409ebdf51e05037ef8cd17a22cd983d2464fc3",
+      "media_bytes": 31792596,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\fWutDQy1nnY\\fWutDQy1nnY.mp4",
+      "native_frames": 17527,
+      "duration": 585.8541966106227,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "GsAD1KT1xo8",
+      "source_group": "youtube:GsAD1KT1xo8",
+      "category": "PK",
+      "prior_split": "train",
+      "media_sha256": "a195fc9d8e5330ee55c62dfc0a99eb5d130bf0444bb412992d1204eecd8f3a86",
+      "media_bytes": 7794439,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\GsAD1KT1xo8\\GsAD1KT1xo8.mp4",
+      "native_frames": 4356,
+      "duration": 145.3452,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "gzDbaEs1Rlg",
+      "source_group": "youtube:gzDbaEs1Rlg",
+      "category": "VT",
+      "prior_split": "train",
+      "media_sha256": "6682bdee7edc1d697a1807bb3f84f50e3cacd98266fc93d1deb38adbb8d125c2",
+      "media_bytes": 15419041,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\gzDbaEs1Rlg\\gzDbaEs1Rlg.mp4",
+      "native_frames": 7210,
+      "duration": 288.4,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "Hl-__g2gn_A",
+      "source_group": "youtube:Hl-__g2gn_A",
+      "category": "MS",
+      "prior_split": "train",
+      "media_sha256": "9386d64a62463f36213a043e6e74c76faf5eff746d7ef53035146c7bead40bd1",
+      "media_bytes": 13134659,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\Hl-__g2gn_A\\Hl-__g2gn_A.mp4",
+      "native_frames": 5846,
+      "duration": 243.82691666666668,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "HT5vyqe0Xaw",
+      "source_group": "youtube:HT5vyqe0Xaw",
+      "category": "VU",
+      "prior_split": "train",
+      "media_sha256": "85fdd93e61fb670b5437666c9eb90aa1798889edbe07394749c00ca0d044c886",
+      "media_bytes": 17564055,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\HT5vyqe0Xaw\\HT5vyqe0Xaw.mp4",
+      "native_frames": 9671,
+      "duration": 322.6890333333333,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "i3wAGJaaktw",
+      "source_group": "youtube:i3wAGJaaktw",
+      "category": "GA",
+      "prior_split": "validation",
+      "media_sha256": "7a8cc3f5415702ce254200db00650cb42981ba0c0fa5b5ef4a910f7c66c69c21",
+      "media_bytes": 8413810,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\i3wAGJaaktw\\i3wAGJaaktw.mp4",
+      "native_frames": 4700,
+      "duration": 156.82333333333332,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "iVt07TCkFM0",
+      "source_group": "youtube:iVt07TCkFM0",
+      "category": "BT",
+      "prior_split": "train",
+      "media_sha256": "7c34621e37ff0cc6d7f8838e8c6468e67eea934484e3c7ecf8eca7409c35e3f7",
+      "media_bytes": 5538282,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\iVt07TCkFM0\\iVt07TCkFM0.mp4",
+      "native_frames": 2500,
+      "duration": 104.27083333333333,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "J0nA4VgnoCo",
+      "source_group": "youtube:J0nA4VgnoCo",
+      "category": "VT",
+      "prior_split": "validation",
+      "media_sha256": "65c9490a2166d17736c38ed077f250290c548b1da8f1801f10ff53fad8e84a5b",
+      "media_bytes": 31626560,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\J0nA4VgnoCo\\J0nA4VgnoCo.mp4",
+      "native_frames": 14019,
+      "duration": 584.709125,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "jcoYJXDG9sw",
+      "source_group": "youtube:jcoYJXDG9sw",
+      "category": "DS",
+      "prior_split": "train",
+      "media_sha256": "3354cee170c1b9ace768883f058150869874ed27c2b60cf08b9f2272b5aa1db9",
+      "media_bytes": 14753114,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\jcoYJXDG9sw\\jcoYJXDG9sw.mp4",
+      "native_frames": 5971,
+      "duration": 199.23236666666668,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "JgHubY5Vw3Y",
+      "source_group": "youtube:JgHubY5Vw3Y",
+      "category": "BT",
+      "prior_split": "train",
+      "media_sha256": "dff35488cc8dfd1b4962d82d8a96f475a051f163ed7dea4be8a0d10456e5b7c5",
+      "media_bytes": 7682265,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\JgHubY5Vw3Y\\JgHubY5Vw3Y.mp4",
+      "native_frames": 4304,
+      "duration": 143.61013333333332,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "JKpqYvAdIsw",
+      "source_group": "youtube:JKpqYvAdIsw",
+      "category": "FM",
+      "prior_split": "validation",
+      "media_sha256": "da63a55d05c49f042699b366f3026ba77c8695208b40eb40b506867604caf905",
+      "media_bytes": 8201511,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\JKpqYvAdIsw\\JKpqYvAdIsw.mp4",
+      "native_frames": 3802,
+      "duration": 152.08,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "kLxoNp-UchI",
+      "source_group": "youtube:kLxoNp-UchI",
+      "category": "DS",
+      "prior_split": "train",
+      "media_sha256": "0c91bfa880e3af0e1716e7456ada0a304a97911eef76b1cd4fdce5066a52e8f7",
+      "media_bytes": 6970411,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\kLxoNp-UchI\\kLxoNp-UchI.mp4",
+      "native_frames": 3896,
+      "duration": 129.99653333333333,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "LRw_obCPUt0",
+      "source_group": "youtube:LRw_obCPUt0",
+      "category": "MS",
+      "prior_split": "train",
+      "media_sha256": "ce57a731477468ddf799c29cfcbd11469e30cb96eb844c372a8447a90e1db858",
+      "media_bytes": 13697882,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\LRw_obCPUt0\\LRw_obCPUt0.mp4",
+      "native_frames": 6241,
+      "duration": 260.30170833333335,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "NyBmCxDoHJU",
+      "source_group": "youtube:NyBmCxDoHJU",
+      "category": "DS",
+      "prior_split": "train",
+      "media_sha256": "6960e8850f04eae077a85e3befddaed36ce1196ac84d9efd8f8560ac90e557b7",
+      "media_bytes": 10213204,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\NyBmCxDoHJU\\NyBmCxDoHJU.mp4",
+      "native_frames": 4740,
+      "duration": 189.6,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "oDXZc0tZe04",
+      "source_group": "youtube:oDXZc0tZe04",
+      "category": "BK",
+      "prior_split": "train",
+      "media_sha256": "dd2cddeaeb6bc44dea976337af5c8b79b0030abbe2438ed8549fe9304621efd2",
+      "media_bytes": 20654776,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\oDXZc0tZe04\\oDXZc0tZe04.mp4",
+      "native_frames": 11414,
+      "duration": 380.8471333333333,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "PJrm840pAUI",
+      "source_group": "youtube:PJrm840pAUI",
+      "category": "PK",
+      "prior_split": "train",
+      "media_sha256": "790c560f5132928d456803ca5e23b03ca38b1eb8d3383b619afbed60dd5be86f",
+      "media_bytes": 14766069,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\PJrm840pAUI\\PJrm840pAUI.mp4",
+      "native_frames": 6580,
+      "duration": 274.1666666666667,
+      "human_ordinal_alignment": "NOT_RECORDED",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "qqR6AEXwxoQ",
+      "source_group": "youtube:qqR6AEXwxoQ",
+      "category": "BT",
+      "prior_split": "train",
+      "media_sha256": "77987b565d016441183ec928ef985f1a1d805b4c36c833a0b0b2705fff6a092d",
+      "media_bytes": 14617342,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\qqR6AEXwxoQ\\qqR6AEXwxoQ.mp4",
+      "native_frames": 8073,
+      "duration": 269.3691,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "RBCABdttQmI",
+      "source_group": "youtube:RBCABdttQmI",
+      "category": "PR",
+      "prior_split": "train",
+      "media_sha256": "2411ac74f1e8a049072063bd579b4aa034e5c01a388c67cdcc7959763562b36b",
+      "media_bytes": 19590609,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\RBCABdttQmI\\RBCABdttQmI.mp4",
+      "native_frames": 10917,
+      "duration": 364.2639,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "Se3oxnaPsz0",
+      "source_group": "youtube:Se3oxnaPsz0",
+      "category": "BK",
+      "prior_split": "validation",
+      "media_sha256": "87bf58a787009bce2add1a743bca81b98b33e7bb8edee80c1ff7c7070ae368e6",
+      "media_bytes": 7584394,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\Se3oxnaPsz0\\Se3oxnaPsz0.mp4",
+      "native_frames": 4166,
+      "duration": 138.86666666666667,
+      "human_ordinal_alignment": "UNRESOLVED_COUNT_DIFFERENCE_NOT_PADDED",
+      "excluded_human_vector_alignment": true,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "sTEELN-vY30",
+      "source_group": "youtube:sTEELN-vY30",
+      "category": "VU",
+      "prior_split": "validation",
+      "media_sha256": "b6767caf3ddb2a1750672427315fe61c63a854de26ca707f5e5041bf45557d48",
+      "media_bytes": 8065363,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\sTEELN-vY30\\sTEELN-vY30.mp4",
+      "native_frames": 4468,
+      "duration": 148.93333333333334,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "uGu_10sucQo",
+      "source_group": "youtube:uGu_10sucQo",
+      "category": "BK",
+      "prior_split": "train",
+      "media_sha256": "302cfeab45f174688d2a709cc4528087a5ba17d4fb9880ceac8fe8db87007b51",
+      "media_bytes": 8256585,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\uGu_10sucQo\\uGu_10sucQo.mp4",
+      "native_frames": 4009,
+      "duration": 167.04166666666666,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "vdmoEJ5YbrQ",
+      "source_group": "youtube:vdmoEJ5YbrQ",
+      "category": "VU",
+      "prior_split": "train",
+      "media_sha256": "77f719f5de3ca948691dd34e7dac5ed5783d1b98814fea035aa7cce6d21edb72",
+      "media_bytes": 17926114,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\vdmoEJ5YbrQ\\vdmoEJ5YbrQ.mp4",
+      "native_frames": 9870,
+      "duration": 329.329,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "VuWGsYPqAX8",
+      "source_group": "youtube:VuWGsYPqAX8",
+      "category": "FM",
+      "prior_split": "train",
+      "media_sha256": "9476a6d8bc6fdcff909fa2885ba82ba7696b3d05fca2f070e313139e434eabe3",
+      "media_bytes": 11537377,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\VuWGsYPqAX8\\VuWGsYPqAX8.mp4",
+      "native_frames": 5412,
+      "duration": 216.48,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "WG0MBPpPC6I",
+      "source_group": "youtube:WG0MBPpPC6I",
+      "category": "MS",
+      "prior_split": "train",
+      "media_sha256": "0d68d94612da8efd687419dc030a485d61419c30290865d9ec1f9ed1062040f9",
+      "media_bytes": 21473331,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\WG0MBPpPC6I\\WG0MBPpPC6I.mp4",
+      "native_frames": 9535,
+      "duration": 397.68895833333335,
+      "human_ordinal_alignment": "UNRESOLVED_COUNT_DIFFERENCE_NOT_PADDED",
+      "excluded_human_vector_alignment": true,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "WxtbjNsCQ8A",
+      "source_group": "youtube:WxtbjNsCQ8A",
+      "category": "BK",
+      "prior_split": "train",
+      "media_sha256": "b6c658e4d5258fcba10207b8c49ed624cabfe951ed9c9a96aa4ed6fada96d388",
+      "media_bytes": 14014038,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\WxtbjNsCQ8A\\WxtbjNsCQ8A.mp4",
+      "native_frames": 7959,
+      "duration": 265.5653,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "XkqCExn6_Us",
+      "source_group": "youtube:XkqCExn6_Us",
+      "category": "PK",
+      "prior_split": "train",
+      "media_sha256": "ee3e102d0cda34b30c8eadaa162157616c398213dc88d0198ff4cc6476dd5fc9",
+      "media_bytes": 10210795,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\XkqCExn6_Us\\XkqCExn6_Us.mp4",
+      "native_frames": 5631,
+      "duration": 187.8877,
+      "human_ordinal_alignment": "NOT_RECORDED",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "xmEERLqJ2kU",
+      "source_group": "youtube:xmEERLqJ2kU",
+      "category": "FM",
+      "prior_split": "train",
+      "media_sha256": "14184d35578cc9e672428f693ae74328ecb54b003d85857ff2afbf8354a90081",
+      "media_bytes": 24129938,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\xmEERLqJ2kU\\xmEERLqJ2kU.mp4",
+      "native_frames": 13365,
+      "duration": 445.9455,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "xwqBXPGE9pQ",
+      "source_group": "youtube:xwqBXPGE9pQ",
+      "category": "VU",
+      "prior_split": "train",
+      "media_sha256": "71bb39923112962e30006918c9e3a9dbcd248786f275568447e8a29ebdb380ff",
+      "media_bytes": 12666392,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\xwqBXPGE9pQ\\xwqBXPGE9pQ.mp4",
+      "native_frames": 7010,
+      "duration": 233.90033333333332,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "xxdtq8mxegs",
+      "source_group": "youtube:xxdtq8mxegs",
+      "category": "GA",
+      "prior_split": "train",
+      "media_sha256": "fe3200fd13dfbf74f5c02d73ec9acd7bd0c1f68eb876968bc74230549320c327",
+      "media_bytes": 7367068,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\xxdtq8mxegs\\xxdtq8mxegs.mp4",
+      "native_frames": 4324,
+      "duration": 144.13333333333333,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "XzYM3PfTM4w",
+      "source_group": "youtube:XzYM3PfTM4w",
+      "category": "VT",
+      "prior_split": "train",
+      "media_sha256": "c758df53e237aadc9e893a4389078b25f58000a782d3c69b8490195aae30dac0",
+      "media_bytes": 6010860,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\XzYM3PfTM4w\\XzYM3PfTM4w.mp4",
+      "native_frames": 3327,
+      "duration": 111.0109,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "Yi4Ij2NM7U4",
+      "source_group": "youtube:Yi4Ij2NM7U4",
+      "category": "MS",
+      "prior_split": "validation",
+      "media_sha256": "26ec9f71ea771e5601a1f5c963fa425681ae2f86b3dfca483a64d58b5a65feb9",
+      "media_bytes": 21884159,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\Yi4Ij2NM7U4\\Yi4Ij2NM7U4.mp4",
+      "native_frames": 9731,
+      "duration": 405.4583333333333,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    },
+    {
+      "source_id": "z_6gVvQb2d0",
+      "source_group": "youtube:z_6gVvQb2d0",
+      "category": "PR",
+      "prior_split": "train",
+      "media_sha256": "fe77605cdf8c234219ce423a90a93e44e003e55567bdb9bb87a3fb5fec0063cd",
+      "media_bytes": 15043855,
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\z_6gVvQb2d0\\z_6gVvQb2d0.mp4",
+      "native_frames": 8281,
+      "duration": 276.3093666666667,
+      "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+      "excluded_human_vector_alignment": false,
+      "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+      "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+      "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+    }
+  ],
+  "original_overlap_receipt": {
+    "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\corpus_acceptance.json",
+    "sha256": "5d757bc62ab8fd18e603926f83c68c3593f6ab7e4c1f2ad6f4374af2ad5f3e81",
+    "status": "NO_MATCH_IN_AVAILABLE_METADATA",
+    "overlap": []
+  },
+  "unchanged_overlap_evidence": [
+    {
+      "path": "G:\\ai\\AIC视频\\data_audit\\video_inventory.tsv",
+      "actual_sha256": "8225b1e7485c0657f82f00c6a11d57327f847907efaabe6a61076b7ed4c1507e",
+      "comparison": "original 11-char source IDs and available exact hashes"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_execution\\rematch_exec_20261005T1215Z\\controller\\m0_finalize_01\\clean_manifest_426.json",
+      "actual_sha256": "57a6985ad8248ae9ee64d24adc1f84eea1ac9f1b19f90da3c6647d8befa15d32",
+      "comparison": "exact encoded media hashes only; anonymized source identities unavailable"
+    }
+  ],
+  "semantic_reencoded_duplicate_exclusion_proven": false,
+  "limitations": "Existing exact hashes and available IDs only; no new semantic deduplication, test pixels, or blind evaluation claim. Historical license discrepancy retained, not adjudicated by this audit."
+}
+```
+
+## 新必要原文件全文 reports/qwen8b_annotation_20261009_v1/corpus_acceptance.json
+原始bytes=2384 SHA=5d757bc62ab8fd18e603926f83c68c3593f6ab7e4c1f2ad6f4374af2ad5f3e81
+
+```
+{
+  "utc": "2026-10-09T08:08:31.990493+00:00",
+  "status": "PASS_LOCAL_IDENTITIES_AND_FIXED_SPLIT",
+  "sources": 50,
+  "frames": 600,
+  "split": {
+    "validation": 10,
+    "train": 40
+  },
+  "category_split": {
+    "BK": {
+      "train": 4,
+      "validation": 1
+    },
+    "BT": {
+      "train": 4,
+      "validation": 1
+    },
+    "DS": {
+      "validation": 1,
+      "train": 4
+    },
+    "FM": {
+      "train": 4,
+      "validation": 1
+    },
+    "GA": {
+      "train": 4,
+      "validation": 1
+    },
+    "MS": {
+      "train": 4,
+      "validation": 1
+    },
+    "PK": {
+      "train": 4,
+      "validation": 1
+    },
+    "PR": {
+      "validation": 1,
+      "train": 4
+    },
+    "VT": {
+      "train": 4,
+      "validation": 1
+    },
+    "VU": {
+      "train": 4,
+      "validation": 1
+    }
+  },
+  "source_overlap_status": "NO_MATCH_IN_AVAILABLE_METADATA",
+  "overlap": [],
+  "evidence": [
+    {
+      "path": "G:\\ai\\AIC视频\\data_audit\\video_inventory.tsv",
+      "sha256": "8225b1e7485c0657f82f00c6a11d57327f847907efaabe6a61076b7ed4c1507e",
+      "records": 11576,
+      "available_hashes": 912,
+      "comparison": "original 11-char source IDs and available exact hashes"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_execution\\rematch_exec_20261005T1215Z\\controller\\m0_finalize_01\\clean_manifest_426.json",
+      "sha256": "57a6985ad8248ae9ee64d24adc1f84eea1ac9f1b19f90da3c6647d8befa15d32",
+      "records": 426,
+      "available_hashes": 425,
+      "comparison": "exact encoded media hashes only; anonymized source identities unavailable"
+    }
+  ],
+  "human_frame_alignment_issues": [
+    {
+      "source_id": "Se3oxnaPsz0",
+      "native_frames": 4166,
+      "human_vector_length": 4165,
+      "disposition": "EXCLUDE_HUMAN_VECTOR_ORDINAL_LABELS_UNTIL_ALIGNMENT_PROVEN"
+    },
+    {
+      "source_id": "WG0MBPpPC6I",
+      "native_frames": 9535,
+      "human_vector_length": 9534,
+      "disposition": "EXCLUDE_HUMAN_VECTOR_ORDINAL_LABELS_UNTIL_ALIGNMENT_PROVEN"
+    }
+  ],
+  "semantic_or_reencoded_duplicate_exclusion_proven": false,
+  "limitations": "Local identity metadata comparison does not exclude reencoded/partial duplicates or unknown original identities of rematch media. No contest pixels or test labels were read."
+}
+
+```
+
+END_EMPTY407_P01
+
+
+# Pro complete public decision
+
+# Pro slot6 完整可见答复
+
+来源：https://chatgpt.com/g/g-p-6ab0f33aae10819190801ea5ae9e5194-yan-jiu/c/6ac9c5fd-57e8-83ea-96b7-276eae314690
+获取 UTC：2026-10-10T05:24:52.431Z
+
+EMPTY407｜slot6/8 集中裁决
+
+本次后剩余2个Pro slot，不重置历史额度。
+
+我的裁决：批准一个有界的“24窗银标 → 原B native续训一次 → 开发与锁定评价各一次 → 有条件生成426风险ZIP”的工作包。现在不批准直接训练，更不批准直接生成426。
+
+原37.66继续作为不可覆盖的candidate0；237步图片评分器的407空包撤回质量推荐，但保留权重、原始输出、失败记录和费用。**这次要检验的不是“怎样让输出不空”，而是“目标一致、经过有限观察审查的监督，能否使一次小更新比原B更好”。**现有37.66、237步分支和407空的身份在卷宗中是分开的，不能写成原37.66被续训破坏了。
+context-p01-part01
+
+一、实际读取与核验范围
+
+本次读取的是指定的新附件，而不是历史同名卷。对本对话附件实际逐卷读取原始字节、核对分卷SHA，再按顺序拼接，结果为：
+
+纯文本
+667582 bytes
+9177 text lines（本地 splitlines 口径）
+SHA256:
+4cde3e5a9968d7003846b332e408e469cf1b5f0e70b16066d6d3eacc62b1c2d1
+END_EMPTY407_P01
+本条附件	实际字节	实际读取正文范围
+part01(2)	104,879	1–1019行
+part02(2)	15,195	1–178行
+part03(2)	123,573	唯一超长JSON行，完整分段读取
+part04(2)	104,833	1–1637行
+part05(1)	104,892	1–2125行
+part06(1)	104,937	1–1614行
+part07	104,974	1–2475行
+part08	4,299	1–128行，至末标
+
+索引也已完整读取；八卷实际长度、各卷SHA及拼接SHA均与本条索引吻合。长JSON另外完成了解析和数值复算，四臂各1351个评分记录，共5404个四元组。
+context-p01-index
+
+**这只是对本次附件副本的核验，不是对Linux上的模型权重、媒体原件和执行过程重新验签。**旧r01的CRLF问题按新卷保留的复核记录处理；不能把本次p01吻合改写为“旧r01原来的字节一致声明也正确”。
+context-p01-part01
+
+二、407空：哪些已经查明，哪些仍然不能定案
+1. 根因必须分层，不能用一个故事包办
+层级	本次判定
+直接选择机制	新评分器只保留score >= 49的时间格。完整生成、解析和映射正常，不代表一定有格子越过49。大量低于阈值的合法分数可以正常产生合法空输出。
+已观察到的数值问题	开发集预测范围明显比人工分数窄，预测分数与标签分数未经证明处于可直接共用阈值的尺度。
+上游机制假说	TVSum重要性与目标高光编辑不一致、静态采样遗漏时序信息、整数JSON训练形成的输出偏好，均是有依据的风险；现有证据不足以量化各自贡献。
+已经成立的管理失误	放行门没有建立相对于原B native的目标一致质量证据；非测试8全空后，工程成功仍被允许通向完整426。
+
+选择代码确实按49截断，然后扩展到该格全部原生帧。不能把这个分支的问题归咎于当前B0的空列表语法。
+context-p01-part02
+
+我独立复算出的开发分布是：
+
+项目	新预测	人工评分
+有效点数	1351	1351
+最小值—最大值	24—53	21—87
+≥49的点数	48	293
+
+开发源实际是4空、5非空，不是5空。并且存在明确逆序：
+
+纯文本
+sTEELN-vY30，grid 5：预测48，人工87
+sTEELN-vY30，grid32：预测50，人工27
+
+所以，**校准可能有价值，但不能承诺单调校准能修复这些排序错误，更不能据此承诺AIC提分。**这些数值来自完整评分JSON，而不是教师意见的投票。
+context-p01-part03
+
+还必须纠正一句因果表述：**“输出范围收缩”是观察结果，不是已经证实的训练根因。**这里训练的是整数JSON的语言模型交叉熵，不能直接套用“数值回归必然回归均值”作为结案解释。现有源码也已经展示了图片训练的assistant-only mask，不能继续暗示237步失败已经查明是mask漏遮蔽。
+context-p01-part05
+
+2. 两秒整格扩展是另一种错误风险，不应冒充所有空输出的独立原因
+
+两秒中点看见的东西，不足以证明整格都有同一种语义。卷内“28/29秒扇舞、29.96秒已经切到行人”的实例，确实支持整格KEEP可能越界。但当所有格子的分数都未越过49时，是否扩展整格并不会凭空产生一次选择。应把“阈值导致没有格子被选”与“选中后时间范围不准确”分开。
+context-p01-part01
+
+3. 上一轮质量门的失误，不是“工程核验太认真”
+
+工程核验有必要，应保留。真正的问题是：
+
+第一，对照错位。production_B被放进图片评分prompt做诊断，不等于比较了37.66原B的native生产管线。
+context-p01-part01
+
+**第二，代理改善承担了超出其证据范围的放行责任。**原门确实同时要求排序、Top15效用、多数源改善和视觉依赖，随后才要求native代理F优于base。因此Gemini的单尖峰反例没有击穿全部门；但这些条件全部通过，仍然不等于AIC高光质量成立。
+context-p01-part01
+
+**第三，非测试8没有起到业务风险阻断作用。**它们全空并不能证明全部预测错误，但在缺少目标语义核验时，也不能只凭11strict通过继续当作质量候选推进。卷宗明确记载了当时的全空结果和继续执行。
+context-p01-part01
+
+**仍然未知的包括：407个视频中真正无高光的比例、新包官网分、各机制对实际漏检的贡献。**本次不把它们编成已知结论。
+
+三、关闭版本争议，并修正两个新增实施缺口
+当前B0允许0–5段及[]，这项争议结束
+
+实际调用链是：
+
+纯文本
+bw_common.helpers
+→ context_advisory.runtime.bind_helpers
+→ V14.train_student.helper_paths
+→ V14.precision_helpers/contracts.py
+
+experiment.base_texts()['B0']
+→ EMPTY_PROMPT
+
+该提示词明确允许0–5段，并明确规定：观察不足或不确定，不是无高光的证据，不能用空列表代替不确定。
+context-p01-part05
+context-p01-part06(1)
+
+因此，撤回“为兼容当前B0只能训练正窗”的理由。真实完整NO可以入训；没有真实NO时，也不能人为制造。
+
+新卷已经补齐native训练目标叶代码
+
+Sol/Tibo上一轮关于build_target缺失的保留，不能继续作为本轮缺证项。新卷已提供完整JSON、结束标记、前缀一致、视频张量一致、assistant token解码一致及mask构造。
+context-p01-part07
+
+但旧V14整套执行入口仍不能直接套用：它绑定旧160条收集，评价只接受每源一窗，并按epoch开发结果选择checkpoint。新实验必须单独实现准入、两窗源级评价和固定终点，不能修改旧冻结文件来伪装兼容。
+context-p01-part06
+context-p01-part06
+context-p01-part06
+
+来源审计存在一个需要保留的口径缺口
+
+我逐条统计50条来源记录，得到：
+
+44条：COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF
+4条：NOT_RECORDED
+2条：UNRESOLVED_COUNT_DIFFERENCE_NOT_PADDED
+
+四条未记录的是b626MiF1ew4、EE-bNr36nyA、PJrm840pAUI、XkqCExn6_Us。所以摘要中的“48可用”不能全部展开成“48条均已有逐条帧数对齐证明”。
+context-p01-part07
+context-p01-part07
+context-p01-part07
+
+**这不证明四段原视频不能用于新native银标。**新银标不依赖旧人工重要性向量；本轮只是优先选已有明确记录的44条，避免再增加一项无关的补证工作。
+
+四、唯一工作包：EMPTY407_SLOT6_SILVER24_V1
+1. 固定6训练源、2流程开发源、4锁定评价源
+
+本轮不采用48窗，也不采用来源与窗口混算的“12窗、6/3/3”。我按来源审计元数据作了一个确定性划分，不使用标签或预测表现挑选：
+
+纯文本
+排序键：
+SHA256("EMPTY407_SLOT6_SILVER24_V1|" + source_group)
+
+训练：
+旧train中按键排序，依次取不同category的首个来源，取满6组。
+
+开发与锁定：
+旧validation中按键排序，前2组开发，后4组锁定。
+用途	固定来源ID	计划窗数
+训练	kLxoNp-UchI、AwmHb44_ouw、HT5vyqe0Xaw、37rzWOQsNIw、WxtbjNsCQ8A、byxOvuiIJV0	12
+流程开发	-esJrBWj2d8、i3wAGJaaktw	4
+锁定评价	EYqVtI9YWJA、J0nA4VgnoCo、cjibtmSLxQ4、Yi4Ij2NM7U4	8
+
+**这些都是历史曝光来源，锁定评价只能称“本轮锁定的历史曝光开发评价”，不能称未见盲测。**原B是否训练过各来源，卷内这份manifest也没有证明；不能自行填成“未见”。
+context-p01-part07
+context-p01-part08
+
+来源ID、原件SHA、已知衍生关系在标注前核对。本轮训练与评价不能同源或已知近重复。现有复赛排重证据只支持可用ID及编码哈希未匹配，不支持排除了匿名媒体的重编码或片段重复；不得为补这个未知去查看复赛像素。
+context-p01-part08
+context-p01-part08
+
+许可登记差异继续保留，不能把SHA通过写成版权许可通过，也不能借用历史上“仅限诊断”的资产授权。这里沿用用户已给出的本地标注、必要训练授权，不扩展为公开发布、任意数据转传或自动提交授权。
+
+2. 每源两窗必须来自原B的实际窗口计划
+
+先用当前B0冻结的全源native规划器及实际PTS得到原窗口列表，再按下面的键选择其中两个窗口：
+
+纯文本
+SHA256(seed + "|window|" + source_group + "|" + 原窗口索引)
+
+取键最小的两个，执行时按时间排序。要求原计划中两窗非重叠、各自不超过30秒。
+
+**不得另切一个方便标注的20–50秒片段，再声称candidate0仍是原B原输入。**本轮原生ordinal、PTS、floor64、processor和生成协议均绑定实际选中的原窗口。当前B的均衡双窗规则只在其原本规定的条件下生效，不扩大适用范围。
+context-p01-part04
+
+本轮评价范围是这两窗的联合域，不是整段TVSum媒体；未抽中的原视频余段不加入正负分母。
+
+首4窗固定来自表中前两个训练来源，计入24窗，不额外新增。
+
+3. 一个实际前置条件不能省略
+
+卷内agy执行路径和媒体审计路径位于Windows。这不证明这些原生视频已经在Linux训练主机上就位。
+context-p01-part02
+context-p01-part07
+
+执行分工因此是：
+
+已有agy主机负责标注；Linux负责native准备、训练和评价；Mac只作可选CPU复核，不进入关键路径。
+
+先核Linux本地是否已有上述媒体的同SHA副本。若12个原件全部需要搬运，按卷内大小合计为196,564,489字节，约196.56 MB单向原件数据，不含额外派生物。这不是“小量控制文件”，不能自动借已有控制传输授权搬过去。媒体尚未就位时，可以先完成本地4窗观察先导与代码合同，不必停止全部工作；训练则等待明确的媒体就位回执或专项传输许可。
+
+五、有限观察完整窗口银标：接受，但资格必须这样建立
+1. 银标的名称和含义
+
+本轮接受：
+
+在冻结有限观察协议下，经两次盲态独立作答审查的完整窗口银标编辑建议。
+
+它不等于逐帧真值，也不等于两个模型统计独立。
+
+一般残余采样风险——采样间隙可能藏有未发现事件——记录为协议局限，不把每个间隙都机械判UNKNOWN。
+
+已识别且会改变答案的不确定性——事件是否发生、是否值得保留、数量、边界、跨镜关系、是否应为空仍无法裁定——必须保留为UNKNOWN，不能用“银标本来就有噪声”消除。
+
+这正是允许有限学习、又不制造隐含负例的分界。
+
+2. 实际供给与盲审合同
+
+每个窗口只建立一份绑定以下内容的证据包：
+
+层次	必须具备的内容
+原件与时间身份	源SHA、窗口域、原生ordinal、真实PTS、实际输入像素签名
+原生视频观察	本窗MP4及真实工具读取回执；内部采样不透明就保持未知
+显式学生采样	实际floor64帧；不足64按实际数量，不复制凑数
+学生可见性	不只看高分辨原图，还检查原B实际processor有效分辨率下的证据
+独立作答	教师提案与主控盲审分别先成文、封存，再揭示对方答案
+最终标签	原提案、补查证据、最终编辑裁定及拒收理由分别保留
+
+显式图像按最多8批、每批8个帧ID组织；原生RGB及学生有效分辨率视图最多构成128张静态证据图/窗。批次读入失败、图像身份不一致或上下文中没有实际提供，都不能靠教师回答“看完了”补成通过。
+
+主控盲审必须在不含教师答案、历史该窗标签及candidate预测的新审阅上下文里完成。已经看过答案的同一上下文事后补一份“独立意见”，不算盲审。它仍然只是模型式独立作答，不冒称人工金标。
+
+旧agy验收主要验证命令、路径和schema；不能把旧training_admitted=False回执直接升级成新监督资格。
+context-p01-part02
+
+3. 冻结编辑规则，不固定选帧比例
+
+沿用B0的“值得保留到短高光编辑中”任务。审查必须写清可见事实和保留理由，二者分开。
+
+静态不自动为NO，运动大不自动为KEEP；准备与结果在理解事件确有必要时可保留；连续叙事可以跨镜，无关内容不能因相邻而一并保留。无法仅靠视觉决定的内容，不假装音频已经提供。
+
+边界是有证据支持的编辑决策，不是精确到18位小数的语义真相。每段要有内部见证、起止附近的内外见证；剩余定位范围以0.5秒为本轮工程上限，但小于0.5秒也不自动合格——若仍会吞掉关键动作、跨入无关镜头或改变事件是否存在，仍判UNKNOWN。该数值不是官方容忍度。
+
+最终端点由审查者依据证据作出一次版本化裁定，经现有native桥接和生成语法检查；不能通过平均、平移或静默裁剪旧raw制造一致。
+
+4. 观察预算固定，补查不能全用来确认教师已经提出的事件
+
+主线最多：
+
+观察任务	上限
+窗口教师提案	24
+主控盲态独立记录	24
+边界／动作风险补查	4
+候选外漏检探针	4
+
+四项候选外探针分别留给先导训练、后续训练、开发、锁定评价。根据各窗独立提案形成的候选外范围，以冻结哈希规则选择，不能看candidate哪里错了再选。
+
+每项补查只覆盖一个窗口中的一段，不超过2秒且不超过128张连续原生帧；不够消解疑点就保留UNKNOWN。切镜和运动变化只是补查触发器，不是标签。
+
+**56是观察任务记录上限，不是56次等价API调用。**真实会话、工具读取、图像供给、token或额度消耗必须另记。
+
+5. 标签资格与训练资格分开
+情况	完整参考资格	本轮完整列表SFT
+已审查完整正例，学生实际可辨认	可以	可以
+充分审查后明确无值得保留内容	可以，真实[]	可以
+有会改变答案的未决UNKNOWN	只保留K/N/U部分参考	整窗不入训
+教师补充观察证实事件，但学生输入不可辨认	保留事件，不能删掉难例	不入该窗精确监督
+超过5个应保留事件	可以保留完整参考	不强行合并凑grammar
+解析失败、缺标签、工具失败	不伪装为NO	不入训
+
+**训练可以拒收不可学习窗口；评价不能因此删掉这些事件。**否则就把学生采样盲区从召回分母里洗掉了。
+
+先导4窗只要求观察链与盲审链真实成立，并至少产出一个合格完整银标窗口；不要求恰好同时出现正窗和空窗。全部24窗完成后，训练准入为：
+
+至少8个合格训练窗、至少4个来源组，且正例来自至少2组。最多12窗。
+
+真实NO全部按资格收录，但不强迫空窗配额。没有完整NO时，明确“没有整窗拒绝学习的监督证据”，不因此禁止所有有价值的正例续训。
+
+六、拒绝partial segments Loss Masking；训练只做一次
+为什么这次明确拒绝
+
+例如窗口中确认KEEP=[3,5]，但[10,12]仍UNKNOWN。把目标写成：
+
+JSON
+{"segments":[[3,5]]}
+
+普通自回归训练不只是学习[3,5]，还学习列表到此结束。未知事件没有对应的显式token可供按时间区间遮蔽；即使遮住结束标记，也没有实现对所有可能完整列表的合法边缘化。
+
+新卷的build_target确实监督完整JSON及<|im_end|>，不是时间区间级的部分标签损失。
+context-p01-part07
+
+**因此，本轮含有后果UNKNOWN的窗口不进入完整列表SFT。**它们仍进入观察报告和评价未知分母。不得把这条规则改名成“已经实现partial masking”。
+
+固定训练合同
+项目	唯一设置
+初始化	原B adapter，SHA 8e2cca…b803b23，完整288张量核对
+模型	原固定8B基座；基座与视觉冻结
+可训练层	语言q/k/v/o LoRA，r16、alpha32、dropout 0.05
+优化器	新建AdamW，lr 1e-5恒定，betas (0.9,0.999)，eps 1e-8，weight decay 0
+梯度裁剪	norm 1.0
+训练	microbatch 1，目标累积4窗，固定2 epochs
+随机性	固定seed 20261010，训练前封存实际样本顺序
+候选	只有原B和固定训练终点；不按epoch或锁定组挑checkpoint
+输入／输出	原native视频、实际floor64、原processor、B0、0–5、greedy、原native映射
+
+原B配置、288张量、可训练层和完整参数身份已有代码依据；执行时仍需绑定实际加载值。当前相应总参数是8,782,459,120，不能只报“8B”而忽略adapter及其他实际模型。
+context-p01-part06
+context-p01-part06
+
+新优化器意味着从原B权重初始化继续学习，不是恢复旧优化轨迹。语言模型进入训练模式，冻结视觉保持评估模式；工程探针结束后必须恢复正确模式。
+
+更新数与归一：现在一次写死
+
+令合格训练窗数为 
+𝑁
+N，来源数为 
+𝐺
+G，来源 
+𝑠
+s有 
+𝑛
+𝑠
+n
+s
+	​
+
+个合格窗。
+
+每窗先计算有效assistant token平均CE：
+
+ℓ
+𝑖
+=
+−
+1
+∣
+𝐴
+𝑖
+∣
+∑
+𝑡
+∈
+𝐴
+𝑖
+log
+⁡
+𝑝
+𝜃
+(
+𝑦
+𝑖
+,
+𝑡
+∣
+𝑥
+𝑖
+,
+𝑦
+𝑖
+,
+<
+𝑡
+)
+ℓ
+i
+	​
+
+=−
+∣A
+i
+	​
+
+∣
+1
+	​
+
+t∈A
+i
+	​
+
+∑
+	​
+
+logp
+θ
+	​
+
+(y
+i,t
+	​
+
+∣x
+i
+	​
+
+,y
+i,<t
+	​
+
+)
+
+其中包含完整答案及结束监督，不包含prompt和padding。
+
+来源权重为：
+
+𝑤
+𝑖
+=
+𝑁
+𝐺
+ 
+𝑛
+𝑠
+(
+𝑖
+)
+.
+w
+i
+	​
+
+=
+Gn
+s(i)
+	​
+
+N
+	​
+
+.
+
+为避免不足4窗的尾批获得一个完整大批次的相对权重，本轮固定如下批次损失。设每epoch有 
+𝐽
+=
+⌈
+𝑁
+/
+4
+⌉
+J=⌈N/4⌉个批次，当前批实际有 
+𝑚
+𝑗
+m
+j
+	​
+
+窗：
+
+𝐿
+ˉ
+𝑗
+=
+1
+𝑚
+𝑗
+∑
+𝑖
+∈
+𝐵
+𝑗
+𝑤
+𝑖
+ℓ
+𝑖
+,
+𝐿
+𝑗
+=
+𝐽
+𝑚
+𝑗
+𝑁
+𝐿
+ˉ
+𝑗
+.
+L
+ˉ
+j
+	​
+
+=
+m
+j
+	​
+
+1
+	​
+
+i∈B
+j
+	​
+
+∑
+	​
+
+w
+i
+	​
+
+ℓ
+i
+	​
+
+,L
+j
+	​
+
+=
+N
+Jm
+j
+	​
+
+	​
+
+L
+ˉ
+j
+	​
+
+.
+
+这等价于 
+𝐿
+𝑗
+=
+(
+𝐽
+/
+𝑁
+)
+∑
+𝑤
+𝑖
+ℓ
+𝑖
+L
+j
+	​
+
+=(J/N)∑w
+i
+	​
+
+ℓ
+i
+	​
+
+。在同一参数位置核算时，各批损失的平均值恰好对应来源等权目标。它不声称AdamW多次更新等价于一次全量梯度更新。
+
+实施时不能固定除4，也不能让框架再自动除一次4。用CPU合成标量损失检查 
+𝑁
+=
+8
+…
+12
+N=8…12的归一即可，不需要额外训练实验。
+
+真实更新数：
+
+𝑆
+=
+2
+⌈
+𝑁
+4
+⌉
+=
+{
+4
+,
+	
+𝑁
+=
+8
+
+
+6
+,
+	
+𝑁
+=
+9
+,
+10
+,
+11
+,
+12.
+S=2⌈
+4
+N
+	​
+
+⌉={
+4,
+6,
+	​
+
+N=8
+N=9,10,11,12.
+	​
+
+
+**本轮最多6步，不是8步。**每个合格窗口每epoch恰好出现一次，不复制补齐尾批。
+
+前两步只做同一运行的有限loss/gradient、参数变化、冻结及保存重载检查；检查后沿原optimizer、RNG和顺序继续。工程前缀不得拿去锁定评价选优。NaN/Inf、错误mask、非预期参数变化、身份错误或预算不足才触发STOP，普通短期loss波动不触发“训练失败”。
+
+七、源级一次评价：分母、UNKNOWN与唯一GO门
+1. 评价对象必须确实只差adapter
+
+candidate0和candidate1绑定完全相同的源、窗口、采样ordinal、PTS、processor、有效像素、B0、grammar、greedy和native映射。
+
+原B在完全相同请求身份上的成功输出可以引用；身份不相同就不能冒称复用。图片评分器只可利用已有非测试raw作附带诊断，不重训、不扫描阈值，也不进入另一条426路线。
+
+所有参考与补查先冻结，再揭示candidate预测。开发各候选一次，锁定各候选一次；没有第二轮换checkpoint或改参考补考。
+
+2. 源级时间域与未知分母
+
+每个窗口冻结互斥的：
+
+𝐾
+K：银标支持的KEEP；
+𝑁
+0
+N
+0
+	​
+
+：银标支持的明确NO；
+𝑈
+U：已识别但未解决的UNKNOWN。
+
+三者覆盖本轮声明窗口。未完成审查的窗口仍登记，其无法判定范围属于U，而不是从计划分母中消失。
+
+先把同源两窗映射回源级全局PTS，再汇总。时长采用native时间覆盖，不以VFR帧数除平均FPS近似。窗口间未纳入计划的空隙不补成NO。
+
+对预测选择域 
+𝑃
+P：
+
+𝑇
+𝑃
+=
+𝜇
+(
+𝑃
+∩
+𝐾
+)
+,
+𝐹
+𝑃
+=
+𝜇
+(
+𝑃
+∩
+𝑁
+0
+)
+,
+𝐹
+𝑁
+=
+𝜇
+(
+𝐾
+∖
+𝑃
+)
+.
+TP=μ(P∩K),FP=μ(P∩N
+0
+	​
+
+),FN=μ(K∖P).
+
+主F1只对具有正例参考的来源计算，再来源等权。**空参考、空预测不记正例F1=1。**纯NO单独报告误选时长和误选率；NO分母不存在则为N/A。旧V14的空/空=1规则不沿用。
+context-p01-part06
+
+报告必须保留：24个计划窗、12个计划源、8个锁定窗、所有拒收原因、完整参考数、U时长、预测落入U的时长，以及所有实际预测失败。预测失败不是[]，并直接阻断该版426资格。
+
+3. UNKNOWN不能只展示比例，然后从放行逻辑消失
+
+在假设已判定K/NO正确的前提下，对有已知正例的来源计算：
+
+𝐹
+−
+=
+2
+𝜇
+(
+𝑃
+∩
+𝐾
+)
+𝜇
+(
+𝑃
+)
++
+𝜇
+(
+𝐾
+)
++
+𝜇
+(
+𝑈
+∖
+𝑃
+)
+F
+−
+=
+μ(P)+μ(K)+μ(U∖P)
+2μ(P∩K)
+	​
+
+𝐹
++
+=
+2
+[
+𝜇
+(
+𝑃
+∩
+𝐾
+)
++
+𝜇
+(
+𝑃
+∩
+𝑈
+)
+]
+𝜇
+(
+𝑃
+)
++
+𝜇
+(
+𝐾
+)
++
+𝜇
+(
+𝑃
+∩
+𝑈
+)
+.
+F
++
+=
+μ(P)+μ(K)+μ(P∩U)
+2[μ(P∩K)+μ(P∩U)]
+	​
+
+.
+
+下界把未选U当正、已选U当负；上界反过来。它们只用于不确定性分析，不是把U真的转换成训练标签。
+
+保守增益下界取：
+
+Δ
+𝑠
+−
+=
+𝐹
+1
+,
+𝑠
+−
+−
+𝐹
+0
+,
+𝑠
++
+.
+Δ
+s
+−
+	​
+
+=F
+1,s
+−
+	​
+
+−F
+0,s
++
+	​
+
+.
+
+这是有效但可能偏保守的界。若两候选在该源预测完全相同，成对差值本来就精确为0，不应误用两个独立界把它判成退化。
+
+这些界仍不能覆盖双方共同漏看、却未识别为U的错误。
+
+4. 本轮唯一GO门
+
+以下数值是我为这次投入冻结的风险筛选规则，不是统计保证，也不是官网涨幅预测。
+
+阶段	必须同时满足
+锁定参考准入	至少6/8窗具备完整银标参考；四个来源都必须有可评价信息；至少3个来源具有已审正例；至少2个来源各有不少于5秒明确NO范围。没有已知正例的来源必须是完整明确NO，不能全靠UNKNOWN占位。
+一次开发门	正例来源macro ΔF1 > 0；明确NO误选时长不增加；无预测工程失败。
+一次锁定主门	正例来源macro ΔF1 ≥ 0.05；每个正例来源均不退化，至少2个来源严格改善；macro precision、recall均不下降。
+反退化门	各源明确NO误选时长不增加；有已审正例却整窗预测空的数量不增加；不新增已确认的无关内容外溢。
+事件诊断门	一对一事件匹配的召回不下降；匹配阈值固定为本地tIoU≥0.5，并报告事件总数、匹配数及边界误差。
+U方向门	有U的正例来源，保守增益下界不得为负；正例来源平均保守增益必须为正。不能只凭遮罩后F1通过。
+工程与预算门	请求身份、模型身份、解析、native成员及空间合成全部成立；下一阶段在实际资源与费用上限内可执行。
+
+这里的NO可以是正例窗口中明确审查的非高光范围，不强迫锁定集出现若干完整空窗。没有完整空窗时，仍要明确声明整窗拒绝能力未获得直接验证。
+
+本地tIoU 0.5只是固定诊断规则。卷宗没有提供足以确认官方0.3或0.5召回阈值的依据，Gemini那个“官方因此判F1=0”的叙述不成立。其窄动作片段可能遗漏必要上下文的反例可以保留，但只能作为假设反例。
+context-p01-part07
+
+**任一门失败，本版NO426。**不换来源补正例、不改NO定义、不降低0.05、不重选终点。缺证与已证退化分别记录，不能都叫“模型变差”。
+
+八、费用、机器与426资格
+1. 主线资源上限
+阶段	新增上限
+来源／代码合同准备	60分钟有效工作；到限列出缺项，不无限审计
+native训练	1200计费运行秒
+开发、锁定与非测试工程对照	合计2400计费运行秒
+条件性完整426时间推理	7200计费运行秒
+主线GPU计费运行时间合计	最多10800秒，即3小时
+新空间模型调用	0
+新租卡／新模型下载	0
+
+计费运行时间必须包含实际加载、保存、持有GPU期间的检查与退出，不用“有效生成秒”冒充费用。历史4598.561秒、原空间18723.876秒及旧账本偏移继续保留，不归零。
+context-p01-part01
+context-p01-part04
+
+人民币实际单价在卷中不存在，不能由我假算一笔“真实总价”。我的管理建议是另设新增现金硬上限200元，而不是声称200元必定够用；已有更低授权上限优先。执行端必须用实际计费方式冻结：
+
+𝐶
+max
+⁡
+=
+𝐶
+G
+P
+U
++
+𝐶
+a
+g
+y
++
+𝐶
+其他新增费用
+≤
+200
+元
+.
+C
+max
+	​
+
+=C
+GPU
+	​
+
++C
+agy
+	​
+
++C
+其他新增费用
+	​
+
+≤200元.
+
+已有订阅额度不等于没有资源消耗；不能把32个会话当32次免费调用。不能获得实际计量、余额或可执行限额时，不开新的按量付费通道，也不自动充值。这不阻断在已有授权资源内完成先导和CPU准备。
+
+2. 426必须重新估算，尤其不能偷用旧B时间输出
+
+candidate1只要权重改变，原B的时间请求身份就全部改变。
+
+因此，旧双窗实验的“116新生成＋405旧引用”不能照搬到新LoRA包。原则上，完整426对应的全部原计划时间请求——历史计划为521窗——都需要candidate1真实生成。可以复用原生输入准备和完整空间源场，不能复用candidate0的时间选择冒充candidate1结果。旧116/405复用成立的前提是当时没有改变模型权重。
+context-p01-part04
+
+新预算采用同native非测试实测，按输入token/帧数形状及生成上限估算总请求成本，加入安全系数，并预留至少300秒或实测退出保存成本两倍中的较大值。估算连余量超过7200秒，直接NO426；不能减帧、降像素、截断答案来赶预算。
+
+3. 非测试8和最终ZIP的职责
+
+非测试8负责冻结管线工程与异常检查，不承担“8个视频都必须有高光”的任务。若新模型出现整批全空或全选、又没有已冻结语义证据解释，应进入风险STOP与有界信息出口，不能靠补TopK修包，也不能只写“格式允许”跳过。
+
+最终只有完整源集合、完整原空间场、所有选择帧与框、原native映射、CRC/SHA和独立strict均通过，才产生：
+
+一次银标证据支持的风险竞争ZIP，官网分UNKNOWN。
+
+不自动官网提交，不自动生产替换。原37.66对应ZIP的SHA仍是：
+
+纯文本
+07730c9e02e68d1a1ce54e7ef5a8aa616346cf8f2f8d78426ed36bc3eb481496
+
+该原包只能按原身份保留，不能贴上“本轮新训练成果”的名称。
+context-p01-part01
+
+九、最大反例、剩余未知，以及失败后买什么信息
+最大反例不是“工具没看见图”，而是双方一起判断错
+
+假设教师和主控都偏好大幅运动，漏掉静态但有信息量的结果；所有64帧都真实送达、独立记录完成、端点合法，candidate1也在银标F1上增加0.05。但官方更重视另外的内容，最终成绩下降。
+
+再叠加一个不到0.5秒、恰好落在采样间隙的关键动作：它没被学生、教师实际内部采样或补查碰到，也就不会被登记为U。因此连本轮UNKNOWN上下界都可能没有覆盖真正的错误。
+
+这足以反驳“银标门通过就保证提分”，但不反驳“用有限成本做一次有可证伪目标的续训”。本轮GO只意味着值得购买一次风险比较。
+
+本轮不能假装解决的未知
+
+官方准确评测细节、编辑风格与官方目标的偏差、原B逐源历史训练曝光、匿名复赛重编码重复、当前Linux原件就位情况，以及agy真实用量价格，均有不同程度的缺证。它们不能被一个总的PASS覆盖。
+
+STOP不是无限等待人工金标；信息出口也必须有界
+
+本版停止后，只允许再做一次信息购买：从原24窗中固定选最多4窗，换取不同的实际观察证据，例如针对争议段的连续原生查看，或由另一位有实际访问能力的审阅者独立审查。
+
+上限为新增4份提案、4份盲审记录；不新增来源，不追加第二次训练。这样总上限是24个不同窗口、最多36个agy会话、最多28份主控盲审记录；内部工具调用仍单列，且所有新增现金仍受上述总上限约束。
+
+本版停止原因	唯一值得购买的信息
+观察回执、学生可见性或边界不成立	争议时间段的连续证据及实际有效分辨率审查，不是同提示再问一遍
+合格训练窗不足	原24窗中导致拒收的具体疑点能否消解；不能换容易来源补数
+U使质量方向无法确定	对决定保守增益符号的未知范围补充独立判断
+参考成立、训练也正常，但candidate1退化	最多4窗的错误差异审查，区分编辑风格、采样不可见和模型更新问题
+Linux媒体或费用合同无法闭合	精确缺件清单、方向与字节量、实际报价／额度回执
+
+**候选预测一旦揭示，后来新增的判断只能作为诊断或下一版参考，不能回写本版锁定标签，把本次STOP改成PASS。**新信息能否支持下一项实验，应由下一项明确假说决定，不自动重开本轮配方。
+
+最终冻结结论
+
+接受有限观察完整窗口银标；接受没有真实空窗时仍可做有边界的小规模学习；拒绝无法实现的partial segments masking；采用6/2/4来源划分、最多24窗、固定2epoch与4或6次真实更新、源级评价、UNKNOWN保守方向检查。
+
+现在推进标注与合同先导；标签达标才训练；一次评价达标且费用可承受才生成一个426风险包。任何失败都保留37.66，并把下一笔投入指向具体缺失的信息，而不是更多相同弱标签、更低阈值或更漂亮的ZIP状态。
+
+本次生成的两个辅助文件仅记录附件核验和未执行的来源计划，不是实验回执：
+
+EMPTY407_attachment_audit.json
+代码
+EMPTY407_slot6_source_plan.json
+代码
+ChatGPT 可能会出错。请核查重要信息。
+最新一条回复
+
+
+
+
+Pro
+
+# EMPTY407 最终技术决策与主控承接
+
+状态：Pro slot6 已实际完整回答，连续已用6/8、剩2。本次讨论已完成两轮普通讨论与一次集中裁决；本文件记录方案，不冒充训练、质量改善或新426交付。
+
+采纳完整 pro-p01.md 的唯一 EMPTY407_SLOT6_SILVER24_V1：固定6训练源/2流程开发源/4锁定评价源，每源由原B实际全源native规划器选两窗，共24窗。实际按公开规则重新计算与Pro来源表完全一致；各原件SHA/196564489字节及native_pts文件SHA实核；所有来源已历史曝光，不称未见盲测。新plan只绑定既有协议，不读取评分来选源。窗口端点保留原B float计划的十进制有理数表示，actual帧PTS另保留原始有理数；不把名义域端点称为原件逐帧语义真值。
+
+先导4窗属于新表前两训练源kLxoNp-UchI、AwmHb44_ouw。Pro冻结前的NyBmCxDoHJU/kLxo固定0–30及60–90工具实验是独立工程观察，不算本版先导，不用它们的标签选窗口或替代新blind记录；其中可能有完全同像素窗口也仅作为历史曝光登记。旧六次原生调用不重复，也不升级为训练资格。
+
+对Pro两个澄清：44条explicit count-equal、4条字段缺失、2条count mismatch，主控现场复核同意，历史48仅继承两排除，未声称48新证明；4缺失并非已证明不能用，只按本轮确定44候选执行。所有模型标签是银标建议，不是人工金标或官网目标。
+
+新完整窗口监督必须具备原生视频实际工具回执、floor64全帧身份、原B实际processor有效分辨率证据、教师提案及无标签/无预测的新审阅上下文盲审，然后主控版本化裁定。known consequential UNKNOWN整窗不做完整JSON SFT；有限观察残余采样风险明示，不无限要求每个间隙金标。静态展示可高光，大运动不自动为高光，无音频不能编台词。候选数超过5不得伪合并或默删KEEP；评价不得洗掉学生看不见事件。
+
+盲审必须新上下文：当前主控已读教师输出，不将事后自写称盲审。如需独立审阅子代理，职责仅本轮图像证据与blind记录，fork none，不给任何教师/历史标签/模型预测，不得冒充网页参与席位；必要性是防答案污染，不为泛用并行。主控负责最终审查整合。
+
+观察主线24份教师提案/24份blind记录/4边界风险补查/4候选外探针；每补查一窗内≤2秒/≤128连续帧。不据候选错处改参考。资源与真实会话、tool次数、token另记。旧先导真实EOF与原图读取照实计入累计消耗，绝不把失败数或token记0。新付费通道/充值/租卡/模型下载不获授权；Pro的200元管理上限不构成消费许可，已有资源仍按运行秒和额度记录。
+
+至少8/12合格训练窗、4来源且正例≥2来源才进入原B288张量r16 a32 qkvo续训；base/vision冻结，新AdamW lr1e-5恒定，beta .9/.999 eps1e-8 wd0 clip1，micro1目标accum4、seed20261010、固定2epochs。N=8实更新4、N9..12实更新6；源权N/(G*n_s)，每批loss=(ceil(N/4)/N)*sum(w_i*assistant_token_mean_CE)，不得再固定除4；固定终点，无epoch选优、无第二轮补考。前缀仅工程检查后同optimizer/RNG顺序继续。
+
+一次开发、一次锁定，原B与新候选只差adapter：同native窗口/PTS/采样/processor/B0/grammar/greedy。源级两个窗口联合真实时间，K/NO/U互斥覆盖，间隙不补NO。纯NO不赋空空F1=1，失败不转[]。Pro所有质量门逐项保留：锁定≥6/8完整参考、四源可评价、≥3源已审正例、≥2源各≥5秒NO；dev正例macro增益>0且NO误选不增；locked macro增益≥.05且每正例源不退化、至少2严格改善、P/R不降；NO外溢/已审正例整空不增加；本地tIoU .5一对一事件召回不降；U保守增益各源非负且平均正，预测相同差值精确0。未过任一门本版NO426。
+
+预算准备有效工作60min，native训练1200计费秒，开发/锁定/NT合计2400，条件426 7200；原成本保持，新空间模型0。新权重521时间窗全部真实推理，不引用旧B时间结果。完整空间源场可exact复用。实测同协议shape/token成本估算加安全余量，退出储备≥300秒或2倍实测退出成本；超7200不通过降像素/采样赶工。无自动官网提交、生产替换、公开发布。新数据196.56MB需要Mac跳板和专项传输许可，先做可审核包，继续本地准备。
+
+原37.66 SHA07730c9e02e68d1a1ce54e7ef5a8aa616346cf8f2f8d78426ed36bc3eb481496保持原身份。237步包withdraw推荐已另文保存，407空具体真错比例未知；目标错位、动态信息缺乏是机制假说，不冒称已查明mask错或语言模型必然数值回归均值。不能据模型票数保证涨分。
+
+本版STOP后一次最多4窗信息出口只在原24窗补不同实际证据，不扩源、不第二次训练；参考揭示后新增意见只作诊断，不回写本版STOP为PASS。仍未知：官方细则/编辑风格、原B逐源曝光、匿名重编码重复、现Linux原件就位、AGY实际用量价格。
+
+
+# Full additional evidence reports\round6_score_alignment\rematch_discussion\aic_video_empty407_20261010\source_alignment_clarification.json
+
+{
+  "status": "CLARIFY_HISTORICAL_48_VS_EXPLICIT_MANIFEST_44",
+  "explicit_count_equal_manifests": 44,
+  "missing_alignment_fields": [
+    {
+      "source_id": "b626MiF1ew4",
+      "native_frames": 5661,
+      "human_vector_length": null,
+      "human_ordinal_alignment": null
+    },
+    {
+      "source_id": "EE-bNr36nyA",
+      "native_frames": 2941,
+      "human_vector_length": null,
+      "human_ordinal_alignment": null
+    },
+    {
+      "source_id": "PJrm840pAUI",
+      "native_frames": 6580,
+      "human_vector_length": null,
+      "human_ordinal_alignment": null
+    },
+    {
+      "source_id": "XkqCExn6_Us",
+      "native_frames": 5631,
+      "human_vector_length": null,
+      "human_ordinal_alignment": null
+    }
+  ],
+  "explicit_count_mismatch_sources": [
+    "Se3oxnaPsz0",
+    "WG0MBPpPC6I"
+  ],
+  "historical_receipt_eligible_48_is_not_new_independent_alignment_proof": true,
+  "main_correction": "Prior source_exposure_audit human_alignment_eligible=48 inherits only two exclusions from historical corpus receipt; 44 present manifests explicitly confirm count equality, four omit alignment fields. Missing is unknown, not mismatch. Current four-window pilot uses two explicit count-equal sources; new event labels do not reuse human importance values."
+}
+
+# Full additional evidence reports\annotation_iteration_20261010\slot6_silver24_v1\source_window_plan.json
+
+{
+  "status": "PASS_METADATA_RECONSTRUCTION_AND_ACTUAL_B_WINDOW_PLANNER_NOT_SUPERVISION",
+  "seed": "EMPTY407_SLOT6_SILVER24_V1",
+  "sources": {
+    "train": [
+      {
+        "source_id": "kLxoNp-UchI",
+        "source_group": "youtube:kLxoNp-UchI",
+        "category": "DS",
+        "prior_split": "train",
+        "media_sha256": "0c91bfa880e3af0e1716e7456ada0a304a97911eef76b1cd4fdce5066a52e8f7",
+        "media_bytes": 6970411,
+        "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\kLxoNp-UchI\\kLxoNp-UchI.mp4",
+        "native_frames": 3896,
+        "duration": 129.99653333333333,
+        "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+        "excluded_human_vector_alignment": false,
+        "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+        "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+        "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+      },
+      {
+        "source_id": "AwmHb44_ouw",
+        "source_group": "youtube:AwmHb44_ouw",
+        "category": "VT",
+        "prior_split": "train",
+        "media_sha256": "82ecca1de0363253060bb3c19e2f5dbd4080bfc0cd790db23c3e73ffd76a602f",
+        "media_bytes": 19246027,
+        "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\AwmHb44_ouw\\AwmHb44_ouw.mp4",
+        "native_frames": 10597,
+        "duration": 353.58656666666667,
+        "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+        "excluded_human_vector_alignment": false,
+        "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+        "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+        "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+      },
+      {
+        "source_id": "HT5vyqe0Xaw",
+        "source_group": "youtube:HT5vyqe0Xaw",
+        "category": "VU",
+        "prior_split": "train",
+        "media_sha256": "85fdd93e61fb670b5437666c9eb90aa1798889edbe07394749c00ca0d044c886",
+        "media_bytes": 17564055,
+        "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\HT5vyqe0Xaw\\HT5vyqe0Xaw.mp4",
+        "native_frames": 9671,
+        "duration": 322.6890333333333,
+        "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+        "excluded_human_vector_alignment": false,
+        "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+        "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+        "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+      },
+      {
+        "source_id": "37rzWOQsNIw",
+        "source_group": "youtube:37rzWOQsNIw",
+        "category": "MS",
+        "prior_split": "train",
+        "media_sha256": "c4fb034705c03a890fed5cc46ff79d1e9aef5cd9edec1d22dfe7cc653b5fd98a",
+        "media_bytes": 10156252,
+        "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\37rzWOQsNIw\\37rzWOQsNIw.mp4",
+        "native_frames": 5742,
+        "duration": 191.5914,
+        "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+        "excluded_human_vector_alignment": false,
+        "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+        "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+        "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+      },
+      {
+        "source_id": "WxtbjNsCQ8A",
+        "source_group": "youtube:WxtbjNsCQ8A",
+        "category": "BK",
+        "prior_split": "train",
+        "media_sha256": "b6c658e4d5258fcba10207b8c49ed624cabfe951ed9c9a96aa4ed6fada96d388",
+        "media_bytes": 14014038,
+        "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\WxtbjNsCQ8A\\WxtbjNsCQ8A.mp4",
+        "native_frames": 7959,
+        "duration": 265.5653,
+        "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+        "excluded_human_vector_alignment": false,
+        "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+        "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+        "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+      },
+      {
+        "source_id": "byxOvuiIJV0",
+        "source_group": "youtube:byxOvuiIJV0",
+        "category": "FM",
+        "prior_split": "train",
+        "media_sha256": "b94f772069a7479b54c27b50650bccdfb0b75bb573abf8bda27dba1a5af75abd",
+        "media_bytes": 8234183,
+        "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\byxOvuiIJV0\\byxOvuiIJV0.mp4",
+        "native_frames": 3705,
+        "duration": 154.529375,
+        "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+        "excluded_human_vector_alignment": false,
+        "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+        "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+        "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+      }
+    ],
+    "process_dev": [
+      {
+        "source_id": "-esJrBWj2d8",
+        "source_group": "youtube:-esJrBWj2d8",
+        "category": "DS",
+        "prior_split": "validation",
+        "media_sha256": "811186cdec40ef58049f0cc951c07a9f6f7d2b5cb27511e01094b829bbd10a9e",
+        "media_bytes": 12547350,
+        "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\-esJrBWj2d8\\-esJrBWj2d8.mp4",
+        "native_frames": 6912,
+        "duration": 230.4,
+        "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+        "excluded_human_vector_alignment": false,
+        "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+        "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+        "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+      },
+      {
+        "source_id": "i3wAGJaaktw",
+        "source_group": "youtube:i3wAGJaaktw",
+        "category": "GA",
+        "prior_split": "validation",
+        "media_sha256": "7a8cc3f5415702ce254200db00650cb42981ba0c0fa5b5ef4a910f7c66c69c21",
+        "media_bytes": 8413810,
+        "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\i3wAGJaaktw\\i3wAGJaaktw.mp4",
+        "native_frames": 4700,
+        "duration": 156.82333333333332,
+        "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+        "excluded_human_vector_alignment": false,
+        "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+        "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+        "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+      }
+    ],
+    "locked_evaluation": [
+      {
+        "source_id": "EYqVtI9YWJA",
+        "source_group": "youtube:EYqVtI9YWJA",
+        "category": "BT",
+        "prior_split": "validation",
+        "media_sha256": "6ffcc966ab00a6096d7b256cffd09408efa7db376df7732644f875b8ff27f390",
+        "media_bytes": 10713251,
+        "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\EYqVtI9YWJA\\EYqVtI9YWJA.mp4",
+        "native_frames": 5939,
+        "duration": 198.16463333333334,
+        "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+        "excluded_human_vector_alignment": false,
+        "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+        "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+        "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+      },
+      {
+        "source_id": "J0nA4VgnoCo",
+        "source_group": "youtube:J0nA4VgnoCo",
+        "category": "VT",
+        "prior_split": "validation",
+        "media_sha256": "65c9490a2166d17736c38ed077f250290c548b1da8f1801f10ff53fad8e84a5b",
+        "media_bytes": 31626560,
+        "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\J0nA4VgnoCo\\J0nA4VgnoCo.mp4",
+        "native_frames": 14019,
+        "duration": 584.709125,
+        "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+        "excluded_human_vector_alignment": false,
+        "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+        "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+        "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+      },
+      {
+        "source_id": "cjibtmSLxQ4",
+        "source_group": "youtube:cjibtmSLxQ4",
+        "category": "PK",
+        "prior_split": "validation",
+        "media_sha256": "43183ef7f35bfcbc39c122be797fdee5031103862c7c7da3b9ab74d222c79c9d",
+        "media_bytes": 35194393,
+        "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\cjibtmSLxQ4\\cjibtmSLxQ4.mp4",
+        "native_frames": 19406,
+        "duration": 647.5135333333334,
+        "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+        "excluded_human_vector_alignment": false,
+        "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+        "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+        "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+      },
+      {
+        "source_id": "Yi4Ij2NM7U4",
+        "source_group": "youtube:Yi4Ij2NM7U4",
+        "category": "MS",
+        "prior_split": "validation",
+        "media_sha256": "26ec9f71ea771e5601a1f5c963fa425681ae2f86b3dfca483a64d58b5a65feb9",
+        "media_bytes": 21884159,
+        "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\Yi4Ij2NM7U4\\Yi4Ij2NM7U4.mp4",
+        "native_frames": 9731,
+        "duration": 405.4583333333333,
+        "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+        "excluded_human_vector_alignment": false,
+        "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+        "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+        "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+      }
+    ]
+  },
+  "jobs": [
+    {
+      "role": "train",
+      "source_id": "kLxoNp-UchI",
+      "source_group": "youtube:kLxoNp-UchI",
+      "window": {
+        "width": 640,
+        "height": 360,
+        "source_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\kLxoNp-UchI\\kLxoNp-UchI.mp4",
+        "source_sha256": "0c91bfa880e3af0e1716e7456ada0a304a97911eef76b1cd4fdce5066a52e8f7",
+        "window_id": "kLxoNp-UchI:SLOT6:1",
+        "window_pts_start_sec": 30.0,
+        "window_pts_end_exclusive_sec": 60.0,
+        "window_duration_sec": 30.0,
+        "planned_source_frame_ordinals": [
+          900,
+          914,
+          928,
+          942,
+          957,
+          971,
+          985,
+          999,
+          1014,
+          1028,
+          1042,
+          1056,
+          1071,
+          1085,
+          1099,
+          1113,
+          1128,
+          1142,
+          1156,
+          1170,
+          1185,
+          1199,
+          1213,
+          1227,
+          1242,
+          1256,
+          1270,
+          1284,
+          1299,
+          1313,
+          1327,
+          1341,
+          1356,
+          1370,
+          1384,
+          1398,
+          1413,
+          1427,
+          1441,
+          1455,
+          1470,
+          1484,
+          1498,
+          1512,
+          1527,
+          1541,
+          1555,
+          1569,
+          1584,
+          1598,
+          1612,
+          1626,
+          1641,
+          1655,
+          1669,
+          1683,
+          1698,
+          1712,
+          1726,
+          1740,
+          1755,
+          1769,
+          1783,
+          1798
+        ],
+        "planned_actual_pts_sec": [
+          30.03,
+          30.497133333333334,
+          30.964266666666667,
+          31.4314,
+          31.9319,
+          32.399033333333335,
+          32.866166666666665,
+          33.3333,
+          33.8338,
+          34.30093333333333,
+          34.76806666666667,
+          35.2352,
+          35.7357,
+          36.20283333333333,
+          36.66996666666667,
+          37.1371,
+          37.6376,
+          38.104733333333336,
+          38.571866666666665,
+          39.039,
+          39.5395,
+          40.00663333333333,
+          40.47376666666667,
+          40.9409,
+          41.4414,
+          41.90853333333333,
+          42.37566666666667,
+          42.8428,
+          43.3433,
+          43.810433333333336,
+          44.277566666666665,
+          44.7447,
+          45.2452,
+          45.71233333333333,
+          46.17946666666667,
+          46.6466,
+          47.1471,
+          47.61423333333333,
+          48.08136666666667,
+          48.5485,
+          49.049,
+          49.516133333333336,
+          49.983266666666665,
+          50.4504,
+          50.9509,
+          51.418033333333334,
+          51.88516666666667,
+          52.3523,
+          52.8528,
+          53.31993333333333,
+          53.78706666666667,
+          54.2542,
+          54.7547,
+          55.221833333333336,
+          55.688966666666666,
+          56.1561,
+          56.6566,
+          57.123733333333334,
+          57.59086666666666,
+          58.058,
+          58.5585,
+          59.02563333333333,
+          59.49276666666667,
+          59.99326666666666
+        ],
+        "eligible_source_frame_count": 899,
+        "source_total_frames": 3896,
+        "original_window_index": 1,
+        "planned_exact_pts": [
+          "3003/100",
+          "457457/15000",
+          "58058/1875",
+          "157157/5000",
+          "319319/10000",
+          "971971/30000",
+          "197197/6000",
+          "333333/10000",
+          "169169/5000",
+          "257257/7500",
+          "521521/15000",
+          "22022/625",
+          "357357/10000",
+          "217217/6000",
+          "1100099/30000",
+          "371371/10000",
+          "47047/1250",
+          "571571/15000",
+          "289289/7500",
+          "39039/1000",
+          "79079/2000",
+          "1200199/30000",
+          "1214213/30000",
+          "409409/10000",
+          "207207/5000",
+          "157157/3750",
+          "127127/3000",
+          "107107/2500",
+          "433433/10000",
+          "1314313/30000",
+          "1328327/30000",
+          "447447/10000",
+          "113113/2500",
+          "137137/3000",
+          "173173/3750",
+          "233233/5000",
+          "471471/10000",
+          "1428427/30000",
+          "1442441/30000",
+          "97097/2000",
+          "49049/1000",
+          "371371/7500",
+          "749749/15000",
+          "63063/1250",
+          "509509/10000",
+          "1542541/30000",
+          "311311/6000",
+          "523523/10000",
+          "33033/625",
+          "799799/15000",
+          "403403/7500",
+          "271271/5000",
+          "547547/10000",
+          "331331/6000",
+          "1670669/30000",
+          "561561/10000",
+          "283283/5000",
+          "107107/1875",
+          "863863/15000",
+          "29029/500",
+          "117117/2000",
+          "1770769/30000",
+          "1784783/30000",
+          "899899/15000"
+        ],
+        "domain_start_exact": "30",
+        "domain_end_exact": "60",
+        "eligible_exact_pts": [
+          "3003/100",
+          "901901/30000",
+          "451451/15000",
+          "301301/10000",
+          "113113/3750",
+          "181181/6000",
+          "151151/5000",
+          "907907/30000",
+          "227227/7500",
+          "303303/10000",
+          "91091/3000",
+          "911911/30000",
+          "19019/625",
+          "913913/30000",
+          "457457/15000",
+          "61061/2000",
+          "229229/7500",
+          "917917/30000",
+          "153153/5000",
+          "919919/30000",
+          "23023/750",
+          "307307/10000",
+          "461461/15000",
+          "923923/30000",
+          "77077/2500",
+          "37037/1200",
+          "463463/15000",
+          "309309/10000",
+          "58058/1875",
+          "929929/30000",
+          "31031/1000",
+          "931931/30000",
+          "233233/7500",
+          "311311/10000",
+          "467467/15000",
+          "187187/6000",
+          "39039/1250",
+          "937937/30000",
+          "469469/15000",
+          "313313/10000",
+          "47047/1500",
+          "941941/30000",
+          "157157/5000",
+          "943943/30000",
+          "59059/1875",
+          "63063/2000",
+          "473473/15000",
+          "947947/30000",
+          "79079/2500",
+          "949949/30000",
+          "19019/600",
+          "317317/10000",
+          "119119/3750",
+          "953953/30000",
+          "159159/5000",
+          "191191/6000",
+          "239239/7500",
+          "319319/10000",
+          "479479/15000",
+          "959959/30000",
+          "4004/125",
+          "961961/30000",
+          "481481/15000",
+          "321321/10000",
+          "241241/7500",
+          "193193/6000",
+          "161161/5000",
+          "967967/30000",
+          "121121/3750",
+          "323323/10000",
+          "97097/3000",
+          "971971/30000",
+          "81081/2500",
+          "973973/30000",
+          "487487/15000",
+          "13013/400",
+          "61061/1875",
+          "977977/30000",
+          "163163/5000",
+          "979979/30000",
+          "49049/1500",
+          "327327/10000",
+          "491491/15000",
+          "983983/30000",
+          "41041/1250",
+          "197197/6000",
+          "493493/15000",
+          "329329/10000",
+          "247247/7500",
+          "989989/30000",
+          "33033/1000",
+          "991991/30000",
+          "62062/1875",
+          "331331/10000",
+          "497497/15000",
+          "199199/6000",
+          "83083/2500",
+          "997997/30000",
+          "499499/15000",
+          "333333/10000",
+          "1001/30",
+          "1002001/30000",
+          "167167/5000",
+          "1004003/30000",
+          "251251/7500",
+          "67067/2000",
+          "503503/15000",
+          "1008007/30000",
+          "21021/625",
+          "1010009/30000",
+          "101101/3000",
+          "337337/10000",
+          "253253/7500",
+          "1014013/30000",
+          "169169/5000",
+          "203203/6000",
+          "127127/3750",
+          "339339/10000",
+          "509509/15000",
+          "1020019/30000",
+          "17017/500",
+          "1022021/30000",
+          "511511/15000",
+          "341341/10000",
+          "64064/1875",
+          "41041/1200",
+          "171171/5000",
+          "1028027/30000",
+          "257257/7500",
+          "343343/10000",
+          "103103/3000",
+          "1032031/30000",
+          "43043/1250",
+          "1034033/30000",
+          "517517/15000",
+          "69069/2000",
+          "259259/7500",
+          "1038037/30000",
+          "173173/5000",
+          "1040039/30000",
+          "13013/375",
+          "347347/10000",
+          "521521/15000",
+          "1044043/30000",
+          "87087/2500",
+          "209209/6000",
+          "523523/15000",
+          "349349/10000",
+          "131131/3750",
+          "1050049/30000",
+          "7007/200",
+          "1052051/30000",
+          "263263/7500",
+          "351351/10000",
+          "527527/15000",
+          "211211/6000",
+          "22022/625",
+          "1058057/30000",
+          "529529/15000",
+          "353353/10000",
+          "53053/1500",
+          "1062061/30000",
+          "177177/5000",
+          "1064063/30000",
+          "133133/3750",
+          "71071/2000",
+          "533533/15000",
+          "1068067/30000",
+          "89089/2500",
+          "1070069/30000",
+          "107107/3000",
+          "357357/10000",
+          "67067/1875",
+          "1074073/30000",
+          "179179/5000",
+          "43043/1200",
+          "269269/7500",
+          "359359/10000",
+          "539539/15000",
+          "1080079/30000",
+          "9009/250",
+          "1082081/30000",
+          "541541/15000",
+          "361361/10000",
+          "271271/7500",
+          "217217/6000",
+          "181181/5000",
+          "1088087/30000",
+          "68068/1875",
+          "363363/10000",
+          "109109/3000",
+          "1092091/30000",
+          "91091/2500",
+          "1094093/30000",
+          "547547/15000",
+          "73073/2000",
+          "137137/3750",
+          "1098097/30000",
+          "183183/5000",
+          "1100099/30000",
+          "11011/300",
+          "367367/10000",
+          "551551/15000",
+          "1104103/30000",
+          "23023/625",
+          "221221/6000",
+          "553553/15000",
+          "369369/10000",
+          "277277/7500",
+          "1110109/30000",
+          "37037/1000",
+          "1112111/30000",
+          "139139/3750",
+          "371371/10000",
+          "557557/15000",
+          "223223/6000",
+          "93093/2500",
+          "1118117/30000",
+          "559559/15000",
+          "373373/10000",
+          "14014/375",
+          "1122121/30000",
+          "187187/5000",
+          "1124123/30000",
+          "281281/7500",
+          "3003/80",
+          "563563/15000",
+          "1128127/30000",
+          "47047/1250",
+          "1130129/30000",
+          "113113/3000",
+          "377377/10000",
+          "283283/7500",
+          "1134133/30000",
+          "189189/5000",
+          "227227/6000",
+          "71071/1875",
+          "379379/10000",
+          "569569/15000",
+          "1140139/30000",
+          "19019/500",
+          "1142141/30000",
+          "571571/15000",
+          "381381/10000",
+          "143143/3750",
+          "229229/6000",
+          "191191/5000",
+          "1148147/30000",
+          "287287/7500",
+          "383383/10000",
+          "23023/600",
+          "1152151/30000",
+          "24024/625",
+          "1154153/30000",
+          "577577/15000",
+          "77077/2000",
+          "289289/7500",
+          "1158157/30000",
+          "193193/5000",
+          "1160159/30000",
+          "29029/750",
+          "387387/10000",
+          "581581/15000",
+          "1164163/30000",
+          "97097/2500",
+          "233233/6000",
+          "583583/15000",
+          "389389/10000",
+          "73073/1875",
+          "1170169/30000",
+          "39039/1000",
+          "1172171/30000",
+          "293293/7500",
+          "391391/10000",
+          "587587/15000",
+          "47047/1200",
+          "49049/1250",
+          "1178177/30000",
+          "589589/15000",
+          "393393/10000",
+          "59059/1500",
+          "1182181/30000",
+          "197197/5000",
+          "1184183/30000",
+          "74074/1875",
+          "79079/2000",
+          "593593/15000",
+          "1188187/30000",
+          "99099/2500",
+          "1190189/30000",
+          "119119/3000",
+          "397397/10000",
+          "149149/3750",
+          "1194193/30000",
+          "199199/5000",
+          "239239/6000",
+          "299299/7500",
+          "399399/10000",
+          "599599/15000",
+          "1200199/30000",
+          "1001/25",
+          "1202201/30000",
+          "601601/15000",
+          "401401/10000",
+          "301301/7500",
+          "241241/6000",
+          "201201/5000",
+          "1208207/30000",
+          "151151/3750",
+          "403403/10000",
+          "121121/3000",
+          "1212211/30000",
+          "101101/2500",
+          "1214213/30000",
+          "607607/15000",
+          "81081/2000",
+          "76076/1875",
+          "1218217/30000",
+          "203203/5000",
+          "1220219/30000",
+          "61061/1500",
+          "407407/10000",
+          "611611/15000",
+          "1224223/30000",
+          "51051/1250",
+          "49049/1200",
+          "613613/15000",
+          "409409/10000",
+          "307307/7500",
+          "1230229/30000",
+          "41041/1000",
+          "1232231/30000",
+          "77077/1875",
+          "411411/10000",
+          "617617/15000",
+          "247247/6000",
+          "103103/2500",
+          "1238237/30000",
+          "619619/15000",
+          "413413/10000",
+          "31031/750",
+          "1242241/30000",
+          "207207/5000",
+          "1244243/30000",
+          "311311/7500",
+          "83083/2000",
+          "623623/15000",
+          "1248247/30000",
+          "26026/625",
+          "1250249/30000",
+          "1001/24",
+          "417417/10000",
+          "313313/7500",
+          "1254253/30000",
+          "209209/5000",
+          "251251/6000",
+          "157157/3750",
+          "419419/10000",
+          "629629/15000",
+          "1260259/30000",
+          "21021/500",
+          "1262261/30000",
+          "631631/15000",
+          "421421/10000",
+          "79079/1875",
+          "253253/6000",
+          "211211/5000",
+          "1268267/30000",
+          "317317/7500",
+          "423423/10000",
+          "127127/3000",
+          "1272271/30000",
+          "53053/1250",
+          "1274273/30000",
+          "637637/15000",
+          "17017/400",
+          "319319/7500",
+          "1278277/30000",
+          "213213/5000",
+          "1280279/30000",
+          "16016/375",
+          "427427/10000",
+          "641641/15000",
+          "1284283/30000",
+          "107107/2500",
+          "257257/6000",
+          "643643/15000",
+          "429429/10000",
+          "161161/3750",
+          "1290289/30000",
+          "43043/1000",
+          "1292291/30000",
+          "323323/7500",
+          "431431/10000",
+          "647647/15000",
+          "259259/6000",
+          "27027/625",
+          "1298297/30000",
+          "649649/15000",
+          "433433/10000",
+          "13013/300",
+          "1302301/30000",
+          "217217/5000",
+          "1304303/30000",
+          "163163/3750",
+          "87087/2000",
+          "653653/15000",
+          "1308307/30000",
+          "109109/2500",
+          "1310309/30000",
+          "131131/3000",
+          "437437/10000",
+          "82082/1875",
+          "1314313/30000",
+          "219219/5000",
+          "263263/6000",
+          "329329/7500",
+          "439439/10000",
+          "659659/15000",
+          "1320319/30000",
+          "11011/250",
+          "1322321/30000",
+          "661661/15000",
+          "441441/10000",
+          "331331/7500",
+          "53053/1200",
+          "221221/5000",
+          "1328327/30000",
+          "83083/1875",
+          "443443/10000",
+          "133133/3000",
+          "1332331/30000",
+          "111111/2500",
+          "1334333/30000",
+          "667667/15000",
+          "89089/2000",
+          "167167/3750",
+          "1338337/30000",
+          "223223/5000",
+          "1340339/30000",
+          "67067/1500",
+          "447447/10000",
+          "671671/15000",
+          "1344343/30000",
+          "28028/625",
+          "269269/6000",
+          "673673/15000",
+          "449449/10000",
+          "337337/7500",
+          "1350349/30000",
+          "9009/200",
+          "1352351/30000",
+          "169169/3750",
+          "451451/10000",
+          "677677/15000",
+          "271271/6000",
+          "113113/2500",
+          "1358357/30000",
+          "679679/15000",
+          "453453/10000",
+          "17017/375",
+          "1362361/30000",
+          "227227/5000",
+          "1364363/30000",
+          "341341/7500",
+          "91091/2000",
+          "683683/15000",
+          "1368367/30000",
+          "57057/1250",
+          "1370369/30000",
+          "137137/3000",
+          "457457/10000",
+          "343343/7500",
+          "1374373/30000",
+          "229229/5000",
+          "11011/240",
+          "86086/1875",
+          "459459/10000",
+          "689689/15000",
+          "1380379/30000",
+          "23023/500",
+          "1382381/30000",
+          "691691/15000",
+          "461461/10000",
+          "173173/3750",
+          "277277/6000",
+          "231231/5000",
+          "1388387/30000",
+          "347347/7500",
+          "463463/10000",
+          "139139/3000",
+          "1392391/30000",
+          "29029/625",
+          "1394393/30000",
+          "697697/15000",
+          "93093/2000",
+          "349349/7500",
+          "1398397/30000",
+          "233233/5000",
+          "1400399/30000",
+          "7007/150",
+          "467467/10000",
+          "701701/15000",
+          "1404403/30000",
+          "117117/2500",
+          "281281/6000",
+          "703703/15000",
+          "469469/10000",
+          "88088/1875",
+          "1410409/30000",
+          "47047/1000",
+          "1412411/30000",
+          "353353/7500",
+          "471471/10000",
+          "707707/15000",
+          "283283/6000",
+          "59059/1250",
+          "1418417/30000",
+          "709709/15000",
+          "473473/10000",
+          "71071/1500",
+          "1422421/30000",
+          "237237/5000",
+          "1424423/30000",
+          "89089/1875",
+          "19019/400",
+          "713713/15000",
+          "1428427/30000",
+          "119119/2500",
+          "1430429/30000",
+          "143143/3000",
+          "477477/10000",
+          "179179/3750",
+          "1434433/30000",
+          "239239/5000",
+          "287287/6000",
+          "359359/7500",
+          "479479/10000",
+          "719719/15000",
+          "1440439/30000",
+          "6006/125",
+          "1442441/30000",
+          "721721/15000",
+          "481481/10000",
+          "361361/7500",
+          "289289/6000",
+          "241241/5000",
+          "1448447/30000",
+          "181181/3750",
+          "483483/10000",
+          "29029/600",
+          "1452451/30000",
+          "121121/2500",
+          "1454453/30000",
+          "727727/15000",
+          "97097/2000",
+          "91091/1875",
+          "1458457/30000",
+          "243243/5000",
+          "1460459/30000",
+          "73073/1500",
+          "487487/10000",
+          "731731/15000",
+          "1464463/30000",
+          "61061/1250",
+          "293293/6000",
+          "733733/15000",
+          "489489/10000",
+          "367367/7500",
+          "1470469/30000",
+          "49049/1000",
+          "1472471/30000",
+          "92092/1875",
+          "491491/10000",
+          "737737/15000",
+          "59059/1200",
+          "123123/2500",
+          "1478477/30000",
+          "739739/15000",
+          "493493/10000",
+          "37037/750",
+          "1482481/30000",
+          "247247/5000",
+          "1484483/30000",
+          "371371/7500",
+          "99099/2000",
+          "743743/15000",
+          "1488487/30000",
+          "31031/625",
+          "1490489/30000",
+          "149149/3000",
+          "497497/10000",
+          "373373/7500",
+          "1494493/30000",
+          "249249/5000",
+          "299299/6000",
+          "187187/3750",
+          "499499/10000",
+          "749749/15000",
+          "1500499/30000",
+          "1001/20",
+          "1502501/30000",
+          "751751/15000",
+          "501501/10000",
+          "94094/1875",
+          "301301/6000",
+          "251251/5000",
+          "1508507/30000",
+          "377377/7500",
+          "503503/10000",
+          "151151/3000",
+          "1512511/30000",
+          "63063/1250",
+          "1514513/30000",
+          "757757/15000",
+          "101101/2000",
+          "379379/7500",
+          "1518517/30000",
+          "253253/5000",
+          "1520519/30000",
+          "19019/375",
+          "507507/10000",
+          "761761/15000",
+          "1524523/30000",
+          "127127/2500",
+          "61061/1200",
+          "763763/15000",
+          "509509/10000",
+          "191191/3750",
+          "1530529/30000",
+          "51051/1000",
+          "1532531/30000",
+          "383383/7500",
+          "511511/10000",
+          "767767/15000",
+          "307307/6000",
+          "32032/625",
+          "1538537/30000",
+          "769769/15000",
+          "513513/10000",
+          "77077/1500",
+          "1542541/30000",
+          "257257/5000",
+          "1544543/30000",
+          "193193/3750",
+          "103103/2000",
+          "773773/15000",
+          "1548547/30000",
+          "129129/2500",
+          "1550549/30000",
+          "31031/600",
+          "517517/10000",
+          "97097/1875",
+          "1554553/30000",
+          "259259/5000",
+          "311311/6000",
+          "389389/7500",
+          "519519/10000",
+          "779779/15000",
+          "1560559/30000",
+          "13013/250",
+          "1562561/30000",
+          "781781/15000",
+          "521521/10000",
+          "391391/7500",
+          "313313/6000",
+          "261261/5000",
+          "1568567/30000",
+          "98098/1875",
+          "523523/10000",
+          "157157/3000",
+          "1572571/30000",
+          "131131/2500",
+          "1574573/30000",
+          "787787/15000",
+          "21021/400",
+          "197197/3750",
+          "1578577/30000",
+          "263263/5000",
+          "1580579/30000",
+          "79079/1500",
+          "527527/10000",
+          "791791/15000",
+          "1584583/30000",
+          "33033/625",
+          "317317/6000",
+          "793793/15000",
+          "529529/10000",
+          "397397/7500",
+          "1590589/30000",
+          "53053/1000",
+          "1592591/30000",
+          "199199/3750",
+          "531531/10000",
+          "797797/15000",
+          "319319/6000",
+          "133133/2500",
+          "1598597/30000",
+          "799799/15000",
+          "533533/10000",
+          "4004/75",
+          "1602601/30000",
+          "267267/5000",
+          "1604603/30000",
+          "401401/7500",
+          "107107/2000",
+          "803803/15000",
+          "1608607/30000",
+          "67067/1250",
+          "1610609/30000",
+          "161161/3000",
+          "537537/10000",
+          "403403/7500",
+          "1614613/30000",
+          "269269/5000",
+          "323323/6000",
+          "101101/1875",
+          "539539/10000",
+          "809809/15000",
+          "1620619/30000",
+          "27027/500",
+          "1622621/30000",
+          "811811/15000",
+          "541541/10000",
+          "203203/3750",
+          "13013/240",
+          "271271/5000",
+          "1628627/30000",
+          "407407/7500",
+          "543543/10000",
+          "163163/3000",
+          "1632631/30000",
+          "34034/625",
+          "1634633/30000",
+          "817817/15000",
+          "109109/2000",
+          "409409/7500",
+          "1638637/30000",
+          "273273/5000",
+          "1640639/30000",
+          "41041/750",
+          "547547/10000",
+          "821821/15000",
+          "1644643/30000",
+          "137137/2500",
+          "329329/6000",
+          "823823/15000",
+          "549549/10000",
+          "103103/1875",
+          "1650649/30000",
+          "11011/200",
+          "1652651/30000",
+          "413413/7500",
+          "551551/10000",
+          "827827/15000",
+          "331331/6000",
+          "69069/1250",
+          "1658657/30000",
+          "829829/15000",
+          "553553/10000",
+          "83083/1500",
+          "1662661/30000",
+          "277277/5000",
+          "1664663/30000",
+          "104104/1875",
+          "111111/2000",
+          "833833/15000",
+          "1668667/30000",
+          "139139/2500",
+          "1670669/30000",
+          "167167/3000",
+          "557557/10000",
+          "209209/3750",
+          "1674673/30000",
+          "279279/5000",
+          "67067/1200",
+          "419419/7500",
+          "559559/10000",
+          "839839/15000",
+          "1680679/30000",
+          "7007/125",
+          "1682681/30000",
+          "841841/15000",
+          "561561/10000",
+          "421421/7500",
+          "337337/6000",
+          "281281/5000",
+          "1688687/30000",
+          "211211/3750",
+          "563563/10000",
+          "169169/3000",
+          "1692691/30000",
+          "141141/2500",
+          "1694693/30000",
+          "847847/15000",
+          "113113/2000",
+          "106106/1875",
+          "1698697/30000",
+          "283283/5000",
+          "1700699/30000",
+          "17017/300",
+          "567567/10000",
+          "851851/15000",
+          "1704703/30000",
+          "71071/1250",
+          "341341/6000",
+          "853853/15000",
+          "569569/10000",
+          "427427/7500",
+          "1710709/30000",
+          "57057/1000",
+          "1712711/30000",
+          "107107/1875",
+          "571571/10000",
+          "857857/15000",
+          "343343/6000",
+          "143143/2500",
+          "1718717/30000",
+          "859859/15000",
+          "573573/10000",
+          "43043/750",
+          "1722721/30000",
+          "287287/5000",
+          "1724723/30000",
+          "431431/7500",
+          "23023/400",
+          "863863/15000",
+          "1728727/30000",
+          "36036/625",
+          "1730729/30000",
+          "173173/3000",
+          "577577/10000",
+          "433433/7500",
+          "1734733/30000",
+          "289289/5000",
+          "347347/6000",
+          "217217/3750",
+          "579579/10000",
+          "869869/15000",
+          "1740739/30000",
+          "29029/500",
+          "1742741/30000",
+          "871871/15000",
+          "581581/10000",
+          "109109/1875",
+          "349349/6000",
+          "291291/5000",
+          "1748747/30000",
+          "437437/7500",
+          "583583/10000",
+          "7007/120",
+          "1752751/30000",
+          "73073/1250",
+          "1754753/30000",
+          "877877/15000",
+          "117117/2000",
+          "439439/7500",
+          "1758757/30000",
+          "293293/5000",
+          "1760759/30000",
+          "22022/375",
+          "587587/10000",
+          "881881/15000",
+          "1764763/30000",
+          "147147/2500",
+          "353353/6000",
+          "883883/15000",
+          "589589/10000",
+          "221221/3750",
+          "1770769/30000",
+          "59059/1000",
+          "1772771/30000",
+          "443443/7500",
+          "591591/10000",
+          "887887/15000",
+          "71071/1200",
+          "37037/625",
+          "1778777/30000",
+          "889889/15000",
+          "593593/10000",
+          "89089/1500",
+          "1782781/30000",
+          "297297/5000",
+          "1784783/30000",
+          "223223/3750",
+          "119119/2000",
+          "893893/15000",
+          "1788787/30000",
+          "149149/2500",
+          "1790789/30000",
+          "179179/3000",
+          "597597/10000",
+          "112112/1875",
+          "1794793/30000",
+          "299299/5000",
+          "359359/6000",
+          "449449/7500",
+          "599599/10000",
+          "899899/15000"
+        ]
+      },
+      "source_metadata": {
+        "source_id": "kLxoNp-UchI",
+        "source_group": "youtube:kLxoNp-UchI",
+        "category": "DS",
+        "prior_split": "train",
+        "media_sha256": "0c91bfa880e3af0e1716e7456ada0a304a97911eef76b1cd4fdce5066a52e8f7",
+        "media_bytes": 6970411,
+        "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\kLxoNp-UchI\\kLxoNp-UchI.mp4",
+        "native_frames": 3896,
+        "duration": 129.99653333333333,
+        "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+        "excluded_human_vector_alignment": false,
+        "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+        "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+        "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+      },
+      "original_window_plan": [
+        [
+          0.0,
+          30.0
+        ],
+        [
+          30.0,
+          60.0
+        ],
+        [
+          60.0,
+          90.0
+        ],
+        [
+          90.0,
+          120.0
+        ],
+        [
+          120.0,
+          129.99653333333333
+        ]
+      ],
+      "native_pts_file_sha256": "0a1944ba5f7d52a7ab662f6602efdfd17b7a6c0a361a635015495d7ec5429d12",
+      "training_admitted": false
+    },
+    {
+      "role": "train",
+      "source_id": "kLxoNp-UchI",
+      "source_group": "youtube:kLxoNp-UchI",
+      "window": {
+        "width": 640,
+        "height": 360,
+        "source_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\kLxoNp-UchI\\kLxoNp-UchI.mp4",
+        "source_sha256": "0c91bfa880e3af0e1716e7456ada0a304a97911eef76b1cd4fdce5066a52e8f7",
+        "window_id": "kLxoNp-UchI:SLOT6:2",
+        "window_pts_start_sec": 60.0,
+        "window_pts_end_exclusive_sec": 90.0,
+        "window_duration_sec": 30.0,
+        "planned_source_frame_ordinals": [
+          1799,
+          1813,
+          1827,
+          1841,
+          1856,
+          1870,
+          1884,
+          1898,
+          1913,
+          1927,
+          1941,
+          1955,
+          1970,
+          1984,
+          1998,
+          2012,
+          2027,
+          2041,
+          2055,
+          2069,
+          2084,
+          2098,
+          2112,
+          2126,
+          2141,
+          2155,
+          2169,
+          2183,
+          2198,
+          2212,
+          2226,
+          2240,
+          2255,
+          2269,
+          2283,
+          2297,
+          2312,
+          2326,
+          2340,
+          2354,
+          2369,
+          2383,
+          2397,
+          2411,
+          2426,
+          2440,
+          2454,
+          2468,
+          2483,
+          2497,
+          2511,
+          2525,
+          2540,
+          2554,
+          2568,
+          2582,
+          2597,
+          2611,
+          2625,
+          2639,
+          2654,
+          2668,
+          2682,
+          2697
+        ],
+        "planned_actual_pts_sec": [
+          60.026633333333336,
+          60.493766666666666,
+          60.9609,
+          61.42803333333333,
+          61.928533333333334,
+          62.39566666666666,
+          62.8628,
+          63.32993333333334,
+          63.83043333333333,
+          64.29756666666667,
+          64.7647,
+          65.23183333333333,
+          65.73233333333333,
+          66.19946666666667,
+          66.6666,
+          67.13373333333334,
+          67.63423333333333,
+          68.10136666666666,
+          68.5685,
+          69.03563333333334,
+          69.53613333333334,
+          70.00326666666666,
+          70.4704,
+          70.93753333333333,
+          71.43803333333334,
+          71.90516666666667,
+          72.3723,
+          72.83943333333333,
+          73.33993333333333,
+          73.80706666666667,
+          74.2742,
+          74.74133333333333,
+          75.24183333333333,
+          75.70896666666667,
+          76.1761,
+          76.64323333333333,
+          77.14373333333333,
+          77.61086666666667,
+          78.078,
+          78.54513333333334,
+          79.04563333333333,
+          79.51276666666666,
+          79.9799,
+          80.44703333333334,
+          80.94753333333334,
+          81.41466666666666,
+          81.8818,
+          82.34893333333333,
+          82.84943333333334,
+          83.31656666666667,
+          83.7837,
+          84.25083333333333,
+          84.75133333333333,
+          85.21846666666667,
+          85.6856,
+          86.15273333333333,
+          86.65323333333333,
+          87.12036666666667,
+          87.5875,
+          88.05463333333333,
+          88.55513333333333,
+          89.02226666666667,
+          89.4894,
+          89.9899
+        ],
+        "eligible_source_frame_count": 899,
+        "source_total_frames": 3896,
+        "original_window_index": 2,
+        "planned_exact_pts": [
+          "1800799/30000",
+          "1814813/30000",
+          "609609/10000",
+          "1842841/30000",
+          "116116/1875",
+          "187187/3000",
+          "157157/2500",
+          "949949/15000",
+          "1914913/30000",
+          "1928927/30000",
+          "647647/10000",
+          "391391/6000",
+          "197197/3000",
+          "124124/1875",
+          "333333/5000",
+          "503503/7500",
+          "2029027/30000",
+          "2043041/30000",
+          "137137/2000",
+          "2071069/30000",
+          "521521/7500",
+          "1050049/15000",
+          "44044/625",
+          "1064063/15000",
+          "2143141/30000",
+          "431431/6000",
+          "723723/10000",
+          "2185183/30000",
+          "1100099/15000",
+          "553553/7500",
+          "371371/5000",
+          "28028/375",
+          "451451/6000",
+          "2271269/30000",
+          "761761/10000",
+          "2299297/30000",
+          "289289/3750",
+          "1164163/15000",
+          "39039/500",
+          "1178177/15000",
+          "2371369/30000",
+          "2385383/30000",
+          "799799/10000",
+          "2413411/30000",
+          "1214213/15000",
+          "61061/750",
+          "409409/5000",
+          "617617/7500",
+          "2485483/30000",
+          "2499497/30000",
+          "837837/10000",
+          "101101/1200",
+          "127127/1500",
+          "1278277/15000",
+          "107107/1250",
+          "1292291/15000",
+          "2599597/30000",
+          "2613611/30000",
+          "7007/80",
+          "2641639/30000",
+          "1328327/15000",
+          "667667/7500",
+          "447447/5000",
+          "899899/10000"
+        ],
+        "domain_start_exact": "60",
+        "domain_end_exact": "90",
+        "eligible_exact_pts": [
+          "1800799/30000",
+          "3003/50",
+          "1802801/30000",
+          "901901/15000",
+          "601601/10000",
+          "451451/7500",
+          "361361/6000",
+          "301301/5000",
+          "1808807/30000",
+          "113113/1875",
+          "603603/10000",
+          "181181/3000",
+          "1812811/30000",
+          "151151/2500",
+          "1814813/30000",
+          "907907/15000",
+          "121121/2000",
+          "227227/3750",
+          "1818817/30000",
+          "303303/5000",
+          "1820819/30000",
+          "91091/1500",
+          "607607/10000",
+          "911911/15000",
+          "1824823/30000",
+          "38038/625",
+          "73073/1200",
+          "913913/15000",
+          "609609/10000",
+          "457457/7500",
+          "1830829/30000",
+          "61061/1000",
+          "1832831/30000",
+          "229229/3750",
+          "611611/10000",
+          "917917/15000",
+          "367367/6000",
+          "153153/2500",
+          "1838837/30000",
+          "919919/15000",
+          "613613/10000",
+          "23023/375",
+          "1842841/30000",
+          "307307/5000",
+          "1844843/30000",
+          "461461/7500",
+          "123123/2000",
+          "923923/15000",
+          "1848847/30000",
+          "77077/1250",
+          "1850849/30000",
+          "37037/600",
+          "617617/10000",
+          "463463/7500",
+          "1854853/30000",
+          "309309/5000",
+          "371371/6000",
+          "116116/1875",
+          "619619/10000",
+          "929929/15000",
+          "1860859/30000",
+          "31031/500",
+          "1862861/30000",
+          "931931/15000",
+          "621621/10000",
+          "233233/3750",
+          "373373/6000",
+          "311311/5000",
+          "1868867/30000",
+          "467467/7500",
+          "623623/10000",
+          "187187/3000",
+          "1872871/30000",
+          "39039/625",
+          "1874873/30000",
+          "937937/15000",
+          "1001/16",
+          "469469/7500",
+          "1878877/30000",
+          "313313/5000",
+          "1880879/30000",
+          "47047/750",
+          "627627/10000",
+          "941941/15000",
+          "1884883/30000",
+          "157157/2500",
+          "377377/6000",
+          "943943/15000",
+          "629629/10000",
+          "118118/1875",
+          "1890889/30000",
+          "63063/1000",
+          "1892891/30000",
+          "473473/7500",
+          "631631/10000",
+          "947947/15000",
+          "379379/6000",
+          "79079/1250",
+          "1898897/30000",
+          "949949/15000",
+          "633633/10000",
+          "19019/300",
+          "1902901/30000",
+          "317317/5000",
+          "1904903/30000",
+          "119119/1875",
+          "127127/2000",
+          "953953/15000",
+          "1908907/30000",
+          "159159/2500",
+          "1910909/30000",
+          "191191/3000",
+          "637637/10000",
+          "239239/3750",
+          "1914913/30000",
+          "319319/5000",
+          "383383/6000",
+          "479479/7500",
+          "639639/10000",
+          "959959/15000",
+          "1920919/30000",
+          "8008/125",
+          "1922921/30000",
+          "961961/15000",
+          "641641/10000",
+          "481481/7500",
+          "77077/1200",
+          "321321/5000",
+          "1928927/30000",
+          "241241/3750",
+          "643643/10000",
+          "193193/3000",
+          "1932931/30000",
+          "161161/2500",
+          "1934933/30000",
+          "967967/15000",
+          "129129/2000",
+          "121121/1875",
+          "1938937/30000",
+          "323323/5000",
+          "1940939/30000",
+          "97097/1500",
+          "647647/10000",
+          "971971/15000",
+          "1944943/30000",
+          "81081/1250",
+          "389389/6000",
+          "973973/15000",
+          "649649/10000",
+          "487487/7500",
+          "1950949/30000",
+          "13013/200",
+          "1952951/30000",
+          "122122/1875",
+          "651651/10000",
+          "977977/15000",
+          "391391/6000",
+          "163163/2500",
+          "1958957/30000",
+          "979979/15000",
+          "653653/10000",
+          "49049/750",
+          "1962961/30000",
+          "327327/5000",
+          "1964963/30000",
+          "491491/7500",
+          "131131/2000",
+          "983983/15000",
+          "1968967/30000",
+          "41041/625",
+          "1970969/30000",
+          "197197/3000",
+          "657657/10000",
+          "493493/7500",
+          "1974973/30000",
+          "329329/5000",
+          "79079/1200",
+          "247247/3750",
+          "659659/10000",
+          "989989/15000",
+          "1980979/30000",
+          "33033/500",
+          "1982981/30000",
+          "991991/15000",
+          "661661/10000",
+          "124124/1875",
+          "397397/6000",
+          "331331/5000",
+          "1988987/30000",
+          "497497/7500",
+          "663663/10000",
+          "199199/3000",
+          "1992991/30000",
+          "83083/1250",
+          "1994993/30000",
+          "997997/15000",
+          "133133/2000",
+          "499499/7500",
+          "1998997/30000",
+          "333333/5000",
+          "2000999/30000",
+          "1001/15",
+          "667667/10000",
+          "1002001/15000",
+          "2005003/30000",
+          "167167/2500",
+          "401401/6000",
+          "1004003/15000",
+          "669669/10000",
+          "251251/3750",
+          "2011009/30000",
+          "67067/1000",
+          "2013011/30000",
+          "503503/7500",
+          "671671/10000",
+          "1008007/15000",
+          "403403/6000",
+          "42042/625",
+          "2019017/30000",
+          "1010009/15000",
+          "673673/10000",
+          "101101/1500",
+          "2023021/30000",
+          "337337/5000",
+          "2025023/30000",
+          "253253/3750",
+          "27027/400",
+          "1014013/15000",
+          "2029027/30000",
+          "169169/2500",
+          "2031029/30000",
+          "203203/3000",
+          "677677/10000",
+          "127127/1875",
+          "2035033/30000",
+          "339339/5000",
+          "407407/6000",
+          "509509/7500",
+          "679679/10000",
+          "1020019/15000",
+          "2041039/30000",
+          "17017/250",
+          "2043041/30000",
+          "1022021/15000",
+          "681681/10000",
+          "511511/7500",
+          "409409/6000",
+          "341341/5000",
+          "2049047/30000",
+          "128128/1875",
+          "683683/10000",
+          "41041/600",
+          "2053051/30000",
+          "171171/2500",
+          "2055053/30000",
+          "1028027/15000",
+          "137137/2000",
+          "257257/3750",
+          "2059057/30000",
+          "343343/5000",
+          "2061059/30000",
+          "103103/1500",
+          "687687/10000",
+          "1032031/15000",
+          "2065063/30000",
+          "43043/625",
+          "413413/6000",
+          "1034033/15000",
+          "689689/10000",
+          "517517/7500",
+          "2071069/30000",
+          "69069/1000",
+          "2073071/30000",
+          "259259/3750",
+          "691691/10000",
+          "1038037/15000",
+          "83083/1200",
+          "173173/2500",
+          "2079077/30000",
+          "1040039/15000",
+          "693693/10000",
+          "26026/375",
+          "2083081/30000",
+          "347347/5000",
+          "2085083/30000",
+          "521521/7500",
+          "139139/2000",
+          "1044043/15000",
+          "2089087/30000",
+          "87087/1250",
+          "2091089/30000",
+          "209209/3000",
+          "697697/10000",
+          "523523/7500",
+          "2095093/30000",
+          "349349/5000",
+          "419419/6000",
+          "131131/1875",
+          "699699/10000",
+          "1050049/15000",
+          "2101099/30000",
+          "7007/100",
+          "2103101/30000",
+          "1052051/15000",
+          "701701/10000",
+          "263263/3750",
+          "421421/6000",
+          "351351/5000",
+          "2109107/30000",
+          "527527/7500",
+          "703703/10000",
+          "211211/3000",
+          "2113111/30000",
+          "44044/625",
+          "2115113/30000",
+          "1058057/15000",
+          "141141/2000",
+          "529529/7500",
+          "2119117/30000",
+          "353353/5000",
+          "2121119/30000",
+          "53053/750",
+          "707707/10000",
+          "1062061/15000",
+          "2125123/30000",
+          "177177/2500",
+          "17017/240",
+          "1064063/15000",
+          "709709/10000",
+          "133133/1875",
+          "2131129/30000",
+          "71071/1000",
+          "2133131/30000",
+          "533533/7500",
+          "711711/10000",
+          "1068067/15000",
+          "427427/6000",
+          "89089/1250",
+          "2139137/30000",
+          "1070069/15000",
+          "713713/10000",
+          "107107/1500",
+          "2143141/30000",
+          "357357/5000",
+          "2145143/30000",
+          "134134/1875",
+          "143143/2000",
+          "1074073/15000",
+          "2149147/30000",
+          "179179/2500",
+          "2151149/30000",
+          "43043/600",
+          "717717/10000",
+          "269269/3750",
+          "2155153/30000",
+          "359359/5000",
+          "431431/6000",
+          "539539/7500",
+          "719719/10000",
+          "1080079/15000",
+          "2161159/30000",
+          "9009/125",
+          "2163161/30000",
+          "1082081/15000",
+          "721721/10000",
+          "541541/7500",
+          "433433/6000",
+          "361361/5000",
+          "2169167/30000",
+          "271271/3750",
+          "723723/10000",
+          "217217/3000",
+          "2173171/30000",
+          "181181/2500",
+          "2175173/30000",
+          "1088087/15000",
+          "29029/400",
+          "136136/1875",
+          "2179177/30000",
+          "363363/5000",
+          "2181179/30000",
+          "109109/1500",
+          "727727/10000",
+          "1092091/15000",
+          "2185183/30000",
+          "91091/1250",
+          "437437/6000",
+          "1094093/15000",
+          "729729/10000",
+          "547547/7500",
+          "2191189/30000",
+          "73073/1000",
+          "2193191/30000",
+          "137137/1875",
+          "731731/10000",
+          "1098097/15000",
+          "439439/6000",
+          "183183/2500",
+          "2199197/30000",
+          "1100099/15000",
+          "733733/10000",
+          "11011/150",
+          "2203201/30000",
+          "367367/5000",
+          "2205203/30000",
+          "551551/7500",
+          "147147/2000",
+          "1104103/15000",
+          "2209207/30000",
+          "46046/625",
+          "2211209/30000",
+          "221221/3000",
+          "737737/10000",
+          "553553/7500",
+          "2215213/30000",
+          "369369/5000",
+          "443443/6000",
+          "277277/3750",
+          "739739/10000",
+          "1110109/15000",
+          "2221219/30000",
+          "37037/500",
+          "2223221/30000",
+          "1112111/15000",
+          "741741/10000",
+          "139139/1875",
+          "89089/1200",
+          "371371/5000",
+          "2229227/30000",
+          "557557/7500",
+          "743743/10000",
+          "223223/3000",
+          "2233231/30000",
+          "93093/1250",
+          "2235233/30000",
+          "1118117/15000",
+          "149149/2000",
+          "559559/7500",
+          "2239237/30000",
+          "373373/5000",
+          "2241239/30000",
+          "28028/375",
+          "747747/10000",
+          "1122121/15000",
+          "2245243/30000",
+          "187187/2500",
+          "449449/6000",
+          "1124123/15000",
+          "749749/10000",
+          "281281/3750",
+          "2251249/30000",
+          "3003/40",
+          "2253251/30000",
+          "563563/7500",
+          "751751/10000",
+          "1128127/15000",
+          "451451/6000",
+          "47047/625",
+          "2259257/30000",
+          "1130129/15000",
+          "753753/10000",
+          "113113/1500",
+          "2263261/30000",
+          "377377/5000",
+          "2265263/30000",
+          "283283/3750",
+          "151151/2000",
+          "1134133/15000",
+          "2269267/30000",
+          "189189/2500",
+          "2271269/30000",
+          "227227/3000",
+          "757757/10000",
+          "142142/1875",
+          "2275273/30000",
+          "379379/5000",
+          "91091/1200",
+          "569569/7500",
+          "759759/10000",
+          "1140139/15000",
+          "2281279/30000",
+          "19019/250",
+          "2283281/30000",
+          "1142141/15000",
+          "761761/10000",
+          "571571/7500",
+          "457457/6000",
+          "381381/5000",
+          "2289287/30000",
+          "143143/1875",
+          "763763/10000",
+          "229229/3000",
+          "2293291/30000",
+          "191191/2500",
+          "2295293/30000",
+          "1148147/15000",
+          "153153/2000",
+          "287287/3750",
+          "2299297/30000",
+          "383383/5000",
+          "2301299/30000",
+          "23023/300",
+          "767767/10000",
+          "1152151/15000",
+          "2305303/30000",
+          "48048/625",
+          "461461/6000",
+          "1154153/15000",
+          "769769/10000",
+          "577577/7500",
+          "2311309/30000",
+          "77077/1000",
+          "2313311/30000",
+          "289289/3750",
+          "771771/10000",
+          "1158157/15000",
+          "463463/6000",
+          "193193/2500",
+          "2319317/30000",
+          "1160159/15000",
+          "773773/10000",
+          "29029/375",
+          "2323321/30000",
+          "387387/5000",
+          "2325323/30000",
+          "581581/7500",
+          "31031/400",
+          "1164163/15000",
+          "2329327/30000",
+          "97097/1250",
+          "2331329/30000",
+          "233233/3000",
+          "777777/10000",
+          "583583/7500",
+          "2335333/30000",
+          "389389/5000",
+          "467467/6000",
+          "146146/1875",
+          "779779/10000",
+          "1170169/15000",
+          "2341339/30000",
+          "39039/500",
+          "2343341/30000",
+          "1172171/15000",
+          "781781/10000",
+          "293293/3750",
+          "469469/6000",
+          "391391/5000",
+          "2349347/30000",
+          "587587/7500",
+          "783783/10000",
+          "47047/600",
+          "2353351/30000",
+          "49049/625",
+          "2355353/30000",
+          "1178177/15000",
+          "157157/2000",
+          "589589/7500",
+          "2359357/30000",
+          "393393/5000",
+          "2361359/30000",
+          "59059/750",
+          "787787/10000",
+          "1182181/15000",
+          "2365363/30000",
+          "197197/2500",
+          "473473/6000",
+          "1184183/15000",
+          "789789/10000",
+          "148148/1875",
+          "2371369/30000",
+          "79079/1000",
+          "2373371/30000",
+          "593593/7500",
+          "791791/10000",
+          "1188187/15000",
+          "19019/240",
+          "99099/1250",
+          "2379377/30000",
+          "1190189/15000",
+          "793793/10000",
+          "119119/1500",
+          "2383381/30000",
+          "397397/5000",
+          "2385383/30000",
+          "149149/1875",
+          "159159/2000",
+          "1194193/15000",
+          "2389387/30000",
+          "199199/2500",
+          "2391389/30000",
+          "239239/3000",
+          "797797/10000",
+          "299299/3750",
+          "2395393/30000",
+          "399399/5000",
+          "479479/6000",
+          "599599/7500",
+          "799799/10000",
+          "1200199/15000",
+          "2401399/30000",
+          "2002/25",
+          "2403401/30000",
+          "1202201/15000",
+          "801801/10000",
+          "601601/7500",
+          "481481/6000",
+          "401401/5000",
+          "2409407/30000",
+          "301301/3750",
+          "803803/10000",
+          "241241/3000",
+          "2413411/30000",
+          "201201/2500",
+          "2415413/30000",
+          "1208207/15000",
+          "161161/2000",
+          "151151/1875",
+          "2419417/30000",
+          "403403/5000",
+          "2421419/30000",
+          "121121/1500",
+          "807807/10000",
+          "1212211/15000",
+          "2425423/30000",
+          "101101/1250",
+          "97097/1200",
+          "1214213/15000",
+          "809809/10000",
+          "607607/7500",
+          "2431429/30000",
+          "81081/1000",
+          "2433431/30000",
+          "152152/1875",
+          "811811/10000",
+          "1218217/15000",
+          "487487/6000",
+          "203203/2500",
+          "2439437/30000",
+          "1220219/15000",
+          "813813/10000",
+          "61061/750",
+          "2443441/30000",
+          "407407/5000",
+          "2445443/30000",
+          "611611/7500",
+          "163163/2000",
+          "1224223/15000",
+          "2449447/30000",
+          "51051/625",
+          "2451449/30000",
+          "49049/600",
+          "817817/10000",
+          "613613/7500",
+          "2455453/30000",
+          "409409/5000",
+          "491491/6000",
+          "307307/3750",
+          "819819/10000",
+          "1230229/15000",
+          "2461459/30000",
+          "41041/500",
+          "2463461/30000",
+          "1232231/15000",
+          "821821/10000",
+          "154154/1875",
+          "493493/6000",
+          "411411/5000",
+          "2469467/30000",
+          "617617/7500",
+          "823823/10000",
+          "247247/3000",
+          "2473471/30000",
+          "103103/1250",
+          "2475473/30000",
+          "1238237/15000",
+          "33033/400",
+          "619619/7500",
+          "2479477/30000",
+          "413413/5000",
+          "2481479/30000",
+          "31031/375",
+          "827827/10000",
+          "1242241/15000",
+          "2485483/30000",
+          "207207/2500",
+          "497497/6000",
+          "1244243/15000",
+          "829829/10000",
+          "311311/3750",
+          "2491489/30000",
+          "83083/1000",
+          "2493491/30000",
+          "623623/7500",
+          "831831/10000",
+          "1248247/15000",
+          "499499/6000",
+          "52052/625",
+          "2499497/30000",
+          "1250249/15000",
+          "833833/10000",
+          "1001/12",
+          "2503501/30000",
+          "417417/5000",
+          "2505503/30000",
+          "313313/3750",
+          "167167/2000",
+          "1254253/15000",
+          "2509507/30000",
+          "209209/2500",
+          "2511509/30000",
+          "251251/3000",
+          "837837/10000",
+          "157157/1875",
+          "2515513/30000",
+          "419419/5000",
+          "503503/6000",
+          "629629/7500",
+          "839839/10000",
+          "1260259/15000",
+          "2521519/30000",
+          "21021/250",
+          "2523521/30000",
+          "1262261/15000",
+          "841841/10000",
+          "631631/7500",
+          "101101/1200",
+          "421421/5000",
+          "2529527/30000",
+          "158158/1875",
+          "843843/10000",
+          "253253/3000",
+          "2533531/30000",
+          "211211/2500",
+          "2535533/30000",
+          "1268267/15000",
+          "169169/2000",
+          "317317/3750",
+          "2539537/30000",
+          "423423/5000",
+          "2541539/30000",
+          "127127/1500",
+          "847847/10000",
+          "1272271/15000",
+          "2545543/30000",
+          "53053/625",
+          "509509/6000",
+          "1274273/15000",
+          "849849/10000",
+          "637637/7500",
+          "2551549/30000",
+          "17017/200",
+          "2553551/30000",
+          "319319/3750",
+          "851851/10000",
+          "1278277/15000",
+          "511511/6000",
+          "213213/2500",
+          "2559557/30000",
+          "1280279/15000",
+          "853853/10000",
+          "32032/375",
+          "2563561/30000",
+          "427427/5000",
+          "2565563/30000",
+          "641641/7500",
+          "171171/2000",
+          "1284283/15000",
+          "2569567/30000",
+          "107107/1250",
+          "2571569/30000",
+          "257257/3000",
+          "857857/10000",
+          "643643/7500",
+          "2575573/30000",
+          "429429/5000",
+          "103103/1200",
+          "161161/1875",
+          "859859/10000",
+          "1290289/15000",
+          "2581579/30000",
+          "43043/500",
+          "2583581/30000",
+          "1292291/15000",
+          "861861/10000",
+          "323323/3750",
+          "517517/6000",
+          "431431/5000",
+          "2589587/30000",
+          "647647/7500",
+          "863863/10000",
+          "259259/3000",
+          "2593591/30000",
+          "54054/625",
+          "2595593/30000",
+          "1298297/15000",
+          "173173/2000",
+          "649649/7500",
+          "2599597/30000",
+          "433433/5000",
+          "2601599/30000",
+          "13013/150",
+          "867867/10000",
+          "1302301/15000",
+          "2605603/30000",
+          "217217/2500",
+          "521521/6000",
+          "1304303/15000",
+          "869869/10000",
+          "163163/1875",
+          "2611609/30000",
+          "87087/1000",
+          "2613611/30000",
+          "653653/7500",
+          "871871/10000",
+          "1308307/15000",
+          "523523/6000",
+          "109109/1250",
+          "2619617/30000",
+          "1310309/15000",
+          "873873/10000",
+          "131131/1500",
+          "2623621/30000",
+          "437437/5000",
+          "2625623/30000",
+          "164164/1875",
+          "7007/80",
+          "1314313/15000",
+          "2629627/30000",
+          "219219/2500",
+          "2631629/30000",
+          "263263/3000",
+          "877877/10000",
+          "329329/3750",
+          "2635633/30000",
+          "439439/5000",
+          "527527/6000",
+          "659659/7500",
+          "879879/10000",
+          "1320319/15000",
+          "2641639/30000",
+          "11011/125",
+          "2643641/30000",
+          "1322321/15000",
+          "881881/10000",
+          "661661/7500",
+          "529529/6000",
+          "441441/5000",
+          "2649647/30000",
+          "331331/3750",
+          "883883/10000",
+          "53053/600",
+          "2653651/30000",
+          "221221/2500",
+          "2655653/30000",
+          "1328327/15000",
+          "177177/2000",
+          "166166/1875",
+          "2659657/30000",
+          "443443/5000",
+          "2661659/30000",
+          "133133/1500",
+          "887887/10000",
+          "1332331/15000",
+          "2665663/30000",
+          "111111/1250",
+          "533533/6000",
+          "1334333/15000",
+          "889889/10000",
+          "667667/7500",
+          "2671669/30000",
+          "89089/1000",
+          "2673671/30000",
+          "167167/1875",
+          "891891/10000",
+          "1338337/15000",
+          "107107/1200",
+          "223223/2500",
+          "2679677/30000",
+          "1340339/15000",
+          "893893/10000",
+          "67067/750",
+          "2683681/30000",
+          "447447/5000",
+          "2685683/30000",
+          "671671/7500",
+          "179179/2000",
+          "1344343/15000",
+          "2689687/30000",
+          "56056/625",
+          "2691689/30000",
+          "269269/3000",
+          "897897/10000",
+          "673673/7500",
+          "2695693/30000",
+          "449449/5000",
+          "539539/6000",
+          "337337/3750",
+          "899899/10000"
+        ]
+      },
+      "source_metadata": {
+        "source_id": "kLxoNp-UchI",
+        "source_group": "youtube:kLxoNp-UchI",
+        "category": "DS",
+        "prior_split": "train",
+        "media_sha256": "0c91bfa880e3af0e1716e7456ada0a304a97911eef76b1cd4fdce5066a52e8f7",
+        "media_bytes": 6970411,
+        "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\kLxoNp-UchI\\kLxoNp-UchI.mp4",
+        "native_frames": 3896,
+        "duration": 129.99653333333333,
+        "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+        "excluded_human_vector_alignment": false,
+        "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+        "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+        "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+      },
+      "original_window_plan": [
+        [
+          0.0,
+          30.0
+        ],
+        [
+          30.0,
+          60.0
+        ],
+        [
+          60.0,
+          90.0
+        ],
+        [
+          90.0,
+          120.0
+        ],
+        [
+          120.0,
+          129.99653333333333
+        ]
+      ],
+      "native_pts_file_sha256": "0a1944ba5f7d52a7ab662f6602efdfd17b7a6c0a361a635015495d7ec5429d12",
+      "training_admitted": false
+    },
+    {
+      "role": "train",
+      "source_id": "AwmHb44_ouw",
+      "source_group": "youtube:AwmHb44_ouw",
+      "window": {
+        "width": 540,
+        "height": 360,
+        "source_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\AwmHb44_ouw\\AwmHb44_ouw.mp4",
+        "source_sha256": "82ecca1de0363253060bb3c19e2f5dbd4080bfc0cd790db23c3e73ffd76a602f",
+        "window_id": "AwmHb44_ouw:SLOT6:10",
+        "window_pts_start_sec": 300.0,
+        "window_pts_end_exclusive_sec": 330.0,
+        "window_duration_sec": 30.0,
+        "planned_source_frame_ordinals": [
+          8992,
+          9006,
+          9020,
+          9034,
+          9049,
+          9063,
+          9077,
+          9091,
+          9106,
+          9120,
+          9134,
+          9148,
+          9163,
+          9177,
+          9191,
+          9205,
+          9220,
+          9234,
+          9248,
+          9262,
+          9277,
+          9291,
+          9305,
+          9319,
+          9334,
+          9348,
+          9362,
+          9376,
+          9391,
+          9405,
+          9419,
+          9433,
+          9448,
+          9462,
+          9476,
+          9490,
+          9505,
+          9519,
+          9533,
+          9547,
+          9562,
+          9576,
+          9590,
+          9604,
+          9619,
+          9633,
+          9647,
+          9661,
+          9676,
+          9690,
+          9704,
+          9718,
+          9733,
+          9747,
+          9761,
+          9775,
+          9790,
+          9804,
+          9818,
+          9832,
+          9847,
+          9861,
+          9875,
+          9890
+        ],
+        "planned_actual_pts_sec": [
+          300.0330666666667,
+          300.5002,
+          300.96733333333333,
+          301.43446666666665,
+          301.93496666666664,
+          302.4021,
+          302.86923333333334,
+          303.33636666666666,
+          303.83686666666665,
+          304.304,
+          304.77113333333335,
+          305.2382666666667,
+          305.73876666666666,
+          306.2059,
+          306.6730333333333,
+          307.1401666666667,
+          307.6406666666667,
+          308.1078,
+          308.5749333333333,
+          309.04206666666664,
+          309.5425666666667,
+          310.0097,
+          310.47683333333333,
+          310.94396666666665,
+          311.44446666666664,
+          311.9116,
+          312.37873333333334,
+          312.84586666666667,
+          313.34636666666665,
+          313.8135,
+          314.28063333333336,
+          314.7477666666667,
+          315.24826666666667,
+          315.7154,
+          316.1825333333333,
+          316.6496666666667,
+          317.1501666666667,
+          317.6173,
+          318.0844333333333,
+          318.55156666666664,
+          319.0520666666667,
+          319.5192,
+          319.98633333333333,
+          320.45346666666666,
+          320.95396666666664,
+          321.4211,
+          321.88823333333335,
+          322.35536666666667,
+          322.85586666666666,
+          323.323,
+          323.79013333333336,
+          324.2572666666667,
+          324.75776666666667,
+          325.2249,
+          325.6920333333333,
+          326.1591666666667,
+          326.6596666666667,
+          327.1268,
+          327.5939333333333,
+          328.06106666666665,
+          328.5615666666667,
+          329.0287,
+          329.49583333333334,
+          329.9963333333333
+        ],
+        "eligible_source_frame_count": 899,
+        "source_total_frames": 10597,
+        "original_window_index": 10,
+        "planned_exact_pts": [
+          "562562/1875",
+          "1502501/5000",
+          "451451/1500",
+          "4521517/15000",
+          "9058049/30000",
+          "3024021/10000",
+          "9086077/30000",
+          "9100091/30000",
+          "4557553/15000",
+          "38038/125",
+          "4571567/15000",
+          "2289287/7500",
+          "9172163/30000",
+          "3062059/10000",
+          "9200191/30000",
+          "1842841/6000",
+          "461461/1500",
+          "1540539/5000",
+          "578578/1875",
+          "4635631/15000",
+          "9286277/30000",
+          "3100097/10000",
+          "1862861/6000",
+          "9328319/30000",
+          "4671667/15000",
+          "779779/2500",
+          "4685681/15000",
+          "586586/1875",
+          "9400391/30000",
+          "627627/2000",
+          "9428419/30000",
+          "9442433/30000",
+          "1182181/3750",
+          "1578577/5000",
+          "2371369/7500",
+          "949949/3000",
+          "1902901/6000",
+          "3176173/10000",
+          "9542533/30000",
+          "9556547/30000",
+          "4785781/15000",
+          "399399/1250",
+          "959959/3000",
+          "2403401/7500",
+          "9628619/30000",
+          "3214211/10000",
+          "9656647/30000",
+          "9670661/30000",
+          "2421419/7500",
+          "323323/1000",
+          "1214213/3750",
+          "4863859/15000",
+          "9742733/30000",
+          "3252249/10000",
+          "9770761/30000",
+          "391391/1200",
+          "979979/3000",
+          "817817/2500",
+          "4913909/15000",
+          "1230229/3750",
+          "9856847/30000",
+          "3290287/10000",
+          "79079/240",
+          "989989/3000"
+        ],
+        "domain_start_exact": "300",
+        "domain_end_exact": "330",
+        "eligible_exact_pts": [
+          "562562/1875",
+          "9001993/30000",
+          "1500499/5000",
+          "1800799/6000",
+          "2251249/7500",
+          "3001999/10000",
+          "4503499/15000",
+          "9007999/30000",
+          "3003/10",
+          "9010001/30000",
+          "4505501/15000",
+          "3004001/10000",
+          "2253251/7500",
+          "1802801/6000",
+          "1502501/5000",
+          "9016007/30000",
+          "563563/1875",
+          "3006003/10000",
+          "901901/3000",
+          "9020011/30000",
+          "751751/2500",
+          "9022013/30000",
+          "4511507/15000",
+          "601601/2000",
+          "1128127/3750",
+          "9026017/30000",
+          "1504503/5000",
+          "9028019/30000",
+          "451451/1500",
+          "3010007/10000",
+          "4515511/15000",
+          "9032023/30000",
+          "188188/625",
+          "361361/1200",
+          "4517513/15000",
+          "3012009/10000",
+          "2259257/7500",
+          "9038029/30000",
+          "301301/1000",
+          "9040031/30000",
+          "1130129/3750",
+          "3014011/10000",
+          "4521517/15000",
+          "1808807/6000",
+          "753753/2500",
+          "9046037/30000",
+          "4523519/15000",
+          "3016013/10000",
+          "113113/375",
+          "9050041/30000",
+          "1508507/5000",
+          "9052043/30000",
+          "2263261/7500",
+          "603603/2000",
+          "4527523/15000",
+          "9056047/30000",
+          "377377/1250",
+          "9058049/30000",
+          "181181/600",
+          "3020017/10000",
+          "2265263/7500",
+          "9062053/30000",
+          "1510509/5000",
+          "1812811/6000",
+          "566566/1875",
+          "3022019/10000",
+          "4533529/15000",
+          "9068059/30000",
+          "151151/500",
+          "9070061/30000",
+          "4535531/15000",
+          "3024021/10000",
+          "1134133/3750",
+          "1814813/6000",
+          "1512511/5000",
+          "9076067/30000",
+          "2269267/7500",
+          "3026023/10000",
+          "907907/3000",
+          "9080071/30000",
+          "189189/625",
+          "9082073/30000",
+          "4541537/15000",
+          "121121/400",
+          "2271269/7500",
+          "9086077/30000",
+          "1514513/5000",
+          "9088079/30000",
+          "227227/750",
+          "3030027/10000",
+          "4545541/15000",
+          "9092083/30000",
+          "757757/2500",
+          "1818817/6000",
+          "4547543/15000",
+          "3032029/10000",
+          "568568/1875",
+          "9098089/30000",
+          "303303/1000",
+          "9100091/30000",
+          "2275273/7500",
+          "3034031/10000",
+          "4551547/15000",
+          "1820819/6000",
+          "379379/1250",
+          "9106097/30000",
+          "4553549/15000",
+          "3036033/10000",
+          "91091/300",
+          "9110101/30000",
+          "1518517/5000",
+          "9112103/30000",
+          "569569/1875",
+          "607607/2000",
+          "4557553/15000",
+          "9116107/30000",
+          "759759/2500",
+          "9118109/30000",
+          "911911/3000",
+          "3040037/10000",
+          "1140139/3750",
+          "9122113/30000",
+          "1520519/5000",
+          "1824823/6000",
+          "2281279/7500",
+          "3042039/10000",
+          "4563559/15000",
+          "9128119/30000",
+          "38038/125",
+          "9130121/30000",
+          "4565561/15000",
+          "3044041/10000",
+          "2283281/7500",
+          "73073/240",
+          "1522521/5000",
+          "9136127/30000",
+          "1142141/3750",
+          "3046043/10000",
+          "913913/3000",
+          "9140131/30000",
+          "761761/2500",
+          "9142133/30000",
+          "4571567/15000",
+          "609609/2000",
+          "571571/1875",
+          "9146137/30000",
+          "1524523/5000",
+          "9148139/30000",
+          "457457/1500",
+          "3050047/10000",
+          "4575571/15000",
+          "9152143/30000",
+          "381381/1250",
+          "1830829/6000",
+          "4577573/15000",
+          "3052049/10000",
+          "2289287/7500",
+          "9158149/30000",
+          "61061/200",
+          "9160151/30000",
+          "572572/1875",
+          "3054051/10000",
+          "4581577/15000",
+          "1832831/6000",
+          "763763/2500",
+          "9166157/30000",
+          "4583579/15000",
+          "3056053/10000",
+          "229229/750",
+          "9170161/30000",
+          "1528527/5000",
+          "9172163/30000",
+          "2293291/7500",
+          "611611/2000",
+          "4587583/15000",
+          "9176167/30000",
+          "191191/625",
+          "9178169/30000",
+          "917917/3000",
+          "3060057/10000",
+          "2295293/7500",
+          "9182173/30000",
+          "1530529/5000",
+          "367367/1200",
+          "1148147/3750",
+          "3062059/10000",
+          "4593589/15000",
+          "9188179/30000",
+          "153153/500",
+          "9190181/30000",
+          "4595591/15000",
+          "3064061/10000",
+          "574574/1875",
+          "1838837/6000",
+          "1532531/5000",
+          "9196187/30000",
+          "2299297/7500",
+          "3066063/10000",
+          "919919/3000",
+          "9200191/30000",
+          "383383/1250",
+          "9202193/30000",
+          "4601597/15000",
+          "613613/2000",
+          "2301299/7500",
+          "9206197/30000",
+          "1534533/5000",
+          "9208199/30000",
+          "23023/75",
+          "3070067/10000",
+          "4605601/15000",
+          "9212203/30000",
+          "767767/2500",
+          "1842841/6000",
+          "4607603/15000",
+          "3072069/10000",
+          "1152151/3750",
+          "9218209/30000",
+          "307307/1000",
+          "9220211/30000",
+          "2305303/7500",
+          "3074071/10000",
+          "4611607/15000",
+          "1844843/6000",
+          "192192/625",
+          "9226217/30000",
+          "4613609/15000",
+          "3076073/10000",
+          "461461/1500",
+          "9230221/30000",
+          "1538537/5000",
+          "9232223/30000",
+          "1154153/3750",
+          "123123/400",
+          "4617613/15000",
+          "9236227/30000",
+          "769769/2500",
+          "9238229/30000",
+          "923923/3000",
+          "3080077/10000",
+          "577577/1875",
+          "9242233/30000",
+          "1540539/5000",
+          "1848847/6000",
+          "2311309/7500",
+          "3082079/10000",
+          "4623619/15000",
+          "9248239/30000",
+          "77077/250",
+          "9250241/30000",
+          "4625621/15000",
+          "3084081/10000",
+          "2313311/7500",
+          "1850849/6000",
+          "1542541/5000",
+          "9256247/30000",
+          "578578/1875",
+          "3086083/10000",
+          "37037/120",
+          "9260251/30000",
+          "771771/2500",
+          "9262253/30000",
+          "4631627/15000",
+          "617617/2000",
+          "1158157/3750",
+          "9266257/30000",
+          "1544543/5000",
+          "9268259/30000",
+          "463463/1500",
+          "3090087/10000",
+          "4635631/15000",
+          "9272263/30000",
+          "193193/625",
+          "1854853/6000",
+          "4637633/15000",
+          "3092089/10000",
+          "2319317/7500",
+          "9278269/30000",
+          "309309/1000",
+          "9280271/30000",
+          "1160159/3750",
+          "3094091/10000",
+          "4641637/15000",
+          "371371/1200",
+          "773773/2500",
+          "9286277/30000",
+          "4643639/15000",
+          "3096093/10000",
+          "116116/375",
+          "9290281/30000",
+          "1548547/5000",
+          "9292283/30000",
+          "2323321/7500",
+          "619619/2000",
+          "4647643/15000",
+          "9296287/30000",
+          "387387/1250",
+          "9298289/30000",
+          "929929/3000",
+          "3100097/10000",
+          "2325323/7500",
+          "9302293/30000",
+          "1550549/5000",
+          "1860859/6000",
+          "581581/1875",
+          "3102099/10000",
+          "4653649/15000",
+          "9308299/30000",
+          "31031/100",
+          "9310301/30000",
+          "4655651/15000",
+          "3104101/10000",
+          "1164163/3750",
+          "1862861/6000",
+          "1552551/5000",
+          "9316307/30000",
+          "2329327/7500",
+          "3106103/10000",
+          "931931/3000",
+          "9320311/30000",
+          "194194/625",
+          "9322313/30000",
+          "4661657/15000",
+          "621621/2000",
+          "2331329/7500",
+          "9326317/30000",
+          "1554553/5000",
+          "9328319/30000",
+          "233233/750",
+          "3110107/10000",
+          "4665661/15000",
+          "9332323/30000",
+          "777777/2500",
+          "373373/1200",
+          "4667663/15000",
+          "3112109/10000",
+          "583583/1875",
+          "9338329/30000",
+          "311311/1000",
+          "9340331/30000",
+          "2335333/7500",
+          "3114111/10000",
+          "4671667/15000",
+          "1868867/6000",
+          "389389/1250",
+          "9346337/30000",
+          "4673669/15000",
+          "3116113/10000",
+          "467467/1500",
+          "9350341/30000",
+          "1558557/5000",
+          "9352343/30000",
+          "584584/1875",
+          "623623/2000",
+          "4677673/15000",
+          "9356347/30000",
+          "779779/2500",
+          "9358349/30000",
+          "187187/600",
+          "3120117/10000",
+          "1170169/3750",
+          "9362353/30000",
+          "1560559/5000",
+          "1872871/6000",
+          "2341339/7500",
+          "3122119/10000",
+          "4683679/15000",
+          "9368359/30000",
+          "39039/125",
+          "9370361/30000",
+          "4685681/15000",
+          "3124121/10000",
+          "2343341/7500",
+          "1874873/6000",
+          "1562561/5000",
+          "9376367/30000",
+          "1172171/3750",
+          "3126123/10000",
+          "937937/3000",
+          "9380371/30000",
+          "781781/2500",
+          "9382373/30000",
+          "4691687/15000",
+          "5005/16",
+          "586586/1875",
+          "9386377/30000",
+          "1564563/5000",
+          "9388379/30000",
+          "469469/1500",
+          "3130127/10000",
+          "4695691/15000",
+          "9392383/30000",
+          "391391/1250",
+          "1878877/6000",
+          "4697693/15000",
+          "3132129/10000",
+          "2349347/7500",
+          "9398389/30000",
+          "313313/1000",
+          "9400391/30000",
+          "587587/1875",
+          "3134131/10000",
+          "4701697/15000",
+          "1880879/6000",
+          "783783/2500",
+          "9406397/30000",
+          "4703699/15000",
+          "3136133/10000",
+          "47047/150",
+          "9410401/30000",
+          "1568567/5000",
+          "9412403/30000",
+          "2353351/7500",
+          "627627/2000",
+          "4707703/15000",
+          "9416407/30000",
+          "196196/625",
+          "9418409/30000",
+          "941941/3000",
+          "3140137/10000",
+          "2355353/7500",
+          "9422413/30000",
+          "1570569/5000",
+          "1884883/6000",
+          "1178177/3750",
+          "3142139/10000",
+          "4713709/15000",
+          "9428419/30000",
+          "157157/500",
+          "9430421/30000",
+          "4715711/15000",
+          "3144141/10000",
+          "589589/1875",
+          "377377/1200",
+          "1572571/5000",
+          "9436427/30000",
+          "2359357/7500",
+          "3146143/10000",
+          "943943/3000",
+          "9440431/30000",
+          "393393/1250",
+          "9442433/30000",
+          "4721717/15000",
+          "629629/2000",
+          "2361359/7500",
+          "9446437/30000",
+          "1574573/5000",
+          "9448439/30000",
+          "118118/375",
+          "3150147/10000",
+          "4725721/15000",
+          "9452443/30000",
+          "787787/2500",
+          "1890889/6000",
+          "4727723/15000",
+          "3152149/10000",
+          "1182181/3750",
+          "9458449/30000",
+          "63063/200",
+          "9460451/30000",
+          "2365363/7500",
+          "3154151/10000",
+          "4731727/15000",
+          "1892891/6000",
+          "197197/625",
+          "9466457/30000",
+          "4733729/15000",
+          "3156153/10000",
+          "473473/1500",
+          "9470461/30000",
+          "1578577/5000",
+          "9472463/30000",
+          "1184183/3750",
+          "631631/2000",
+          "4737733/15000",
+          "9476467/30000",
+          "789789/2500",
+          "9478469/30000",
+          "947947/3000",
+          "3160157/10000",
+          "592592/1875",
+          "9482473/30000",
+          "1580579/5000",
+          "379379/1200",
+          "2371369/7500",
+          "3162159/10000",
+          "4743739/15000",
+          "9488479/30000",
+          "79079/250",
+          "9490481/30000",
+          "4745741/15000",
+          "3164161/10000",
+          "2373371/7500",
+          "1898897/6000",
+          "1582581/5000",
+          "9496487/30000",
+          "593593/1875",
+          "3166163/10000",
+          "949949/3000",
+          "9500491/30000",
+          "791791/2500",
+          "9502493/30000",
+          "4751747/15000",
+          "633633/2000",
+          "1188187/3750",
+          "9506497/30000",
+          "1584583/5000",
+          "9508499/30000",
+          "19019/60",
+          "3170167/10000",
+          "4755751/15000",
+          "9512503/30000",
+          "198198/625",
+          "1902901/6000",
+          "4757753/15000",
+          "3172169/10000",
+          "2379377/7500",
+          "9518509/30000",
+          "317317/1000",
+          "9520511/30000",
+          "1190189/3750",
+          "3174171/10000",
+          "4761757/15000",
+          "1904903/6000",
+          "793793/2500",
+          "9526517/30000",
+          "4763759/15000",
+          "3176173/10000",
+          "119119/375",
+          "9530521/30000",
+          "1588587/5000",
+          "9532523/30000",
+          "2383381/7500",
+          "127127/400",
+          "4767763/15000",
+          "9536527/30000",
+          "397397/1250",
+          "9538529/30000",
+          "953953/3000",
+          "3180177/10000",
+          "2385383/7500",
+          "9542533/30000",
+          "1590589/5000",
+          "1908907/6000",
+          "596596/1875",
+          "3182179/10000",
+          "4773769/15000",
+          "9548539/30000",
+          "159159/500",
+          "9550541/30000",
+          "4775771/15000",
+          "3184181/10000",
+          "1194193/3750",
+          "1910909/6000",
+          "1592591/5000",
+          "9556547/30000",
+          "2389387/7500",
+          "3186183/10000",
+          "191191/600",
+          "9560551/30000",
+          "199199/625",
+          "9562553/30000",
+          "4781777/15000",
+          "637637/2000",
+          "2391389/7500",
+          "9566557/30000",
+          "1594593/5000",
+          "9568559/30000",
+          "239239/750",
+          "3190187/10000",
+          "4785781/15000",
+          "9572563/30000",
+          "797797/2500",
+          "1914913/6000",
+          "4787783/15000",
+          "3192189/10000",
+          "598598/1875",
+          "9578569/30000",
+          "319319/1000",
+          "9580571/30000",
+          "2395393/7500",
+          "3194191/10000",
+          "4791787/15000",
+          "383383/1200",
+          "399399/1250",
+          "9586577/30000",
+          "4793789/15000",
+          "3196193/10000",
+          "479479/1500",
+          "9590581/30000",
+          "1598597/5000",
+          "9592583/30000",
+          "599599/1875",
+          "639639/2000",
+          "4797793/15000",
+          "9596587/30000",
+          "799799/2500",
+          "9598589/30000",
+          "959959/3000",
+          "3200197/10000",
+          "1200199/3750",
+          "9602593/30000",
+          "1600599/5000",
+          "1920919/6000",
+          "2401399/7500",
+          "3202199/10000",
+          "4803799/15000",
+          "9608599/30000",
+          "8008/25",
+          "9610601/30000",
+          "4805801/15000",
+          "3204201/10000",
+          "2403401/7500",
+          "1922921/6000",
+          "1602601/5000",
+          "9616607/30000",
+          "1202201/3750",
+          "3206203/10000",
+          "961961/3000",
+          "9620611/30000",
+          "801801/2500",
+          "9622613/30000",
+          "4811807/15000",
+          "641641/2000",
+          "601601/1875",
+          "9626617/30000",
+          "1604603/5000",
+          "9628619/30000",
+          "481481/1500",
+          "3210207/10000",
+          "4815811/15000",
+          "9632623/30000",
+          "401401/1250",
+          "77077/240",
+          "4817813/15000",
+          "3212209/10000",
+          "2409407/7500",
+          "9638629/30000",
+          "321321/1000",
+          "9640631/30000",
+          "602602/1875",
+          "3214211/10000",
+          "4821817/15000",
+          "1928927/6000",
+          "803803/2500",
+          "9646637/30000",
+          "4823819/15000",
+          "3216213/10000",
+          "241241/750",
+          "9650641/30000",
+          "1608607/5000",
+          "9652643/30000",
+          "2413411/7500",
+          "643643/2000",
+          "4827823/15000",
+          "9656647/30000",
+          "201201/625",
+          "9658649/30000",
+          "193193/600",
+          "3220217/10000",
+          "2415413/7500",
+          "9662653/30000",
+          "1610609/5000",
+          "1932931/6000",
+          "1208207/3750",
+          "3222219/10000",
+          "4833829/15000",
+          "9668659/30000",
+          "161161/500",
+          "9670661/30000",
+          "4835831/15000",
+          "3224221/10000",
+          "604604/1875",
+          "1934933/6000",
+          "1612611/5000",
+          "9676667/30000",
+          "2419417/7500",
+          "3226223/10000",
+          "967967/3000",
+          "9680671/30000",
+          "403403/1250",
+          "9682673/30000",
+          "4841837/15000",
+          "129129/400",
+          "2421419/7500",
+          "9686677/30000",
+          "1614613/5000",
+          "9688679/30000",
+          "121121/375",
+          "3230227/10000",
+          "4845841/15000",
+          "9692683/30000",
+          "807807/2500",
+          "1938937/6000",
+          "4847843/15000",
+          "3232229/10000",
+          "1212211/3750",
+          "9698689/30000",
+          "323323/1000",
+          "9700691/30000",
+          "2425423/7500",
+          "3234231/10000",
+          "4851847/15000",
+          "1940939/6000",
+          "202202/625",
+          "9706697/30000",
+          "4853849/15000",
+          "3236233/10000",
+          "97097/300",
+          "9710701/30000",
+          "1618617/5000",
+          "9712703/30000",
+          "1214213/3750",
+          "647647/2000",
+          "4857853/15000",
+          "9716707/30000",
+          "809809/2500",
+          "9718709/30000",
+          "971971/3000",
+          "3240237/10000",
+          "607607/1875",
+          "9722713/30000",
+          "1620619/5000",
+          "1944943/6000",
+          "2431429/7500",
+          "3242239/10000",
+          "4863859/15000",
+          "9728719/30000",
+          "81081/250",
+          "9730721/30000",
+          "4865861/15000",
+          "3244241/10000",
+          "2433431/7500",
+          "389389/1200",
+          "1622621/5000",
+          "9736727/30000",
+          "608608/1875",
+          "3246243/10000",
+          "973973/3000",
+          "9740731/30000",
+          "811811/2500",
+          "9742733/30000",
+          "4871867/15000",
+          "649649/2000",
+          "1218217/3750",
+          "9746737/30000",
+          "1624623/5000",
+          "9748739/30000",
+          "487487/1500",
+          "3250247/10000",
+          "4875871/15000",
+          "9752743/30000",
+          "203203/625",
+          "1950949/6000",
+          "4877873/15000",
+          "3252249/10000",
+          "2439437/7500",
+          "9758749/30000",
+          "13013/40",
+          "9760751/30000",
+          "1220219/3750",
+          "3254251/10000",
+          "4881877/15000",
+          "1952951/6000",
+          "813813/2500",
+          "9766757/30000",
+          "4883879/15000",
+          "3256253/10000",
+          "122122/375",
+          "9770761/30000",
+          "1628627/5000",
+          "9772763/30000",
+          "2443441/7500",
+          "651651/2000",
+          "4887883/15000",
+          "9776767/30000",
+          "407407/1250",
+          "9778769/30000",
+          "977977/3000",
+          "3260257/10000",
+          "2445443/7500",
+          "9782773/30000",
+          "1630629/5000",
+          "391391/1200",
+          "611611/1875",
+          "3262259/10000",
+          "4893889/15000",
+          "9788779/30000",
+          "163163/500",
+          "9790781/30000",
+          "4895891/15000",
+          "3264261/10000",
+          "1224223/3750",
+          "1958957/6000",
+          "1632631/5000",
+          "9796787/30000",
+          "2449447/7500",
+          "3266263/10000",
+          "979979/3000",
+          "9800791/30000",
+          "204204/625",
+          "9802793/30000",
+          "4901897/15000",
+          "653653/2000",
+          "2451449/7500",
+          "9806797/30000",
+          "1634633/5000",
+          "9808799/30000",
+          "49049/150",
+          "3270267/10000",
+          "4905901/15000",
+          "9812803/30000",
+          "817817/2500",
+          "1962961/6000",
+          "4907903/15000",
+          "3272269/10000",
+          "613613/1875",
+          "9818809/30000",
+          "327327/1000",
+          "9820811/30000",
+          "2455453/7500",
+          "3274271/10000",
+          "4911907/15000",
+          "1964963/6000",
+          "409409/1250",
+          "9826817/30000",
+          "4913909/15000",
+          "3276273/10000",
+          "491491/1500",
+          "9830821/30000",
+          "1638637/5000",
+          "9832823/30000",
+          "614614/1875",
+          "131131/400",
+          "4917913/15000",
+          "9836827/30000",
+          "819819/2500",
+          "9838829/30000",
+          "983983/3000",
+          "3280277/10000",
+          "1230229/3750",
+          "9842833/30000",
+          "1640639/5000",
+          "1968967/6000",
+          "2461459/7500",
+          "3282279/10000",
+          "4923919/15000",
+          "9848839/30000",
+          "41041/125",
+          "9850841/30000",
+          "4925921/15000",
+          "3284281/10000",
+          "2463461/7500",
+          "1970969/6000",
+          "1642641/5000",
+          "9856847/30000",
+          "1232231/3750",
+          "3286283/10000",
+          "197197/600",
+          "9860851/30000",
+          "821821/2500",
+          "9862853/30000",
+          "4931927/15000",
+          "657657/2000",
+          "616616/1875",
+          "9866857/30000",
+          "1644643/5000",
+          "9868859/30000",
+          "493493/1500",
+          "3290287/10000",
+          "4935931/15000",
+          "9872863/30000",
+          "411411/1250",
+          "1974973/6000",
+          "4937933/15000",
+          "3292289/10000",
+          "2469467/7500",
+          "9878869/30000",
+          "329329/1000",
+          "9880871/30000",
+          "617617/1875",
+          "3294291/10000",
+          "4941937/15000",
+          "79079/240",
+          "823823/2500",
+          "9886877/30000",
+          "4943939/15000",
+          "3296293/10000",
+          "247247/750",
+          "9890881/30000",
+          "1648647/5000",
+          "9892883/30000",
+          "2473471/7500",
+          "659659/2000",
+          "4947943/15000",
+          "9896887/30000",
+          "206206/625",
+          "9898889/30000",
+          "989989/3000"
+        ]
+      },
+      "source_metadata": {
+        "source_id": "AwmHb44_ouw",
+        "source_group": "youtube:AwmHb44_ouw",
+        "category": "VT",
+        "prior_split": "train",
+        "media_sha256": "82ecca1de0363253060bb3c19e2f5dbd4080bfc0cd790db23c3e73ffd76a602f",
+        "media_bytes": 19246027,
+        "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\AwmHb44_ouw\\AwmHb44_ouw.mp4",
+        "native_frames": 10597,
+        "duration": 353.58656666666667,
+        "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+        "excluded_human_vector_alignment": false,
+        "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+        "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+        "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+      },
+      "original_window_plan": [
+        [
+          0.0,
+          30.0
+        ],
+        [
+          30.0,
+          60.0
+        ],
+        [
+          60.0,
+          90.0
+        ],
+        [
+          90.0,
+          120.0
+        ],
+        [
+          120.0,
+          150.0
+        ],
+        [
+          150.0,
+          180.0
+        ],
+        [
+          180.0,
+          210.0
+        ],
+        [
+          210.0,
+          240.0
+        ],
+        [
+          240.0,
+          270.0
+        ],
+        [
+          270.0,
+          300.0
+        ],
+        [
+          300.0,
+          330.0
+        ],
+        [
+          330.0,
+          353.58656666666667
+        ]
+      ],
+      "native_pts_file_sha256": "3ca7f2c450329778006fc59c09a8e2c6d482b84cbe1e95529119cd662025a6c7",
+      "training_admitted": false
+    },
+    {
+      "role": "train",
+      "source_id": "AwmHb44_ouw",
+      "source_group": "youtube:AwmHb44_ouw",
+      "window": {
+        "width": 540,
+        "height": 360,
+        "source_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\AwmHb44_ouw\\AwmHb44_ouw.mp4",
+        "source_sha256": "82ecca1de0363253060bb3c19e2f5dbd4080bfc0cd790db23c3e73ffd76a602f",
+        "window_id": "AwmHb44_ouw:SLOT6:11",
+        "window_pts_start_sec": 330.0,
+        "window_pts_end_exclusive_sec": 353.58656666666667,
+        "window_duration_sec": 23.58656666666667,
+        "planned_source_frame_ordinals": [
+          9891,
+          9902,
+          9913,
+          9924,
+          9935,
+          9946,
+          9958,
+          9969,
+          9980,
+          9991,
+          10002,
+          10014,
+          10025,
+          10036,
+          10047,
+          10058,
+          10070,
+          10081,
+          10092,
+          10103,
+          10114,
+          10126,
+          10137,
+          10148,
+          10159,
+          10170,
+          10181,
+          10193,
+          10204,
+          10215,
+          10226,
+          10237,
+          10249,
+          10260,
+          10271,
+          10282,
+          10293,
+          10305,
+          10316,
+          10327,
+          10338,
+          10349,
+          10361,
+          10372,
+          10383,
+          10394,
+          10405,
+          10416,
+          10428,
+          10439,
+          10450,
+          10461,
+          10472,
+          10484,
+          10495,
+          10506,
+          10517,
+          10528,
+          10540,
+          10551,
+          10562,
+          10573,
+          10584,
+          10596
+        ],
+        "planned_actual_pts_sec": [
+          330.0297,
+          330.3967333333333,
+          330.76376666666664,
+          331.1308,
+          331.49783333333335,
+          331.86486666666667,
+          332.26526666666666,
+          332.6323,
+          332.9993333333333,
+          333.3663666666667,
+          333.7334,
+          334.1338,
+          334.50083333333333,
+          334.86786666666666,
+          335.2349,
+          335.6019333333333,
+          336.00233333333335,
+          336.3693666666667,
+          336.7364,
+          337.1034333333333,
+          337.47046666666665,
+          337.87086666666664,
+          338.2379,
+          338.60493333333335,
+          338.9719666666667,
+          339.339,
+          339.7060333333333,
+          340.1064333333333,
+          340.47346666666664,
+          340.8405,
+          341.20753333333334,
+          341.57456666666667,
+          341.97496666666666,
+          342.342,
+          342.7090333333333,
+          343.0760666666667,
+          343.4431,
+          343.8435,
+          344.21053333333333,
+          344.57756666666666,
+          344.9446,
+          345.31163333333336,
+          345.71203333333335,
+          346.0790666666667,
+          346.4461,
+          346.8131333333333,
+          347.18016666666665,
+          347.5472,
+          347.9476,
+          348.31463333333335,
+          348.6816666666667,
+          349.0487,
+          349.4157333333333,
+          349.8161333333333,
+          350.1831666666667,
+          350.5502,
+          350.91723333333334,
+          351.28426666666667,
+          351.68466666666666,
+          352.0517,
+          352.4187333333333,
+          352.7857666666667,
+          353.1528,
+          353.5532
+        ],
+        "eligible_source_frame_count": 706,
+        "source_total_frames": 10597,
+        "original_window_index": 11,
+        "planned_exact_pts": [
+          "3300297/10000",
+          "4955951/15000",
+          "9922913/30000",
+          "827827/2500",
+          "1988987/6000",
+          "4977973/15000",
+          "4983979/15000",
+          "3326323/10000",
+          "499499/1500",
+          "10000991/30000",
+          "1668667/5000",
+          "1670669/5000",
+          "401401/1200",
+          "2511509/7500",
+          "3352349/10000",
+          "5034029/15000",
+          "1008007/3000",
+          "10091081/30000",
+          "841841/2500",
+          "10113103/30000",
+          "5062057/15000",
+          "5068063/15000",
+          "3382379/10000",
+          "2539537/7500",
+          "10169159/30000",
+          "339339/1000",
+          "10191181/30000",
+          "10203193/30000",
+          "2553551/7500",
+          "681681/2000",
+          "5118113/15000",
+          "10247237/30000",
+          "10259249/30000",
+          "171171/500",
+          "10281271/30000",
+          "5146141/15000",
+          "3434431/10000",
+          "687687/2000",
+          "2581579/7500",
+          "10337327/30000",
+          "1724723/5000",
+          "10359349/30000",
+          "10371361/30000",
+          "2595593/7500",
+          "3464461/10000",
+          "5202197/15000",
+          "2083081/6000",
+          "217217/625",
+          "869869/2500",
+          "10449439/30000",
+          "209209/600",
+          "3490487/10000",
+          "1310309/3750",
+          "2623621/7500",
+          "2101099/6000",
+          "1752751/5000",
+          "10527517/30000",
+          "658658/1875",
+          "527527/1500",
+          "3520517/10000",
+          "5286281/15000",
+          "10583573/30000",
+          "441441/1250",
+          "883883/2500"
+        ],
+        "domain_start_exact": "330",
+        "domain_end_exact": "35358656666666667/100000000000000",
+        "eligible_exact_pts": [
+          "3300297/10000",
+          "2475473/7500",
+          "9902893/30000",
+          "1650649/5000",
+          "1980979/6000",
+          "1238237/3750",
+          "3302299/10000",
+          "4953949/15000",
+          "9908899/30000",
+          "33033/100",
+          "9910901/30000",
+          "4955951/15000",
+          "3304301/10000",
+          "619619/1875",
+          "1982981/6000",
+          "1652651/5000",
+          "9916907/30000",
+          "2479477/7500",
+          "3306303/10000",
+          "991991/3000",
+          "9920911/30000",
+          "413413/1250",
+          "9922913/30000",
+          "4961957/15000",
+          "661661/2000",
+          "2481479/7500",
+          "9926917/30000",
+          "1654653/5000",
+          "9928919/30000",
+          "124124/375",
+          "3310307/10000",
+          "4965961/15000",
+          "9932923/30000",
+          "827827/2500",
+          "397397/1200",
+          "4967963/15000",
+          "3312309/10000",
+          "1242241/3750",
+          "9938929/30000",
+          "331331/1000",
+          "9940931/30000",
+          "2485483/7500",
+          "3314311/10000",
+          "4971967/15000",
+          "1988987/6000",
+          "207207/625",
+          "9946937/30000",
+          "4973969/15000",
+          "3316313/10000",
+          "497497/1500",
+          "9950941/30000",
+          "1658657/5000",
+          "9952943/30000",
+          "1244243/3750",
+          "663663/2000",
+          "4977973/15000",
+          "9956947/30000",
+          "829829/2500",
+          "9958949/30000",
+          "199199/600",
+          "3320317/10000",
+          "622622/1875",
+          "9962953/30000",
+          "1660659/5000",
+          "1992991/6000",
+          "2491489/7500",
+          "3322319/10000",
+          "4983979/15000",
+          "9968959/30000",
+          "83083/250",
+          "9970961/30000",
+          "4985981/15000",
+          "3324321/10000",
+          "2493491/7500",
+          "1994993/6000",
+          "1662661/5000",
+          "9976967/30000",
+          "623623/1875",
+          "3326323/10000",
+          "997997/3000",
+          "9980971/30000",
+          "831831/2500",
+          "9982973/30000",
+          "4991987/15000",
+          "133133/400",
+          "1248247/3750",
+          "9986977/30000",
+          "1664663/5000",
+          "9988979/30000",
+          "499499/1500",
+          "3330327/10000",
+          "4995991/15000",
+          "9992983/30000",
+          "208208/625",
+          "1998997/6000",
+          "4997993/15000",
+          "3332329/10000",
+          "2499497/7500",
+          "9998989/30000",
+          "333333/1000",
+          "10000991/30000",
+          "1250249/3750",
+          "3334331/10000",
+          "5001997/15000",
+          "2000999/6000",
+          "833833/2500",
+          "10006997/30000",
+          "5003999/15000",
+          "3336333/10000",
+          "1001/3",
+          "10011001/30000",
+          "1668667/5000",
+          "10013003/30000",
+          "2503501/7500",
+          "667667/2000",
+          "5008003/15000",
+          "10017007/30000",
+          "417417/1250",
+          "10019009/30000",
+          "1002001/3000",
+          "3340337/10000",
+          "2505503/7500",
+          "10023013/30000",
+          "1670669/5000",
+          "2005003/6000",
+          "626626/1875",
+          "3342339/10000",
+          "5014009/15000",
+          "10029019/30000",
+          "167167/500",
+          "10031021/30000",
+          "5016011/15000",
+          "3344341/10000",
+          "1254253/3750",
+          "401401/1200",
+          "1672671/5000",
+          "10037027/30000",
+          "2509507/7500",
+          "3346343/10000",
+          "1004003/3000",
+          "10041031/30000",
+          "209209/625",
+          "10043033/30000",
+          "5022017/15000",
+          "669669/2000",
+          "2511509/7500",
+          "10047037/30000",
+          "1674673/5000",
+          "10049039/30000",
+          "251251/750",
+          "3350347/10000",
+          "5026021/15000",
+          "10053043/30000",
+          "837837/2500",
+          "2011009/6000",
+          "5028023/15000",
+          "3352349/10000",
+          "628628/1875",
+          "10059049/30000",
+          "67067/200",
+          "10061051/30000",
+          "2515513/7500",
+          "3354351/10000",
+          "5032027/15000",
+          "2013011/6000",
+          "419419/1250",
+          "10067057/30000",
+          "5034029/15000",
+          "3356353/10000",
+          "503503/1500",
+          "10071061/30000",
+          "1678677/5000",
+          "10073063/30000",
+          "629629/1875",
+          "671671/2000",
+          "5038033/15000",
+          "10077067/30000",
+          "839839/2500",
+          "10079069/30000",
+          "1008007/3000",
+          "3360357/10000",
+          "1260259/3750",
+          "10083073/30000",
+          "1680679/5000",
+          "403403/1200",
+          "2521519/7500",
+          "3362359/10000",
+          "5044039/15000",
+          "10089079/30000",
+          "42042/125",
+          "10091081/30000",
+          "5046041/15000",
+          "3364361/10000",
+          "2523521/7500",
+          "2019017/6000",
+          "1682681/5000",
+          "10097087/30000",
+          "1262261/3750",
+          "3366363/10000",
+          "1010009/3000",
+          "10101091/30000",
+          "841841/2500",
+          "10103093/30000",
+          "5052047/15000",
+          "673673/2000",
+          "631631/1875",
+          "10107097/30000",
+          "1684683/5000",
+          "10109099/30000",
+          "101101/300",
+          "3370367/10000",
+          "5056051/15000",
+          "10113103/30000",
+          "421421/1250",
+          "2023021/6000",
+          "5058053/15000",
+          "3372369/10000",
+          "2529527/7500",
+          "10119109/30000",
+          "337337/1000",
+          "10121111/30000",
+          "632632/1875",
+          "3374371/10000",
+          "5062057/15000",
+          "2025023/6000",
+          "843843/2500",
+          "10127117/30000",
+          "5064059/15000",
+          "3376373/10000",
+          "253253/750",
+          "10131121/30000",
+          "1688687/5000",
+          "10133123/30000",
+          "2533531/7500",
+          "27027/80",
+          "5068063/15000",
+          "10137127/30000",
+          "211211/625",
+          "10139129/30000",
+          "1014013/3000",
+          "3380377/10000",
+          "2535533/7500",
+          "10143133/30000",
+          "1690689/5000",
+          "2029027/6000",
+          "1268267/3750",
+          "3382379/10000",
+          "5074069/15000",
+          "10149139/30000",
+          "169169/500",
+          "10151141/30000",
+          "5076071/15000",
+          "3384381/10000",
+          "634634/1875",
+          "2031029/6000",
+          "1692691/5000",
+          "10157147/30000",
+          "2539537/7500",
+          "3386383/10000",
+          "203203/600",
+          "10161151/30000",
+          "423423/1250",
+          "10163153/30000",
+          "5082077/15000",
+          "677677/2000",
+          "2541539/7500",
+          "10167157/30000",
+          "1694693/5000",
+          "10169159/30000",
+          "127127/375",
+          "3390387/10000",
+          "5086081/15000",
+          "10173163/30000",
+          "847847/2500",
+          "2035033/6000",
+          "5088083/15000",
+          "3392389/10000",
+          "1272271/3750",
+          "10179169/30000",
+          "339339/1000",
+          "10181171/30000",
+          "2545543/7500",
+          "3394391/10000",
+          "5092087/15000",
+          "407407/1200",
+          "212212/625",
+          "10187177/30000",
+          "5094089/15000",
+          "3396393/10000",
+          "509509/1500",
+          "10191181/30000",
+          "1698697/5000",
+          "10193183/30000",
+          "1274273/3750",
+          "679679/2000",
+          "5098093/15000",
+          "10197187/30000",
+          "849849/2500",
+          "10199189/30000",
+          "1020019/3000",
+          "3400397/10000",
+          "637637/1875",
+          "10203193/30000",
+          "1700699/5000",
+          "2041039/6000",
+          "2551549/7500",
+          "3402399/10000",
+          "5104099/15000",
+          "10209199/30000",
+          "17017/50",
+          "10211201/30000",
+          "5106101/15000",
+          "3404401/10000",
+          "2553551/7500",
+          "2043041/6000",
+          "1702701/5000",
+          "10217207/30000",
+          "638638/1875",
+          "3406403/10000",
+          "1022021/3000",
+          "10221211/30000",
+          "851851/2500",
+          "10223213/30000",
+          "5112107/15000",
+          "681681/2000",
+          "1278277/3750",
+          "10227217/30000",
+          "1704703/5000",
+          "10229219/30000",
+          "511511/1500",
+          "3410407/10000",
+          "5116111/15000",
+          "10233223/30000",
+          "213213/625",
+          "409409/1200",
+          "5118113/15000",
+          "3412409/10000",
+          "2559557/7500",
+          "10239229/30000",
+          "341341/1000",
+          "10241231/30000",
+          "1280279/3750",
+          "3414411/10000",
+          "5122117/15000",
+          "2049047/6000",
+          "853853/2500",
+          "10247237/30000",
+          "5124119/15000",
+          "3416413/10000",
+          "128128/375",
+          "10251241/30000",
+          "1708707/5000",
+          "10253243/30000",
+          "2563561/7500",
+          "683683/2000",
+          "5128123/15000",
+          "10257247/30000",
+          "427427/1250",
+          "10259249/30000",
+          "41041/120",
+          "3420417/10000",
+          "2565563/7500",
+          "10263253/30000",
+          "1710709/5000",
+          "2053051/6000",
+          "641641/1875",
+          "3422419/10000",
+          "5134129/15000",
+          "10269259/30000",
+          "171171/500",
+          "10271261/30000",
+          "5136131/15000",
+          "3424421/10000",
+          "1284283/3750",
+          "2055053/6000",
+          "1712711/5000",
+          "10277267/30000",
+          "2569567/7500",
+          "3426423/10000",
+          "1028027/3000",
+          "10281271/30000",
+          "214214/625",
+          "10283273/30000",
+          "5142137/15000",
+          "137137/400",
+          "2571569/7500",
+          "10287277/30000",
+          "1714713/5000",
+          "10289279/30000",
+          "257257/750",
+          "3430427/10000",
+          "5146141/15000",
+          "10293283/30000",
+          "857857/2500",
+          "2059057/6000",
+          "5148143/15000",
+          "3432429/10000",
+          "643643/1875",
+          "10299289/30000",
+          "343343/1000",
+          "10301291/30000",
+          "2575573/7500",
+          "3434431/10000",
+          "5152147/15000",
+          "2061059/6000",
+          "429429/1250",
+          "10307297/30000",
+          "5154149/15000",
+          "3436433/10000",
+          "103103/300",
+          "10311301/30000",
+          "1718717/5000",
+          "10313303/30000",
+          "644644/1875",
+          "687687/2000",
+          "5158153/15000",
+          "10317307/30000",
+          "859859/2500",
+          "10319309/30000",
+          "1032031/3000",
+          "3440437/10000",
+          "1290289/3750",
+          "10323313/30000",
+          "1720719/5000",
+          "2065063/6000",
+          "2581579/7500",
+          "3442439/10000",
+          "5164159/15000",
+          "10329319/30000",
+          "43043/125",
+          "10331321/30000",
+          "5166161/15000",
+          "3444441/10000",
+          "2583581/7500",
+          "413413/1200",
+          "1722721/5000",
+          "10337327/30000",
+          "1292291/3750",
+          "3446443/10000",
+          "1034033/3000",
+          "10341331/30000",
+          "861861/2500",
+          "10343333/30000",
+          "5172167/15000",
+          "689689/2000",
+          "646646/1875",
+          "10347337/30000",
+          "1724723/5000",
+          "10349339/30000",
+          "517517/1500",
+          "3450447/10000",
+          "5176171/15000",
+          "10353343/30000",
+          "431431/1250",
+          "2071069/6000",
+          "5178173/15000",
+          "3452449/10000",
+          "2589587/7500",
+          "10359349/30000",
+          "69069/200",
+          "10361351/30000",
+          "647647/1875",
+          "3454451/10000",
+          "5182177/15000",
+          "2073071/6000",
+          "863863/2500",
+          "10367357/30000",
+          "5184179/15000",
+          "3456453/10000",
+          "259259/750",
+          "10371361/30000",
+          "1728727/5000",
+          "10373363/30000",
+          "2593591/7500",
+          "691691/2000",
+          "5188183/15000",
+          "10377367/30000",
+          "216216/625",
+          "10379369/30000",
+          "1038037/3000",
+          "3460457/10000",
+          "2595593/7500",
+          "10383373/30000",
+          "1730729/5000",
+          "83083/240",
+          "1298297/3750",
+          "3462459/10000",
+          "5194189/15000",
+          "10389379/30000",
+          "173173/500",
+          "10391381/30000",
+          "5196191/15000",
+          "3464461/10000",
+          "649649/1875",
+          "2079077/6000",
+          "1732731/5000",
+          "10397387/30000",
+          "2599597/7500",
+          "3466463/10000",
+          "1040039/3000",
+          "10401391/30000",
+          "433433/1250",
+          "10403393/30000",
+          "5202197/15000",
+          "693693/2000",
+          "2601599/7500",
+          "10407397/30000",
+          "1734733/5000",
+          "10409399/30000",
+          "26026/75",
+          "3470467/10000",
+          "5206201/15000",
+          "10413403/30000",
+          "867867/2500",
+          "2083081/6000",
+          "5208203/15000",
+          "3472469/10000",
+          "1302301/3750",
+          "10419409/30000",
+          "347347/1000",
+          "10421411/30000",
+          "2605603/7500",
+          "3474471/10000",
+          "5212207/15000",
+          "2085083/6000",
+          "217217/625",
+          "10427417/30000",
+          "5214209/15000",
+          "3476473/10000",
+          "521521/1500",
+          "10431421/30000",
+          "1738737/5000",
+          "10433423/30000",
+          "1304303/3750",
+          "139139/400",
+          "5218213/15000",
+          "10437427/30000",
+          "869869/2500",
+          "10439429/30000",
+          "1044043/3000",
+          "3480477/10000",
+          "652652/1875",
+          "10443433/30000",
+          "1740739/5000",
+          "2089087/6000",
+          "2611609/7500",
+          "3482479/10000",
+          "5224219/15000",
+          "10449439/30000",
+          "87087/250",
+          "10451441/30000",
+          "5226221/15000",
+          "3484481/10000",
+          "2613611/7500",
+          "2091089/6000",
+          "1742741/5000",
+          "10457447/30000",
+          "653653/1875",
+          "3486483/10000",
+          "209209/600",
+          "10461451/30000",
+          "871871/2500",
+          "10463453/30000",
+          "5232227/15000",
+          "697697/2000",
+          "1308307/3750",
+          "10467457/30000",
+          "1744743/5000",
+          "10469459/30000",
+          "523523/1500",
+          "3490487/10000",
+          "5236231/15000",
+          "10473463/30000",
+          "218218/625",
+          "2095093/6000",
+          "5238233/15000",
+          "3492489/10000",
+          "2619617/7500",
+          "10479469/30000",
+          "349349/1000",
+          "10481471/30000",
+          "1310309/3750",
+          "3494491/10000",
+          "5242237/15000",
+          "419419/1200",
+          "873873/2500",
+          "10487477/30000",
+          "5244239/15000",
+          "3496493/10000",
+          "131131/375",
+          "10491481/30000",
+          "1748747/5000",
+          "10493483/30000",
+          "2623621/7500",
+          "699699/2000",
+          "5248243/15000",
+          "10497487/30000",
+          "437437/1250",
+          "10499489/30000",
+          "1050049/3000",
+          "3500497/10000",
+          "2625623/7500",
+          "10503493/30000",
+          "1750749/5000",
+          "2101099/6000",
+          "656656/1875",
+          "3502499/10000",
+          "5254249/15000",
+          "10509499/30000",
+          "7007/20",
+          "10511501/30000",
+          "5256251/15000",
+          "3504501/10000",
+          "1314313/3750",
+          "2103101/6000",
+          "1752751/5000",
+          "10517507/30000",
+          "2629627/7500",
+          "3506503/10000",
+          "1052051/3000",
+          "10521511/30000",
+          "219219/625",
+          "10523513/30000",
+          "5262257/15000",
+          "701701/2000",
+          "2631629/7500",
+          "10527517/30000",
+          "1754753/5000",
+          "10529519/30000",
+          "263263/750",
+          "3510507/10000",
+          "5266261/15000",
+          "10533523/30000",
+          "877877/2500",
+          "421421/1200",
+          "5268263/15000",
+          "3512509/10000",
+          "658658/1875",
+          "10539529/30000",
+          "351351/1000",
+          "10541531/30000",
+          "2635633/7500",
+          "3514511/10000",
+          "5272267/15000",
+          "2109107/6000",
+          "439439/1250",
+          "10547537/30000",
+          "5274269/15000",
+          "3516513/10000",
+          "527527/1500",
+          "10551541/30000",
+          "1758757/5000",
+          "10553543/30000",
+          "659659/1875",
+          "703703/2000",
+          "5278273/15000",
+          "10557547/30000",
+          "879879/2500",
+          "10559549/30000",
+          "211211/600",
+          "3520517/10000",
+          "1320319/3750",
+          "10563553/30000",
+          "1760759/5000",
+          "2113111/6000",
+          "2641639/7500",
+          "3522519/10000",
+          "5284279/15000",
+          "10569559/30000",
+          "44044/125",
+          "10571561/30000",
+          "5286281/15000",
+          "3524521/10000",
+          "2643641/7500",
+          "2115113/6000",
+          "1762761/5000",
+          "10577567/30000",
+          "1322321/3750",
+          "3526523/10000",
+          "1058057/3000",
+          "10581571/30000",
+          "881881/2500",
+          "10583573/30000",
+          "5292287/15000",
+          "141141/400",
+          "661661/1875",
+          "10587577/30000",
+          "1764763/5000",
+          "10589579/30000",
+          "529529/1500",
+          "3530527/10000",
+          "5296291/15000",
+          "10593583/30000",
+          "441441/1250",
+          "2119117/6000",
+          "5298293/15000",
+          "3532529/10000",
+          "2649647/7500",
+          "10599589/30000",
+          "353353/1000",
+          "10601591/30000",
+          "662662/1875",
+          "3534531/10000",
+          "5302297/15000",
+          "2121119/6000",
+          "883883/2500"
+        ]
+      },
+      "source_metadata": {
+        "source_id": "AwmHb44_ouw",
+        "source_group": "youtube:AwmHb44_ouw",
+        "category": "VT",
+        "prior_split": "train",
+        "media_sha256": "82ecca1de0363253060bb3c19e2f5dbd4080bfc0cd790db23c3e73ffd76a602f",
+        "media_bytes": 19246027,
+        "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\AwmHb44_ouw\\AwmHb44_ouw.mp4",
+        "native_frames": 10597,
+        "duration": 353.58656666666667,
+        "human_ordinal_alignment": "COUNT_EQUAL_ONLY_NOT_SEMANTIC_PROOF",
+        "excluded_human_vector_alignment": false,
+        "exposure": "PRIOR_IMAGE_ANNOTATION_AND_MODEL_EXPERIMENTS; NOT_BLIND",
+        "current_B_native_training_exposure": "NOT_PROVEN_FROM_THIS_MANIFEST",
+        "license_history": "UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README"
+      },
+      "original_window_plan": [
+        [
+          0.0,
+          30.0
+        ],
+        [
+          30.0,
+          60.0
+        ],
+        [
+          60.0,
+          90.0
+        ],
+        [
+          90.0,
+          120.0
+        ],
+        [
+          120.0,
+          150.0
+        ],
+        [
+          150.0,
+          180.0
+        ],
+        [
+          180.0,
+          210.0
+        ],
+        [
+          210.0,
+          240.0
+        ],
+        [
+          240.0,
+          270.0
+        ],
+        [
+          270.0,
+          300.0
+        ],
+        [
+          300.0,
+          330.0
+        ],
+        [
+          330.0,
+          353.58656666666667
+        ]
+      ],
+      "native_pts_file_sha256": "3ca7f2c450329778006fc59c09a8e2c6d482b84cbe1e95529119cd662025a6c7",
+      "training_admitted": false
+    },
+    {
+      "role": "train",
+      "source_id": "HT5vyqe0Xaw",
+      "source_group": "youtube:HT5vyqe0Xaw",
+      "window": {
+        "width": 640,
+        "height": 360,
+        "source_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\HT5vyqe0Xaw\\HT5vyqe0Xaw.mp4",
+        "source_sha256": "85fdd93e61fb670b5437666c9eb90aa1798889edbe07394749c00ca0d044c886",
+        "window_id": "HT5vyqe0Xaw:SLOT6:2",
+        "window_pts_start_sec": 60.0,
+        "window_pts_end_exclusive_sec": 90.0,
+        "window_duration_sec": 30.0,
+        "planned_source_frame_ordinals": [
+          1799,
+          1813,
+          1827,
+          1841,
+          1856,
+          1870,
+          1884,
+          1898,
+          1913,
+          1927,
+          1941,
+          1955,
+          1970,
+          1984,
+          1998,
+          2012,
+          2027,
+          2041,
+          2055,
+          2069,
+          2084,
+          2098,
+          2112,
+          2126,
+          2141,
+          2155,
+          2169,
+          2183,
+          2198,
+          2212,
+          2226,
+          2240,
+          2255,
+          2269,
+          2283,
+          2297,
+          2312,
+          2326,
+          2340,
+          2354,
+          2369,
+          2383,
+          2397,
+          2411,
+          2426,
+          2440,
+          2454,
+          2468,
+          2483,
+          2497,
+          2511,
+          2525,
+          2540,
+          2554,
+          2568,
+          2582,
+          2597,
+          2611,
+          2625,
+          2639,
+          2654,
+          2668,
+          2682,
+          2697
+        ],
+        "planned_actual_pts_sec": [
+          60.026633333333336,
+          60.493766666666666,
+          60.9609,
+          61.42803333333333,
+          61.928533333333334,
+          62.39566666666666,
+          62.8628,
+          63.32993333333334,
+          63.83043333333333,
+          64.29756666666667,
+          64.7647,
+          65.23183333333333,
+          65.73233333333333,
+          66.19946666666667,
+          66.6666,
+          67.13373333333334,
+          67.63423333333333,
+          68.10136666666666,
+          68.5685,
+          69.03563333333334,
+          69.53613333333334,
+          70.00326666666666,
+          70.4704,
+          70.93753333333333,
+          71.43803333333334,
+          71.90516666666667,
+          72.3723,
+          72.83943333333333,
+          73.33993333333333,
+          73.80706666666667,
+          74.2742,
+          74.74133333333333,
+          75.24183333333333,
+          75.70896666666667,
+          76.1761,
+          76.64323333333333,
+          77.14373333333333,
+          77.61086666666667,
+          78.078,
+          78.54513333333334,
+          79.04563333333333,
+          79.51276666666666,
+          79.9799,
+          80.44703333333334,
+          80.94753333333334,
+          81.41466666666666,
+          81.8818,
+          82.34893333333333,
+          82.84943333333334,
+          83.31656666666667,
+          83.7837,
+          84.25083333333333,
+          84.75133333333333,
+          85.21846666666667,
+          85.6856,
+          86.15273333333333,
+          86.65323333333333,
+          87.12036666666667,
+          87.5875,
+          88.05463333333333,
+          88.55513333333333,
+          89.02226666666667,
+          89.4894,
+          89.9899
+        ],
+        "eligible_source_frame_count": 899,
+        "source_total_frames": 9671,
+        "original_window_index": 2,
+        "planned_exact_pts": [
+          "1800799/30000",
+          "1814813/30000",
+          "609609/10000",
+          "1842841/30000",
+          "116116/1875",
+          "187187/3000",
+          "157157/2500",
+          "949949/15000",
+          "1914913/30000",
+          "1928927/30000",
+          "647647/10000",

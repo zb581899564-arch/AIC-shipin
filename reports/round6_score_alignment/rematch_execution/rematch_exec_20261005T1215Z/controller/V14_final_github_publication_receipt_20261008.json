@@ -1,0 +1,32 @@
+{
+  "status": "PASS_V14_FINAL_CURATED_PUBLICATION_REMOTE_HEAD_VERIFIED",
+  "utc": "2026-10-08T15:58:01.522637+00:00",
+  "origin": "https://github.com/zb581899564-arch/AIC-shipin.git",
+  "commit": "faeabed2a8e370c9fea12906b0b3ecc454bf4666",
+  "remote_main": "faeabed2a8e370c9fea12906b0b3ecc454bf4666",
+  "reviewed_files": 15,
+  "author": "zb581899564-arch <225680116+zb581899564-arch@users.noreply.github.com>",
+  "account": "zb581899564-arch",
+  "checks": {
+    "status": "PASS_PUBLICATION",
+    "manifest_files": 2554,
+    "python_syntax_files": 1367,
+    "submission_archives": 8,
+    "source_hashes": "PASS",
+    "zip_crc": "PASS",
+    "excluded_asset_scan": "PASS",
+    "secret_pattern_scan": "PASS"
+  },
+  "final_acceptance_sha256": "f8f17dcad75dd96ff0ddcc89caf9f6531ebdcb9e0965fae81a7d4236c2ecc027",
+  "candidate": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/rematch_01/candidate_T_8B.zip",
+  "zip_bytes": 308278,
+  "zip_sha256": "95173d936d09cfcf84bcff5755336e50dbfff94ac5a7e4cfba2953064022f3a2",
+  "actual_T_optimizer_updates": 15,
+  "selected_original_B": true,
+  "new_official_score": null,
+  "new_ZIP_raw_labels_per_frame_models_exported": false,
+  "force_push": false,
+  "history_rewrite": false,
+  "automatic_return": false,
+  "uploaded_to_AIC": false
+}

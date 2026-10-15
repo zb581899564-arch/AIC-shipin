@@ -1,0 +1,46 @@
+{
+  "schema": "RECALL_CONSENSUS_TWO_VIEW_SMALL_PILOT_V1",
+  "registered_at_utc": "2026-10-15T00:14:44.593251+00:00",
+  "candidate": "TWO_DISTINCT_OVERLAP_VIEWS_EXPLICIT_KEEP_INTERSECTION",
+  "baseline": "TEMPORAL_VERIFY_USER40.46",
+  "baseline_zip_sha256": "86593725c6bad919dc0d342fe98ad65e489a13a6e492da5de3afd247a3226543",
+  "development_source_count": 8,
+  "old_confirmation_is_exposed_development": true,
+  "fresh_confirmation_source_count": 4,
+  "view_seconds": "15",
+  "stride_seconds": "15/2",
+  "support_count": 2,
+  "threshold_search": false,
+  "original_baseline_all_frames_boxes_and_params_retained": true,
+  "new_segment_padding": "NONE",
+  "new_addition": "Exact interval supported by explicit KEEP in two distinct original overlap windows; one vote per geometry; UNKNOWN/DROP no support",
+  "same_model_not_independent_model_ensemble": true,
+  "quality_gates": {
+    "full_group_required": true,
+    "macro_F1_delta_min": "0",
+    "per_source_F1_delta_min": "-1/100",
+    "macro_recall_delta_min": "1/100",
+    "macro_precision_delta_min": "0",
+    "minimum_changed_sources": 2,
+    "all_rater_recall_and_baseline_frames": "retain all",
+    "fixed40_KEEP_delete": 0,
+    "fixed40_ORDINARY_addition": 0,
+    "invalid_or_engineering_fallback": 0
+  },
+  "adopted_prior_results": {
+    "dev": "63cf596d4ab28af4987a13b4da1e394c293f3e1570699a8e3eab34fd38e919f1",
+    "confirm": "ab6021698689cf1682d0953ed524d5f0d0b752b2bc6ecb0702ba6edc4a317bb8"
+  },
+  "code_sha256": {
+    "consensus.py": "493602a187c868535a62febed24f0e11623d06cea50d57615b45e480ac3a8297",
+    "evaluate_development.py": "0ffce5df95f1a92628618133b0623372ad44787c91da3bcf837b62f8b28aab3e"
+  },
+  "development_new_model_decode_processor_calls": 0,
+  "confirmation_before_development_pass": false,
+  "production_before_fresh_confirmation_and_fixed_facts_pass": false,
+  "model_parameters": 8782459120,
+  "optimizer_updates": 0,
+  "new_model_downloads": 0,
+  "reference_scope": "EVENT_TEXT_GUIDED_HUMAN_SUMMARY_PROXY_NOT_GENERIC_HIGHLIGHT_OR_ORDINARY_GOLD",
+  "test_content_GT_or_ranking_used": false
+}

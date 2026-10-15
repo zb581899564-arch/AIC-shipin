@@ -1,0 +1,64 @@
+{
+  "status": "CODE_AND_METADATA_PREFLIGHT_REGISTERED_AWAITING_MAIN_REVIEW_NO_REAL_MEDIA_OR_CPU",
+  "registration_sha256": "9678d2d117380beddcf687494fd1b5236995fa387b122e679ba4c208d2852d21",
+  "source_registry_02_sha256": "1d25b2ad4e384bed725d645b2ec4075e38f6f32e5e55e662031f5cb370bbcb3e",
+  "source_registry_02_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/source_registry_02.json",
+  "sources": 20,
+  "dev": 10,
+  "confirm": 10,
+  "primary_compressed_media_bytes": 102298269,
+  "primary_uncompressed_media_bytes": 102732315,
+  "payload_cap": 355711649,
+  "metadata_primary_exclusions": [
+    {
+      "slot": 13,
+      "original_source_id": "2IC8O",
+      "role": "confirm",
+      "worker_subject_id": "9Y7F",
+      "reason": "CROSS_DEV_CONFIRM_WORKER_SUBJECT_IDENTITY",
+      "known_alias_hits": {},
+      "media_will_not_be_downloaded": true
+    }
+  ],
+  "worker_groups_disjoint": true,
+  "visible_actors_households_scenes_globalpretraining_independent": "UNKNOWN",
+  "known_alias_intersections": 0,
+  "known_B_groups": 602,
+  "known_B_clips": 704,
+  "protected426_metadata_only": true,
+  "code_files": [
+    {
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/code/archive_member.py",
+      "bytes": 8521,
+      "sha256": "348c5b5b31a542904190308201f509c96bab3bdb3ae9d96d4afc02c8571c313b"
+    },
+    {
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/code/charades_common.py",
+      "bytes": 7532,
+      "sha256": "c783f55f1c5eba130c45e6b8f335469ede51e419858f9e8bbd6abf2f4b7212bf"
+    },
+    {
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/code/charades_cpu.py",
+      "bytes": 27436,
+      "sha256": "93cf422caaace4f1a62f28d56c5eadc77e0e4e6b5359c0f946deffc652ecfdfb"
+    },
+    {
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/code/metadata_index.py",
+      "bytes": 21734,
+      "sha256": "aedecdc59e26823ec3f390ceeb5b73ff42cd4710aad2de7640f48ae2d9d1ab41"
+    },
+    {
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/code/pipeline.py",
+      "bytes": 19743,
+      "sha256": "3963a9f4bbe33db3a55667aa287d61d02c7840116edfb2856b1bbd977bf1ab8e"
+    }
+  ],
+  "cache_helper_deployed": true,
+  "real_new_media": 0,
+  "real_new_CPU_processor": 0,
+  "new_GPU": 0,
+  "waiting_entry": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_chain_01/completion.json",
+  "coarse_inputs_waiting_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/coarse_inputs_01.json",
+  "CLI": "CUDA_VISIBLE_DEVICES= /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python /home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/code/pipeline.py run",
+  "code_review_still_required_by_parent_task": true
+}

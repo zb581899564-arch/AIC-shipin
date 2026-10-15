@@ -1,0 +1,81 @@
+{
+  "status": "STOP_TWO_WINDOW_PILOT_NO_BULK_NO_TRAINING",
+  "utc": "2026-10-11T15:24:51.303417+00:00",
+  "engineering": {
+    "unique_resource_terminal_match": true,
+    "active_owned_job": false,
+    "resource_status": "failed",
+    "source_frames": 128,
+    "actual_model_calls": 2,
+    "interface_accepted_windows": 1,
+    "window_metrics": [
+      {
+        "window_id": "complete_7757d020fcdef4d4db1f4dbc",
+        "request_seconds": 19.196474984288216,
+        "first_content_seconds": 14.06710868421942,
+        "usage": {
+          "completion_tokens": 155,
+          "prompt_tokens": 12243,
+          "total_tokens": 12398,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "span_count": 3,
+        "overlapping_inclusive_spans": [],
+        "validated_interface": true
+      },
+      {
+        "window_id": "complete_e1e3a1030b7e5f5e7f4b9fb2",
+        "request_seconds": 24.862332762219012,
+        "first_content_seconds": 16.294879434630275,
+        "usage": {
+          "completion_tokens": 258,
+          "prompt_tokens": 12307,
+          "total_tokens": 12565,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "span_count": 4,
+        "overlapping_inclusive_spans": [
+          [
+            0,
+            12,
+            12,
+            27
+          ]
+        ],
+        "validated_interface": false
+      }
+    ],
+    "full_job_seconds": 113.93573118560016,
+    "sampled_full_job_peak_mib": 28864
+  },
+  "semantic_review": {
+    "reviewer": "MAIN_AGENT_SOURCE_BOUND_VISUAL_DIAGNOSTIC_NOT_HUMAN_GOLD",
+    "garage": {
+      "doorway_person_id9": "SUPPORTED_VISIBLE_PERSON; reading exact hoodie logo not independently established",
+      "interior_id44": "VISIBLE_LAWNMOWER_BINS_LADDER_AND_BOARD; highlight preference remains unverified",
+      "bicycle_id54": "UNSUPPORTED_AT_CITED_EVIDENCE; blurred background does not establish bicycle; not a claim no bicycle exists anywhere in source",
+      "speech": "NO_AUDIO_INPUT; ordinary speech value is unknown"
+    },
+    "cooking": {
+      "coarse_action": "visible stirring and red puree poured into another pan are supported",
+      "ingredient_names": "tomato/chili identification not independently confirmed from images",
+      "boundary": "inclusive observation12 belongs to both KEEP spans; fixed non-overlap contract violated",
+      "ordinary_value": "routine-stirring label is a model judgment, not verified training negative"
+    }
+  },
+  "contract_gap": {
+    "v1_generation_schema": "three separate arrays each maxItems3 can generate nine total",
+    "v1_python_gate": "max3 across all states",
+    "repair": "new contract_v2.py emits one flat spans array with maxItems3, sorted nonoverlap/evidence checks; CPU tests passed",
+    "real_v2_model_calls": 0,
+    "v1_outputs_not_rewritten": true
+  },
+  "bulk_annotation_admitted": false,
+  "new_optimizer_updates": 0,
+  "new_426_inference": 0,
+  "official_score": null
+}

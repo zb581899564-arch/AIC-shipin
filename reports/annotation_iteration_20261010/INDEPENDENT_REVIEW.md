@@ -1,0 +1,17 @@
+# 独立讨论与代码复核
+
+用户明确要求专门子agent与主控讨论；independent_plan_review只读检查，不改代码、调用模型或启动GPU。主控综合意见裁决，不代表网页版Pro意见。
+
+独立复核未发现score grammar、实际生成或assistant-only图片交换NLL的致命问题。发现原evaluate_iteration.py只把第一阶段研究门写入PASS，未将已冻结的第二阶段native macro proxy F严格大于base纳入放行。主控保留原脚本，新建evaluate_iteration_v2.py，分别记录research_pass/stage2_pass；只有后者允许继续本版426。
+
+完整时间域审查发现实际数据无漏格或重叠，但原验收缺少可执行约束。新增audit_native_domains.py，实际CPU通过9源首0/连续/末=native_frames=human_vector_length、media/PTS身份、20人分数和、89行对所有grid一对一覆盖。SHA与独立agent自行计算一致；不重跑训练或已成功生成。
+
+原B adapter在新image-score prompt下仅是诊断，不宣称击败原B视频生产管线。视觉依赖仅证明输入敏感性。agy首中末图片仅支持稀疏内容抽查；1fps工具返回不证明完整观察，弱标签不纳入本轮训练。
+
+独立agent复核v2放行逻辑通过：完整域断言先执行，research_pass保留原门，stage2_pass额外要求等权native代理F改善，bootstrap/常数MAE仅作诊断。后续实际输入方案另审三点：OrdinalReader为BGR，必须显式一次转RGB并分别记像素签名；精确Fraction时间格连续覆盖scope，每16图实长尾块不填充，超长或空格拒绝；完整旧空间场先验身份与全部anchor，禁止预筛或通过补框/删选帧绕过缺口。原B配置只能提供已冻结数据/decoder/空间场，不能沿用原时间模型身份。
+
+selector_contract.py的CPU验收实际通过9源全部native grid和89行user prompt精确相等。这是迁移工程准备，不代表新的质量证据或模型调用。
+
+完整新dev结果实际通过预定门：macro Spearman .522329相对base .043629、8/9改善；native代理F .130418相对.041489，但配对95区间跨0，不保证AIC分数。后续contest_engine子agent主体审查通过：RGB/精确grid/实际token与visiontensor CPU回放/全空间场compose/11strict。发现只冻结adapter权重而未冻结配置的身份缺口，主控在启动前加入配置SHA dcd134aecf4573d0f462d70adcf96b8beeba6bd76e62ec6c5bf57593fe79a8e1和实际active adapter/rank/alpha/targets/参数回执，非测试8真实8call成功证明实际身份符合。子agent曾担心sft_contract import来源，随后实核common注入和远端函数SHA c2e762e7deca7cbc15d6d2b158e5251eeb25141b5cf5b02b8996042619c3414d与旧source_lock一致并撤回该疑点，没有为错误疑点改版或重复生成。
+
+非测试8独立CPU回放与11strict全部通过；实际选择全空，不能作为质量改善证据，阈值未因此调整。仅作为实际管线工程验收，继续已冻结的单次426实验生成。

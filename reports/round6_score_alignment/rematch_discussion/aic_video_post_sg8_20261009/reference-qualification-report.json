@@ -1,0 +1,166 @@
+{
+  "status": "NO_NEW_AUDITABLE_ENTRY_IN_FIXED_WHITELIST",
+  "utc": "2026-10-09T03:20:41.009521+00:00",
+  "scope": "Only eight named existing registration documents and top-level p1b export filenames",
+  "independent_task_matched_reference_established": false,
+  "rows": [
+    {
+      "entry": "P1B_PILOT",
+      "qualification": "NO_REFERENCE_ESTABLISHED",
+      "reason": "Manifest is an annotation interface with intentionally UNANNOTATED fields; no newly registered human export found",
+      "source_groups": 8,
+      "target": "mixed 16:9/9:16",
+      "coverage": "UNANNOTATED_NOT_NEGATIVE",
+      "permission": "local internal diagnostics recorded; per-video grants unresolved",
+      "exposure": "old pilot/interface observed"
+    },
+    {
+      "entry": "ROUND3_987",
+      "qualification": "WEAK_MODEL_REFERENCE_ONLY",
+      "reason": "All 987 provenance rows are api_doubao; not independent human quality",
+      "matched": 912,
+      "missing": 75,
+      "coverage": "UNKNOWN",
+      "permission": "existing project use only",
+      "exposure": "training/development observed"
+    },
+    {
+      "entry": "P2D_4_16X9",
+      "qualification": "NO_ELIGIBLE_16X9_QUALITY_REFERENCE",
+      "reason": "Reuse prior zero semantic/human review finding; no new quality acceptance",
+      "coverage": "none",
+      "permission": "per-video grant not found",
+      "exposure": "old interface pilot"
+    },
+    {
+      "entry": "GNMC",
+      "qualification": "DIAGNOSTIC_ONLY_NOT_COMPETITION_AUTHORITY",
+      "reason": "Recorded protocol excludes training/competition testing/packaging/submission; README five native ratios do not include 9:16",
+      "coverage": "photo crop annotations only",
+      "permission": "existing diagnostic scope preserved",
+      "exposure": "prior diagnostic inspected"
+    },
+    {
+      "entry": "LIVE_YT_VC",
+      "qualification": "PERMISSION_REQUIRED",
+      "reason": "PASS_FOR_ORIGINAL_SPARSE_LABELS_ONLY",
+      "native_target": "PASS_ON_PRIMARY_DOCUMENTATION",
+      "media_binding": "APPARENT_PASS_NOT_BYTE_VERIFIED: README binds video filename to frameN dictionaries; no candidate media or CSV was downloaded",
+      "permission": "NOT_ESTABLISHED_FOR_THIS_EXPERIMENT",
+      "coverage": "as recorded; no new media/CSV inspected",
+      "exposure": "metadata only"
+    },
+    {
+      "entry": "GAICD",
+      "qualification": "METADATA_ONLY",
+      "reason": "LIMITED: algorithmically enumerated grid crops scored 1-5 by seven experienced subjects; must remain a scored multi-candidate set, not a unique hand-drawn crop",
+      "native_target": "PRESENT_AS_GRID_ANCHOR_RATIO",
+      "media_binding": "DATASET_INTERNAL_BINDING_DESCRIBED; original Flickr IDs/URLs and per-image licenses are not preserved in the reviewed first-party release evidence",
+      "permission": "NOT_ESTABLISHED_FOR_THIS_EXPERIMENT",
+      "coverage": "as recorded; no new media/CSV inspected",
+      "exposure": "metadata only"
+    },
+    {
+      "entry": "MIR_THUMB",
+      "qualification": "METADATA_ONLY",
+      "reason": "CROWD_THUMBNAIL_ANNOTATION_REPORTED; composition/aesthetics scope limited",
+      "native_target": "REPORTED_BY_LATER_PAPER_BUT_NOT_VERIFIED_IN_FIRST_PARTY_ARCHIVE",
+      "media_binding": "NOT_AVAILABLE",
+      "permission": "NOT_ESTABLISHED_FOR_THIS_EXPERIMENT",
+      "coverage": "as recorded; no new media/CSV inspected",
+      "exposure": "metadata only"
+    },
+    {
+      "entry": "GENCROP_PORTRAIT1K",
+      "qualification": "NOT_ELIGIBLE",
+      "reason": "PASS: one photography-domain expert, average 2.3 acceptable crops per image",
+      "native_target": "FAIL: aggregate audit of the official 1000-image portrait evaluation index found 0 exact 9:16 among 2260 crop_xywh boxes",
+      "media_binding": "HASHED Unsplash image IDs; media requires Unsplash dataset access",
+      "permission": "NOT_ESTABLISHED_FOR_THIS_EXPERIMENT",
+      "coverage": "as recorded; no new media/CSV inspected",
+      "exposure": "metadata only"
+    },
+    {
+      "entry": "UGCROP5K",
+      "qualification": "METADATA_ONLY",
+      "reason": "algorithmically predefined anchors scored by at least five of 20 annotators; not direct-drawn crops",
+      "native_target": "NOT_AVAILABLE_IN_RELEASE EVIDENCE",
+      "media_binding": "DATASET NOT RELEASED IN REVIEWED REPOSITORY",
+      "permission": "NOT_ESTABLISHED_FOR_THIS_EXPERIMENT",
+      "coverage": "as recorded; no new media/CSV inspected",
+      "exposure": "metadata only"
+    },
+    {
+      "entry": "H2V_142K",
+      "qualification": "NOT_ELIGIBLE",
+      "reason": "FAIL: humans label primary face/torso subject boxes; the 9:16 crop is a maximum rectangle mechanically centered on the subject box",
+      "native_target": "GEOMETRIC_9_16_PRESENT",
+      "media_binding": "NOT_REVIEWED_AFTER_SEMANTIC_GATE_FAILURE",
+      "permission": "NOT_ESTABLISHED_FOR_THIS_EXPERIMENT",
+      "coverage": "as recorded; no new media/CSV inspected",
+      "exposure": "metadata only"
+    }
+  ],
+  "bindings": [
+    {
+      "path": "round6_score_alignment/p1b/pilot_manifest.json",
+      "bytes": 50858,
+      "sha256": "e3f49ce8a13bf55e2142cc297a767c3e9ff7af73bea784656c41281917d55ec2"
+    },
+    {
+      "path": "round6_score_alignment/p1b/README_annotation_v2.md",
+      "bytes": 6362,
+      "sha256": "ada039895fafb38d13d342437bb1594dc51da3b99d54e7f0d85d623be9391fc5"
+    },
+    {
+      "path": "reports/round6_score_alignment/phase1b/source_and_license_audit.json",
+      "bytes": 15342,
+      "sha256": "640f3514c8f833786982c9a9d48fdfc6cd9dee7ad5b3204ff31874a2fd339411"
+    },
+    {
+      "path": "improvement/round3_supervisor/label_origin_audit.json",
+      "bytes": 7445,
+      "sha256": "85568842d018428b3680d358429676f0df9aa12ef55789b1dbdd3ca889aac1bf"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2d_deployable_dev/round6_p2d_20260919T130011Z/existing_16x9_reference_audit.json",
+      "bytes": 1533,
+      "sha256": "0f835395036ab6b12448f7d7156b7e39e7c31068a3bc012997c49268f9ac692d"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2r9_native_portrait_reference/round6_p2r9_20260920T040552Z/annotation_semantics_matrix.json",
+      "bytes": 3836,
+      "sha256": "41827103f9f95858963bdec89529f01ee31105198e4ffd4425471190a254ed43"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2r_reference_gate/round6_p2r_20260919T154701Z/reference_protocol.md",
+      "bytes": 963,
+      "sha256": "2826e6ce8c9396e320b7b26079ca68622160fbb37021ddf619e47a53083800f0"
+    },
+    {
+      "path": "reports/round6_score_alignment/p2r_reference_gate/round6_p2r_20260919T154701Z/snapshots/gnmc_readme.md",
+      "bytes": 2862,
+      "sha256": "58ed00b28ba71f8544bacb9032042af3acd4d7fb92d00c8818e50c56c8500e35"
+    }
+  ],
+  "p1b_top_level_json_filenames": [
+    "round6_score_alignment/p1b/boundary_cases.json",
+    "round6_score_alignment/p1b/fingerprints.json",
+    "round6_score_alignment/p1b/inventory_raw.json",
+    "round6_score_alignment/p1b/pilot_manifest.json",
+    "round6_score_alignment/p1b/remote_probe_raw.json"
+  ],
+  "new_registered_exports": [],
+  "unregistered_other_assets": "UNKNOWN_NOT_GLOBALLY_SCANNED",
+  "old_findings_reused": true,
+  "old_full_acceptance_not_rerun": true,
+  "training_authorized_by_reference": false,
+  "package_authorized_by_reference": false,
+  "new_model_calls": 0,
+  "new_decoder_calls": 0,
+  "new_optimizer_updates": 0,
+  "new_download_bytes": 0,
+  "test_predictions_read": false,
+  "confirm100_read": false,
+  "external_media_transmitted": false
+}

@@ -1,0 +1,58 @@
+{
+  "status": "PASS_LOCAL_51_LOGIC_TESTS_ACTUAL_FROZEN_ROLE_REGRESSION_NOT_REMOTE_RUNTIME",
+  "utc": "2026-10-10T22:28:38.216079+00:00",
+  "actual_test_command": "python -B -m unittest test_runtime test_evaluation_reconstruction test_pipeline_costs test_freeze_candidate_inputs candidate_test test_actual_plan_role_binding",
+  "actual_result": "Ran 51 tests in 2.466s; OK",
+  "tests": 51,
+  "AST_files": 23,
+  "sources": {
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_engine.py": "8b8a5577225e9dd545aa16ec5f07571566b79ac188555c6ac7f245a8738a41ff",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_package.py": "23be213fd0b6c7457a9a2f3c3eab69acf7f7b5b0496c4dd4dfd763fad8953e6a",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_replay.py": "86d31088c1a1679a040fc1ef8fe997991eac8ccb324aa9477b28e106c13e5fa6",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_static_preflight.py": "c842ba4d71392a82dd7a31056d55f5a73aa4e85bbf2a1a6cb1c5b1eda2e1d19b",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_support.py": "aa47648088d883b68e5f176ce60316b0a748ed5981fd1d9c3475a7cb3adbc21b",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_test.py": "8ca96c612d2851e846668b0ebe4bb14a3d1ded7f6ebaf1225d0854b20c90a640",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_validate_implementation.py": "0025af81d916e63fdc33532438290cdfc816072761399835140882422883d364",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\common.py": "325e5c4625a4e66f3efd9aa8730ca03d76e1ecfefa9dfd3911d4bc17a32d1e78",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\evaluate.py": "5b24d3215cbf5285e78a16d7f85ba1f5478a0c8cc6d1103f2b6b1b8df0da5110",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\freeze_inputs.py": "61db1e8670fd6169e76ed74e7797212ebdd21853a06ff3deb3e109577cd1bb98",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\model_binding.py": "e99c66363d683ac813bf25e5995fc457638baea3eb3c153ced0646330c059bb2",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\native_runtime.py": "30cc62c99dc4e524fb8128a1bad27b30632098ca66e113b9e0e729bb079bb62d",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\objective.py": "118e8eb1cf631019fedf2d77f47532e6fa643cee63893a9d8c4e0761c1a509fe",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\pipeline_controller.py": "295a068c9461df902aed65e8fde47e6dadff09c58112664168ac11c43098cd15",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\preflight_native_inputs.py": "4c9f035c7ba4e5a53a8b99e72e6584290e2b518aaa8cfc4df94744f4931a2d8e",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\scientific_gate.py": "01e49f9547497fe36957b5665619f1f49fa81ae1e6f53d78c5dc069b770fabb7",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\test_actual_plan_role_binding.py": "f7f3c4964f3f534830642802ef98453459d19071d79c0534e7ca7377910ac471",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\test_evaluation_reconstruction.py": "162e81553c7c9a70b89128c3426af267157785420ad26ede962c3806a3d803fb",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\test_freeze_candidate_inputs.py": "4edf2db9919b26afefbd146f29370576f35dc3512fd9385ea7fe98f4053b5a01",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\test_pipeline_costs.py": "d1c7aa120c832181c5a4dd1de676426e4984778efaa7c2798a6ee6cbdd3e24e4",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\test_runtime.py": "13bb58c2824793f135307818dd649c3727e356303a886fea48b1b00a3d3065b1",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\train.py": "de9191e759e346513ec583afbb29f57177a33fb3520918b57601b489ff374aa6",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\verify_evaluation.py": "07782fa40fe7f2ee556ec97fc76b93bbe65efe3debfd5de8db7b34f93e6d2ff5"
+  },
+  "actual_frozen_plan_sha256": "09ecb28971932bd3bf8ac275c30d0a6fd534345442f2d2ec3529fa3f8e1e4b22",
+  "actual_plan_role_counts": {
+    "train": 12,
+    "process_dev": 4,
+    "locked_evaluation": 8
+  },
+  "actual_plan_role_regression_fixture_not_annotation": true,
+  "original_role_mismatch_reproduction": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime_role_binding_reproduction_v1.json",
+    "sha256": "c732ed42420360c34b989dad372ebaf40034674a2fe7916bc9d509be8d75b775"
+  },
+  "old_pre_repair_sources_preserved": "runtime_role_binding_erratum_v1/original_sources",
+  "projection_source": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\prepare_linux_projection.py",
+    "sha256": "639aaf85a711b8a079519eb9151036b5753d29202fda17406b15b4b21109bc71"
+  },
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "actual_Linux_static_input_acceptance": false,
+  "actual_native_processor_preflight": false,
+  "actual_training": false,
+  "actual_paired_evaluation": false,
+  "actual_426_candidate": false,
+  "actual_submission_zip": false,
+  "scientific_quality_claim": false
+}

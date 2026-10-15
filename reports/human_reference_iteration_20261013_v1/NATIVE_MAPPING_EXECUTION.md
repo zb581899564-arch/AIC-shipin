@@ -1,0 +1,9 @@
+# 原生时钟CPU入口：已实现，尚未执行
+
+入口improvement/human_reference_v1/map_sources_remote.py仅在inspur-NP5570M5运行。先核已获人类具体许可的media_01原始下载claim、注册SHA/规模/方向、完整20源下载completion及逐源成员大小/CRC绑定，再创建唯一mapping_01；不下载媒体、不导入GPU/processor/模型。
+
+实际解码完整视频流，记录每一原始PTS、首帧原点、归一化PTS、解码几何和最后帧明确正duration。只有同名原成员字节身份、作者原ordinal数量及v2末端条件通过才保存该源的独立成功bundle与等长窗口/native64计划。没有正duration须记录失败，不能自动用标称FPS或容器/音频末端补齐。
+
+明确resume仅允许相同输入/源码绑定且没有实际失败的中断；已完成源只核字节和纯映射/计划，不重做成功解码。实际失败生成failure.json并保持原成功bundle，须另行登记修复或恢复协议；完成20源后入口拒绝再次运行。完成回执只表示原生映射，不替代来源隔离、真实RGB/processor输入或GPU准入。
+
+当前只能报告合成解码对象的针对性检查与语法检查。没有解码过任何这轮真实视频，没有产生mapping_01、真实映射通过回执或新候选包。既有大流量许可问题仍待人类回应。

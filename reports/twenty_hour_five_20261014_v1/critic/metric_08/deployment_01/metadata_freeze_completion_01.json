@@ -1,0 +1,63 @@
+{
+  "status": "PASS_FIRST_METRIC08_METADATA_FREEZE_AND_ALIAS_PLAN_NO_ROLE_EVALUATION",
+  "frozen_matches_sha256": "344a69f87afddca3efb92ac0f68cc29be7cb3ce5df5c31efbe5f65a7280f900e",
+  "freeze_completion_sha256": "8a07e0f059a84792e1f2d15a6ed9cbc8b54bf6fa525920a23c09869f6b8edfbb",
+  "alias_completion_sha256": "0e2bb3a48d7e86a56621a9af2bbc22ae788e3eaad0d74250b43870f472b22abd",
+  "sources": 21,
+  "original_windows": 38,
+  "all_coarse_events": 41,
+  "expected_endpoints": 82,
+  "diagnostic_endpoints": 1,
+  "source_coverage_summarized": {
+    "dev": {
+      "sources": 11,
+      "in_domain_actions": 41,
+      "censored_actions": 23,
+      "zero_eligible_sources": 1
+    },
+    "confirm": {
+      "sources": 10,
+      "in_domain_actions": 42,
+      "censored_actions": 15,
+      "zero_eligible_sources": 3
+    }
+  },
+  "planned_coverage": [
+    {
+      "scope": "dev",
+      "all_group_coarse_events": 22,
+      "planned_events": 20,
+      "unselected_coarse_events": 2,
+      "nominal_planned_endpoints": 40,
+      "planned_geometric_diagnostic_endpoints": 1,
+      "planned_unknown_endpoints": 39,
+      "reachable_before_native_availability": 0
+    },
+    {
+      "scope": "confirm",
+      "all_group_coarse_events": 19,
+      "planned_events": 18,
+      "unselected_coarse_events": 1,
+      "nominal_planned_endpoints": 36,
+      "planned_geometric_diagnostic_endpoints": 0,
+      "planned_unknown_endpoints": 36,
+      "reachable_before_native_availability": 0
+    }
+  ],
+  "dev_nominal_endpoints": 40,
+  "dev_actionable_requests": 37,
+  "dev_structural_skips": 3,
+  "planned_dev_event_ids_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_metric_v1/alias_plan_01/planned_dev_event_ids.json",
+    "sha256": "75116f5c7687ec14a1ddcfd152e34fe9a3552145962a80565bcd87261c2c4016"
+  },
+  "planned_confirm_event_ids_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_metric_v1/alias_plan_01/planned_confirm_event_ids.json",
+    "sha256": "33dde5fb5e493cc5735296fc412d1eb73ecdf9810a1576b85147f67bf883196d"
+  },
+  "confirm_availability_pending": true,
+  "role_evaluations": 0,
+  "media_or_tensor_reads": 0,
+  "processor_or_model_calls": 0,
+  "scientific_or_highlight_quality_admission": false
+}

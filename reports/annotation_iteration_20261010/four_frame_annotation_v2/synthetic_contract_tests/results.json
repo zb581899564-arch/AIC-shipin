@@ -1,0 +1,36 @@
+{
+  "status": "PASS_6_CONTRACT_CASES",
+  "synthetic_not_model_evidence": true,
+  "cases": [
+    {
+      "case": "valid",
+      "expected_accept": true,
+      "actual_accept": true
+    },
+    {
+      "case": "wrong_identity",
+      "expected_accept": false,
+      "actual_accept": false
+    },
+    {
+      "case": "no_read",
+      "expected_accept": false,
+      "actual_accept": false
+    },
+    {
+      "case": "write_before_read",
+      "expected_accept": false,
+      "actual_accept": false
+    },
+    {
+      "case": "outside_image",
+      "expected_accept": false,
+      "actual_accept": false
+    },
+    {
+      "case": "extra_identity_field",
+      "expected_accept": false,
+      "actual_accept": false
+    }
+  ]
+}

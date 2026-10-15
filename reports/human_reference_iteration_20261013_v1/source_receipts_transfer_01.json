@@ -1,0 +1,41 @@
+{
+  "path": "/home/inspur/aic_video_work/human_reference_iteration_20261013_v1/source_receipts_01.zip",
+  "bytes": 43797,
+  "sha256": "62868423fe266b86b0c84f46d8b1d836f1392af653508203d021d08d9d27deda",
+  "manifest": {
+    "media_01/completion.json": {
+      "bytes": 12495,
+      "sha256": "c64ae1d6867de92447cacc4f9328317d2ecdc18415b4edf4d521f096fe6378cb"
+    },
+    "source_isolation_acceptance.json": {
+      "bytes": 5896,
+      "sha256": "695a193be7299aee040d02aff5e5743e8730863710ddff87c852d15e3fbe10f7"
+    },
+    "mapping_02/completion.json": {
+      "bytes": 9105,
+      "sha256": "161b83e6b280a2e07157d0bab3ba73f58643843aefd9ea4adfcfb79621652d4b"
+    },
+    "processor_02/completion.json": {
+      "bytes": 42599,
+      "sha256": "575936c15ef1ee11464c33836437d597417470dc6833d466963c91ad23390f2f"
+    },
+    "native_input_acceptance.json": {
+      "bytes": 757,
+      "sha256": "cae5629a1686f7c64918bb27b8e423f66347d7d788a563a0f8a919f53290412f"
+    },
+    "human_source_lock_01.json": {
+      "bytes": 95100,
+      "sha256": "c33503e85d3d594fe56f4f0b9ce91e3f56e4172ac5e22343d992f60a0887ae2d"
+    },
+    "cpu_chain_02/completion.json": {
+      "bytes": 267,
+      "sha256": "e4fbad67c61fe8128f924f8e2b467bb63e2f33f136cbb22630d0897314be6c39"
+    },
+    "human_gpu_01/model_identity.json": {
+      "bytes": 537,
+      "sha256": "753093c6823763badf49c87d24fee196de247b8b5903245b49ef3577552faf0e"
+    }
+  },
+  "status": "PASS_WINDOWS_LINUX_BYTES_SHA_CRC_AND_ALL_RECEIPT_MEMBER_SHA",
+  "new_model_calls": 0
+}

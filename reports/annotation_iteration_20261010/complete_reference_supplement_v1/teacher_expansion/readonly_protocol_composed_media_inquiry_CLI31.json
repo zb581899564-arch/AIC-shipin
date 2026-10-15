@@ -1,0 +1,243 @@
+{
+  "utc": "2026-10-10T20:38:46.138798+00:00",
+  "status": "READ_ONLY_PROTOCOL_INTERPRETATION_FOR_ROOT_DECISION_NO_COMPOSITION_OR_NEW_CALL",
+  "evidence": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\PROTOCOL.md",
+      "sha256": "5e0d69567c9eb9f173fec957292a06fe636a40d22de2260e317164395d7969d7",
+      "excerpts": [
+        {
+          "line": 3,
+          "text": "用户于本轮明确要求持续执行到合理候选ZIP。本版单独登记完整参考补充，保留全部历史STOP、raw、费用、已冻结科学协议与37.66包。既有协议允许复用真实观察与分别裁定的完整清单，并没有新增必须外部真人的条件。"
+        },
+        {
+          "line": 7,
+          "text": "W01新证据组合：原teacher_attempt01_http1的合法媒体观察audit与原stream真实读入身份；v3封存的独立native64与student64初判；主控已实际看64图的事实、完整短高光裁定；固定20图程序绑定复核及3条自由描述拒绝。引用原合法audit本身而非修改v3 audit。旧叙事proposal只作观察的历史产物，不自动转换为本版高光参考；v3白名单违规不追认，主控曝光不改称盲审。新complete_reference仅表示对原已声明有限观察编辑目标的完整、学生可见裁定，非human gold、非未见泛化。"
+        },
+        {
+          "line": 9,
+          "text": "新记录以原silver_contract逐窗实际验收，所有7项语义断言均必须有真实来历。W01训练标记只有该验收接受后才成立。所有NO具体逐段已审；每个目标有原生identity/PTS证据，边界余范围≤0.5秒，不能把中点说成实测硬切；无consequential UNKNOWN、事件≤5、KEEP连续区间≤5。四图结构化全对不能替代这些科学要求。全部24分母包括pending/rejected明确登记。"
+        },
+        {
+          "line": 11,
+          "text": "后续观察预算先前CLI23/36保持。最多为剩余20窗生成20份新提案，采用10个独立CLI每次固定相邻2窗；每窗4图事实立即落盘并由程序绑定身份，语义提案在事实封存后生成。窗口间不共享旧答案、分数、候选预测或其他评审。原四窗合法媒体观察不重跑；缺少独立审查的窗补实际尚未完成的审查。新会话自身指定输出核对事先允许，原协议不回写。每次CLI25分钟上限，失败不自动重试，原raw保留；账本总调用至多33/36，现金UNKNOWN不当0，新rental/topup无授权。每个具体双窗任务还必须先登记实际输入SHA和读取写入白名单后才启动。"
+        },
+        {
+          "line": 13,
+          "text": "训练必须8–12完整合格train窗、至少4训练源、正例至少2源；locked至少6/8完整且4源均informative等frozen_protocol_v2_explicit_empty_gate全部科学门保持。微调原B288张量rank16语言LoRA，视觉/基座冻结，lr1e-5、freshAdamW、两epochs、源平衡、唯一final checkpoint、4或6真实updates。遵守原1200s训练/2400s非测试评估/条件4267200s以及总10800s本实验预算，不依据验证结果重调配方。训练/开发/locked预测引用被冻结原生processor/decoder、真实native64、原B0 prompt与greedy grammar，不能改学生视野。"
+        }
+      ]
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\silver_contract.py",
+      "sha256": "6b9e7a8603d7267fac4e119d5b7817fc91a1d15ec44d9c965be065922b9475ba",
+      "excerpts": [
+        {
+          "line": 13,
+          "text": "def verify_window(record,planned):"
+        },
+        {
+          "line": 14,
+          "text": "    \"\"\"Accept only a separately adjudicated complete list, never teacher raw alone.\"\"\""
+        },
+        {
+          "line": 15,
+          "text": "    w=planned['window'];a,b=F(w['domain_start_exact']),F(w['domain_end_exact'])"
+        },
+        {
+          "line": 16,
+          "text": "    if record['window_id']!=w['window_id'] or record['source_sha256']!=w['source_sha256']:raise ValueError('Window identity differs')"
+        },
+        {
+          "line": 17,
+          "text": "    if record.get('reference_kind')!='FINITE_OBSERVATION_SILVER_EDITING_ADVICE_NOT_GOLD':raise ValueError('Reference scope not declared')"
+        },
+        {
+          "line": 18,
+          "text": "    d,k,n,u=reference([(a,b)],record['keep_global_exact'],record['no_global_exact'],record['unknown_global_exact'])"
+        },
+        {
+          "line": 19,
+          "text": "    evidence={name:read_bound(row) for name,row in record['evidence'].items()}"
+        },
+        {
+          "line": 20,
+          "text": "    if not {'teacher_observation_audit','blind_initial','blind_student_visibility','student_processor','final_main_review'}<=set(evidence):raise ValueError('Required observations/reviews absent')"
+        },
+        {
+          "line": 21,
+          "text": "    obs=evidence['teacher_observation_audit'];student=evidence['student_processor'];blind=evidence['blind_initial']"
+        },
+        {
+          "line": 22,
+          "text": "    if obs.get('original_pngs_delivered')!=64 or obs.get('effective_pngs_delivered')!=8 or not obs.get('native_video_delivered'):raise ValueError('Explicit media delivery incomplete')"
+        },
+        {
+          "line": 23,
+          "text": "    if obs.get('tool_issues') or obs.get('proposal_geometry_identity_issues'):raise ValueError('Unresolved teacher observation contract')"
+        },
+        {
+          "line": 24,
+          "text": "    if student.get('patch_inverse_exact') is not True or len(student.get('frames',[]))!=64:raise ValueError('Actual student view evidence incomplete')"
+        },
+        {
+          "line": 25,
+          "text": "    if blind.get('blind_attestation',{}).get('teacher_content_received') is not False:raise ValueError('Initial blind review exposed to proposal')"
+        },
+        {
+          "line": 26,
+          "text": "    # These assertions bind an accountable review; they do not certify model attention or human gold."
+        },
+        {
+          "line": 27,
+          "text": "    reviewed=record.get('main_review_assertions',{})"
+        },
+        {
+          "line": 28,
+          "text": "    required=('direct_visible_facts_checked','all_NO_ranges_explicitly_reviewed','no_audio_content_invented',"
+        },
+        {
+          "line": 29,
+          "text": "              'necessary_preparation_and_result_considered','no_artificial_event_merging',"
+        },
+        {
+          "line": 30,
+          "text": "              'no_candidate_prediction_exposure_before_reference_freeze','student_visibility_checked')"
+        },
+        {
+          "line": 31,
+          "text": "    if not all(reviewed.get(key) is True for key in required):raise ValueError('Main semantic adjudication incomplete')"
+        },
+        {
+          "line": 32,
+          "text": "    for boundary in record.get('boundary_decisions',[]):"
+        },
+        {
+          "line": 33,
+          "text": "        if F(boundary['uncertainty_end_exact'])-F(boundary['uncertainty_start_exact'])>F('0.5'):raise ValueError('Unresolved boundary uncertainty exceeds frozen allowance')"
+        },
+        {
+          "line": 34,
+          "text": "        if not boundary.get('inside_evidence') or not boundary.get('outside_evidence_or_domain_boundary'):raise ValueError('Boundary lacks reviewed support')"
+        },
+        {
+          "line": 35,
+          "text": "    if record.get('training_admitted'):"
+        },
+        {
+          "line": 36,
+          "text": "        if u or record.get('consequential_unknowns'):raise ValueError('UNKNOWN cannot enter complete JSON SFT')"
+        },
+        {
+          "line": 37,
+          "text": "        if record.get('student_observable_complete_target') is not True:raise ValueError('Complete target not observable to student')"
+        },
+        {
+          "line": 38,
+          "text": "        if len(record.get('events',[]))>5 or len(k)>5:raise ValueError('Full event reference not expressible by fixed grammar')"
+        }
+      ]
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\frozen_protocol.json",
+      "sha256": "90c7125e382761dc6c8304be8a8b9f7559445b43c88d40e2c30b0bbe2b9635af",
+      "excerpts": [
+        {
+          "line": 77,
+          "text": "  \"teacher_agreement_not_truth\": true,"
+        },
+        {
+          "line": 78,
+          "text": "  \"student_unobservable_positive_retained_for_evaluation\": true,"
+        }
+      ]
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\frozen_protocol_v2_explicit_empty_gate.json",
+      "sha256": "5fd35d48d4caa867f0f53cbd56f76f0e36dcebfd56160f55cff3053a80ff213d",
+      "excerpts": [
+        {
+          "line": 77,
+          "text": "  \"teacher_agreement_not_truth\": true,"
+        },
+        {
+          "line": 78,
+          "text": "  \"student_unobservable_positive_retained_for_evaluation\": true,"
+        }
+      ]
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\PROTOCOL.md",
+      "sha256": "0c93068dd2f38753423ac3c9fc97f70547855e122a1533c425cf6b1163206243",
+      "excerpts": [
+        {
+          "line": 3,
+          "text": "本子协议只补 jobs.json 固定索引3至23，共21窗。W11旧audit因读取自身proposal不在当时白名单内不可复用；原失败与原raw不修改。本子协议新增允许每个自身已写输出最多一次核对，不能追认旧违规。W01/W02/W10合法观察不重跑。上级已冻结协议保持原SHA；本版21窗而非上级旧文字20窗，故11独立CLI（10相邻双窗和末尾单窗），此前23/36，最多34/36。"
+        },
+        {
+          "line": 5,
+          "text": "每次会话模型gemini-3.8-flash-high，固定窗口顺序，25分钟上限，无自动重试；现有agy.exe、进程级HTTP代理与HTTP1设置，不改服务。先冻结该会话所有实际输入文件SHA、读取/写入白名单、输出路径。每窗64原PNG按16组，每组依次读4PNG立即写slot0..3事实；不能读下一组再倒写。主体、构图为可见描述，字幕presence/literal逐图独立判断，中文visible_fact仅静态事实，不由单帧推断动作、心理、动机或字幕语言。模型不得复制身份字段，身份由程序按冻结manifest绑定。"
+        },
+        {
+          "line": 7,
+          "text": "事实64条全部写出封存后，读本窗clip一次与8个实际effective学生预览一次（学生真实processor输入64，教师预览8）。此后一次写完整短高光KEEP/NO/UNKNOWN提案，独立事件、边界不确定range、事实支持与所有NO理由；不能把全窗叙事或字幕内容自动当作高光，不设事件或片段数量配额。事实和语义只参考本窗，不参考相邻窗。允许明确不确定，不能失败转空。"
+        },
+        {
+          "line": 9,
+          "text": "教师仅可view_file及write_to_file，禁止目录搜索、代码/terminal/web/其他模型/subagent/旧答案/分数/预测/其他评审；唯独本次index、该会话媒体、指定自身已写输出在白名单。每图一次、index一次，每个自身输出核对最多一次且写后才能读；成功文件不覆盖，不修改。实际工具路径、顺序、四图barrier、原图/学生geometry、原raw、terminal SHA、全局call账本全部审计。"
+        },
+        {
+          "line": 11,
+          "text": "提案不是训练准入也不是human gold；工具/结构审计不能证明全部语义正确，仍需主控与独立学生审阅及原silver科学门。此子任务不decoder/GPU/Qwen/训练/426/100confirm。费用UNKNOWN不记零。所有21分母成功、失败、pending分别登记。"
+        }
+      ]
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\PROTOCOL.md",
+      "sha256": "156da41dfb60127a94190115412830b18951a52083a1248409865c2eda89ef3e",
+      "excerpts": [
+        {
+          "line": 3,
+          "text": "仅前瞻替换尚未执行的 jobs6..23，固定九对 CLI28..36，每对新独立会话7200秒，无自动重试。绑定根主控 teacher_dispatch_capacity_v4_authorization.json 及真实既有 batch stream 证据SHA。当前v3 call01、历史25/75分钟失败、所有冻结/原始输出/费用UNKNOWN保持；未完成HT5 W10不补空、不恢复重问；已完成W02独立证据保持。新授权只涉及工程容量及工具提交粒度，科学协议和准入门不变。"
+        },
+        {
+          "line": 5,
+          "text": "每窗64原始PNG、16组，每组按slot0..3在同一次 agent_response 提交4个独立view_file工具调用；客户端可顺序执行，不能声称工具并发。等待4图实际DONE后立即一次write_to_file本组4条静态事实，之后才可下一组。每图只能读一次，每事实只参考对应单图；subject/composition/subtitle presence+literal/中文visible_fact，身份由程序绑定。不从单帧猜动作、心理、动机或字幕语言。事实成功输出不可覆盖。16组全部封存才读本窗clip一次；随后按冻结顺序同一response提交8个effective student preview独立view_file，全8DONE后才写完整proposal。实际学生native processor64帧，教师只8预览。保持原geometry/RGB/source/domain/PTS/SHA，成功媒体不重新decode。"
+        },
+        {
+          "line": 9,
+          "text": "启动前冻结全部输入、输出/读取白名单、模型gemini-3.8-flash-high、授权/证据、执行代码和prompt模板SHA。独立实核actual工具顺序、4-image barrier、clip+8preview、结构覆盖/identity+geometry、真实终态/rawSHA/账本，错误保存，不自动重试。历史真实batch只证明同response多工具能力，不保证本次时间或语义质量。九对固定顺序，不基于semantic挑窗；根审核无模型dry-run后另发启动消息才注册CLI。结构PASS不是semantic正确/human gold/训练准入，仍需root和独立学生审阅。现金UNKNOWN；本任务新GPU/Qwen/decoder/optimizer/训练/426/100confirm均0。"
+        }
+      ]
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\independent_highlight_pilot_v3\\PROTOCOL.md",
+      "sha256": "7b5978cc8040ecabf3ad7729aab4bd2c128ceb2f4e41a0fdc67b20aa26d6b242",
+      "excerpts": [
+        {
+          "line": 7,
+          "text": "只执行固定第一窗00_kLxoNp-UchI_W01。学生有效64PNG独立初判、原生64PNG独立初判、Gemini实际native clip+64原图+8有效图提案三者分别封存，均看不到旧标签、人工分数、预测或彼此答案。主控具有历史编辑提案曝光，不能称主控盲审；新初判者使用新上下文、严格文件白名单并记录曝光声明。提供的是有限观察编辑建议，不是人工金标。"
+        },
+        {
+          "line": 11,
+          "text": "成功：每个初判者真实逐张读完自己的64图；Gemini实际媒体供给审核无缺口；每份完整覆盖[0,30)且明确KEEP/NO/UNKNOWN、事件和边界依据。独立差异由主控依据实际图像裁定，不能按多数意见或模型自评升级为真值。所有NO须逐段检查。边界余不确定性<=0.5秒、无consequential UNKNOWN、完整目标实际学生可见，并能由原五事件/五连续区间合同完整表达，才能获得单窗原合同准入。五区间仅本地合同，不冒充官方限制，也不向初判者施加凑数量要求。"
+        }
+      ]
+    }
+  ],
+  "findings": {
+    "explicit_same_Gemini_instance_or_conversation_requirement_in_silver_contract_or_frozen_protocol": false,
+    "upper_supplement_explicitly_allows_reuse_and_composed_review_evidence": true,
+    "old_Gemini_attempt_workflow_requires_actual_native64_video8preview": true,
+    "old_job13_attempt_missing8preview_and_tool_ERROR_remains_rejected": true,
+    "proposed_Gemini64_clip_plus_root_GPT8preview_not_explicitly_forbidden_by_admission_code": true,
+    "same_provider_absence_alone_not_sufficient_for_admission": true
+  },
+  "interpretation": "Original silver admission code checks SHA-bound separately adjudicated full reference, actual 64 original/8 effective/video supply, unresolved tool/geometry issues absent, blind initial/visibility/student64 and all seven accountable main semantic assertions. It does not check Gemini model name, CID, same observer, or SUCCESS result. Upper supplement explicitly permits reuse and composed evidence. Thus a new separately accountable complete observation/reference with exact per-component observer/provenance appears compatible in principle; root must decide and actually complete/check missing8 and new semantic adjudication. This does not retroactively pass or rewrite Gemini13 audit or claim Gemini viewed previews. The old Gemini operational workflow still failed.",
+  "root_decision_required": true,
+  "old_audits_or_protocols_modified": false,
+  "combined_observation_created": false,
+  "new_model_calls": 0,
+  "original_native_or_clip_reread": false,
+  "scientific_gate_changes": 0
+}

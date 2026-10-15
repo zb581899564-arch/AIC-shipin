@@ -1,0 +1,385 @@
+{
+  "utc": "2026-10-10T10:13:52.892992+00:00",
+  "status": "BOUNDED_STAGE_CLOSED_PARTIAL_NATIVE_EOF_NOT_TRAIN_READY",
+  "implementation_complete": true,
+  "full_annotation_acceptance_pass": false,
+  "student_records": 64,
+  "native_records": 32,
+  "unique_Gemini_png_reads": 96,
+  "expected_png_reads": 128,
+  "missing_native_frame_ids": [
+    "F16",
+    "F17",
+    "F18",
+    "F19",
+    "F20",
+    "F21",
+    "F22",
+    "F23",
+    "F24",
+    "F25",
+    "F26",
+    "F27",
+    "F28",
+    "F29",
+    "F30",
+    "F31",
+    "F48",
+    "F49",
+    "F50",
+    "F51",
+    "F52",
+    "F53",
+    "F54",
+    "F55",
+    "F56",
+    "F57",
+    "F58",
+    "F59",
+    "F60",
+    "F61",
+    "F62",
+    "F63"
+  ],
+  "new_cli_count": 10,
+  "successful_cli_count": 7,
+  "pre_inference_EOF_failures": 3,
+  "historical_cli_count": 11,
+  "cumulative_cli_count": 21,
+  "cumulative_cli_cap": 36,
+  "recovery_count": 1,
+  "recovery_cap": 1,
+  "all_cli_within_420_seconds": true,
+  "terminals": [
+    {
+      "path": "native_block_00\\terminal.json",
+      "sha256": "22d4d21be1833ab08251ce5d237c3c0d7c7d00b08933d9fc11b5b5d41e90f7b9",
+      "started_utc": "2026-10-10T10:06:06.379377+00:00",
+      "finished_utc": "2026-10-10T10:07:55.191518+00:00",
+      "elapsed_seconds": 108.81200000000172,
+      "exit_code": 0,
+      "hard_deadline_exceeded": false,
+      "exit_zero_not_acceptance": true,
+      "cash_cost": "UNKNOWN_NOT_ZERO",
+      "stream_sha256": "1f8631c74e559b4f3717720d53803c036c7386b84eb279c7f319893a871e8e29"
+    },
+    {
+      "path": "native_block_01\\terminal.json",
+      "sha256": "811f8cb17be428476d6d0794764728ab79c5145df5185714d96e9279a162f001",
+      "started_utc": "2026-10-10T10:07:55.275135+00:00",
+      "finished_utc": "2026-10-10T10:08:00.524619+00:00",
+      "elapsed_seconds": 5.25,
+      "exit_code": 1,
+      "hard_deadline_exceeded": false,
+      "exit_zero_not_acceptance": true,
+      "cash_cost": "UNKNOWN_NOT_ZERO",
+      "stream_sha256": "09b96a650f652345a060fad08a06255fcd95c22fee7c73531041d6199e218bf9"
+    },
+    {
+      "path": "native_block_02\\terminal.json",
+      "sha256": "1cd8f24da82e86a28a11ec48898e2cec8fd6e9f1b8a34560d7258169971b7ae5",
+      "started_utc": "2026-10-10T10:09:11.009625+00:00",
+      "finished_utc": "2026-10-10T10:10:42.570803+00:00",
+      "elapsed_seconds": 91.56200000000172,
+      "exit_code": 0,
+      "hard_deadline_exceeded": false,
+      "exit_zero_not_acceptance": true,
+      "cash_cost": "UNKNOWN_NOT_ZERO",
+      "stream_sha256": "7493b56b6b08940b196a14a298d94049eb65d15bb3041461430db2ea709837ec"
+    },
+    {
+      "path": "native_block_03\\terminal.json",
+      "sha256": "87e65877f7eadcf03042e23a80ebc529500a31f28fe27932b195351ab3c2b833",
+      "started_utc": "2026-10-10T10:10:42.654115+00:00",
+      "finished_utc": "2026-10-10T10:10:53.668855+00:00",
+      "elapsed_seconds": 11.015999999999622,
+      "exit_code": 1,
+      "hard_deadline_exceeded": false,
+      "exit_zero_not_acceptance": true,
+      "cash_cost": "UNKNOWN_NOT_ZERO",
+      "stream_sha256": "6935613353b4f21c1460d354ab96d5d522ea92237f33fd7f2c388b9f49fa9ae4"
+    },
+    {
+      "path": "pilot\\terminal.json",
+      "sha256": "adcd7cce46133739dbbcd41bd9b52f3cb96b1bc10e41fa0d39ca6c5dea651f34",
+      "started_utc": "2026-10-10T09:54:51.860975+00:00",
+      "finished_utc": "2026-10-10T09:55:48.827279+00:00",
+      "elapsed_seconds": 56.95300000000134,
+      "exit_code": 0,
+      "hard_deadline_exceeded": false,
+      "exit_zero_not_acceptance": true,
+      "cash_cost": "UNKNOWN_NOT_ZERO",
+      "stream_sha256": "8222f004306a1abcc8a20461a80bb2ecb033ddc1dba0f3e0f0b58434866491e2"
+    },
+    {
+      "path": "recovery_student_block_03\\terminal.json",
+      "sha256": "439ddab84e5637715cf1ed161d3e7d22bd65abc9d16f9316630ee4ffe0213b12",
+      "started_utc": "2026-10-10T10:03:16.504924+00:00",
+      "finished_utc": "2026-10-10T10:04:54.039676+00:00",
+      "elapsed_seconds": 97.53099999999904,
+      "exit_code": 0,
+      "hard_deadline_exceeded": false,
+      "exit_zero_not_acceptance": true,
+      "cash_cost": "UNKNOWN_NOT_ZERO",
+      "stream_sha256": "1cdcd7c49825e2de223ca4217bbc183cbaf99433bbd54782034c5cddc647001f"
+    },
+    {
+      "path": "student_block_00\\terminal.json",
+      "sha256": "cdd259c8c42079c9863c57bd589fe3da7043bb5fced0d1e172e9d2f0c0ef95c6",
+      "started_utc": "2026-10-10T09:56:42.770599+00:00",
+      "finished_utc": "2026-10-10T09:58:27.330659+00:00",
+      "elapsed_seconds": 104.56300000000192,
+      "exit_code": 0,
+      "hard_deadline_exceeded": false,
+      "exit_zero_not_acceptance": true,
+      "cash_cost": "UNKNOWN_NOT_ZERO",
+      "stream_sha256": "f678935f1cce188c2c4406a73b325037b1b618bbda83638edbb38f4a1f1485e2"
+    },
+    {
+      "path": "student_block_01\\terminal.json",
+      "sha256": "10fdbe5e73598752a589ee6b62b93bdceaa0e9c4ab49d40bfa6d99693fb1e832",
+      "started_utc": "2026-10-10T09:58:27.417510+00:00",
+      "finished_utc": "2026-10-10T10:00:42.116179+00:00",
+      "elapsed_seconds": 134.70300000000134,
+      "exit_code": 0,
+      "hard_deadline_exceeded": false,
+      "exit_zero_not_acceptance": true,
+      "cash_cost": "UNKNOWN_NOT_ZERO",
+      "stream_sha256": "5bff10be3119c22c873b9bd067e69a1964502b8d8b73a3a60bc0fffd8d67c4bc"
+    },
+    {
+      "path": "student_block_02\\terminal.json",
+      "sha256": "340f2b47bec74681bc95b1a6f6e81981f85a90567b832133ec88ac4576c53fc3",
+      "started_utc": "2026-10-10T10:00:42.228943+00:00",
+      "finished_utc": "2026-10-10T10:01:54.283358+00:00",
+      "elapsed_seconds": 72.06299999999828,
+      "exit_code": 0,
+      "hard_deadline_exceeded": false,
+      "exit_zero_not_acceptance": true,
+      "cash_cost": "UNKNOWN_NOT_ZERO",
+      "stream_sha256": "34e30c47e17a44719eb50fef6178ffe18a887d61594bdb57dfa248ae663115ba"
+    },
+    {
+      "path": "student_block_03\\terminal.json",
+      "sha256": "07542fd5e4fc6414ef8db63267f5d9075937451e97dd11d2f3756814a3ae2dff",
+      "started_utc": "2026-10-10T10:01:54.351497+00:00",
+      "finished_utc": "2026-10-10T10:02:01.784488+00:00",
+      "elapsed_seconds": 7.437999999998283,
+      "exit_code": 1,
+      "hard_deadline_exceeded": false,
+      "exit_zero_not_acceptance": true,
+      "cash_cost": "UNKNOWN_NOT_ZERO",
+      "stream_sha256": "6935613353b4f21c1460d354ab96d5d522ea92237f33fd7f2c388b9f49fa9ae4"
+    }
+  ],
+  "audits": [
+    {
+      "path": "native_block_00\\audit.json",
+      "sha256": "4d1ec7af0e483ab5facdc4f4d9ed3865016dab239c585964ef576d1f598de0a4",
+      "status": "PASS_STRUCTURE_AND_PUBLIC_TOOL_READS",
+      "errors": []
+    },
+    {
+      "path": "native_block_01\\audit.json",
+      "sha256": "da931b20d90308e907d52d36483c800959155d352f5bcbf6723728b6d0ef90fa",
+      "status": "FAIL_OR_PARTIAL",
+      "errors": [
+        {
+          "chunk": "facts_chunk_00.json",
+          "errors": [
+            "MISSING_FILE"
+          ]
+        },
+        {
+          "chunk": "facts_chunk_01.json",
+          "errors": [
+            "MISSING_FILE"
+          ]
+        },
+        {
+          "chunk": "facts_chunk_02.json",
+          "errors": [
+            "MISSING_FILE"
+          ]
+        },
+        {
+          "chunk": "facts_chunk_03.json",
+          "errors": [
+            "MISSING_FILE"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "native_block_02\\audit.json",
+      "sha256": "ff56dafce2a536dda3acbfd80082f5003f25828817cd9ed9ab79a64779956ecf",
+      "status": "PASS_STRUCTURE_AND_PUBLIC_TOOL_READS",
+      "errors": []
+    },
+    {
+      "path": "native_block_03\\audit.json",
+      "sha256": "fdd2e59ed677dc9697e7a0078223018d8167a06a88f2f5bce3a41e07d1eabd36",
+      "status": "FAIL_OR_PARTIAL",
+      "errors": [
+        {
+          "chunk": "facts_chunk_00.json",
+          "errors": [
+            "MISSING_FILE"
+          ]
+        },
+        {
+          "chunk": "facts_chunk_01.json",
+          "errors": [
+            "MISSING_FILE"
+          ]
+        },
+        {
+          "chunk": "facts_chunk_02.json",
+          "errors": [
+            "MISSING_FILE"
+          ]
+        },
+        {
+          "chunk": "facts_chunk_03.json",
+          "errors": [
+            "MISSING_FILE"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pilot\\audit.json",
+      "sha256": "4da5eaf2f0a906d3177b9bba8843ac0a185df3450d0bddefb49e239936599bcf",
+      "status": "PASS_STRUCTURE_AND_PUBLIC_TOOL_READS",
+      "errors": []
+    },
+    {
+      "path": "recovery_student_block_03\\audit.json",
+      "sha256": "b60b1901cd8da5fb437e91f32a2f654a30dbbea8ee334f8ce0cd78f333628b12",
+      "status": "PASS_STRUCTURE_AND_PUBLIC_TOOL_READS",
+      "errors": []
+    },
+    {
+      "path": "student_block_00\\audit.json",
+      "sha256": "02f665d1263b46dc6b09d023af5a16800cb83745d377f3b0002f72e73a670bee",
+      "status": "PASS_STRUCTURE_AND_PUBLIC_TOOL_READS",
+      "errors": []
+    },
+    {
+      "path": "student_block_01\\audit.json",
+      "sha256": "d5a141c68c151e1f081b8c1ecedf28715b99c74a5bdbde088f025cecfbb26cee",
+      "status": "PASS_STRUCTURE_AND_PUBLIC_TOOL_READS",
+      "errors": []
+    },
+    {
+      "path": "student_block_02\\audit.json",
+      "sha256": "4552778c32031c65c603bfa0174ac393ec101cdc609f4718f63959471ee0cf7d",
+      "status": "PASS_STRUCTURE_AND_PUBLIC_TOOL_READS",
+      "errors": []
+    },
+    {
+      "path": "student_block_03\\audit.json",
+      "sha256": "f325e9b0022c86c81910f8b4594b9066c1b899b5972042e2abbaf512a13168e9",
+      "status": "FAIL_OR_PARTIAL",
+      "errors": [
+        {
+          "chunk": "facts_chunk_00.json",
+          "errors": [
+            "MISSING_FILE"
+          ]
+        },
+        {
+          "chunk": "facts_chunk_01.json",
+          "errors": [
+            "MISSING_FILE"
+          ]
+        },
+        {
+          "chunk": "facts_chunk_02.json",
+          "errors": [
+            "MISSING_FILE"
+          ]
+        },
+        {
+          "chunk": "facts_chunk_03.json",
+          "errors": [
+            "MISSING_FILE"
+          ]
+        }
+      ]
+    }
+  ],
+  "original_successes_not_repeated": true,
+  "old_stop_preserved": true,
+  "original_raw_files_preserved": true,
+  "root_subtitle_false_positive_frames": [
+    "F11",
+    "F30",
+    "F49",
+    "F50"
+  ],
+  "root_erratum_sha256": "f48271953b1729e8ec1002c7b03e8e3d5f185fc74b658f9185b8ae6f409c37f1",
+  "corrected_student_seal_created_after_native_admission": true,
+  "original_student_seal_before_native": true,
+  "raw_student_subtitle_disagreement_frames_after_corrected_review": [],
+  "raw_native_subtitle_disagreement_frames": [
+    "F11"
+  ],
+  "student_subject_precision_correction_frames": 11,
+  "native_semantic_corrections": [
+    {
+      "frame_id": "F03",
+      "field": "visible_subject",
+      "corrected": "室内挂钟前深色T恤人物的上半身，手部姿态不同",
+      "reason": "单帧不确证发声或动作经过，只保留可见姿态与主体"
+    },
+    {
+      "frame_id": "F04",
+      "field": "visible_subject",
+      "corrected": "室内挂钟前深色T恤人物的上半身，手部姿态不同",
+      "reason": "单帧不确证发声或动作经过，只保留可见姿态与主体"
+    },
+    {
+      "frame_id": "F05",
+      "field": "visible_subject",
+      "corrected": "室内挂钟前深色T恤人物的上半身，手部姿态不同",
+      "reason": "单帧不确证发声或动作经过，只保留可见姿态与主体"
+    },
+    {
+      "frame_id": "F11",
+      "field": "subtitle_text",
+      "corrected": null,
+      "reason": "Actual individually reopened native PNG subtitle differs from raw AGY answer; retain original"
+    },
+    {
+      "frame_id": "F11",
+      "field": "subtitle_legibility",
+      "corrected": "absent",
+      "reason": "Actual subtitle visibility"
+    }
+  ],
+  "main_agent_native_images_reviewed": 64,
+  "main_reference_not_substituted_for_Gemini_outputs": true,
+  "native_video_delivered": false,
+  "old_silver_contract_pass": false,
+  "training_admitted": false,
+  "new_optimizer_updates": 0,
+  "new_426_calls": 0,
+  "new_gpu_jobs": 0,
+  "pro_used": 6,
+  "pro_cap": 8,
+  "cash_cost": "UNKNOWN_NOT_ZERO",
+  "baseline_zip": {
+    "path": "G:\\ai\\AIC视频\\deliveries\\ANNOTATION_ITERATION_20261010\\SAFE_37_66\\candidate_SAFE_37_66.zip",
+    "bytes": 306167,
+    "sha256": "07730c9e02e68d1a1ce54e7ef5a8aa616346cf8f2f8d78426ed36bc3eb481496",
+    "crc_ok": true
+  },
+  "current_student_facts": "student_sealed_v2.json",
+  "current_native_facts": "native_partial_sealed.json",
+  "output_sha256s": {
+    "student_sealed_v2.json": "6fa1127d9e39ba1194f6e0cc4fe3f4f4e7b8f4d150d95e009de45ff2d9f027e6",
+    "native_partial_sealed.json": "58b9324e351c4ad196aa7044831819c0c8b1f822a4df6c464cce55951f7bdedc",
+    "ROOT_QA_ERRATUM.json": "f48271953b1729e8ec1002c7b03e8e3d5f185fc74b658f9185b8ae6f409c37f1"
+  }
+}

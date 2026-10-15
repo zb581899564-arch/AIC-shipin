@@ -1,0 +1,101 @@
+{
+  "status": "PASS_ROOT_INDEPENDENT_BOOTSTRAP_FIXED_SCOPE_MEDIA_PENDING_SEMANTIC_REFERENCE",
+  "utc": "2026-10-10T23:28:14.114608+00:00",
+  "window_id": "J0nA4VgnoCo:SLOT6:2",
+  "original_pngs_delivered": 64,
+  "effective_pngs_delivered": 8,
+  "native_video_delivered": true,
+  "original_pngs_delivered_in_current_CLI": 64,
+  "prior_native32_and_raw_facts_transferred": 0,
+  "prior_CLI33_strict_failure_preserved": false,
+  "old_F35_extra_successful_read_without_group8_fact_preserved": false,
+  "current_F35_read_DONE_verified": false,
+  "tool_issues": [],
+  "proposal_geometry_identity_issues": [],
+  "prefix_audit": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v4_bootstrap_file\\call34\\w18_completed_scope_audit.json",
+    "sha256": "1e65ea853800abf92640c517134e5bf39fa0a2ed7b0f5386a83703794e3ec430"
+  },
+  "stream_prefix": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v4_bootstrap_file\\call34\\w18_completed_scope_stream_prefix.jsonl",
+    "sha256": "f82e63823183892b155245e78e0f87092fbd79b9a93a8897dbae90e8d4dcb605",
+    "bytes": 147748
+  },
+  "proposal": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v4_bootstrap_file\\call34\\w18_proposal.json",
+    "sha256": "da9af8275018004a8d5be996c073f47514ce86999fdae3bf447bac97c0f52a7c"
+  },
+  "freeze": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v4_bootstrap_file\\call34\\freeze.json",
+    "sha256": "cfca713ca60aad3752f278c088da18204b91627fb986db981737384b6e9394fb"
+  },
+  "request": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v4_bootstrap_file\\call34\\request.json",
+    "sha256": "745b97a483b86590fb240d06d73e22f71f9ea318d7c2f08a7f75e98a771a1394"
+  },
+  "protocol": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v4_bootstrap_file\\PROTOCOL.md",
+    "sha256": "031145d2b5343f459564acb24cafabee5640a4f71332008f6703b3a5380f9c74"
+  },
+  "bootstrap_instruction": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v4_bootstrap_file\\call34\\bootstrap_instruction.txt",
+    "sha256": "21703cd8f8392f26f0bf1c522dee8bf988e5a9d652c90786c1eb7942255cfb31"
+  },
+  "bootstrap_ack": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v4_bootstrap_file\\call34\\bootstrap_ack.json",
+    "sha256": "254c1d4fab69b9af6dd6bef3928c332ccd81d23051e3b444d4cab4b856316ed3"
+  },
+  "bootstrap_ack_is_finite_text_route_check_not_all_text_attention_proof": true,
+  "ordered_actual_core_with_context_count": 144,
+  "same_index_read_steps": [
+    6,
+    205,
+    207,
+    209
+  ],
+  "successful_output_self_reads": [],
+  "bare_error_metadata": [
+    {
+      "conversation_id": "d22d9525-afc8-47a1-9e67-68402f1d141c",
+      "step_index": 121,
+      "state": "DONE",
+      "step_type": "error_message",
+      "duration_seconds": 0
+    }
+  ],
+  "whole_CLI_status_not_inferred": true,
+  "parent_terminal_at_original_scope_audit": false,
+  "whole_job_cost": "PENDING_ACTUAL_PARENT_TERMINAL",
+  "cash_cost": "UNKNOWN_NOT_ZERO",
+  "global_CLI": 34,
+  "root_semantic_facts_read_not_asserted_by_this_helper": true,
+  "semantic_admission_pending": true,
+  "training_admitted": false,
+  "new_optimizer_updates": 0,
+  "original_frozen_scope_audit_status": "REJECTED_OR_INCOMPLETE_KEEP_RAW",
+  "original_frozen_tool_issues_preserved": [
+    {
+      "reason": "BOOTSTRAP_NOT_EXACTLY_ONCE_FIRST_FULL_DONE",
+      "job_index": null
+    },
+    {
+      "reason": "BOOTSTRAP_ACK_MISSING_WRONG_OR_ORDER",
+      "job_index": null
+    }
+  ],
+  "root_verifier_source": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\accept_teacher_bootstrap_scope_v5_representation.py",
+    "sha256": "248aa1ea58575e75e1895a5e359a069a8b70029ecf1c0ebc89ec12f34c0487bd"
+  },
+  "representation_correction": {
+    "kind": "EXACT_TRAILING_LF_LINE_REPRESENTATION_ONLY",
+    "actual_reported_lines": 213,
+    "actual_reported_bytes": 37626,
+    "python_splitlines": 212,
+    "exact_LF_split_count": 213,
+    "ends_with_LF": true,
+    "no_tolerance_or_media_requirement_relaxation": true,
+    "old_v4_audit_source_and_results_not_modified": true
+  },
+  "root_independent_actual_supply_order_pixels_native_fact_bindings_ACK_checked": true
+}

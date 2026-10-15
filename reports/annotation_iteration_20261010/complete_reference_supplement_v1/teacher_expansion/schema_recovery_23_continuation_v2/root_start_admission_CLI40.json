@@ -1,0 +1,48 @@
+{
+  "status": "ROOT_APPROVED_START_SCHEMA_RECOVERY_CONTINUATION_SINGLE_CLI40_JOB23",
+  "utc": "2026-10-11T10:52:58.881220+00:00",
+  "execution_binding_sha256": "a0be3fac8cf44b695b8bd379f85912f400e766a18406758b515f1782e028feae",
+  "dry_run_sha256": "0f8b10795d139c438d7d30245324364feb95a365d1a4de66baae3ccd93dba073",
+  "negative_receipt_sha256": "fccb575c10f97c3811e44b6803eaec76cdd6320b3ea1f34d42c2e7e7aaea96a0",
+  "user_authorization": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\schema_recovery_22_23_user_authorization_v1.json",
+    "sha256": "b507cd5a057c874dc766668bc7736609a0904effdcbd1cf41ac570f561078d67"
+  },
+  "CLI": 40,
+  "global_cap": 40,
+  "no41": true,
+  "automatic_retry": false,
+  "fixed_job_indices": [
+    23
+  ],
+  "timeout_seconds": 3600,
+  "previous39_recovery": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\schema_recovery_CLI39_final_selfread_root_recovery_v1.json",
+    "sha256": "bf991024d851317d0d4dc7784622119d4e5478ed276c88b3d1e7e0d43fba684c",
+    "status": "ROOT_CONFIRMED_CLI39_NATURAL_SUCCESS_VALID_JOB22_SCOPE_ONLY_FINAL_PROPOSAL_SELFREAD_WHOLE_REJECT_PRESERVED"
+  },
+  "ROOT_w20_complete_independent_semantic_recovery_PASS": true,
+  "w20_semantic_recovery_receipt": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_root_semantic_recovery_receipt_v1.json",
+    "sha256": "637c81aaff183ed9777890891259ffdd2f6a72bdc44c0371d5fc5bd1f0195553",
+    "status": "PASS_ROOT20_INDEPENDENT_FINITE_REFERENCE_WITH_UNKNOWN_PRESERVED_NOT_TRAINING"
+  },
+  "w20_reference_binding": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_complete_reference_v1.json",
+    "sha256": "62998d79a1806d8510ac5c23851bf2b699c79bb4c1f44cc015e4c7a4c611dec5",
+    "window_id": "cjibtmSLxQ4:SLOT6:13",
+    "reference_kind": "FINITE_OBSERVATION_SILVER_EDITING_ADVICE_NOT_GOLD",
+    "source_sha256": "43183ef7f35bfcbc39c122be797fdee5031103862c7c7da3b9ab74d222c79c9d",
+    "source_window": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\source_window_plan.json",
+      "sha256": "09ecb28971932bd3bf8ac275c30d0a6fd534345442f2d2ec3529fa3f8e1e4b22"
+    },
+    "training_admitted": false
+  },
+  "independent_static_review": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\plan_review\\schema_recovery_23_continuation_v2_independent_static_review.json",
+    "sha256": "2973201a19f0572287bbe689e9aeffbc07293cf53f1639244ed38b125893937d"
+  },
+  "actual_input_SHA_count": 1345,
+  "scientific_training_or_quality_PASS": false
+}

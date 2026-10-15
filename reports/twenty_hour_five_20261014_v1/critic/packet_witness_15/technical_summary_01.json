@@ -1,0 +1,40 @@
+{
+  "schema": "PACKET_WITNESS_FIRST426_SHORT_TECHNICAL_RECEIPT_01",
+  "status": "COMPLETE_FIRST426_PACKET_WITNESS_AGGREGATE_NOT_FULL_FRAME_DECODE",
+  "completion_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/native_terminal_packet_witness_v1/run_01/completion.json",
+    "sha256": "4b753f82a818c7c10c1bc0545902e4f11b473f47bca700f01b1b2a695b82dc79",
+    "bytes": 105017
+  },
+  "registration_sha256": "9b77b2dd03d94dcdb0de8a5c9f0dc858bc138968048d2b9a7dba5e7b03c8ad5e",
+  "pure_check_sha256": "c90bf86621318f68c00c76cc9816233ea9d247f108aa85bc0bb9550c0d1faccb",
+  "code_manifest_sha256": "776283dab4047973188fce1266dd399b8300f6c8bb7fa70f4a5d5cf205c75a2d",
+  "registered_sources": 426,
+  "attempted_sources": 426,
+  "successful_sources": 421,
+  "failed_sources": 5,
+  "remaining_unattempted_sources": 0,
+  "fatal": null,
+  "branch_counts": {
+    "PASS:CFR_LEGACY": 416,
+    "PASS:NATIVE_PTS": 5,
+    "FAIL:NATIVE_PTS": 5
+  },
+  "failure_categories": {
+    "Measured packet end differs from old explicit native end ticks": 5
+  },
+  "registered_source_bytes": 4781857740,
+  "source_SHA_read_bytes_with_observations": 4781857740,
+  "successful_source_bytes": 4749083793,
+  "CPU_wall_seconds": 23.938770729117095,
+  "process_CPU_seconds": 23.241733171,
+  "peak_RSS_KiB": 68080,
+  "frame_decode_calls": 0,
+  "processor_calls": 0,
+  "model_calls": 0,
+  "network_media_bytes": 0,
+  "old_clocks_modified": false,
+  "successes_must_not_repeat": true,
+  "new_full_frame_PTS_claim": false,
+  "future_full_decode_PTS_origin_lastduration_equality_required": true
+}

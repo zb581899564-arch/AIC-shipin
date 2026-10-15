@@ -1,0 +1,27 @@
+{
+  "status": "CONFIRMED_AIC_HEARTBEAT_DELETED_AFTER_FOUR_LOCAL_DELIVERIES",
+  "automation_tool_result": {
+    "automationId": "aic",
+    "mode": "delete",
+    "deleteStatus": "deleted",
+    "snapshot": {
+      "kind": "heartbeat",
+      "name": "AIC夜间风险候选迭代",
+      "rrule": "FREQ=MINUTELY;INTERVAL=15"
+    }
+  },
+  "raw_tool_result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Deleted automation in the app."
+      },
+      {
+        "type": "text",
+        "text": "{\"automationId\":\"aic\",\"mode\":\"delete\",\"deleteStatus\":\"deleted\",\"snapshot\":{\"kind\":\"heartbeat\",\"name\":\"AIC夜间风险候选迭代\",\"rrule\":\"FREQ=MINUTELY;INTERVAL=15\"}}"
+      }
+    ],
+    "isError": false
+  },
+  "reason": "Four distinct new risk ZIPs delivered and accepted; original model and replay tasks complete, actual owned processes empty."
+}

@@ -1,0 +1,26 @@
+{
+  "status": "PASS_LOCAL_THREE_PACKAGE_CROSS_AUDIT",
+  "utc": "2026-10-11T16:39:52.434325+00:00",
+  "counts": {
+    "best": {
+      "bytes": 306167,
+      "sha256": "07730c9e02e68d1a1ce54e7ef5a8aa616346cf8f2f8d78426ed36bc3eb481496",
+      "frames": 102112
+    },
+    "025": {
+      "bytes": 330573,
+      "sha256": "432298bae7a5b44d8bbb85823e5aeaf357502ecf80e50db5bca1de09fa442e26",
+      "frames": 110145
+    },
+    "050": {
+      "bytes": 356057,
+      "sha256": "200a3ef337eefd9fe296c781a2335ed16696f3539ee2602601da45f1cceef32b",
+      "frames": 118027
+    }
+  },
+  "all_original_boxes_equal": true,
+  "mild_subset_of_wide": true,
+  "duplicate_or_unordered_frames": 0,
+  "website_submitted": false,
+  "official_candidate_scores": null
+}

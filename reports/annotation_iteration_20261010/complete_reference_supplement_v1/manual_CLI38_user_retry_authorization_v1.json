@@ -1,0 +1,49 @@
+{
+  "status": "USER_EXPLICIT_ONE_MANUAL_CLI38_RETRY_NO39_FIXED21_23",
+  "utc": "2026-10-11T09:35:16.126822+00:00",
+  "user_quote_exact": "现在再去试一下，应该IP问题解决了",
+  "authorization_source": "CURRENT_HUMAN_EXPLICIT_RETRY_RELAYED_BY_ROOT_TASK_NOT_INFERRED_FROM_OLD_CAP",
+  "CLI": 38,
+  "prior_actual_CLI": 37,
+  "global_cap": 38,
+  "fixed_job_indices": [
+    21,
+    22,
+    23
+  ],
+  "timeout_seconds": 7200,
+  "no39": true,
+  "automatic_retry": false,
+  "IP_recovery_verified": false,
+  "network_proxy_account_service_changed": false,
+  "prior37_actual_bindings": {
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\call37\\request.json": "fa793c3f65d5e144e8709f88bf8e4d71acfea313234041f8cc4cff984e0b6a07",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\call37\\process.json": "5a2e0cfe501d37c2410a7299b8b9e8443e95570d955835e22ddaf889fdaeb110",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\call37\\terminal.json": "1c8fb92cea61b34e332a28ca5a2438597fda998376a0f5b629e7bc61e38b3bd6",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\call37\\stream.jsonl": "8c843a77b770a791b2517e36e0bdfc93a87a745d49dc957244f2ee2eec6f0799",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\call37\\stderr.txt": "68fb02680fed1c93d79de79737b4542f34c235229ffa2c2fdeafecc9f4a3d2e2",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\call37\\audit.json": "13db2d86480ae431f1d60aa8757787cba184bc38d3f37e96110e15e00ce5f5a6",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\call37\\actual_terminal_cost.json": "9f34c648b782140e543cd4493e631122e63ca28bf2fdee889c8bc0482959c337",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\call37\\freeze.json": "19773abd470fb49ae25f7d65a0edf253c6f97ff2867250f1fa6b41a97792e862",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\call37\\index.json": "1ce1a48660a8b82876ab86d5158da503cb9dd4ef7b5d59780f49abe04ed99365",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\call37\\literal_execution_parameters.json": "73d9574e536f27da5a86fe66dc67cbdea28410e3c4156920f48a0e12f2a22e8a",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\execution_code_binding.json": "26599cf55a47c2c61ad4134127267c4777c9f2e3f23a2181e61335460e964ee8",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\dry_run_acceptance.json": "cdca154d3e9483c32583ab037e8e8cfa8fe66c06b76f1f06751f16720fcf22fa",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\independent_CPU_negative_acceptance.json": "9d67fdb955d5e519b3aebf7f7001d99b61232e9becdc1b4ab8e1c50b3837c52c",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\stopped.json": "bed9ae07baaaf8c9542bd320da8c48b226fa80c6cfa97f0cf13d0b9ac1113b3d",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\root_start_admission.json": "42cca4dc649419173dffdb7b824752cd0252b22cda024e7ad70229d8f6bccab5",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\plan_review\\CLI37_schema_local_v2_independent_static_review.json": "5e95917fa8dc995930816e2939326a2beb41dae8d3160d747a292e4b933aa38e"
+  },
+  "prior37_exact_failure": {
+    "error": "FAILED_PRECONDITION (code 400): User location is not supported for the API use.",
+    "core_tool_count": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "raw_sha256": "8c843a77b770a791b2517e36e0bdfc93a87a745d49dc957244f2ee2eec6f0799",
+    "terminal_sha256": "1c8fb92cea61b34e332a28ca5a2438597fda998376a0f5b629e7bc61e38b3bd6"
+  },
+  "old_cap37_NO38_STOP_preserved": true,
+  "old36_whole_REJECT_preserved": true,
+  "new_model_calls_at_preparation": 0,
+  "cash_cost": "UNKNOWN_NOT_ZERO"
+}

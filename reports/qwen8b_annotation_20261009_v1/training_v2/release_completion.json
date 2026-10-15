@@ -1,0 +1,37 @@
+{
+  "utc": "2026-10-09T14:00:45.269911+00:00",
+  "status": "PASS_LOCAL_SELECTED_DATA_CODE_PROCESSOR_PREFLIGHT_AND_PORTABLE_ARCHIVE",
+  "tasks": {
+    "crop": {
+      "train": 181,
+      "validation": 148
+    },
+    "temporal": {
+      "train": 314,
+      "validation": 89
+    }
+  },
+  "temporal_sources": 48,
+  "temporal_frames": 6047,
+  "selected_file_hashes_verified": 6352,
+  "input_image_files": 6323,
+  "archive_files": 6353,
+  "zip_bytes": 1269695818,
+  "zip_sha256": "45af6f8edc267be4a126cd1f86fb99172f11632202da947d9cb3eca2246ff57c",
+  "zip": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\training_v2\\QWEN8B_TRAINING_PREP_V2_20261009.zip",
+  "all_archive_crc_and_sha_verified": true,
+  "manifest_sha256": "adfe72e2318ec11913175fefb2ba987393d8f442a097efc16b2474a112b94ba1",
+  "gemini_event_candidates_checked": 600,
+  "gemini_event_boundaries_used_as_targets": 0,
+  "semantic_event_boundary_review_complete": false,
+  "time_training_target": "Exact human sampled-frame importance, not semantic event boundary extraction",
+  "actual_8b_loss_or_optimizer_smoke_performed": false,
+  "production_model_weights_loaded": false,
+  "gpu_started": false,
+  "training_started": false,
+  "dataset_uploaded_to_linux": false,
+  "large_transfer_permission": "NOT_YET_REQUESTED",
+  "small_processor_download_bytes": 11499306,
+  "small_processor_download_direction": "LINUX_TO_WINDOWS_VIA_MACMINI_PROXYJUMP",
+  "windows_preflight_environment_not_claimed_training_capable": true
+}

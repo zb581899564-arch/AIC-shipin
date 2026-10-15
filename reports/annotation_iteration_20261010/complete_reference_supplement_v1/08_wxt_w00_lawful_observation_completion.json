@@ -1,0 +1,38 @@
+{
+  "status": "PASS_ROOT_INDEPENDENT_COMPLETED_FIRST_SCOPE_MEDIA_PENDING_SEMANTIC_REFERENCE",
+  "utc": "2026-10-10T18:14:08.406891+00:00",
+  "window_id": "WxtbjNsCQ8A:SLOT6:0",
+  "original_pngs_delivered": 64,
+  "effective_pngs_delivered": 8,
+  "native_video_delivered": true,
+  "tool_issues": [],
+  "proposal_geometry_identity_issues": [],
+  "ordered_tool_count": 91,
+  "prefix_audit": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call03\\w08_completed_scope_audit.json",
+    "sha256": "a76d5be454137778ef26d8631cafa9fa04197506a46eeb21841c7e78d60f6886"
+  },
+  "stream_prefix": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call03\\w08_completed_scope_stream_prefix.jsonl",
+    "sha256": "32e9de72ecc84642c0ae61362b37157c61e908a8d7f009d24b915bc7e4d28617",
+    "bytes": 84424
+  },
+  "proposal": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call03\\w08_proposal.json",
+    "sha256": "240973e95df9db3486e0829cf875cc13e9cb29a0c483ba4a3c8f7b0f2d4917af"
+  },
+  "program_bound_facts": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call03\\w08_program_bound_facts_completed_scope.json",
+    "sha256": "e6d49d3c9c4352267f08bd8dd75ea188dc3dbdbdf7970393174764ae91ed7e73"
+  },
+  "parent_terminal_at_original_scope_audit": false,
+  "whole_CLI_status_not_inferred": true,
+  "whole_job_cost": "PENDING_ACTUAL_TERMINAL_AT_SCOPE_COMPLETION",
+  "cash_cost": "UNKNOWN_NOT_ZERO",
+  "teacher64_static_facts_root_read": true,
+  "teacher_claim_of_audio_absence_not_used_as_evidence": true,
+  "student_errata_full64_review_pending": true,
+  "semantic_admission_pending": true,
+  "training_admitted": false,
+  "new_optimizer_updates": 0
+}

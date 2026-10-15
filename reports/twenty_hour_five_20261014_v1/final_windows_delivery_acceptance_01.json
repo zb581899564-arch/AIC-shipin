@@ -1,0 +1,84 @@
+{
+  "status": "PASS_FIVE_REAL_NEW_WINDOWS_ZIPS_COMPLETE_UNION_ACCEPTANCE_NOT_OFFICIAL_SCORE",
+  "utc": "2026-10-14T11:36:11.536713+00:00",
+  "target": 5,
+  "actual_new_delivered": 5,
+  "packages": [
+    {
+      "arm": "BOTH",
+      "local_zip": "G:\\ai\\AIC视频\\deliveries\\AIC20H_TEMPORAL_BOTH_20261014\\candidate_TEMPORAL_BOTH.zip",
+      "bytes": 379930,
+      "SHA256": "2b3885237c1e5d75df0ce6b31c578f62c36fee61e120798c1c6054190bf8eb37",
+      "member_SHA256": "e6ca8c9e5450380dd85d77c2d86bdb5677bf74fe753c9c924fbcaa2117b144da",
+      "canonical_SHA256": "a549d27e6c2a26f2288a3326b11445ab206cf9e755cd47aab5a06cccd919ef90",
+      "frame_count": 121927,
+      "records": 426,
+      "independent11strict": true,
+      "official_score": "UNKNOWN",
+      "quality_pass_claimed": false
+    },
+    {
+      "arm": "END",
+      "local_zip": "G:\\ai\\AIC视频\\deliveries\\AIC20H_TEMPORAL_END_20261014\\candidate_TEMPORAL_END.zip",
+      "bytes": 380289,
+      "SHA256": "52d0f1b7fad648d3d1ddb80fcde6297e477eff980fe71fc954af687e8b97b59c",
+      "member_SHA256": "6ad21a0add3b7930720ce5fd523aa47d820d44929678ad05f5dabb5755a16085",
+      "canonical_SHA256": "e5cbedba54ce422ce3c1e493d0e73cffdd12a80995fe2e67b57200e4bfe0f265",
+      "frame_count": 122028,
+      "records": 426,
+      "independent11strict": true,
+      "official_score": "UNKNOWN",
+      "quality_pass_claimed": false
+    },
+    {
+      "arm": "START",
+      "local_zip": "G:\\ai\\AIC视频\\deliveries\\AIC20H_TEMPORAL_START_20261014\\candidate_TEMPORAL_START.zip",
+      "bytes": 380004,
+      "SHA256": "f0394513a51f263402400ab1e9aa680c801bc017e5305ac32e5ac45b53fe694f",
+      "member_SHA256": "c95c46885742b2ab4bafa97529167fd4ae7dc6b244b5e034fb15f1ccaae32807",
+      "canonical_SHA256": "3d1e1586ee80512913fd5c5a040363fce7990509a247d5df025a6eeef60a579b",
+      "frame_count": 121949,
+      "records": 426,
+      "independent11strict": true,
+      "official_score": "UNKNOWN",
+      "quality_pass_claimed": false
+    },
+    {
+      "arm": "VERIFY",
+      "local_zip": "G:\\ai\\AIC视频\\deliveries\\AIC20H_TEMPORAL_VERIFY_20261014\\candidate_TEMPORAL_VERIFY.zip",
+      "bytes": 380199,
+      "SHA256": "86593725c6bad919dc0d342fe98ad65e489a13a6e492da5de3afd247a3226543",
+      "member_SHA256": "df6141d1efdf58daafc47bd84826b078d87585ae901669a75db8b0fa74f45fe2",
+      "canonical_SHA256": "68f7e3c0c9413fb8ab7def413fce5388679d5fe3600d5be946c593fb9907789a",
+      "frame_count": 122002,
+      "records": 426,
+      "independent11strict": true,
+      "official_score": "UNKNOWN",
+      "quality_pass_claimed": false
+    },
+    {
+      "arm": "VERIFY_BOTH",
+      "local_zip": "G:\\ai\\AIC视频\\deliveries\\AIC20H_TEMPORAL_VERIFY_BOTH_20261014\\candidate_TEMPORAL_VERIFY_BOTH.zip",
+      "bytes": 379784,
+      "SHA256": "06aa6b861c5f70bce1246a28439d025caeffd3abd2972e787c1841374aca4ed3",
+      "member_SHA256": "0c1233b282ddd07fcd9a002206dbaccc1a05e0a36677111f69895ef64dd98114",
+      "canonical_SHA256": "813be587fbeb82f475830d6c05ecaeb3446a44aaf08241402925f2da1264e1c5",
+      "frame_count": 121879,
+      "records": 426,
+      "independent11strict": true,
+      "official_score": "UNKNOWN",
+      "quality_pass_claimed": false
+    }
+  ],
+  "every_package_actual_records": 426,
+  "physical_model_parameters": 8782459120,
+  "scientific_quality_claim": false,
+  "website_submitted": false,
+  "raw_tensor_clock_transfers": 0,
+  "genuine_canonical_differences_actual_local_verified": true,
+  "historical_canonical_reference": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_family_native_package_v3/history.json",
+    "sha256": "b05a80b2d23349a3b1976b521067e3c81571bd9062989c0f7be5c2e49bf7f82e"
+  },
+  "distinct_from_historical_packages_actual_local_verified": true
+}

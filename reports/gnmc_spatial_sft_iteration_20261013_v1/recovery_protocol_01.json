@@ -1,0 +1,9 @@
+{
+  "schema": "HTTP429_NATIVE_SFT_INPUT_RESUME_V1",
+  "trigger": "original prepare HTTP429 after131 successful training tensors+40 evaluation tensors;GPU0",
+  "reuse": "all existing successful members/packed/RGB/tensors/proofs; no download/decode/encode repeated",
+  "changes": "one network worker, request spacing1.25s, honor Retry-After with bounded5attempts; reconstruct same fixed order manifest from original metadata and cached inputs",
+  "original_recipe_gates_source_order_changed": false,
+  "original_failures_preserved": true,
+  "successes_repeated": false
+}

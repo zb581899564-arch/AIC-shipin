@@ -1,0 +1,241 @@
+{
+  "utc": "2026-10-09T13:02:56.689162+00:00",
+  "status": "PASS_DATA_AND_IMAGE_CONTRACT_ONLY",
+  "final_artifacts_hash_verified": 13,
+  "unique_sft_image_paths_opened": 543,
+  "same_source_train_validation_overlap": 0,
+  "exact_rgb_train_validation_overlap": 0,
+  "profiles": {
+    "crop_sft_train": {
+      "rows": 531,
+      "source_groups": 40,
+      "ratio_counts": {
+        "16:9": 426,
+        "9:16": 105
+      },
+      "identity_rows": 388,
+      "distinct_boxes": 98,
+      "most_frequent_box": [
+        {
+          "ratio": [
+            16,
+            9
+          ],
+          "box_xywh": [
+            0,
+            0,
+            640,
+            360
+          ],
+          "count": 388
+        },
+        {
+          "ratio": [
+            16,
+            9
+          ],
+          "box_xywh": [
+            0,
+            45,
+            480,
+            270
+          ],
+          "count": 13
+        },
+        {
+          "ratio": [
+            16,
+            9
+          ],
+          "box_xywh": [
+            2,
+            1,
+            592,
+            333
+          ],
+          "count": 12
+        }
+      ]
+    },
+    "crop_sft_train_nonidentity": {
+      "rows": 143,
+      "source_groups": 37,
+      "ratio_counts": {
+        "9:16": 105,
+        "16:9": 38
+      },
+      "identity_rows": 0,
+      "distinct_boxes": 97,
+      "most_frequent_box": [
+        {
+          "ratio": [
+            16,
+            9
+          ],
+          "box_xywh": [
+            0,
+            45,
+            480,
+            270
+          ],
+          "count": 13
+        },
+        {
+          "ratio": [
+            16,
+            9
+          ],
+          "box_xywh": [
+            2,
+            1,
+            592,
+            333
+          ],
+          "count": 12
+        },
+        {
+          "ratio": [
+            16,
+            9
+          ],
+          "box_xywh": [
+            0,
+            90,
+            480,
+            270
+          ],
+          "count": 5
+        }
+      ]
+    },
+    "crop_sft_validation": {
+      "rows": 148,
+      "source_groups": 10,
+      "ratio_counts": {
+        "16:9": 107,
+        "9:16": 41
+      },
+      "identity_rows": 72,
+      "distinct_boxes": 52,
+      "most_frequent_box": [
+        {
+          "ratio": [
+            16,
+            9
+          ],
+          "box_xywh": [
+            0,
+            0,
+            640,
+            360
+          ],
+          "count": 72
+        },
+        {
+          "ratio": [
+            16,
+            9
+          ],
+          "box_xywh": [
+            0,
+            0,
+            480,
+            270
+          ],
+          "count": 7
+        },
+        {
+          "ratio": [
+            16,
+            9
+          ],
+          "box_xywh": [
+            0,
+            65,
+            480,
+            270
+          ],
+          "count": 5
+        }
+      ]
+    },
+    "crop_sft_validation_nonidentity": {
+      "rows": 76,
+      "source_groups": 10,
+      "ratio_counts": {
+        "9:16": 41,
+        "16:9": 35
+      },
+      "identity_rows": 0,
+      "distinct_boxes": 51,
+      "most_frequent_box": [
+        {
+          "ratio": [
+            16,
+            9
+          ],
+          "box_xywh": [
+            0,
+            0,
+            480,
+            270
+          ],
+          "count": 7
+        },
+        {
+          "ratio": [
+            16,
+            9
+          ],
+          "box_xywh": [
+            0,
+            65,
+            480,
+            270
+          ],
+          "count": 5
+        },
+        {
+          "ratio": [
+            16,
+            9
+          ],
+          "box_xywh": [
+            6,
+            29,
+            528,
+            297
+          ],
+          "count": 5
+        }
+      ]
+    }
+  },
+  "temporal_sources": 50,
+  "temporal_event_states": {
+    "UNKNOWN": 151,
+    "KEEP": 449
+  },
+  "temporal_sft_rows": 0,
+  "temporal_quarantined_sources": [
+    "37rzWOQsNIw"
+  ],
+  "assessment": {
+    "crop_pilot_data_ready": true,
+    "production_quality_proven": false,
+    "processor_collator_training_dry_run_performed": false,
+    "spatial_output_contract": "integer pixel box_xyw, derived aspect-ratio height",
+    "temporal_training_ready": false,
+    "limitations": [
+      "Model annotation and self-review, no independent human gold",
+      "Only 50 videos and 12 sampled frames per video",
+      "460 of 679 accepted crops retain the entire source image",
+      "No supervised empty/abstain targets",
+      "Current training-loader compatibility not established; image placeholder must resolve to actual vision input",
+      "No tokenization, assistant-only masking, loss or optimizer smoke run",
+      "No near-duplicate or reencoded-content leakage proof"
+    ]
+  },
+  "model_loaded": false,
+  "training_started": false
+}

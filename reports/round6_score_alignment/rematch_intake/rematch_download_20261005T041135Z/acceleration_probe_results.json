@@ -1,0 +1,62 @@
+{
+  "tested_utc": "2026-10-05T05:35:30Z",
+  "user_membership": "NON_SVIP_USER_CONFIRMED",
+  "existing_client": "qjfoidnh/BaiduPCS-Go v4.0.2 (latest official release checked)",
+  "local_download_rate_limit": "unlimited",
+  "probes": [
+    {
+      "method": "pcs",
+      "bounded_seconds": 22.01,
+      "last_reported_bytes_approx": 2558525,
+      "result": "no sustained acceleration established",
+      "parallel": 4
+    },
+    {
+      "method": "stream",
+      "bounded_seconds": 22.01,
+      "last_reported_bytes_approx": 1572864,
+      "result": "no sustained acceleration established",
+      "parallel": 1
+    },
+    {
+      "method": "curl signed Baidu CDN URL; UA pan.baidu.com",
+      "received_bytes": 94,
+      "result": "rejected; body was not archived media",
+      "http_status": 403
+    },
+    {
+      "method": "curl signed Baidu CDN URL; same Android UA",
+      "max_seconds": 15,
+      "received_bytes": 0,
+      "result": "timed out without receiving sample",
+      "http_status": 206
+    }
+  ],
+  "comparison_limit": "short probes ran while original download continued; not a controlled full-file comparison",
+  "rejected_candidates": [
+    {
+      "reason": "archived; source pushed in 2018; Python 2.7",
+      "repository": "sdvcrx/pan-baidu-download"
+    },
+    {
+      "reason": "README explicitly states backend blocked and tool unusable",
+      "repository": "Roarpalm/Baiduyun-Download"
+    },
+    {
+      "reason": "last source push 2019; not evidence of a current speed solution",
+      "repository": "barry-ran/aria2-for-baidudownload-patch"
+    },
+    {
+      "reason": "Baidu driver documentation ties useful accelerated UA route to SVIP; no deployment needed for present task",
+      "repository": "OpenListTeam/OpenList"
+    }
+  ],
+  "action": "cleanly paused only owned processes and resumed same file plus sidecar with one download thread",
+  "v2_wrapper_pid": 2714466,
+  "v2_download_pid": 2714467,
+  "progress_percent_verified": 5.4517,
+  "auth_material_exposed": false,
+  "credential_sent_to_thirdparty": false,
+  "model_inference_run": false,
+  "note": "User plans to purchase SVIP; paid status and account consistency not yet verified."
+}

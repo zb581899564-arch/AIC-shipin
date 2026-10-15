@@ -1,0 +1,171 @@
+{
+  "status": "PASS_MANUAL38_AST_TEXT_PATH_PROJECTION_SHA_PREP_ONLY_NO_MODEL",
+  "AST": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\manual_CLI38_retry_v1\\audit.py",
+      "sha256": "14d5b24d6a4655f4c26bcae778f128394cd8155e5586b7f2c100bc39d524924b",
+      "bytes": 11772
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\manual_CLI38_retry_v1\\common.py",
+      "sha256": "18a1dd8624e9bcd2f907c92ff358a9f98722fc893ebaabe9ae8bb65d43ce3238",
+      "bytes": 4771
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\manual_CLI38_retry_v1\\controller.py",
+      "sha256": "9abab4eb6b61da4a06ac2d59f89d0dcf145b4ae812b259f0b8eee89e7b54ec41",
+      "bytes": 3233
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\manual_CLI38_retry_v1\\engine.py",
+      "sha256": "f862fcc886a0c038f09c95d0511bab3705dfebd4378b784569bde5097047cf34",
+      "bytes": 21008
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\manual_CLI38_retry_v1\\launch.py",
+      "sha256": "655119d5c53adbb6558037943807c89915dde48ded7464b5047cb866c951e8b1",
+      "bytes": 10704
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\manual_CLI38_retry_v1\\observer.py",
+      "sha256": "6b93177c8609c4481694419c73091c3d2b3e1eea98bb677398e9808d6be805a8",
+      "bytes": 6547
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\manual_CLI38_retry_v1\\prepare.py",
+      "sha256": "36d33571d1c3bf4a6fb76ef812784dd088bddb0c212e37d94237da8434d9fb3e",
+      "bytes": 8882
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\manual_CLI38_retry_v1\\prompt.py",
+      "sha256": "a4e9afa6b3ef0b92f04632ef2d46840f7fb44f3c63aaa0b4b9d1322a13ad8832",
+      "bytes": 9209
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\manual_CLI38_retry_v1\\run_call.py",
+      "sha256": "f782b58c3e1aa15bc0f77fa21089fff864484c1b47ca751bc9233af189b4dd08",
+      "bytes": 65
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\manual_CLI38_retry_v1\\verify.py",
+      "sha256": "18671d93a7ab9efedf03b9f2bd6f4998d6218d62c2e763cae545820ecb26dc62",
+      "bytes": 9232
+    }
+  ],
+  "source_binding_sha256": "ebdb7341908df4a79993fe11e789637e2aee8c831ea09a44567106e5cde69038",
+  "freeze_sha256": "d5fb553bcf0cb09ebc96583902ad7fcf4d872377a909974b67d6e0da4865b2ff",
+  "input_count": 1196,
+  "parts": [
+    {
+      "part_id": "main",
+      "bytes": 7096,
+      "sha256": "d3a6848504944b5f5c3ab8eb4dddcaecb3abf81ff351630120cf970ca3858845"
+    },
+    {
+      "part_id": "w21_header",
+      "bytes": 12834,
+      "sha256": "b8d0c7b3ffac1f31954e0ed8e5859cfad9c6310e2f3cdba9175a3aeaa162bdd7"
+    },
+    {
+      "part_id": "w21_native00_15",
+      "bytes": 29049,
+      "sha256": "78f7d302d14223c3f091efd4a10efc46082bb3193926f9d74f528343e4a7ec2a"
+    },
+    {
+      "part_id": "w21_native16_31",
+      "bytes": 29097,
+      "sha256": "af0818862ff2cd6c4aa76ccdeedc86e6895fcad2d83775c7ee1c10263e9af233"
+    },
+    {
+      "part_id": "w21_native32_47",
+      "bytes": 29117,
+      "sha256": "96e53c656724883c4f369a326edd79d1285f0d29db0c5ac1b402573881fa3a34"
+    },
+    {
+      "part_id": "w21_native48_63",
+      "bytes": 29115,
+      "sha256": "695c33bb46bf22bfabdb63dcda8fea741a434ad494fe6b4caa455a553e9c0048"
+    },
+    {
+      "part_id": "w21_proposal_schema",
+      "bytes": 3862,
+      "sha256": "1e91e435ba5985cb62056cf51e777e92e29773882605fa88a4984249def94aa1"
+    },
+    {
+      "part_id": "w22_header",
+      "bytes": 12699,
+      "sha256": "ac0808252735f8bceafa7731d2f99d99c303996540d76040d81d8a758b51b072"
+    },
+    {
+      "part_id": "w22_native00_15",
+      "bytes": 28620,
+      "sha256": "13cf46a93f51f55b8830897aa9d20b3919ba03b79e6b5416b7f92cce8db6319b"
+    },
+    {
+      "part_id": "w22_native16_31",
+      "bytes": 28642,
+      "sha256": "d1e2f4a62e300aed058b6139addb1ec1762eccbea5bc791a66eb5876c437fe86"
+    },
+    {
+      "part_id": "w22_native32_47",
+      "bytes": 28672,
+      "sha256": "c564de1a3d540de68563225a7b8cbceaed0f16cb3c9f77782d091c76f46d3052"
+    },
+    {
+      "part_id": "w22_native48_63",
+      "bytes": 28672,
+      "sha256": "6cffe1d2d6599b649884686cad33e1509e9661bf3067a136f5ff0ab827f26d77"
+    },
+    {
+      "part_id": "w22_proposal_schema",
+      "bytes": 3862,
+      "sha256": "22394dfb58dff35aec4ecd09c99f3c1985eef0b312cdb846471bd839e6f2f86e"
+    },
+    {
+      "part_id": "w23_header",
+      "bytes": 12703,
+      "sha256": "9b0dab3f65b58f7b0104ac3b51cfae651ab28eb7d4c19af85b3f8cad594f04e9"
+    },
+    {
+      "part_id": "w23_native00_15",
+      "bytes": 28634,
+      "sha256": "23207ce47a3c8d5513ff549baae17e64d58472bebf2892a2bdc92885d460d75d"
+    },
+    {
+      "part_id": "w23_native16_31",
+      "bytes": 28650,
+      "sha256": "c08972a5fcffb7d376658ea50dfa7491a4e4166ab9d8dd6e1b1034ba466539dc"
+    },
+    {
+      "part_id": "w23_native32_47",
+      "bytes": 28680,
+      "sha256": "92585446459c6693c5c5ba46300e9fad57f9b89bf95497a14c433f0785907dda"
+    },
+    {
+      "part_id": "w23_native48_63",
+      "bytes": 28678,
+      "sha256": "3bd7119d3328d7b5249236916b7c95f42455368290bdec686453f9cbd9ada838"
+    },
+    {
+      "part_id": "w23_proposal_schema",
+      "bytes": 3862,
+      "sha256": "44dabd149968b04f80f61f61b8967627f234d70189294cade7bdc49479cd3734"
+    }
+  ],
+  "max_text_bytes": 29117,
+  "argv_utf16_units_including_NUL": 738,
+  "prior37_exact_failure": {
+    "error": "FAILED_PRECONDITION (code 400): User location is not supported for the API use.",
+    "core_tool_count": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "raw_sha256": "8c843a77b770a791b2517e36e0bdfc93a87a745d49dc957244f2ee2eec6f0799",
+    "terminal_sha256": "1c8fb92cea61b34e332a28ca5a2438597fda998376a0f5b629e7bc61e38b3bd6"
+  },
+  "old24_CPU_receipt_sha256": "9d67fdb955d5e519b3aebf7f7001d99b61232e9becdc1b4ab8e1c50b3837c52c",
+  "old68_CPU_receipt_sha256": "5a81511285825104a70a511cb836f0196d01a1f03bc1e74bce7454cb305db1ac",
+  "old51_and24_and68_repeated": false,
+  "new_PNG_decode": 0,
+  "new_model_calls": 0,
+  "new_root_gate_required": true
+}

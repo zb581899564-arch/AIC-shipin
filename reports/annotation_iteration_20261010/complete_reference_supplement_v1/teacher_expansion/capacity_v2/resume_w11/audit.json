@@ -1,0 +1,808 @@
+{
+  "utc": "2026-10-10T16:03:20.439025+00:00",
+  "status": "STOP_RESUME_STRUCTURE_OR_COMPLETION_FAILED_KEEP_RAW",
+  "window_id": "AwmHb44_ouw:SLOT6:11",
+  "job_index": 3,
+  "conversation_id": "7f341ecf-da15-407b-94af-83316fccaeaa",
+  "inherited_native_pngs": 64,
+  "new_native_pngs": 0,
+  "inherited_fact_groups": 16,
+  "new_fact_groups": 0,
+  "inherited_clip_reads": 1,
+  "new_clip_reads": 0,
+  "inherited_student_preview_frames": [
+    "F00",
+    "F09",
+    "F18"
+  ],
+  "new_student_preview_frames": [],
+  "actual_student_input_frames": 64,
+  "teacher_preview_frames_total": 8,
+  "logical_proposal_count": 1,
+  "own_output_self_reads": 0,
+  "tool_issues": [
+    {
+      "reason": "RESUME_SUPPLY_ORDER_OR_WHITELIST",
+      "expected": [
+        [
+          "view_file",
+          "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v2\\resume_w11\\index.json"
+        ],
+        [
+          "view_file",
+          "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\student_views\\f27_student.png"
+        ],
+        [
+          "view_file",
+          "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\student_views\\f36_student.png"
+        ],
+        [
+          "view_file",
+          "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\student_views\\f45_student.png"
+        ],
+        [
+          "view_file",
+          "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\student_views\\f54_student.png"
+        ],
+        [
+          "view_file",
+          "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\student_views\\f63_student.png"
+        ],
+        [
+          "write_to_file",
+          "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v2\\resume_w11\\w03_proposal.json"
+        ]
+      ],
+      "actual": []
+    }
+  ],
+  "schema_issues": [
+    {
+      "reason": "PROPOSAL_SCHEMA_OR_COVERAGE",
+      "error": "FileNotFoundError(2, 'No such file or directory')"
+    }
+  ],
+  "actual_new_supply": [],
+  "inherited_actual_supply": [
+    {
+      "step": 4,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f00_o009891.png"
+    },
+    {
+      "step": 6,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f01_o009902.png"
+    },
+    {
+      "step": 8,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f02_o009913.png"
+    },
+    {
+      "step": 10,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f03_o009924.png"
+    },
+    {
+      "step": 12,
+      "tool": "write_to_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\call00\\w03_group00.json"
+    },
+    {
+      "step": 14,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f04_o009935.png"
+    },
+    {
+      "step": 16,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f05_o009946.png"
+    },
+    {
+      "step": 18,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f06_o009958.png"
+    },
+    {
+      "step": 20,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f07_o009969.png"
+    },
+    {
+      "step": 22,
+      "tool": "write_to_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\call00\\w03_group01.json"
+    },
+    {
+      "step": 24,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f08_o009980.png"
+    },
+    {
+      "step": 26,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f09_o009991.png"
+    },
+    {
+      "step": 28,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f10_o010002.png"
+    },
+    {
+      "step": 30,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f11_o010014.png"
+    },
+    {
+      "step": 32,
+      "tool": "write_to_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\call00\\w03_group02.json"
+    },
+    {
+      "step": 34,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f12_o010025.png"
+    },
+    {
+      "step": 36,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f13_o010036.png"
+    },
+    {
+      "step": 38,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f14_o010047.png"
+    },
+    {
+      "step": 40,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f15_o010058.png"
+    },
+    {
+      "step": 42,
+      "tool": "write_to_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\call00\\w03_group03.json"
+    },
+    {
+      "step": 44,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f16_o010070.png"
+    },
+    {
+      "step": 46,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f17_o010081.png"
+    },
+    {
+      "step": 48,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f18_o010092.png"
+    },
+    {
+      "step": 50,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f19_o010103.png"
+    },
+    {
+      "step": 52,
+      "tool": "write_to_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\call00\\w03_group04.json"
+    },
+    {
+      "step": 54,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f20_o010114.png"
+    },
+    {
+      "step": 56,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f21_o010126.png"
+    },
+    {
+      "step": 58,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f22_o010137.png"
+    },
+    {
+      "step": 60,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f23_o010148.png"
+    },
+    {
+      "step": 62,
+      "tool": "write_to_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\call00\\w03_group05.json"
+    },
+    {
+      "step": 64,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f24_o010159.png"
+    },
+    {
+      "step": 66,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f25_o010170.png"
+    },
+    {
+      "step": 68,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f26_o010181.png"
+    },
+    {
+      "step": 70,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f27_o010193.png"
+    },
+    {
+      "step": 72,
+      "tool": "write_to_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\call00\\w03_group06.json"
+    },
+    {
+      "step": 74,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f28_o010204.png"
+    },
+    {
+      "step": 76,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f29_o010215.png"
+    },
+    {
+      "step": 78,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f30_o010226.png"
+    },
+    {
+      "step": 80,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f31_o010237.png"
+    },
+    {
+      "step": 82,
+      "tool": "write_to_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\call00\\w03_group07.json"
+    },
+    {
+      "step": 84,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f32_o010249.png"
+    },
+    {
+      "step": 86,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f33_o010260.png"
+    },
+    {
+      "step": 88,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f34_o010271.png"
+    },
+    {
+      "step": 90,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f35_o010282.png"
+    },
+    {
+      "step": 92,
+      "tool": "write_to_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\call00\\w03_group08.json"
+    },
+    {
+      "step": 94,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f36_o010293.png"
+    },
+    {
+      "step": 96,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f37_o010305.png"
+    },
+    {
+      "step": 98,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f38_o010316.png"
+    },
+    {
+      "step": 100,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f39_o010327.png"
+    },
+    {
+      "step": 102,
+      "tool": "write_to_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\call00\\w03_group09.json"
+    },
+    {
+      "step": 104,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f40_o010338.png"
+    },
+    {
+      "step": 106,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f41_o010349.png"
+    },
+    {
+      "step": 108,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f42_o010361.png"
+    },
+    {
+      "step": 110,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f43_o010372.png"
+    },
+    {
+      "step": 112,
+      "tool": "write_to_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\call00\\w03_group10.json"
+    },
+    {
+      "step": 114,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f44_o010383.png"
+    },
+    {
+      "step": 116,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f45_o010394.png"
+    },
+    {
+      "step": 118,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f46_o010405.png"
+    },
+    {
+      "step": 120,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f47_o010416.png"
+    },
+    {
+      "step": 122,
+      "tool": "write_to_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\call00\\w03_group11.json"
+    },
+    {
+      "step": 124,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f48_o010428.png"
+    },
+    {
+      "step": 126,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f49_o010439.png"
+    },
+    {
+      "step": 128,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f50_o010450.png"
+    },
+    {
+      "step": 130,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f51_o010461.png"
+    },
+    {
+      "step": 132,
+      "tool": "write_to_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\call00\\w03_group12.json"
+    },
+    {
+      "step": 134,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f52_o010472.png"
+    },
+    {
+      "step": 136,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f53_o010484.png"
+    },
+    {
+      "step": 138,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f54_o010495.png"
+    },
+    {
+      "step": 140,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f55_o010506.png"
+    },
+    {
+      "step": 142,
+      "tool": "write_to_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\call00\\w03_group13.json"
+    },
+    {
+      "step": 144,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f56_o010517.png"
+    },
+    {
+      "step": 146,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f57_o010528.png"
+    },
+    {
+      "step": 148,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f58_o010540.png"
+    },
+    {
+      "step": 150,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f59_o010551.png"
+    },
+    {
+      "step": 152,
+      "tool": "write_to_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\call00\\w03_group14.json"
+    },
+    {
+      "step": 154,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f60_o010562.png"
+    },
+    {
+      "step": 156,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f61_o010573.png"
+    },
+    {
+      "step": 158,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f62_o010584.png"
+    },
+    {
+      "step": 160,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\frames\\f63_o010596.png"
+    },
+    {
+      "step": 162,
+      "tool": "write_to_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\call00\\w03_group15.json"
+    },
+    {
+      "step": 164,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\clip.mp4"
+    },
+    {
+      "step": 166,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\student_views\\f00_student.png"
+    },
+    {
+      "step": 168,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\student_views\\f09_student.png"
+    },
+    {
+      "step": 170,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_awmhb44_ouw_w11\\student_views\\f18_student.png"
+    }
+  ],
+  "inherited_program_bound_facts": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\call00\\w03_program_bound_facts.json",
+    "sha256": "906279fa5e30d011869079ddef521f479800c13281d3e8d2f6cbaca74122d257"
+  },
+  "native_geometry": [
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ],
+    [
+      540,
+      360
+    ]
+  ],
+  "student_geometry": [
+    [
+      544,
+      352
+    ],
+    [
+      544,
+      352
+    ],
+    [
+      544,
+      352
+    ],
+    [
+      544,
+      352
+    ],
+    [
+      544,
+      352
+    ],
+    [
+      544,
+      352
+    ],
+    [
+      544,
+      352
+    ],
+    [
+      544,
+      352
+    ]
+  ],
+  "original_timeout_failure_preserved": true,
+  "original_terminal_sha256": "be1a4952fe6133e80faff90dfabd29c5b48999db625948a5bb62bf31238cff33",
+  "original_raw_sha256": "ba9a6b05fa287c610b53fced62b2df907df9821b4bbfd8976dbcad02ab5756c6",
+  "new_terminal_sha256": "b80b14ab42e3a1b8fa29aace47c0105d800770ad6bef17991247ae7c2ae3ae69",
+  "new_raw_sha256": "6935613353b4f21c1460d354ab96d5d522ea92237f33fd7f2c388b9f49fa9ae4",
+  "freeze_sha256": "6565c4cd0b4dfa5e4a87bfba52e0f33f1a2854e51553d1c294806dfa588a3f93",
+  "proposal_sha256": null,
+  "actual_result_status": "ERROR",
+  "actual_result_usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "thinking_tokens": 0,
+    "cache_read_tokens": 0,
+    "total_tokens": 0
+  },
+  "CLI_after": 25,
+  "cash_cost": "UNKNOWN_NOT_ZERO",
+  "semantic_correctness": "PENDING_ROOT_AND_INDEPENDENT_STUDENT_REVIEW",
+  "training_admitted": false,
+  "human_gold": false,
+  "independent_blind_observation": false,
+  "new_training": 0,
+  "new_426": 0,
+  "automatic_retry": false
+}

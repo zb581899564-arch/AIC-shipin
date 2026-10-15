@@ -1,0 +1,1055 @@
+{
+  "status": "SIX_SHORT_CLIPS_COMPLETE_WEAK_LABELS_QUARANTINED",
+  "clips": [
+    {
+      "clip": "0tmA_C6XwfM_00",
+      "samples": [
+        {
+          "candidate_id": 0,
+          "state": "REJECT",
+          "native_frames": 50,
+          "human_proxy_mean": 1.4049999999999998,
+          "teacher_claimed_observation_instants": [
+            0,
+            1
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 1,
+          "state": "REJECT",
+          "native_frames": 50,
+          "human_proxy_mean": 1.7919999999999985,
+          "teacher_claimed_observation_instants": [
+            2,
+            3
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 2,
+          "state": "REJECT",
+          "native_frames": 50,
+          "human_proxy_mean": 1.506,
+          "teacher_claimed_observation_instants": [
+            4,
+            5
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 3,
+          "state": "UNKNOWN",
+          "native_frames": 50,
+          "human_proxy_mean": 1.6960000000000017,
+          "teacher_claimed_observation_instants": [
+            6,
+            7
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 4,
+          "state": "KEEP",
+          "native_frames": 50,
+          "human_proxy_mean": 2.8760000000000026,
+          "teacher_claimed_observation_instants": [
+            8,
+            9
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 5,
+          "state": "REJECT",
+          "native_frames": 50,
+          "human_proxy_mean": 2.360999999999998,
+          "teacher_claimed_observation_instants": [
+            10,
+            11
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 6,
+          "state": "KEEP",
+          "native_frames": 50,
+          "human_proxy_mean": 1.517,
+          "teacher_claimed_observation_instants": [
+            12,
+            13
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 7,
+          "state": "REJECT",
+          "native_frames": 50,
+          "human_proxy_mean": 2.332999999999998,
+          "teacher_claimed_observation_instants": [
+            14,
+            15
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 8,
+          "state": "REJECT",
+          "native_frames": 50,
+          "human_proxy_mean": 2.4480000000000017,
+          "teacher_claimed_observation_instants": [
+            16,
+            17
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 9,
+          "state": "REJECT",
+          "native_frames": 50,
+          "human_proxy_mean": 1.4700000000000015,
+          "teacher_claimed_observation_instants": [
+            18,
+            19
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 10,
+          "state": "REJECT",
+          "native_frames": 50,
+          "human_proxy_mean": 1.5969999999999995,
+          "teacher_claimed_observation_instants": [
+            20,
+            21
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 11,
+          "state": "REJECT",
+          "native_frames": 50,
+          "human_proxy_mean": 1.7469999999999999,
+          "teacher_claimed_observation_instants": [
+            22,
+            23
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 12,
+          "state": "REJECT",
+          "native_frames": 50,
+          "human_proxy_mean": 1.5539999999999987,
+          "teacher_claimed_observation_instants": [
+            24,
+            25
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 13,
+          "state": "KEEP",
+          "native_frames": 50,
+          "human_proxy_mean": 1.8930000000000013,
+          "teacher_claimed_observation_instants": [
+            26,
+            27
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 14,
+          "state": "KEEP",
+          "native_frames": 50,
+          "human_proxy_mean": 2.0469999999999984,
+          "teacher_claimed_observation_instants": [
+            28,
+            29
+          ],
+          "not_semantic_highlight_gold": true
+        }
+      ],
+      "labels_sha256": "5dee51ad458d8f86f17ccf18a2bd6567b178b6ba92e0a50df09b06c505dc0056",
+      "manifest_sha256": "3e7aac05ae83497103b4c5f6ce7d7486c454126f15b883a00ed2898e800e21eb",
+      "mean_human_proxy_by_state": {
+        "REJECT": 1.8212999999999997,
+        "UNKNOWN": 1.6960000000000017,
+        "KEEP": 2.0832500000000005
+      }
+    },
+    {
+      "clip": "0tmA_C6XwfM_01",
+      "samples": [
+        {
+          "candidate_id": 0,
+          "state": "REJECT",
+          "native_frames": 50,
+          "human_proxy_mean": 2.7979999999999996,
+          "teacher_claimed_observation_instants": [
+            0,
+            1
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 1,
+          "state": "KEEP",
+          "native_frames": 50,
+          "human_proxy_mean": 2.9960000000000004,
+          "teacher_claimed_observation_instants": [
+            2,
+            3
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 2,
+          "state": "KEEP",
+          "native_frames": 50,
+          "human_proxy_mean": 2.7060000000000013,
+          "teacher_claimed_observation_instants": [
+            4,
+            5
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 3,
+          "state": "REJECT",
+          "native_frames": 50,
+          "human_proxy_mean": 2.7979999999999996,
+          "teacher_claimed_observation_instants": [
+            6,
+            7
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 4,
+          "state": "KEEP",
+          "native_frames": 50,
+          "human_proxy_mean": 2.506,
+          "teacher_claimed_observation_instants": [
+            8,
+            9
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 5,
+          "state": "KEEP",
+          "native_frames": 50,
+          "human_proxy_mean": 2.4020000000000024,
+          "teacher_claimed_observation_instants": [
+            10,
+            11
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 6,
+          "state": "REJECT",
+          "native_frames": 50,
+          "human_proxy_mean": 2.4490000000000016,
+          "teacher_claimed_observation_instants": [
+            12,
+            13
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 7,
+          "state": "KEEP",
+          "native_frames": 50,
+          "human_proxy_mean": 2.450000000000002,
+          "teacher_claimed_observation_instants": [
+            14,
+            15
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 8,
+          "state": "KEEP",
+          "native_frames": 50,
+          "human_proxy_mean": 2.302999999999998,
+          "teacher_claimed_observation_instants": [
+            16,
+            17
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 9,
+          "state": "UNKNOWN",
+          "native_frames": 50,
+          "human_proxy_mean": 2.006,
+          "teacher_claimed_observation_instants": [
+            18,
+            19
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 10,
+          "state": "KEEP",
+          "native_frames": 50,
+          "human_proxy_mean": 1.8529999999999989,
+          "teacher_claimed_observation_instants": [
+            20,
+            21
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 11,
+          "state": "REJECT",
+          "native_frames": 50,
+          "human_proxy_mean": 1.8009999999999986,
+          "teacher_claimed_observation_instants": [
+            22,
+            23
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 12,
+          "state": "KEEP",
+          "native_frames": 50,
+          "human_proxy_mean": 1.506,
+          "teacher_claimed_observation_instants": [
+            24,
+            25
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 13,
+          "state": "REJECT",
+          "native_frames": 50,
+          "human_proxy_mean": 1.6470000000000005,
+          "teacher_claimed_observation_instants": [
+            26,
+            27
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 14,
+          "state": "KEEP",
+          "native_frames": 50,
+          "human_proxy_mean": 1.6009999999999998,
+          "teacher_claimed_observation_instants": [
+            28,
+            29
+          ],
+          "not_semantic_highlight_gold": true
+        }
+      ],
+      "labels_sha256": "903c2bad5e6eccff337f4d5774c0f23eea9d096dc5a69ae7da1d377a361af7e7",
+      "manifest_sha256": "e135b041b6f8976f9ccf37d5894f6386d04d2bb66a24642a6de4c42bfa317aca",
+      "mean_human_proxy_by_state": {
+        "REJECT": 2.2986,
+        "UNKNOWN": 2.006,
+        "KEEP": 2.258111111111111
+      }
+    },
+    {
+      "clip": "37rzWOQsNIw_00",
+      "samples": [
+        {
+          "candidate_id": 0,
+          "state": "KEEP",
+          "native_frames": 60,
+          "human_proxy_mean": 2.949999999999998,
+          "teacher_claimed_observation_instants": [
+            0,
+            1
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 1,
+          "state": "REJECT",
+          "native_frames": 60,
+          "human_proxy_mean": 1.900000000000002,
+          "teacher_claimed_observation_instants": [
+            2,
+            3
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 2,
+          "state": "REJECT",
+          "native_frames": 60,
+          "human_proxy_mean": 2.2000000000000015,
+          "teacher_claimed_observation_instants": [
+            4,
+            5
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 3,
+          "state": "REJECT",
+          "native_frames": 60,
+          "human_proxy_mean": 2.0999999999999974,
+          "teacher_claimed_observation_instants": [
+            6,
+            7
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 4,
+          "state": "REJECT",
+          "native_frames": 60,
+          "human_proxy_mean": 2.0,
+          "teacher_claimed_observation_instants": [
+            8,
+            9
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 5,
+          "state": "KEEP",
+          "native_frames": 60,
+          "human_proxy_mean": 2.4500000000000006,
+          "teacher_claimed_observation_instants": [
+            10,
+            11
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 6,
+          "state": "KEEP",
+          "native_frames": 60,
+          "human_proxy_mean": 2.0466666666666646,
+          "teacher_claimed_observation_instants": [
+            12,
+            13
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 7,
+          "state": "KEEP",
+          "native_frames": 60,
+          "human_proxy_mean": 1.8508333333333316,
+          "teacher_claimed_observation_instants": [
+            14,
+            15
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 8,
+          "state": "REJECT",
+          "native_frames": 60,
+          "human_proxy_mean": 1.9083333333333352,
+          "teacher_claimed_observation_instants": [
+            16,
+            17
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 9,
+          "state": "REJECT",
+          "native_frames": 60,
+          "human_proxy_mean": 2.3858333333333364,
+          "teacher_claimed_observation_instants": [
+            18,
+            19
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 10,
+          "state": "REJECT",
+          "native_frames": 60,
+          "human_proxy_mean": 1.5499999999999983,
+          "teacher_claimed_observation_instants": [
+            20,
+            21
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 11,
+          "state": "REJECT",
+          "native_frames": 60,
+          "human_proxy_mean": 1.559166666666665,
+          "teacher_claimed_observation_instants": [
+            22,
+            23
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 12,
+          "state": "KEEP",
+          "native_frames": 60,
+          "human_proxy_mean": 2.1016666666666644,
+          "teacher_claimed_observation_instants": [
+            24,
+            25
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 13,
+          "state": "KEEP",
+          "native_frames": 60,
+          "human_proxy_mean": 2.193333333333335,
+          "teacher_claimed_observation_instants": [
+            26,
+            27
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 14,
+          "state": "KEEP",
+          "native_frames": 59,
+          "human_proxy_mean": 1.799999999999998,
+          "teacher_claimed_observation_instants": [
+            28,
+            29
+          ],
+          "not_semantic_highlight_gold": true
+        }
+      ],
+      "labels_sha256": "8ca81f3d6a6e27b7db7bd125b060c292a689b22992dfd35f182e9788ae3a56b3",
+      "manifest_sha256": "c97ba2cdfe2818e4e81b4a1fef061305326b5a697f7de23d2617e9477586f0db",
+      "mean_human_proxy_by_state": {
+        "REJECT": 1.950416666666667,
+        "KEEP": 2.1989285714285707
+      }
+    },
+    {
+      "clip": "37rzWOQsNIw_01",
+      "samples": [
+        {
+          "candidate_id": 0,
+          "state": "REJECT",
+          "native_frames": 60,
+          "human_proxy_mean": 1.3500000000000014,
+          "teacher_claimed_observation_instants": [
+            0,
+            1
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 1,
+          "state": "REJECT",
+          "native_frames": 60,
+          "human_proxy_mean": 1.2499999999999987,
+          "teacher_claimed_observation_instants": [
+            2,
+            3
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 2,
+          "state": "UNKNOWN",
+          "native_frames": 60,
+          "human_proxy_mean": 1.500000000000001,
+          "teacher_claimed_observation_instants": [
+            4,
+            5
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 3,
+          "state": "KEEP",
+          "native_frames": 60,
+          "human_proxy_mean": 1.7774999999999983,
+          "teacher_claimed_observation_instants": [
+            6,
+            7
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 4,
+          "state": "KEEP",
+          "native_frames": 60,
+          "human_proxy_mean": 1.8241666666666658,
+          "teacher_claimed_observation_instants": [
+            8,
+            9
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 5,
+          "state": "REJECT",
+          "native_frames": 60,
+          "human_proxy_mean": 1.6966666666666643,
+          "teacher_claimed_observation_instants": [
+            10,
+            11
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 6,
+          "state": "UNKNOWN",
+          "native_frames": 60,
+          "human_proxy_mean": 1.5483333333333336,
+          "teacher_claimed_observation_instants": [
+            12,
+            13
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 7,
+          "state": "KEEP",
+          "native_frames": 60,
+          "human_proxy_mean": 1.6808333333333318,
+          "teacher_claimed_observation_instants": [
+            14,
+            15
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 8,
+          "state": "UNKNOWN",
+          "native_frames": 60,
+          "human_proxy_mean": 1.7725000000000017,
+          "teacher_claimed_observation_instants": [
+            16,
+            17
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 9,
+          "state": "UNKNOWN",
+          "native_frames": 60,
+          "human_proxy_mean": 1.9325000000000023,
+          "teacher_claimed_observation_instants": [
+            18,
+            19
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 10,
+          "state": "REJECT",
+          "native_frames": 60,
+          "human_proxy_mean": 2.0724999999999993,
+          "teacher_claimed_observation_instants": [
+            20,
+            21
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 11,
+          "state": "REJECT",
+          "native_frames": 60,
+          "human_proxy_mean": 1.8708333333333333,
+          "teacher_claimed_observation_instants": [
+            22,
+            23
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 12,
+          "state": "UNKNOWN",
+          "native_frames": 60,
+          "human_proxy_mean": 1.5691666666666684,
+          "teacher_claimed_observation_instants": [
+            24,
+            25
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 13,
+          "state": "KEEP",
+          "native_frames": 60,
+          "human_proxy_mean": 1.4774999999999983,
+          "teacher_claimed_observation_instants": [
+            26,
+            27
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 14,
+          "state": "KEEP",
+          "native_frames": 59,
+          "human_proxy_mean": 1.473728813559323,
+          "teacher_claimed_observation_instants": [
+            28,
+            29
+          ],
+          "not_semantic_highlight_gold": true
+        }
+      ],
+      "labels_sha256": "684b78e6aa619aef2c1cf757acb3aa78c6debe62c824bba5c16ed2654f3780d7",
+      "manifest_sha256": "c2caa6306803bc256cd9c1e0adc439af48f9563136b34cf5810c32311332b08a",
+      "mean_human_proxy_by_state": {
+        "REJECT": 1.6479999999999992,
+        "UNKNOWN": 1.6645000000000014,
+        "KEEP": 1.6467457627118633
+      }
+    },
+    {
+      "clip": "91IHQYk1IQM_00",
+      "samples": [
+        {
+          "candidate_id": 0,
+          "state": "REJECT",
+          "native_frames": 60,
+          "human_proxy_mean": 1.5499999999999983,
+          "teacher_claimed_observation_instants": [
+            0,
+            1
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 1,
+          "state": "REJECT",
+          "native_frames": 60,
+          "human_proxy_mean": 1.799999999999998,
+          "teacher_claimed_observation_instants": [
+            2,
+            3
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 2,
+          "state": "REJECT",
+          "native_frames": 60,
+          "human_proxy_mean": 1.7000000000000017,
+          "teacher_claimed_observation_instants": [
+            4,
+            5
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 3,
+          "state": "REJECT",
+          "native_frames": 60,
+          "human_proxy_mean": 1.75,
+          "teacher_claimed_observation_instants": [
+            6,
+            7
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 4,
+          "state": "UNKNOWN",
+          "native_frames": 60,
+          "human_proxy_mean": 2.0999999999999974,
+          "teacher_claimed_observation_instants": [
+            8,
+            9
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 5,
+          "state": "KEEP",
+          "native_frames": 60,
+          "human_proxy_mean": 2.049999999999998,
+          "teacher_claimed_observation_instants": [
+            10,
+            11
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 6,
+          "state": "UNKNOWN",
+          "native_frames": 60,
+          "human_proxy_mean": 1.8041666666666647,
+          "teacher_claimed_observation_instants": [
+            12,
+            13
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 7,
+          "state": "KEEP",
+          "native_frames": 60,
+          "human_proxy_mean": 2.056666666666665,
+          "teacher_claimed_observation_instants": [
+            14,
+            15
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 8,
+          "state": "KEEP",
+          "native_frames": 60,
+          "human_proxy_mean": 2.455833333333334,
+          "teacher_claimed_observation_instants": [
+            16,
+            17
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 9,
+          "state": "UNKNOWN",
+          "native_frames": 60,
+          "human_proxy_mean": 2.786666666666668,
+          "teacher_claimed_observation_instants": [
+            18,
+            19
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 10,
+          "state": "KEEP",
+          "native_frames": 60,
+          "human_proxy_mean": 2.024166666666667,
+          "teacher_claimed_observation_instants": [
+            20,
+            21
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 11,
+          "state": "KEEP",
+          "native_frames": 60,
+          "human_proxy_mean": 3.4399999999999973,
+          "teacher_claimed_observation_instants": [
+            22,
+            23
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 12,
+          "state": "KEEP",
+          "native_frames": 60,
+          "human_proxy_mean": 2.8433333333333306,
+          "teacher_claimed_observation_instants": [
+            24,
+            25
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 13,
+          "state": "KEEP",
+          "native_frames": 60,
+          "human_proxy_mean": 2.438333333333334,
+          "teacher_claimed_observation_instants": [
+            26,
+            27
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 14,
+          "state": "UNKNOWN",
+          "native_frames": 59,
+          "human_proxy_mean": 1.75,
+          "teacher_claimed_observation_instants": [
+            28,
+            29
+          ],
+          "not_semantic_highlight_gold": true
+        }
+      ],
+      "labels_sha256": "18f349dff717e4de1d91b5b8df735a431ea19e05d4b08d5ddb119c99ccd21762",
+      "manifest_sha256": "dd140b668fdb6b24a4ab7660a8c559188eeaaa088ad6e01b87cecd8726b491c6",
+      "mean_human_proxy_by_state": {
+        "REJECT": 1.6999999999999995,
+        "UNKNOWN": 2.1102083333333326,
+        "KEEP": 2.472619047619046
+      }
+    },
+    {
+      "clip": "91IHQYk1IQM_01",
+      "samples": [
+        {
+          "candidate_id": 0,
+          "state": "UNKNOWN",
+          "native_frames": 60,
+          "human_proxy_mean": 2.1000000000000005,
+          "teacher_claimed_observation_instants": [],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 1,
+          "state": "KEEP",
+          "native_frames": 60,
+          "human_proxy_mean": 1.9750000000000014,
+          "teacher_claimed_observation_instants": [
+            2,
+            3
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 2,
+          "state": "UNKNOWN",
+          "native_frames": 60,
+          "human_proxy_mean": 2.050000000000003,
+          "teacher_claimed_observation_instants": [],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 3,
+          "state": "UNKNOWN",
+          "native_frames": 60,
+          "human_proxy_mean": 2.3249999999999997,
+          "teacher_claimed_observation_instants": [],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 4,
+          "state": "UNKNOWN",
+          "native_frames": 60,
+          "human_proxy_mean": 2.7249999999999988,
+          "teacher_claimed_observation_instants": [],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 5,
+          "state": "UNKNOWN",
+          "native_frames": 60,
+          "human_proxy_mean": 2.600000000000001,
+          "teacher_claimed_observation_instants": [],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 6,
+          "state": "UNKNOWN",
+          "native_frames": 60,
+          "human_proxy_mean": 2.25,
+          "teacher_claimed_observation_instants": [],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 7,
+          "state": "KEEP",
+          "native_frames": 60,
+          "human_proxy_mean": 2.0950000000000015,
+          "teacher_claimed_observation_instants": [
+            14,
+            15
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 8,
+          "state": "REJECT",
+          "native_frames": 60,
+          "human_proxy_mean": 1.8208333333333353,
+          "teacher_claimed_observation_instants": [
+            16,
+            17
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 9,
+          "state": "REJECT",
+          "native_frames": 60,
+          "human_proxy_mean": 1.9325000000000023,
+          "teacher_claimed_observation_instants": [
+            18,
+            19
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 10,
+          "state": "KEEP",
+          "native_frames": 60,
+          "human_proxy_mean": 2.0208333333333357,
+          "teacher_claimed_observation_instants": [
+            20,
+            21
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 11,
+          "state": "UNKNOWN",
+          "native_frames": 60,
+          "human_proxy_mean": 1.8483333333333316,
+          "teacher_claimed_observation_instants": [],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 12,
+          "state": "UNKNOWN",
+          "native_frames": 60,
+          "human_proxy_mean": 1.6708333333333314,
+          "teacher_claimed_observation_instants": [],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 13,
+          "state": "KEEP",
+          "native_frames": 60,
+          "human_proxy_mean": 2.4283333333333332,
+          "teacher_claimed_observation_instants": [
+            26,
+            27
+          ],
+          "not_semantic_highlight_gold": true
+        },
+        {
+          "candidate_id": 14,
+          "state": "KEEP",
+          "native_frames": 59,
+          "human_proxy_mean": 2.5889830508474563,
+          "teacher_claimed_observation_instants": [
+            28,
+            29
+          ],
+          "not_semantic_highlight_gold": true
+        }
+      ],
+      "labels_sha256": "efb8e804be493deb445b3b9f971ccbba6cf590134f5c90ff637c2f83b3acb129",
+      "manifest_sha256": "f6f1d0730280d64f35bb85b89b700f678f0910fef6f3eee588f85e099ca73f82",
+      "mean_human_proxy_by_state": {
+        "REJECT": 1.8766666666666687,
+        "UNKNOWN": 2.1961458333333335,
+        "KEEP": 2.2216299435028257
+      }
+    }
+  ],
+  "states": {
+    "REJECT": 34,
+    "UNKNOWN": 19,
+    "KEEP": 37
+  },
+  "training_admitted": 0,
+  "actual_clips": 6,
+  "candidate_bins": 90,
+  "source_groups": 3,
+  "full_observation_proven": false,
+  "human_reference_sha256": "28cc5e693e07161f2c4c7fcefb9b2d3312443f0d04535f1398b407e52fe0dd19",
+  "proxy_only_not_teacher_accuracy": true,
+  "UNKNOWN_never_negative": true
+}

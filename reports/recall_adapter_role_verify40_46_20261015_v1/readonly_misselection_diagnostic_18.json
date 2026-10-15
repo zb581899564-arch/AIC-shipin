@@ -1,0 +1,779 @@
+{
+  "status": "SOURCE_READ_ONLY_REJECTED_ROLE_CONFIRM_DIAGNOSIS",
+  "utc": "2026-10-15T08:21:31.532051+00:00",
+  "source_result_ref": {
+    "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/comparison_01/result.json",
+    "sha256": "dc7237b9bed3a513b48492f8169d204279370d807454cd310657a07a32f83d67"
+  },
+  "source_summary_ref": {
+    "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_completion_summary_11.json",
+    "sha256": "e284bac18a0fa58c0a9ccb1a821ee8dc0d19a67786592904112bda26782e1f8f"
+  },
+  "actual_original_calls": 88,
+  "actual_original_input_QA": 88,
+  "actual_original_output_QA": 88,
+  "unique_completed_GPU_jobs": 3,
+  "charged_GPU_wrapper_seconds": 2088.0657022511587,
+  "conditions": {
+    "full_group": true,
+    "macro_F1_not_lower": true,
+    "macro_recall_gain": true,
+    "every_source_loss_within_gate": false,
+    "macro_precision_not_lower": false,
+    "all_rater_recall_retained": true,
+    "all_baseline_native_frames_retained": true,
+    "real_changed_sources": true
+  },
+  "macro_deltas": {
+    "f1": 0.0024901923042567283,
+    "recall": 0.09466461818041362,
+    "precision": -0.05630850063089778
+  },
+  "source_count": 4,
+  "changed_sources": 3,
+  "total_new_native_frames": 409,
+  "total_candidate_native_contributions_before_union": 586,
+  "actual_admission_decisions": {
+    "KEEP": 16
+  },
+  "active_declines_when_KEEP_allowed": 0,
+  "cases": [
+    {
+      "video_id": "v_1VDNFR3vQR4",
+      "baseline_spans": [
+        [
+          "47/4",
+          "20"
+        ],
+        [
+          "91/4",
+          "26"
+        ],
+        [
+          "989/24",
+          "1067/24"
+        ]
+      ],
+      "augmented_spans": [
+        [
+          "11011/2000",
+          "75751/10000"
+        ],
+        [
+          "47/4",
+          "290777/10000"
+        ],
+        [
+          "33",
+          "34"
+        ],
+        [
+          "989/24",
+          "1067/24"
+        ]
+      ],
+      "new_spans": [
+        [
+          "11011/2000",
+          "75751/10000"
+        ],
+        [
+          "20",
+          "91/4"
+        ],
+        [
+          "26",
+          "290777/10000"
+        ],
+        [
+          "33",
+          "34"
+        ]
+      ],
+      "baseline_seconds": 14.75,
+      "augmented_seconds": 23.6473,
+      "new_seconds": 8.8973,
+      "new_native_frames": 106,
+      "F1_baseline": 0.26533923532577036,
+      "F1_augmented": 0.26286532010952834,
+      "F1_delta": -0.0024739152162419767,
+      "precision_baseline": 0.20708474576271185,
+      "precision_augmented": 0.17754881106933984,
+      "new_time_mean_human_summary_overlap_fraction": 0.12858395243500836,
+      "baseline_frames_retained": true,
+      "all_rater_recall_retained": true,
+      "violates_original_per_source_gate": false,
+      "interpretation": "All-rater average human-summary coverage only, NOT explicit ORDINARY or inspected visual error truth"
+    },
+    {
+      "video_id": "v_SFfB6qvT5FI",
+      "baseline_spans": [
+        [
+          "2703/400",
+          "150777/10000"
+        ],
+        [
+          "537647/20000",
+          "590647/20000"
+        ]
+      ],
+      "augmented_spans": [
+        [
+          "2703/400",
+          "150777/10000"
+        ],
+        [
+          "537647/20000",
+          "590647/20000"
+        ]
+      ],
+      "new_spans": [],
+      "baseline_seconds": 10.9702,
+      "augmented_seconds": 10.9702,
+      "new_seconds": 0.0,
+      "new_native_frames": 0,
+      "F1_baseline": 0.4125048819241602,
+      "F1_augmented": 0.4125048819241602,
+      "F1_delta": 0.0,
+      "precision_baseline": 0.35728291188857086,
+      "precision_augmented": 0.35728291188857086,
+      "new_time_mean_human_summary_overlap_fraction": null,
+      "baseline_frames_retained": true,
+      "all_rater_recall_retained": true,
+      "violates_original_per_source_gate": false,
+      "interpretation": "All-rater average human-summary coverage only, NOT explicit ORDINARY or inspected visual error truth"
+    },
+    {
+      "video_id": "v_d0woFZ26Cx0",
+      "baseline_spans": [
+        [
+          "207521/10000",
+          "230787/10000"
+        ]
+      ],
+      "augmented_spans": [
+        [
+          "27333/10000",
+          "33667/10000"
+        ],
+        [
+          "43667/10000",
+          "53667/10000"
+        ],
+        [
+          "91667/10000",
+          "98333/10000"
+        ],
+        [
+          "131667/10000",
+          "138333/10000"
+        ],
+        [
+          "151667/10000",
+          "158333/10000"
+        ],
+        [
+          "207521/10000",
+          "230787/10000"
+        ]
+      ],
+      "new_spans": [
+        [
+          "27333/10000",
+          "33667/10000"
+        ],
+        [
+          "43667/10000",
+          "53667/10000"
+        ],
+        [
+          "91667/10000",
+          "98333/10000"
+        ],
+        [
+          "131667/10000",
+          "138333/10000"
+        ],
+        [
+          "151667/10000",
+          "158333/10000"
+        ]
+      ],
+      "baseline_seconds": 2.3266,
+      "augmented_seconds": 5.9598,
+      "new_seconds": 3.6332,
+      "new_native_frames": 107,
+      "F1_baseline": 0.2596495694827245,
+      "F1_augmented": 0.24895846228794308,
+      "F1_delta": -0.010691107194781427,
+      "precision_baseline": 0.42254362589185934,
+      "precision_augmented": 0.23446759958387867,
+      "new_time_mean_human_summary_overlap_fraction": 0.11402895519101619,
+      "baseline_frames_retained": true,
+      "all_rater_recall_retained": true,
+      "violates_original_per_source_gate": true,
+      "interpretation": "All-rater average human-summary coverage only, NOT explicit ORDINARY or inspected visual error truth"
+    },
+    {
+      "video_id": "v_CV9n0jgThLY",
+      "baseline_spans": [
+        [
+          "0",
+          "93167/10000"
+        ],
+        [
+          "1741/60",
+          "9323/300"
+        ],
+        [
+          "2606/75",
+          "12599/300"
+        ]
+      ],
+      "augmented_spans": [
+        [
+          "0",
+          "118707/10000"
+        ],
+        [
+          "257333/10000",
+          "9323/300"
+        ],
+        [
+          "346667/10000",
+          "12599/300"
+        ],
+        [
+          "1291/30",
+          "1308001/30000"
+        ]
+      ],
+      "new_spans": [
+        [
+          "93167/10000",
+          "118707/10000"
+        ],
+        [
+          "257333/10000",
+          "1741/60"
+        ],
+        [
+          "346667/10000",
+          "2606/75"
+        ],
+        [
+          "1291/30",
+          "1308001/30000"
+        ]
+      ],
+      "baseline_seconds": 18.6267,
+      "augmented_seconds": 25.110733333333332,
+      "new_seconds": 6.4840333333333335,
+      "new_native_frames": 196,
+      "F1_baseline": 0.34746721283145743,
+      "F1_augmented": 0.3705930044595077,
+      "F1_delta": 0.023125791628050316,
+      "precision_baseline": 0.26329677291200265,
+      "precision_augmented": 0.25567473138976426,
+      "new_time_mean_human_summary_overlap_fraction": 0.23377887220402938,
+      "baseline_frames_retained": true,
+      "all_rater_recall_retained": true,
+      "violates_original_per_source_gate": false,
+      "interpretation": "All-rater average human-summary coverage only, NOT explicit ORDINARY or inspected visual error truth"
+    }
+  ],
+  "candidates": [
+    {
+      "case_id": "PA1.b16ed55cfbe8cc85fabe518045bdda0a705f6afb.positive",
+      "video_id": "v_1VDNFR3vQR4",
+      "original_interval_exact": [
+        "11011/2000",
+        "75751/10000"
+      ],
+      "decision": "KEEP",
+      "KEEP_allowed": true,
+      "new_spans_outside_baseline": [
+        [
+          "11011/2000",
+          "75751/10000"
+        ]
+      ],
+      "native_new_frames_vs_baseline": 24,
+      "unique_native_contribution_in_recorded_union_order": 24,
+      "newly_covered_visible_sample_counts": [
+        9
+      ],
+      "input_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/cpu_01/PA1.b16ed55cfbe8cc85fabe518045bdda0a705f6afb.positive/input.json",
+        "sha256": "3cc758af228a5b7102ed5a69430596307ce515ad20836d37fc41e5f1698a2f81"
+      },
+      "done_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/gpu_01/PA1.b16ed55cfbe8cc85fabe518045bdda0a705f6afb.positive/done.json",
+        "sha256": "5779f0776188c104d7fac4df4212cb4016af69ca805bff6b25f6167ef132ca19"
+      }
+    },
+    {
+      "case_id": "PA1.7d1435f5e6c004f94925443deee18ae289400cb1.positive",
+      "video_id": "v_1VDNFR3vQR4",
+      "original_interval_exact": [
+        "15",
+        "290777/10000"
+      ],
+      "decision": "KEEP",
+      "KEEP_allowed": true,
+      "new_spans_outside_baseline": [
+        [
+          "20",
+          "91/4"
+        ],
+        [
+          "26",
+          "290777/10000"
+        ]
+      ],
+      "native_new_frames_vs_baseline": 70,
+      "unique_native_contribution_in_recorded_union_order": 70,
+      "newly_covered_visible_sample_counts": [
+        11,
+        13
+      ],
+      "input_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/cpu_01/PA1.7d1435f5e6c004f94925443deee18ae289400cb1.positive/input.json",
+        "sha256": "4bdc52cee1eef12bf591a33ccbf84e681fcde679479cac0824057d13c853a66a"
+      },
+      "done_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/gpu_01/PA1.7d1435f5e6c004f94925443deee18ae289400cb1.positive/done.json",
+        "sha256": "478912f6b151694a9df4508d1f8612f00a8d7b29e8d892dbdbddc89d9f37a002"
+      }
+    },
+    {
+      "case_id": "PA1.fecca2a8349cb653dc1ee8d0fded14952b2965fa.positive",
+      "video_id": "v_1VDNFR3vQR4",
+      "original_interval_exact": [
+        "45/2",
+        "24"
+      ],
+      "decision": "KEEP",
+      "KEEP_allowed": true,
+      "new_spans_outside_baseline": [
+        [
+          "45/2",
+          "91/4"
+        ]
+      ],
+      "native_new_frames_vs_baseline": 3,
+      "unique_native_contribution_in_recorded_union_order": 0,
+      "newly_covered_visible_sample_counts": [
+        2
+      ],
+      "input_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/cpu_01/PA1.fecca2a8349cb653dc1ee8d0fded14952b2965fa.positive/input.json",
+        "sha256": "9a537d2a83b7e983c039195f9c8104623a0b4a350da9ac77549d69242746145f"
+      },
+      "done_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/gpu_01/PA1.fecca2a8349cb653dc1ee8d0fded14952b2965fa.positive/done.json",
+        "sha256": "18f0fac03ed18d078540489b4f398813ccc9580397d135b2c8192ddff16ed055"
+      }
+    },
+    {
+      "case_id": "PA1.79ffadc6600dda96979f44952008288337b18540.positive",
+      "video_id": "v_1VDNFR3vQR4",
+      "original_interval_exact": [
+        "26",
+        "29"
+      ],
+      "decision": "KEEP",
+      "KEEP_allowed": true,
+      "new_spans_outside_baseline": [
+        [
+          "26",
+          "29"
+        ]
+      ],
+      "native_new_frames_vs_baseline": 36,
+      "unique_native_contribution_in_recorded_union_order": 0,
+      "newly_covered_visible_sample_counts": [
+        13
+      ],
+      "input_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/cpu_01/PA1.79ffadc6600dda96979f44952008288337b18540.positive/input.json",
+        "sha256": "7e67869585eed77d7e82f268661dd3238c599281f0d139bca806cbaa187e15d2"
+      },
+      "done_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/gpu_01/PA1.79ffadc6600dda96979f44952008288337b18540.positive/done.json",
+        "sha256": "bdfb31b5319d0c07f7a676bfd2dc22609c4759945df48ba92f1b353df207f5ae"
+      }
+    },
+    {
+      "case_id": "PA1.538c3c041ccb6590d2e105adcbf3bf556fadcceb.positive",
+      "video_id": "v_1VDNFR3vQR4",
+      "original_interval_exact": [
+        "33",
+        "34"
+      ],
+      "decision": "KEEP",
+      "KEEP_allowed": true,
+      "new_spans_outside_baseline": [
+        [
+          "33",
+          "34"
+        ]
+      ],
+      "native_new_frames_vs_baseline": 12,
+      "unique_native_contribution_in_recorded_union_order": 12,
+      "newly_covered_visible_sample_counts": [
+        4
+      ],
+      "input_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/cpu_01/PA1.538c3c041ccb6590d2e105adcbf3bf556fadcceb.positive/input.json",
+        "sha256": "29d75af504ae699005b81e93434cab4dc012aedea3598fd35382e6876fdecc9c"
+      },
+      "done_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/gpu_01/PA1.538c3c041ccb6590d2e105adcbf3bf556fadcceb.positive/done.json",
+        "sha256": "1ee166c7af399fb628c027452e77d6353301e037b13b5044f349656e32eb1535"
+      }
+    },
+    {
+      "case_id": "PA1.860938310a488bee14bd897d64425c35569da7bf.positive",
+      "video_id": "v_d0woFZ26Cx0",
+      "original_interval_exact": [
+        "27333/10000",
+        "33667/10000"
+      ],
+      "decision": "KEEP",
+      "KEEP_allowed": true,
+      "new_spans_outside_baseline": [
+        [
+          "27333/10000",
+          "33667/10000"
+        ]
+      ],
+      "native_new_frames_vs_baseline": 20,
+      "unique_native_contribution_in_recorded_union_order": 20,
+      "newly_covered_visible_sample_counts": [
+        3
+      ],
+      "input_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/cpu_01/PA1.860938310a488bee14bd897d64425c35569da7bf.positive/input.json",
+        "sha256": "8699482774228bcb5af13bb0597a1d42dc33073b7e9163cb6f8cc9cb289113c0"
+      },
+      "done_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/gpu_01/PA1.860938310a488bee14bd897d64425c35569da7bf.positive/done.json",
+        "sha256": "98c3e26b2d8cade661a9fa751a98e70b39ba00cc108be91e46d011589c5cb58b"
+      }
+    },
+    {
+      "case_id": "PA1.1dbcd1d9a1631dcb37133bc11b65fc0f2d6bbdf7.positive",
+      "video_id": "v_d0woFZ26Cx0",
+      "original_interval_exact": [
+        "43667/10000",
+        "53667/10000"
+      ],
+      "decision": "KEEP",
+      "KEEP_allowed": true,
+      "new_spans_outside_baseline": [
+        [
+          "43667/10000",
+          "53667/10000"
+        ]
+      ],
+      "native_new_frames_vs_baseline": 30,
+      "unique_native_contribution_in_recorded_union_order": 30,
+      "newly_covered_visible_sample_counts": [
+        4
+      ],
+      "input_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/cpu_01/PA1.1dbcd1d9a1631dcb37133bc11b65fc0f2d6bbdf7.positive/input.json",
+        "sha256": "08aebbc46a2a3c243500d60c7e8d0c22b570bd4248f1a4abe1e72e7ac7723c45"
+      },
+      "done_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/gpu_01/PA1.1dbcd1d9a1631dcb37133bc11b65fc0f2d6bbdf7.positive/done.json",
+        "sha256": "a62bf61088ec71ffebc1fa37793c4d08378ce8b4be69166a37b9cfea3083b97d"
+      }
+    },
+    {
+      "case_id": "PA1.c04039c27e8ce924fb888fa94b141b5a667a1ee1.positive",
+      "video_id": "v_d0woFZ26Cx0",
+      "original_interval_exact": [
+        "91667/10000",
+        "98333/10000"
+      ],
+      "decision": "KEEP",
+      "KEEP_allowed": true,
+      "new_spans_outside_baseline": [
+        [
+          "91667/10000",
+          "98333/10000"
+        ]
+      ],
+      "native_new_frames_vs_baseline": 19,
+      "unique_native_contribution_in_recorded_union_order": 19,
+      "newly_covered_visible_sample_counts": [
+        2
+      ],
+      "input_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/cpu_01/PA1.c04039c27e8ce924fb888fa94b141b5a667a1ee1.positive/input.json",
+        "sha256": "938d3fa70fdea80ff3dd5ea4b2d2c14d0427ec8b01b0ec432aef1a1159d6c86d"
+      },
+      "done_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/gpu_01/PA1.c04039c27e8ce924fb888fa94b141b5a667a1ee1.positive/done.json",
+        "sha256": "b4f3e2a6797f4262992bf8698dbcf0013cd95621494577563d562cd3fa86f20e"
+      }
+    },
+    {
+      "case_id": "PA1.5ade9b7a6668b305555863ad51970e94081f1708.positive",
+      "video_id": "v_d0woFZ26Cx0",
+      "original_interval_exact": [
+        "131667/10000",
+        "138333/10000"
+      ],
+      "decision": "KEEP",
+      "KEEP_allowed": true,
+      "new_spans_outside_baseline": [
+        [
+          "131667/10000",
+          "138333/10000"
+        ]
+      ],
+      "native_new_frames_vs_baseline": 19,
+      "unique_native_contribution_in_recorded_union_order": 19,
+      "newly_covered_visible_sample_counts": [
+        3
+      ],
+      "input_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/cpu_01/PA1.5ade9b7a6668b305555863ad51970e94081f1708.positive/input.json",
+        "sha256": "2753d5835daeb0525e56db80dcd9b25ffb103a3184f3c3453d9fab5641c76ab8"
+      },
+      "done_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/gpu_01/PA1.5ade9b7a6668b305555863ad51970e94081f1708.positive/done.json",
+        "sha256": "e1e64229eff69f08b6c7892ade0abf434a8c77994dc73fcd27d6a87825e19d49"
+      }
+    },
+    {
+      "case_id": "PA1.8bb75e489de5505e5ac5906b93ae61c6c050cb47.positive",
+      "video_id": "v_d0woFZ26Cx0",
+      "original_interval_exact": [
+        "151667/10000",
+        "158333/10000"
+      ],
+      "decision": "KEEP",
+      "KEEP_allowed": true,
+      "new_spans_outside_baseline": [
+        [
+          "151667/10000",
+          "158333/10000"
+        ]
+      ],
+      "native_new_frames_vs_baseline": 19,
+      "unique_native_contribution_in_recorded_union_order": 19,
+      "newly_covered_visible_sample_counts": [
+        3
+      ],
+      "input_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/cpu_01/PA1.8bb75e489de5505e5ac5906b93ae61c6c050cb47.positive/input.json",
+        "sha256": "b9ab63a439c75647dfe7cf5620735493c346fe703114f3854578db8dd46052d6"
+      },
+      "done_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/gpu_01/PA1.8bb75e489de5505e5ac5906b93ae61c6c050cb47.positive/done.json",
+        "sha256": "d646b6b917d4c401cd0d16c7cb5518b33b9938dd946dd0fad7f26194736336a5"
+      }
+    },
+    {
+      "case_id": "PA1.3d534be04b0315616ba66022f973632c503362a4.positive",
+      "video_id": "v_CV9n0jgThLY",
+      "original_interval_exact": [
+        "0",
+        "284/25"
+      ],
+      "decision": "KEEP",
+      "KEEP_allowed": true,
+      "new_spans_outside_baseline": [
+        [
+          "93167/10000",
+          "284/25"
+        ]
+      ],
+      "native_new_frames_vs_baseline": 61,
+      "unique_native_contribution_in_recorded_union_order": 61,
+      "newly_covered_visible_sample_counts": [
+        8
+      ],
+      "input_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/cpu_01/PA1.3d534be04b0315616ba66022f973632c503362a4.positive/input.json",
+        "sha256": "1b65936fd9e1775591209ab1efe0763033f26321d5678c1fbe91e1f0da9714a6"
+      },
+      "done_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/gpu_01/PA1.3d534be04b0315616ba66022f973632c503362a4.positive/done.json",
+        "sha256": "f6e95814e5d3d756d903b259e3370ebf438a395794540957f463382fcbd58630"
+      }
+    },
+    {
+      "case_id": "PA1.ef6e91629f774c83a6da5e04489398c5da73167b.positive",
+      "video_id": "v_CV9n0jgThLY",
+      "original_interval_exact": [
+        "15/2",
+        "118707/10000"
+      ],
+      "decision": "KEEP",
+      "KEEP_allowed": true,
+      "new_spans_outside_baseline": [
+        [
+          "93167/10000",
+          "118707/10000"
+        ]
+      ],
+      "native_new_frames_vs_baseline": 77,
+      "unique_native_contribution_in_recorded_union_order": 16,
+      "newly_covered_visible_sample_counts": [
+        11
+      ],
+      "input_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/cpu_01/PA1.ef6e91629f774c83a6da5e04489398c5da73167b.positive/input.json",
+        "sha256": "9a022ddb582ae7bbf28e94b98704b8b2871a0a477c642b66d1858ec3e20fee7b"
+      },
+      "done_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/gpu_01/PA1.ef6e91629f774c83a6da5e04489398c5da73167b.positive/done.json",
+        "sha256": "73a2295bf29a61de429b991e273c8c67b7a992c78e8fc4b4e00032edce75d604"
+      }
+    },
+    {
+      "case_id": "PA1.c1c0cbb611265e9a354c499a54b419001a33ae3c.positive",
+      "video_id": "v_CV9n0jgThLY",
+      "original_interval_exact": [
+        "257333/10000",
+        "290667/10000"
+      ],
+      "decision": "KEEP",
+      "KEEP_allowed": true,
+      "new_spans_outside_baseline": [
+        [
+          "257333/10000",
+          "1741/60"
+        ]
+      ],
+      "native_new_frames_vs_baseline": 99,
+      "unique_native_contribution_in_recorded_union_order": 99,
+      "newly_covered_visible_sample_counts": [
+        14
+      ],
+      "input_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/cpu_01/PA1.c1c0cbb611265e9a354c499a54b419001a33ae3c.positive/input.json",
+        "sha256": "81ae023282ca0498bcf652c9b4d57acc2c0a35ed98d25f87ce18cd4443c0ff1f"
+      },
+      "done_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/gpu_01/PA1.c1c0cbb611265e9a354c499a54b419001a33ae3c.positive/done.json",
+        "sha256": "ebb1c4aebdd69a94ebfd23a58f124c9e67b72e09a5d53e23fc1d936e0404fe79"
+      }
+    },
+    {
+      "case_id": "PA1.e75851a167736020c4d9351f6443f9a4da351807.positive",
+      "video_id": "v_CV9n0jgThLY",
+      "original_interval_exact": [
+        "1323/50",
+        "1549/50"
+      ],
+      "decision": "KEEP",
+      "KEEP_allowed": true,
+      "new_spans_outside_baseline": [
+        [
+          "1323/50",
+          "1741/60"
+        ]
+      ],
+      "native_new_frames_vs_baseline": 77,
+      "unique_native_contribution_in_recorded_union_order": 0,
+      "newly_covered_visible_sample_counts": [
+        11
+      ],
+      "input_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/cpu_01/PA1.e75851a167736020c4d9351f6443f9a4da351807.positive/input.json",
+        "sha256": "df6b9195432ce1c807f86d2d6f4861b7be6ac46459510021d2d5539e775acc38"
+      },
+      "done_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/gpu_01/PA1.e75851a167736020c4d9351f6443f9a4da351807.positive/done.json",
+        "sha256": "592d4934a0baf909652db87fdd4e2792252f0cef7ffe5aeaff96e2e251b2fc47"
+      }
+    },
+    {
+      "case_id": "PA1.29225545dff827fcf0c61188ab9c0599d073eb05.positive",
+      "video_id": "v_CV9n0jgThLY",
+      "original_interval_exact": [
+        "346667/10000",
+        "406667/10000"
+      ],
+      "decision": "KEEP",
+      "KEEP_allowed": true,
+      "new_spans_outside_baseline": [
+        [
+          "346667/10000",
+          "2606/75"
+        ]
+      ],
+      "native_new_frames_vs_baseline": 2,
+      "unique_native_contribution_in_recorded_union_order": 2,
+      "newly_covered_visible_sample_counts": [
+        1
+      ],
+      "input_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/cpu_01/PA1.29225545dff827fcf0c61188ab9c0599d073eb05.positive/input.json",
+        "sha256": "aeaff65f96cd919efcd98e1fe072ba4017226406f0a7e7c578aaf73114e52852"
+      },
+      "done_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/gpu_01/PA1.29225545dff827fcf0c61188ab9c0599d073eb05.positive/done.json",
+        "sha256": "cf30496c1f0c6bf9d41ebefde1e0c213750f075b58fdd71970a705eef646e4bb"
+      }
+    },
+    {
+      "case_id": "PA1.b9f748b916d523a206c760f29c513c9b3d491a4b.positive",
+      "video_id": "v_CV9n0jgThLY",
+      "original_interval_exact": [
+        "1291/30",
+        "1308001/30000"
+      ],
+      "decision": "KEEP",
+      "KEEP_allowed": true,
+      "new_spans_outside_baseline": [
+        [
+          "1291/30",
+          "1308001/30000"
+        ]
+      ],
+      "native_new_frames_vs_baseline": 18,
+      "unique_native_contribution_in_recorded_union_order": 18,
+      "newly_covered_visible_sample_counts": [
+        3
+      ],
+      "input_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/cpu_01/PA1.b9f748b916d523a206c760f29c513c9b3d491a4b.positive/input.json",
+        "sha256": "ce580c2d49ae928411a44a6e5b4825d1f207c6f824fdcd7b7042a49c2ed7bae8"
+      },
+      "done_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/gpu_01/PA1.b9f748b916d523a206c760f29c513c9b3d491a4b.positive/done.json",
+        "sha256": "362f806ae5cfd203a2222655966e34991b96a9613f869237ec04126df7877686"
+      }
+    }
+  ],
+  "new_model_calls": 0,
+  "new_GPU_jobs": 0,
+  "new_processor_calls": 0,
+  "new_media_decodes": 0,
+  "success_QA_repeated": 0,
+  "source_code_or_labels_or_thresholds_changed": false,
+  "visual_facts_inspected": false,
+  "reference_semantics": "EVENT_TEXT_GUIDED_HUMAN_SUMMARY_PROXY_NOT_UNCONDITIONAL_HIGHLIGHT_GOLD",
+  "unsupported_causes": [
+    "Cannot infer ignored visual inputs from all-KEEP alone",
+    "Cannot establish TIME training negative-example absence as the causal mechanism",
+    "Unselected human-summary time is not explicit ORDINARY",
+    "This does not establish official score decline or improvement"
+  ],
+  "proposed_black_control": {
+    "actual_started": false,
+    "actual_model_calls": 0,
+    "actual_launcher_or_PID": null,
+    "job_or_ledger_present": false,
+    "not_currently_authorized_by_this_report": true
+  },
+  "fixed40_426_or_new_ZIP_actual": 0,
+  "production_admitted": false
+}

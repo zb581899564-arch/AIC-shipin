@@ -1,0 +1,17 @@
+# 默认TIME的独立生产风险范围草案11
+
+建议默认TIME：本次metric08全部固定可达几何paired端点为0，不能宣布任何角色科学获胜。原coarse/B0和VERIFY仍TIMEenabled；D8旧候选长度决定padding、原空间场保持；START/END/BOTH/VERIFY/VERIFY_BOTH共享实际接受回答，由自动代码组成。只发布实际预测有区别且工程通过的包，基线/历史/家族内去重，不把5个arm名字算作5个交付。
+
+当前规则依据复用本轮 `official_rules_01.json` 的同日官方正文/通知及父代理同SHA附件：本地自动可复现、原帧与合法框、实际主辅参数≤9B、外部数据合法披露、禁止测试GT/标注训练/闭源测试API/逐条人工改写与排行榜反构。此次不重复网页/PDF核验，不引入新模型或训练。新生产注册及实际资源准入仍由主控决定；此文件仅草案，不是GPU权利。
+
+接纳边界是TIME dev37实际自然completed/唯一账本和37首次独立input+output replay全部接受，原20事件40端点（37actual+3预登记short skip）完全保留；raw/tokens/native映射及模型/输入/代码真实绑定，不把missing/bad/异常转UNKNOWN。37工程成功只说明该接口在固定外部输入上可执行，不说明边界更准。当前GPU已完成但首次重放尚待完整终态时，仍不能进入实际生产。
+
+不建议仅为“确认”形式新跑confirm36模型：其18固定事件的36对应全部UNKNOWN，不能检验原科学角色门或高光质量，也不能因此给PASS。原确认名单/几何/未运行状态保持；如主控希望验证一个明确的新工程风险（尚未覆盖的native格式或来源边缘实现），可另登记具体工程目的和预算，不能称科学确认。若旧冻结协议明确要求某阶段，不回写它为通过；独立风险生产协议须明确该阶段未运行、原科学资格未获得。这样省略无判别力的形式调用不会降低或复活任何旧失败门。
+
+风险判定需区分已知与未知。旧40来源/旧coarse base-only12/旧缩框等FAIL保持；默认TIME也不继承它们的成功资格。对同一来源已有可信明确事实，不能接受反证已知核心被移除或已知普通被选中的方案；工程/规则失败直接阻断。Charades动作支持、未匹配区间和censored不是高光核心/普通真值，不能把它们装成严重劣化判据，也不能把没观察到反证写成已证明安全。现有内锚/原点保留/源域/静态skip/空source恢复D8是保守工程约束，其作用要如实说明；效果仍UNKNOWN，用户明确风险授权承担这部分未知。不得临时用测试变化率、删帧比例或榜单拟合新阈值。
+
+实际生产前冻结完整426source/521window/665原event/1995名义request图、algorithm/role/model/prompt/parser/native语义、源身份、source批membership及请求顺序；实际short侧由独立clock事前确定，不降64/补帧/换case。每source全consumer同一批，batch所有真实CPU输入完整接受后才消费该批；后续批不根据早期回答变换。single-load可在已冻结batch内驻留，shared wrapper只一次自然终态；scope和账本计实际请求，不伪造skip raw/call。
+
+新RGB仅staging，canonical完整input tensor/tokenmask/meta永久保留，严格无损dictionary/gzip恢复exact dtype/shape/stride/bytes，失败fallback不改precision。first独立input+output QA与该batch唯一自然GPU terminal全接受、每冻结consumer受证据支持后，才按lease释放本轮新staging RGB；历史路径/SHA和append-only释放实记，不假present，不删旧成功或canonical。source CPU准备/重放可按实际CPU/RAM/disk和实测峰值动态并行，batch单位不变；canonical累积不能fit则STOP retain，不自动降精度或清理。prototype纯14通过不能代替真实来源输入、首次验证或容量验收。
+
+若TIME家族实际distinct不足5，可另事前登记同输入BASE局部activation探索：理由仅为旧时间interval适配器与新finite局部定位任务的迁移不确定性，原coarse/VERIFY仍TIME，禁止恢复旧全窗base-only失败或按case/变化率择优。同一metric08零可达门仍原样拒绝科学优胜；新role需全局冻结及独立风险说明，不能把更多REFINE叫质量提升、不能为凑包改prompt/系数。最终交付只称自动生成、工程/格式通过、未知效果的合理风险包；真实11strict/CRC/memberSHA/参数/原场框/实际差异和Windows交付仍须全部完成，不自动官网提交。

@@ -1,0 +1,40 @@
+{
+  "name": "aic_ANNSEL10_nontest_01",
+  "command": [
+    "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+    "-B",
+    "/home/inspur/aic_video_work/runs/annotation_iteration_20261010_v2/contest_engine.py",
+    "generate",
+    "nontest"
+  ],
+  "started_utc": "2026-10-09T17:52:58.757322+00:00",
+  "runner_pid": 1204609,
+  "reserved_seconds": 14400,
+  "teardown_reserve_seconds": 120,
+  "prior_charged_seconds": 214866.46948599676,
+  "gpu_time_mode": "UNLIMITED",
+  "max_total_gpu_seconds": null,
+  "resource_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
+  "disk_before": {
+    "free_bytes": 183699537920,
+    "work_bytes": 96514326528
+  },
+  "planned_output_bytes": 536870912,
+  "capacity_reason": "Qualified separate image-score selector; CPU native PNGs prepared on existing disk, same 8B measured generation peaks, actual shared conflicts/capacity; old full spatial field exact reuse",
+  "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+  "project_disk_limit_bytes": null,
+  "project_ram_limit_bytes": null,
+  "project_vram_limit_bytes": null,
+  "runner_source_sha256": "9997d41fbe2bb51726914b4698b874cf939c52aac02048fa9b3bb753c64c6cec",
+  "child_pid": 1204615,
+  "finished_utc": "2026-10-09T17:54:11.053922+00:00",
+  "charged_seconds": 72.2966885836795,
+  "exit_code": 0,
+  "stop_reason": null,
+  "sampled_peak_memory_mib": 17614,
+  "status": "completed",
+  "disk_after": {
+    "free_bytes": 183699468288,
+    "work_bytes": 96514347008
+  }
+}

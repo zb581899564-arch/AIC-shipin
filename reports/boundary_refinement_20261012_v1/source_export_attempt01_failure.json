@@ -1,0 +1,11 @@
+{
+  "status": "FAILED_BEFORE_ARCHIVE_PUBLICATION_PRESERVED",
+  "error": "AssertionError at required source-code file presence check",
+  "diagnosis": "The frozen p2j_core dependency is imported from another existing project directory, not b_score_aligned_package_v4/p2j_core.py.",
+  "accepted_baseline_and_full_source_field_checks_completed": true,
+  "full_source_field_composition_abandoned_before_output": true,
+  "published_archive": false,
+  "new_model_calls": 0,
+  "new_decodes_or_processor_replays": 0,
+  "repair": "Resolve the already loaded p2j_core module actual path and check all required source-code paths before composing. Separate input_export_02; same fixed scientific recipe."
+}

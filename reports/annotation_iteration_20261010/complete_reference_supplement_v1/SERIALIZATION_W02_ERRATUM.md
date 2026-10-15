@@ -1,0 +1,3 @@
+The first `serialize_w02_w10.py` CPU attempt stopped before writing any sidecar or acceptance: `ValueError: serialized target changes native source selection: eligible_exact_pts`. No model or optimizer ran. Original references are unchanged.
+
+The consequential error was finite-decimal placement around an endpoint exactly coincident with an eligible native PTS. The independently reviewed v2 literal representations lie inside the same observed editing ranges and retain the original half-open native membership. They are declared serialization choices, not measured cuts. Both full eligible PTS and planned64 membership, and Python float-parser numeric identity, must actually pass before output.

@@ -1,0 +1,101 @@
+{
+  "rule": "Select and freeze the round-2 sample list.\n\nSELECTION RULE — written and applied BEFORE any model output is inspected:\n\n R1. Source pool = /home/inspur/aic_video_data/videos/**  (the project's own\n     read-only source pool). The AIC test set\n     (/home/inspur/aic_video_data/test) is EXCLUDED and never touched.\n R2. Candidates come from improvement_round1/frozen_data/dev.jsonl, taking the\n     first row of each distinct `source_group`, in file order.\n R3. Every clip is a 32.000 s window at offset 0.0 built with\n     `ffmpeg -ss 0 -t 32 -c copy` (stream copy, no re-encode), so that\n     duration == 32 s and the author's canonical fps=1/max_frames=32 sampling\n     lands one frame per one-second bin (verified in known_time_mapping.json).\n     The round-1 clip (32.200 s) is kept separately as the non-ideal case.\n R4. Stratum assignment uses ONLY pre-model information: the row's `query`\n     text, plus a 4-frame visual strip (t = 0, 8, 16, 24). A candidate is\n     skipped and its reason recorded if the stratum is ambiguous.\n R5. Strata (2 clips each):\n       S1 target continuously visible, marked position change\n       S2 scale change or occlusion\n       S3 scene cut, or target leaves the frame\n R6. Target = the most prominent subject named in the query text. Its\n     first-frame box is read off a norm1000 grid overlay by the executing\n     agent -> init_box_source = \"agent-reviewed\" (NOT human ground truth).\n R7. No trusted annotation is obtained, so quality metrics stay\n     NOT_COMPUTABLE for every clip.\n\nThis script only BUILDS the contact sheet used for R4. Nothing is run on GPU.\n",
+  "candidates": [
+    {
+      "idx": 0,
+      "sample_id": "sel00",
+      "source_group": "wk2CeU_DcBo",
+      "source_path": "/home/inspur/aic_video_data/videos/w/wk2CeU_DcBo_60.0_210.0.mp4",
+      "clip": "/home/inspur/aic_video_work/orarl_round2/clips/round2sel_00_wk2CeU_DcBo_off0_len32.mp4",
+      "duration_sec": 32.2,
+      "width": 534,
+      "height": 300,
+      "nb_frames": 962,
+      "query": "Man and woman walk through the park sidewalk together."
+    },
+    {
+      "idx": 1,
+      "sample_id": "sel01",
+      "source_group": "RoripwjYFp8",
+      "source_path": "/home/inspur/aic_video_data/videos/r/RoripwjYFp8_210.0_360.0.mp4",
+      "clip": "/home/inspur/aic_video_work/orarl_round2/clips/round2sel_01_RoripwjYFp8_off0_len32.mp4",
+      "duration_sec": 32.233,
+      "width": 534,
+      "height": 300,
+      "nb_frames": 962,
+      "query": "A woman wearing glasses eating something at a street market"
+    },
+    {
+      "idx": 2,
+      "sample_id": "sel02",
+      "source_group": "ioWAoEVYaP0",
+      "source_path": "/home/inspur/aic_video_data/videos/i/ioWAoEVYaP0_210.0_360.0.mp4",
+      "clip": "/home/inspur/aic_video_work/orarl_round2/clips/round2sel_02_ioWAoEVYaP0_off0_len32.mp4",
+      "duration_sec": 32.283,
+      "width": 534,
+      "height": 300,
+      "nb_frames": 770,
+      "query": "Chefs are cooking food on a grill for a banquet after dark."
+    },
+    {
+      "idx": 3,
+      "sample_id": "sel03",
+      "source_group": "ACMKgn5w2HY",
+      "source_path": "/home/inspur/aic_video_data/videos/a/ACMKgn5w2HY_210.0_360.0.mp4",
+      "clip": "/home/inspur/aic_video_work/orarl_round2/clips/round2sel_03_ACMKgn5w2HY_off0_len32.mp4",
+      "duration_sec": 32.241,
+      "width": 534,
+      "height": 300,
+      "nb_frames": 770,
+      "query": "A woman in white is showing off the green pool and oceanside view."
+    },
+    {
+      "idx": 4,
+      "sample_id": "sel04",
+      "source_group": "lwNho_1tKrc",
+      "source_path": "/home/inspur/aic_video_data/videos/l/lwNho_1tKrc_210.0_360.0.mp4",
+      "clip": "/home/inspur/aic_video_work/orarl_round2/clips/round2sel_04_lwNho_1tKrc_off0_len32.mp4",
+      "duration_sec": 32.266,
+      "width": 534,
+      "height": 300,
+      "nb_frames": 962,
+      "query": "A group of men are running then stops and walks towards a car and rides in it."
+    },
+    {
+      "idx": 5,
+      "sample_id": "sel05",
+      "source_group": "ez8kypBrMVE",
+      "source_path": "/home/inspur/aic_video_data/videos/e/ez8kypBrMVE_360.0_510.0.mp4",
+      "clip": "/home/inspur/aic_video_work/orarl_round2/clips/round2sel_05_ez8kypBrMVE_off0_len32.mp4",
+      "duration_sec": 32.2,
+      "width": 534,
+      "height": 300,
+      "nb_frames": 962,
+      "query": "White dog plays with the flip flop."
+    },
+    {
+      "idx": 6,
+      "sample_id": "sel06",
+      "source_group": "iH1-Z6eB2cY",
+      "source_path": "/home/inspur/aic_video_data/videos/i/iH1-Z6eB2cY_360.0_510.0.mp4",
+      "clip": "/home/inspur/aic_video_work/orarl_round2/clips/round2sel_06_iH1-Z6eB2cY_off0_len32.mp4",
+      "duration_sec": 32.2,
+      "width": 534,
+      "height": 300,
+      "nb_frames": 802,
+      "query": "Blonde woman holds a makeup brush and palette and applies it to her face."
+    },
+    {
+      "idx": 7,
+      "sample_id": "sel07",
+      "source_group": "JlWjckrziyw",
+      "source_path": "/home/inspur/aic_video_data/videos/j/JlWjckrziyw_60.0_210.0.mp4",
+      "clip": "/home/inspur/aic_video_work/orarl_round2/clips/round2sel_07_JlWjckrziyw_off0_len32.mp4",
+      "duration_sec": 32.199,
+      "width": 534,
+      "height": 300,
+      "nb_frames": 770,
+      "query": "Woman reads the synopsis of a book and comments on it."
+    }
+  ]
+}

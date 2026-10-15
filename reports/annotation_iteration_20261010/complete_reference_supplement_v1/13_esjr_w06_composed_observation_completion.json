@@ -1,0 +1,95 @@
+{
+  "status": "PASS_NEW_COMPOSED_ACTUAL_MEDIA_PENDING_SEMANTIC_EVALUATION_REFERENCE",
+  "utc": "2026-10-10T20:53:03.380490+00:00",
+  "window_id": "-esJrBWj2d8:SLOT6:6",
+  "original_pngs_delivered": 64,
+  "effective_pngs_delivered": 8,
+  "native_video_delivered": true,
+  "media_observers": {
+    "native64": "GEMINI_REAL_CLI31_DONE",
+    "native_video": "GEMINI_REAL_CLI31_DONE",
+    "effective8": "ROOT_ACTUAL_ORIGINAL_PNG_REVIEW"
+  },
+  "tool_issues": [],
+  "proposal_geometry_identity_issues": [],
+  "original_Gemini_errors_preserved": [
+    {
+      "step": 244,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\13_-esjrbwj2d8_w06\\student_previews\\f00_student.png",
+      "state": "ERROR"
+    },
+    {
+      "step": 245,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\13_-esjrbwj2d8_w06\\student_previews\\f09_student.png",
+      "state": "ERROR"
+    },
+    {
+      "step": 246,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\13_-esjrbwj2d8_w06\\student_previews\\f18_student.png",
+      "state": "ERROR"
+    },
+    {
+      "step": 247,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\13_-esjrbwj2d8_w06\\student_previews\\f27_student.png",
+      "state": "ERROR"
+    },
+    {
+      "step": 248,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\13_-esjrbwj2d8_w06\\student_previews\\f36_student.png",
+      "state": "ERROR"
+    },
+    {
+      "step": 249,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\13_-esjrbwj2d8_w06\\student_previews\\f45_student.png",
+      "state": "ERROR"
+    },
+    {
+      "step": 250,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\13_-esjrbwj2d8_w06\\student_previews\\f54_student.png",
+      "state": "ERROR"
+    },
+    {
+      "step": 251,
+      "tool": "view_file",
+      "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\13_-esjrbwj2d8_w06\\student_previews\\f63_student.png",
+      "state": "ERROR"
+    }
+  ],
+  "original_Gemini_task_completed": false,
+  "original_Gemini_proposal_absent": true,
+  "protocol": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\13_esjr_w06_composed_observation_protocol_v1.json",
+    "sha256": "771cb75a276576b7c9ee522d8436d285f92703cc655e35751c4bf1f2faae9bdf"
+  },
+  "root_effective8": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\13_esjr_w06_root_effective8_actual_observation.json",
+    "sha256": "e97f3ecfb35818a80b9b4aa5858a79c927b96fd21e95552f0f430d754a9e8ce3"
+  },
+  "original_raw": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call05\\stream.jsonl",
+    "sha256": "39acc0004991bc85ef0a681b5418179dc1ed5d21fec9a6e58dffe4e17bb61970"
+  },
+  "program_bound_facts": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call05\\w13_program_bound_facts.json",
+    "sha256": "2a89ff3eb3291db51e01fead111a306b9a42d48b0e096b3edcc395e070e9c71e"
+  },
+  "index": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call05\\index.json",
+    "sha256": "e9e14b1d135056e2e9db5d00e999b930ec0323956a21b3a474065b5c92c85b87"
+  },
+  "freeze": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call05\\freeze.json",
+    "sha256": "2a87feee0d6faa1c2a70db089f7722f8c4f2a8fefb3f4c43f80af7412b60686b"
+  },
+  "no_failed_tools_counted_as_media": true,
+  "new_optimizer_updates": 0,
+  "new_model_calls": 0,
+  "training_admitted": false
+}

@@ -1,0 +1,89 @@
+{
+  "status": "ROOT_SEMANTIC_EVALUATION_ADJUDICATION_COMPLETE",
+  "utc": "2026-10-11T04:36:41.895935+00:00",
+  "window_id": "J0nA4VgnoCo:SLOT6:11",
+  "candidate_prediction_exposure": false,
+  "root_read_all64_teacher_facts": true,
+  "root_read_all64_native_and_student_facts": true,
+  "all_NO_ranges_reviewed": true,
+  "selected_preteacher_event_indices": [
+    0,
+    1
+  ],
+  "unknown_local_exact": [],
+  "consequential_unknowns": [],
+  "evidence": {
+    "preteacher_main_review": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\19_j0n_w11_main_preteacher_review_v2.json",
+      "sha256": "e0f0a3eb1e205e805fafb17148cd4cfdb0f97ace36282f487fadd8060e7f356d"
+    },
+    "teacher_observation_audit": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\19_j0n_w11_lawful_observation_completion_v2.json",
+      "sha256": "7e8ac43ca9d2de58cc167482f83f485fc8aaf5cf6812217ced2b671620ae73c5"
+    },
+    "original_teacher_proposal": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\call36\\w19_proposal.json",
+      "sha256": "3abb1a8cad2004d52cda457b12e68c2d68e2f99f21fd00062672e61f6c922b17"
+    },
+    "original_teacher_bound_fact_audit": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\call36\\w19_completed_scope_audit.json",
+      "sha256": "9b9c7e50e7fd64f339a18279363b6ce0f3b921e4066237be0740a405e331a3ed"
+    },
+    "boundary_observations": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\19_j0n_w11_boundary_observations_acceptance.json",
+      "sha256": "18a214e22c6fa0767d696f186f13a46f4eae8f63706a239a949fe1ec15289697"
+    },
+    "exposed_independent_semantic_crosscheck": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_semantic_crosschecks_v1\\19_J0nA4VgnoCo_W11.teacher_semantic_crosscheck_v2.json",
+      "sha256": "3e514a0a30d00c1f197879fe5d0ebc7b0cb23d4d6d9d28ac909f02d7af380010"
+    },
+    "root_actual_postteacher_pixels": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\19_j0n_w11_root_actual_postteacher_pixels_v1.json",
+      "sha256": "0e9ae6ffe55e1445b9e5a86076533dd6731150c8ab74d8696018a574dd6f817b"
+    }
+  },
+  "differences_adjudicated": [
+    "Teacher all-NO is rejected for the two finite representative visual excerpts already selected before teacher/predictions. F04..07 supplies clear tread lines and finger relation; F14..18 supplies local outward wheel tilt and exposed wheelarch. Neither target is a complete repair action.",
+    "ROOT actually re-inspected original F04/F07/F14/F18 after reading all64 teacher rows. F14 hand/held object and wheel centre are occluded; F18 wheel is outside and tilted from arch. Installed, tightened, axle-engaged and repair-completed claims are not accepted.",
+    "Ordinary holding F00..03, repeated tread touch F08..13, prolonged obscured wheel-centre operation F19..51, ordinary withdrawal/standing F52..58 and passing people F59..63 retain their frozen NO reasons. Original native E3 is not restored as an extra event.",
+    "Exposed independent review actually checked native F24 and found the extra tyre upright/leaning, rather than teacher flat-on-ground claim. Old/new/spare/removed identity, force, wear diagnosis, mechanical security and load-bearing state are not labelled.",
+    "Teacher proposed internal ranges5..6 and26..27 are width1s; their limitations saying about0.5s does not narrow them. The reference uses only previously signed finite editing bounds and accepted tread interior probe12, without new boundary observations or epsilon.",
+    "Original student complete install/tightening and release uncertainty1001/2000>0.5 remain unchanged. These hidden physical outcomes are outside the preregistered limited targets, not converted into a complete physical target or cleared to satisfy coverage.",
+    "ROOT serialization failure was confined to writing its own receipt and did not alter teacher raw, facts, proposal or pixels. The original partial file and failure receipt remain; the new independently completed media receipt is used. Whole CLI36 remains pending its natural terminal; this scope does not claim whole-session success."
+  ],
+  "actual_root_observation_scope": {
+    "native_sample_indices": [
+      4,
+      7,
+      14,
+      16,
+      18,
+      51,
+      52,
+      54,
+      58
+    ],
+    "student_sample_indices": [
+      4,
+      7,
+      14,
+      18
+    ],
+    "additional_postteacher_native_samples": [
+      4,
+      7,
+      14,
+      18
+    ],
+    "read_native_static_facts": 64,
+    "read_student_static_facts": 64,
+    "read_teacher_static_facts": 64,
+    "root_direct64_image_review": false,
+    "root_native_video_view": false,
+    "teacher_actual_video_delivery": true,
+    "original_parent_terminal_not_inferred": true,
+    "current_teacher_native_images": 64,
+    "earlier_native_images_transferred": 0
+  },
+  "reference_scope_and_reason": "Locked evaluation finite visual editorial silver, with two independently preselected typical-image/local relationship targets and explicit ordinary-operation NO. Full repair/installation/tightening and exact release remain unknown in sealed source records outside these finite targets. Not human gold or official score; no target, source, boundary or quality threshold was added after predictions."
+}

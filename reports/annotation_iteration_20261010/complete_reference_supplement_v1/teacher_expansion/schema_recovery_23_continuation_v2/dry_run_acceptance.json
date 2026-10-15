@@ -1,0 +1,77 @@
+{
+  "status": "PASS_TYPED39_RECOVERY_SINGLE40_PATH_TEXT_AST_SHA_NO_MODEL_PENDING_ROOT",
+  "source_binding_sha256": "a0be3fac8cf44b695b8bd379f85912f400e766a18406758b515f1782e028feae",
+  "routes": [
+    {
+      "CLI": 40,
+      "job": 23,
+      "scope_core128": 128,
+      "window_core126": 126,
+      "science90": 90,
+      "parts19": 19,
+      "max_bytes": 15838,
+      "argv_units": 794
+    }
+  ],
+  "freeze": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_23_continuation_v2\\call40\\freeze.json",
+    "sha256": "7162789c2835bcf66f55d3cb1fcb0665b0f39d4e21ab8d87a5ae10edfa94f7f9",
+    "inputs": 1345
+  },
+  "AST": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_23_continuation_v2\\audit.py",
+      "sha256": "a3d58d060af03ca4d312f4802cc1da3bb2cbf30526e4d360a149059e0a556177",
+      "bytes": 11772
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_23_continuation_v2\\common.py",
+      "sha256": "ccae065ae8d48653d4d0d6e58d7304c2ba81ffde9e6d5f9d73e3445dd92997ed",
+      "bytes": 4677
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_23_continuation_v2\\controller.py",
+      "sha256": "9cf37f228bc6a8916c5ebc43664b07d3335cf9ae467a4a14d76004da9f95779b",
+      "bytes": 3366
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_23_continuation_v2\\engine.py",
+      "sha256": "f862fcc886a0c038f09c95d0511bab3705dfebd4378b784569bde5097047cf34",
+      "bytes": 21008
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_23_continuation_v2\\launch.py",
+      "sha256": "c3334a46a380aa7d8e5ba3f681b44a7bbccd4f4c045355cf977eeeb509af2fca",
+      "bytes": 13794
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_23_continuation_v2\\observer.py",
+      "sha256": "ab442d96efce9943601d49dc5c194df8a95b8dc54d2a727aaec8061843824b23",
+      "bytes": 6656
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_23_continuation_v2\\prepare.py",
+      "sha256": "47ba34679c20113466e145ef1c756ae9bef6c9e1932cd7d661c6e266b0ef1792",
+      "bytes": 7343
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_23_continuation_v2\\prompt.py",
+      "sha256": "3762af8488346537918a1cf577ce56b4338216c0ed8f86222a0957bd472777c3",
+      "bytes": 8321
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_23_continuation_v2\\run_call.py",
+      "sha256": "f782b58c3e1aa15bc0f77fa21089fff864484c1b47ca751bc9233af189b4dd08",
+      "bytes": 65
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_23_continuation_v2\\verify.py",
+      "sha256": "5ab99702731abba530f9cd836c42fa98b2acc2b832014661504abb08fc84dc8e",
+      "bytes": 8298
+    }
+  ],
+  "new_model_calls": 0,
+  "new_decoder_calls": 0,
+  "new_processor_calls": 0,
+  "old51_24_68_repeated": false
+}

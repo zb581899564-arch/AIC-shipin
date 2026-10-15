@@ -1,0 +1,18 @@
+{
+  "status": "PASS_ALL_REAL_IMAGE_ROWS_PROCESSOR_AND_MASK_PREFLIGHT",
+  "stats": {
+    "train": {
+      "rows": 181,
+      "max_tokens": 319,
+      "min_assistant_tokens": 15
+    },
+    "validation": {
+      "rows": 148,
+      "max_tokens": 319,
+      "min_assistant_tokens": 15
+    }
+  },
+  "model_config_sha256": "5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661",
+  "model_weights_loaded": false,
+  "optimizer_started": false
+}

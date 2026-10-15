@@ -1,0 +1,14 @@
+# 有界生产输入接口审查
+
+当前：8py + README代码原型、12项Linux纯contract/合成torch CPU接口检查通过。正式媒体内容/GT读取0、decode0、processor0、model0、GPU transfer0、canonical/staging缓存IO0。代码未部署。少量只读远端schema确认仅clock reference键和旧runtime.encode AST；未读取像素、视频或GT。
+
+差异限新 temporal_production_inputs_v1：原426/521/665自动身份投影；事前最多1995逻辑请求与完整consumer/lease图；两个不足64的endpoint可结构性UNKNOWN，无补帧/扩窗；旧成功B0不重做。caller与正式媒体path开放分开，不改外部v3 whitelist；所有v3数学/提示/UNKNOWN/END-exclusive含义直接hashbound复用。VERIFY仍原TIME角色，endpoint角色须先由开发冻结统一选择。
+
+一次new AV source遍历产生完整native测量+每request union RGB。末帧duration不足仍保留完整新测量诊断；已成功旧clock保持。先核全部旧raw/normalized PTS、origin、frame count、geometry和实际正末duration/end完全相同；任何差异STOP。新末duration不能冒充旧416 CFR证据。完整RGB staging lease事前ephemeral；完整tensor canonical永保留，精确LUT/gzip不改dtype，unsupported/unique>256保原gzip。
+
+提供 load_consumer / gpu_input / first_input_replay 三个原型接口。GPU接口完整storage复制保alias/stride/offset，必须被root模型driver实际使用后才能证明GPU签名；当前仅CPU合成复制。first_input_replay仅独立普通processor输入证明，未完成输出token/native/weights验证，不能单独关闭lease。root需把独立output proof、GPU实际signature和真实completed0单一resource/ledger与该receipt一并按critic full acceptance schema登记。本模块不release/delete任何RGB。
+
+未验证的具体风险：旧窗口float序列化可能与actual physicalend存在非零差异；AV新RGB可能与旧pixelhash不一致；完整416旧CFR terminal尚未获得actual positive native duration。严格失败门会阻断该source；未设计自动decoder替换、时间epsilon、旧clock回写或结果适配。实际processor grid、压缩码型、RSS、disk bytes只能在准入后实测，不能把旧codec单例压缩比推到所有正式consumer。source-serial容量门保证下一完整source的保守raw上界；不宣称全1993实际模型请求最终均可装入当前空间，空间不足STOP并保留全部canonical。
+
+后续准入责任属root：开发角色/赛规回执冻结；完整请求membership与SHA；正式一次materialization许可；具体canonical root policy/独立完整output replay代码SHA；模型input loader新codec ABI和唯一GPU job。当前纯检查不是科研效果、生产PASS、额外GPU许可或提交包。
+补充：新registration路径/SHA绑定门另做2项纯拒绝检查通过（binding_check_02），未重跑原12成功合成检查。canonical读取与CPU准备均核冻结控制registration，禁止事后更换角色/来源协议继续复用旧input。

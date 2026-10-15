@@ -1,0 +1,70 @@
+{
+  "utc": "2026-10-10T10:06:04.813399+00:00",
+  "all_64_teacher_subject_records_reviewed": true,
+  "review_basis": "All 64 student PNG pixels actually displayed; all 64 raw teacher subject/subtitle rows inspected by main agent",
+  "corrections": [
+    {
+      "frame_id": "F03",
+      "corrected": "室内挂钟前深色T恤人物的上半身，手部姿态不同",
+      "reason": "删除无法由该单帧确认的站姿、动作经过或持续性表述，保留可见主体与姿态"
+    },
+    {
+      "frame_id": "F05",
+      "corrected": "室内挂钟前深色T恤人物的上半身，手部姿态不同",
+      "reason": "删除无法由该单帧确认的站姿、动作经过或持续性表述，保留可见主体与姿态"
+    },
+    {
+      "frame_id": "F07",
+      "corrected": "室内绿色台面上坐着小型犬，旁有木制家具和白色帘布",
+      "reason": "删除无法由该单帧确认的站姿、动作经过或持续性表述，保留可见主体与姿态"
+    },
+    {
+      "frame_id": "F08",
+      "corrected": "室内绿色台面上坐着小型犬，旁有木制家具和白色帘布",
+      "reason": "删除无法由该单帧确认的站姿、动作经过或持续性表述，保留可见主体与姿态"
+    },
+    {
+      "frame_id": "F32",
+      "corrected": "室内挂钟前人物的上半身，视线偏向画面左侧",
+      "reason": "删除无法由该单帧确认的站姿、动作经过或持续性表述，保留可见主体与姿态"
+    },
+    {
+      "frame_id": "F33",
+      "corrected": "室内挂钟前人物的上半身，视线偏向画面左侧",
+      "reason": "删除无法由该单帧确认的站姿、动作经过或持续性表述，保留可见主体与姿态"
+    },
+    {
+      "frame_id": "F34",
+      "corrected": "室内挂钟前人物的上半身，视线偏向画面左侧",
+      "reason": "删除无法由该单帧确认的站姿、动作经过或持续性表述，保留可见主体与姿态"
+    },
+    {
+      "frame_id": "F35",
+      "corrected": "室内挂钟前人物的上半身，视线偏向画面左侧",
+      "reason": "删除无法由该单帧确认的站姿、动作经过或持续性表述，保留可见主体与姿态"
+    },
+    {
+      "frame_id": "F36",
+      "corrected": "室内挂钟前人物的上半身，视线偏向画面左侧",
+      "reason": "删除无法由该单帧确认的站姿、动作经过或持续性表述，保留可见主体与姿态"
+    },
+    {
+      "frame_id": "F37",
+      "corrected": "室内挂钟前人物的上半身，视线偏向画面左侧",
+      "reason": "删除无法由该单帧确认的站姿、动作经过或持续性表述，保留可见主体与姿态"
+    },
+    {
+      "frame_id": "F60",
+      "corrected": "门口台阶上小型犬的身体及四肢可见",
+      "reason": "删除无法由该单帧确认的站姿、动作经过或持续性表述，保留可见主体与姿态"
+    }
+  ],
+  "major_subject_misassignment_frames": [],
+  "subtitle_omission_frames": [
+    "F11",
+    "F30",
+    "F49",
+    "F50"
+  ],
+  "training_admitted": false
+}

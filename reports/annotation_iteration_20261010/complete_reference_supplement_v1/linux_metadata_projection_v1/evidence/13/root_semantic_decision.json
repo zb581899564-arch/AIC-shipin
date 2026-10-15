@@ -1,0 +1,104 @@
+{
+  "status": "ROOT_SEMANTIC_EVALUATION_ADJUDICATION_COMPLETE",
+  "utc": "2026-10-10T20:53:55.783088+00:00",
+  "window_id": "-esJrBWj2d8:SLOT6:6",
+  "candidate_prediction_exposure": false,
+  "root_read_all64_teacher_facts": true,
+  "root_read_all64_native_and_student_facts": true,
+  "all_NO_ranges_reviewed": true,
+  "selected_preteacher_event_indices": [
+    0
+  ],
+  "unknown_local_exact": [],
+  "consequential_unknowns": [],
+  "evidence": {
+    "preteacher_main_review": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\13_esjr_w06_main_preteacher_review.json",
+      "sha256": "a88f655a2d468656dd4ffbd7130f8454fe0287bbbe2f61838077a6554d218f9d"
+    },
+    "teacher_observation_audit": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\13_esjr_w06_composed_observation_completion.json",
+      "sha256": "5c316bf655a8567589df2d71eb9d3967c78345cec9f3c7f61d1b346442bdb2bf"
+    },
+    "original_teacher_program_bound_facts": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call05\\w13_program_bound_facts.json",
+      "sha256": "2a89ff3eb3291db51e01fead111a306b9a42d48b0e096b3edcc395e070e9c71e"
+    },
+    "composed_protocol": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\13_esjr_w06_composed_observation_protocol_v1.json",
+      "sha256": "771cb75a276576b7c9ee522d8436d285f92703cc655e35751c4bf1f2faae9bdf"
+    },
+    "root_effective8": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\13_esjr_w06_root_effective8_actual_observation.json",
+      "sha256": "e97f3ecfb35818a80b9b4aa5858a79c927b96fd21e95552f0f430d754a9e8ce3"
+    },
+    "original_Gemini_failure": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call05\\engineering_wrong_preview_paths_CLI31.json",
+      "sha256": "f9a3209f454d840b324259e9426a150c686054982b7f33375fe3453de02ef687"
+    },
+    "bounded_student_reinspection": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\13_-esJrBWj2d8_W06.student_bounded_reinspection_v1.json",
+      "sha256": "7a28f24e4a79af1fbeac440c3c7806d7062a28da1e670ed5c618c8088a26c5d7"
+    },
+    "bounded_student_acceptance": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\13_esjr_w06_bounded_student_acceptance.json",
+      "sha256": "bed05833eca6e6497a4375a4389dc4916cc0a9b87acdb8e65b184c47a79e7e91"
+    }
+  },
+  "differences_adjudicated": [
+    "学生初判保留局部完整抚摸，完整性可见不等于必选高光；主控对视觉价值作独立NO裁决，保留初判不改写。",
+    "原生初判0..27是典型猫图像支持域，不要求整段剪入。主控选短代表0..8，剩余重复明确NO；F8/F9是编辑区间而非声称镜头切点。",
+    "Original Gemini task13 remains FAILED: all64 native facts and native video were actually delivered, but its eight guessed preview paths ERROR and no proposal exists. This final reference uses a separately declared composite observation; its effective8 are actual root views, never attributed to Gemini.",
+    "Teacher labels the cat supine/four limbs stretched and infers calm, docile, relaxed or sleeping. Actual native and effective images show a reclining cat with overlapped limbs and varying eye opening. Root uses only clear short representative pose/image, with no emotion or sleep target.",
+    "Teacher one-image captions infer repeated rubbing, no resistance, environmental dynamics and prospective lifting. None is accepted from a static frame. Existing independent whole-window facts support hand contact then withdrawal; routine gentle contact has insufficient distinct visual highlight here and stays NO.",
+    "Teacher F53..55 invents a plate lifted/retracted, F54 claims only a fragment right. Root actual native F53/F54/F55 and effectiveF54 show the patterned plate on the lower image/floor area, sometimes clipped by camera, without evidence of lifting or removal. The ordinary pull/push/position change stays NO and its purpose is not inferred.",
+    "Food type, meat or moist-food composition and water/feeding function inferred by teacher are not target facts. Root keeps visible containers, pellets, colored remnants and cabinet/floor relations only.",
+    "The short F00..08 representative cat image begins at the declared domain boundary and ends in the exact adjacent F08/F09 editing bracket; this is an editorial choice within repeated imagery, not an observed physical event ending or measured cut."
+  ],
+  "actual_root_observation_scope": {
+    "native_sample_indices": [
+      0,
+      6,
+      8,
+      9,
+      27,
+      28,
+      34,
+      38,
+      39,
+      43,
+      51,
+      58,
+      63
+    ],
+    "student_sample_indices": [
+      0,
+      8,
+      34,
+      39
+    ],
+    "additional_postteacher_native_samples": [
+      53,
+      54,
+      55
+    ],
+    "additional_postteacher_student_previews": [
+      0,
+      9,
+      18,
+      27,
+      36,
+      45,
+      54,
+      63
+    ],
+    "read_native_static_facts": 64,
+    "read_student_static_facts": 64,
+    "read_teacher_static_facts": 64,
+    "read_bounded_student_facts": 11,
+    "root_direct64_image_review": false,
+    "root_native_video_view": false,
+    "original_Gemini_proposal_absent": true
+  },
+  "reference_scope_and_reason": "Evaluation-only finite visual editing silver from separately provenance-bound actual media. Select a short clear reclining-cat representative image and explicitly reject repeated pose, routine contact and ordinary plate positioning; no physical ending, audio, emotion or food composition is invented. Original Gemini failed task is preserved. Not gold or official quality."
+}

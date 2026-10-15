@@ -1,0 +1,55 @@
+{
+  "checked_utc": "2026-10-05T16:31:02.961913+00:00",
+  "completed_source_records": 426,
+  "failed_windows": 5,
+  "records": [
+    {
+      "video_id": "213",
+      "window_index": 0,
+      "status": "PARSE_FAILURE",
+      "errors": [
+        "segment 1 exceeds clip duration 13.0: [6.72,13.04]"
+      ],
+      "clock_branch": "CFR_LEGACY"
+    },
+    {
+      "video_id": "231",
+      "window_index": 0,
+      "status": "PARSE_FAILURE",
+      "errors": [
+        "6 segments exceeds the requested maximum 5"
+      ],
+      "clock_branch": "CFR_LEGACY"
+    },
+    {
+      "video_id": "259",
+      "window_index": 0,
+      "status": "PARSE_FAILURE",
+      "errors": [
+        "8 segments exceeds the requested maximum 5"
+      ],
+      "clock_branch": "CFR_LEGACY"
+    },
+    {
+      "video_id": "329",
+      "window_index": 0,
+      "status": "PARSE_FAILURE",
+      "errors": [
+        "9 segments exceeds the requested maximum 5"
+      ],
+      "clock_branch": "CFR_LEGACY"
+    },
+    {
+      "video_id": "396",
+      "window_index": 1,
+      "status": "PARSE_FAILURE",
+      "errors": [
+        "7 segments exceeds the requested maximum 5"
+      ],
+      "clock_branch": "CFR_LEGACY"
+    }
+  ],
+  "model_text_displayed": false,
+  "test_media_displayed": false,
+  "quality_rules_changed": false
+}

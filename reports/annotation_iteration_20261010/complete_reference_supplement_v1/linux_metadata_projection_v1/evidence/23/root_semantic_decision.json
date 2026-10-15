@@ -1,0 +1,103 @@
+{
+  "status": "ROOT_SEMANTIC_EVALUATION_ADJUDICATION_COMPLETE",
+  "utc": "2026-10-11T11:29:49.458995+00:00",
+  "window_id": "Yi4Ij2NM7U4:SLOT6:6",
+  "candidate_prediction_exposure": false,
+  "root_read_all64_teacher_facts": true,
+  "root_read_all64_native_and_student_facts": true,
+  "all_NO_ranges_reviewed": true,
+  "selected_preteacher_event_indices": [
+    0,
+    1
+  ],
+  "unknown_local_exact": [],
+  "consequential_unknowns": [],
+  "historical_NO_reason_corrections": [
+    {
+      "first": 18,
+      "last": 49,
+      "original_reason": "同一包装摇动及普通表情手势、取瓶后重复持瓶展示，避免长重复",
+      "corrected_reason": "同一包装摇动及普通表情手势、转身出框和白盖红瓶出现后的重复持瓶展示；不确认拿取来源或接触结果，保留原NO范围。"
+    }
+  ],
+  "evidence": {
+    "preteacher_main_review": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\23_yi4_w06_main_preteacher_review_v2.json",
+      "sha256": "6d40f6170e05912e795151d7cb9f7b6e7ccd6244231059516c272203bec3e18d"
+    },
+    "teacher_observation_audit": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\23_yi4_w06_lawful_observation_completion_CLI40_literal_separator_recovery_v3.json",
+      "sha256": "9b96f227bc251c61bde001a773a0a505de69f053bbd1c4b6137b428d990907ca"
+    },
+    "original_teacher_proposal": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_23_continuation_v2\\call40\\w23_proposal.json",
+      "sha256": "b34b6414f9fe150d70824569b7bd09e983301364d8d620b02c4dc82121e5e369"
+    },
+    "original_teacher_bound_fact_audit": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_23_continuation_v2\\call40\\w23_completed_scope_audit.json",
+      "sha256": "204c463a9087ed53c4be795b100d9fe47a58ca310fe6bed43742b6c6f2c72644"
+    },
+    "exposed_independent_semantic_crosscheck": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_semantic_crosschecks_v1\\23_Yi4Ij2NM7U4_W06.exposed_semantic_crosscheck_CLI40_recovery_v3.json",
+      "sha256": "e5d3816214e64f7679a997cf5a144373e08c0d0714b73c28c8e98237ccb4924d"
+    },
+    "root_actual_precompletion_pixels": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\23_yi4_root_actual_pixels_schema_recovery_v1.json",
+      "sha256": "f4ec599dbdd870ee64c49fe2bc84f42b2e7e6cbe8f76fa17e097a0f08323a9b0"
+    },
+    "root_actual_postteacher_pixels": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\23_yi4_root_actual_postteacher_pixels_CLI40_v3.json",
+      "sha256": "ebfab699326b90aad074fa6237261385ec7ebbaeaf09bf2daa4f27db3f3b49b2"
+    },
+    "actual_scope_engineering_recovery": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\CLI40_effective_literal_separator_recovery_receipt_v1.json",
+      "sha256": "3104c645566707afa89405d8d1d3126df91447da24002b6e9c6553b093ab8d43"
+    }
+  },
+  "differences_adjudicated": [
+    "Only two distinct clear product-relationship representative images are kept; ordinary talking and repeated holding have explicit NO reasons. No unseen audio, product efficacy or physical process completion is inferred.",
+    "Actual effectiveF15/F17 supports the previously frozen short representative packaged-food image, and effectiveF50/F52 supports the white-cap red-bottle pointing relationship. No brand, product efficacy, opening, taste or unseen cooking is inferred.",
+    "Student also identifies an earlier near-lens packaging display and longer repeated bottle-holding ranges. Root retains the two distinct short representative images already defined before teacher outputs, rather than every repeat; the full ordinary talking and gesture NO reasons remain explicit.",
+    "Student initial target UNKNOWN for complete physical operations remains sealed and outside the finite product-image targets; no complete opening, pouring or eating result is substituted. This remains silver editorial reference only, pending actual teacher comparison.",
+    "All64 actual teacher static facts and the complete original proposal were read. Package and bottle holding/pointing are visible. Tomato-sauce identity, vacuum sealing, spoken explanation, food taste, efficacy and intent are not established by the finite supplied images and are excluded from the reference.",
+    "The earlier near-lens package F07..08 and earlier bottle pointing F42/F44 are actual visible displays, not absent evidence. They remain repeated NO under the representative-image target fixed before teacher outputs and model predictions. The later frozen short targets F15..17 and F50..52 remain selected; no target was selected from candidate metrics.",
+    "Teacher 3.2..9.5 and17.2..27.6 KEEP spans and .8/1/1.3/1.2-second boundary ranges are preserved in the original proposal, but are not copied. The same short representative two-image relationship targets and exact preregistered boundary intervals remain, with midpoint editing choices rather than measured physical cuts.",
+    "F00..14 ordinary mouth poses/earlier package repeat, F18..49 repeated package/gestures/turning and repeated bottle holding, F53..63 repeated bottle/ordinary poses keep complete explicit NO coverage. Mouth-open static facts do not establish spoken content or laughter audio. F36 turning toward the counter and F59 bottle moving below the image do not establish grasping/release contact; F63 blurred hand before the face does not establish nose contact. F39 a partly visible white round cap is compatible with the teacher white-object fact but not a fully visible bottle.",
+    "Physical opening, pouring, consumption and complete food-use outcomes remain unknown in the sealed initial reviews and outside these two frozen finite display-image targets. They are not relabeled as completed actions; this is finite editorial silver, not human gold.",
+    "CLI40 strict original scope/whole REJECT due to eight separator-only literal differences remains bound. Windows actual same-file identity and frozen PNG SHA plus complete128 structure/naturalSUCCESS/actualcost permit only separately signed finite-observation recovery, not old literal compliance or semantic truth."
+  ],
+  "actual_root_observation_scope": {
+    "native_sample_indices": [
+      15,
+      17,
+      50,
+      52
+    ],
+    "student_sample_indices": [
+      15,
+      17,
+      50,
+      52
+    ],
+    "additional_precompletion_native_samples": [
+      15,
+      50
+    ],
+    "additional_postteacher_native_samples": [
+      8,
+      42
+    ],
+    "read_native_static_facts": 64,
+    "read_student_static_facts": 64,
+    "read_teacher_static_facts": 64,
+    "root_direct64_image_review": false,
+    "root_native_video_view": false,
+    "teacher_actual_video_delivery": true,
+    "parent_whole_rejected_preserved": true
+  },
+  "serializer_source_binding": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\finalize_eval_window_NO_note_v3.py",
+    "sha256": "b1ee69b3ab095138ef08777acca3de5d31b58fae0d6b02394451151512a5c1a1"
+  },
+  "reference_scope_and_reason": "Locked-evaluation-only finite visual editorial silver. Two independently preregistered representative package/bottle display images with ordinary/repeated NO. No spoken content, food identity, opening, pouring, consumption or complete cooking claim. Original physical unknowns remain explicit and outside the frozen image targets. Not human gold or training admission."
+}

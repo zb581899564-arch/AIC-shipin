@@ -1,0 +1,11 @@
+# 原作者帧序映射 v3：实际媒体失败后的独立工程修复
+
+v2的实际失败与3份成功解码证明保留，不重新标为通过。Cockpit_Landing的原WebM实际9046帧与作者user_score9046行完全一致；原生画面物理末端301.835秒，作者video_duration302.304秒与容器总时长相同，二者差0.469秒。物理末端继续采用实际最后视频帧PTS加正duration，不采用容器末端。
+
+原README、demo.m、summe_evaluateSummary.m明确以同名原视频的逐帧选择向量评价。作者segments的秒区间也支持帧序解释：Cockpit_Landing的103个仍存在的片段编号端点均距FPS换算帧边界不到1帧；按ceil(start*FPS)/floor(end*FPS)诊断重建，其全部user_score单元精确一致，而按nFrames/video_duration拉伸有1562个选择单元不符。完整20源诊断绑定原MAT与原作者代码SHA；少数原标注端点差异和作者越界区间仅记录，始终使用原始user_score，绝不重建、裁剪或更改标签。
+
+v3以作者逐帧向量和原成员完整解码序号一一对应。准入仍要求原成员名、字节/CRC/SHA，原生帧数严格等于原MAT行数，全部原始PTS严格递增、归一化只减真实首帧PTS，实际正最后帧duration。任何帧数不符、PTS失序或末端无证据均失败。nFrames/FPS、作者video_duration和容器总时长仅作兼容性诊断；不假设它们是原生画面末端，也不由它们生成标签、原生PTS或窗口。人工指标是作者帧序摘要代理指标，不能声称作者秒区间已达到原生切点精度。
+
+独立mapping_02引用mapping_01的3份成功clock及失败源另行保存的实测clock，仅纯逻辑检查，不重解码4源；其余16源各实际完整解码一次，先保存clock再验收，失败不会丢失测量。继承清单、原失败SHA、作者帧序审计SHA及代码SHA在启动前登记。所有20源通过后才做原native64 RGB/processor阶段；旧source-isolation成功证明直接引用，不重复执行。
+
+固定20源12screen/8confirm、64帧采样、原B0与原B8B、三配方、F1/逐源0.01/召回单调门、局部事实否决、旧40源FAILED均不变。此次只修正数据时间契约，不看模型结果，不启动训练，不提前封包。

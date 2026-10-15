@@ -1,0 +1,289 @@
+{
+  "utc": "2026-10-10T16:16:48.417522+00:00",
+  "status": "CURRENT_TURN_COMPLETE_TOOLS_WITH_DECLARED_RESULT_ERROR_REQUIRES_ROOT_ADMISSION",
+  "raw_sha256": "501a0fd86421eb15e9c786a396dbbaa31b410cabd0004587a492333f96c342fa",
+  "terminal_sha256": "b36279cd9b00f248b0965fc3b1f7ee45b62aaa7473909d545779f764ff3a68c0",
+  "request_sha256": "5a68c4e093e978e99fcc19796af762e92fafb4ec062b50dd4c03ce3d2fd3a089",
+  "original_audit_sha256": "c16002181c76dad595b7ce4ff1fa79306bcc283a77fe9c0a50cdc8a7bf6348d7",
+  "real_terminal": {
+    "utc": "2026-10-10T16:15:06.541856+00:00",
+    "exit_code": 0,
+    "stop_reason": null,
+    "wall_seconds": 362.7350000000006,
+    "stream_sha256": "501a0fd86421eb15e9c786a396dbbaa31b410cabd0004587a492333f96c342fa",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cash_cost": "UNKNOWN_NOT_ZERO",
+    "CLI_after": 26,
+    "outputs": [
+      "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v3_network\\resume_w11_network_recovery_v1\\w03_proposal.json"
+    ]
+  },
+  "actual_result_status": "ERROR",
+  "actual_result_error": "API error (attempt 1): request failed: Post \"https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse\": write tcp 127.0.0.1:58536->127.0.0.1:7892: wsasend: An existing connection was forcibly closed by the remote host.",
+  "result_metadata_scope": "Conversation cumulative duration and usage, not new wrapper elapsed",
+  "result_duration_seconds": 2483.3373942,
+  "result_num_turns": 2,
+  "result_usage": {
+    "input_tokens": 922071,
+    "output_tokens": 44227,
+    "thinking_tokens": 26040,
+    "cache_read_tokens": 9807135,
+    "total_tokens": 966298
+  },
+  "current_turn_user_inputs": [
+    {
+      "conversation_id": "7f341ecf-da15-407b-94af-83316fccaeaa",
+      "step_index": 171,
+      "state": "DONE",
+      "step_type": "user_input"
+    }
+  ],
+  "current_stream_error_message_steps": [
+    {
+      "conversation_id": "7f341ecf-da15-407b-94af-83316fccaeaa",
+      "step_index": 173,
+      "state": "DONE",
+      "step_type": "error_message",
+      "duration_seconds": 0
+    }
+  ],
+  "current_stream_agent_response_steps": [
+    {
+      "step_index": 174,
+      "duration_seconds": 28.1487229,
+      "usage": {
+        "input_tokens": 166613,
+        "output_tokens": 1745,
+        "thinking_tokens": 1654,
+        "cache_read_tokens": 0,
+        "total_tokens": 168358
+      },
+      "text_delta": null
+    },
+    {
+      "step_index": 176,
+      "duration_seconds": 39.4650119,
+      "usage": {
+        "input_tokens": 22371,
+        "output_tokens": 555,
+        "thinking_tokens": 456,
+        "cache_read_tokens": 166538,
+        "total_tokens": 22926
+      },
+      "text_delta": null
+    },
+    {
+      "step_index": 178,
+      "duration_seconds": 38.0708793,
+      "usage": {
+        "input_tokens": 3772,
+        "output_tokens": 164,
+        "thinking_tokens": 65,
+        "cache_read_tokens": 186844,
+        "total_tokens": 3936
+      },
+      "text_delta": null
+    },
+    {
+      "step_index": 180,
+      "duration_seconds": 32.3660728,
+      "usage": {
+        "input_tokens": 5094,
+        "output_tokens": 164,
+        "thinking_tokens": 65,
+        "cache_read_tokens": 186838,
+        "total_tokens": 5258
+      },
+      "text_delta": null
+    },
+    {
+      "step_index": 182,
+      "duration_seconds": 49.0334602,
+      "usage": {
+        "input_tokens": 2354,
+        "output_tokens": 164,
+        "thinking_tokens": 65,
+        "cache_read_tokens": 190894,
+        "total_tokens": 2518
+      },
+      "text_delta": null
+    },
+    {
+      "step_index": 184,
+      "duration_seconds": 30.5946923,
+      "usage": {
+        "input_tokens": 194564,
+        "output_tokens": 164,
+        "thinking_tokens": 65,
+        "cache_read_tokens": 0,
+        "total_tokens": 194728
+      },
+      "text_delta": null
+    },
+    {
+      "step_index": 186,
+      "duration_seconds": 50.7150001,
+      "usage": {
+        "input_tokens": 4997,
+        "output_tokens": 4544,
+        "thinking_tokens": 3173,
+        "cache_read_tokens": 190883,
+        "total_tokens": 9541
+      },
+      "text_delta": null
+    },
+    {
+      "step_index": 188,
+      "duration_seconds": 37.6774236,
+      "usage": {
+        "input_tokens": 5635,
+        "output_tokens": 132,
+        "thinking_tokens": 36,
+        "cache_read_tokens": 194974,
+        "total_tokens": 5767
+      },
+      "text_delta": null
+    },
+    {
+      "step_index": 190,
+      "duration_seconds": 38.4595954,
+      "usage": {
+        "input_tokens": 3302,
+        "output_tokens": 507,
+        "thinking_tokens": 147,
+        "cache_read_tokens": 199040,
+        "total_tokens": 3809
+      },
+      "text_delta": "\n"
+    }
+  ],
+  "actual_new_DONE_tools": 8,
+  "actual_new_tools": [
+    {
+      "conversation_id": "7f341ecf-da15-407b-94af-83316fccaeaa",
+      "step_index": 175,
+      "state": "DONE",
+      "step_type": "tool",
+      "tool_name": "view_file",
+      "duration_seconds": 0.2396334,
+      "tool_info": {
+        "name": "view_file",
+        "parameters": {
+          "AbsolutePath": "G:/ai/AIC视频/reports/annotation_iteration_20261010/complete_reference_supplement_v1/teacher_expansion/capacity_v3_network/resume_w11_network_recovery_v1/index.json"
+        },
+        "output": "1640 lines, 73521 bytes"
+      }
+    },
+    {
+      "conversation_id": "7f341ecf-da15-407b-94af-83316fccaeaa",
+      "step_index": 177,
+      "state": "DONE",
+      "step_type": "tool",
+      "tool_name": "view_file",
+      "duration_seconds": 0.2673612,
+      "tool_info": {
+        "name": "view_file",
+        "parameters": {
+          "AbsolutePath": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_AwmHb44_ouw_W11\\student_views\\F27_student.png"
+        }
+      }
+    },
+    {
+      "conversation_id": "7f341ecf-da15-407b-94af-83316fccaeaa",
+      "step_index": 179,
+      "state": "DONE",
+      "step_type": "tool",
+      "tool_name": "view_file",
+      "duration_seconds": 0.0835751,
+      "tool_info": {
+        "name": "view_file",
+        "parameters": {
+          "AbsolutePath": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_AwmHb44_ouw_W11\\student_views\\F36_student.png"
+        }
+      }
+    },
+    {
+      "conversation_id": "7f341ecf-da15-407b-94af-83316fccaeaa",
+      "step_index": 181,
+      "state": "DONE",
+      "step_type": "tool",
+      "tool_name": "view_file",
+      "duration_seconds": 0.2430095,
+      "tool_info": {
+        "name": "view_file",
+        "parameters": {
+          "AbsolutePath": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_AwmHb44_ouw_W11\\student_views\\F45_student.png"
+        }
+      }
+    },
+    {
+      "conversation_id": "7f341ecf-da15-407b-94af-83316fccaeaa",
+      "step_index": 183,
+      "state": "DONE",
+      "step_type": "tool",
+      "tool_name": "view_file",
+      "duration_seconds": 0.2323563,
+      "tool_info": {
+        "name": "view_file",
+        "parameters": {
+          "AbsolutePath": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_AwmHb44_ouw_W11\\student_views\\F54_student.png"
+        }
+      }
+    },
+    {
+      "conversation_id": "7f341ecf-da15-407b-94af-83316fccaeaa",
+      "step_index": 185,
+      "state": "DONE",
+      "step_type": "tool",
+      "tool_name": "view_file",
+      "duration_seconds": 0.0977,
+      "tool_info": {
+        "name": "view_file",
+        "parameters": {
+          "AbsolutePath": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_AwmHb44_ouw_W11\\student_views\\F63_student.png"
+        }
+      }
+    },
+    {
+      "conversation_id": "7f341ecf-da15-407b-94af-83316fccaeaa",
+      "step_index": 187,
+      "state": "DONE",
+      "step_type": "tool",
+      "tool_name": "write_to_file",
+      "duration_seconds": 0.2504662,
+      "tool_info": {
+        "name": "write_to_file",
+        "parameters": {
+          "TargetFile": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v3_network\\resume_w11_network_recovery_v1\\w03_proposal.json"
+        }
+      }
+    },
+    {
+      "conversation_id": "7f341ecf-da15-407b-94af-83316fccaeaa",
+      "step_index": 189,
+      "state": "DONE",
+      "step_type": "tool",
+      "tool_name": "view_file",
+      "duration_seconds": 0.2023505,
+      "tool_info": {
+        "name": "view_file",
+        "parameters": {
+          "AbsolutePath": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v3_network\\resume_w11_network_recovery_v1\\w03_proposal.json"
+        },
+        "output": "34 lines, 3118 bytes"
+      }
+    }
+  ],
+  "tool_issues": [],
+  "schema_issues": [],
+  "proposal_exists": true,
+  "proposal_sha256": "b4a0f75693cb0f89b4713faa627bded20ee0088fd2210d163924d3eb781fde2c",
+  "attribution_limit": "Error origin is not independently established. Preserve ERROR; completed current-turn supply and schema require independent root admission, not rewriting result SUCCESS.",
+  "global_CLI_calls": 26,
+  "cash_cost": "UNKNOWN_NOT_ZERO",
+  "extra_retry_capacity": 0,
+  "ten_fixed_pending_pairs": 10,
+  "training_admitted": false,
+  "semantic_correctness": "UNVERIFIED",
+  "automatic_retry": false
+}

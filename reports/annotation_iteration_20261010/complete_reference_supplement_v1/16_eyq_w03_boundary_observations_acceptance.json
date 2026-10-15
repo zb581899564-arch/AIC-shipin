@@ -1,0 +1,31 @@
+{
+  "status": "PASS_THREE_ACTUAL_NATIVE_BOUNDARY_OBSERVATIONS_NOT_FINAL_SEMANTIC_ADMISSION",
+  "observations": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\boundary_phase_v2_task07\\main_observation.json",
+      "sha256": "0181cf79fc819d6c72d72357a5d2effdb7d74ac587ac4a66197d4f4db913b00b"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\boundary_phase_v2_task08\\main_observation.json",
+      "sha256": "d1e90e7700248ea5ae47e52c688db55d9d1ea7ba689ee95f070eb594daba8d25"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\boundary_phase_v2_task09\\main_observation.json",
+      "sha256": "188db7bd50d442f1c30b6fd90e047ad6ca5b7c1730393a0055cd33ed0dc24887"
+    }
+  ],
+  "task07_start_range_local_exact": [
+    "213911/30000",
+    "110459/15000"
+  ],
+  "task08_end_range_local_exact": [
+    "556253/30000",
+    "28163/1500"
+  ],
+  "task09_not_used_as_known_start": true,
+  "paired_lift_editing_proposal": "Use clear paired front-wheel-high typical image F45..52 with F44/F45 start range, not inferred full preparation/completion. F44 and interior are blurred/cropped ordinary preparation, not a clear highlight by themselves.",
+  "all_three_identity_and_current_png_bindings_checked": true,
+  "actual_new_images": 3,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0
+}

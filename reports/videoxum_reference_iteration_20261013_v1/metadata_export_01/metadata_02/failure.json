@@ -1,0 +1,5 @@
+{
+  "status": "FAILED_METADATA_STAGE_PRESERVED_NO_AUTOMATIC_RETRY",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/code/metadata_stage_v2.py\", line 117, in main\n    raise RuntimeError('Author interval violates original source duration: ' + row['video_id'])\nRuntimeError: Author interval violates original source duration: v_cy-RLevyo_8\n",
+  "utc": "2026-10-13T03:50:15.909431+00:00"
+}

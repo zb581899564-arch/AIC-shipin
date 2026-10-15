@@ -1,0 +1,36 @@
+{
+  "schema": "TEMPORAL_SHARED_ANSWERS_FIVE_ABLATIONS_PROTOCOL_DRAFT_01",
+  "status": "PROPOSED_NOT_PRODUCTION_ADMISSION",
+  "arms": [
+    "START",
+    "END",
+    "BOTH",
+    "VERIFY",
+    "VERIFY_BOTH"
+  ],
+  "hypothesis": "Concentrate native64 observation around coarse event transitions and separately verify existence of worth-keeping candidate content",
+  "baseline": "D8 user40.44",
+  "shared_B_parameters": 8782459120,
+  "training_updates": 0,
+  "new_model_weights": 0,
+  "padding": {
+    "domain": "original coarse window, not the6s refiner clip",
+    "long_extra_tail_exact": "1/4",
+    "long_threshold_seconds": "8",
+    "lead_exact": "3/4",
+    "tail_exact": "1/2",
+    "condition_uses": "original coarse length"
+  },
+  "unknown_keep": "Original endpoint/event retained",
+  "failure": "Engineering input/model/parser/replay failure blocks a chain and retains raw, never converted to empty or UNKNOWN",
+  "merge": "Union of retained candidates; crossing pair retains original under preregistered guard",
+  "semantic": "Clear same-candidate inside/outside transition only; shotcut/intensity-change is insufficient",
+  "verify": "DROP needs explicit clearly ordinary/no worth-keeping candidate support; incomplete action, silent speech, static landscape, uncertain identity or subjective judgement UNKNOWN",
+  "evaluations": "Real two-call interface smoke first; external action clear-boundary proxy scope and coverage registered separately; old exposed summary only developer diagnosis, all five outcomes reported",
+  "risk_release": "Current human unknown-quality risk authority applies; oldFAILED gates not rewritten. Actual known severe KEEP destruction/ordinary leakage/invalid engineering no release; no automatic scientificPASS",
+  "production": "Not yet admitted: 3Emax1995, no oldvisioncache, streaming/cache-budget and real-input/resource/source/model locks required",
+  "actual_native_prediction_difference": "Required from D8, all history and all other new delivered candidates; zero-change arm not a package",
+  "official": "critic/official_rules_01.json current2026-10-13 pages and unchanged reviewed attachments",
+  "compute": "Linux only",
+  "deadline": "2026-10-14T11:56:40Z"
+}

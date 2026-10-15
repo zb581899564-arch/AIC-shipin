@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-11T15:18:44.285841+00:00",
+  "original_error": "downloaded receipt SHA mismatch: config.json",
+  "cause": "remote Path.read_text universal newline converted CRLF to LF before returning text, but advertised SHA was original bytes",
+  "repair": "v2 receipt carries raw_base64 and exact raw UTF8 text; original receipt preserved",
+  "model_regenerated": false,
+  "recipe_changed": false,
+  "scientific_gate_changed": false
+}

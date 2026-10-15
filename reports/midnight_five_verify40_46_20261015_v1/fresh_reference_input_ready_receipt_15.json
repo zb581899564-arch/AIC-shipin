@@ -1,0 +1,78 @@
+{
+  "receipt": {
+    "status": "ACTIVE_WAIT_MAIN_PRODUCTION_AFTER_NEW4_NATIVE_AND_FIRST_INPUT_QA_PASS",
+    "UTC": "2026-10-15T10:04:30.931915+00:00",
+    "actual_parent_argv": [
+      "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+      "-B",
+      "-u",
+      "/home/inspur/aic_video_work/midnight_five_verify40_46_20261015_v1/relative_confirm/control_14.py"
+    ],
+    "pid": 559055,
+    "start_ticks": "504099214",
+    "source_names": [
+      "v_RTwa2d6Oqvo",
+      "v_Nj_fvFbf56I",
+      "v_MkouTZhtvEI",
+      "v_xAI1y9izXOM"
+    ],
+    "actual_Linux_media_payload_bytes": 57088527,
+    "Windows_media_body_bytes": 0,
+    "primary_inputs": 8,
+    "first_independent_input_QA": 8,
+    "new_reference_GPU_calls": 0,
+    "new_reference_model_calls": 0,
+    "media_completion_ref": {
+      "path": "/home/inspur/aic_video_work/midnight_five_verify40_46_20261015_v1/relative_confirm/reference_01/completion.json",
+      "sha256": "f3d1803f79806fce7701c16657bc17b5972d57b53850391a05fde2abe706312e",
+      "bytes": 6373
+    },
+    "cpu_acceptance_ref": {
+      "path": "/home/inspur/aic_video_work/midnight_five_verify40_46_20261015_v1/relative_confirm/cpu_acceptance_confirm.json",
+      "sha256": "8e233b4b9738c93e9a76b99bfa4788aa637bdfbc4f07376ce0164b0cc198fe41",
+      "bytes": 6640
+    },
+    "first_input_QA_ref": {
+      "path": "/home/inspur/aic_video_work/midnight_five_verify40_46_20261015_v1/relative_confirm/confirm/B0/input_qa_01/completion.json",
+      "sha256": "30f4a5b9e7011fc4046954ff006ced9f1063500a9a1b527e696451f7c47d2a43",
+      "bytes": 2969
+    },
+    "source_lock_ref": {
+      "path": "/home/inspur/aic_video_work/midnight_five_verify40_46_20261015_v1/relative_confirm/source_lock_confirm_B0.json",
+      "sha256": "05bac5a3042550585792c9cb58e544679ace5e0040d7197226fb6e94e6eff8db",
+      "bytes": 164145
+    },
+    "production_dependency_ref": {
+      "path": "/home/inspur/aic_video_work/midnight_five_verify40_46_20261015_v1/relative_confirm/control_14/production_dependency_waiting.json",
+      "sha256": "d6f4484965f17ec6a58ec0491a51c5b755b77e36ad9de50ae9aed30ace8c11fa",
+      "bytes": 544
+    },
+    "old_control09_failure_ref": {
+      "path": "/home/inspur/aic_video_work/midnight_five_verify40_46_20261015_v1/relative_confirm/control_09/failure.json",
+      "sha256": "d288f1b16a2a6c374a8c3c01c13ee11469d38d25b1b743c876d380be06252eb8",
+      "bytes": 5535
+    },
+    "control14_launch_ref": {
+      "path": "/home/inspur/aic_video_work/midnight_five_verify40_46_20261015_v1/relative_confirm/control_14_launch.json",
+      "sha256": "4f38c8fb6482487fbee06954d2354d63303503044c73c683912d31bbc2e0b35a",
+      "bytes": 626
+    },
+    "policy_protocol_ref": {
+      "path": "/home/inspur/aic_video_work/midnight_five_verify40_46_20261015_v1/policy_protocol_07.json",
+      "sha256": "8b2182898141312c254dfa6b4f34396fc82ba0f165ac3dbf5a322599e28b5ee7",
+      "bytes": 1968
+    },
+    "selected_policies": [
+      "ALL_WINDOW_WORST",
+      "PAIR_ONLY"
+    ],
+    "scientific_quality_pass": false,
+    "production_admitted": false,
+    "independent_confirmation_pending": true
+  },
+  "receipt_ref": {
+    "path": "/home/inspur/aic_video_work/midnight_five_verify40_46_20261015_v1/relative_confirm/control_14/input_ready_receipt_15.json",
+    "sha256": "63d5260328acbff6cd72fac28b45e1a65295ad1372eb039840971d0f1c406df8",
+    "bytes": 2976
+  }
+}

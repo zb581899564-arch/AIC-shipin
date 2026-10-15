@@ -1,0 +1,76 @@
+{
+  "utc": "2026-10-08T15:01:34.678978+00:00",
+  "actual_rematch": {
+    "completion.json": null,
+    "rematch_01/progress.json": {
+      "stage": "T_TEMPORAL",
+      "videos": 387,
+      "total": 426,
+      "windows": 465,
+      "failures": 0,
+      "wall_seconds": 4701.063080536202
+    },
+    "rematch_01/temporal.stage.json": null,
+    "rematch_01/failure.json": null
+  },
+  "snapshot_utc": "2026-10-08T15:00:31.588317+00:00",
+  "owned_processes": [
+    "1101256       1 1101256    8582  8.3  0.0 /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/controller.py",
+    "1419066 1101256 1101256    4804  0.0  0.0 /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/resource_unlimited_v1_20261007/gpu_run.py --name rematch_TAUTO_v14_rematch_temporal --max-seconds 14400 --planned-output-bytes 60000000 --capacity-reason registered source/window denominator; 8B actual non-test generation identity and no test retuning --queue-seconds 259200 -- /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/production_t.py temporal rematch /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/rematch_01",
+    "1419070 1419066 1419070    4803  128  1.3 /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/production_t.py temporal rematch /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/rematch_01"
+  ],
+  "GPU": "0, NVIDIA RTX 6000 Ada Generation, 0 %, 25528 MiB, 46068 MiB",
+  "disk": {
+    "total": 943412031488,
+    "used": 704175828992,
+    "free": 191236591616
+  },
+  "ledger": {
+    "records": 153,
+    "sha256": "85a085edc09e6b906c041782fbd2d98807bf57cf4c7cc4e198ea933c2e486671",
+    "last_record": {
+      "name": "rematch_TAUTO_v14_nontest_temporal",
+      "command": [
+        "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+        "-B",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/production_t.py",
+        "temporal",
+        "nontest",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/nontest_01"
+      ],
+      "started_utc": "2026-10-08T13:31:51.827671+00:00",
+      "runner_pid": 1402453,
+      "reserved_seconds": 14400,
+      "teardown_reserve_seconds": 120,
+      "prior_charged_seconds": 194206.89808994206,
+      "gpu_time_mode": "UNLIMITED",
+      "max_total_gpu_seconds": null,
+      "resource_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
+      "disk_before": {
+        "free_bytes": 191271030784,
+        "work_bytes": 88962170880
+      },
+      "planned_output_bytes": 60000000,
+      "capacity_reason": "registered source/window denominator; 8B actual non-test generation identity and no test retuning",
+      "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+      "project_disk_limit_bytes": null,
+      "project_ram_limit_bytes": null,
+      "project_vram_limit_bytes": null,
+      "runner_source_sha256": "9997d41fbe2bb51726914b4698b874cf939c52aac02048fa9b3bb753c64c6cec",
+      "child_pid": 1402468,
+      "finished_utc": "2026-10-08T13:34:36.382210+00:00",
+      "charged_seconds": 164.55463389214128,
+      "exit_code": 0,
+      "stop_reason": null,
+      "sampled_peak_memory_mib": 19306,
+      "status": "completed",
+      "disk_after": {
+        "free_bytes": 191270715392,
+        "work_bytes": 88962375680
+      }
+    },
+    "historical_offset_seconds": 7200
+  },
+  "student_updates": 15,
+  "selected_original_B": true
+}

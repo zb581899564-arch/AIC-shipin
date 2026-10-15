@@ -1,0 +1,78 @@
+{
+  "status": "STOP_FIRST_PILOT_DO_NOT_EXPAND_OR_TRAIN",
+  "utc": "2026-10-10T14:31:49.519754+00:00",
+  "observed_windows": 1,
+  "qualified_windows": 0,
+  "remaining_unobserved_windows": 23,
+  "fixed24_plan": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\source_window_plan.json",
+    "sha256": "09ecb28971932bd3bf8ac275c30d0a6fd534345442f2d2ec3529fa3f8e1e4b22"
+  },
+  "teacher_tool_supply": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\independent_highlight_pilot_v3\\teacher_attempt01\\audit.json",
+    "sha256": "bbef39dce866e2220d1cb9f6564d17687cea44398619641956c19c4ad1bdd022"
+  },
+  "independent_checks": {
+    "blind_native": {
+      "seal": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\independent_highlight_pilot_v3\\blind_native\\seal.json",
+        "sha256": "cc8b7abe73eaf86999583643b883e6abd37ba1ab0033f3c8089e2980a9e8c2db"
+      },
+      "proposal": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\independent_highlight_pilot_v3\\blind_native\\proposal.json",
+        "sha256": "92f4fc7a34fad9fc8ea49db7d7be0a8b912fa7a4e147961800bba1c9a1abbfe3"
+      },
+      "actual_reads": 64
+    },
+    "blind_student": {
+      "seal": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\independent_highlight_pilot_v3\\blind_student\\seal.json",
+        "sha256": "b9cdad5382e3915ff2241781754a62600d8187033d56e6f4dc4e4a833ac17d4c"
+      },
+      "proposal": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\independent_highlight_pilot_v3\\blind_student\\proposal.json",
+        "sha256": "6a5a96a4596afe081957a05867e29e1d3b46e59a15ba2862e3006a263825a4ee"
+      },
+      "actual_reads": 64
+    }
+  },
+  "root_complete_adjudication": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\independent_highlight_pilot_v3\\main_adjudication\\final_review.json",
+    "sha256": "14a5d0353cbaffa12b36316de070d73b4e951762aceac299f5c54ba2120274c3"
+  },
+  "root_reference": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\independent_highlight_pilot_v3\\main_adjudication\\window_reference.json",
+    "sha256": "6b3cb3c9d2502dfb9951a3cd3e52830e51e4fb1d7d012ec0f1f4bd1183976151"
+  },
+  "original_silver_contract": {
+    "accepted": false,
+    "error": "Unresolved teacher observation contract"
+  },
+  "denominator": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\independent_highlight_pilot_v3\\denominator24.json",
+    "sha256": "f3699ee151b261072cf416aee01305a76bcaae0db3cfd513fccf95842848b6bf"
+  },
+  "teacher_semantic_correction_groups": 16,
+  "no_quality_gate_relaxed": true,
+  "new_gemini_cli_calls": 1,
+  "historical_cli_calls_before_stage": 21,
+  "registered_cli_calls_after_stage": 22,
+  "gemini_cash_cost": "UNKNOWN_NOT_ZERO",
+  "new_optimizer_updates": 0,
+  "new_GPU_calls": 0,
+  "new_426_inference_calls": 0,
+  "new_Pro_calls": 0,
+  "new_zip": false,
+  "safe_baseline": {
+    "path": "G:\\ai\\AIC视频\\deliveries\\ANNOTATION_ITERATION_20261010\\SAFE_37_66\\candidate_SAFE_37_66.zip",
+    "sha256": "07730c9e02e68d1a1ce54e7ef5a8aa616346cf8f2f8d78426ed36bc3eb481496"
+  },
+  "human_gold": false,
+  "spatial_reference_stop_preserved": true,
+  "new_protocol_required_before_further_teacher_calls": true,
+  "next_action": "Separate native-video context from explicit PNG ordinal/time facts; correct student-preview wording and specify own-output review policy in a new protocol. Preserve this failure; validate same first fixed window before expansion.",
+  "engineering_erratum": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\independent_highlight_pilot_v3\\ENGINEERING_ERRATUM.json",
+    "sha256": "9edc455e366697a4b65b1bcc3b8e561e184f3817a00769466da18b58426ce21b"
+  }
+}

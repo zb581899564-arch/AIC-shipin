@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-09T13:22:06.495186+00:00",
+  "stage": "COMPLETE_DATA_PREPARATION",
+  "accepted_sources": 48,
+  "excluded_sources": [
+    {
+      "source_id": "Se3oxnaPsz0",
+      "split": "validation",
+      "native_frames": 4166,
+      "human_frames": 4165,
+      "reason": "NATIVE_HUMAN_FRAME_COUNT_MISMATCH_NO_SHIFT_PADDING_OR_INTERPOLATION"
+    },
+    {
+      "source_id": "WG0MBPpPC6I",
+      "split": "train",
+      "native_frames": 9535,
+      "human_frames": 9534,
+      "reason": "NATIVE_HUMAN_FRAME_COUNT_MISMATCH_NO_SHIFT_PADDING_OR_INTERPOLATION"
+    }
+  ]
+}

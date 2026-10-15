@@ -1,0 +1,26 @@
+{
+  "control_bytes": 12049,
+  "control_sha256": "5f396f1b7931fea366ab800380048506da9ab02f4521c514bbc07bc97b31e678",
+  "result": {
+    "status": "PASS_LINUX_SYMLINK_FD_UNLINK_AND_CANONICAL_MISSING_BRANCH_SYNTHETIC_ONLY",
+    "checks": [
+      "external_symlink_file_rejected",
+      "external_symlink_ancestor_rejected",
+      "old_root_rejected_before_read",
+      "missing_canonical_blocks_release",
+      "descriptor_relative_NOFOLLOW_new_RGB_release",
+      "external_sentinel_unchanged",
+      "permanent_full_input_present_after_release"
+    ],
+    "successful_new_synthetic_RGB_releases": 1,
+    "old_or_real_media_deletions": 0,
+    "real_media_processor_model_production_calls": 0,
+    "torch_version": "2.5.1+cu124",
+    "CUDA_initialized": false,
+    "code_sha256": {
+      "codec.py": "e8c3361b789c73bf44275f02459ad18126253bd788ab295eef80728c6b599430",
+      "check_linux_security.py": "1d52ef9ffebd24946d20015bed0aeea7cca1263e4fa88565c228c25d5d41d750",
+      "leases.py": "268361b7bcce4c4be479b6f19bfaedc7709717a91883f3e3d587bd7b34dba406"
+    }
+  }
+}

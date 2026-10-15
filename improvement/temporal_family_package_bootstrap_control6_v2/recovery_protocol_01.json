@@ -1,0 +1,20 @@
+{
+  "schema": "CONFIRMED_HISTORICAL_DRAFT_BINDING_REPAIR_V2",
+  "utc": "2026-10-14T10:34:27.714612+00:00",
+  "actual_failure": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/actual_binder_historical_draft_failure_01.json",
+  "old_code_modified": false,
+  "historical_draft_modified": false,
+  "change": "Only exact path and SHA immutable historical draft stays hash-locked but is not recursively interpreted as completed evidence; all actual runtime/proof/final-config refs preserve strict recursive gates",
+  "fixed_graph_calls_and_QA_unchanged": true,
+  "model_or_decode_or_package_reruns": 0,
+  "new_code": {
+    "bind.py": {
+      "bytes": 31019,
+      "sha256": "f2b93a239d58b73513c0ceb9b65b17091aea008b35bd2a7bd3fe4f82e0411ece"
+    },
+    "control6_chain.py": {
+      "bytes": 9612,
+      "sha256": "aa54c24cf26beee2bd71ef809c6b67c7177f91d51a433f2f4ee754286aa3d4ac"
+    }
+  }
+}

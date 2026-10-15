@@ -1,0 +1,43 @@
+{
+  "status": "FINAL_BOUNDED_W01_INFORMATION_PURCHASE_CLOSED_NOT_TRAIN_READY",
+  "utc": "2026-10-10T09:01:14.988307+00:00",
+  "prior_receipt_sha256": "2681e6905341abb285b049ee23541d19184e3562e1998c90df4a8d7a53bf17ec",
+  "prior_result_sha256": "60affcec516400b554382be1a497fdd195f99067d1cabd9e85a1429206cbbe72",
+  "factual_batch32": {
+    "actual_PNG_reads": 32,
+    "actual_fact_rows_available": 0,
+    "comparison_with_independent_performed": false,
+    "prior_empty_disagreement_array_is_not_agreement": true,
+    "actual_wall_seconds": 252.39,
+    "declared_seconds": 240,
+    "wall_protocol_pass": false
+  },
+  "serialization_recovery": {
+    "exit_code": 1,
+    "chunks_written": 0,
+    "actual_tool_calls": 0,
+    "actual_model_turns": 0,
+    "status": "ERROR",
+    "failure": "NETWORK_EOF_IN_PROFILE_ELIGIBILITY_BEFORE_MODEL_INFERENCE",
+    "original_stream_sha_verified": true,
+    "prior_terminal_original_stream_unchanged_boolean_was_tautological": true,
+    "independent_actual_sha_comparison_above_replaces_that_evidence": true
+  },
+  "conservative_new_tasks": 4,
+  "distinct_post_stop_windows": 1,
+  "new_full_independent_records": 1,
+  "actual_new_CLI_invocations": 7,
+  "pre_inference_connection_failures": 3,
+  "model_turns_with_inference": 4,
+  "further_retries_in_this_bounded_information_purchase": false,
+  "new_optimizer_updates": 0,
+  "new_426_calls": 0,
+  "training_admitted": false,
+  "old_STOP_preserved": true,
+  "original_37_66_zip_preserved": true,
+  "pro_used_or_reserved": 6,
+  "pro_remaining": 2,
+  "cash_cost": "UNKNOWN_NOT_ZERO",
+  "decision_authority": "HOST_EXECUTION_FOLLOWUP_TO_COMPLETED_R04_R05_DISCUSSION_AND_EXISTING_PRO_SLOT6_INFORMATION_EXIT; NO_NEW_PRO_DECISION",
+  "future_task_template_sha256": "87eab729f0686442f431d9358e290f57bfadd2af91a2113dade759b030150a65"
+}

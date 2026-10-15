@@ -1,0 +1,13 @@
+# 既有B训练与426身份快照：已完成，尚未验收新SumMe来源
+
+严格aic-inspur-home只读核查确认当前主机inspur-NP5570M5及现有B入口、训练清单和注册表。本地训练清单/注册表/两份配置的实际SHA与远端一致；训练清单与冻结配置绑定均一致。没有读取模型权重或视频内容，没有加载processor/模型，没有改变连接、服务或外部作业。
+
+训练身份口径：602个原始youtube_id，704个注册片段/parent和物理媒体SHA，724个训练窗口。初次远端诊断中的groups=704按source_group片段字段计数；原训练契约expected_groups=602按youtube_id计数。二者口径不同，原训练契约和报告不改写。known_identity_snapshot_01.json保存全部704片段身份与426个冻结正式源身份，保留原始字段。
+
+原生exact_pts/native_frames通过engine导入common添加baseline_a_pts_v1路径；它们不在初次猜测的balanced_two_window_risk_v3目录。existing_runtime_readonly_01.json保留原路径诊断，existing_runtime_dependency_followup_01.json另核正确位置存在、SHA及原qwen3vl_isolated_20260910解释器存在。没有真正导入这些模型运行库，不把路径存在称模型就绪。
+
+这个快照不是新SumMe隔离PASS。须获得下载许可后，依据20个实际下载成员的SHA与此已知训练/测试SHA集合逐源比较，绑定具体媒体完成回执；有交集须停止。可比较的原始标识相同也须核查，不能仅因数据集前缀/命名空间不同就认定不是同源。
+
+限制必须保留：SumMe题名没有规范YouTube ID，正式源数字ID没有原始来源标识，基础模型预训练数据无法完整核实，精确字节比较不能识别重编码或摘录。已知身份/字节核查通过只说明该限定范围，不证明语义完全独立；不能称严格全新盲测。
+
+远端资源读数是本次只读时点的记录，不是下一次任务准入；实际下载/CPU/GPU执行前仍按当时共享资源和容量动态判断。当前新视频下载、解码、模型调用、训练、比较及ZIP均0，既有具体下载许可仍待人类回应。

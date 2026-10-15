@@ -1,0 +1,211 @@
+{
+  "run_id": "preliminary_cleanup_20261005T063947Z",
+  "state": "CLEANUP_COMPLETE_VERIFIED",
+  "authority": "User explicitly requested deleting unused preliminary assets to free space on 2026-10-05.",
+  "removed": [
+    {
+      "path": "/home/inspur/aic_video_work/orarl_round1/model/Video-ORA-4B/model-00001-of-00005.safetensors",
+      "bytes": 1271398528,
+      "allocated_bytes": 1271406592,
+      "sha256": "c76539c8db29c9a48dacbb2d92db040a6d19e47ff2ae1af0f6ef9f945e01c8fa",
+      "identity": [
+        2050,
+        33501597,
+        1271398528,
+        1789485846680599994
+      ],
+      "reason": "Stopped OraRL spatial/tracking route; downloadable published revision preserved in recovery evidence.",
+      "removed_utc": "2026-10-05T06:43:37.762565+00:00"
+    },
+    {
+      "path": "/home/inspur/aic_video_work/orarl_round1/model/Video-ORA-4B/model-00002-of-00005.safetensors",
+      "bytes": 2474053512,
+      "allocated_bytes": 2474057728,
+      "sha256": "5aef3f77725e8971a9320ae5b326f36d91fa4525073029a9dfa9d2ac9cb23615",
+      "identity": [
+        2050,
+        33501602,
+        2474053512,
+        1789486307624417013
+      ],
+      "reason": "Stopped OraRL spatial/tracking route; downloadable published revision preserved in recovery evidence.",
+      "removed_utc": "2026-10-05T06:43:37.951014+00:00"
+    },
+    {
+      "path": "/home/inspur/aic_video_work/orarl_round1/model/Video-ORA-4B/model-00003-of-00005.safetensors",
+      "bytes": 2472678384,
+      "allocated_bytes": 2472685568,
+      "sha256": "1fa049729c02e2e5ad9c61eb033f6a95fcc6c8e83e083259c2f5c2cb0caa0b0f",
+      "identity": [
+        2050,
+        33501603,
+        2472678384,
+        1789486273656434953
+      ],
+      "reason": "Stopped OraRL spatial/tracking route; downloadable published revision preserved in recovery evidence.",
+      "removed_utc": "2026-10-05T06:43:38.138370+00:00"
+    },
+    {
+      "path": "/home/inspur/aic_video_work/orarl_round1/model/Video-ORA-4B/model-00004-of-00005.safetensors",
+      "bytes": 2477924456,
+      "allocated_bytes": 2477932544,
+      "sha256": "73f9d3f7d2bd18d15a486352dd5deb0f3d0eefa7e9fae9b7b11809940526f222",
+      "identity": [
+        2050,
+        33501607,
+        2477924456,
+        1789486330260404775
+      ],
+      "reason": "Stopped OraRL spatial/tracking route; downloadable published revision preserved in recovery evidence.",
+      "removed_utc": "2026-10-05T06:43:38.311289+00:00"
+    },
+    {
+      "path": "/home/inspur/aic_video_work/orarl_round1/model/Video-ORA-4B/model-00005-of-00005.safetensors",
+      "bytes": 1653963896,
+      "allocated_bytes": 1653968896,
+      "sha256": "0efef653624c683615049e9dfbe122bdc675a388f8c21a2a0160e532b6b8e884",
+      "identity": [
+        2050,
+        33502976,
+        1653963896,
+        1789486437520344040
+      ],
+      "reason": "Stopped OraRL spatial/tracking route; downloadable published revision preserved in recovery evidence.",
+      "removed_utc": "2026-10-05T06:43:38.423733+00:00"
+    },
+    {
+      "path": "/home/inspur/aic_video_work/orarl_round1/env/orarl_hf",
+      "allocated_bytes": 8599650304,
+      "reason": "Isolated unused OraRL environment. Freeze and full inventory retained.",
+      "removed_utc": "2026-10-05T06:43:38.863951+00:00"
+    },
+    {
+      "path": "/home/inspur/aic_video_data/test/基于视频大模型的通用视频高光剪辑.zip",
+      "bytes": 757234263,
+      "allocated_bytes": 757239808,
+      "sha256": "130bdceb2574ef3ca853f6937fdf5f24c3fb1f054c92477f0c2d075e53efe0b6",
+      "identity": [
+        2050,
+        32703736,
+        757234263,
+        1788943894077586413
+      ],
+      "reason": "348 substantive unpacked files match archive sizes and CRC; retain extracted media/index. Mac metadata excluded.",
+      "removed_utc": "2026-10-05T06:43:38.916286+00:00"
+    }
+  ],
+  "scope": "Five abandoned OraRL weight shards, its isolated environment, and one CRC-confirmed duplicate preliminary ZIP. Retain actual train/test media, labels, all reports/source/configs/adapters/submissions, current Qwen model and environments, and rematch ZIP.",
+  "gpu_compute_processes_before": [],
+  "qwen_runtime_before": {
+    "executable": "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+    "torch": "2.5.1+cu124",
+    "transformers": "4.57.1",
+    "peft": "0.17.1",
+    "opencv": "5.0.0",
+    "decord": "0.6.0",
+    "cpu_imports_ok": true
+  },
+  "weight_revision": "01850297d5ab2adaaf130f700ed7cec52993d956",
+  "weight_restore_repository": "OraRL/Video-ORA-4B",
+  "weight_restore_manifest": "/home/inspur/aic_video_work/orarl_round1/evidence/weight_sha256_manifest.json",
+  "environment_allocated_bytes_before": 8599650304,
+  "deletion_plan": [
+    {
+      "path": "/home/inspur/aic_video_work/orarl_round1/model/Video-ORA-4B/model-00001-of-00005.safetensors",
+      "bytes": 1271398528,
+      "allocated_bytes": 1271406592,
+      "sha256": "c76539c8db29c9a48dacbb2d92db040a6d19e47ff2ae1af0f6ef9f945e01c8fa",
+      "identity": [
+        2050,
+        33501597,
+        1271398528,
+        1789485846680599994
+      ],
+      "reason": "Stopped OraRL spatial/tracking route; downloadable published revision preserved in recovery evidence."
+    },
+    {
+      "path": "/home/inspur/aic_video_work/orarl_round1/model/Video-ORA-4B/model-00002-of-00005.safetensors",
+      "bytes": 2474053512,
+      "allocated_bytes": 2474057728,
+      "sha256": "5aef3f77725e8971a9320ae5b326f36d91fa4525073029a9dfa9d2ac9cb23615",
+      "identity": [
+        2050,
+        33501602,
+        2474053512,
+        1789486307624417013
+      ],
+      "reason": "Stopped OraRL spatial/tracking route; downloadable published revision preserved in recovery evidence."
+    },
+    {
+      "path": "/home/inspur/aic_video_work/orarl_round1/model/Video-ORA-4B/model-00003-of-00005.safetensors",
+      "bytes": 2472678384,
+      "allocated_bytes": 2472685568,
+      "sha256": "1fa049729c02e2e5ad9c61eb033f6a95fcc6c8e83e083259c2f5c2cb0caa0b0f",
+      "identity": [
+        2050,
+        33501603,
+        2472678384,
+        1789486273656434953
+      ],
+      "reason": "Stopped OraRL spatial/tracking route; downloadable published revision preserved in recovery evidence."
+    },
+    {
+      "path": "/home/inspur/aic_video_work/orarl_round1/model/Video-ORA-4B/model-00004-of-00005.safetensors",
+      "bytes": 2477924456,
+      "allocated_bytes": 2477932544,
+      "sha256": "73f9d3f7d2bd18d15a486352dd5deb0f3d0eefa7e9fae9b7b11809940526f222",
+      "identity": [
+        2050,
+        33501607,
+        2477924456,
+        1789486330260404775
+      ],
+      "reason": "Stopped OraRL spatial/tracking route; downloadable published revision preserved in recovery evidence."
+    },
+    {
+      "path": "/home/inspur/aic_video_work/orarl_round1/model/Video-ORA-4B/model-00005-of-00005.safetensors",
+      "bytes": 1653963896,
+      "allocated_bytes": 1653968896,
+      "sha256": "0efef653624c683615049e9dfbe122bdc675a388f8c21a2a0160e532b6b8e884",
+      "identity": [
+        2050,
+        33502976,
+        1653963896,
+        1789486437520344040
+      ],
+      "reason": "Stopped OraRL spatial/tracking route; downloadable published revision preserved in recovery evidence."
+    },
+    {
+      "path": "/home/inspur/aic_video_data/test/基于视频大模型的通用视频高光剪辑.zip",
+      "bytes": 757234263,
+      "allocated_bytes": 757239808,
+      "sha256": "130bdceb2574ef3ca853f6937fdf5f24c3fb1f054c92477f0c2d075e53efe0b6",
+      "identity": [
+        2050,
+        32703736,
+        757234263,
+        1788943894077586413
+      ],
+      "reason": "348 substantive unpacked files match archive sizes and CRC; retain extracted media/index. Mac metadata excluded."
+    }
+  ],
+  "protected_file_count": 60090,
+  "free_bytes_before": 233770274816,
+  "updated_utc": "2026-10-05T06:43:44.197055+00:00",
+  "qwen_runtime_after": {
+    "executable": "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+    "torch": "2.5.1+cu124",
+    "transformers": "4.57.1",
+    "peft": "0.17.1",
+    "opencv": "5.0.0",
+    "decord": "0.6.0",
+    "cpu_imports_ok": true
+  },
+  "free_bytes_after": 253477203968,
+  "removed_allocated_bytes": 19706941440,
+  "filesystem_free_change_bytes": 19706929152,
+  "protected_metadata_unchanged": true,
+  "historical_reports_sha256_unchanged": true,
+  "gpu_hours_used": 0,
+  "model_outputs_generated": 0
+}

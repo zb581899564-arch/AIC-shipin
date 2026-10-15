@@ -1,0 +1,56 @@
+{
+  "status": "PASS_CANDIDATE_PURE_LOGIC_IMPLEMENTATION_ONLY",
+  "utc": "2026-10-10T21:50:56.000906+00:00",
+  "tests_run": 22,
+  "test_failures": 0,
+  "test_errors": 0,
+  "AST_parsed_candidate_sources": 6,
+  "contract_schema_JSON": "PASS",
+  "dependency_manifest": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_dependency_manifest.json",
+    "sha256": "8dbedc8b2237667e86541561124e2ed30a727b91d234eaa80d88e02056e87f43"
+  },
+  "source_shas": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_engine.py",
+      "sha256": "ed9d7cd5359cdd6611f5164cf96afb9c10207c5570af344318ed43aa464760c2"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_package.py",
+      "sha256": "23be213fd0b6c7457a9a2f3c3eab69acf7f7b5b0496c4dd4dfd763fad8953e6a"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_replay.py",
+      "sha256": "9d9bf4f95b34cfbc297b2a6c05533318877f94b49ab9c19f7af3f160e65e6b9a"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_support.py",
+      "sha256": "aa47648088d883b68e5f176ce60316b0a748ed5981fd1d9c3475a7cb3adbc21b"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_test.py",
+      "sha256": "89afdc129a8465e757ae74275b698d3e99e75f3aa26d0c921c637126eed0a140"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_validate_implementation.py",
+      "sha256": "7a29bda3d2b3784016f7c6864a15f83fb8ed3045841fba5a52f30c0826573116"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_contract_schema.json",
+      "sha256": "ceda3e1c66871919f78ade74743eb769b8bea8577d0b37b1aa9c1b8f2f9180ee"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_IMPLEMENTATION.md",
+      "sha256": "6e542c57dfd07c5fab66f10d754a587b3a2f6bdbff6d95d9ec420053cb76f188"
+    }
+  ],
+  "torch_transformers_av_numpy_peft_imported": false,
+  "new_model_calls": 0,
+  "new_native_decodes": 0,
+  "processor_calls": 0,
+  "remote_transfers": 0,
+  "real_521_runtime_verified": false,
+  "real_11_strict_ZIP_verified": false,
+  "training_admitted": false,
+  "scientific_quality_claim": false
+}

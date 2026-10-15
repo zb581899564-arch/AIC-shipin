@@ -1,0 +1,11 @@
+使用当前Gemini 3.8 Flash High执行真实视频高光标注。用户要求直接原生读取文件夹里的MP4。
+
+唯一输入目录是当前项目 input/native_video_tvsum_v1（绝对路径 G:/ai/AIC视频/reports/antigravity_label_probe_20261009/input/native_video_tvsum_v1），只包含manifest.json和原始GsAD1KT1xo8.mp4。先用view_file读取manifest，再直接用原生view_file查看MP4。不要读取已做的逐帧标注、TVSum人工分、旧输出、其他目录。不要调用终端、脚本、浏览器、外部API、其他模型或子代理，不改为预先抽帧PNG任务。
+
+根据实际获得的视频视觉内容，标注值得保留的精彩动作或事件及其时间区间。不要为了凑数量选段，没有证据时使用UNKNOWN。原生工具如果只返回内部抽样帧，要如实写下实际观察的时间戳和观察域；不要声称所有源帧逐帧看过，不把采样间隙当成已观察负例。内部原生采样仍属于本次直接读MP4路线，记录工具实际行为即可。
+
+每个事件输出start_seconds、end_seconds_exclusive、state（KEEP/UNKNOWN）、event_type、visible_evidence、boundary_uncertainty_seconds（不知道则null）和confidence（LOW/MEDIUM/HIGH）。时间以原视频时钟为基准，说明时钟依据。时间边界是视觉推荐，不能仅因为manifest时基精确就声称事件边界精确。不要编造音频或无法看到的动作，不调用其他服务补证据。
+
+只写 output/native_video_tvsum_v1/highlights.json 与 report.md，使用write_to_file；文件已存在就停止，不能覆盖。JSON顶层包含source_id、input_mode、actual_tool_name、native_video_accepted、observed_timestamps_seconds、observation_scope、audio_observed、events、unobserved_domain_policy、limitations。实际没有音频视觉以外证据就audio_observed=false。可见普通场景可以另记scene_notes，但不把无高光普通场景一律填成负例区间。
+
+如果原生MP4读取失败，保存failure.json，写工具名与具体错误并停止。完成告诉我原生视频是否被接受、工具实际提供的观察范围、事件数与文件路径，不给准确率自评，不启动训练。

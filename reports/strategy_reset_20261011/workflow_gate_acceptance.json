@@ -1,0 +1,66 @@
+{
+  "status": "PASS_CURRENT_WORKFLOW_FAIL_CLOSED_GATE_NO_MODEL_CALLS",
+  "utc": "2026-10-11T14:40:14.5639863Z",
+  "cases": [
+    {
+      "args": [
+        "status"
+      ],
+      "exit_code": 0,
+      "actual": {
+        "state": "ANALYSIS_ONLY",
+        "active_experiment": null,
+        "closed_agent_annotation": "RETIRED",
+        "execution_authorized": false,
+        "model_calls": 0,
+        "subprocesses_started": 0
+      }
+    },
+    {
+      "args": [
+        "run",
+        "--backend",
+        "closed-agent"
+      ],
+      "exit_code": 2,
+      "actual": {
+        "status": "DENY_RETIRED_CLOSED_AGENT_ANNOTATION",
+        "model_calls": 0,
+        "subprocesses_started": 0,
+        "training_started": false
+      }
+    },
+    {
+      "args": [
+        "check",
+        "--entrypoint",
+        "reports/annotation_iteration_20261011/contrast_boundary_v1/run_teacher_window_v4.py"
+      ],
+      "exit_code": 2,
+      "actual": {
+        "status": "DENY_RETIRED_HISTORICAL_ENTRYPOINT",
+        "model_calls": 0,
+        "subprocesses_started": 0,
+        "training_started": false
+      }
+    },
+    {
+      "args": [
+        "run",
+        "--backend",
+        "local-direct",
+        "--entrypoint",
+        "improvement/future_local_teacher.py"
+      ],
+      "exit_code": 2,
+      "actual": {
+        "status": "DENY_ANALYSIS_ONLY_NO_EXPERIMENT_AUTHORIZATION",
+        "model_calls": 0,
+        "subprocesses_started": 0,
+        "training_started": false
+      }
+    }
+  ],
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0
+}

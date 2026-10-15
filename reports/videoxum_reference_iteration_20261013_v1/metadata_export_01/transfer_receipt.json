@@ -1,0 +1,35 @@
+{
+  "status": "PASS_WINDOWS_METADATA_REFERENCE_EXPORT_CRC_MEMBER_SHA_PENDING_ZIP_REMOTE_SHA_READBACK",
+  "bytes": 19379,
+  "sha256": "0ae49ef8820e889d827f04aef1474b485c989e569ec57ea12b6e74b72078e07f",
+  "members": {
+    "metadata_01/failure.json": {
+      "bytes": 2888,
+      "sha256": "3c8a2d550c75baa31bf3ffb709fe140e79c835fec8a8c34e435925c9595b4b63"
+    },
+    "metadata_02/failure.json": {
+      "bytes": 471,
+      "sha256": "5ea015e1ad11ca0cea793f33e2c24c04f72ebf27a1729289234a7d0451d7c2d3"
+    },
+    "metadata_02/source_registration_01.json": {
+      "bytes": 9582,
+      "sha256": "2f3504d5e11ce4ebc31daf66ce993d7dbd4a3f8aa5c4901572ff2c7ee2ac800a"
+    },
+    "metadata_03/selected_human_references_01.json": {
+      "bytes": 322850,
+      "sha256": "29f669c40939985c00aaf3c80c1dcbe400eb0c52e5bcaf03c85d3c2254052b40"
+    },
+    "metadata_03/schema_acceptance_03.json": {
+      "bytes": 5706,
+      "sha256": "b53245052e0436eb05c403acabecd4f60b63dcc2d6c19b3c54457d8004475510"
+    },
+    "metadata_03/completion.json": {
+      "bytes": 926,
+      "sha256": "63ef86f68cdfb8875f763b13c192f656a2886c0b645833c86599a914eaf91252"
+    },
+    "control_deployment_03.json": {
+      "bytes": 782,
+      "sha256": "1500f836339d92d6d6fe8682d9154483b68d0ed3e8f4c055154e558ccaabef99"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "status": "USER_AUTHORIZED_NEW_CONTRAST_BOUNDARY_DATA_AND_SFT_EXPERIMENT_OLD_STOP_PRESERVED",
+  "user_quote": "那你继续补充新的训练数据，把普通片段和高光边界标注做好，再微调验证，一直做到能打包出质量合格的新包，别拿旧37.66包充数。",
+  "utc": "2026-10-11T12:26:44.211825+00:00",
+  "old_failed_recipe_restarted": false,
+  "new_source_plan_sha256": "f8462f667b11e62541a6051cb671bafb16c0231e60dceaf310ad7f1701fc60d7",
+  "initial_model": "ORIGINAL_B_8B_ONLY",
+  "old37_66_delivery_allowed_as_new_output": false,
+  "teacher": "gemini-3.8-flash-high via existing agy CLI, isolated fresh conversations, finite native sample contact sheets",
+  "teacher_new_call_budget": 96,
+  "teacher_per_call_seconds": 1200,
+  "pilot_calls": 2,
+  "no_automatic_retry_failed_media": true,
+  "teacher_cash": "UNKNOWN_NOT_ZERO",
+  "official_upload": false,
+  "new_large_source_transfer": "PENDING_EXACT_BYTES_USER_PERMISSION_NOT_COVERED_BY_OLD12_SOURCE_APPROVAL"
+}

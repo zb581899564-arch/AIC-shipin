@@ -1,0 +1,26 @@
+{
+  "status": "PASS_INDEPENDENT_SELECTED_NATIVE_GRID_AND_ORIGINAL_HUMAN_TARGETS",
+  "utc": "2026-10-09T13:38:57.341417+00:00",
+  "temporal_sources": 48,
+  "fixed_grid_frames": 6047,
+  "selected_rows": {
+    "crop_balanced_train.jsonl": 181,
+    "crop_full_validation.jsonl": 148,
+    "temporal_fixed_train.jsonl": 314,
+    "temporal_fixed_validation.jsonl": 89
+  },
+  "source_split_overlap": 0,
+  "label_informed_input_sampling": false,
+  "all_selected_scores_recomputed_from_original_tsv": true,
+  "native_sample_png_hash_and_decode_verified": true,
+  "constant_train_mean_baseline": {
+    "mean_importance": 1.9707517035775126,
+    "validation_mae_importance": 0.5015896089968059,
+    "validation_rmse_importance": 0.5945872726647241,
+    "note": "Diagnostic human-reference baseline; not student performance or competition score."
+  },
+  "gemini_event_boundaries_used": 0,
+  "semantic_event_boundaries_proven": false,
+  "model_weights_loaded": false,
+  "training_started": false
+}

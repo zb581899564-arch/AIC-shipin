@@ -1,0 +1,23 @@
+{
+  "status": "PASS_V2_EXACT_CPU_RECOVERY_PREFLIGHT_NO_DECODER_NO_MODEL",
+  "utc": "2026-10-11T17:58:20.718451+00:00",
+  "registered_windows": 521,
+  "registered_sources": 426,
+  "old_cpu_successes_referenced": 314,
+  "repaired_actual_target_referenced": 1,
+  "untouched_cpu_windows_remaining": 206,
+  "successful_old_cpu_decodes_repeated": 0,
+  "successful_target_decodes_repeated": 0,
+  "new_model_calls": 0,
+  "CUDA_initialized": false,
+  "source_plan_preserved": true,
+  "registration_sha256": "0fa2e31b650c08a029cee84fd1aed0a93b9f9cc23c99479d12c7bce889171182",
+  "engineering_sha256": "e300bcf59ed070161ab42d93e7360c6cfde96414204a6a6a54934ba977892967",
+  "chain_sha256": "ad64bbd033bb418a527ecf8022eb43231a9e28a03864fca12bc66f1833dd60be",
+  "cpu_transfer_manifest_sha256": "02b5b536255feb679ac1a378bfbc5aba7bd9399e4551f2d6e34ef380f3272dc7",
+  "target_completion_sha256": "5e9b976e6783c91224db96ebd590625c6427bb6abfc9f8d81d60bcbef9cacfd7",
+  "unaffected_audit_sha256": "2e017c7d220d2a68c8cd8ab1e56a3441e6a35ddae2fea9468cb17f8f5117b372",
+  "complete_input_acceptance": false,
+  "scientific_quality_pass": false,
+  "official_score": null
+}

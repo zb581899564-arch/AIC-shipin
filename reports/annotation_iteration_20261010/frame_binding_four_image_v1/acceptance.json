@@ -1,0 +1,54 @@
+{
+  "status": "PARTIAL_METHOD_GAIN_NO_COMPLETE_REFERENCE_ADMISSION",
+  "utc": "2026-10-10T14:53:52.574046+00:00",
+  "structured_field_comparison_pass": true,
+  "structured_facts": 20,
+  "checks_per_fact": 4,
+  "program_identity_rows": 20,
+  "free_text_rejections": 3,
+  "fully_accepted_minimum_method_test": false,
+  "full_window_qualified": false,
+  "evidence": {
+    "freeze.json": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\frame_binding_four_image_v1\\freeze.json",
+      "sha256": "b5836222ae80445d9a40fcb0b58e5cbc2710238938d7c5bc7e819f8dac31bfe6"
+    },
+    "audit.json": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\frame_binding_four_image_v1\\audit.json",
+      "sha256": "60d5470daccb6dae28b869542738c91b3bb3002ce5be9fd70df38ac2ff312e83"
+    },
+    "program_bound_facts.json": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\frame_binding_four_image_v1\\program_bound_facts.json",
+      "sha256": "b3b03b49db1717d2ba9c989c3c5c3f97c345138dbab2316da33e7cbf680e784b"
+    },
+    "main_fact_review.json": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\frame_binding_four_image_v1\\main_fact_review.json",
+      "sha256": "72806255eb812bcc4e8e97fe6b9c47966d7bf05e9667f3e0618b7d085615eb24"
+    }
+  },
+  "prior_v3_acceptance": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\independent_highlight_pilot_v3\\acceptance.json",
+    "sha256": "29cb07a037bcaf199367f03028c7bc469a905997b6ec0c953f97796233fb1199"
+  },
+  "safe_baseline": {
+    "path": "G:\\ai\\AIC视频\\deliveries\\ANNOTATION_ITERATION_20261010\\SAFE_37_66\\candidate_SAFE_37_66.zip",
+    "sha256": "07730c9e02e68d1a1ce54e7ef5a8aa616346cf8f2f8d78426ed36bc3eb481496"
+  },
+  "terminal": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\frame_binding_four_image_v1\\attempt01\\terminal.json",
+    "sha256": "36cfc58215d21ce82597e9e6e986487918e85a89b2e84eddad5ff1563ed5da70"
+  },
+  "new_CLI_calls": 1,
+  "total_registered_CLI": 23,
+  "CLI_cap": 36,
+  "cash_cost": "UNKNOWN_NOT_ZERO",
+  "new_training": 0,
+  "new_GPU": 0,
+  "new_426": 0,
+  "new_Pro": 0,
+  "new_zip": false,
+  "repeat_same_hypothesis_calls": false,
+  "expanded_other_windows": false,
+  "remaining_evidence": "This fact-only sample neither resolves complete highlight preference nor produces a new complete-window reference. Original pilot STOP and all train/locked/spatial gates remain.",
+  "minimum_external_review_if_needed": "Independent editor may start with this fixed30s window using native64 plus actual student64 and the fixed boundary observation ranges; review every KEEP/NO and each boundary. No new user media required; editor need not be user. Full admission still requires original 8-12 train windows/at least4sources and locked at least6/8 across all4sources. Human spatial gold requires a separate qualified reference and is not supplied by this model test."
+}

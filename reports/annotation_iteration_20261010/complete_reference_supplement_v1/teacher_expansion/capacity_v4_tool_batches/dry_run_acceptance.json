@@ -1,0 +1,98 @@
+{
+  "utc": "2026-10-10T17:26:35.097668+00:00",
+  "status": "PASS_IMPLEMENTATION_AST_CPU_SHA_NO_MODEL_PENDING_ROOT_LAUNCH",
+  "AST": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\admission.py",
+      "sha256": "e0d753565c41c62467a7e3b7adb172d7b56447c367893bc9ff9c1666549076eb",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\audit_completed_window.py",
+      "sha256": "d4121b6b7a0456a66e2e8c86a7cece2d13f4588e8dba7217a03d9dc84c22ff1f",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\audit_pair.py",
+      "sha256": "b8b12958c2a03461561f9aca80c0b3d13f5189ee47b6fc4b97cc6addce4f595b",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\controller.py",
+      "sha256": "bf5dfdc5915cd14ca7ec157f81e198c91f69aebdb4d9d097eaa2f53b6d2795c2",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\launch.py",
+      "sha256": "6bf313765687b99b1cd905ec637cda1597e3efd24c91a1054e5a00904ad10deb",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\progress.py",
+      "sha256": "23f54df447d945ddfa0279acc84f9c5444657a90119a42eb40034f7cde54d180",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\run_pair.py",
+      "sha256": "ea74f24b7e8f120b50b072ec9d91a7e4a41e357aadb6a79635b6a806855d2811",
+      "AST_PASS": true
+    }
+  ],
+  "fresh_calls": 9,
+  "fresh_windows": 18,
+  "fixed_job_indices": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "CLI_numbers": [
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36
+  ],
+  "timeout_seconds": 7200,
+  "all_frozen_input_SHA_verified": true,
+  "input_bindings": 1458,
+  "source_indices_restored_equal": true,
+  "only_output_paths_changed": true,
+  "native_PNG_per_window": 64,
+  "groups_per_window": 16,
+  "student_preview_per_window": 8,
+  "actual_student_frames": 64,
+  "group_dispatch": "one agent_response / 4 ordered tools / all DONE / immediate fact write",
+  "preview_dispatch": "one agent_response / 8 ordered tools / all DONE / proposal",
+  "serial_tools_not_concurrent": true,
+  "model": "gemini-3.8-flash-high",
+  "authorization_sha256": "9b61e55825d1a48a6ed9b47375cb2b5df01bbb026cd56ff990c3c97a9fe224d9",
+  "batch_evidence_sha256": "79d33aaa4d6eb48cfe43527f44232a064bfb5ab7e108afb8c6038e8844bde0cd",
+  "execution_code_binding_sha256": "7146f4cc4017d024d598e6593c00b0338fbb29c6e9da6411d385c3bf983e76c3",
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "new_decode": 0,
+  "new_426": 0,
+  "existing_v3_inputs_and_source_files_not_written": true,
+  "current_call01_timeout_unchanged": 4500,
+  "requires_root_start_admission": true,
+  "cash_cost": "UNKNOWN_NOT_ZERO"
+}

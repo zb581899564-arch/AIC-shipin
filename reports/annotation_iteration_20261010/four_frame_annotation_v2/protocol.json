@@ -1,0 +1,80 @@
+{
+  "status": "USER_AUTHORIZED_NEW_FACT_ENGINEERING_STAGE",
+  "utc": "2026-10-10T09:54:51.302305+00:00",
+  "window_id": "kLxoNp-UchI:SLOT6:1",
+  "role": "previously_exposed_training_source_regression_not_blind",
+  "model": "gemini-3.8-flash-high",
+  "student_index_sha256": "79ab5094c4b6545053ce1d41110a3c6bad0c377baaf637201204936ff0d4347d",
+  "native_index_sha256": "08e8bc80536a4ed6433222c043888bdbbdb6571b9af1a5b18dcdc2b77d7411ae",
+  "historical_cli_receipts": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\teacher_attempt01_http1\\terminal.json",
+      "sha256": "ad7335adb74a6912ce29077a279d021a282d40cca310f405cbd9a882c11b20c7"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\01_kLxoNp-UchI_W02\\teacher_attempt01_http1\\terminal.json",
+      "sha256": "18123b89737c6443c0382180e9423ab6ab1f4367a2331c93463e5cbead827adb"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\02_AwmHb44_ouw_W10\\teacher_attempt01_http1\\terminal.json",
+      "sha256": "948c3d797e4717ec14b4b9b047ba9da4535b020b006dc32c962e1e0e88467511"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_AwmHb44_ouw_W11\\teacher_attempt01_http1\\terminal.json",
+      "sha256": "e1fb8a747d7331571ec13d8658e3f22799691b7a32ae4bb2e87e8c465af96f9a"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\w01_editorial_diagnostic_v1\\h2_f37_single_frame_v1\\terminal.json",
+      "sha256": "bbb8f9854ce54cef8792c76e0217feabf533d66e87384f8be4c54c95946e3d44"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\w01_editorial_diagnostic_v1\\h3_second_half32_factual_v1\\terminal.json",
+      "sha256": "f008171c08238d52cba034a1d4ed97c43bd9fd7deead5ac2bd69716d245a69d7"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\w01_editorial_diagnostic_v1\\h3_second_half32_serialization_recovery_v1\\terminal.json",
+      "sha256": "2fc0284383754145eb0f20c50d18e040c32878954d47f874325fbfe1f1b61241"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\w01_editorial_diagnostic_v1\\teacher\\terminal.json",
+      "sha256": "df41645614f6ef6d54f7c1f96b531985a0f3e88f1911b4616f47d6cc9d67c610"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\w01_editorial_diagnostic_v1\\teacher\\engineering_recovery_v2\\terminal.json",
+      "sha256": "91c8b560614eceb2bfa729050ecaf9ed935d25e49bfb84e4f9b891c81a91519c"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\w01_editorial_diagnostic_v1\\teacher\\engineering_recovery_v3_transport_retry\\terminal.json",
+      "sha256": "45233a87494422c721fdefeb28163dc48f2e933de549dea09acd1dcec6ded3b2"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\w01_editorial_diagnostic_v1\\teacher\\engineering_recovery_v4_http2\\terminal.json",
+      "sha256": "d0ad42996e7d98a9d8a5a2eb0ee4793bdfeaaab11ba3af7eec12621126cc585a"
+    }
+  ],
+  "historical_cli_count": 11,
+  "cumulative_cli_cap": 36,
+  "new_cli_cap": 10,
+  "hard_seconds_per_cli": 420,
+  "recovery_cap": 1,
+  "chunk_size": 4,
+  "conversation_frame_cap": 16,
+  "old_stop_preserved": true,
+  "training_admitted": false,
+  "new_optimizer_updates": 0,
+  "new_426_calls": 0,
+  "pro_used": 6,
+  "pro_cap": 8,
+  "cash_cost": "UNKNOWN_NOT_ZERO",
+  "source_sha256": "0c91bfa880e3af0e1716e7456ada0a304a97911eef76b1cd4fdce5066a52e8f7",
+  "source_files_unchanged": true,
+  "no_network_config_changes": true,
+  "output_schema": [
+    "actual_image_read",
+    "frame_id",
+    "subtitle_legibility",
+    "subtitle_text",
+    "uncertainties",
+    "visible_subject"
+  ]
+}

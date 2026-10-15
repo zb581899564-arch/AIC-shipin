@@ -1,0 +1,182 @@
+{
+  "schema": "CONTRAST_BOUNDARY_TEACHER_AUDIT_ENGINEERING_REPRESENTATION_FIX_RECEIPT_V1",
+  "status": "PASS_FIELD_MAPPING_AND_EXACT_ENDPOINT_REPRESENTATION_ONLY",
+  "utc": "2026-10-11T14:26:25.062954+00:00",
+  "helper_v3": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\audit_teacher_sheet_stream_v3.py",
+    "sha256": "46bcf2175e04998e5088514e0d22aa52bde0b1a6610d350a2ae6338eb967276a"
+  },
+  "old_helpers_preserved": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\audit_teacher_sheet_stream_v1.py",
+      "sha256": "10f0df77e48c20b04e2ac1cb22c745e88606ef287ee672bd3ce04b5dd97b8b0e"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\audit_teacher_sheet_stream_v2.py",
+      "sha256": "478de9f3b2ead5978a7de8d64b398edae189906ee5d28a1df47390cbbe7d7eec"
+    }
+  ],
+  "science_contract_read_only": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\science_runtime\\science_contract.py",
+    "sha256": "35169f401b581b06e9d65da76c88433e72af3354cf30d8cf61ea0653c2537268"
+  },
+  "actual_science_audit_subscript_keys": [
+    "image_block_claimed",
+    "native_video_delivered",
+    "old_workflow_claimed",
+    "original_stream",
+    "raw_image_metadata_limitations",
+    "sheet_observations",
+    "tool_issues"
+  ],
+  "change": "Add old_workflow_claimed=false required by actual verify_window while retaining old_media_workflow_claimed=false. Bind immutable original_audit and reuse original successful PNG result. Preserve root v2 exact numeric domain endpoint rule.",
+  "audits": [
+    {
+      "call": "000_attempt_02",
+      "original_audit": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\teacher_calls\\000_attempt_02\\teacher_stream_audit.json",
+        "sha256": "b202f6675157617b437450319a58f684e4d405506c244f66948d6e49fdf27695"
+      },
+      "projection_audit": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\teacher_calls\\000_attempt_02\\teacher_stream_audit_v2.json",
+        "sha256": "493de9b18ef499ec28ac43c056b453f4a16502112a294f4707cc22a9609da70c"
+      },
+      "original_required_field_rejection_reproduced": true,
+      "projected_actual_workflow_predicate_pass": true,
+      "stream_acceptance": {
+        "successful_sheet_tools": 8,
+        "raw_image_metadata_visible_count": 0,
+        "image_bytes_attention_proven": false
+      },
+      "proposal_form_acceptance": {
+        "frame_fact_identity_count": 64,
+        "complete_partition_exact": true,
+        "event_union_equals_keep": true,
+        "event_count": 0,
+        "boundary_count": 0,
+        "boundary_brackets_max_half_second": true,
+        "pure_no": true,
+        "keep_seconds_exact": "0",
+        "no_seconds_exact": "30",
+        "unknown_seconds_exact": "0",
+        "semantic_facts_verified": false,
+        "semantic_boundary_support_verified": false,
+        "semantic_quality_verified": false,
+        "training_admitted": false
+      },
+      "successful_pixel_acceptance_reused": {
+        "source_pngs_pixel_verified": 64,
+        "unscaled_sheet_tiles_verified": 64,
+        "sheets_pixel_verified": 8,
+        "header_pixels_per_row": 26
+      }
+    },
+    {
+      "call": "004_attempt_01",
+      "original_audit": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\teacher_calls\\004_attempt_01\\teacher_stream_audit.json",
+        "sha256": "7d55b126260c26ef359e23b5e8e3f37c2a072947da30bac64087d045f370dc8c"
+      },
+      "projection_audit": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\teacher_calls\\004_attempt_01\\teacher_stream_audit_v2.json",
+        "sha256": "e2ff90d16dd33cfd778436a28fcedeaa99ccd62bf305bc98cf8ad3e27b37bcee"
+      },
+      "original_required_field_rejection_reproduced": true,
+      "projected_actual_workflow_predicate_pass": true,
+      "stream_acceptance": {
+        "successful_sheet_tools": 8,
+        "raw_image_metadata_visible_count": 0,
+        "image_bytes_attention_proven": false
+      },
+      "proposal_form_acceptance": {
+        "frame_fact_identity_count": 64,
+        "complete_partition_exact": true,
+        "event_union_equals_keep": true,
+        "event_count": 0,
+        "boundary_count": 0,
+        "boundary_brackets_max_half_second": true,
+        "pure_no": true,
+        "keep_seconds_exact": "0",
+        "no_seconds_exact": "30",
+        "unknown_seconds_exact": "0",
+        "semantic_facts_verified": false,
+        "semantic_boundary_support_verified": false,
+        "semantic_quality_verified": false,
+        "training_admitted": false
+      },
+      "successful_pixel_acceptance_reused": {
+        "source_pngs_pixel_verified": 64,
+        "unscaled_sheet_tiles_verified": 64,
+        "sheets_pixel_verified": 8,
+        "header_pixels_per_row": 26
+      }
+    },
+    {
+      "call": "001_attempt_01",
+      "original_audit": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\teacher_calls\\001_attempt_01\\teacher_stream_audit.json",
+        "sha256": "20594c756b04a1c6d955dd7c864c37a6f94309b4ecee45625936f22822d6590e"
+      },
+      "projection_audit": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\teacher_calls\\001_attempt_01\\teacher_stream_audit_v2.json",
+        "sha256": "d3e30fb3f53409b97519dafd4407502665c571dad5b6125e90065c30b6d4772a"
+      },
+      "original_required_field_rejection_reproduced": true,
+      "projected_actual_workflow_predicate_pass": true,
+      "stream_acceptance": {
+        "successful_sheet_tools": 8,
+        "raw_image_metadata_visible_count": 0,
+        "image_bytes_attention_proven": false
+      },
+      "proposal_form_acceptance": {
+        "frame_fact_identity_count": 64,
+        "complete_partition_exact": true,
+        "event_union_equals_keep": true,
+        "event_count": 1,
+        "boundary_count": 2,
+        "boundary_brackets_max_half_second": true,
+        "pure_no": false,
+        "keep_seconds_exact": "573/50",
+        "no_seconds_exact": "927/50",
+        "unknown_seconds_exact": "0",
+        "semantic_facts_verified": false,
+        "semantic_boundary_support_verified": false,
+        "semantic_quality_verified": false,
+        "training_admitted": false
+      },
+      "successful_pixel_acceptance_reused": {
+        "source_pngs_pixel_verified": 64,
+        "unscaled_sheet_tiles_verified": 64,
+        "sheets_pixel_verified": 8,
+        "header_pixels_per_row": 26
+      }
+    }
+  ],
+  "tests": {
+    "AST_PASS": true,
+    "actual_unmodified_001_end_30_accepted": true,
+    "wrong_numeric_29_rejected": true,
+    "noncanonical_30_decimal_rejected": true,
+    "wrong_numeric_31_rejected": true,
+    "numeric_D_on_start_rejected": true,
+    "exclusive_projection_overwrite_rejected": true,
+    "original_missing_old_workflow_key_reproduced": true,
+    "all_actual_science_audit_keys_present": true,
+    "all_three_real_stream_acceptance_pass": true,
+    "all_three_exact_proposal_forms_pass": true
+  },
+  "limits": {
+    "full_verify_window_not_run": true,
+    "semantic_quality_verified": false,
+    "training_admitted": false,
+    "image_bytes_attention_proven": false,
+    "raw_image_metadata_visible_count_per_call": 0,
+    "new_teacher_calls": 0,
+    "new_model_calls": 0,
+    "new_native_video_decoder_calls": 0,
+    "new_processor_calls": 0,
+    "new_png_pixel_verifications": 0,
+    "old_raw_proposal_audit_bytes_unchanged": true,
+    "teacher_cash": "UNKNOWN_NOT_ZERO"
+  }
+}

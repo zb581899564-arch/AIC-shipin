@@ -1,0 +1,20 @@
+{
+  "status": "PASS_ALL_NESTED_DENSITY_ATTEMPTS",
+  "utc": "2026-10-08T21:11:16.279621+00:00",
+  "records": 8,
+  "fresh_model_calls": 8,
+  "model_identity": {
+    "base_hash": {
+      "sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+      "parameters": 8767123696,
+      "method": "sorted canonical names and all unique frozen parameter bytes"
+    },
+    "logical_parameters": 8782459120,
+    "adapter_sha256": "8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23",
+    "adapter_saved_tensor_equality": 288,
+    "new_optimizer_updates": 0
+  },
+  "new_optimizer_updates": 0,
+  "new_32B_calls": 0,
+  "new_overview_calls": 0
+}

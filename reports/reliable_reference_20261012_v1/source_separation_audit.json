@@ -1,0 +1,15 @@
+{
+  "status": "PASS_KNOWN_SOURCE_ID_AND_EXACT_BYTE_SEPARATION_NOT_SEMANTIC_PROOF",
+  "selected_source_groups": 20,
+  "known_teacher_train_records": 704,
+  "teacher_train_source_intersection": [],
+  "official_metadata_records": 426,
+  "official_nonnull_sha_records": 426,
+  "official_distinct_hashes": 425,
+  "official_exact_sha_intersection": [],
+  "limitations": [
+    "Previously exposed development sources, not fresh holdout",
+    "Exact bytes do not prove absence of semantic/reencoded overlap",
+    "QVHighlights original annotations are query-conditioned, not unconditional highlight truth"
+  ]
+}

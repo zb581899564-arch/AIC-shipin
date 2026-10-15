@@ -1,0 +1,23 @@
+{
+  "hostname": "inspur-NP5570M5",
+  "cwd": "/home/inspur",
+  "wrong_path": "/home/inspur/\\home\\inspur\\aic_video_work\\sparse_context_iteration_20261013_v1",
+  "wrong_exists": true,
+  "correct_exists": false,
+  "launch": {
+    "utc": "2026-10-13T05:55:17.862206+00:00",
+    "argv": [
+      "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+      "-B",
+      "\\home\\inspur\\aic_video_work\\sparse_context_iteration_20261013_v1/code/prepare_confirm8_cohort_02.py",
+      "\\home\\inspur\\aic_video_work\\sparse_context_iteration_20261013_v1/new_confirm_CPU_registration_02.json"
+    ],
+    "control_bytes": 103004,
+    "control_sha256": "5021ebc9f5af62233ec5285a3a885de127769a98becc972b3a466531c2f7c907",
+    "new_model_calls": 0
+  },
+  "log": "Traceback (most recent call last):\n  File \"/home/inspur/\\home\\inspur\\aic_video_work\\sparse_context_iteration_20261013_v1/code/prepare_confirm8_cohort_02.py\", line 114, in <module>\n    parser=argparse.ArgumentParser();parser.add_argument('registration');main(parser.parse_args().registration)\n  File \"/home/inspur/\\home\\inspur\\aic_video_work\\sparse_context_iteration_20261013_v1/code/prepare_confirm8_cohort_02.py\", line 26, in main\n    for name,digest in reg['required_files'].items():check_file(BASE/name,digest)\n  File \"/home/inspur/\\home\\inspur\\aic_video_work\\sparse_context_iteration_20261013_v1/code/sparse_stage_common_02.py\", line 38, in check_file\n    if sha(path) != digest or (size is not None and path.stat().st_size != size):\n  File \"/home/inspur/\\home\\inspur\\aic_video_work\\sparse_context_iteration_20261013_v1/code/sparse_stage_common_02.py\", line 23, in sha\n    with Path(path).open('rb') as stream:\n  File \"/home/inspur/anaconda3/envs/qwen/lib/python3.10/pathlib.py\", line 1119, in open\n    return self._accessor.open(self, mode, buffering, encoding, errors,\nFileNotFoundError: [Errno 2] No such file or directory: '/home/inspur/aic_video_work/sparse_context_iteration_20261013_v1/new_confirm_source_registration_01.json'\n",
+  "actual_owned_commands": [],
+  "old_wrong_stage_exists": false,
+  "correct_stage_exists": false
+}

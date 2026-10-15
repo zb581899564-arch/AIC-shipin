@@ -1,0 +1,69 @@
+{
+  "schema": "RECALL_EXPANSION_VERIFY40_46_PROXY_PILOT_V1",
+  "registered_at_utc": "2026-10-14T13:03:36.558866+00:00",
+  "baseline": "TEMPORAL_VERIFY_USER40.46",
+  "baseline_is_new_external_automatic_B0_PLUS_D8_AND_SAME_VERIFY_NOT_B0_ALONE": true,
+  "model_parameters": 8782459120,
+  "optimizer_updates": 0,
+  "new_models_downloaded": 0,
+  "reference_scope": "EVENT_TEXT_GUIDED_HUMAN_SUMMARY_PROXY_NO_QUERY_TO_MODEL",
+  "reference_limitations": [
+    "event-text-guided selected summaries, not generic highlight/ORDINARY truth",
+    "summary-unselected is not explicit ordinary",
+    "known identity/byte isolation does not prove hidden aliases/subclips or pretraining separation",
+    "small-sample paired gains do not establish statistical or official leaderboard improvement"
+  ],
+  "sources_per_group": 4,
+  "groups": [
+    "dev",
+    "confirm"
+  ],
+  "native_frames": 64,
+  "max_input_tokens": 16384,
+  "max_output_tokens": 256,
+  "single_factor": {
+    "baseline_equal_nonoverlap_max_seconds": "30",
+    "candidate_window_seconds": "15",
+    "candidate_stride_seconds": "15/2",
+    "candidate_tail": "right aligned, same<=15s, deduplicated",
+    "sampling": "first+j*(eligible_count-1)//63, j=0..63",
+    "new_segment_padding": "NONE",
+    "new_segment_addition": "explicit KEEP only",
+    "baseline_unknown_policy": "retain; same as VERIFY40.46",
+    "all_original_baseline_frames_and_boxes_preserved": true
+  },
+  "maximum_media_pool_bytes": 104730788,
+  "expected_selected_media_bytes": 76106012,
+  "expected_dev_media_bytes": 33896667,
+  "gpu_budget": {
+    "dev_B0_max_seconds": 1800,
+    "dev_VERIFY_max_seconds": 2400,
+    "confirm_B0_max_seconds": 1800,
+    "confirm_VERIFY_max_seconds": 2400,
+    "per_group_max_B0_actual_calls": 48,
+    "per_group_max_VERIFY_actual_calls": 240,
+    "actual_input_counts_frozen_after_CPU_before_each_GPU": true,
+    "single_shared_wrapper_and_unique_terminal": true
+  },
+  "quality_gates": {
+    "dev_and_confirm_same_fixed_gates": true,
+    "full_group_denominator": 4,
+    "macro_paired_all_rater_duration_F1_delta_min": "0",
+    "per_source_F1_delta_min": "-1/100",
+    "macro_all_rater_recall_delta_min": "1/100",
+    "per_rater_baseline_recall_and_frame_retention": "no loss",
+    "minimum_sources_with_real_new_native_frames": 2,
+    "invalid_or_unknown_execution": 0,
+    "new_candidate_UNKNOWN_or_DROP_must_not_add": true,
+    "engineering_failure_is_not_EMPTY_or_UNKNOWN": true,
+    "no_threshold_search_or_confirm_retuning": true,
+    "fixed_40_KEEP_deletion": 0,
+    "fixed_40_ORDINARY_addition": 0,
+    "UNKNOWN_old_coverage_failed_unchanged": true
+  },
+  "confirmation_before_dev_pass": false,
+  "production_before_confirmation_and_fixed_fact_veto_pass": false,
+  "test_GT_or_content_or_ranking_rule_selection": false,
+  "actual_online_improvement": "UNKNOWN",
+  "labels_available_to_model": false
+}

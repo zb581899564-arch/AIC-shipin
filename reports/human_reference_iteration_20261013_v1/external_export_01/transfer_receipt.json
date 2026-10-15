@@ -1,0 +1,47 @@
+{
+  "status": "PASS_WINDOWS_LINUX_BYTES_SHA_CRC_AND_ALL_EXPORT_MEMBER_SHA",
+  "path": "/home/inspur/aic_video_work/human_reference_iteration_20261013_v1/export_receipts_01/external_export_01.zip",
+  "bytes": 532178,
+  "sha256": "2911250d248be2916ecbcfc7f8282ee0ebfffccad25f9623d46be26c72fa8ce7",
+  "manifest": {
+    "native_input_acceptance.json": {
+      "bytes": 757,
+      "sha256": "cae5629a1686f7c64918bb27b8e423f66347d7d788a563a0f8a919f53290412f"
+    },
+    "developer_prediction_export.json": {
+      "bytes": 4104792,
+      "sha256": "5d53e00cb3e7f3593f8e5730e52e8fe92986a0fdae7e6138a050f23a558ab6ae"
+    },
+    "developer_export_acceptance.json": {
+      "bytes": 576,
+      "sha256": "e8bae2aba12a2c47576aba12c81c84ed131f2311dd38816401e6125b248a0fc9"
+    },
+    "human_chain_01/completion.json": {
+      "bytes": 584,
+      "sha256": "6a4b830fc0702ee6eaa710d995cf024ab8554df307442e922969a645614d52c1"
+    },
+    "human_gpu_01/completion.json": {
+      "bytes": 34458,
+      "sha256": "4b578033dc18bcbeebd1824ace409db6ddddf093c189e35f6ddd136d7768ae7f"
+    },
+    "human_replay_01/completion.json": {
+      "bytes": 29564,
+      "sha256": "e69154fac14d9b16f53f1758b2297494e07d6d5c4ecfd215ded5a8462c95d331"
+    },
+    "resource.json": {
+      "bytes": 1613,
+      "sha256": "fffe902f39a3cbc42f760470cb646f1d8ad662e7340c6693bb3d5c01694fd2ca"
+    },
+    "matching_gpu_ledger.json": {
+      "bytes": 1692,
+      "sha256": "19ce482d1e00cf6baeec5fab0c54227fc27434d432c51a467a3023399e94f889"
+    },
+    "terminal_audit.json": {
+      "bytes": 433,
+      "sha256": "2b0b343c83da4cd3edbd6118f17655396e389cafd778ce4e5568512f3f3b98dd"
+    }
+  },
+  "new_model_calls": 0,
+  "new_CPU_replays": 0,
+  "local_archive": "G:\\ai\\AIC视频\\reports\\human_reference_iteration_20261013_v1\\external_export_01.zip"
+}

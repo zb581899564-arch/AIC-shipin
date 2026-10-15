@@ -1,0 +1,51 @@
+{
+  "utc": "2026-10-10T14:45:07.852201+00:00",
+  "hypothesis": "FOUR_PNG_BARRIER_WITH_PROGRAM_IDENTITY_BINDING_NO_CLIP",
+  "files": {
+    "PROTOCOL.md": "31ff4e590ce929446fc53b629407ff99d2e360de3a0d80c46fc517507a1e2e29",
+    "teacher_index.json": "c09d6dca4a238aadf04f4fd461dad9ab50835d3318c6d2f8ef9c67ec42c732d8",
+    "oracle_frozen.json": "a588c48415d43dd944e527991a20bb89a6699a1f9fc2dcbae6ac9ce6560e0863",
+    "prior_errors_frozen.json": "c99b23ee94e76ec5a80dc1d5b4acc9568ec1b7dcb8b1000111c411486d95209c"
+  },
+  "range": [
+    [
+      28,
+      29,
+      30,
+      31
+    ],
+    [
+      36,
+      37,
+      38,
+      39
+    ],
+    [
+      44,
+      45,
+      46,
+      47
+    ],
+    [
+      56,
+      57,
+      58,
+      59
+    ],
+    [
+      60,
+      61,
+      62,
+      63
+    ]
+  ],
+  "prior_cli_calls": 22,
+  "max_total_calls": 36,
+  "stage_calls_max": 1,
+  "automatic_retry": false,
+  "existing_evidence_assessment": "Old copied identities already correct, but corresponding semantic facts wrong. A pure mapping rewrite cannot establish semantic repair; one minimum-method model test is required.",
+  "cash_cost": "UNKNOWN_NOT_ZERO",
+  "new_training": 0,
+  "new_426": 0,
+  "new_Pro": 0
+}

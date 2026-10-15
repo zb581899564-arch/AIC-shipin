@@ -1,0 +1,37 @@
+{
+  "status": "PASS_ROOT_READ_SELECTED_FACTS_AND_RECHECK_CURRENT_BOUNDINGS_NOT_ALL64_CAPTION_CERTIFICATION",
+  "utc": "2026-10-10T20:53:03.647278+00:00",
+  "window_id": "-esJrBWj2d8:SLOT6:6",
+  "original_blind_review": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\13_-esJrBWj2d8_W06.independent_student64_review_v1.json",
+    "sha256": "74fd937cb2e81aace223d7583250ade3b629beee8afecc1cdae4fd0d319d7006"
+  },
+  "bounded_reinspection": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\13_-esJrBWj2d8_W06.student_bounded_reinspection_v1.json",
+    "sha256": "7a28f24e4a79af1fbeac440c3c7806d7062a28da1e670ed5c618c8088a26c5d7"
+  },
+  "original_review_preserved": true,
+  "root_read_all_selected_fresh_facts": true,
+  "actual_selected_png_rgb_pts_bindings_rechecked": 11,
+  "selected_slots": [
+    0,
+    7,
+    15,
+    23,
+    27,
+    28,
+    31,
+    38,
+    39,
+    47,
+    63
+  ],
+  "detail_qualifications": {
+    "31": "Cat, hand contact and reclining pose core match. Fresh description avoids exact leftward head direction; head orientation is slightly down/front-left and does not independently specify a stroking movement."
+  },
+  "new_blind_initial": false,
+  "teacher_exposure": false,
+  "root_direct_new_images": 0,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0
+}

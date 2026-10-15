@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-10T20:47:59.698194+00:00",
+  "status": "ROOT_APPROVED_START_FIXED_LITERAL_CLI32_36",
+  "dry_run_sha256": "b18d6dc4d565d6206179fac4b1b2805c678b57f6dcd85d61295d1f5fbc5de249",
+  "execution_binding_sha256": "9aa9a698653d11fe72f0540d4eeffa2e0e203b81153fd57a00984a2140a73883",
+  "root_actual_code_AST_SHA_and_preview_paths_verified": true,
+  "fixed_jobs": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "model": "gemini-3.8-flash-high",
+  "failed_CLI31_job13_not_retried": true,
+  "original_errors_preserved": true,
+  "new_optimizer_updates": 0
+}

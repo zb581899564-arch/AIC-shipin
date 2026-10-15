@@ -1,0 +1,21 @@
+# 2026-10-08 本地至Linux连接修复
+
+用户明确授权“修复一下”。本次仅修本地Windows香港DERP链路，未修改SSH配置/主机校验/私钥、FlClash配置、默认路由、远端服务或实验进程。所有管理员脚本的实际回执和先前失败回执均保留。
+
+## 原因与实际修复
+
+FlClash的fake-IP解析将derp20b.tailscale.com映射至198.18.1.110；Tailscale连接还绑定本地代理接口198.18.0.1。原路径TLS报UNEXPECTED_EOF_WHILE_READING，而绑定物理WLAN192.168.0.2请求同一真实IP，证书验证与HTTP200通过。安装版本1.102.2官方net/netns/netns_windows.go表明：默认绑定默认接口；TS_BIND_TO_INTERFACE_BY_ROUTE=true才按目标路由选接口。
+
+精确变更：derp20b/c/d.tailscale.com分别固定至103.6.84.152、205.147.105.30、205.147.105.78；3个对应/32路由的InterfaceIndex=7、NextHop=192.168.0.1、RouteMetric=5，并在原生ActiveStore和PersistentStore独立读取验收。仅Tailscale服务HKLM:\SYSTEM\CurrentControlSet\Services\Tailscale的REG_MULTI_SZ Environment追加TS_BIND_TO_INTERFACE_BY_ROUTE=true；该属性此前不存在。之后刷新DNS并重启本地Tailscale服务，实际HK DERP pong和SSH到inspur-NP5570M5通过。UDP直连未建立，不能写成直连。
+
+hosts原字节在HKG_DERP_hosts_before_20261008.bin，原SHA21c3090d77d9a11835b630cece95cf954b1c3aaea3f3f0a53b2807f4aa9a331b；变更后SHA9c88a20769627add11787d20b918e6f30db663cd50eadab40e0dc317b8adf8ce。备份及实际网络细节不公开发布。
+
+New-NetRoute的PersistentStore创建尝试失败；route.exe -p的第一次命令成功，但旧注册表读取不是当前Windows实际存储，所以当时验证停止。失败记录保留，最终以Get-NetRoute -PolicyStore PersistentStore读取全部3项通过，不能把旧验证失败抹去。
+
+## 适用范围及回滚
+
+这是当前WLAN网关与3个已审香港DERP节点的精确修复，不是自动适配任意网络的规则。若网关/接口/官方DERP IP变更，先只读重新审查；巡检不得重复管理员脚本、扩大IP或修改默认代理。持久路由经PersistentStore读取验收，未通过重启Windows来测试。
+
+回滚仅在需要撤销本次修复时由管理员执行，操作前再核以上完整身份。3条路由按DestinationPrefix、InterfaceIndex7、NextHop192.168.0.1和RouteMetric5精确匹配后，从PersistentStore与ActiveStore删除本次条目，不删除其他路由。hosts只移除BEGIN/END AIC HKG DERP scoped repair 20261008之间的3条精确映射；只有当前完整SHA仍等于本次变更后SHA才可直接恢复原字节备份，否则保留后续其他修改并仅移除本次块。Environment仅移除TS_BIND_TO_INTERFACE_BY_ROUTE=true；保留其他值，剩余为空且属性确属本次新增时才删除属性。之后Clear-DnsClientCache；确认无其他活跃Tailscale用户任务后才重启本地Tailscale，绝不触碰Linux进程。
+
+实际修复聚合凭证为V14_network_repair_acceptance_20261008.json。监控断线期间的旧CPU审计仅历史证据；恢复后已重新读取实际进程、训练终态、开发选点及复赛进度，未重新运行成功训练、教师调用或CPU adapter重载。

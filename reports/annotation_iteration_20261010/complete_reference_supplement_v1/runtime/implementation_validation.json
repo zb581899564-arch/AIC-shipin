@@ -1,0 +1,27 @@
+{
+  "status": "PASS_CODE_AST_AND_11_NO_MODEL_MATHEMATICAL_UNIT_TESTS",
+  "utc": "2026-10-10T15:37:49.175543+00:00",
+  "files": {
+    "common.py": "fe719d1c11cdbc5b43d696190ea5052aea91abcadb05aa32dd79ad98d3e0e53c",
+    "evaluate.py": "0c836507483a7fc9fe3a9d9962608dc02ac7eba9cb9d08e761463e6f90ddb21e",
+    "model_binding.py": "e99c66363d683ac813bf25e5995fc457638baea3eb3c153ced0646330c059bb2",
+    "native_runtime.py": "30cc62c99dc4e524fb8128a1bad27b30632098ca66e113b9e0e729bb079bb62d",
+    "objective.py": "118e8eb1cf631019fedf2d77f47532e6fa643cee63893a9d8c4e0761c1a509fe",
+    "scientific_gate.py": "be5a33615c7423687b77d83a0a2fa0d7143a5ec02cb37d030a9cc82d064550d0",
+    "test_runtime.py": "d756edc7d3e5e1824237ea371278a13c672116d59030151e481a6bdb3bcb2d35",
+    "train.py": "836aed67efe94fe6cf8137f7402d0697d00bd2b5a3bd67c9ad5df2cf53d3542e"
+  },
+  "unit_test_count": 11,
+  "unit_test_command": "python -B -m unittest discover -s runtime -p test_runtime.py -v",
+  "train_cli_help_pass": true,
+  "evaluate_cli_help_pass": true,
+  "decoder_started": false,
+  "processor_started": false,
+  "model_started": false,
+  "gpu_started": false,
+  "new_optimizer_updates": 0,
+  "live_training_interface_verified": false,
+  "source_lock_created": false,
+  "training_unlock_created": false,
+  "static_review_addendum": "Source media membership is explicitly required in source_lock, in addition to per-decode SHA checks."
+}

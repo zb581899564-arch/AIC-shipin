@@ -1,0 +1,7 @@
+{
+  "bytes": 16770,
+  "sha256": "d50b5553163c4ca369784d6aca61e4994f2afb66ec1056ac62c9a91574796fd9",
+  "exit": 0,
+  "stdout": "GPU 0, 184 MiB, 46068 MiB, 0 %\nMEM MemAvailable:   123556672 kB\nDISK_AVAILABLE 74840469504\nCURRENT_GPU_COMPUTE \n{\"pid\": 550765, \"start_ticks\": \"504052865\", \"argv\": [\"/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python\", \"-B\", \"/home/inspur/aic_video_work/midnight_five_verify40_46_20261015_v1/production_code_v3/controller.py\", \"--stage\", \"production_unique_09\"], \"parent_CUDA\": \"0\", \"registration_ref\": {\"path\": \"/home/inspur/aic_video_work/midnight_five_verify40_46_20261015_v1/production_unique_09/registration.json\", \"sha256\": \"fc1fe7d7317f93e60b9253858066fb4eb12f12ab96d16ecd2c180572216867cf\"}, \"control_bytes\": 16770, \"control_sha256\": \"d50b5553163c4ca369784d6aca61e4994f2afb66ec1056ac62c9a91574796fd9\", \"unique_new_model_calls\": 518, \"adopted_identical_input_aliases\": 1, \"CPU_QA_adopted\": 519, \"UTC\": \"2026-10-15T09:48:50.450467+00:00\"}\n",
+  "stderr": ""
+}

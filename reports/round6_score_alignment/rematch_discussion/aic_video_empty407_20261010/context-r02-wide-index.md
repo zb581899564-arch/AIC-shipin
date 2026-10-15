@@ -1,0 +1,248 @@
+# EMPTY407_R02 全卷索引
+
+{
+  "version": "EMPTY407_R02",
+  "utc": "2026-10-10T06:42:24.464933+00:00",
+  "packet": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_discussion\\aic_video_empty407_20261010\\context-r02.md",
+  "bytes": 2118112,
+  "sha256": "b463aabf2f1781aee73794faafdac2ef2b376535c1ad1dcfbeb21c3c46cd4a1c",
+  "parts": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_discussion\\aic_video_empty407_20261010\\context-r02-wide-part01.md",
+      "bytes": 302667,
+      "sha256": "aa88854c5d3c46a3e663f83f772d442bf1b9c58256e1a8fcb4e04c89d9832a9b"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_discussion\\aic_video_empty407_20261010\\context-r02-wide-part02.md",
+      "bytes": 302597,
+      "sha256": "f0e1e2200971e5dda792ac348c0d50fbca51aaf25791a21bd4df9c464f3288e7"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_discussion\\aic_video_empty407_20261010\\context-r02-wide-part03.md",
+      "bytes": 302573,
+      "sha256": "0c161aaf701a4a7337fb89b74d26296d95d008901616cdc4ca4919e804fbde97"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_discussion\\aic_video_empty407_20261010\\context-r02-wide-part04.md",
+      "bytes": 302589,
+      "sha256": "84c8c5185b1cbc14ea746a2211b637e097b65df0e6b9276809aa678bfb915c68"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_discussion\\aic_video_empty407_20261010\\context-r02-wide-part05.md",
+      "bytes": 302629,
+      "sha256": "e54cb5c590c1fdc07d7959d100ae628197dd1bea66051090d06c4cc741c55369"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_discussion\\aic_video_empty407_20261010\\context-r02-wide-part06.md",
+      "bytes": 302537,
+      "sha256": "069a40fa6fd2d7445202caef7fd51b94a227246d0feda64c974d987b72397b54"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_discussion\\aic_video_empty407_20261010\\context-r02-wide-part07.md",
+      "bytes": 302520,
+      "sha256": "d3a2fe67730c68fc75a5a19752813461f51d3408efddf452d4ed80f04a6c3889"
+    }
+  ],
+  "parts_concat_byte_exact": true,
+  "full_public_records": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\frozen_protocol_v2_explicit_empty_gate.json",
+      "bytes": 3988,
+      "sha256": "5fd35d48d4caa867f0f53cbd56f76f0e36dcebfd56160f55cff3053a80ff213d"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\pilot_execution_receipt_v1.json",
+      "bytes": 6088,
+      "sha256": "53994665248be6d94898b89efcaae3f6bc65693e772b477eece7a74cd4eb7fb9"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\cpu_preparation_completion.json",
+      "bytes": 1230,
+      "sha256": "e56955d69d28de7c6c44bbcb048413ce666c2c70ba6947fc06396643fa1e1202"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\source_audio_presence_only.json",
+      "bytes": 902,
+      "sha256": "0bbdbff9f1a829c1a29b7290c01feac117df857be9f47123a98c327a917be21d"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\main_factual_probe_notes_v1.md",
+      "bytes": 2803,
+      "sha256": "4392df138f0618e5aeaf8802aec2f571e0d4a84b7438eadfbe26b2d84958151b"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\main_factual_probe_corrections_v2.md",
+      "bytes": 1547,
+      "sha256": "7fa2d88bd4fab038e7e02c603fe4eb6bf1c1800f9fbdb4ca968a6dd48ac839c4"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_initial_geometry_acceptance_v1.json",
+      "bytes": 3220,
+      "sha256": "56acbea8aa67f6ceacbe707832f42ccd0ef043bbf975f8a403fe3d94650cc615"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\quality_contract.py",
+      "bytes": 4840,
+      "sha256": "ed92a4ef8111967e088dffc04317a7234b890bc37af059fc81bc7b8577b4080e"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\silver_contract.py",
+      "bytes": 4766,
+      "sha256": "6b9e7a8603d7267fac4e119d5b7817fc91a1d15ec44d9c965be065922b9475ba"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\teacher_attempt01_http1\\proposal.json",
+      "bytes": 39374,
+      "sha256": "eba3679c4affb2e3a04c49f4d50a50a8c7f12062c409beb9c8769dc515fdadcd"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\teacher_attempt01_http1\\audit.json",
+      "bytes": 12254,
+      "sha256": "194eb63e3239a02dca9e327d868d74cdc6ac40da9eb10ff5becb16a0875e6cf5"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\teacher_attempt01_http1\\terminal.json",
+      "bytes": 266,
+      "sha256": "ad7335adb74a6912ce29077a279d021a282d40cca310f405cbd9a882c11b20c7"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_reviews\\initial\\00_kLxoNp-UchI_W01.independent_initial_blind_v1.json",
+      "bytes": 69700,
+      "sha256": "307c8c03a528c9b86db95f6539d5470f4d1e6bb988bcb9bd08a170a3fa1ed25e"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_reviews\\initial\\00_kLxoNp-UchI_W01.independent_initial_blind_v1.md",
+      "bytes": 4504,
+      "sha256": "5fa7bffc57b6ca62e81d6c25fa63b951baccd72c13c4d760a1bd924649a020b6"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_reviews\\initial\\00_kLxoNp-UchI_W01.independent_student_view_review_v1.json",
+      "bytes": 60026,
+      "sha256": "27c0713caf4833874eb04a6bf83f454fc8e895a9603e9a2a31d6c894172f4319"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_reviews\\initial\\00_kLxoNp-UchI_W01.independent_student_view_review_v1.md",
+      "bytes": 1151,
+      "sha256": "45b75ea2bd035d70d95da5fdb1b9206d89956ab721ab0684ef827d2df862428e"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\01_kLxoNp-UchI_W02\\teacher_attempt01_http1\\proposal.json",
+      "bytes": 29201,
+      "sha256": "4568af4e7efef2fd63facb7b54e3269137bc0510c925c09ff31d282f92e2dac7"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\01_kLxoNp-UchI_W02\\teacher_attempt01_http1\\audit.json",
+      "bytes": 12254,
+      "sha256": "2886513167ff4c9549bcb2158fb8a3b09077fd89c4922ab35a0a022f5356e318"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\01_kLxoNp-UchI_W02\\teacher_attempt01_http1\\terminal.json",
+      "bytes": 266,
+      "sha256": "18123b89737c6443c0382180e9423ab6ab1f4367a2331c93463e5cbead827adb"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_reviews\\initial\\01_kLxoNp-UchI_W02.independent_initial_blind_v1.json",
+      "bytes": 67012,
+      "sha256": "e9a6402f66c5b5e6adb1ce7a8525bdefab9e6b2572f26f0f261baf14e643ef42"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_reviews\\initial\\01_kLxoNp-UchI_W02.independent_initial_blind_v1.md",
+      "bytes": 4183,
+      "sha256": "7783787d17588507fa27fc5c944e2bf271de0ecf12875510184dad2c72135509"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_reviews\\initial\\01_kLxoNp-UchI_W02.independent_student_view_review_v1.json",
+      "bytes": 59036,
+      "sha256": "f4d9559f727054c4a080946b268c85a6d96f527702bf23e570bf264ea7ceb2bd"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_reviews\\initial\\01_kLxoNp-UchI_W02.independent_student_view_review_v1.md",
+      "bytes": 1199,
+      "sha256": "e04c72ade362f316e44a1ae678ce7054c8b70c5baf12eb0c9d535770d5031816"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\02_AwmHb44_ouw_W10\\teacher_attempt01_http1\\proposal.json",
+      "bytes": 23953,
+      "sha256": "bf26a73380aeb0a8fe1acdea44f11f16de034832100cab558851437c93fd4c17"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\02_AwmHb44_ouw_W10\\teacher_attempt01_http1\\audit.json",
+      "bytes": 12255,
+      "sha256": "9ee6827ddb8fbeb3847351ceb5b074525868604a6a8421e02cbfa1b09c4f1b88"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\02_AwmHb44_ouw_W10\\teacher_attempt01_http1\\terminal.json",
+      "bytes": 266,
+      "sha256": "948c3d797e4717ec14b4b9b047ba9da4535b020b006dc32c962e1e0e88467511"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_reviews\\initial\\02_AwmHb44_ouw_W10.independent_initial_blind_v1.json",
+      "bytes": 63012,
+      "sha256": "a8b6e30dcc4fdd79fe4ef53bc6b2f7605ae06616d62aa9c7faaad9c56e46904d"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_reviews\\initial\\02_AwmHb44_ouw_W10.independent_initial_blind_v1.md",
+      "bytes": 2526,
+      "sha256": "7ff060be87edaaf0ac3102db376c5c17c3a6e8f0c5bc71f18acdd42779ed598e"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_reviews\\initial\\02_AwmHb44_ouw_W10.independent_student_view_review_v1.json",
+      "bytes": 54960,
+      "sha256": "a736f675f96bcd94958c9123cb629a1aa2db8e71da4f476a78dee746961d8f74"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_reviews\\initial\\02_AwmHb44_ouw_W10.independent_student_view_review_v1.md",
+      "bytes": 1281,
+      "sha256": "19782d0b5307d0a21096d9ce8dcea5d7d24e6a95dc36ff0d56e53d47afaf6db5"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_AwmHb44_ouw_W11\\teacher_attempt01_http1\\proposal.json",
+      "bytes": 22373,
+      "sha256": "bd8bc71d4e2d53d3f1b010c5891e073fd251624333c467ff0a11518c10690ed2"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_AwmHb44_ouw_W11\\teacher_attempt01_http1\\audit.json",
+      "bytes": 13428,
+      "sha256": "1d23c18a43c750dbda41cba08f83db477ea3cb8ec31a473be9dde23244a8ea2e"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_AwmHb44_ouw_W11\\teacher_attempt01_http1\\terminal.json",
+      "bytes": 266,
+      "sha256": "e1fb8a747d7331571ec13d8658e3f22799691b7a32ae4bb2e87e8c465af96f9a"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_AwmHb44_ouw_W11\\teacher_attempt01_http1\\main_metadata_correction_v1.json",
+      "bytes": 7850,
+      "sha256": "6b7872ef0f6efe393d552a8fdd1b8e994cfd051a075cc6e4fc24fdc031c86fe5"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_reviews\\initial\\03_AwmHb44_ouw_W11.independent_initial_blind_v1.json",
+      "bytes": 62049,
+      "sha256": "4f4f9a9b38340f778ac6347da26af2e4a3dda6818c373b9840824f118f039afa"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_reviews\\initial\\03_AwmHb44_ouw_W11.independent_initial_blind_v1.md",
+      "bytes": 1607,
+      "sha256": "1077f7e621c740bcea4bb5dd877afa455ed7b99e520b9c987454741d63d4146e"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\supplements\\risk01_kL_W02_local1to3\\manifest.json",
+      "bytes": 31314,
+      "sha256": "69700fa505595d4e52d01f24d1daccea132435ffa60e92fa72f8162f52bf38fc"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\supplements\\risk01_kL_W02_local1to3\\main_factual_probe_notes_v1.md",
+      "bytes": 1610,
+      "sha256": "7bc89cd352ec70fd52b2a24e1c4c1d7c2b94361113126b88e23012fb87171456"
+    }
+  ],
+  "pending_records": [
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_reviews\\initial\\03_AwmHb44_ouw_W11.independent_student_view_review_v1.json",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_reviews\\initial\\03_AwmHb44_ouw_W11.independent_student_view_review_v1.md"
+  ],
+  "pro_used": 6,
+  "pro_remaining": 2,
+  "actual_sent": false
+}
+
+请完整按序读取全部七卷至 END_EMPTY407_R02。主控物理字节串联实核；网页模型不能虚称独立SHA通过。

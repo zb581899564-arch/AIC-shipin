@@ -1,0 +1,60 @@
+{
+  "utc": "2026-10-09T14:44:15.321340+00:00",
+  "hostname": "inspur-NP5570M5",
+  "status": "PASS_LINUX_UPLOAD_SELECTED_HASHES_AND_ALL_REAL_IMAGE_CPU_PREFLIGHTS",
+  "dataset": "/home/inspur/aic_video_work/datasets/qwen8b_annotation_20261009_v2",
+  "zip_bytes": 1269695818,
+  "zip_sha256": "45af6f8edc267be4a126cd1f86fb99172f11632202da947d9cb3eca2246ff57c",
+  "manifest_sha256": "adfe72e2318ec11913175fefb2ba987393d8f442a097efc16b2474a112b94ba1",
+  "cpu_preflights": {
+    "crop": {
+      "output": "/home/inspur/aic_video_work/runs/qwen_annotation_v2_crop_preflight_001",
+      "receipt": {
+        "status": "PASS_ALL_REAL_IMAGE_ROWS_PROCESSOR_AND_MASK_PREFLIGHT",
+        "stats": {
+          "train": {
+            "rows": 181,
+            "max_tokens": 319,
+            "min_assistant_tokens": 15
+          },
+          "validation": {
+            "rows": 148,
+            "max_tokens": 319,
+            "min_assistant_tokens": 15
+          }
+        },
+        "model_config_sha256": "5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661",
+        "model_weights_loaded": false,
+        "optimizer_started": false
+      }
+    },
+    "temporal": {
+      "output": "/home/inspur/aic_video_work/runs/qwen_annotation_v2_temporal_preflight_001",
+      "receipt": {
+        "status": "PASS_ALL_REAL_IMAGE_ROWS_PROCESSOR_AND_MASK_PREFLIGHT",
+        "stats": {
+          "train": {
+            "rows": 314,
+            "max_tokens": 1618,
+            "min_assistant_tokens": 11
+          },
+          "validation": {
+            "rows": 89,
+            "max_tokens": 1618,
+            "min_assistant_tokens": 20
+          }
+        },
+        "model_config_sha256": "5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661",
+        "model_weights_loaded": false,
+        "optimizer_started": false
+      }
+    }
+  },
+  "weights_loaded": false,
+  "gpu_started": false,
+  "optimizer_started": false,
+  "actual_8b_loss_or_optimizer_smoke_performed": false,
+  "semantic_event_boundary_review_complete": false,
+  "gemini_event_boundaries_used_as_targets": 0,
+  "training_target": "TVSum human sampled-frame importance and reviewed crop weak labels"
+}

@@ -1,0 +1,22 @@
+{
+  "status": "PASS_TINY_EXACT_UINT32_LUT_OVERFLOW_LAYOUT_TOKENMASK_SYNTHETIC",
+  "checks": [
+    "three_blocks_256_bit_values_exact",
+    "257_value_original_gzip_fallback",
+    "unsupported_stride_original_fallback",
+    "NaN_payload_and_signed_zero_bits_exact",
+    "tokenmask_original_retained"
+  ],
+  "real_media_processor_model_production_calls": 0,
+  "original_input_precision_changed": false,
+  "code_sha256": {
+    "check_contract_additions.py": "f1bc204fa8f3288e87527c094090ad1165e4ed9b629d9bb430f5f65b53937afb",
+    "check_dictionary_synthetic.py": "e556e7091e4e62bbf8e542ae074075ca68f6bab31ccda302315e6eca8e3f11c0",
+    "check_linux_security.py": "1d52ef9ffebd24946d20015bed0aeea7cca1263e4fa88565c228c25d5d41d750",
+    "check_synthetic.py": "edf093ea7c344660d2bb01d514524159fad04455e15ca58f2d332c13a615a87e",
+    "codec.py": "6cb9787228f59b941ac8bfd6d4ca9f776347081b86bfe7bd3809a3de3332a423",
+    "leases.py": "d2dba673c4187bbac4a1d9a36b4a75314f35b24150fcbfbab6ad33f70e40fa15",
+    "pixel_dictionary.py": "66283d5ad92abdfaff8f0daaf4bad143953570c54fc1b285de364b814c9904bf",
+    "__init__.py": "97b09fc4d6d5cba51524b56fc0d6642bced2e9bc194da875bc39c4eb03edae7d"
+  }
+}

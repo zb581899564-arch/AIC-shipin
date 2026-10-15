@@ -1,0 +1,919 @@
+{
+  "status": "PASS_CPU_ONLY_EXACT_BODY_ROUTE_SCHEMA_NEGATIVES_PENDING_ROOT_NO_START",
+  "sources": {
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\audit.py": "2671c0d5d23e04bba33c23e14d2f6da71072fb775e1d5ace6ed74af857b486f5",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\common.py": "6ad20f803db3a3601a780d91c560cc4cbd9d6eddda8940e15f4dff77621f2035",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\controller.py": "31927309d67a979cd5c6759884043e9b6034d5c13c653005c5cfee61649b614a",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\engine.py": "39ce2b6f472fe36c5835857818dedf181092afd411f205c9db058a68c6c17262",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\launch.py": "43bedb8690f085f4478abc7f9cde83a8452f73a79b2bc9f57a6a0c60f1117ade",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\observer.py": "982f2f409e5e3e79ffaa7922dee3287b9c96256803f3bd15db9034b44497ecdf",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\prepare.py": "45249c63f945a872e6f7968a4a1f52650db225a7128735e3b04a1ad12c570ac0",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\prompt.py": "a3858cdaa446487c2288ca8e9da792fc240d54e8efedca25d858b73a0eac9ec3",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\run_call.py": "f782b58c3e1aa15bc0f77fa21089fff864484c1b47ca751bc9233af189b4dd08",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\verify.py": "5495e97950083d9ee9df093774d4421599939ca38835227196f5094828f1cc82",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\PROTOCOL.md": "86ff535e66c51d695b1036d1fcd1a6e0681b0f8b49314fcb70e7e834cb3fcedb"
+  },
+  "routing": [
+    {
+      "CLI": 36,
+      "jobs": [
+        19,
+        20
+      ],
+      "core": 202,
+      "scope_cores": [
+        102,
+        202
+      ]
+    },
+    {
+      "CLI": 37,
+      "jobs": [
+        21,
+        22,
+        23
+      ],
+      "core": 302,
+      "scope_cores": [
+        102,
+        202,
+        302
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "part_id": "main",
+      "CLI": 36,
+      "bytes": 6549,
+      "sha256": "fd83c3a94d7522b0bbb9010325f23f455ab3a0274504c93438a1166c22c6e3f3",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w19_header",
+      "CLI": 36,
+      "bytes": 12693,
+      "sha256": "90da991a8e3ed0189b2f878ca3ca307cb3713d68d2118d12e2c2b312cb592b3a",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w19_native00_15",
+      "CLI": 36,
+      "bytes": 24862,
+      "sha256": "173cf508cbd5918e1be7a549aa1cdc6f6d6464245b6948065f177291ca1165ab",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w19_native16_31",
+      "CLI": 36,
+      "bytes": 24872,
+      "sha256": "bdc96adad891a8ecd6ea7b13baf020d9b173d55d6bcb17ae04fc4867f50893db",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w19_native32_47",
+      "CLI": 36,
+      "bytes": 24864,
+      "sha256": "7bb25a9b5575c1f481b88ece228189a25397fac4e0ce8505d3603efbdd074255",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w19_native48_63",
+      "CLI": 36,
+      "bytes": 24888,
+      "sha256": "a93b1569ef37cb27bde51dcd558667859e2bc2a0555e42e0e622e8d99ede11c0",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w20_header",
+      "CLI": 36,
+      "bytes": 12721,
+      "sha256": "bedf363e8708752e7c5962e505304880713bddce020acf2b3265530781374277",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w20_native00_15",
+      "CLI": 36,
+      "bytes": 24914,
+      "sha256": "a0b0561b4017e3de7566ef84c38367c90f97be3d0a318147f22c4762fbffe767",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w20_native16_31",
+      "CLI": 36,
+      "bytes": 24934,
+      "sha256": "9ec4415a26413f61f3dc2da299f845d026f9cb3c1289aa09f1908cfd353537f6",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w20_native32_47",
+      "CLI": 36,
+      "bytes": 24952,
+      "sha256": "bc4b454e56a96f645e45b642a2c0cd4178616ac7947389759916cffeab1e04aa",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w20_native48_63",
+      "CLI": 36,
+      "bytes": 24958,
+      "sha256": "6a2d00f9fff78b9568f75c722c25d95366bcc7c8c70d747cf53c09a5eeb4ba62",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "main",
+      "CLI": 37,
+      "bytes": 6772,
+      "sha256": "ef075b93a4237c49df743855d13e02b68caa48de62c7691d877caf7949984166",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w21_header",
+      "CLI": 37,
+      "bytes": 12717,
+      "sha256": "cc6ee26c82c0b7251bd576db420036bbcfbebc51235ed746f30d12abcf05ddbc",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w21_native00_15",
+      "CLI": 37,
+      "bytes": 24888,
+      "sha256": "d45c5dd75191c6964d20a51fb15873b74b4b163bc56f6b4de25558b2c8f02735",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w21_native16_31",
+      "CLI": 37,
+      "bytes": 24936,
+      "sha256": "6b35794ac5cedf471f7812b1117588721a1ccd4460575ca2193563322b4649ca",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w21_native32_47",
+      "CLI": 37,
+      "bytes": 24954,
+      "sha256": "afbebad369020a6f7c29ee82d8369382ec2cc7d32632380b4f9294d351c6d0c3",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w21_native48_63",
+      "CLI": 37,
+      "bytes": 24950,
+      "sha256": "a664ed4b9a245de5b8215f8cbc9f4b2ddaa8adcf37d8d8482e0630f5601d6db4",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w22_header",
+      "CLI": 37,
+      "bytes": 12582,
+      "sha256": "a8267953c9356ef1134471a90968fe740444e0d309bd7d04070a1a9f78c0b11b",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w22_native00_15",
+      "CLI": 37,
+      "bytes": 24459,
+      "sha256": "e654b14cfc4ae7383f0a6bc3b5752492e1847634452796a28d7523c2aa358604",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w22_native16_31",
+      "CLI": 37,
+      "bytes": 24481,
+      "sha256": "b4562ec5dbedcc7e97023e4b48378e2cbabf30f735e08c82c2836355c32550ec",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w22_native32_47",
+      "CLI": 37,
+      "bytes": 24509,
+      "sha256": "055de3de94765f8132333c208f7e0c501b60b133a93e1981797a97b85830f6a7",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w22_native48_63",
+      "CLI": 37,
+      "bytes": 24507,
+      "sha256": "63c5c5802e5a57d93c29dc144976c7fb37b6e1e8ccbaf1af78e543218aacbdd0",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w23_header",
+      "CLI": 37,
+      "bytes": 12586,
+      "sha256": "9ea26482c1a16e4e422ac098c21c82d22101afcf947cad6804741e04d3533b10",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w23_native00_15",
+      "CLI": 37,
+      "bytes": 24473,
+      "sha256": "7a6a98bd083f79bbc320899a59888d9f24e5538f60f2711273346c77e0e129b5",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w23_native16_31",
+      "CLI": 37,
+      "bytes": 24489,
+      "sha256": "c1d2209e8918918420b52d2a9b71eb7dde9af79aa886e22b32bf5ee309828d21",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w23_native32_47",
+      "CLI": 37,
+      "bytes": 24517,
+      "sha256": "489790ca627feb4295bc0f9a0a6438c4acc13fd7427987f389efd942439b5868",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    },
+    {
+      "part_id": "w23_native48_63",
+      "CLI": 37,
+      "bytes": 24513,
+      "sha256": "10217717bc963ec8fd1543a16d80453ba403b445892701e5964c152a685435e7",
+      "full_regenerated_body_byte_exact": true,
+      "legal_ACK_guard_memory_positive": {
+        "text_read_ACTIVE_raw_position": 1,
+        "text_read_DONE_raw_position": 2,
+        "ACK_planning_response_DONE_raw_position": 3,
+        "ACK_write_ACTIVE_raw_position": 4,
+        "ACK_write_DONE_raw_position": 5,
+        "read_ACTIVE_DONE_literal_identity_equal": true,
+        "ACK_ACTIVE_DONE_literal_identity_equal": true,
+        "read_DONE_then_new_ACK_response_then_ACTIVE_DONE": true
+      }
+    }
+  ],
+  "negative_cases": [
+    {
+      "name": "complete_natural_SUCCESS_positive",
+      "eligible": true,
+      "whole_success": true,
+      "issues": [],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "network_after_all_STOP_before37",
+      "eligible": false,
+      "whole_success": false,
+      "issues": [
+        "WHOLE_FAILURE_NOT_ELIGIBLE_POST_COMPLETION_NETWORK_ONLY"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "401_after_all_STOP_before37",
+      "eligible": false,
+      "whole_success": false,
+      "issues": [
+        "WHOLE_FAILURE_NOT_ELIGIBLE_POST_COMPLETION_NETWORK_ONLY"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "early_terminal_SUCCESS_STOP_before37",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "EXPLICIT_ERROR_BEFORE_ALL_PROPOSALS"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "media_ERROR_STOP_before37",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "ACTUAL_TOOL_ERROR_OR_UNFINISHED"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "outside_before_STOP_before37",
+      "eligible": false,
+      "whole_success": false,
+      "issues": [
+        "ACTUAL_OTHER_TOOL_OR_WHITELIST_FAILURE",
+        "WHOLE_FAILURE_NOT_ELIGIBLE_POST_COMPLETION_NETWORK_ONLY"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "outside_after_STOP_before37",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "TOOL_AFTER_FINAL_PROPOSAL_TERMINAL_INSTRUCTION"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "repeat_media_STOP_before37",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "REPEATED_SUCCESSFUL_MEDIA"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "rewrite_samebytes_STOP_before37",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "REWRITTEN_SUCCESSFUL_FACT_OR_PROPOSAL"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "byte_drift_STOP_before37",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "OUTPUT_OR_PREFIX_BYTE_DRIFT"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "missing_scope_STOP_before37",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "MISSING_OR_REJECTED_IMMUTABLE_SCOPE"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "zero_scope_STOP_before37",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "MISSING_OR_REJECTED_IMMUTABLE_SCOPE"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "unfinished_tool_STOP_before37",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "ACTUAL_TOOL_ERROR_OR_UNFINISHED"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "timeout_STOP_before37",
+      "eligible": false,
+      "whole_success": false,
+      "issues": [
+        "WHOLE_FAILURE_NOT_ELIGIBLE_POST_COMPLETION_NETWORK_ONLY"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "prespawn_STOP_before37",
+      "eligible": false,
+      "whole_success": false,
+      "issues": [
+        "WHOLE_FAILURE_NOT_ELIGIBLE_POST_COMPLETION_NETWORK_ONLY"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "reported_error_STOP_before37",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "REPORTED_NONMEDIA_ERROR_REQUIRES_STOP"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "full202_tool_memory_fixture_positive",
+      "passed": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "LFminus1",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "LFplus1",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "wrongbytes",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "truncated",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "ACK_ACTIVE_before_text_read_DONE",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "ACK_ACTIVE_missing",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "text_read_ACTIVE_missing",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "ACK_planned_before_text_DONE",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "text_tool_ERROR",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "text_unfinished",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "outside_program_index",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "wrong_ACK_order",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "fact_planned_before_four_DONE",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "four_images_not_same_response",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "media_ERROR",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "rewrite_output_new_tool_identity",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "raw_ERROR_then_same_step_DONE",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "all_native_ACTIVE_missing",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "native_no_forward_planning_response",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "native_ACTIVE_after_DONE",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "ACTIVE_outside_then_legal_DONE",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "ACTIVE_ranged_then_full_DONE",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "ACTIVE_path_variant_then_literal_DONE",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "ACTIVE_toolname_conflict",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "ACTIVE_write_outside_then_legal_DONE",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "effective_eight_serial_responses",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "effective_single_eight_image_batch",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "effective_ACTIVE_missing",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "effective_ACTIVE_after_DONE",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "effective_ACTIVE_identity_conflict",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "effective_no_forward_response",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "proposal_planned_before_all_effective_DONE",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "bounded_exact_selfread_positive_False",
+      "passed": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_oversize30000_False",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_no_tailLF_False",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_CR_added_False",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_wrongbytes_False",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_wrongLF_False",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_truncated_metadata_False",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "bounded_exact_selfread_positive_True",
+      "passed": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_oversize30000_True",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_no_tailLF_True",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_CR_added_True",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_wrongbytes_True",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_wrongLF_True",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "selfread_truncated_metadata_True",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "wrong_tail_ACK_marker",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "bool_slot_schema",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "open_fact_schema",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "no_tailLF",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "CR",
+      "rejected": true,
+      "synthetic_memory_only": true
+    }
+  ],
+  "scope_helper_paths": [
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\common.py",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\engine.py",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\audit.py"
+  ],
+  "actual_requests36_37": 0,
+  "new_models": 0,
+  "new_video_decode": 0,
+  "capacity_risk_not_runtime_PASS": true
+}

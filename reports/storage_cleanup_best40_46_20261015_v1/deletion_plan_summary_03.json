@@ -1,0 +1,29 @@
+{
+  "schema": "USER_AUTHORIZED_FAILED_CACHE_PURGE_V1",
+  "utc": "2026-10-15T00:55:27.518646+00:00",
+  "host": "inspur-NP5570M5",
+  "user_authorization_verbatim": "如果linux容量不够那你把之前做的失败的方向的包都清理清理，只保留目前最高的包的数据就行，其他储存腾出来",
+  "targets": [
+    "/home/inspur/aic_video_work/gnmc_width_sft1000_iteration_20261013_v1/tensors",
+    "/home/inspur/aic_video_work/gnmc_width_sft1000_iteration_20261013_v1/rgb",
+    "/home/inspur/aic_video_work/gnmc_spatial_sft_iteration_20261013_v1/tensors",
+    "/home/inspur/aic_video_work/gnmc_spatial_sft_iteration_20261013_v1/rgb",
+    "/home/inspur/aic_video_work/gnmc_width_sft_iteration_20261013_v1/tensors",
+    "/home/inspur/aic_video_work/human_reference_iteration_20261013_v1/rgb_02"
+  ],
+  "excluded": [],
+  "open_file_preflight": {
+    "conflicts": [],
+    "processes_checked": 583,
+    "inaccessible_processes": 1
+  },
+  "files": 1560,
+  "allocated_bytes": 9815433216,
+  "logical_bytes": 9813495009,
+  "available_before": 70301339648,
+  "scope": "Only obsolete failed-GNMC and rejected-A/B/C binary RGB/tensor cache payloads; no original media/models/live/best data",
+  "historical_failed_quality_or_fees_rewritten": false,
+  "old_cache_replay_will_be_unavailable": true,
+  "plan_sha256": "7b3685eee1fbf4e0785eb9bce52cb0dcf9203363077fab55404969f4f1ec09a3",
+  "metadata_preserved_count": 119
+}

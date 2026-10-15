@@ -1,0 +1,27 @@
+{
+  "status": "PASS_REAL_V14_COMPLETE_TEACHER_RUNTIME_HANDOFF_INDEPENDENT_BYTE_CHECK_NOT_TRAINING",
+  "utc": "2026-10-08T12:47:31.452227+00:00",
+  "source_lock_sha256": "5295e8bc0f2b6a651e73321a5798b259816ccbe9a0582753dc3c200b5ef080e0",
+  "frozen_files": 16502,
+  "runtime_handoff_utc": "2026-10-08T12:46:18.337907+00:00",
+  "runtime_handoff_sha256": "8a9ffec8311136a00935511505c79699e53bcd840c0349e79b437d4fe82ca934",
+  "full_manifest_sha256": "e777c7becb8df25051d14181cd7684d23813a51aaf40529583945cb8bd6c8be8",
+  "original_labels": 160,
+  "original_reviews": 160,
+  "aggregate_and_admission_byte_equal_files": 9,
+  "registered_pilot_diagnostic_true_flags_preserved": 24,
+  "supported_by_split": {
+    "train": 65,
+    "dev": 14
+  },
+  "unknown_count": 81,
+  "all_bound_core_SHA_pass": true,
+  "all_original_authority_SHA_pass": true,
+  "old_STOP_and_teacher_raw_preserved": true,
+  "original_GPU_charge": 5493.750158078037,
+  "new_teacher_calls_by_runtime_handoff": 0,
+  "independent_CPU_model_calls": 0,
+  "independent_CPU_training_updates": 0,
+  "signals_sent": 0,
+  "student_training_or_ZIP_claimed": false
+}

@@ -1,0 +1,67 @@
+{
+  "utc": "2026-10-09T01:30:10.757274+00:00",
+  "status": "PASS_DISCUSSION_FINAL_DELIVERY_AND_LOCAL_ONLY_IMPLEMENTATION_RECORD",
+  "final_packet": {
+    "file": "context-final2.md",
+    "bytes": 631777,
+    "sha256": "442036c60c2fe2a48b050679acbd41f7e1d80ee879e14f4810107a5cb64c0c7c"
+  },
+  "decision": {
+    "file": "final-decision-v2.md",
+    "bytes": 10012,
+    "sha256": "e5fb63ecee8ceebe37ea9f5449d3d5b54fcfe860aa14c6ad66213c5e0b5b9c2b"
+  },
+  "pro_full_reply": {
+    "file": "pro-p01.md",
+    "bytes": 24745,
+    "sha256": "683eaee4c0969abcc4c76dd84e722d3e898bf2d1609ecc0cdd905f029d2a1279"
+  },
+  "pro_ui_screenshot": {
+    "file": "pro-slot4-final.png",
+    "bytes": 132668,
+    "sha256": "54806fe0b5abb3fa857899ec19736997c21d948ce735aebfc02d7d7bd259a26b"
+  },
+  "ledger": {
+    "file": "ledger.json",
+    "bytes": 18780,
+    "sha256": "4acd8a1156f5e9e03c434cad7a56a8335024b1b2555f8d355a80af602989d703"
+  },
+  "local_cpu": {
+    "file": "g0_local_cpu_math.json",
+    "bytes": 1005,
+    "sha256": "b63001ea2d47371232021332871e9f31ca11879dbfbdb2c09ce7407f4272dcd7"
+  },
+  "pro_new_used": 1,
+  "pro_new_remaining": 4,
+  "remote_execution_started": false,
+  "full_native_G0_accepted": false,
+  "model_calls": 0,
+  "optimizer_updates": 0,
+  "all_four_final_packets_delivered": true,
+  "final_ack_files": {
+    "grok": {
+      "file": "grok-final-ack.md",
+      "bytes": 1192,
+      "sha256": "565676931d95ea4bb749cf98ab8578b89a465db6cea468bb77ada43cab530ac0"
+    },
+    "sol": {
+      "file": "sol-final-ack.md",
+      "bytes": 1429,
+      "sha256": "f26c69317cc8f80265ab387ee3d2415ac22ea6735d34f4cbf5df0e62a90db092"
+    },
+    "tibo": {
+      "file": "tibo-final-ack.md",
+      "bytes": 740,
+      "sha256": "0c44f62746c7ca67b81746e459f8c082fd246be405e8ea97ea47628337940723"
+    }
+  },
+  "automation": {
+    "id": "aic-linux",
+    "status": "ACTIVE",
+    "interval_minutes": 15,
+    "notification_policy": "failed_runs_only",
+    "destination": "thread",
+    "creation_tool_result": "Created automation in the app; subsequent mode=view rendered automation card"
+  },
+  "gemini_final_acknowledgement": "PENDING; final-v2 user message and all seven attachments visibly delivered, no reply claimed"
+}

@@ -1,0 +1,51 @@
+{
+  "status": "PASS_V11_COMPLETED_PILOT_24_24_INDEPENDENT_CPU_REPLAY_COLLECTION_ONLY_NOT_TRAINING_OR_TRUTH",
+  "utc": "2026-10-08T07:30:25.683679+00:00",
+  "source_lock_sha256": "0ae09ec38ff589baa5e15e16b84457b06442195de502ec7ef6a19bab9b715578",
+  "pilot_completion_sha256": "72db433f802036b40396371564c76cfcd0638af706e4196387b64b9d8671fa90",
+  "selected_denominator": 24,
+  "actual_label_calls": 24,
+  "actual_blind_second_selection_calls": 24,
+  "independent_replay_model_calls": 0,
+  "old_success_repeat_calls": 0,
+  "original_validator_and_record_projection_pass": true,
+  "label_and_review_all_bound_file_sha_pass": true,
+  "physical_frame_png_and_RGB_sha_pass": true,
+  "physical_frames_checked": 1477,
+  "supported_class_counts": {
+    "UNKNOWN": 12,
+    "SUPPORTED_COMPLETE_WINDOW_POSITIVE": 8,
+    "SUPPORTED_COMPLETE_WINDOW_NO_HIGHLIGHT": 4
+  },
+  "supported_positive_by_split": {
+    "train": 6,
+    "dev": 2
+  },
+  "supported_empty_by_split": {
+    "train": 3,
+    "dev": 1
+  },
+  "unknown_count": 12,
+  "UNKNOWN_never_negative": true,
+  "all_original_decisions_and_reviews_preserved": true,
+  "near_whole_window_count": 9,
+  "systematic_collapse": false,
+  "route_decision": "COLLECT_COMPLETE_WINDOW_WEAK_SUPERVISION",
+  "actual_gpu_charged_seconds": 2093.547199605033,
+  "actual_wrapper_status": "completed",
+  "exit_code": 0,
+  "stop_reason": null,
+  "resource_receipt_sha256": "07c4dbdf00c14c5c5a381b99b6f2fea4799298e4f128ef506f704e5b917812d2",
+  "ledger_sha256": "6734fd3e263e3a07bb4394a45f998ad2bd12aa53d348aea3b7698439ae1a7fbb",
+  "ledger_record_count": 149,
+  "historical_offset_seconds": 7200,
+  "original_failed_raw_and_STOP_preserved": true,
+  "old_and_current_successful_artifacts_unchanged": true,
+  "same_teacher_agreement_is_weak_evidence_not_truth": true,
+  "full_160_review_and_training_admission_still_required": true,
+  "new_T_optimizer_updates": 0,
+  "signals_sent": 0,
+  "frozen_source_changes": 0,
+  "raw_labels_or_per_frame_data_exported": false,
+  "large_transfers": 0
+}

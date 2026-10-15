@@ -1,0 +1,89 @@
+{
+  "status": "PASS_10_AST_19_BOUNDED_FRAGMENTS_LOCAL_SCHEMA_EXACT_SCIENCE_NO_MODEL_PENDING_ROOT",
+  "AST": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\audit.py",
+      "sha256": "2671c0d5d23e04bba33c23e14d2f6da71072fb775e1d5ace6ed74af857b486f5",
+      "bytes": 11918
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\common.py",
+      "sha256": "18a1dd8624e9bcd2f907c92ff358a9f98722fc893ebaabe9ae8bb65d43ce3238",
+      "bytes": 4771
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\controller.py",
+      "sha256": "bbdb270b962b95ff5a38d0786457521f4144149b30f142848ae8abbe2c7e5a66",
+      "bytes": 3241
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\engine.py",
+      "sha256": "f862fcc886a0c038f09c95d0511bab3705dfebd4378b784569bde5097047cf34",
+      "bytes": 21008
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\launch.py",
+      "sha256": "7d3f6da95e141d21da7a512eb5b379199d9fe8f35063f757c2dd996c4a290b9d",
+      "bytes": 7891
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\observer.py",
+      "sha256": "87c50ff9cad4660f49312e36ba81c115737600c1b99b0247f2325367f1731655",
+      "bytes": 6545
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\prepare.py",
+      "sha256": "d565fefa6c6d60c2b84281ef411158a4392a9f045d589c13e03b936b6dae0d1b",
+      "bytes": 19705
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\prompt.py",
+      "sha256": "876c9c01aa601d295bf0ef1d8409170d9e55ce82c80e52cb72f8cd6da1790710",
+      "bytes": 9198
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\run_call.py",
+      "sha256": "f782b58c3e1aa15bc0f77fa21089fff864484c1b47ca751bc9233af189b4dd08",
+      "bytes": 65
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\verify.py",
+      "sha256": "c65c49631d0b2c828281a2a02bdfd05549ebd1bce549c1250c277060feb538bf",
+      "bytes": 15118
+    }
+  ],
+  "execution_binding_sha256": "26599cf55a47c2c61ad4134127267c4777c9f2e3f23a2181e61335460e964ee8",
+  "routing": [
+    {
+      "CLI": 37,
+      "jobs": [
+        21,
+        22,
+        23
+      ],
+      "core": 308,
+      "scope_cores": [
+        104,
+        206,
+        308
+      ],
+      "parts": 19,
+      "max_text_bytes": 29249,
+      "argv_units": 762
+    }
+  ],
+  "freezes": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\prospective_CLI37_schema_local_v2\\call37\\freeze.json",
+      "sha256": "19773abd470fb49ae25f7d65a0edf253c6f97ff2867250f1fa6b41a97792e862",
+      "inputs": 1121
+    }
+  ],
+  "scientific_text_map_sha256": "8d767cff372fb2ac61bbaa66f66fa3bc789a8c5a4924ba84393ea49cf784464a",
+  "previous_successful_guard_CPU_receipt_sha256": "5a81511285825104a70a511cb836f0196d01a1f03bc1e74bce7454cb305db1ac",
+  "actual_capacity_sha256": "45412115f7fbd8a721abee8bfaf726e2317e9454691028a4ea2e3825f8ef4e1a",
+  "runtime_capacity_PASS": false,
+  "new_model_calls": 0,
+  "new_video_decode": 0,
+  "cash_cost": "UNKNOWN_NOT_ZERO"
+}

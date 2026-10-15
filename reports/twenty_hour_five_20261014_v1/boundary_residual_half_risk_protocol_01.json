@@ -1,0 +1,48 @@
+{
+  "schema": "BOUNDARY_RESIDUAL_HALF_RISK_V1",
+  "frozen_utc": "2026-10-13T23:34:26Z",
+  "goal": "Supplementary independent conservative boundary estimator; not a rewrite of the fixed eight-arm family",
+  "alpha_exact": "1/2",
+  "arms": [
+    "HALF_START",
+    "HALF_END",
+    "HALF_BOTH"
+  ],
+  "publication_priority": [
+    "HALF_START",
+    "HALF_END",
+    "HALF_BOTH"
+  ],
+  "publication_limit": 3,
+  "campaign_new_ZIP_total_limit": 5,
+  "execution_condition": "Only after the original eight-arm renderer has naturally completed; publish at most remaining slots, actual distinctness against all historical/original/new packages mandatory",
+  "endpoint_role": "TIME_ENABLED",
+  "verification_applied": false,
+  "applied_coordinate": "original_recipe + alpha*(accepted_recipe_endpoint-original_recipe); never confuse with native pivot delta",
+  "accepted_REFINE_and_native_cut_actually_moved_only": true,
+  "KEEP_UNKNOWN_zero_native_and_short_context_preserve_D8": true,
+  "original_full_strength_arm_pair_conflict_preserves_D8_even_if_half_would_resolve_it": true,
+  "halfpoint_outside_new_physical_domain_preserves_original_recipe": true,
+  "original_window_clipping": true,
+  "source_domain_padding": false,
+  "original_length_and_fixed_padding_unchanged": true,
+  "D8_kept_spatial_boxes_unchanged": true,
+  "model_requests_extra": 0,
+  "original_graph_or_batch_or_model_roles_modified": false,
+  "raw_model_outputs_modified": false,
+  "test_GT_annotation_training_or_manual_test_edit": false,
+  "formal_prediction_or_score_parameter_selection": false,
+  "alpha_grid_or_priority_tuning_prohibited": true,
+  "non_test_evidence": "Charades dev37 TIME two accepted REFINE and 35 KEEP; unsupported highlight semantic correspondence remains UNKNOWN. Baseline trust and unconfirmed local point semantics motivate a fixed shrinkage hypothesis, not claimed validation or a measured bias estimate.",
+  "quality_status": "UNVERIFIED_EXPLICIT_RISK",
+  "scientific_quality_claim": false,
+  "official_rules_current_read": "critic/current_official_reading_02.json",
+  "critic_review": "direction_critic_20h prospective HALF discussion before formal outputs",
+  "risks": [
+    "Halfway point is derived automatic postprocessing, not a directly observed model-selected sample",
+    "No evidence that half beats full displacement or the D8 baseline",
+    "Native ordinal quantization may yield duplicate or unchanged outputs, which must not be published"
+  ],
+  "five_goal_may_remain_incomplete": true,
+  "production_or_package_execution_permission": false
+}

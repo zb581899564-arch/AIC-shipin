@@ -1,0 +1,365 @@
+{
+  "started_utc": "2026-10-13T10:09:44.457374+00:00",
+  "payload_bytes_each_direction": 1048576,
+  "permanent_configuration_changed": false,
+  "service_restart_or_fault_injection": false,
+  "before": {
+    "windows": [
+      {
+        "hostname": "punch-coordinator",
+        "peer_id": 1318869978,
+        "next_hop_peer_id": 1318869978,
+        "cost": 1,
+        "connections": [
+          {
+            "id": "e28d1a6f-e5af-4927-afed-4e19371d317f",
+            "type": "tcp",
+            "local": {
+              "url": "tcp://127.0.0.1:63863"
+            },
+            "remote": {
+              "url": "tcp://127.0.0.1:41112"
+            },
+            "stats": {
+              "rx_bytes": 13362,
+              "tx_bytes": 14128,
+              "rx_packets": 114,
+              "tx_packets": 114,
+              "latency_us": 196
+            },
+            "closed": false
+          }
+        ]
+      },
+      {
+        "hostname": "linux-direct-test",
+        "peer_id": 229036289,
+        "next_hop_peer_id": 229036289,
+        "cost": 1,
+        "connections": [
+          {
+            "id": "313e631d-ed80-44be-a7c0-d3a053c091c1",
+            "type": "udp",
+            "local": {
+              "url": "udp://0.0.0.0:58718"
+            },
+            "remote": {
+              "url": "udp://202.196.17.232:6026"
+            },
+            "stats": {
+              "rx_bytes": 85163,
+              "tx_bytes": 83853,
+              "rx_packets": 508,
+              "tx_packets": 492,
+              "latency_us": 291653
+            },
+            "closed": false
+          }
+        ]
+      }
+    ],
+    "linux": [
+      {
+        "hostname": "punch-coordinator",
+        "peer_id": 1318869978,
+        "next_hop_peer_id": 1318869978,
+        "cost": 1,
+        "connections": [
+          {
+            "id": "ba299e8e-6cbb-4416-9536-7c65494f8511",
+            "type": "tcp",
+            "local": {
+              "url": "tcp://100.127.244.47:42914"
+            },
+            "remote": {
+              "url": "tcp://100.98.125.124:41112"
+            },
+            "stats": {
+              "rx_bytes": 22905,
+              "tx_bytes": 26008,
+              "rx_packets": 272,
+              "tx_packets": 272,
+              "latency_us": 525745
+            },
+            "closed": false
+          }
+        ]
+      },
+      {
+        "hostname": "win-direct-test",
+        "peer_id": 1241341684,
+        "next_hop_peer_id": 1241341684,
+        "cost": 1,
+        "connections": [
+          {
+            "id": "2455658f-84a6-4657-bd1c-0c1375622722",
+            "type": "udp",
+            "local": {
+              "url": "udp://0.0.0.0:38027"
+            },
+            "remote": {
+              "url": "udp://36.113.35.220:58718"
+            },
+            "stats": {
+              "rx_bytes": 79999,
+              "tx_bytes": 92251,
+              "rx_packets": 501,
+              "tx_packets": 516,
+              "latency_us": 72061
+            },
+            "closed": false
+          }
+        ]
+      }
+    ],
+    "bootstrap": [
+      {
+        "hostname": "win-direct-test",
+        "peer_id": 1241341684,
+        "next_hop_peer_id": 1241341684,
+        "cost": 1,
+        "connections": [
+          {
+            "id": "4b94fe54-4b14-4f54-a54d-78511d926348",
+            "type": "tcp",
+            "local": {
+              "url": "tcp://127.0.0.1:41112"
+            },
+            "remote": {
+              "url": "tcp://127.0.0.1:63863"
+            },
+            "stats": {
+              "rx_bytes": 12882,
+              "tx_bytes": 14983,
+              "rx_packets": 115,
+              "tx_packets": 115,
+              "latency_us": 225
+            },
+            "closed": false
+          }
+        ]
+      },
+      {
+        "hostname": "linux-direct-test",
+        "peer_id": 229036289,
+        "next_hop_peer_id": 229036289,
+        "cost": 1,
+        "connections": [
+          {
+            "id": "2c770589-3c8d-4c75-87e2-c9e173ac162b",
+            "type": "tcp",
+            "local": {
+              "url": "tcp://100.98.125.124:41112"
+            },
+            "remote": {
+              "url": "tcp://100.127.244.47:42914"
+            },
+            "stats": {
+              "rx_bytes": 23032,
+              "tx_bytes": 25993,
+              "rx_packets": 272,
+              "tx_packets": 272,
+              "latency_us": 538743
+            },
+            "closed": false
+          }
+        ]
+      }
+    ],
+    "tailscale": [
+      {
+        "HostName": "aic-inspur-vstain",
+        "CurAddr": "",
+        "Relay": "hkg",
+        "TxBytes": 43155532,
+        "RxBytes": 93923148
+      }
+    ]
+  },
+  "upload_seconds": 1.9219999999913853,
+  "download_seconds": 2.2660000000032596,
+  "transfer": {
+    "local_sha256": "4a2caeb54acc1ce625369041ed4a707930a9f0aae129ce018442c03576ccb47f",
+    "linux_sha256": "4a2caeb54acc1ce625369041ed4a707930a9f0aae129ce018442c03576ccb47f",
+    "download_sha256": "4a2caeb54acc1ce625369041ed4a707930a9f0aae129ce018442c03576ccb47f",
+    "download_bytes": 1048576,
+    "all_equal": true
+  },
+  "after": {
+    "windows": [
+      {
+        "hostname": "punch-coordinator",
+        "peer_id": 1318869978,
+        "next_hop_peer_id": 1318869978,
+        "cost": 1,
+        "connections": [
+          {
+            "id": "e28d1a6f-e5af-4927-afed-4e19371d317f",
+            "type": "tcp",
+            "local": {
+              "url": "tcp://127.0.0.1:63863"
+            },
+            "remote": {
+              "url": "tcp://127.0.0.1:41112"
+            },
+            "stats": {
+              "rx_bytes": 13543,
+              "tx_bytes": 14314,
+              "rx_packets": 115,
+              "tx_packets": 115,
+              "latency_us": 196
+            },
+            "closed": false
+          }
+        ]
+      },
+      {
+        "hostname": "linux-direct-test",
+        "peer_id": 229036289,
+        "next_hop_peer_id": 229036289,
+        "cost": 1,
+        "connections": [
+          {
+            "id": "313e631d-ed80-44be-a7c0-d3a053c091c1",
+            "type": "udp",
+            "local": {
+              "url": "udp://0.0.0.0:58718"
+            },
+            "remote": {
+              "url": "udp://202.196.17.232:6026"
+            },
+            "stats": {
+              "rx_bytes": 1770663,
+              "tx_bytes": 2884748,
+              "rx_packets": 2089,
+              "tx_packets": 2955,
+              "latency_us": 291653
+            },
+            "closed": false
+          }
+        ]
+      }
+    ],
+    "linux": [
+      {
+        "hostname": "punch-coordinator",
+        "peer_id": 1318869978,
+        "next_hop_peer_id": 1318869978,
+        "cost": 1,
+        "connections": [
+          {
+            "id": "ba299e8e-6cbb-4416-9536-7c65494f8511",
+            "type": "tcp",
+            "local": {
+              "url": "tcp://100.127.244.47:42914"
+            },
+            "remote": {
+              "url": "tcp://100.98.125.124:41112"
+            },
+            "stats": {
+              "rx_bytes": 23322,
+              "tx_bytes": 26483,
+              "rx_packets": 277,
+              "tx_packets": 277,
+              "latency_us": 553309
+            },
+            "closed": false
+          }
+        ]
+      },
+      {
+        "hostname": "win-direct-test",
+        "peer_id": 1241341684,
+        "next_hop_peer_id": 1241341684,
+        "cost": 1,
+        "connections": [
+          {
+            "id": "2455658f-84a6-4657-bd1c-0c1375622722",
+            "type": "udp",
+            "local": {
+              "url": "udp://0.0.0.0:38027"
+            },
+            "remote": {
+              "url": "udp://36.113.35.220:58718"
+            },
+            "stats": {
+              "rx_bytes": 2050430,
+              "tx_bytes": 1796627,
+              "rx_packets": 2306,
+              "tx_packets": 2097,
+              "latency_us": 71367
+            },
+            "closed": false
+          }
+        ]
+      }
+    ],
+    "bootstrap": [
+      {
+        "hostname": "win-direct-test",
+        "peer_id": 1241341684,
+        "next_hop_peer_id": 1241341684,
+        "cost": 1,
+        "connections": [
+          {
+            "id": "4b94fe54-4b14-4f54-a54d-78511d926348",
+            "type": "tcp",
+            "local": {
+              "url": "tcp://127.0.0.1:41112"
+            },
+            "remote": {
+              "url": "tcp://127.0.0.1:63863"
+            },
+            "stats": {
+              "rx_bytes": 12930,
+              "tx_bytes": 15047,
+              "rx_packets": 117,
+              "tx_packets": 117,
+              "latency_us": 219
+            },
+            "closed": false
+          }
+        ]
+      },
+      {
+        "hostname": "linux-direct-test",
+        "peer_id": 229036289,
+        "next_hop_peer_id": 229036289,
+        "cost": 1,
+        "connections": [
+          {
+            "id": "2c770589-3c8d-4c75-87e2-c9e173ac162b",
+            "type": "tcp",
+            "local": {
+              "url": "tcp://100.98.125.124:41112"
+            },
+            "remote": {
+              "url": "tcp://100.127.244.47:42914"
+            },
+            "stats": {
+              "rx_bytes": 23443,
+              "tx_bytes": 26458,
+              "rx_packets": 277,
+              "tx_packets": 277,
+              "latency_us": 456122
+            },
+            "closed": false
+          }
+        ]
+      }
+    ],
+    "tailscale": [
+      {
+        "HostName": "aic-inspur-vstain",
+        "CurAddr": "",
+        "Relay": "hkg",
+        "TxBytes": 43160004,
+        "RxBytes": 93927868
+      }
+    ]
+  },
+  "status": "PASS_ONE_ROUNDTRIP_SHA_AND_BOTH_ENDS_DIRECT_UDP_SNAPSHOTS",
+  "reboot_or_network_change_recovery_tested": false,
+  "airport_billing_meter_obtained": false,
+  "finished_utc": "2026-10-13T10:09:53.519791+00:00"
+}

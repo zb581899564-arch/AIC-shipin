@@ -1,0 +1,81 @@
+{
+  "utc": "2026-10-09T15:37:31.540269+00:00",
+  "execution_status": "COMPLETE_TRAINED_AND_EVALUATED",
+  "quality_verdict": "KEEP_EXISTING_PRODUCTION_MODEL",
+  "optimizer_steps": {
+    "crop": 12,
+    "temporal": 20
+  },
+  "adapter_artifacts": {
+    "crop": {
+      "path": "/home/inspur/aic_video_work/runs/annotation_finetune_20261009_v2/crop_train/adapter/adapter_model.safetensors",
+      "bytes": 30713512,
+      "sha256": "cc26a1eb660ec28aade3761c6038fee51db33c331e01b4bf89cc282609562119",
+      "optimizer_steps": 12,
+      "lora_tensor_count": 288,
+      "checkpoint_final_tensors_equal": true
+    },
+    "temporal": {
+      "path": "/home/inspur/aic_video_work/runs/annotation_finetune_20261009_v3/temporal_train/adapter/adapter_model.safetensors",
+      "bytes": 30713512,
+      "sha256": "315deddf774d24ac7dbd5164b0265981e3d0b26da64db304ccc6cfd48757717d",
+      "optimizer_steps": 20,
+      "lora_tensor_count": 288,
+      "checkpoint_final_tensors_equal": true
+    }
+  },
+  "crop_legal_outputs": {
+    "adapter": 0,
+    "base": 0,
+    "denominator": 148
+  },
+  "temporal_legal_outputs": {
+    "adapter": 64,
+    "base": 62,
+    "denominator": 89
+  },
+  "matched_temporal": {
+    "adapter": {
+      "matched_rows": 61,
+      "matched_frames": 903,
+      "mae": 0.54296788482835,
+      "rmse": 0.6906630899910382,
+      "constant_train_mean_mae_on_same_frames": 0.4881699818511455,
+      "per_source_spearman": {
+        "youtube:-esJrBWj2d8": -0.6734858154385474,
+        "youtube:4wU_LUjG5Ic": -0.35567717066389043,
+        "youtube:cjibtmSLxQ4": 0.41911925727807003,
+        "youtube:EYqVtI9YWJA": 0.27661893269306503,
+        "youtube:i3wAGJaaktw": null,
+        "youtube:J0nA4VgnoCo": 0.16439103158601043,
+        "youtube:JKpqYvAdIsw": 0.30553655401843205,
+        "youtube:sTEELN-vY30": 0.13950406837627327,
+        "youtube:Yi4Ij2NM7U4": 0.18601966565365277
+      }
+    },
+    "base": {
+      "matched_rows": 61,
+      "matched_frames": 903,
+      "mae": 0.5417497231450721,
+      "rmse": 0.680486602001741,
+      "constant_train_mean_mae_on_same_frames": 0.4881699818511455,
+      "per_source_spearman": {
+        "youtube:-esJrBWj2d8": -0.6734858154385474,
+        "youtube:4wU_LUjG5Ic": -0.35567717066389043,
+        "youtube:cjibtmSLxQ4": 0.25693417535887886,
+        "youtube:EYqVtI9YWJA": 0.27661893269306503,
+        "youtube:i3wAGJaaktw": null,
+        "youtube:J0nA4VgnoCo": 0.11712001981470452,
+        "youtube:JKpqYvAdIsw": 0.30553655401843205,
+        "youtube:sTEELN-vY30": null,
+        "youtube:Yi4Ij2NM7U4": 0.18601966565365277
+      }
+    }
+  },
+  "charged_seconds_including_failed_attempts": 1591.2310844929889,
+  "failed_attempts_preserved": 2,
+  "production_replaced": false,
+  "next_experiment_not_started": true,
+  "next_direction": "First repair crop output protocol and temporal score-count compliance on training-only calibration; then evaluate ranking and significance before expanding optimization. Preserve this frozen held-out result.",
+  "remote_run": "/home/inspur/aic_video_work/runs/annotation_finetune_20261009_v3"
+}

@@ -1,0 +1,157 @@
+{
+  "status": "PASS_LOCAL15_REFERENCE_BINDINGS_UNCHANGED_TRAIN8_AND_RUNTIME_NOT_REMOTE_ACCEPTANCE",
+  "utc": "2026-10-10T23:39:12.599162+00:00",
+  "registry": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\denominator24_v16.json",
+    "sha256": "b7ffaa85c107a55527d9dfd8e1c0b335aea7a4e2e327befae014d6c0a43529a3"
+  },
+  "qualified_references": 15,
+  "rejected_references": 4,
+  "pending_references": 5,
+  "accepted_train_windows": 8,
+  "training_targets_unchanged_since_readiness_v2": true,
+  "training_static_readiness": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\training8_static_readiness_v2.json",
+    "sha256": "551c102b97dca1243ee3d7979451e253872b472de437f3c43bf9b1a7321c9993"
+  },
+  "runtime_static_validation": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime_validation_v5.json",
+    "sha256": "df7ad0e16aa3b2a898b5f5816cecd998510de7773dab5c88cba2248deb95a3a3"
+  },
+  "all23_runtime_source_SHAs_unchanged": true,
+  "baseline": {
+    "path": "G:\\ai\\AIC视频\\deliveries\\ANNOTATION_ITERATION_20261010\\SAFE_37_66\\candidate_SAFE_37_66.zip",
+    "sha256": "07730c9e02e68d1a1ce54e7ef5a8aa616346cf8f2f8d78426ed36bc3eb481496"
+  },
+  "baseline_bytes": 306167,
+  "new_training_started": false,
+  "new_optimizer_updates": 0,
+  "new_evaluation_model_calls": 0,
+  "new426_model_calls": 0,
+  "new_submission_ZIP_exists": false,
+  "source_transfer_permission_pending": true,
+  "source_upload_completed": false,
+  "all12_evaluation_references_required": true,
+  "references": [
+    {
+      "window_id": "kLxoNp-UchI:SLOT6:1",
+      "training_admitted": true,
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\00_w01_complete_reference.json",
+        "sha256": "09ba0ffa9d4772e7b0673a9089061af423780238a279ea408aa75034d2747015"
+      }
+    },
+    {
+      "window_id": "kLxoNp-UchI:SLOT6:2",
+      "training_admitted": true,
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\01_w02_complete_reference.json",
+        "sha256": "8ad45cfa36534397f785fe686d23d3d9847e7ca7952a9e2462dc65b38e3b3968"
+      }
+    },
+    {
+      "window_id": "AwmHb44_ouw:SLOT6:10",
+      "training_admitted": true,
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\02_w10_complete_reference.json",
+        "sha256": "d5d088e110c85182af239cf3062abae842bdaa3affcb927f9585cef643df2200"
+      }
+    },
+    {
+      "window_id": "AwmHb44_ouw:SLOT6:11",
+      "training_admitted": true,
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\03_w11_complete_reference.json",
+        "sha256": "b0375ec902cf3e3620693d040b96955e43202d4cf340ad94cf3da20e2e77561e"
+      }
+    },
+    {
+      "window_id": "HT5vyqe0Xaw:SLOT6:2",
+      "training_admitted": true,
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\04_ht5_w02_complete_reference.json",
+        "sha256": "043693be74361fce46b0c77060558f396ffaf243ad23f4c6a6442aa562f4af32"
+      }
+    },
+    {
+      "window_id": "WxtbjNsCQ8A:SLOT6:0",
+      "training_admitted": true,
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\08_wxt_w00_complete_reference.json",
+        "sha256": "7fa85aa56975e3a4a633a8b87c46d0bcb61aea2845a26f6a419a90c0679ddaf0"
+      }
+    },
+    {
+      "window_id": "WxtbjNsCQ8A:SLOT6:5",
+      "training_admitted": true,
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\09_wxt_w05_complete_reference.json",
+        "sha256": "65a48ac5a694944cdaaf4ac256b0c5686814f9463bc26546333e4c435a14056b"
+      }
+    },
+    {
+      "window_id": "byxOvuiIJV0:SLOT6:2",
+      "training_admitted": true,
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\10_byx_w02_complete_reference.json",
+        "sha256": "0bf8657ced45640a6c5fe9d41e56efeb4b1c4037613db7578a1d48e3593b0896"
+      }
+    },
+    {
+      "window_id": "-esJrBWj2d8:SLOT6:1",
+      "training_admitted": false,
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\12_esjr_w01_complete_reference.json",
+        "sha256": "2e39531fb23a8de8a7538f4c0d113c182338235520619ee7caea21676f41cb98"
+      }
+    },
+    {
+      "window_id": "-esJrBWj2d8:SLOT6:6",
+      "training_admitted": false,
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\13_esjr_w06_complete_reference.json",
+        "sha256": "24b42eee4497e5e3606692ca59ad704a04565c06a1218600f65ed820669264e2"
+      }
+    },
+    {
+      "window_id": "i3wAGJaaktw:SLOT6:2",
+      "training_admitted": false,
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\14_i3w_w02_complete_reference.json",
+        "sha256": "d6b1757a222d790d2dbfa73d93018867ab52b2aba5102e383ca3b4bba69ae845"
+      }
+    },
+    {
+      "window_id": "i3wAGJaaktw:SLOT6:3",
+      "training_admitted": false,
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\15_i3w_w03_complete_reference.json",
+        "sha256": "d3f70f6129fcd2b9254ebecf0dc4e572c5ec1d789583ff9cc86a549bbbf0d62f"
+      }
+    },
+    {
+      "window_id": "EYqVtI9YWJA:SLOT6:3",
+      "training_admitted": false,
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\16_eyq_w03_complete_reference.json",
+        "sha256": "df1965362a862c6dfb4e10a7e791fb7dfb0e4cfb0f9c3056a250cab019edfffc"
+      }
+    },
+    {
+      "window_id": "EYqVtI9YWJA:SLOT6:4",
+      "training_admitted": false,
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\17_eyq_w04_reference.json",
+        "sha256": "66d87cd7d025b88d2ecc1ac9fe42fa16145eace63c00ea4931e61ed85f361436"
+      }
+    },
+    {
+      "window_id": "J0nA4VgnoCo:SLOT6:2",
+      "training_admitted": false,
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\18_j0n_w02_reference.json",
+        "sha256": "d2309479fb8f30325a4819f8041eb3d6870148ada388cfd54a8645f3eebcf453"
+      }
+    }
+  ]
+}

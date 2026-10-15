@@ -1,0 +1,139 @@
+{
+  "status": "ROOT_FINITE_SEMANTIC_DECISION_PENDING_NEW_OBSERVATION_GEOMETRY",
+  "utc": "2026-10-11T07:16:11.934143+00:00",
+  "window_id": "cjibtmSLxQ4:SLOT6:13",
+  "selected_preteacher_event_indices": [
+    0,
+    1,
+    2
+  ],
+  "keep_local_exact": [
+    [
+      "8489/1875",
+      "13793/2000"
+    ],
+    [
+      "5499/625",
+      "81419/6000"
+    ],
+    [
+      "81419/6000",
+      "8203/500"
+    ]
+  ],
+  "unknown_local_exact": [
+    [
+      "13793/2000",
+      "5499/625"
+    ]
+  ],
+  "no_local_exact": [
+    [
+      "0",
+      "8489/1875"
+    ],
+    [
+      "8203/500",
+      "30"
+    ]
+  ],
+  "consequential_unknowns": [
+    {
+      "first": 15,
+      "last": 18,
+      "reason": "低对比小人形与粗长物，手撑和倒置姿态可见但完整准备/变化/结果及实际输入辨识不足；保留UNKNOWN"
+    }
+  ],
+  "preteacher_main_review": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_main_preteacher_review_v2.json",
+    "sha256": "404e8a7b9940529842f3878d6f588fbc717e6c7c817b6f5c17cb5729986d7908"
+  },
+  "root_actual_postteacher_pixels": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_root_actual_postteacher_pixels_v1.json",
+    "sha256": "94d7fb7ec99a59d2b7243ef0e545f6b291339db69fc5f91fb716c07ba320cb63"
+  },
+  "independent_native64": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\native_reviews\\20_cjibtmSLxQ4_W13.native_review.json",
+    "sha256": "97c18652d9aeaedc00d49b191330a57248f9b7d7a502dd8264555f14f9a19e1f"
+  },
+  "independent_student64": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\20_cjibtmSLxQ4_W13.independent_student64_review_v1.json",
+    "sha256": "2e5007c4078359d5d10b985190df9b4bd4b20b5fc2a99bd9b19782e9ef5777d3"
+  },
+  "original_rejected_teacher_proposal": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\call36\\w20_proposal.json",
+    "sha256": "04ce4e8276de09e380e6559b93e392ffb1b12d6621cd5f67b583f89ada00430e"
+  },
+  "original_rejected_scope": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\call36\\w20_completed_scope_audit.json",
+    "sha256": "69b39eb3aeeab4319c17a5bfb442130ad3ba5377cd5a614a3224902014d077b2"
+  },
+  "root_read_all64_teacher_facts": true,
+  "root_read_all64_native_and_student_facts": true,
+  "all_NO_ranges_reviewed": true,
+  "candidate_prediction_exposure": false,
+  "differences_adjudicated": [
+    "Keep only the three finite targets chosen before teacher exposure: local elbow flexion and return; visible upright/tilted-to-low long-object relation; local approach to ledge and partial body behind window frame. No extra target is derived from the descriptive rejected proposal.",
+    "F12/F14 and actual studentF14 support local flexion/extension rather than mere continued hanging. Complete initial grasp and release are still unknown outside this finite target.",
+    "F15..18 remains consequential UNKNOWN. Original native calls the small form inverted while student and teacher descriptions differ; actualF17 native/student does not settle a complete handstand or precise hidden body/object relation.",
+    "F24/F27/F28 native and actual student images support upright/tilted/low long-object position change. TeacherF26..28 running/sliding/rolling and F20 force/stretch are not adopted. Causality, intent, actor contact, authenticity and complete destruction are not asserted.",
+    "F33/F34 supports high ledge stance and upper body behind frame with legs still outside. Teacher successful complete entry is rejected; full entry outcome stays unknown outside the limited relation target.",
+    "All NO bands were reviewed: ordinary sand-ground movement0..2; repeated dark face3..9; indoor occlusion/ordinary face35..42; residential walking43..58; ordinary doorway interaction59..63. Subtitle/children/voice do not create new highlights.",
+    "Exact editing boundaries are the original preteacher midpoint choices with each uncertainty range <=0.5s; they are not measured cuts or complete physical action boundaries. Adjacent independent targets remain separate events. No new boundary request, epsilon, target extension or UNKNOWN deletion.",
+    "Actual student means the frozen Qwen processor64 input, with teacher effective8 and independent student64 review. The classroom-student statement is rejected. ROOT is exposed; genuine earlier blind reviews retain their original attestations.",
+    "Original malformed proposal, schema errors, scope REJECT and whole36 REJECT remain authoritative for the old run. This new ROOT finite semantic judgment does not make that teacher instruction-compliant or release CLI37/training."
+  ],
+  "actual_root_observation_scope": {
+    "prior_native_sample_indices": [
+      10,
+      14,
+      15,
+      17,
+      19,
+      27,
+      28,
+      29,
+      31,
+      34
+    ],
+    "prior_student_sample_indices": [
+      12,
+      19,
+      27,
+      28,
+      34
+    ],
+    "additional_postteacher_native_samples": [
+      12,
+      14,
+      17,
+      24,
+      27,
+      28,
+      33,
+      34,
+      42,
+      57,
+      61
+    ],
+    "additional_postteacher_student_samples": [
+      14,
+      17,
+      24,
+      27,
+      28,
+      34
+    ],
+    "read_native_static_facts": 64,
+    "read_student_static_facts": 64,
+    "read_teacher_static_facts": 64,
+    "root_direct64_image_review": false,
+    "root_native_video_view": false,
+    "root_not_blind": true
+  },
+  "reference_scope_and_reason": "Locked evaluation finite visual editorial silver only. Three preregistered visible local targets and all ordinary NO are independently adjudicated; forest ambiguity15..18 remains UNKNOWN. Not full physical action truth, human gold, blind generalization, training or official quality.",
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "training_admitted": false,
+  "reference_admitted": false
+}

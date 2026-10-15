@@ -1,0 +1,34 @@
+{
+  "status": "PASS_NATIVE_MP4_RAW_SCHEMA_TIME_BOUNDS_AND_SOURCE_IDENTITY",
+  "utc": "2026-10-09T05:25:41.117087+00:00",
+  "input_mode": "Direct native MP4 from folder",
+  "model_ui": "Gemini 3.8 Flash High",
+  "source_id": "GsAD1KT1xo8",
+  "source_duration_seconds_metadata": 145.3452,
+  "source_bytes": 7794439,
+  "source_sha256": "a195fc9d8e5330ee55c62dfc0a99eb5d130bf0444bb412992d1204eecd8f3a86",
+  "native_mp4_read_entry_observed_in_ui": true,
+  "native_tool_name_declared": "view_file",
+  "event_count": 15,
+  "event_states": {
+    "KEEP": 15
+  },
+  "union_selected_seconds": 60.0,
+  "reported_observation_timestamps_count": 47,
+  "reported_observation_scope": "view_file 原生读取 MP4 成功。工具在前 20 秒呈现了 1fps 离散抽样帧（00:00-00:20），随后完整载入原生视频多媒体流（00:20-02:25，总时长约 145.35 秒）。观察域覆盖全片视觉内容。",
+  "full_decode_and_continuous_model_observation_independently_verified": false,
+  "event_boundary_accuracy": "NOT_MEASURED_COARSE_MODEL_RECOMMENDATIONS",
+  "issues": [],
+  "raw_files": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\antigravity_label_probe_20261009\\output\\native_video_tvsum_v1\\highlights.json",
+      "bytes": 8573,
+      "sha256": "49ccffb856b1786504c7f1e731dd9a5a5576e5de8f7def111fa0be3ecad4bfd5"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\antigravity_label_probe_20261009\\output\\native_video_tvsum_v1\\report.md",
+      "bytes": 6436,
+      "sha256": "38c593c3c13ccd6dd10df797f1c20fc608aec6b57bee268780c9b1c96d5df5c7"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "status": "ROOT_SEMANTIC_EVALUATION_ADJUDICATION_COMPLETE",
+  "utc": "2026-10-10T23:15:07.232592+00:00",
+  "window_id": "EYqVtI9YWJA:SLOT6:4",
+  "candidate_prediction_exposure": false,
+  "root_read_all64_teacher_facts": true,
+  "root_read_all64_native_and_student_facts": true,
+  "all_NO_ranges_reviewed": true,
+  "selected_preteacher_event_indices": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "unknown_local_exact": [],
+  "consequential_unknowns": [],
+  "evidence": {
+    "preteacher_main_review": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\17_eyq_w04_main_preteacher_review_v3.json",
+      "sha256": "0c2337125d8d3fe541380f04759254857f6b551412228ab7a2a358a2566ecdc0"
+    },
+    "teacher_observation_audit": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\17_eyq_w04_lawful_observation_completion.json",
+      "sha256": "42935413b0a6e77677903159b36d6699d0ed1ab75d55af26093f82cae3dec537"
+    },
+    "original_teacher_proposal": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v4_bootstrap_file\\call34\\w17_proposal.json",
+      "sha256": "a1c94f796931f1d5f23eb7adaca516583cfc31bec78db854e1e6a51ccd7c4d78"
+    },
+    "original_teacher_bound_fact_audit": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v4_bootstrap_file\\call34\\w17_completed_scope_audit.json",
+      "sha256": "6d7031b2d49ced8e76baa4ac79db9f67acd99ff3057c1c1d0ea7651147708db0"
+    },
+    "boundary_observations": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\17_eyq_w04_boundary_observations_acceptance.json",
+      "sha256": "2ef280a7024e16a8590f4268ed2516dab024a415fadade86165dd7235dbc5a65"
+    },
+    "student_actual_F57_erratum": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\17_EYqVtI9YWJA_W04.F57_actual_pixel_errata_v1.json",
+      "sha256": "79062de03f06fe6073bcec5ca1590ac18f6f4c7ce27eb9c2144af2777f87e5d1"
+    },
+    "exposed_independent_semantic_crosscheck": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_semantic_crosschecks_v1\\17_EYqVtI9YWJA_W04.teacher_semantic_crosscheck_v1.json",
+      "sha256": "83ead61b8e9eea04b9ca6207480df39b3320d919717043ce53fb6223854a4b53"
+    },
+    "root_actual_postteacher_pixels": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\17_eyq_w04_root_actual_postteacher_pixels_v1.json",
+      "sha256": "f9be18f335934f5c95298a4a51f905d9b9b67711e87d59e007035920741c25a5"
+    }
+  },
+  "differences_adjudicated": [
+    "The ramp event includes visible ground approach, airborne wheels and two-wheel platform result. Its editing entrance F25/F26 does not invent the exact front-wheel lift onset; internal F27/F28 gap1001/2000 remains a physical onset limitation.",
+    "Platform wheel-turn, short rear-wheel lift, departure-to-ground and final ground-turn representative images remain separate events; touching output intervals do not merge their semantic identities.",
+    "Student F57 original caption misses the visible high rear wheel. Root actually checked original effectiveF57: rear wheel fully visible at right, front wheel supporting ground. This root-exposed correction is not a new independent blind initial judgment.",
+    "Final rear-wheel landing is still obscured before interview. Registered probes narrow finite post-landing editorial division and scene end only, not the physical landing or exact cut.",
+    "Independent student subsequently inspected the original effectiveF57 once and preserved a separate root-exposed pixel erratum: rear wheel fully visible high at upper right, only upper rider cropped. Original blind KEEP/target UNKNOWN and final rear-wheel landing UNKNOWN remain unchanged; no re-reading neighboring frames or filling their gaps is implied.",
+    "Teacher whole-performance KEEP12..27.5 and alleged interview at F58/F59 are rejected. The five preregistered finite local image events and ordinary interview NO0..25/60..63 remain; F58/F59 still show the bicycle.",
+    "Actual F33 is low wheels near platform, F38/F45 front low and rear high, F54 descending above structures. Full hops, exact contact and already completed landing are not supplied facts. Support/ground wording denotes visible wheel relation, not measured contact.",
+    "Actual F57 supplies the high main rear wheel. Actual F58 supplies both wheels low near floor; the old native rear-high caption is erroneous and is preserved as history. No neighbouring missing interval or exact final rear contact is invented.",
+    "Physical complete-turn ending and fine contact remain UNKNOWN in the original sealed records and independent crosscheck. Those are outside the finite typical-image target defined before teacher/predictions; F56..59 is not relabelled as a complete physical stunt.",
+    "Teacher emotion, speed, difficulty, audio and outcome assertions are excluded. All64 actual teacher/static native/student rows and all ordinary NO spans were reviewed; eight actual postteacher original images were inspected. Original parent strict failure remains a strict failure; only the independently proved trailing-LF count representation is corrected."
+  ],
+  "actual_root_observation_scope": {
+    "native_sample_indices": [
+      25,
+      26,
+      28,
+      31,
+      33,
+      34,
+      35,
+      37,
+      38,
+      43,
+      44,
+      45,
+      46,
+      48,
+      50,
+      51,
+      53,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60
+    ],
+    "student_sample_indices": [
+      31,
+      33,
+      53,
+      55,
+      57
+    ],
+    "additional_postteacher_native_samples": [
+      33,
+      38,
+      45,
+      46,
+      54,
+      57,
+      58,
+      59
+    ],
+    "read_native_static_facts": 64,
+    "read_student_static_facts": 64,
+    "read_teacher_static_facts": 64,
+    "root_direct64_image_review": false,
+    "root_native_video_view": false,
+    "teacher_actual_video_delivery": true,
+    "original_parent_terminal_not_inferred": true,
+    "current_teacher_native_images": 32,
+    "earlier_proven_native_images": 32
+  },
+  "reference_scope_and_reason": "Locked-evaluation-only finite visual editorial silver. Five frozen representative wheel/airborne/turn image events retained with ordinary interview NO; complete physical hop, landing and final contact remain unknown outside these limited targets. Not human gold or official quality proof; original contradictory raw claims stay preserved."
+}

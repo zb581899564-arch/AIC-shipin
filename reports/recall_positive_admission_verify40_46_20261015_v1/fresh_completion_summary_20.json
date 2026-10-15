@@ -1,0 +1,603 @@
+{
+  "utc": "2026-10-15T06:11:04.533866+00:00",
+  "host": "inspur-NP5570M5",
+  "status": "STOP_POSITIVE_CONFIRM_REJECTED",
+  "stages": {
+    "B0": {
+      "actual_model_calls": 28,
+      "first_independent_input_QA": 28,
+      "first_independent_output_QA": 28,
+      "unique_ledger_exact": true,
+      "resource": {
+        "name": "recall_positive_fresh4_b0_20261015_v2",
+        "command": [
+          "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+          "-B",
+          "-u",
+          "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/recovery_v2/code/pilot_runtime.py",
+          "infer",
+          "--root",
+          "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01",
+          "--group",
+          "confirm"
+        ],
+        "started_utc": "2026-10-15T05:05:50.162292+00:00",
+        "runner_pid": 268728,
+        "reserved_seconds": 1800,
+        "teardown_reserve_seconds": 120,
+        "prior_charged_seconds": 269474.9287101631,
+        "gpu_time_mode": "UNLIMITED",
+        "max_total_gpu_seconds": null,
+        "resource_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
+        "disk_before": {
+          "free_bytes": 76992540672,
+          "work_bytes": 202485772288
+        },
+        "planned_output_bytes": 33554432,
+        "capacity_reason": "28 unique fresh actual pre-input-QA-admitted calls; retained caches/raw/first output QA.",
+        "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+        "project_disk_limit_bytes": null,
+        "project_ram_limit_bytes": null,
+        "project_vram_limit_bytes": null,
+        "runner_source_sha256": "9997d41fbe2bb51726914b4698b874cf939c52aac02048fa9b3bb753c64c6cec",
+        "child_pid": 268751,
+        "finished_utc": "2026-10-15T05:14:55.717002+00:00",
+        "charged_seconds": 545.5547849722207,
+        "exit_code": 0,
+        "stop_reason": null,
+        "sampled_peak_memory_mib": 23280,
+        "status": "completed",
+        "disk_after": {
+          "free_bytes": 76989939712,
+          "work_bytes": 202487943168
+        }
+      }
+    },
+    "VERIFY": {
+      "actual_model_calls": 35,
+      "first_independent_input_QA": 35,
+      "first_independent_output_QA": 35,
+      "unique_ledger_exact": true,
+      "resource": {
+        "name": "recall_positive_fresh4_verify_20261015_v2",
+        "command": [
+          "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+          "-B",
+          "-u",
+          "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/recovery_v2/code/pilot_verify.py",
+          "infer",
+          "--root",
+          "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01",
+          "--group",
+          "confirm"
+        ],
+        "started_utc": "2026-10-15T05:30:05.490265+00:00",
+        "runner_pid": 291200,
+        "reserved_seconds": 2400,
+        "teardown_reserve_seconds": 120,
+        "prior_charged_seconds": 270020.4834951353,
+        "gpu_time_mode": "UNLIMITED",
+        "max_total_gpu_seconds": null,
+        "resource_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
+        "disk_before": {
+          "free_bytes": 76974780416,
+          "work_bytes": 202493988864
+        },
+        "planned_output_bytes": 33554432,
+        "capacity_reason": "35 unique fresh actual pre-input-QA-admitted calls; retained caches/raw/first output QA.",
+        "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+        "project_disk_limit_bytes": null,
+        "project_ram_limit_bytes": null,
+        "project_vram_limit_bytes": null,
+        "runner_source_sha256": "9997d41fbe2bb51726914b4698b874cf939c52aac02048fa9b3bb753c64c6cec",
+        "child_pid": 291204,
+        "finished_utc": "2026-10-15T05:40:23.792828+00:00",
+        "charged_seconds": 618.3026486895978,
+        "exit_code": 0,
+        "stop_reason": null,
+        "sampled_peak_memory_mib": 23306,
+        "status": "completed",
+        "disk_after": {
+          "free_bytes": 76971479040,
+          "work_bytes": 202496786432
+        }
+      }
+    },
+    "POSITIVE": {
+      "actual_model_calls": 8,
+      "first_independent_input_QA": 8,
+      "first_independent_output_QA": 8,
+      "unique_ledger_exact": true,
+      "resource": {
+        "name": "recall_positive_fresh4_admission_20261015_v2",
+        "command": [
+          "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+          "-B",
+          "-u",
+          "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/code/positive_runtime.py",
+          "infer",
+          "--root",
+          "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1",
+          "--group",
+          "confirm"
+        ],
+        "started_utc": "2026-10-15T05:46:28.116922+00:00",
+        "runner_pid": 311836,
+        "reserved_seconds": 1200,
+        "teardown_reserve_seconds": 120,
+        "prior_charged_seconds": 270638.7861438249,
+        "gpu_time_mode": "UNLIMITED",
+        "max_total_gpu_seconds": null,
+        "resource_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
+        "disk_before": {
+          "free_bytes": 76969517056,
+          "work_bytes": 202498473984
+        },
+        "planned_output_bytes": 33554432,
+        "capacity_reason": "8 unique fresh actual pre-input-QA-admitted calls; retained caches/raw/first output QA.",
+        "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+        "project_disk_limit_bytes": null,
+        "project_ram_limit_bytes": null,
+        "project_vram_limit_bytes": null,
+        "runner_source_sha256": "9997d41fbe2bb51726914b4698b874cf939c52aac02048fa9b3bb753c64c6cec",
+        "child_pid": 311840,
+        "finished_utc": "2026-10-15T05:50:39.532711+00:00",
+        "charged_seconds": 251.41587867122144,
+        "exit_code": 0,
+        "stop_reason": null,
+        "sampled_peak_memory_mib": 23310,
+        "status": "completed",
+        "disk_after": {
+          "free_bytes": 76968648704,
+          "work_bytes": 202499129344
+        }
+      }
+    }
+  },
+  "total_actual_fresh_model_calls": 71,
+  "new_positive_decisions": {
+    "KEEP": 6,
+    "DROP": 2
+  },
+  "actual_media_sources": 4,
+  "actual_media_bytes": 41763431,
+  "primary_inputs": 28,
+  "source_RGB_decode_passes": 4,
+  "successful_primary_or_media_or_RGB_operations_repeated": 0,
+  "retained_original_engineering_failure": true,
+  "total_GPU_charged_seconds": 1415.27331233304,
+  "production_admitted": false,
+  "fixed40_actual_calls": 0,
+  "production_actual_calls": 0,
+  "new_ZIPs": 0,
+  "result": {
+    "status": "STOP_POSITIVE_CONFIRM_REJECTED",
+    "group": "confirm",
+    "utc": "2026-10-15T05:52:55.559518+00:00",
+    "conditions": {
+      "full_group": true,
+      "macro_F1_not_lower": false,
+      "macro_recall_gain": true,
+      "every_source_loss_within_gate": false,
+      "macro_precision_not_lower": false,
+      "all_rater_recall_retained": true,
+      "all_baseline_native_frames_retained": true,
+      "real_changed_sources": true
+    },
+    "macro": {
+      "f1": {
+        "baseline": 0.3311046566788728,
+        "baseline_exact": "34658959747765155181860196087820005455030547673694249440965275957783533590543588935836305905059366619252009774357675717804590459401714160856911043122306175589/104676751137872722279116744619431454325533697437251791629017031859173132734414593831197077052456229507907510521227187313334758282492176238405764483012868563400",
+        "augmented": 0.3278489721142444,
+        "augmented_exact": "29700270301098456620016531373783804912873841514588115363668454639474339699593111707722311738790008418387594074464695963824262826949078970854649988698739797/90591317427552906930118907860466909881971477204247561504879473004728315985569728861996322084537813041375507974908023587860514953885157779566798504732395200",
+        "delta": -0.003255684564628388,
+        "delta_exact": "-92096028704165858114074983642272353121817832838611362089101306227206213093658070291816746768843044602482374305351700629214156068298863160311923814090070986736456535944025181804156129586727753107839746715163/28287761567797320387181682537499130572312301205853231153492069419029112275145669447489264220336081624277630080028342116539715177857840664016342441655897154185916733918604545462380576529836007975162970877170880"
+      },
+      "recall": {
+        "baseline": 0.6379196558992273,
+        "baseline_exact": "23976976332411407256927838903504713341/37586200880756483025922612407366720000",
+        "augmented": 0.7347377950792847,
+        "augmented_exact": "4280669776049865382284450299365136197/5826118929390236737900212897163840000",
+        "delta": 0.09681813918005748,
+        "delta_exact": "277068663561021345812059/2861743325243455340028000"
+      },
+      "precision": {
+        "baseline": 0.23902085463363829,
+        "baseline_exact": "9184483710167831574553/38425449211306037637200",
+        "augmented": 0.21247523800591409,
+        "augmented_exact": "10266427341415653628651/48318229633562735180400",
+        "delta": -0.026545616627724197,
+        "delta_exact": "-1274770665658354603935657204091/48021889396495931083552080161070"
+      }
+    },
+    "cases": [
+      {
+        "video_id": "v_NNuIaUFYGCE",
+        "baseline": {
+          "f1": {
+            "exact": "1795676004744227923512101665157671640243775979/5234685631473658172814775812173945575042986345",
+            "value": 0.3430341631114747
+          },
+          "recall": {
+            "exact": "139406193114106801/163062937574460000",
+            "value": 0.854922615695239
+          },
+          "precision": {
+            "exact": "1953641/9095010",
+            "value": 0.21480361209058593
+          }
+        },
+        "augmented": {
+          "f1": {
+            "exact": "60726714129687606971691007390617596036915261/177511707498373203905509376860554802453731855",
+            "value": 0.3420997689983019
+          },
+          "recall": {
+            "exact": "139942584356128051/163062937574460000",
+            "value": 0.8582120893794495
+          },
+          "precision": {
+            "exact": "1961141/9170010",
+            "value": 0.21386465227409784
+          }
+        },
+        "all_rater_recall_preserved": true,
+        "baseline_native_frames_preserved": true,
+        "baseline_selected_frames": 910,
+        "augmented_selected_frames": 917,
+        "added_native_frames": 7,
+        "annotator_count": 10,
+        "baseline_spans": [
+          [
+            "421/100",
+            "473/50"
+          ],
+          [
+            "1321/100",
+            "923/50"
+          ],
+          [
+            "2021/100",
+            "1223/50"
+          ],
+          [
+            "1560559/60000",
+            "1804561/60000"
+          ],
+          [
+            "2025559/60000",
+            "2715559/60000"
+          ]
+        ],
+        "augmented_spans": [
+          [
+            "421/100",
+            "473/50"
+          ],
+          [
+            "1321/100",
+            "923/50"
+          ],
+          [
+            "499/25",
+            "1223/50"
+          ],
+          [
+            "1560559/60000",
+            "1804561/60000"
+          ],
+          [
+            "2025559/60000",
+            "2715559/60000"
+          ]
+        ],
+        "new_positive_KEEP_spans": [
+          [
+            "499/25",
+            "607/25"
+          ]
+        ],
+        "reference_ref": {
+          "path": "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/reference_01/v_NNuIaUFYGCE/reference.json",
+          "sha256": "33b2558f13d344eba669b9ada15faf15347a56974fc1867fdafab268d2dacf19"
+        },
+        "clock_ref": {
+          "path": "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/reference_01/v_NNuIaUFYGCE/clock.json",
+          "sha256": "82772367d7e8f6b65a3d19f0ac78c6401ed4428b81d4ac3922134c1690b3ad04"
+        }
+      },
+      {
+        "video_id": "v_pHZogKGkc9o",
+        "baseline": {
+          "f1": {
+            "exact": "6319762837876487762029732100275/48781092120054281734005034151541",
+            "value": 0.12955353320755983
+          },
+          "recall": {
+            "exact": "291196039157/1665094731300",
+            "value": 0.17488256594845666
+          },
+          "precision": {
+            "exact": "75025/727446",
+            "value": 0.10313480313315353
+          }
+        },
+        "augmented": {
+          "f1": {
+            "exact": "25739449678608386191901566148307486293/219168755652290256147280444811423205160",
+            "value": 0.11744123655765902
+          },
+          "recall": {
+            "exact": "1639104025415713/7526228185476000",
+            "value": 0.2177855872851199
+          },
+          "precision": {
+            "exact": "115463/1433870",
+            "value": 0.08052543117576907
+          }
+        },
+        "all_rater_recall_preserved": true,
+        "baseline_native_frames_preserved": true,
+        "baseline_selected_frames": 365,
+        "augmented_selected_frames": 575,
+        "added_native_frames": 210,
+        "annotator_count": 10,
+        "baseline_spans": [
+          [
+            "11513/2000",
+            "22021/2000"
+          ],
+          [
+            "623/30",
+            "829103/30000"
+          ]
+        ],
+        "augmented_spans": [
+          [
+            "11513/2000",
+            "70207/5000"
+          ],
+          [
+            "623/30",
+            "948001/30000"
+          ]
+        ],
+        "new_positive_KEEP_spans": [
+          [
+            "3003/400",
+            "70207/5000"
+          ],
+          [
+            "398/15",
+            "948001/30000"
+          ]
+        ],
+        "reference_ref": {
+          "path": "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/reference_01/v_pHZogKGkc9o/reference.json",
+          "sha256": "0690cd8c7aa275edbf1f5648a0346d72a89f6af03a6607b6595051ed397fa996"
+        },
+        "clock_ref": {
+          "path": "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/reference_01/v_pHZogKGkc9o/clock.json",
+          "sha256": "d89b65c4f19a6df16e6e3a0b07d525faefa0ee9afaf6c1f8efabe69069cee8a1"
+        }
+      },
+      {
+        "video_id": "v_5FM_xJGb-Tk",
+        "baseline": {
+          "f1": {
+            "exact": "73370095608726293640784898882792743880717088661/176331930503769620346488393419707855353287330025",
+            "value": 0.41609080895962736
+          },
+          "recall": {
+            "exact": "138581/138960",
+            "value": 0.9972725964306275
+          },
+          "precision": {
+            "exact": "647041/2457850",
+            "value": 0.2632548772300995
+          }
+        },
+        "augmented": {
+          "f1": {
+            "exact": "73370095608726293640784898882792743880717088661/176331930503769620346488393419707855353287330025",
+            "value": 0.41609080895962736
+          },
+          "recall": {
+            "exact": "138581/138960",
+            "value": 0.9972725964306275
+          },
+          "precision": {
+            "exact": "647041/2457850",
+            "value": 0.2632548772300995
+          }
+        },
+        "all_rater_recall_preserved": true,
+        "baseline_native_frames_preserved": true,
+        "baseline_selected_frames": 819,
+        "augmented_selected_frames": 819,
+        "added_native_frames": 0,
+        "annotator_count": 10,
+        "baseline_spans": [
+          [
+            "0",
+            "49157/1440"
+          ]
+        ],
+        "augmented_spans": [
+          [
+            "0",
+            "49157/1440"
+          ]
+        ],
+        "new_positive_KEEP_spans": [],
+        "reference_ref": {
+          "path": "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/reference_01/v_5FM_xJGb-Tk/reference.json",
+          "sha256": "a4d19f77bfb7f6f139c4c461da132381c7d4aae1b36599c45a2670a58ffac53e"
+        },
+        "clock_ref": {
+          "path": "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/reference_01/v_5FM_xJGb-Tk/clock.json",
+          "sha256": "8cfd9e16064f8a4c4bdc4bc94f905c3ea79c89f81ae90f62985bd7eac0086206"
+        }
+      },
+      {
+        "video_id": "v_YW3mCNKVaa4",
+        "baseline": {
+          "f1": {
+            "exact": "465161711841856512175330669064911726525396949/1067520957923294171129256287328269247670154070",
+            "value": 0.4357401214368293
+          },
+          "recall": {
+            "exact": "85796586939192252251/163546413757158960000",
+            "value": 0.5246008455225858
+          },
+          "precision": {
+            "exact": "1195907/3190020",
+            "value": 0.3748901260807142
+          }
+        },
+        "augmented": {
+          "f1": {
+            "exact": "211944266869705527675225354702268232356853/486373887945182482215436697739794167399056",
+            "value": 0.4357640739413894
+          },
+          "recall": {
+            "exact": "1747888985607314311/2019091527866160000",
+            "value": 0.865680907221942
+          },
+          "precision": {
+            "exact": "196631/672804",
+            "value": 0.29225599134369
+          }
+        },
+        "all_rater_recall_preserved": true,
+        "baseline_native_frames_preserved": true,
+        "baseline_selected_frames": 319,
+        "augmented_selected_frames": 673,
+        "added_native_frames": 354,
+        "annotator_count": 10,
+        "baseline_spans": [
+          [
+            "55/4",
+            "43/2"
+          ],
+          [
+            "945499/30000",
+            "1032001/30000"
+          ]
+        ],
+        "augmented_spans": [
+          [
+            "38/25",
+            "212/25"
+          ],
+          [
+            "55/4",
+            "43/2"
+          ],
+          [
+            "218333/10000",
+            "51/2"
+          ],
+          [
+            "278333/10000",
+            "29"
+          ],
+          [
+            "945499/30000",
+            "1032001/30000"
+          ]
+        ],
+        "new_positive_KEEP_spans": [
+          [
+            "38/25",
+            "212/25"
+          ],
+          [
+            "218333/10000",
+            "51/2"
+          ],
+          [
+            "278333/10000",
+            "29"
+          ]
+        ],
+        "reference_ref": {
+          "path": "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/reference_01/v_YW3mCNKVaa4/reference.json",
+          "sha256": "f9313a1b59a035c8bd941443948ccbe8f55ba8cfe1d914cc8d5f66dd9f901a39"
+        },
+        "clock_ref": {
+          "path": "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/reference_01/v_YW3mCNKVaa4/clock.json",
+          "sha256": "57bf462eea0767f9578dde4f6137eab33af2dbea7350681d250414611abfbc4b"
+        }
+      }
+    ],
+    "candidate": "OLD_EXPLICIT_KEEP_PLUS_POSITIVE_EVIDENCE_NEW_ADMISSION",
+    "bindings": {
+      "protocol_ref": {
+        "path": "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/protocol_v2.json",
+        "sha256": "8736442639beb692eecfd8f3a83404f9c012575f002653e5bdc3cf7811fc00d2"
+      },
+      "registration_ref": {
+        "path": "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/registration_confirm.json",
+        "sha256": "de78728ed0ee5b5c4648135f85da91806877be56bb4bdf1bdd1827208c933a3b"
+      },
+      "verification_export_ref": {
+        "path": "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/confirm/POSITIVE/verification_export.json",
+        "sha256": "7e00ddb87c67d75e1e35925384a6b2dfd8d744ae0b0cdc523c41a1ec36db9280"
+      },
+      "reference_completion_refs": [
+        {
+          "path": "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/reference_01/completion.json",
+          "sha256": "3ab3547064df2d4a5b1bc9ce0e874b96a42f17b94d4668e5454f0dcc0a15be93"
+        }
+      ],
+      "first_input_QA_ref": {
+        "path": "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/confirm/POSITIVE/input_qa_01/completion.json",
+        "sha256": "be4fc4f1726b4b62a67f7f3d2968b4ea9333874aa706db719c3f2a885fa651b1"
+      },
+      "output_QA_completion_ref": {
+        "path": "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/confirm/POSITIVE/output_qa_01/completion.json",
+        "sha256": "7a824c377e686499209cf8e2f08de60c262d7c06eabbe811a4312b4fb8b551e0"
+      }
+    },
+    "source_metrics_exposed_first_time": true,
+    "proxy_is_not_highlight_or_ORDINARY_gold": true,
+    "actual_online_improvement": "UNKNOWN",
+    "old_failed_gates_changed": false,
+    "production_admitted": false,
+    "no_fixed40_426_or_package_started": true
+  },
+  "bindings": {
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/cpu_acceptance_confirm.json": "a95648b167ae6ab8e2362dd46239c59b10e0333c3cea2dd08e30b2eb65514702",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/confirm/B0/input_qa_01/completion.json": "5d2b52ccef43e29fe4ab7617977d952a32434dbf881505f43130c6cb54b2f645",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/confirm/B0/gpu_01/completion.json": "0d0a74c381a1b13fece2da82aa0260af385d8340304949abc1275204edc286be",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/confirm/B0/replay_01/completion.json": "34c3944fc3ae653bde9a4f752fd50538d8bf243227c7cd1cf7ea56c7593c5d3f",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/gpu_admission_confirm_B0.json": "e475a1e6e191d33ae784891c71b95b343646134b776d710552225c11bad39839",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/confirm/B0/gpu_01/attempts.jsonl": "063eb996a5d6d91720503d97ad6b7c82f70d9927df4706d4edf2203ad0e975c6",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/recall_positive_fresh4_b0_20261015_v2.resource.json": "f99ff0f01064a7b9448734342f3d73fb9742e84d7870cad11b1e817781dd7ad6",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/confirm/VERIFY/cpu_01/completion.json": "23eec85af41ca0743713dbb4a3099e43214a25da4a87dbf1c87b230a3e64957f",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/confirm/VERIFY/input_qa_01/completion.json": "b8d217d0b85ae708764213590077c11b511b8fea7fb40c0635fdd3b965095180",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/confirm/VERIFY/gpu_01/completion.json": "3285a1dbc15eaf01e1df4154384fcd86f8c00c14e28f44290a1a635b2d26c1ea",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/confirm/VERIFY/replay_01/completion.json": "26e5e494c64cdb0d255aa08157d102f6e9e94deb4c09c3903fdd8c03e53cafc8",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/gpu_admission_confirm_VERIFY.json": "770434c6ad39edd60f5106f33549cc44ba1b10204085042a742a030d016b81f6",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/confirm/VERIFY/gpu_01/attempts.jsonl": "375bda01ef8c8d8b2abd145cd6d4dfcbf717426a5dc4a6b37d7f4c0a77beb45d",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/recall_positive_fresh4_verify_20261015_v2.resource.json": "459e0e0f04002a2ad95c0b005b2b32f73f496acf407bab30c2bcdaf115180620",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/confirm/POSITIVE/cpu_01/completion.json": "24b809b7b373631c62ff95a2251beeb98bad34d4d790830e9549b6a6e7e411c9",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/confirm/POSITIVE/input_qa_01/completion.json": "be4fc4f1726b4b62a67f7f3d2968b4ea9333874aa706db719c3f2a885fa651b1",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/confirm/POSITIVE/gpu_01/completion.json": "5ae91303d8c66ead42a76c75aef176d1cdc9be84a0bce1176e94e14fa480fe3b",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/confirm/POSITIVE/output_qa_01/completion.json": "7a824c377e686499209cf8e2f08de60c262d7c06eabbe811a4312b4fb8b551e0",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/gpu_admission_confirm_POSITIVE.json": "ae41cee0c81864c9758378118fde6b2d4fb7d29a3f0e85ab1148601de17fb861",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/confirm/POSITIVE/gpu_01/attempts.jsonl": "37734c1170977a6620454c53502b3591dd0c42da734d4c47020b7ad4c03633e0",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/recall_positive_fresh4_admission_20261015_v2.resource.json": "f09249c3dbcd54546ccfc4ba506829547d9dc82b92fd00811008fd15966ef117",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/confirm/inputs_01/completion.json": "73b9d1fc9ed504b89f3aa05ec81c2433f5bd8a1b15eaa34b55aa6996ed401db4",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/confirm/chain_02/completion.json": "9e990b5c02ea976876616da2c0c5c44bfdd8bac1333a5be34364935da6f10c7e",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/confirm/comparison_01/result.json": "08283436eb09dd43e8e5770c7487e02eac470399fb801eb008b132fb0e5a1f13",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/positive_fresh_registration.json": "feb315fbf662e79dbe3119ed041a373451fdf575aab44cfcb440d3f275d2e000",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/positive_fresh_recovery_registration_v2.json": "dc3de5b47ad949c1be45b6c53b082828c7d3c101b94f8dd1984c0e22548c0a83",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/confirm/chain_01/failure.json": "f603878eee44824e03e772e20f04520db095f5cc34d952283f0c37c8d81bcfd1",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/protocol_v2.json": "8736442639beb692eecfd8f3a83404f9c012575f002653e5bdc3cf7811fc00d2",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/registration_confirm.json": "de78728ed0ee5b5c4648135f85da91806877be56bb4bdf1bdd1827208c933a3b",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/dev/selection_before_confirmation.json": "815fc40cb955689f9849a2b31cdcaaa8f05a508d0eae8e69c20786f9795d292a",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/fresh_01/reference_01/completion.json": "3ab3547064df2d4a5b1bc9ce0e874b96a42f17b94d4668e5454f0dcc0a15be93"
+  }
+}

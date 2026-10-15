@@ -1,0 +1,40 @@
+{
+  "status": "ROOT_APPROVED_START_FIXED_SELF_CHECK_CLI33_36",
+  "utc": "2026-10-10T21:49:49.961867+00:00",
+  "dry_run_sha256": "35edf3dc28968687b6e10b9e0e0cd72f9bb8ba53dbc730acf90f7644a58151b5",
+  "execution_binding_sha256": "2b6a1e9193d34e481875dd6bc453a96be9c3e4513b0a50124b96f4f3919c66e7",
+  "root_AST_verified": 9,
+  "actual_four_freezes_verified": [
+    {
+      "call": 7,
+      "input_sha_verified": 198,
+      "literal_previews": 16
+    },
+    {
+      "call": 8,
+      "input_sha_verified": 198,
+      "literal_previews": 16
+    },
+    {
+      "call": 9,
+      "input_sha_verified": 198,
+      "literal_previews": 16
+    },
+    {
+      "call": 10,
+      "input_sha_verified": 198,
+      "literal_previews": 16
+    }
+  ],
+  "old_CLI32_strict_failure_preserved": true,
+  "index_selfcheck_not_media_and_counts_logged": true,
+  "model": "gemini-3.8-flash-high",
+  "global_cap": 36,
+  "no_retry": true,
+  "root_readonly_check_errata": [
+    "wrong binding key corrected to actual sources",
+    "prompt paths are JSON escaped; corrected test uses json.dumps literal and exact arguments; neither failed readonly check created output/call"
+  ],
+  "new_gpu_model_calls": 0,
+  "new_optimizer_updates": 0
+}

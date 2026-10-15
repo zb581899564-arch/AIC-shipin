@@ -1,0 +1,24 @@
+{
+  "status": "LOCAL_ENGINEERING_PREPARATION_NOT_REAL_DATA_ACCEPTANCE",
+  "completed": [
+    "Native source size/CRC/name/frame-count/strict PTS/duration mapping validator",
+    "All-source admission required before reading prediction export",
+    "Separate immutable pre-GPU input and post-replay export acceptance",
+    "Human mean-pairwise F1 comparison with screen selection frozen before confirm metrics",
+    "Separate partial-known-silver veto preserving old failed reference",
+    "Canonical source-registration binding for explicit download permission and recovery"
+  ],
+  "targeted_checks": [
+    "Hand-built mapping accepts a correct three-frame clock",
+    "Wrong length, duplicate PTS, changed CRC and inconsistent span are rejected",
+    "Failed source admission rejects before prediction file read",
+    "Missing permission and changed registration reject before filesystem or network mutation"
+  ],
+  "checks_are_synthetic_not_real_video_evidence": true,
+  "actual_new_media_downloads": 0,
+  "actual_native_mappings": 0,
+  "actual_model_calls": 0,
+  "actual_candidate_comparisons": 0,
+  "actual_new_submission_zips": 0,
+  "pending": "Previously asked specific 861654036-byte ETH-to-Linux media approval has no human response in this turn"
+}

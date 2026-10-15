@@ -1,0 +1,34 @@
+{
+  "schema": "aic6_p2d_boundary_tests_v1",
+  "run_id": "round6_p2d_20260919T130011Z",
+  "gpu_started_before_tests": false,
+  "existing_p2_suite": {
+    "command": "python -B -m unittest discover -s tests -v",
+    "working_directory": "round6_score_alignment/p2_joint_coverage",
+    "tests_run": 38,
+    "failures": 0,
+    "errors": 0,
+    "status": "PASS"
+  },
+  "new_p2d_suite": {
+    "command": "python -B -m unittest discover -s tests -v",
+    "working_directory": "round6_score_alignment/p2d_deployable_dev",
+    "tests_run": 11,
+    "failures": 0,
+    "errors": 0,
+    "status": "PASS",
+    "covered": [
+      "center maximum legal crop",
+      "9:16 width overflow",
+      "out-of-bounds and wrong types",
+      "missing and extra frames",
+      "duplicate outputs",
+      "wrong video id",
+      "parse/model failure not treated as legal empty",
+      "weak-label source rejected",
+      "silent fallback rejected",
+      "NaN-like invalid box rejected"
+    ]
+  },
+  "retained_initial_failure": "initial_boundary_failure.txt"
+}

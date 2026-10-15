@@ -1,0 +1,199 @@
+{
+  "status": "PASS_NEW_ROOT_FINITE_REFERENCE_GEOMETRY_WITH_REUSED_ACTUAL_MEDIA_OLD_TEACHER_REJECTED",
+  "utc": "2026-10-11T07:23:00.266948+00:00",
+  "window_id": "cjibtmSLxQ4:SLOT6:13",
+  "original_pngs_delivered": 64,
+  "effective_pngs_delivered": 8,
+  "native_video_delivered": true,
+  "tool_issues": [],
+  "proposal_geometry_identity_issues": [],
+  "proposal_geometry_identity_scope": "NEW_ROOT_FINITE_REFERENCE_ONLY_NOT_REJECTED_TEACHER_PROPOSAL",
+  "new_finite_root_decision": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_root_finite_decision_draft_v1.json",
+    "sha256": "f8e2d43f033db80f2003fd105f4dc49dc1a4d697fc4801be5cfa53c9b22fa7ef"
+  },
+  "new_actual_root_pixel_review": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_root_actual_postteacher_pixels_v1.json",
+    "sha256": "94d7fb7ec99a59d2b7243ef0e545f6b291339db69fc5f91fb716c07ba320cb63"
+  },
+  "media_only_recovery": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\root20_observation_recovery_v1\\observation_receipt_v2.json",
+    "sha256": "677e8755b272d5bd0092c8a3b6dbe6933635aa44e217be037e4877c723adca79"
+  },
+  "media_recovery_independent_review": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\plan_review\\root20_observation_v2_independent_narrow_review_v1.json",
+    "sha256": "480349e4461d5608b8045f2fde51055433c7d4ed37f3735517e46c3323abc672"
+  },
+  "original_rejected_teacher_scope": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\call36\\w20_completed_scope_audit.json",
+    "sha256": "69b39eb3aeeab4319c17a5bfb442130ad3ba5377cd5a614a3224902014d077b2"
+  },
+  "original_rejected_teacher_proposal": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\call36\\w20_proposal.json",
+    "sha256": "04ce4e8276de09e380e6559b93e392ffb1b12d6621cd5f67b583f89ada00430e"
+  },
+  "original_rejection_history": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\root20_observation_recovery_v1\\rejected_teacher_history_v2.json",
+    "sha256": "9d0e4422e1d81689f2b01e2e7c7310589ef766cb451e22e877a92f3ae799e0da",
+    "bytes": 2739
+  },
+  "old_scope_schema_issues_preserved": [
+    {
+      "reason": "FACT_SCHEMA_OR_MISSING",
+      "group": 4,
+      "error": "TypeError(\"unhashable type: 'dict'\")"
+    },
+    {
+      "reason": "FACT_SCHEMA_OR_MISSING",
+      "group": 5,
+      "error": "TypeError(\"unhashable type: 'dict'\")"
+    },
+    {
+      "reason": "FACT_SCHEMA_OR_MISSING",
+      "group": 6,
+      "error": "TypeError(\"unhashable type: 'dict'\")"
+    },
+    {
+      "reason": "FACT_SCHEMA_OR_MISSING",
+      "group": 7,
+      "error": "TypeError(\"unhashable type: 'dict'\")"
+    },
+    {
+      "reason": "FACT_SCHEMA_OR_MISSING",
+      "group": 8,
+      "error": "TypeError(\"unhashable type: 'dict'\")"
+    },
+    {
+      "reason": "FACT_SCHEMA_OR_MISSING",
+      "group": 9,
+      "error": "TypeError(\"unhashable type: 'dict'\")"
+    },
+    {
+      "reason": "FACT_SCHEMA_OR_MISSING",
+      "group": 10,
+      "error": "TypeError(\"unhashable type: 'dict'\")"
+    },
+    {
+      "reason": "FACT_SCHEMA_OR_MISSING",
+      "group": 11,
+      "error": "TypeError(\"unhashable type: 'dict'\")"
+    },
+    {
+      "reason": "FACT_SCHEMA_OR_MISSING",
+      "group": 12,
+      "error": "TypeError(\"unhashable type: 'dict'\")"
+    },
+    {
+      "reason": "FACT_SCHEMA_OR_MISSING",
+      "group": 13,
+      "error": "TypeError(\"unhashable type: 'dict'\")"
+    },
+    {
+      "reason": "FACT_SCHEMA_OR_MISSING",
+      "group": 14,
+      "error": "TypeError(\"unhashable type: 'dict'\")"
+    },
+    {
+      "reason": "FACT_SCHEMA_OR_MISSING",
+      "group": 15,
+      "error": "TypeError(\"unhashable type: 'dict'\")"
+    }
+  ],
+  "old_scope_proposal_issues_preserved": [
+    {
+      "reason": "PROPOSAL_SCHEMA_OR_COVERAGE",
+      "error": "AssertionError()"
+    }
+  ],
+  "original_teacher_scope_pass": false,
+  "original_teacher_proposal_pass": false,
+  "whole_CLI36_pass": false,
+  "new_reference_geometry_checks": [
+    {
+      "event_index": 0,
+      "native_and_actual_student_frame_ids": [
+        "F10",
+        "F11",
+        "F12",
+        "F13",
+        "F14"
+      ],
+      "start_pair": [
+        "42939/10000",
+        "142831/30000"
+      ],
+      "end_pair": [
+        "12493/1875",
+        "106951/15000"
+      ],
+      "local_editing_midpoint_pair": [
+        "8489/1875",
+        "13793/2000"
+      ],
+      "physical_complete_action_boundary_claimed": false
+    },
+    {
+      "event_index": 1,
+      "native_and_actual_student_frame_ids": [
+        "F19",
+        "F20",
+        "F21",
+        "F22",
+        "F23",
+        "F24",
+        "F25",
+        "F26",
+        "F27",
+        "F28"
+      ],
+      "start_pair": [
+        "51389/6000",
+        "270959/30000"
+      ],
+      "end_pair": [
+        "50011/3750",
+        "69017/5000"
+      ],
+      "local_editing_midpoint_pair": [
+        "5499/625",
+        "81419/6000"
+      ],
+      "physical_complete_action_boundary_claimed": false
+    },
+    {
+      "event_index": 2,
+      "native_and_actual_student_frame_ids": [
+        "F29",
+        "F30",
+        "F31",
+        "F32",
+        "F33",
+        "F34"
+      ],
+      "start_pair": [
+        "50011/3750",
+        "69017/5000"
+      ],
+      "end_pair": [
+        "485173/30000",
+        "499187/30000"
+      ],
+      "local_editing_midpoint_pair": [
+        "81419/6000",
+        "8203/500"
+      ],
+      "physical_complete_action_boundary_claimed": false
+    }
+  ],
+  "full_exact30_partition_verified": true,
+  "original_15_18_consequential_UNKNOWN_preserved": true,
+  "root_exposed_not_new_blind": true,
+  "training_admitted": false,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "new_video_decode": 0,
+  "verifier_source": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\seal_root20_reference_geometry_v1.py",
+    "sha256": "3284d768d2e380152c7fc154d4b46d30a647620108d02e6eac2734819353d20a"
+  }
+}

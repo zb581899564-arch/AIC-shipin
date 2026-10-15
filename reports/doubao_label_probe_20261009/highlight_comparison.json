@@ -1,0 +1,174 @@
+{
+  "utc": "2026-10-09T07:04:59.792752+00:00",
+  "source_id": "GsAD1KT1xo8",
+  "type": "SINGLE_VIDEO_DIAGNOSTIC_NOT_AIC_OFFICIAL_SCORE",
+  "input_modes_differ": true,
+  "selected_duration_budget_not_equalized": true,
+  "importance_is_not_crop_truth_or_precise_highlight_boundary_truth": true,
+  "decoded_native_frames": 4356,
+  "human_annotators": 20,
+  "human_vector_length": 4356,
+  "frame_count_identity": true,
+  "alignment": "Original decoded ordinal matched to original distributed annotation-vector index; cardinality verified, no label exposure to models",
+  "annotation_archive_sha256": "9f718779ba0847e9fc70a361a65037a14b8e48408a732aea699d2bccb4c4fc1f",
+  "models": {
+    "Gemini_native_MP4": {
+      "events": 15,
+      "selected_native_frames": 1797,
+      "selected_frame_fraction": 0.41253443526170797,
+      "intervals": [
+        [
+          49.0,
+          52.0
+        ],
+        [
+          52.0,
+          57.0
+        ],
+        [
+          57.0,
+          58.5
+        ],
+        [
+          64.0,
+          67.0
+        ],
+        [
+          74.0,
+          76.5
+        ],
+        [
+          77.0,
+          80.0
+        ],
+        [
+          80.0,
+          84.0
+        ],
+        [
+          85.0,
+          87.5
+        ],
+        [
+          91.0,
+          94.0
+        ],
+        [
+          94.0,
+          97.0
+        ],
+        [
+          97.0,
+          106.0
+        ],
+        [
+          115.0,
+          118.5
+        ],
+        [
+          119.0,
+          124.0
+        ],
+        [
+          125.0,
+          131.0
+        ],
+        [
+          132.0,
+          138.0
+        ]
+      ],
+      "human_importance_mean_all": 2.001767676767677,
+      "human_importance_mean_selected": 2.215442404006678,
+      "human_importance_mean_unselected": 1.8517194216490818
+    },
+    "Doubao_1FPS_images": {
+      "events": 18,
+      "selected_native_frames": 1927,
+      "selected_frame_fraction": 0.4423783287419651,
+      "intervals": [
+        [
+          42,
+          44
+        ],
+        [
+          50,
+          52
+        ],
+        [
+          53,
+          57
+        ],
+        [
+          57,
+          59
+        ],
+        [
+          64,
+          67
+        ],
+        [
+          75,
+          77
+        ],
+        [
+          77,
+          80
+        ],
+        [
+          83,
+          88
+        ],
+        [
+          88,
+          92
+        ],
+        [
+          92,
+          95
+        ],
+        [
+          95,
+          98
+        ],
+        [
+          98,
+          102
+        ],
+        [
+          108,
+          112
+        ],
+        [
+          116,
+          119
+        ],
+        [
+          123,
+          125
+        ],
+        [
+          127,
+          132
+        ],
+        [
+          132,
+          139
+        ],
+        [
+          139,
+          145.345
+        ]
+      ],
+      "human_importance_mean_all": 2.001767676767677,
+      "human_importance_mean_selected": 2.2076543850544885,
+      "human_importance_mean_unselected": 1.8384314532729515
+    }
+  },
+  "descriptive_output_overlap": {
+    "intersection_native_frames": 1287,
+    "union_native_frames": 2437,
+    "jaccard": 0.5281083299138285,
+    "is_accuracy": false
+  }
+}

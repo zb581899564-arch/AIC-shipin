@@ -1,0 +1,34 @@
+{
+  "status": "PASS_ROOT_READ_SELECTED_FACTS_AND_RECHECK_CURRENT_BOUNDINGS_NOT_ALL64_CAPTION_CERTIFICATION",
+  "utc": "2026-10-10T21:50:23.760842+00:00",
+  "window_id": "i3wAGJaaktw:SLOT6:3",
+  "original_blind_review": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\15_i3wAGJaaktw_W03.independent_student64_review_v1.json",
+    "sha256": "3c598a3f658ebebd89d94815c2f5c7cfb1afb43eacfd47db69169034feeee5bd"
+  },
+  "bounded_reinspection": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\15_i3wAGJaaktw_W03.student_bounded_reinspection_v1.json",
+    "sha256": "d06220f6f506dd133378d11ff2524d9b6ece89aaeca55d13842002abade5dee7"
+  },
+  "original_review_preserved": true,
+  "root_read_all_selected_fresh_facts": true,
+  "actual_selected_png_rgb_pts_bindings_rechecked": 8,
+  "selected_slots": [
+    0,
+    7,
+    15,
+    23,
+    31,
+    39,
+    47,
+    63
+  ],
+  "detail_qualifications": {
+    "31": "Person and cage scene core match. Fresh static fact records partly closed eyes; original blink-like wording is not independently established as a movement by this one slot."
+  },
+  "new_blind_initial": false,
+  "teacher_exposure": false,
+  "root_direct_new_images": 0,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0
+}

@@ -1,0 +1,57 @@
+{
+  "status": "PASS_ROOT20_INDEPENDENT_FINITE_REFERENCE_WITH_UNKNOWN_PRESERVED_NOT_TRAINING",
+  "utc": "2026-10-11T07:31:01.951827+00:00",
+  "window_id": "cjibtmSLxQ4:SLOT6:13",
+  "reference_binding": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_complete_reference_v1.json",
+    "sha256": "62998d79a1806d8510ac5c23851bf2b699c79bb4c1f44cc015e4c7a4c611dec5",
+    "window_id": "cjibtmSLxQ4:SLOT6:13",
+    "reference_kind": "FINITE_OBSERVATION_SILVER_EDITING_ADVICE_NOT_GOLD",
+    "source_sha256": "43183ef7f35bfcbc39c122be797fdee5031103862c7c7da3b9ab74d222c79c9d",
+    "source_window": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\source_window_plan.json",
+      "sha256": "09ecb28971932bd3bf8ac275c30d0a6fd534345442f2d2ec3529fa3f8e1e4b22"
+    },
+    "training_admitted": false
+  },
+  "original_silver_contract_actual_verified": true,
+  "original_silver_acceptance": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_complete_reference_v1_acceptance.json",
+    "sha256": "b5383f687291b19b5acbaafe16d9236917d6749e049987a9d213803748815e08"
+  },
+  "independent_actual_result_review": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\plan_review\\ROOT20_actual_reference_independent_review_v1.json",
+    "sha256": "96efbc73b8b70cc463290ca59370d799f2be3e709c42a63afa7a3e0a80998e38"
+  },
+  "original_silver_contract": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\silver_contract.py",
+    "sha256": "6b9e7a8603d7267fac4e119d5b7817fc91a1d15ec44d9c965be065922b9475ba"
+  },
+  "actual_serializer": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\build_reference_from_main.py",
+    "sha256": "74a6075ca92955564d03b8c2ee8a02f1ea1ccec2004a43b3dde3527df168237b"
+  },
+  "new_root_geometry": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_root_new_reference_geometry_v1.json",
+    "sha256": "85ed216ccadeb1191289989f79f58d35b8c7f850b567bc799109952926be2927"
+  },
+  "new_root_decision": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_root_eval_decision_v1.json",
+    "sha256": "0f51cdf7d6df3e7c873dd60882cf2df976921684ef1511c50a805bca6cdd438a"
+  },
+  "original_teacher_scope_pass": false,
+  "original_teacher_proposal_pass": false,
+  "whole_CLI36_pass": false,
+  "training_admitted": false,
+  "consequential15_18UNKNOWN_preserved": true,
+  "known_keep_seconds": "299299/30000",
+  "known_no_seconds": "135911/7500",
+  "unknown_seconds": "19019/10000",
+  "scientific_batch_training_admission": false,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "source": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\seal_root20_semantic_recovery_receipt_v1.py",
+    "sha256": "7c75b88c6482d2cb517c5cbbf33de0716bfc5715368d4cee9f93cca0e58afb6c"
+  }
+}

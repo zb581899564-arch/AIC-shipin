@@ -1,0 +1,66 @@
+{
+  "receipt": {
+    "status": "STOP_FIRST_REAL_HEAD_NETWORK_FAILURE_NO_RETRY",
+    "utc": "2026-10-15T09:44:51.240615+00:00",
+    "stage": "CURRENT_SIX_HEAD_ROUTES",
+    "error_class": "ConnectionError/NewConnectionError",
+    "errno": 101,
+    "error": "Network is unreachable",
+    "failing_source": "v_RTwa2d6Oqvo",
+    "host": "huggingface.co",
+    "launch": {
+      "pid": 545862,
+      "start_ticks": "504022542",
+      "argv": [
+        "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+        "-B",
+        "-u",
+        "/home/inspur/aic_video_work/midnight_five_verify40_46_20261015_v1/relative_confirm/control_09.py"
+      ],
+      "bytes": 21436,
+      "sha256": "fbb4e52be7269fc25cc22be1e19c5258d72eeec490853300dbf36c768f08e222",
+      "launched_utc": "2026-10-15T09:43:47.214306+00:00",
+      "old_chains_touched": false
+    },
+    "deployment_verification_ref": {
+      "path": "/home/inspur/aic_video_work/midnight_five_verify40_46_20261015_v1/relative_confirm/control_09/deployment_verification.json",
+      "bytes": 5597,
+      "sha256": "2aa044677c5d142f4640271a878bf250f63aaa3cced0fcb03f90f68ed776716e"
+    },
+    "failure_ref": {
+      "path": "/home/inspur/aic_video_work/midnight_five_verify40_46_20261015_v1/relative_confirm/control_09/failure.json",
+      "bytes": 5535,
+      "sha256": "d288f1b16a2a6c374a8c3c01c13ee11469d38d25b1b743c876d380be06252eb8"
+    },
+    "source_candidates_ref": {
+      "path": "/home/inspur/aic_video_work/midnight_five_verify40_46_20261015_v1/relative_confirm/source_candidates.json",
+      "bytes": 112265,
+      "sha256": "95e7816eba5d48a8ca774928a2a26ec44953273b8e13b9ebecf49d5493d31e26"
+    },
+    "successful_source_selection": 1,
+    "successful_HEAD": 0,
+    "media_downloads": 0,
+    "new_media_payload_bytes": 0,
+    "native_decodes": 0,
+    "primary_inputs": 0,
+    "first_input_QA": 0,
+    "new_model_calls": 0,
+    "first_output_QA": 0,
+    "new_GPU_job_terminal_exists": {
+      "midnight_relative_fresh4_b0_20261015_v1": false,
+      "midnight_relative_fresh4_verify_20261015_v1": false,
+      "midnight_relative_fresh4_rank8_20261015_v1": false
+    },
+    "rank_stage_exists": false,
+    "media_root_exists": false,
+    "old_chains_touched": false,
+    "network_or_services_changed": false,
+    "automatic_retry": false,
+    "previous_scientific_failures_changed": false
+  },
+  "receipt_ref": {
+    "path": "/home/inspur/aic_video_work/midnight_five_verify40_46_20261015_v1/relative_confirm/control_09/short_failure_receipt.json",
+    "bytes": 2237,
+    "sha256": "08a9ced163a3d6b3a6f7c2bdac502f25ebcf6f7998ecaeae046356d0de2e3b2d"
+  }
+}

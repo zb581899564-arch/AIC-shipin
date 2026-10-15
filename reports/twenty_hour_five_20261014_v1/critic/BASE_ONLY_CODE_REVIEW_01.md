@@ -1,0 +1,13 @@
+# base-only12 静态审查
+
+审查对象 `improvement/base_only_pilot_v1/pilot.py`，修后本地SHA256为 `a44e8b4801a772a7358c7fbf854e684626d17af097d6a24669785f3b354ae3d2`。本子任务没有运行该脚本的admit/infer/replay，也没有启动或重放任何GPU结果。
+
+核心实现通过静态审查：实际原base SHA与实际加载的旧adapter SHA均核对；加载总参数8,782,459,120，激活base参数8,767,123,696。此实现是adapter仍加载但关闭，不能写成adapter absent/unloaded。每次生成在 `with model.disable_adapter()` 内检查144个有LoRA权重的真实模块 `disable_adapters` 全True，再进入 `torch.inference_mode` 生成；没有optimizer或训练步骤。
+
+GPU仍真实执行原RGB输入encode，将完整evidence与原独立CPU tensor证明比较，并将实际CUDA tensor signature与该证明比较，不把“旧输入复用”误写成没有GPU编码。输出保存真实token IDs、逐token选择分数、raw解码、evidence，有限grammar允许合法空列表。CPU新输出重放使用本地tokenizer重新decode并核grammar/parser/native区间，同时引用原已成功独立输入tensor证明，不重复成功CPUencode。
+
+已向主控指出并读回三项修正：12个source_name唯一且均为登记screen的W000；旧独立replay明确要求成功status与source_name身份；source_lock包含实际读取的旧config.json。新输出native范围用冻结源全clock与精确半开时域投影，正区间必须含原帧。12call、24条BEGIN/ACCEPTED、唯一completed/exit0账本及全部新输出重放的分母保留，空输出本身不构成质量收益。
+
+另快速只读审查同伴 `temporal_diagnosis/code/evaluate_base_only12.py`：all10评审先按source平均，再12源宏平均；新W000替换，其余原窗保持；每臂从自己的粗端点一次计算同一D8规则；window参考只与W000时域交集、whole-source参考保持；invalid不被悄悄移出12源分母。未发现会影响对比公平的实际padding或分母错误。已向同伴建议确认显式source唯一及作者参考身份字段，但没有改写其文件或已冻结policy。
+
+结果只支持继续预登记的开发小试；实际模型关闭状态、生成和重放仍须以Linux真实回执为准。已曝光VideoXum摘要代理不是独立高光确认，更多空输出不等于更好，旧科学质量门不回写。

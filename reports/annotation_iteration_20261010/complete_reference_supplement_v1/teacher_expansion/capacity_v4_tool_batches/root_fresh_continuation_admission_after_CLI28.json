@@ -1,0 +1,32 @@
+{
+  "status": "ROOT_APPROVED_FRESH_CALLS3_TO10_AFTER_CLI28",
+  "utc": "2026-10-10T17:50:03.348676+00:00",
+  "diagnosis_sha256": "32e8c6c15ab24ff6c18065bc610b2fa3cd8e26fee81d41cbff5bf77b3d05ea19",
+  "failed_terminal_sha256": "30997703c50ef9766bff61e657459ab6a4be33477545105968b4dda370330cb0",
+  "dry_run_sha256": "b5ce96789b7c9c60b5e04cec12497b89a335f0b8c0b660bacd66316ebb97543e",
+  "binding_sha256": "3f0b3f177099c59459d25914bea2044bb2535ece3d713f77bbc3d8942307d604",
+  "global_CLI_cap": 36,
+  "only_fresh_jobs": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "automatic_retry": false,
+  "authenticated_POST_recovery_not_claimed": true,
+  "original_failures_preserved": true,
+  "root_reviewed_runner_and_independently_verified_all_binding_inputs": true,
+  "training_admitted": false
+}

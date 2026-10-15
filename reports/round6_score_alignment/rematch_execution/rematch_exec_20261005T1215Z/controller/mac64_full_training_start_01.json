@@ -1,0 +1,25 @@
+{
+  "status": "PASS_MAC_64_FRAME_COMPLETE_PROBE_AND_FRESH_FULL_REAL_BACKWARD_START",
+  "checked_utc": "2026-10-06T07:58:16.071580+00:00",
+  "scope": "MAC_8B_64_LOWRES_INTERVAL_SFT_NONTEST",
+  "source_lock_sha256": "6d42f4768e542c13c7c5d72f988c3dc84970e2a5edc0b53f2963cccc4445d9fa",
+  "full_effective_batches": 24,
+  "full_optimizer_steps": 1,
+  "controller_alive": true,
+  "parameter_inventory": {
+    "base": 8767123696,
+    "lora": 15335424,
+    "total": 8782459120
+  },
+  "probe_optimizer_steps": 3,
+  "probe_effective_batches": 48,
+  "probe_peak_mps_driver_gib": 24.993560791015625,
+  "probe_report_sha256": "b0c319b18bbd50784eb2699c0aa77e7cc65cac0d941b1e96275aaaddd9e11f7c",
+  "full_progress_snapshot_sha256": "3df5cc437f611b1c09d48760c995b09eaa4053eb446e3ae3af24e5628546b7f8",
+  "full_training_completed": false,
+  "quality_claim": false,
+  "test_inference_started": false,
+  "uploaded": false,
+  "linux_optimizer_steps": 183,
+  "linux_effective_batches": 2940
+}

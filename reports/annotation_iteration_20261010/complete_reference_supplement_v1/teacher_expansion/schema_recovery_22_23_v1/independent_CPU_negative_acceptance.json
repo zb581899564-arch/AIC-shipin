@@ -1,0 +1,253 @@
+{
+  "status": "PASS_NECESSARY_SINGLE_GROUP_ROUTE_COUNT_PREVIOUS39_GUARD_NO_MODEL_PENDING_ROOT_GATES",
+  "source_binding_sha256": "2da8d2a693a9c329ab1cc90436454677176fb202d7e4dd3b861335f1262ceeec",
+  "new_cases": [
+    {
+      "name": "strict_natural39_scope_confirmation_positive",
+      "accepted": true,
+      "memory_only": true
+    },
+    {
+      "name": "timeout39_blocks40",
+      "accepted": false,
+      "memory_only": true
+    },
+    {
+      "name": "exitnonzero_blocks40",
+      "accepted": false,
+      "memory_only": true
+    },
+    {
+      "name": "notspawned_blocks40",
+      "accepted": false,
+      "memory_only": true
+    },
+    {
+      "name": "wholeERROR_blocks40",
+      "accepted": false,
+      "memory_only": true
+    },
+    {
+      "name": "missingROOTactualverification_blocks40",
+      "accepted": false,
+      "memory_only": true
+    },
+    {
+      "name": "scopeREJECT_blocks40",
+      "accepted": false,
+      "memory_only": true
+    },
+    {
+      "name": "mediaERROR_blocks40",
+      "accepted": false,
+      "memory_only": true
+    },
+    {
+      "name": "CLI39_group00_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI39_group01_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI39_group02_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI39_group03_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI39_group04_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI39_group05_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI39_group06_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI39_group07_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI39_group08_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI39_group09_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI39_group10_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI39_group11_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI39_group12_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI39_group13_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI39_group14_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI39_group15_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI40_group00_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI40_group01_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI40_group02_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI40_group03_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI40_group04_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI40_group05_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI40_group06_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI40_group07_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI40_group08_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI40_group09_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI40_group10_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI40_group11_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI40_group12_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI40_group13_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI40_group14_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    },
+    {
+      "name": "CLI40_group15_missing_ACK_rejected",
+      "passed": true,
+      "memory_only": true
+    }
+  ],
+  "routes": [
+    {
+      "CLI": 39,
+      "job": 22,
+      "science": 90,
+      "engineering": 38,
+      "window": 126,
+      "scope": 128,
+      "parts": 19,
+      "argv_units": 699,
+      "freeze_sha256": "478fa6c71549cb9c101579bc55dfbd7d9e866c903e56db3305cbd4f3b21c0586"
+    },
+    {
+      "CLI": 40,
+      "job": 23,
+      "science": 90,
+      "engineering": 38,
+      "window": 126,
+      "scope": 128,
+      "parts": 19,
+      "argv_units": 699,
+      "freeze_sha256": "a90804283ecd6cf4cbfcd86ee6bd57db0b1c9c878a7d6dbd5589d1b091639bbd"
+    }
+  ],
+  "byte_exact_scientific_guard_sources": {
+    "common.py:fact_items": "b61bb89b43c8af11811248115f7e2ec3b4345db84f3ffcbb0868bb93c5e91ee8",
+    "common.py:proposal_schema": "62a845bbb736725a0eae47411729fd8c0c739d70f924d392786be8bc8bcf48fe",
+    "common.py:scientific_core": "46782cbef074dc2c86f8bad1fd71bc3a320e1bd9eba8262c32fef5b9101d2dcb",
+    "common.py:bootstrap_metadata": "02c8e51d65bbcb048a7f501869769e6cac35d8bf2260ce0c7e09ab4e78832f08",
+    "launch.py:verify_w20_recovery": "4348618551145d6321c88130974de3c01bb51bf123b95446c932ae9ca8af7796",
+    "observer.py:fact_payload_guard": "1196476bd36400e73c168097cf716ae65b24ee736ae55be4e62558953863c6c2",
+    "observer.py:proposal_path_guard": "a543254bfccaf88e55922db2ff498043f7f1e8d825d2aa139571805627eb437b",
+    "observer.py:request_owned_stop": "5ac5a4df4d5ab852999ae26a0ad2cbbc206190b9bd4843a92163e6f522fff2fb",
+    "observer.py:schema_scan": "1fff4f67cde7f8c62d1d1ad4136d7dcba0b6c6292b88409a9b9459800227e225",
+    "observer.py:seal_observed_scopes": "c3a4f804089f9df6478910e758186dc3490036ed2856d5caf5d5521caa939dfe",
+    "prompt.py:scientific_text": "d742bdfad181ec629d0742b7ea5bd5e581d2a3c9dd1035ae8b531d5796927057",
+    "prompt.py:piece": "c5f1eda66bb92d446f7f42291fdaf4c4c7f6062551e361ec6d4b4243aa78b503",
+    "prompt.py:proposal_example": "52815f143dfdd8b4fa2acfa810b6cfd9d8a0e71f05fb7bf6db10c05f72b039ae",
+    "prompt.py:proposal_body": "f9fac27d77d960457d0cf36a64090daedbf1ab7fc62fc830897f46b4c7e9ada2"
+  },
+  "old51_24_68_repeated": false,
+  "prior24_sha256": "9d67fdb955d5e519b3aebf7f7001d99b61232e9becdc1b4ab8e1c50b3837c52c",
+  "prior68_sha256": "5a81511285825104a70a511cb836f0196d01a1f03bc1e74bce7454cb305db1ac",
+  "new_model_calls": 0,
+  "new_RGB_decode": 0,
+  "new_decoder_calls": 0,
+  "new_processor_calls": 0
+}

@@ -1,0 +1,110 @@
+{
+  "source_candidates_ref": {
+    "path": "/home/inspur/aic_video_work/midnight_five_verify40_46_20261015_v1/relative_confirm/source_candidates.json",
+    "sha256": "95e7816eba5d48a8ca774928a2a26ec44953273b8e13b9ebecf49d5493d31e26"
+  },
+  "rows": [
+    {
+      "video_id": "v_RTwa2d6Oqvo",
+      "youtube_id": "RTwa2d6Oqvo",
+      "author_duration_raw": "45.07",
+      "selection_hash": "19e069055480d43433c0e4336865f437648086e853aba5096d085f46be2dcf3f",
+      "provider": {
+        "video_id": "RTwa2d6Oqvo",
+        "video_url": "https://huggingface.co/buckets/TornadoLabs/staging/resolve/videos/activitynet/RTwa2d6Oqvo.mp4",
+        "subtitle_url": null,
+        "youtube_url": "https://www.youtube.com/watch?v=RTwa2d6Oqvo",
+        "size_bytes": 4078362
+      },
+      "group": "confirm",
+      "role": "selected_confirm",
+      "role_index": 0
+    },
+    {
+      "video_id": "v_Nj_fvFbf56I",
+      "youtube_id": "Nj_fvFbf56I",
+      "author_duration_raw": "32.86",
+      "selection_hash": "1b006b24cfe69afcf0638ca572ba2d0057819b6723100985a83aafc2975b6a20",
+      "provider": {
+        "video_id": "Nj_fvFbf56I",
+        "video_url": "https://huggingface.co/buckets/TornadoLabs/staging/resolve/videos/activitynet/Nj_fvFbf56I.mp4",
+        "subtitle_url": "https://huggingface.co/buckets/TornadoLabs/staging/resolve/videos/activitynet/Nj_fvFbf56I.xml",
+        "youtube_url": "https://www.youtube.com/watch?v=Nj_fvFbf56I",
+        "size_bytes": 2006560
+      },
+      "group": "confirm",
+      "role": "selected_confirm",
+      "role_index": 1
+    },
+    {
+      "video_id": "v_MkouTZhtvEI",
+      "youtube_id": "MkouTZhtvEI",
+      "author_duration_raw": "57.54",
+      "selection_hash": "1bba6f6486926d4688060a99cfaed7210efd69251891cf1061593d8dbe0351ee",
+      "provider": {
+        "video_id": "MkouTZhtvEI",
+        "video_url": "https://huggingface.co/buckets/TornadoLabs/staging/resolve/videos/activitynet/MkouTZhtvEI.mp4",
+        "subtitle_url": null,
+        "youtube_url": "https://www.youtube.com/watch?v=MkouTZhtvEI",
+        "size_bytes": 28787217
+      },
+      "group": "confirm",
+      "role": "selected_confirm",
+      "role_index": 2
+    },
+    {
+      "video_id": "v_xAI1y9izXOM",
+      "youtube_id": "xAI1y9izXOM",
+      "author_duration_raw": "40.96",
+      "selection_hash": "1c82c4672d695dd8274c3ec5afd6c18518899d9b863b18d0cc0bc75cd3b7fb0d",
+      "provider": {
+        "video_id": "xAI1y9izXOM",
+        "video_url": "https://huggingface.co/buckets/TornadoLabs/staging/resolve/videos/activitynet/xAI1y9izXOM.mp4",
+        "subtitle_url": null,
+        "youtube_url": "https://www.youtube.com/watch?v=xAI1y9izXOM",
+        "size_bytes": 22216388
+      },
+      "group": "confirm",
+      "role": "selected_confirm",
+      "role_index": 3
+    },
+    {
+      "video_id": "v_sqcJOpPrexQ",
+      "youtube_id": "sqcJOpPrexQ",
+      "author_duration_raw": "44.4",
+      "selection_hash": "1ec9ece781e25302092e90f9564fd4a0f2079374b1064af89b4e2244055b19b4",
+      "provider": {
+        "video_id": "sqcJOpPrexQ",
+        "video_url": "https://huggingface.co/buckets/TornadoLabs/staging/resolve/videos/activitynet/sqcJOpPrexQ.mp4",
+        "subtitle_url": null,
+        "youtube_url": "https://www.youtube.com/watch?v=sqcJOpPrexQ",
+        "size_bytes": 22864284
+      },
+      "group": "confirm",
+      "role": "ordered_engineering_reserve",
+      "role_index": 0
+    },
+    {
+      "video_id": "v_WV_MFi9EZeQ",
+      "youtube_id": "WV_MFi9EZeQ",
+      "author_duration_raw": "56.47",
+      "selection_hash": "1f1ee057891b2f221f0a4d73ee1517c25c9a1206a29e52cd4ad955d402566e65",
+      "provider": {
+        "video_id": "WV_MFi9EZeQ",
+        "video_url": "https://huggingface.co/buckets/TornadoLabs/staging/resolve/videos/activitynet/WV_MFi9EZeQ.mp4",
+        "subtitle_url": "https://huggingface.co/buckets/TornadoLabs/staging/resolve/videos/activitynet/WV_MFi9EZeQ.xml",
+        "youtube_url": "https://www.youtube.com/watch?v=WV_MFi9EZeQ",
+        "size_bytes": 1997368
+      },
+      "group": "confirm",
+      "role": "ordered_engineering_reserve",
+      "role_index": 1
+    }
+  ],
+  "old_failure_ref": {
+    "path": "/home/inspur/aic_video_work/midnight_five_verify40_46_20261015_v1/relative_confirm/control_09/failure.json",
+    "sha256": "d288f1b16a2a6c374a8c3c01c13ee11469d38d25b1b743c876d380be06252eb8"
+  },
+  "selected_bytes": 57088527,
+  "maximum_pool_bytes": 81950179
+}

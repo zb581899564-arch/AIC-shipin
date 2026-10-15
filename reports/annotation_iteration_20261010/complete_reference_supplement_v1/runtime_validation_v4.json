@@ -1,0 +1,57 @@
+{
+  "status": "PASS_LOCAL_49_LOGIC_TESTS_AST_AND_CANDIDATE_INTEGRATION_NOT_REMOTE_RUNTIME",
+  "utc": "2026-10-10T22:02:40.928184+00:00",
+  "actual_test_command": "python -B -m unittest test_runtime test_evaluation_reconstruction test_pipeline_costs test_freeze_candidate_inputs candidate_test",
+  "actual_result": "Ran 49 tests in 3.004s; OK",
+  "tests": 49,
+  "AST_files": 22,
+  "sources": {
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_engine.py": "8b8a5577225e9dd545aa16ec5f07571566b79ac188555c6ac7f245a8738a41ff",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_package.py": "23be213fd0b6c7457a9a2f3c3eab69acf7f7b5b0496c4dd4dfd763fad8953e6a",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_replay.py": "86d31088c1a1679a040fc1ef8fe997991eac8ccb324aa9477b28e106c13e5fa6",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_static_preflight.py": "c842ba4d71392a82dd7a31056d55f5a73aa4e85bbf2a1a6cb1c5b1eda2e1d19b",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_support.py": "aa47648088d883b68e5f176ce60316b0a748ed5981fd1d9c3475a7cb3adbc21b",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_test.py": "8ca96c612d2851e846668b0ebe4bb14a3d1ded7f6ebaf1225d0854b20c90a640",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_validate_implementation.py": "0025af81d916e63fdc33532438290cdfc816072761399835140882422883d364",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\common.py": "93ea233ea55a8e36d0c18d25e905018836d8a17218ceb95c04081221debca46c",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\evaluate.py": "0c836507483a7fc9fe3a9d9962608dc02ac7eba9cb9d08e761463e6f90ddb21e",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\freeze_inputs.py": "61db1e8670fd6169e76ed74e7797212ebdd21853a06ff3deb3e109577cd1bb98",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\model_binding.py": "e99c66363d683ac813bf25e5995fc457638baea3eb3c153ced0646330c059bb2",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\native_runtime.py": "30cc62c99dc4e524fb8128a1bad27b30632098ca66e113b9e0e729bb079bb62d",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\objective.py": "118e8eb1cf631019fedf2d77f47532e6fa643cee63893a9d8c4e0761c1a509fe",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\pipeline_controller.py": "295a068c9461df902aed65e8fde47e6dadff09c58112664168ac11c43098cd15",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\preflight_native_inputs.py": "4c9f035c7ba4e5a53a8b99e72e6584290e2b518aaa8cfc4df94744f4931a2d8e",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\scientific_gate.py": "11b8516df794bdb7f781fd4b82ea54847a0b0ce52c9fc7e02ac57ead925851be",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\test_evaluation_reconstruction.py": "2b920e681d19f907b0cc9cc25a6354076cd4122058f40d0515e259090150d183",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\test_freeze_candidate_inputs.py": "4edf2db9919b26afefbd146f29370576f35dc3512fd9385ea7fe98f4053b5a01",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\test_pipeline_costs.py": "d1c7aa120c832181c5a4dd1de676426e4984778efaa7c2798a6ee6cbdd3e24e4",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\test_runtime.py": "cfde0d4713ab88c953b2d140e1dde391d3a9a1aef18ad28c6c446fdd4127e417",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\train.py": "de9191e759e346513ec583afbb29f57177a33fb3520918b57601b489ff374aa6",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\verify_evaluation.py": "a791b0d38e2489bded79aa8380bd93f34c6e6c42f4c2ad5d43a93d6fea7ff6a1"
+  },
+  "candidate_contract": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\candidate_contract_linux_v1.json",
+    "sha256": "1993ebd881969710ebb18e5d21ba4d42c56c1ecd477a27aa07d4d539cefa5a09"
+  },
+  "projection_source_sha256": "541b6d60fa1c4943d6d3c2f7f7759e3d114dc040c2de1380f97e2e0c0241f6a5",
+  "prior_candidate_v1_validation_preserved": true,
+  "prior_candidate_v2_validation_preserved": true,
+  "actual_remote_static_input_acceptance": false,
+  "actual_native_processor_preflight": false,
+  "actual_training": false,
+  "actual_evaluation": false,
+  "actual_426": false,
+  "actual_new_submission_ZIP": false,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "integration_changes": [
+    "freeze all426 source/clock/space/strict dependency bytes before GPU",
+    "fresh independent static426/521 candidate admission before native CPU and GPU training",
+    "405 historical float mapping preserved;116 BW exact mapping preserved",
+    "actual sole final adapter with overview disabled declaration"
+  ],
+  "limitations": [
+    "Unit fixtures and CLI help do not establish actual Linux candidate shape, processor tensors, training, quality or ZIP acceptance.",
+    "All12 final evaluation references and bulk source upload approval remain required."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "checked_at_utc": "2026-10-15T09:05:19.223607+00:00",
+  "reader": "agent-reach Jina current official task, notice5307, industry notice index",
+  "official_urls": [
+    "https://www.aicomp.cn/tracks/tracks-6/4267.html",
+    "https://www.aicomp.cn/notice/notice-3/5307.html",
+    "https://www.aicomp.cn/notice/notice-3/"
+  ],
+  "current_bodies_read": true,
+  "current_attachment_links_unchanged": "0930 rule, rematch submission -1, rematch notice -1 PDFs",
+  "unchanged_previously_read_attachment_receipt": "reports/recall_expansion_verify40_46_20261014_v1/official_current_01/official_rule_check.json",
+  "relevant_requirements": [
+    "Reproducible automatic open-model predictions and postprocessing",
+    "No test labels/manual correction/training/pseudolabels or rule reverse-engineering",
+    "No closed model API or third-party test inference",
+    "Total physically resident main/auxiliary model+LoRA elements8782459120<=9B",
+    "Five submissions daily, user performs submission"
+  ],
+  "conclusion": "Rule interpretation: new local open-model inference with frozen reusable vision inputs and deterministic new algorithms fits current public requirements; no organizer special permission claimed",
+  "no_newer_relevant_notice_in_current_index": true
+}

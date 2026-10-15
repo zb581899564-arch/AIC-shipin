@@ -1,0 +1,45 @@
+{
+  "status": "DURATION_DELIVERY_PARTIAL_TARGET_NOT_COMPLETE",
+  "deliveries": [
+    {
+      "status": "PASS_NEW_DURATION_GUARD_WINDOWS_DELIVERY_BYTES_SHA_CRC_SINGLE_MEMBER",
+      "arm": "D2",
+      "candidate": "DURATION_GUARD_D2_8B",
+      "zip_path": "G:\\ai\\AIC视频\\deliveries\\DURATION_GUARD_D2_8B_20261013\\candidate_DURATION_GUARD_D2_8B.zip",
+      "bytes": 375842,
+      "sha256": "f1347e55649735b135241235382345b6a566501a303735d7cc786bdbee0cf0d9",
+      "prediction_member_sha256": "3bcfb9e57d327ae7363043a911b801df9d3d2306cf21ad357f16e54eb0471d3c",
+      "frames": 124385,
+      "added_frames": 3119,
+      "removed": 0,
+      "baseline_boxes_unchanged": true,
+      "source_package_completion_sha256": "a56728fd1185ca1dc4563b11907654790a44325765b55e65956b5bef251d5224",
+      "actual_model_parameters": 8782459120,
+      "official_score": "UNKNOWN",
+      "new_model_calls": 0,
+      "new_optimizer_updates": 0
+    },
+    {
+      "status": "PASS_NEW_DURATION_GUARD_WINDOWS_DELIVERY_BYTES_SHA_CRC_SINGLE_MEMBER",
+      "arm": "D8",
+      "candidate": "DURATION_GUARD_D8_8B",
+      "zip_path": "G:\\ai\\AIC视频\\deliveries\\DURATION_GUARD_D8_8B_20261013\\candidate_DURATION_GUARD_D8_8B.zip",
+      "bytes": 368368,
+      "sha256": "8aec42ae06a8cacab93aa8e052d89d5df41dc57e56d73a79cdef6dd02c6cb4ad",
+      "prediction_member_sha256": "1e3568b6cc45fea480d0613e295ad861a755ef4a508acd3822f9a0607a19de12",
+      "frames": 122050,
+      "added_frames": 784,
+      "removed": 0,
+      "baseline_boxes_unchanged": true,
+      "source_package_completion_sha256": "32a973400dda9e543a02877de2cd864d35d5e32c3288a00804eb3256c39bf8f0",
+      "actual_model_parameters": 8782459120,
+      "official_score": "UNKNOWN",
+      "new_model_calls": 0,
+      "new_optimizer_updates": 0
+    }
+  ],
+  "failures": [],
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "official_scores": "UNKNOWN"
+}

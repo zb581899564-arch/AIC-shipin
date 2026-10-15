@@ -1,0 +1,12 @@
+{
+  "status": "PRESERVED_CPU_INSPECTOR_FAILURE_BEFORE_REPLAY",
+  "utc": "2026-10-08T12:13:47.028144+00:00",
+  "error": "KeyError: all_bound_files",
+  "cause": "New unbound verifier used a nonexistent manifest field; actual registered schema names it all_receipt_files.",
+  "repair": "Read the existing manifest schema and use its actual all_receipt_files field without changing any authority or expected SHA.",
+  "model_calls": 0,
+  "training_updates": 0,
+  "frozen_files_modified": 0,
+  "acceptance_written": false,
+  "timestamp_scope": "recorded_utc; initial failure evidenced by exec output, no inferred precise failure time"
+}

@@ -1,0 +1,533 @@
+{
+  "status": "PASS_ROOT_FINAL24_ORIGINAL_SILVER_TARGET_SOURCE_SPLIT_READY_FOR_REMOTE_PREFLIGHT_NOT_TRAINING",
+  "utc": "2026-10-11T11:30:06.446856+00:00",
+  "registry_binding": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\denominator24_v21.json",
+    "sha256": "da413af7014f868c18cb3ce2b56ff1de08d2cd94b80846d89d9b2d7e7b20ca24"
+  },
+  "denominator": {
+    "total": 24,
+    "qualified": 20,
+    "rejected": 4,
+    "pending": 0
+  },
+  "train_windows": 8,
+  "evaluation_windows": 12,
+  "fully_known_locked": 6,
+  "original_silver_actual_verified": true,
+  "original_silver_actual_results": [
+    {
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\00_w01_complete_reference.json",
+        "sha256": "09ba0ffa9d4772e7b0673a9089061af423780238a279ea408aa75034d2747015"
+      },
+      "actual_original_silver_result": {
+        "window_id": "kLxoNp-UchI:SLOT6:1",
+        "role": "train",
+        "source_group": "youtube:kLxoNp-UchI",
+        "admitted": true,
+        "known_keep_seconds": "85861/7500",
+        "known_no_seconds": "139139/7500",
+        "unknown_seconds": "0"
+      }
+    },
+    {
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\01_w02_complete_reference.json",
+        "sha256": "8ad45cfa36534397f785fe686d23d3d9847e7ca7952a9e2462dc65b38e3b3968"
+      },
+      "actual_original_silver_result": {
+        "window_id": "kLxoNp-UchI:SLOT6:2",
+        "role": "train",
+        "source_group": "youtube:kLxoNp-UchI",
+        "admitted": true,
+        "known_keep_seconds": "51827/7500",
+        "known_no_seconds": "173173/7500",
+        "unknown_seconds": "0"
+      }
+    },
+    {
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\02_w10_complete_reference.json",
+        "sha256": "d5d088e110c85182af239cf3062abae842bdaa3affcb927f9585cef643df2200"
+      },
+      "actual_original_silver_result": {
+        "window_id": "AwmHb44_ouw:SLOT6:10",
+        "role": "train",
+        "source_group": "youtube:AwmHb44_ouw",
+        "admitted": true,
+        "known_keep_seconds": "122113/30000",
+        "known_no_seconds": "777887/30000",
+        "unknown_seconds": "0"
+      }
+    },
+    {
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\03_w11_complete_reference.json",
+        "sha256": "b0375ec902cf3e3620693d040b96955e43202d4cf340ad94cf3da20e2e77561e"
+      },
+      "actual_original_silver_result": {
+        "window_id": "AwmHb44_ouw:SLOT6:11",
+        "role": "train",
+        "source_group": "youtube:AwmHb44_ouw",
+        "admitted": true,
+        "known_keep_seconds": "0",
+        "known_no_seconds": "2358656666666667/100000000000000",
+        "unknown_seconds": "0"
+      }
+    },
+    {
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\04_ht5_w02_complete_reference.json",
+        "sha256": "043693be74361fce46b0c77060558f396ffaf243ad23f4c6a6442aa562f4af32"
+      },
+      "actual_original_silver_result": {
+        "window_id": "HT5vyqe0Xaw:SLOT6:2",
+        "role": "train",
+        "source_group": "youtube:HT5vyqe0Xaw",
+        "admitted": true,
+        "known_keep_seconds": "83083/20000",
+        "known_no_seconds": "516917/20000",
+        "unknown_seconds": "0"
+      }
+    },
+    {
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\08_wxt_w00_complete_reference.json",
+        "sha256": "7fa85aa56975e3a4a633a8b87c46d0bcb61aea2845a26f6a419a90c0679ddaf0"
+      },
+      "actual_original_silver_result": {
+        "window_id": "WxtbjNsCQ8A:SLOT6:0",
+        "role": "train",
+        "source_group": "youtube:WxtbjNsCQ8A",
+        "admitted": true,
+        "known_keep_seconds": "0",
+        "known_no_seconds": "30",
+        "unknown_seconds": "0"
+      }
+    },
+    {
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\09_wxt_w05_complete_reference.json",
+        "sha256": "65a48ac5a694944cdaaf4ac256b0c5686814f9463bc26546333e4c435a14056b"
+      },
+      "actual_original_silver_result": {
+        "window_id": "WxtbjNsCQ8A:SLOT6:5",
+        "role": "train",
+        "source_group": "youtube:WxtbjNsCQ8A",
+        "admitted": true,
+        "known_keep_seconds": "89089/7500",
+        "known_no_seconds": "135911/7500",
+        "unknown_seconds": "0"
+      }
+    },
+    {
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\10_byx_w02_complete_reference.json",
+        "sha256": "0bf8657ced45640a6c5fe9d41e56efeb4b1c4037613db7578a1d48e3593b0896"
+      },
+      "actual_original_silver_result": {
+        "window_id": "byxOvuiIJV0:SLOT6:2",
+        "role": "train",
+        "source_group": "youtube:byxOvuiIJV0",
+        "admitted": true,
+        "known_keep_seconds": "77077/12000",
+        "known_no_seconds": "282923/12000",
+        "unknown_seconds": "0"
+      }
+    },
+    {
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\12_esjr_w01_complete_reference.json",
+        "sha256": "2e39531fb23a8de8a7538f4c0d113c182338235520619ee7caea21676f41cb98"
+      },
+      "actual_original_silver_result": {
+        "window_id": "-esJrBWj2d8:SLOT6:1",
+        "role": "process_dev",
+        "source_group": "youtube:-esJrBWj2d8",
+        "admitted": false,
+        "known_keep_seconds": "57/4",
+        "known_no_seconds": "63/4",
+        "unknown_seconds": "0"
+      }
+    },
+    {
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\13_esjr_w06_complete_reference.json",
+        "sha256": "24b42eee4497e5e3606692ca59ad704a04565c06a1218600f65ed820669264e2"
+      },
+      "actual_original_silver_result": {
+        "window_id": "-esJrBWj2d8:SLOT6:6",
+        "role": "process_dev",
+        "source_group": "youtube:-esJrBWj2d8",
+        "admitted": false,
+        "known_keep_seconds": "121/30",
+        "known_no_seconds": "779/30",
+        "unknown_seconds": "0"
+      }
+    },
+    {
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\14_i3w_w02_complete_reference.json",
+        "sha256": "d6b1757a222d790d2dbfa73d93018867ab52b2aba5102e383ca3b4bba69ae845"
+      },
+      "actual_original_silver_result": {
+        "window_id": "i3wAGJaaktw:SLOT6:2",
+        "role": "process_dev",
+        "source_group": "youtube:i3wAGJaaktw",
+        "admitted": false,
+        "known_keep_seconds": "19019/10000",
+        "known_no_seconds": "280981/10000",
+        "unknown_seconds": "0"
+      }
+    },
+    {
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\15_i3w_w03_complete_reference.json",
+        "sha256": "d3f70f6129fcd2b9254ebecf0dc4e572c5ec1d789583ff9cc86a549bbbf0d62f"
+      },
+      "actual_original_silver_result": {
+        "window_id": "i3wAGJaaktw:SLOT6:3",
+        "role": "process_dev",
+        "source_group": "youtube:i3wAGJaaktw",
+        "admitted": false,
+        "known_keep_seconds": "19019/5000",
+        "known_no_seconds": "1486687/60000",
+        "unknown_seconds": "17017/12000"
+      }
+    },
+    {
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\16_eyq_w03_complete_reference.json",
+        "sha256": "df1965362a862c6dfb4e10a7e791fb7dfb0e4cfb0f9c3056a250cab019edfffc"
+      },
+      "actual_original_silver_result": {
+        "window_id": "EYqVtI9YWJA:SLOT6:3",
+        "role": "locked_evaluation",
+        "source_group": "youtube:EYqVtI9YWJA",
+        "admitted": false,
+        "known_keep_seconds": "371371/30000",
+        "known_no_seconds": "528629/30000",
+        "unknown_seconds": "0"
+      }
+    },
+    {
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\17_eyq_w04_reference.json",
+        "sha256": "66d87cd7d025b88d2ecc1ac9fe42fa16145eace63c00ea4931e61ed85f361436"
+      },
+      "actual_original_silver_result": {
+        "window_id": "EYqVtI9YWJA:SLOT6:4",
+        "role": "locked_evaluation",
+        "source_group": "youtube:EYqVtI9YWJA",
+        "admitted": false,
+        "known_keep_seconds": "61061/3750",
+        "known_no_seconds": "51439/3750",
+        "unknown_seconds": "0"
+      }
+    },
+    {
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\18_j0n_w02_reference.json",
+        "sha256": "d2309479fb8f30325a4819f8041eb3d6870148ada388cfd54a8645f3eebcf453"
+      },
+      "actual_original_silver_result": {
+        "window_id": "J0nA4VgnoCo:SLOT6:2",
+        "role": "locked_evaluation",
+        "source_group": "youtube:J0nA4VgnoCo",
+        "admitted": false,
+        "known_keep_seconds": "0",
+        "known_no_seconds": "30",
+        "unknown_seconds": "0"
+      }
+    },
+    {
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\19_j0n_w11_complete_reference.json",
+        "sha256": "108375958d2c04983649d13edf2f77a788c00244dd5c1a87e4bec959e8a26665"
+      },
+      "actual_original_silver_result": {
+        "window_id": "J0nA4VgnoCo:SLOT6:11",
+        "role": "locked_evaluation",
+        "source_group": "youtube:J0nA4VgnoCo",
+        "admitted": false,
+        "known_keep_seconds": "199199/48000",
+        "known_no_seconds": "1240801/48000",
+        "unknown_seconds": "0"
+      }
+    },
+    {
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_complete_reference_v1.json",
+        "sha256": "62998d79a1806d8510ac5c23851bf2b699c79bb4c1f44cc015e4c7a4c611dec5"
+      },
+      "actual_original_silver_result": {
+        "window_id": "cjibtmSLxQ4:SLOT6:13",
+        "role": "locked_evaluation",
+        "source_group": "youtube:cjibtmSLxQ4",
+        "admitted": false,
+        "known_keep_seconds": "299299/30000",
+        "known_no_seconds": "135911/7500",
+        "unknown_seconds": "19019/10000"
+      }
+    },
+    {
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\21_cjibt_w16_complete_reference_CLI38_v1.json",
+        "sha256": "21bfb2f7c2558ee0d544f32c957b95164d0d2baeea3c52b2b8a3e4888429cd87"
+      },
+      "actual_original_silver_result": {
+        "window_id": "cjibtmSLxQ4:SLOT6:16",
+        "role": "locked_evaluation",
+        "source_group": "youtube:cjibtmSLxQ4",
+        "admitted": false,
+        "known_keep_seconds": "181181/20000",
+        "known_no_seconds": "75463/3750",
+        "unknown_seconds": "49049/60000"
+      }
+    },
+    {
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\22_yi4_w03_complete_reference_CLI39_v1.json",
+        "sha256": "8cd15646188170a95900095aca7d900723a61de3428df3a10030af0247fe23dc"
+      },
+      "actual_original_silver_result": {
+        "window_id": "Yi4Ij2NM7U4:SLOT6:3",
+        "role": "locked_evaluation",
+        "source_group": "youtube:Yi4Ij2NM7U4",
+        "admitted": false,
+        "known_keep_seconds": "31/2",
+        "known_no_seconds": "29/2",
+        "unknown_seconds": "0"
+      }
+    },
+    {
+      "reference": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\23_yi4_w06_complete_reference_CLI40_v3.json",
+        "sha256": "4ef701663e24ff26627006a4245ef568a1b15d544604a07c456888b8cd834c41"
+      },
+      "actual_original_silver_result": {
+        "window_id": "Yi4Ij2NM7U4:SLOT6:6",
+        "role": "locked_evaluation",
+        "source_group": "youtube:Yi4Ij2NM7U4",
+        "admitted": false,
+        "known_keep_seconds": "137/48",
+        "known_no_seconds": "1303/48",
+        "unknown_seconds": "0"
+      }
+    }
+  ],
+  "schedule": {
+    "window_ids": [
+      "AwmHb44_ouw:SLOT6:10",
+      "AwmHb44_ouw:SLOT6:11",
+      "HT5vyqe0Xaw:SLOT6:2",
+      "WxtbjNsCQ8A:SLOT6:0",
+      "WxtbjNsCQ8A:SLOT6:5",
+      "byxOvuiIJV0:SLOT6:2",
+      "kLxoNp-UchI:SLOT6:1",
+      "kLxoNp-UchI:SLOT6:2"
+    ],
+    "batches": [
+      {
+        "epoch": 0,
+        "indices": [
+          4,
+          3,
+          6,
+          2
+        ]
+      },
+      {
+        "epoch": 0,
+        "indices": [
+          0,
+          7,
+          1,
+          5
+        ]
+      },
+      {
+        "epoch": 1,
+        "indices": [
+          0,
+          7,
+          3,
+          4
+        ]
+      },
+      {
+        "epoch": 1,
+        "indices": [
+          1,
+          6,
+          2,
+          5
+        ]
+      }
+    ],
+    "source_weights": [
+      "4/5",
+      "4/5",
+      "8/5",
+      "4/5",
+      "4/5",
+      "8/5",
+      "4/5",
+      "4/5"
+    ],
+    "window_ce_coefficient": "1/4",
+    "updates": 4
+  },
+  "actual_training_targets": [
+    {
+      "window_id": "AwmHb44_ouw:SLOT6:10",
+      "target_json": "{\"segments\":[[0,4.070433333333333]]}",
+      "exact_local": [
+        [
+          "0",
+          "122113/30000"
+        ]
+      ],
+      "status": "MODEL_OK"
+    },
+    {
+      "window_id": "AwmHb44_ouw:SLOT6:11",
+      "target_json": "{\"segments\":[]}",
+      "exact_local": [],
+      "status": "LEGAL_EMPTY"
+    },
+    {
+      "window_id": "HT5vyqe0Xaw:SLOT6:2",
+      "target_json": "{\"segments\":[[14.507766666666665,18.661916666666666]]}",
+      "exact_local": [
+        [
+          "435233/30000",
+          "223943/12000"
+        ]
+      ],
+      "status": "MODEL_OK"
+    },
+    {
+      "window_id": "WxtbjNsCQ8A:SLOT6:0",
+      "target_json": "{\"segments\":[]}",
+      "exact_local": [],
+      "status": "LEGAL_EMPTY"
+    },
+    {
+      "window_id": "WxtbjNsCQ8A:SLOT6:5",
+      "target_json": "{\"segments\":[[15.4653,21.171],[21.638133333333332,27.810966666666666]]}",
+      "exact_local": [
+        [
+          "154653/10000",
+          "21171/1000"
+        ],
+        [
+          "81143/3750",
+          "834329/30000"
+        ]
+      ],
+      "status": "MODEL_OK"
+    },
+    {
+      "window_id": "byxOvuiIJV0:SLOT6:2",
+      "target_json": "{\"segments\":[[4.5019375,7.484083333333333],[20.08,23.5209375]]}",
+      "exact_local": [
+        [
+          "72031/16000",
+          "89809/12000"
+        ],
+        [
+          "502/25",
+          "75267/3200"
+        ]
+      ],
+      "status": "MODEL_OK"
+    },
+    {
+      "window_id": "kLxoNp-UchI:SLOT6:1",
+      "target_json": "{\"segments\":[[0,2.6326],[17.8478,24.020633333333333],[27.3573,30]]}",
+      "exact_local": [
+        [
+          "0",
+          "13163/5000"
+        ],
+        [
+          "89239/5000",
+          "720619/30000"
+        ],
+        [
+          "273573/10000",
+          "30"
+        ]
+      ],
+      "status": "MODEL_OK"
+    },
+    {
+      "window_id": "kLxoNp-UchI:SLOT6:2",
+      "target_json": "{\"segments\":[[0,0.7273333333333333],[4.531133333333333,7.250516666666666],[19.2792,20.563816666666664],[22.115366666666663,23.55013333333333],[29.25583333333333,30]]}",
+      "exact_local": [
+        [
+          "0",
+          "1091/1500"
+        ],
+        [
+          "67967/15000",
+          "435031/60000"
+        ],
+        [
+          "24099/1250",
+          "1233829/60000"
+        ],
+        [
+          "663461/30000",
+          "88313/3750"
+        ],
+        [
+          "35107/1200",
+          "30"
+        ]
+      ],
+      "status": "MODEL_OK"
+    }
+  ],
+  "canonical_record_states": {
+    "kLxoNp-UchI:SLOT6:1": "QUALIFIED_SUPPLEMENT",
+    "kLxoNp-UchI:SLOT6:2": "QUALIFIED_SUPPLEMENT",
+    "AwmHb44_ouw:SLOT6:10": "QUALIFIED_SUPPLEMENT",
+    "AwmHb44_ouw:SLOT6:11": "QUALIFIED_SUPPLEMENT",
+    "HT5vyqe0Xaw:SLOT6:2": "QUALIFIED_SUPPLEMENT",
+    "HT5vyqe0Xaw:SLOT6:10": "REJECTED_INCOMPLETE_TEACHER_OBSERVATION_TIMEOUT_NOT_EMPTY",
+    "37rzWOQsNIw:SLOT6:0": "REJECTED_TEACHER_PRE_MODEL_NETWORK_EOF_NO_OBSERVATION_NOT_EMPTY",
+    "37rzWOQsNIw:SLOT6:4": "REJECTED_TEACHER_PRE_MODEL_NETWORK_EOF_NO_OBSERVATION_NOT_EMPTY",
+    "WxtbjNsCQ8A:SLOT6:0": "QUALIFIED_COMPLETE_TRAIN_REFERENCE",
+    "WxtbjNsCQ8A:SLOT6:5": "QUALIFIED_COMPLETE_TRAIN_REFERENCE",
+    "byxOvuiIJV0:SLOT6:2": "QUALIFIED_COMPLETE_TRAIN_REFERENCE",
+    "byxOvuiIJV0:SLOT6:4": "REJECTED_TEACHER_INCOMPLETE_AUTH401_KEEP_RAW",
+    "-esJrBWj2d8:SLOT6:1": "QUALIFIED_FINITE_EVALUATION_REFERENCE",
+    "-esJrBWj2d8:SLOT6:6": "QUALIFIED_FINITE_EVALUATION_REFERENCE",
+    "i3wAGJaaktw:SLOT6:2": "QUALIFIED_FINITE_EVALUATION_REFERENCE",
+    "i3wAGJaaktw:SLOT6:3": "QUALIFIED_FINITE_EVALUATION_REFERENCE",
+    "EYqVtI9YWJA:SLOT6:3": "QUALIFIED_FINITE_EVALUATION_REFERENCE",
+    "EYqVtI9YWJA:SLOT6:4": "QUALIFIED_FINITE_EVALUATION_REFERENCE",
+    "J0nA4VgnoCo:SLOT6:2": "QUALIFIED_FINITE_EVALUATION_REFERENCE",
+    "J0nA4VgnoCo:SLOT6:11": "QUALIFIED_FINITE_EVALUATION_REFERENCE",
+    "cjibtmSLxQ4:SLOT6:13": "QUALIFIED_FINITE_EVALUATION_REFERENCE",
+    "cjibtmSLxQ4:SLOT6:16": "QUALIFIED_FINITE_EVALUATION_REFERENCE",
+    "Yi4Ij2NM7U4:SLOT6:3": "QUALIFIED_FINITE_EVALUATION_REFERENCE",
+    "Yi4Ij2NM7U4:SLOT6:6": "QUALIFIED_FINITE_EVALUATION_REFERENCE"
+  },
+  "historical_state_aliases_preserved": true,
+  "current_status_has_precedence": true,
+  "frozen_runtime_validation": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime_validation_v5.json",
+    "sha256": "df7ad0e16aa3b2a898b5f5816cecd998510de7773dab5c88cba2248deb95a3a3"
+  },
+  "runtime_current23_SHA_equal": true,
+  "new_tests": 0,
+  "remote_native_processor_parity_still_required": true,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "reference_kind": "FINITE_OBSERVATION_SILVER_EDITING_ADVICE_NOT_GOLD",
+  "production_replaced": false
+}

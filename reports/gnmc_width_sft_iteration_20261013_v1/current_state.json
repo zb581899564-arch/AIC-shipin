@@ -1,0 +1,19 @@
+{
+  "stage": "STOP_TRAINED_SCREEN_REJECTED_CONFIRM_NOT_RUN",
+  "target": 3,
+  "delivered": 2,
+  "baseline": "D8_USER40.44",
+  "root": "/home/inspur/aic_video_work/gnmc_width_sft_iteration_20261013_v1",
+  "production_admitted": false,
+  "no_old_successes_repeated": true,
+  "entry": "chain_launch.json / chain_started.json / cpu_acceptance.json / source_lock.json / training_gpu_launch.json / completion.json / chain_failure.json",
+  "deployment": "deployment.json",
+  "new_media": 0,
+  "protected_original_center": true,
+  "do_not_repeat_launcher": true,
+  "terminal_receipt": "terminal_receipt.json",
+  "new_submission_zips": 0,
+  "quality_gate": "FAILED_MACRO_GAIN_AND_EACH_FILE_LOSS",
+  "active_owned_commands": false,
+  "next_research_state": "../gnmc_width_sft1000_iteration_20261013_v1/current_state.json"
+}

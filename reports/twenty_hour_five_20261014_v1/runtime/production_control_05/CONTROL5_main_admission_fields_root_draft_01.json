@@ -1,0 +1,29 @@
+{
+  "status": "DRAFT_MAIN_ADMISSION_NOT_CREATED_OR_AUTHORIZED",
+  "required_final_status": "PASS_MAIN_CONTROLLED_PRODUCTION_BOOTSTRAP_AND_EXECUTION",
+  "registration_sha256": "4800fa5acbbfd4922c3d3fd029bfa3cbdcb0ffa9533d1cfee5021f51aaf5b33a",
+  "allow_controller_issue_batch_gpu_admission": true,
+  "explicit_import_environment_recovery_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_control_v5/import_environment_recovery_01.json",
+    "sha256": "782710b84fc2d74aed4bc3e5800277e38d5e1b7673a2ad80e757126ca7c1fbc7"
+  },
+  "original_control_failure_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_control_v4/run_01/failure.json",
+    "sha256": "8ad842f74fd99f84e0fc6a70f91beb9ffcf7d3224273aadec72235c43edaf937"
+  },
+  "old_failed_source_ids": [
+    "P_98089e6d36f78e9766c9ea34d5acb361",
+    "P_391552c099c101b131feaf24c5795a6a",
+    "P_cc11310c456c3690d5a74c23aa31cc25",
+    "P_a4aab3f1f08004e907d2357fafe74cab",
+    "P_2bf175f9655e7bb7357b9f0a7c605146",
+    "P_d10a4bc9e0c1fa4e8f3d7ce2512b8756",
+    "P_92e9e7e5922d26e17e48f0869ab25cc9",
+    "P_266aa5886067fbbc1a3a39fe432fc5bb",
+    "P_ade1a1c2a61af0f279a4978dfddcdb6a",
+    "P_986b79d4b69dffb1d19836f47b27073d"
+  ],
+  "recovery_scope": "IMPORT_ENVIRONMENT_ONLY_NO_SUCCESSFUL_STAGE_REPLAY",
+  "old_control_failed_state_preserved": true,
+  "source_decode_or_processor_or_GPU_calls_before_recovery": 0
+}

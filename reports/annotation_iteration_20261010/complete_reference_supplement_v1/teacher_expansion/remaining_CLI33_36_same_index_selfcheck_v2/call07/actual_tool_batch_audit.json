@@ -1,0 +1,1184 @@
+{
+  "utc": "2026-10-10T22:28:19.289625+00:00",
+  "status": "REJECT_BATCH_DISPATCH_KEEP_RAW",
+  "windows": [
+    {
+      "job_index": 16,
+      "window_id": "EYqVtI9YWJA:SLOT6:3",
+      "status": "PASS_ACTUAL_RESPONSE_BATCHES_AND_OBSERVATION_BARRIERS",
+      "groups": [
+        {
+          "group": 0,
+          "reads": [
+            {
+              "step": 8,
+              "response_step": 7,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f00_o002698.png"
+            },
+            {
+              "step": 9,
+              "response_step": 7,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f01_o002712.png"
+            },
+            {
+              "step": 10,
+              "response_step": 7,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f02_o002726.png"
+            },
+            {
+              "step": 11,
+              "response_step": 7,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f03_o002740.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 13,
+              "response_step": 12,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w16_group00.json"
+            }
+          ]
+        },
+        {
+          "group": 1,
+          "reads": [
+            {
+              "step": 15,
+              "response_step": 14,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f04_o002755.png"
+            },
+            {
+              "step": 16,
+              "response_step": 14,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f05_o002769.png"
+            },
+            {
+              "step": 17,
+              "response_step": 14,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f06_o002783.png"
+            },
+            {
+              "step": 18,
+              "response_step": 14,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f07_o002797.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 20,
+              "response_step": 19,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w16_group01.json"
+            }
+          ]
+        },
+        {
+          "group": 2,
+          "reads": [
+            {
+              "step": 22,
+              "response_step": 21,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f08_o002812.png"
+            },
+            {
+              "step": 23,
+              "response_step": 21,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f09_o002826.png"
+            },
+            {
+              "step": 24,
+              "response_step": 21,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f10_o002840.png"
+            },
+            {
+              "step": 25,
+              "response_step": 21,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f11_o002854.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 27,
+              "response_step": 26,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w16_group02.json"
+            }
+          ]
+        },
+        {
+          "group": 3,
+          "reads": [
+            {
+              "step": 29,
+              "response_step": 28,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f12_o002869.png"
+            },
+            {
+              "step": 30,
+              "response_step": 28,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f13_o002883.png"
+            },
+            {
+              "step": 31,
+              "response_step": 28,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f14_o002897.png"
+            },
+            {
+              "step": 32,
+              "response_step": 28,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f15_o002911.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 34,
+              "response_step": 33,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w16_group03.json"
+            }
+          ]
+        },
+        {
+          "group": 4,
+          "reads": [
+            {
+              "step": 36,
+              "response_step": 35,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f16_o002926.png"
+            },
+            {
+              "step": 37,
+              "response_step": 35,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f17_o002940.png"
+            },
+            {
+              "step": 38,
+              "response_step": 35,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f18_o002954.png"
+            },
+            {
+              "step": 39,
+              "response_step": 35,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f19_o002968.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 41,
+              "response_step": 40,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w16_group04.json"
+            }
+          ]
+        },
+        {
+          "group": 5,
+          "reads": [
+            {
+              "step": 43,
+              "response_step": 42,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f20_o002983.png"
+            },
+            {
+              "step": 44,
+              "response_step": 42,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f21_o002997.png"
+            },
+            {
+              "step": 45,
+              "response_step": 42,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f22_o003011.png"
+            },
+            {
+              "step": 46,
+              "response_step": 42,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f23_o003025.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 48,
+              "response_step": 47,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w16_group05.json"
+            }
+          ]
+        },
+        {
+          "group": 6,
+          "reads": [
+            {
+              "step": 50,
+              "response_step": 49,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f24_o003040.png"
+            },
+            {
+              "step": 51,
+              "response_step": 49,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f25_o003054.png"
+            },
+            {
+              "step": 52,
+              "response_step": 49,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f26_o003068.png"
+            },
+            {
+              "step": 53,
+              "response_step": 49,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f27_o003082.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 55,
+              "response_step": 54,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w16_group06.json"
+            }
+          ]
+        },
+        {
+          "group": 7,
+          "reads": [
+            {
+              "step": 57,
+              "response_step": 56,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f28_o003097.png"
+            },
+            {
+              "step": 58,
+              "response_step": 56,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f29_o003111.png"
+            },
+            {
+              "step": 59,
+              "response_step": 56,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f30_o003125.png"
+            },
+            {
+              "step": 60,
+              "response_step": 56,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f31_o003139.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 62,
+              "response_step": 61,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w16_group07.json"
+            }
+          ]
+        },
+        {
+          "group": 8,
+          "reads": [
+            {
+              "step": 64,
+              "response_step": 63,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f32_o003154.png"
+            },
+            {
+              "step": 65,
+              "response_step": 63,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f33_o003168.png"
+            },
+            {
+              "step": 66,
+              "response_step": 63,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f34_o003182.png"
+            },
+            {
+              "step": 67,
+              "response_step": 63,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f35_o003196.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 69,
+              "response_step": 68,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w16_group08.json"
+            }
+          ]
+        },
+        {
+          "group": 9,
+          "reads": [
+            {
+              "step": 71,
+              "response_step": 70,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f36_o003211.png"
+            },
+            {
+              "step": 72,
+              "response_step": 70,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f37_o003225.png"
+            },
+            {
+              "step": 73,
+              "response_step": 70,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f38_o003239.png"
+            },
+            {
+              "step": 74,
+              "response_step": 70,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f39_o003253.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 76,
+              "response_step": 75,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w16_group09.json"
+            }
+          ]
+        },
+        {
+          "group": 10,
+          "reads": [
+            {
+              "step": 78,
+              "response_step": 77,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f40_o003268.png"
+            },
+            {
+              "step": 79,
+              "response_step": 77,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f41_o003282.png"
+            },
+            {
+              "step": 80,
+              "response_step": 77,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f42_o003296.png"
+            },
+            {
+              "step": 81,
+              "response_step": 77,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f43_o003310.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 83,
+              "response_step": 82,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w16_group10.json"
+            }
+          ]
+        },
+        {
+          "group": 11,
+          "reads": [
+            {
+              "step": 85,
+              "response_step": 84,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f44_o003325.png"
+            },
+            {
+              "step": 86,
+              "response_step": 84,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f45_o003339.png"
+            },
+            {
+              "step": 87,
+              "response_step": 84,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f46_o003353.png"
+            },
+            {
+              "step": 88,
+              "response_step": 84,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f47_o003367.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 90,
+              "response_step": 89,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w16_group11.json"
+            }
+          ]
+        },
+        {
+          "group": 12,
+          "reads": [
+            {
+              "step": 92,
+              "response_step": 91,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f48_o003382.png"
+            },
+            {
+              "step": 93,
+              "response_step": 91,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f49_o003396.png"
+            },
+            {
+              "step": 94,
+              "response_step": 91,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f50_o003410.png"
+            },
+            {
+              "step": 95,
+              "response_step": 91,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f51_o003424.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 97,
+              "response_step": 96,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w16_group12.json"
+            }
+          ]
+        },
+        {
+          "group": 13,
+          "reads": [
+            {
+              "step": 99,
+              "response_step": 98,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f52_o003439.png"
+            },
+            {
+              "step": 100,
+              "response_step": 98,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f53_o003453.png"
+            },
+            {
+              "step": 101,
+              "response_step": 98,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f54_o003467.png"
+            },
+            {
+              "step": 102,
+              "response_step": 98,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f55_o003481.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 104,
+              "response_step": 103,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w16_group13.json"
+            }
+          ]
+        },
+        {
+          "group": 14,
+          "reads": [
+            {
+              "step": 106,
+              "response_step": 105,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f56_o003496.png"
+            },
+            {
+              "step": 107,
+              "response_step": 105,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f57_o003510.png"
+            },
+            {
+              "step": 108,
+              "response_step": 105,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f58_o003524.png"
+            },
+            {
+              "step": 109,
+              "response_step": 105,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f59_o003538.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 111,
+              "response_step": 110,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w16_group14.json"
+            }
+          ]
+        },
+        {
+          "group": 15,
+          "reads": [
+            {
+              "step": 113,
+              "response_step": 112,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f60_o003553.png"
+            },
+            {
+              "step": 114,
+              "response_step": 112,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f61_o003567.png"
+            },
+            {
+              "step": 115,
+              "response_step": 112,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f62_o003581.png"
+            },
+            {
+              "step": 116,
+              "response_step": 112,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\frames\\f63_o003596.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 118,
+              "response_step": 117,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w16_group15.json"
+            }
+          ]
+        }
+      ],
+      "previews": [
+        {
+          "step": 122,
+          "response_step": 121,
+          "tool": "view_file",
+          "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\student_views\\f00_student.png"
+        },
+        {
+          "step": 123,
+          "response_step": 121,
+          "tool": "view_file",
+          "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\student_views\\f09_student.png"
+        },
+        {
+          "step": 124,
+          "response_step": 121,
+          "tool": "view_file",
+          "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\student_views\\f18_student.png"
+        },
+        {
+          "step": 125,
+          "response_step": 121,
+          "tool": "view_file",
+          "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\student_views\\f27_student.png"
+        },
+        {
+          "step": 126,
+          "response_step": 121,
+          "tool": "view_file",
+          "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\student_views\\f36_student.png"
+        },
+        {
+          "step": 127,
+          "response_step": 121,
+          "tool": "view_file",
+          "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\student_views\\f45_student.png"
+        },
+        {
+          "step": 128,
+          "response_step": 121,
+          "tool": "view_file",
+          "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\student_views\\f54_student.png"
+        },
+        {
+          "step": 129,
+          "response_step": 121,
+          "tool": "view_file",
+          "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_eyqvti9ywja_w03\\student_views\\f63_student.png"
+        }
+      ],
+      "proposal_write": [
+        {
+          "step": 131,
+          "response_step": 130,
+          "tool": "write_to_file",
+          "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w16_proposal.json"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "job_index": 17,
+      "window_id": "EYqVtI9YWJA:SLOT6:4",
+      "status": "REJECT_BATCH_DISPATCH_KEEP_RAW",
+      "groups": [
+        {
+          "group": 0,
+          "reads": [
+            {
+              "step": 133,
+              "response_step": 132,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f00_o003597.png"
+            },
+            {
+              "step": 134,
+              "response_step": 132,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f01_o003611.png"
+            },
+            {
+              "step": 135,
+              "response_step": 132,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f02_o003625.png"
+            },
+            {
+              "step": 136,
+              "response_step": 132,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f03_o003639.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 138,
+              "response_step": 137,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w17_group00.json"
+            }
+          ]
+        },
+        {
+          "group": 1,
+          "reads": [
+            {
+              "step": 140,
+              "response_step": 139,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f04_o003654.png"
+            },
+            {
+              "step": 141,
+              "response_step": 139,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f05_o003668.png"
+            },
+            {
+              "step": 142,
+              "response_step": 139,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f06_o003682.png"
+            },
+            {
+              "step": 143,
+              "response_step": 139,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f07_o003696.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 145,
+              "response_step": 144,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w17_group01.json"
+            }
+          ]
+        },
+        {
+          "group": 2,
+          "reads": [
+            {
+              "step": 147,
+              "response_step": 146,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f08_o003711.png"
+            },
+            {
+              "step": 148,
+              "response_step": 146,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f09_o003725.png"
+            },
+            {
+              "step": 149,
+              "response_step": 146,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f10_o003739.png"
+            },
+            {
+              "step": 150,
+              "response_step": 146,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f11_o003753.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 152,
+              "response_step": 151,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w17_group02.json"
+            }
+          ]
+        },
+        {
+          "group": 3,
+          "reads": [
+            {
+              "step": 154,
+              "response_step": 153,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f12_o003768.png"
+            },
+            {
+              "step": 155,
+              "response_step": 153,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f13_o003782.png"
+            },
+            {
+              "step": 156,
+              "response_step": 153,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f14_o003796.png"
+            },
+            {
+              "step": 157,
+              "response_step": 153,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f15_o003810.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 159,
+              "response_step": 158,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w17_group03.json"
+            }
+          ]
+        },
+        {
+          "group": 4,
+          "reads": [
+            {
+              "step": 161,
+              "response_step": 160,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f16_o003825.png"
+            },
+            {
+              "step": 162,
+              "response_step": 160,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f17_o003839.png"
+            },
+            {
+              "step": 163,
+              "response_step": 160,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f18_o003853.png"
+            },
+            {
+              "step": 164,
+              "response_step": 160,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f19_o003867.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 166,
+              "response_step": 165,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w17_group04.json"
+            }
+          ]
+        },
+        {
+          "group": 5,
+          "reads": [
+            {
+              "step": 168,
+              "response_step": 167,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f20_o003882.png"
+            },
+            {
+              "step": 169,
+              "response_step": 167,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f21_o003896.png"
+            },
+            {
+              "step": 170,
+              "response_step": 167,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f22_o003910.png"
+            },
+            {
+              "step": 171,
+              "response_step": 167,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f23_o003924.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 173,
+              "response_step": 172,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w17_group05.json"
+            }
+          ]
+        },
+        {
+          "group": 6,
+          "reads": [
+            {
+              "step": 175,
+              "response_step": 174,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f24_o003939.png"
+            },
+            {
+              "step": 176,
+              "response_step": 174,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f25_o003953.png"
+            },
+            {
+              "step": 177,
+              "response_step": 174,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f26_o003967.png"
+            },
+            {
+              "step": 178,
+              "response_step": 174,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f27_o003981.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 180,
+              "response_step": 179,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w17_group06.json"
+            }
+          ]
+        },
+        {
+          "group": 7,
+          "reads": [
+            {
+              "step": 183,
+              "response_step": 182,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f28_o003996.png"
+            },
+            {
+              "step": 184,
+              "response_step": 182,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f29_o004010.png"
+            },
+            {
+              "step": 185,
+              "response_step": 182,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f30_o004024.png"
+            },
+            {
+              "step": 186,
+              "response_step": 182,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f31_o004038.png"
+            }
+          ],
+          "writes": [
+            {
+              "step": 188,
+              "response_step": 187,
+              "tool": "write_to_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w17_group07.json"
+            }
+          ]
+        },
+        {
+          "group": 8,
+          "reads": [
+            {
+              "step": 193,
+              "response_step": 189,
+              "tool": "view_file",
+              "path": "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_eyqvti9ywja_w04\\frames\\f35_o004095.png"
+            }
+          ],
+          "writes": []
+        },
+        {
+          "group": 9,
+          "reads": [],
+          "writes": []
+        },
+        {
+          "group": 10,
+          "reads": [],
+          "writes": []
+        },
+        {
+          "group": 11,
+          "reads": [],
+          "writes": []
+        },
+        {
+          "group": 12,
+          "reads": [],
+          "writes": []
+        },
+        {
+          "group": 13,
+          "reads": [],
+          "writes": []
+        },
+        {
+          "group": 14,
+          "reads": [],
+          "writes": []
+        },
+        {
+          "group": 15,
+          "reads": [],
+          "writes": []
+        }
+      ],
+      "previews": [],
+      "proposal_write": [],
+      "issues": [
+        {
+          "reason": "GROUP_NOT_FOUR_ORDERED_READS_IN_ONE_RESPONSE",
+          "group": 8
+        },
+        {
+          "reason": "FACT_WRITE_REQUESTED_BEFORE_MODEL_RECEIVED_ALL_FOUR_DONE",
+          "group": 8
+        },
+        {
+          "reason": "GROUP_NOT_FOUR_ORDERED_READS_IN_ONE_RESPONSE",
+          "group": 9
+        },
+        {
+          "reason": "FACT_WRITE_REQUESTED_BEFORE_MODEL_RECEIVED_ALL_FOUR_DONE",
+          "group": 9
+        },
+        {
+          "reason": "GROUP_NOT_FOUR_ORDERED_READS_IN_ONE_RESPONSE",
+          "group": 10
+        },
+        {
+          "reason": "FACT_WRITE_REQUESTED_BEFORE_MODEL_RECEIVED_ALL_FOUR_DONE",
+          "group": 10
+        },
+        {
+          "reason": "GROUP_NOT_FOUR_ORDERED_READS_IN_ONE_RESPONSE",
+          "group": 11
+        },
+        {
+          "reason": "FACT_WRITE_REQUESTED_BEFORE_MODEL_RECEIVED_ALL_FOUR_DONE",
+          "group": 11
+        },
+        {
+          "reason": "GROUP_NOT_FOUR_ORDERED_READS_IN_ONE_RESPONSE",
+          "group": 12
+        },
+        {
+          "reason": "FACT_WRITE_REQUESTED_BEFORE_MODEL_RECEIVED_ALL_FOUR_DONE",
+          "group": 12
+        },
+        {
+          "reason": "GROUP_NOT_FOUR_ORDERED_READS_IN_ONE_RESPONSE",
+          "group": 13
+        },
+        {
+          "reason": "FACT_WRITE_REQUESTED_BEFORE_MODEL_RECEIVED_ALL_FOUR_DONE",
+          "group": 13
+        },
+        {
+          "reason": "GROUP_NOT_FOUR_ORDERED_READS_IN_ONE_RESPONSE",
+          "group": 14
+        },
+        {
+          "reason": "FACT_WRITE_REQUESTED_BEFORE_MODEL_RECEIVED_ALL_FOUR_DONE",
+          "group": 14
+        },
+        {
+          "reason": "GROUP_NOT_FOUR_ORDERED_READS_IN_ONE_RESPONSE",
+          "group": 15
+        },
+        {
+          "reason": "FACT_WRITE_REQUESTED_BEFORE_MODEL_RECEIVED_ALL_FOUR_DONE",
+          "group": 15
+        },
+        {
+          "reason": "PREVIEWS_NOT_EIGHT_ORDERED_READS_IN_ONE_RESPONSE"
+        },
+        {
+          "reason": "PROPOSAL_REQUESTED_BEFORE_MODEL_RECEIVED_ALL_EIGHT_PREVIEW_DONE"
+        }
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "job_index": 17,
+      "reason": "GROUP_NOT_FOUR_ORDERED_READS_IN_ONE_RESPONSE",
+      "group": 8
+    },
+    {
+      "job_index": 17,
+      "reason": "FACT_WRITE_REQUESTED_BEFORE_MODEL_RECEIVED_ALL_FOUR_DONE",
+      "group": 8
+    },
+    {
+      "job_index": 17,
+      "reason": "GROUP_NOT_FOUR_ORDERED_READS_IN_ONE_RESPONSE",
+      "group": 9
+    },
+    {
+      "job_index": 17,
+      "reason": "FACT_WRITE_REQUESTED_BEFORE_MODEL_RECEIVED_ALL_FOUR_DONE",
+      "group": 9
+    },
+    {
+      "job_index": 17,
+      "reason": "GROUP_NOT_FOUR_ORDERED_READS_IN_ONE_RESPONSE",
+      "group": 10
+    },
+    {
+      "job_index": 17,
+      "reason": "FACT_WRITE_REQUESTED_BEFORE_MODEL_RECEIVED_ALL_FOUR_DONE",
+      "group": 10
+    },
+    {
+      "job_index": 17,
+      "reason": "GROUP_NOT_FOUR_ORDERED_READS_IN_ONE_RESPONSE",
+      "group": 11
+    },
+    {
+      "job_index": 17,
+      "reason": "FACT_WRITE_REQUESTED_BEFORE_MODEL_RECEIVED_ALL_FOUR_DONE",
+      "group": 11
+    },
+    {
+      "job_index": 17,
+      "reason": "GROUP_NOT_FOUR_ORDERED_READS_IN_ONE_RESPONSE",
+      "group": 12
+    },
+    {
+      "job_index": 17,
+      "reason": "FACT_WRITE_REQUESTED_BEFORE_MODEL_RECEIVED_ALL_FOUR_DONE",
+      "group": 12
+    },
+    {
+      "job_index": 17,
+      "reason": "GROUP_NOT_FOUR_ORDERED_READS_IN_ONE_RESPONSE",
+      "group": 13
+    },
+    {
+      "job_index": 17,
+      "reason": "FACT_WRITE_REQUESTED_BEFORE_MODEL_RECEIVED_ALL_FOUR_DONE",
+      "group": 13
+    },
+    {
+      "job_index": 17,
+      "reason": "GROUP_NOT_FOUR_ORDERED_READS_IN_ONE_RESPONSE",
+      "group": 14
+    },
+    {
+      "job_index": 17,
+      "reason": "FACT_WRITE_REQUESTED_BEFORE_MODEL_RECEIVED_ALL_FOUR_DONE",
+      "group": 14
+    },
+    {
+      "job_index": 17,
+      "reason": "GROUP_NOT_FOUR_ORDERED_READS_IN_ONE_RESPONSE",
+      "group": 15
+    },
+    {
+      "job_index": 17,
+      "reason": "FACT_WRITE_REQUESTED_BEFORE_MODEL_RECEIVED_ALL_FOUR_DONE",
+      "group": 15
+    },
+    {
+      "job_index": 17,
+      "reason": "PREVIEWS_NOT_EIGHT_ORDERED_READS_IN_ONE_RESPONSE"
+    },
+    {
+      "job_index": 17,
+      "reason": "PROPOSAL_REQUESTED_BEFORE_MODEL_RECEIVED_ALL_EIGHT_PREVIEW_DONE"
+    }
+  ],
+  "terminal_sha256": "bb00b83c1c9202145974b886f34e8d7f4840c090ffb431309a331b29ef3a3c33",
+  "raw_sha256": "c40bf772414233d23abce940a44d53a00efa339063edec464c7321bc602907ba",
+  "auditor_sha256": "f312d79c8145a05f55020a8def4903600bd575bab419a4d78919e9955af007d0",
+  "new_model_calls": 0,
+  "semantic_correctness": "PENDING_ROOT_REVIEW",
+  "training_admitted": false
+}

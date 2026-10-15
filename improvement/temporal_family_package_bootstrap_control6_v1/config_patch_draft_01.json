@@ -1,0 +1,45 @@
+{
+  "status": "DRAFT_ONLY_WAITING_REAL_CONTROL6_AND_ROOT_PACKAGE_LEAVES",
+  "inherits_immutable_config_draft_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_family_package_bootstrap_v1/config_draft_01.json",
+    "sha256": "b5edf67cff7776a87d5afc1fdd7c32a00e693a33b44d3481df9545c98c2e2bb3"
+  },
+  "new_config_schema": "TEMPORAL_FAMILY_PACKAGE_BOOTSTRAP_CONTROL6_V1",
+  "replace_production_refs_control_registration": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_control_v6/registration.json",
+    "sha256": null
+  },
+  "replace_production_completion_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_control_v6/exports_01/global_completion.json",
+    "sha256": null
+  },
+  "replace_controller_completion_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_control_v6/run_01/completion.json",
+    "sha256": null
+  },
+  "replace_required_binder_code_files": [
+    "temporal_family_package_bootstrap_control6_v1/code/bind.py",
+    "temporal_family_package_bootstrap_control6_v1/code/control6_chain.py"
+  ],
+  "root_future_metadata_leaves": [
+    "actual_CONTROL6_main_execution_admission",
+    "actual_CONTROL5_quiescent_handoff_final_leaf",
+    "actual_SOURCE_phase_admission",
+    "actual_CLOSE_phase_admission",
+    "actual_backend_admission",
+    "new_package_risk_authorization",
+    "fresh_pre_package_official_rule_check",
+    "final_package_admission_after_technical_complete_and_main_veto_decision"
+  ],
+  "preserve_existing": [
+    "INPUT5_registration_full_plan_plan_completion_cache_initialization",
+    "PR5_protocol_and_all_49_frozen_batches",
+    "BOOT2_successful_completion_and_original_CONTROL4_identity",
+    "fixed_history_specs_and_existing_canonical_receipts",
+    "protected_D8_and_continuous_spatial_field_refs",
+    "original_eight_arm_protocol_and_priority"
+  ],
+  "actual_binder_executed": false,
+  "package_admission_created": false,
+  "new_ZIPs_created": 0
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "ASYMMETRIC_BOUNDARY_40_26_PRE075_POST050_V1",
+  "registered_utc": "2026-10-12T00:23:20.831385+00:00",
+  "authorization": "以40.26这个包为基线，继续优化时间边界，自己分析验证，再做一个新的可提交zip",
+  "candidate": "ASYMMETRIC_BOUNDARY_PRE075_POST050_8B",
+  "baseline_candidate": "BOUNDARY_CONTEXT_050",
+  "baseline_score_user_reported": 40.26,
+  "baseline_zip_sha256": "200a3ef337eefd9fe296c781a2335ed16696f3539ee2602601da45f1cceef32b",
+  "padding_exact": [
+    "3/4",
+    "1/2"
+  ],
+  "apply_to": "Every original balanced/B0 interval uniformly; +0.75s lead-in and +0.5s follow-through from ORIGINAL endpoints, never repeated dilation of baseline output.",
+  "clamp": "Original exact window then contiguous frozen full-source field ordinal domain",
+  "baseline_preservation": "All 118027 frames and original boxes from 40.26 ZIP retained exactly",
+  "source_field_policy": "Require exact contiguous source domains; reject holes or duplicate rows rather than filter arbitrary missing spatial keys",
+  "selection_registered_before_new_rematch_membership": true,
+  "analysis_registration_sha256": "a22e9939b38f6435c153ec5d610264fd8d47711eb1936983e27c9988023ef8aa",
+  "developer_screen_sha256": "7f7656d14781ae93189e3a2526c7390c7a66b4e841d20894f5a196f420b2e975",
+  "developer_export_sha256": "7feb4cbec6567612e99a98bca708deb5041e38cd0735500a1016263fb43cc8d6",
+  "reference_limitations": [
+    "External weak positive references; outside intervals not proven ordinary",
+    "32 prior-teacher source intersections retained as exposed, not independent human evaluation",
+    "Six-source silver reference has only two accepted original-B baselines; four failed/unrun excluded explicitly"
+  ],
+  "scientific_quality_pass": false,
+  "historical_quality_gate": "FAILED_PRESERVED",
+  "risk_accepted_from_session": true,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "new_video_decode_calls": 0,
+  "new_processor_encodes": 0,
+  "pipeline_parameters": 8782459120,
+  "target_records": 426,
+  "official_score": null,
+  "automatic_submission": false,
+  "closed_annotation_restarted": false,
+  "upload_route": "No project files are uploaded in this CPU-only local packaging route. Existing SSH is used for remote control and receipt/input downloads; no Mac."
+}

@@ -1,0 +1,16 @@
+{
+  "status": "smoke_accepted",
+  "model_offline_inference": true,
+  "rows": 3,
+  "valid_rows": 3,
+  "seconds": 8.725552215240896,
+  "peak_vram_mib": 9570.4296875,
+  "training_performed": false,
+  "source_hashes": {
+    "inference/baseline_qwen3vl.py": "a522244712831e7fddc605bce73b083851b7353dac1ceb2a9e4f41b948733631",
+    "inference_v2/__init__.py": "57681f8d179c876b81f59f58b1220701a8d3344cecd55c3e668c52edc07e9f5d",
+    "inference_v2/baseline_v2.py": "df7b372ddaf1d621c56b4207097185a2b94b37d1077c5f41f2142df0f6e2cf1e",
+    "inference_v2/qwen_io.py": "215595d0e907849d09ff6ca4734514c350f6c7d54e1fd6c0b43d62edc0d3e676",
+    "inference_v2/temporal.py": "9254e90f1bfa9afdbf9fb201efbedc91d2490115c3b2f4ca99780ffcd79420cf"
+  }
+}

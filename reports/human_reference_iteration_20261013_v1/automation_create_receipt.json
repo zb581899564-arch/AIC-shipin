@@ -1,0 +1,12 @@
+{
+  "status": "CREATED_ACTIVE_BY_CODEX_APP_TOOL",
+  "automation_id": "aic",
+  "automation_name": "AIC人工参考与三候选迭代",
+  "kind": "heartbeat",
+  "interval_minutes": 15,
+  "scope": "New human-reference iteration; not the deleted overnight campaign",
+  "app_assigned_same_id_as_deleted_historical_automation": true,
+  "old_automation_deletion_receipt_preserved": true,
+  "pending_media_approval_is_not_granted_by_automation": true,
+  "target_new_distinct_submission_zips": 3
+}

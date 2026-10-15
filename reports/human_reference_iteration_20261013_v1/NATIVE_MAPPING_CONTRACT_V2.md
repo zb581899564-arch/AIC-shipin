@@ -1,0 +1,13 @@
+# 原始人工帧映射 v2：媒体与模型运行前修正工程假设
+
+旧NATIVE_MAPPING_CONTRACT.md与native_mapping.py完整保留，不能继续作为新运行入口。登记源的7项作者元数据中，nFrames/FPS与video_duration的差已大于两项旧检查容差之和，任何真实末端都无法同时通过。该矛盾来自未下载媒体前的作者元数据，不是模型结果，也不能说明视频或标注实际失败；逐项证据见engineering_correction_01.json。
+
+v2保持原档同名成员大小/CRC/SHA、完整解码、MAT原始ordinal行数精确匹配、严格原生PTS、不补零/截断/复制/插值。原生帧数除以标称FPS只作诊断，不能假定等于视频物理时长；不由FPS制造原生PTS。
+
+物理末端必须由最后原生帧PTS加该帧明确的正duration计算，以首帧PTS归一化，并记录最后PTS、duration及来源。无正duration时保留失败，另行评估实际编码证据，禁止自动猜测平均周期或改用包含音频的容器时长。它与作者video_duration的差仍须在两个标注标称帧周期内；此元数据相容性检查不移动标签或端点，不承诺人工切点精度。
+
+native_clock新增physical_endpoint_evidence，kind固定LAST_NATIVE_FRAME_PTS_PLUS_POSITIVE_DURATION，含last_normalized_pts_exact及last_frame_duration_exact；physical_end_exact必须恰等于两者之和。其余GPU前不可变输入验收、GPU后独立重放导出、20源分母、隔离、screen后冻结再confirm规则沿用原契约。
+
+窗口仅按实测物理末端划分ceil(duration/30)个等长连续半开窗口，每窗integer-floor64原生序号采样。任何窗口不足64个原生帧均保留失败，不因目标三个包而重复帧或换采样法。native_window_plan.py只计算计划，不解码、不加载模型、不改变标签。
+
+本次没有下载或解码视频，没有实际映射、GPU、训练、候选评分或新ZIP。F1门、三配方、旧银标FAILED与部分事实否决均未改变。

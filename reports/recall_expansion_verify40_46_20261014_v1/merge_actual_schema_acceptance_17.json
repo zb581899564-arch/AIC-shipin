@@ -1,0 +1,17 @@
+{
+  "status": "PASS_TARGETED_ACTUAL_BASELINE_ROW_SCHEMA_COMPATIBILITY_NOT_PRODUCTION_QA",
+  "baseline_zip_sha256": "86593725c6bad919dc0d342fe98ad65e489a13a6e492da5de3afd247a3226543",
+  "merge_source_sha256": "4b3e5b4ba95d9dff278e7dde6b9d4389a09ea538c10fbee05b427dd1f872d277",
+  "actual_first_row_keys": [
+    "video_id",
+    "targetRatioWH",
+    "predictions",
+    "model_params_b"
+  ],
+  "model_params_bytes_preserved": true,
+  "inspected_record_count": 1,
+  "new_model_calls": 0,
+  "media_decodes": 0,
+  "new_output_predictions": 0,
+  "production_or_full426_QA_performed": false
+}

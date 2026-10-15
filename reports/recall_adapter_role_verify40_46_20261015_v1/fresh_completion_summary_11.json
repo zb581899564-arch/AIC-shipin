@@ -1,0 +1,635 @@
+{
+  "utc": "2026-10-15T08:11:46.175250+00:00",
+  "host": "inspur-NP5570M5",
+  "status": "STOP_ROLE_FRESH_CONFIRM_REJECTED",
+  "stages": {
+    "B0": {
+      "actual_model_calls": 28,
+      "first_independent_input_QA": 28,
+      "first_independent_output_QA": 28,
+      "unique_ledger_exact": true,
+      "resource": {
+        "name": "recall_role_fresh4_b0_20261015_v1",
+        "command": [
+          "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+          "-B",
+          "-u",
+          "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/code/pilot_runtime.py",
+          "infer",
+          "--root",
+          "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01",
+          "--group",
+          "confirm"
+        ],
+        "started_utc": "2026-10-15T06:56:50.418093+00:00",
+        "runner_pid": 394579,
+        "reserved_seconds": 1800,
+        "teardown_reserve_seconds": 120,
+        "prior_charged_seconds": 271184.0071256147,
+        "gpu_time_mode": "UNLIMITED",
+        "max_total_gpu_seconds": null,
+        "resource_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
+        "disk_before": {
+          "free_bytes": 75026796544,
+          "work_bytes": 204521672704
+        },
+        "planned_output_bytes": 33554432,
+        "capacity_reason": "28 unique fresh actual pre-input-QA-admitted calls; retained caches/raw/first output QA.",
+        "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+        "project_disk_limit_bytes": null,
+        "project_ram_limit_bytes": null,
+        "project_vram_limit_bytes": null,
+        "runner_source_sha256": "9997d41fbe2bb51726914b4698b874cf939c52aac02048fa9b3bb753c64c6cec",
+        "child_pid": 394583,
+        "finished_utc": "2026-10-15T07:08:12.361366+00:00",
+        "charged_seconds": 681.9433634784073,
+        "exit_code": 0,
+        "stop_reason": null,
+        "sampled_peak_memory_mib": 21104,
+        "status": "completed",
+        "disk_after": {
+          "free_bytes": 75024121856,
+          "work_bytes": 204523802624
+        }
+      }
+    },
+    "VERIFY": {
+      "actual_model_calls": 44,
+      "first_independent_input_QA": 44,
+      "first_independent_output_QA": 44,
+      "unique_ledger_exact": true,
+      "resource": {
+        "name": "recall_role_fresh4_verify_20261015_v1",
+        "command": [
+          "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+          "-B",
+          "-u",
+          "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/code/pilot_verify.py",
+          "infer",
+          "--root",
+          "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01",
+          "--group",
+          "confirm"
+        ],
+        "started_utc": "2026-10-15T07:30:59.285833+00:00",
+        "runner_pid": 423825,
+        "reserved_seconds": 2400,
+        "teardown_reserve_seconds": 120,
+        "prior_charged_seconds": 271865.9504890931,
+        "gpu_time_mode": "UNLIMITED",
+        "max_total_gpu_seconds": null,
+        "resource_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
+        "disk_before": {
+          "free_bytes": 75007393792,
+          "work_bytes": 204531023872
+        },
+        "planned_output_bytes": 33554432,
+        "capacity_reason": "44 unique fresh actual pre-input-QA-admitted calls; retained caches/raw/first output QA.",
+        "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+        "project_disk_limit_bytes": null,
+        "project_ram_limit_bytes": null,
+        "project_vram_limit_bytes": null,
+        "runner_source_sha256": "9997d41fbe2bb51726914b4698b874cf939c52aac02048fa9b3bb753c64c6cec",
+        "child_pid": 423829,
+        "finished_utc": "2026-10-15T07:47:36.248937+00:00",
+        "charged_seconds": 996.9631937108934,
+        "exit_code": 0,
+        "stop_reason": null,
+        "sampled_peak_memory_mib": 21104,
+        "status": "completed",
+        "disk_after": {
+          "free_bytes": 75003068416,
+          "work_bytes": 204534546432
+        }
+      }
+    },
+    "POSITIVE": {
+      "actual_model_calls": 16,
+      "first_independent_input_QA": 16,
+      "first_independent_output_QA": 16,
+      "unique_ledger_exact": true,
+      "resource": {
+        "name": "recall_role_fresh4_admission_20261015_v1",
+        "command": [
+          "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+          "-B",
+          "-u",
+          "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm_code/positive_runtime.py",
+          "infer",
+          "--root",
+          "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1",
+          "--group",
+          "confirm"
+        ],
+        "started_utc": "2026-10-15T07:58:51.249188+00:00",
+        "runner_pid": 450886,
+        "reserved_seconds": 1200,
+        "teardown_reserve_seconds": 120,
+        "prior_charged_seconds": 272862.913682804,
+        "gpu_time_mode": "UNLIMITED",
+        "max_total_gpu_seconds": null,
+        "resource_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
+        "disk_before": {
+          "free_bytes": 74991161344,
+          "work_bytes": 204537528320
+        },
+        "planned_output_bytes": 33554432,
+        "capacity_reason": "16 unique fresh actual pre-input-QA-admitted calls; retained caches/raw/first output QA.",
+        "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+        "project_disk_limit_bytes": null,
+        "project_ram_limit_bytes": null,
+        "project_vram_limit_bytes": null,
+        "runner_source_sha256": "9997d41fbe2bb51726914b4698b874cf939c52aac02048fa9b3bb753c64c6cec",
+        "child_pid": 450901,
+        "finished_utc": "2026-10-15T08:05:40.408240+00:00",
+        "charged_seconds": 409.159145061858,
+        "exit_code": 0,
+        "stop_reason": null,
+        "sampled_peak_memory_mib": 21108,
+        "status": "completed",
+        "disk_after": {
+          "free_bytes": 74988281856,
+          "work_bytes": 204540071936
+        }
+      }
+    }
+  },
+  "total_actual_fresh_model_calls": 88,
+  "new_positive_decisions": {
+    "KEEP": 16
+  },
+  "actual_media_sources": 4,
+  "actual_media_bytes": 17756735,
+  "primary_inputs": 28,
+  "source_RGB_decode_passes": 4,
+  "successful_primary_or_media_or_RGB_operations_repeated": 0,
+  "old_positive_engineering_and_scientific_failure_preserved": true,
+  "total_GPU_charged_seconds": 2088.0657022511587,
+  "production_admitted": false,
+  "fixed40_actual_calls": 0,
+  "production_actual_calls": 0,
+  "new_ZIPs": 0,
+  "result": {
+    "status": "STOP_ROLE_FRESH_CONFIRM_REJECTED",
+    "group": "confirm",
+    "utc": "2026-10-15T08:10:27.441577+00:00",
+    "conditions": {
+      "full_group": true,
+      "macro_F1_not_lower": true,
+      "macro_recall_gain": true,
+      "every_source_loss_within_gate": false,
+      "macro_precision_not_lower": false,
+      "all_rater_recall_retained": true,
+      "all_baseline_native_frames_retained": true,
+      "real_changed_sources": true
+    },
+    "macro": {
+      "f1": {
+        "baseline": 0.3212402248910281,
+        "baseline_exact": "12576683741507059545894704536808269543952721979109742303757890463170700326915271334340110296956221223371803425696174095687584381373/39150401372596949955588804829129912752579172347062801116635993312384864858787603226454044236887477501632338336846765663848791808000",
+        "augmented": 0.32373041719528484,
+        "augmented_exact": "88707752324534498129965346197095201709088956583674025362211801367806136882513414059437157301959092707521234055256172683368557364954381972971716185816411231639557030557207/274017353985687002268918293865690674028674727335589320695223295500866904697327459165130747378959517855684478200351304989126581096457111095512919084883856093815121644266736",
+        "delta": 0.0024901923042567283,
+        "delta_exact": "292316401201623577265902275333494653500528599608780868116258481619245630003524663918000371607250555997698830955207517036209113400354457794447133642953778169052097849633222425585385380396882958938271932288298000427/117387079183378195461581400624471363037218193194504450621574328877920689754220906747410410157437847189567213629426061949653829131890293549058684467128381342159359008959277894661725473702512531693529486719017355008000"
+      },
+      "recall": {
+        "baseline": 0.39781455320660536,
+        "baseline_exact": "735491021052506266426775773632744196713390165187524376022898012253/1848828845310061584157000538449100337393352020805384639049691600000",
+        "augmented": 0.49247917138701897,
+        "augmented_exact": "111309810552959305214862144709916129953227762221000698309150533353471/226019326339155028663193315825402516246337284543458272123824798100000",
+        "delta": 0.09466461818041362,
+        "delta_exact": "140098892406361376053098519887987302211089/1479949902078073736266054522808955370800000"
+      },
+      "precision": {
+        "baseline": 0.3125520141137862,
+        "baseline_exact": "8766909079275396473/28049440359977196000",
+        "augmented": 0.25624351348288843,
+        "augmented_exact": "1193771798237776451359/4658739579441080822304",
+        "delta": -0.05630850063089778,
+        "delta_exact": "-3184463524845772303001060869/56553868228883068612715800500"
+      }
+    },
+    "cases": [
+      {
+        "video_id": "v_1VDNFR3vQR4",
+        "baseline": {
+          "f1": {
+            "exact": "47793372466925659714989679/180121769056307598924096000",
+            "value": 0.26533923532577036
+          },
+          "recall": {
+            "exact": "6100589085013301493219/16496973708399781438000",
+            "value": 0.369800497524407
+          },
+          "precision": {
+            "exact": "6109/29500",
+            "value": 0.20708474576271185
+          }
+        },
+        "augmented": {
+          "f1": {
+            "exact": "4852306775519319143024108691016631703812594457/18459288480874934481260066369349399897815188451",
+            "value": 0.26286532010952834
+          },
+          "recall": {
+            "exact": "1149918391136005916760761/2268333884904969947725000",
+            "value": 0.5069440609199297
+          },
+          "precision": {
+            "exact": "83971/472946",
+            "value": 0.17754881106933984
+          }
+        },
+        "all_rater_recall_preserved": true,
+        "baseline_native_frames_preserved": true,
+        "baseline_selected_frames": 177,
+        "augmented_selected_frames": 283,
+        "added_native_frames": 106,
+        "annotator_count": 10,
+        "baseline_spans": [
+          [
+            "47/4",
+            "20"
+          ],
+          [
+            "91/4",
+            "26"
+          ],
+          [
+            "989/24",
+            "1067/24"
+          ]
+        ],
+        "augmented_spans": [
+          [
+            "11011/2000",
+            "75751/10000"
+          ],
+          [
+            "47/4",
+            "290777/10000"
+          ],
+          [
+            "33",
+            "34"
+          ],
+          [
+            "989/24",
+            "1067/24"
+          ]
+        ],
+        "new_positive_KEEP_spans": [
+          [
+            "11011/2000",
+            "75751/10000"
+          ],
+          [
+            "15",
+            "290777/10000"
+          ],
+          [
+            "33",
+            "34"
+          ]
+        ],
+        "reference_ref": {
+          "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/reference_01/v_1VDNFR3vQR4/reference.json",
+          "sha256": "27a470fd1be8f1d2b41816d444a10ea17a23fd25b447860ab80c2c49cc8e4594"
+        },
+        "clock_ref": {
+          "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/reference_01/v_1VDNFR3vQR4/clock.json",
+          "sha256": "247ec4ca65abda356ad6537c093d2f690073ee3313c82b2d31b23251e564ff4f"
+        }
+      },
+      {
+        "video_id": "v_SFfB6qvT5FI",
+        "baseline": {
+          "f1": {
+            "exact": "10670837553483650405745034181197567389841627/25868390947783994792615712178714501113816780",
+            "value": 0.4125048819241602
+          },
+          "recall": {
+            "exact": "18975464469572592083405537/36351071437607535701400000",
+            "value": 0.5220056443767225
+          },
+          "precision": {
+            "exact": "783893/2194040",
+            "value": 0.35728291188857086
+          }
+        },
+        "augmented": {
+          "f1": {
+            "exact": "10670837553483650405745034181197567389841627/25868390947783994792615712178714501113816780",
+            "value": 0.4125048819241602
+          },
+          "recall": {
+            "exact": "18975464469572592083405537/36351071437607535701400000",
+            "value": 0.5220056443767225
+          },
+          "precision": {
+            "exact": "783893/2194040",
+            "value": 0.35728291188857086
+          }
+        },
+        "all_rater_recall_preserved": true,
+        "baseline_native_frames_preserved": true,
+        "baseline_selected_frames": 329,
+        "augmented_selected_frames": 329,
+        "added_native_frames": 0,
+        "annotator_count": 10,
+        "baseline_spans": [
+          [
+            "2703/400",
+            "150777/10000"
+          ],
+          [
+            "537647/20000",
+            "590647/20000"
+          ]
+        ],
+        "augmented_spans": [
+          [
+            "2703/400",
+            "150777/10000"
+          ],
+          [
+            "537647/20000",
+            "590647/20000"
+          ]
+        ],
+        "new_positive_KEEP_spans": [],
+        "reference_ref": {
+          "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/reference_01/v_SFfB6qvT5FI/reference.json",
+          "sha256": "4a2bbfea4ca48f165b02d9dc8610efd2890058d06da712053ad1cdb677621c8c"
+        },
+        "clock_ref": {
+          "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/reference_01/v_SFfB6qvT5FI/clock.json",
+          "sha256": "98c414843ce05152d7f511270ffd5c4e3f3db8b57b08fa24f01a7891377b989f"
+        }
+      },
+      {
+        "video_id": "v_d0woFZ26Cx0",
+        "baseline": {
+          "f1": {
+            "exact": "68728045477814428198910991032436269/264695395469882245984739447589642030",
+            "value": 0.2596495694827245
+          },
+          "recall": {
+            "exact": "38623877314587437447/205944303312960264000",
+            "value": 0.18754525710717632
+          },
+          "precision": {
+            "exact": "98309/232660",
+            "value": 0.42254362589185934
+          }
+        },
+        "augmented": {
+          "f1": {
+            "exact": "6369151115500844685287721075712978277873/25583187881897917333417379958440622507165",
+            "value": 0.24895846228794308
+          },
+          "recall": {
+            "exact": "10489772630199082595579/39472658134984050600000",
+            "value": 0.265747814457475
+          },
+          "precision": {
+            "exact": "69869/297990",
+            "value": 0.23446759958387867
+          }
+        },
+        "all_rater_recall_preserved": true,
+        "baseline_native_frames_preserved": true,
+        "baseline_selected_frames": 70,
+        "augmented_selected_frames": 177,
+        "added_native_frames": 107,
+        "annotator_count": 10,
+        "baseline_spans": [
+          [
+            "207521/10000",
+            "230787/10000"
+          ]
+        ],
+        "augmented_spans": [
+          [
+            "27333/10000",
+            "33667/10000"
+          ],
+          [
+            "43667/10000",
+            "53667/10000"
+          ],
+          [
+            "91667/10000",
+            "98333/10000"
+          ],
+          [
+            "131667/10000",
+            "138333/10000"
+          ],
+          [
+            "151667/10000",
+            "158333/10000"
+          ],
+          [
+            "207521/10000",
+            "230787/10000"
+          ]
+        ],
+        "new_positive_KEEP_spans": [
+          [
+            "27333/10000",
+            "33667/10000"
+          ],
+          [
+            "43667/10000",
+            "53667/10000"
+          ],
+          [
+            "91667/10000",
+            "98333/10000"
+          ],
+          [
+            "131667/10000",
+            "138333/10000"
+          ],
+          [
+            "151667/10000",
+            "158333/10000"
+          ]
+        ],
+        "reference_ref": {
+          "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/reference_01/v_d0woFZ26Cx0/reference.json",
+          "sha256": "8dd534c848cec0b74fe3f9a07633fc36a6bf46441464ae17ed20f2f19cbefb4e"
+        },
+        "clock_ref": {
+          "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/reference_01/v_d0woFZ26Cx0/clock.json",
+          "sha256": "0a58f9503621d821a52e954e94f44adaeaf3741742da88ebb316ba6ea50b900b"
+        }
+      },
+      {
+        "video_id": "v_CV9n0jgThLY",
+        "baseline": {
+          "f1": {
+            "exact": "74629263305597555798984982393975422526629/214780734842447581333798651400664465563169",
+            "value": 0.34746721283145743
+          },
+          "recall": {
+            "exact": "616831385164789816097/1204968108480686550000",
+            "value": 0.5119068138181156
+          },
+          "precision": {
+            "exact": "98087/372534",
+            "value": 0.26329677291200265
+          }
+        },
+        "augmented": {
+          "f1": {
+            "exact": "365474872669893776932834944036303569337248419149767633976/986189345918500239600426497909981338036622526510497398715",
+            "value": 0.3705930044595077
+          },
+          "recall": {
+            "exact": "41879893403909235385091/62024147899690076100000",
+            "value": 0.6752191657939488
+          },
+          "precision": {
+            "exact": "963027/3766610",
+            "value": 0.25567473138976426
+          }
+        },
+        "all_rater_recall_preserved": true,
+        "baseline_native_frames_preserved": true,
+        "baseline_selected_frames": 559,
+        "augmented_selected_frames": 755,
+        "added_native_frames": 196,
+        "annotator_count": 10,
+        "baseline_spans": [
+          [
+            "0",
+            "93167/10000"
+          ],
+          [
+            "1741/60",
+            "9323/300"
+          ],
+          [
+            "2606/75",
+            "12599/300"
+          ]
+        ],
+        "augmented_spans": [
+          [
+            "0",
+            "118707/10000"
+          ],
+          [
+            "257333/10000",
+            "9323/300"
+          ],
+          [
+            "346667/10000",
+            "12599/300"
+          ],
+          [
+            "1291/30",
+            "1308001/30000"
+          ]
+        ],
+        "new_positive_KEEP_spans": [
+          [
+            "0",
+            "118707/10000"
+          ],
+          [
+            "257333/10000",
+            "1549/50"
+          ],
+          [
+            "346667/10000",
+            "406667/10000"
+          ],
+          [
+            "1291/30",
+            "1308001/30000"
+          ]
+        ],
+        "reference_ref": {
+          "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/reference_01/v_CV9n0jgThLY/reference.json",
+          "sha256": "92f739ceac46aad7b7376a839122c93d3025cde4d5aa2135452bb9730ced83dc"
+        },
+        "clock_ref": {
+          "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/reference_01/v_CV9n0jgThLY/clock.json",
+          "sha256": "b74cf62e8e9d334d9b1100b5ee40f5f81fdfa80878a256541a9b5b156b82d790"
+        }
+      }
+    ],
+    "candidate": "BASE_ONLY_POSITIVE_ADMISSION_SAME_INPUT_PAIR",
+    "bindings": {
+      "protocol_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/protocol.json",
+        "sha256": "c2e2b7a47e511703ca30ddb57a27dc84e5584c605cac8013ae4cdd1c8ab2f149"
+      },
+      "registration_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/registration_confirm.json",
+        "sha256": "090ec76fd703b9f87b747c30278346ba87059e3a526969f9eb97d8d437714b34"
+      },
+      "verification_export_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/verification_export.json",
+        "sha256": "958e072c689fb869828eb2f79516ee60ebd935b631930da5243327ca85e551eb"
+      },
+      "reference_completion_refs": [
+        {
+          "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/reference_01/completion.json",
+          "sha256": "857d46c69000c27f58f7dbfd67b1a3b940e8f986dd0c08a8286ac8b767aa11f3"
+        }
+      ],
+      "first_input_QA_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/input_qa_01/completion.json",
+        "sha256": "82386dbdc49935e7c10e4fb5a62a0e11ca0626d350bfa9670ad7f7ada801b509"
+      },
+      "output_QA_completion_ref": {
+        "path": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/output_qa_01/completion.json",
+        "sha256": "1abcaea55806785bcf74b8d4dc7a0b0fa27b89f97eaf5a34a1654c96db23ab5d"
+      }
+    },
+    "source_metrics_exposed_first_time": true,
+    "proxy_is_not_highlight_or_ORDINARY_gold": true,
+    "actual_online_improvement": "UNKNOWN",
+    "old_failed_gates_changed": false,
+    "production_admitted": false,
+    "no_fixed40_426_or_package_started": true
+  },
+  "bindings": {
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/cpu_acceptance_confirm.json": "79364119f653e3cc22f75d0034d09c2207ad910cf7e600a7847f8e762c178fcf",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/confirm/B0/input_qa_01/completion.json": "692eb264bc88b2abcab8a41cec1dfb446234947f6538b3767e0a21d59fbe5df9",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/confirm/B0/gpu_01/completion.json": "cc3919a98b53681e824d584e0ab6892cb39e1b1ef0709b2e700e225b013a632e",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/confirm/B0/replay_01/completion.json": "27a8e4659c6e42d62330a703dcf2880579b51120e2282ec0ce6de6e55f1668ca",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/gpu_admission_confirm_B0.json": "6d14acfc95f13f4d793c07133ac212b22fdd30a095e1ae785d6040cd68c1f965",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/confirm/B0/gpu_01/attempts.jsonl": "05a56e2957cf1a00b8ec1870cab3435a158d16f5b7a6fde63aa377cae080635b",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/confirm/B0/gpu_01/model_identity.json": "4284e9742ce7e7b2a70a3e0b2563121be23021d1f3298a229707b42e583b6877",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/recall_role_fresh4_b0_20261015_v1.resource.json": "a87478c58a3ceb8672d89dddd2a51f9bcb6e270509078841ca160223e0eb3df3",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/confirm/VERIFY/cpu_01/completion.json": "070f6b6a8ddc826b3455e4cbe8db27342e4a3775624cfacccf976d0c13cb1662",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/confirm/VERIFY/input_qa_01/completion.json": "f33091df236b3048bcda77a3eaa63b697f5170664f2248196511323a56660f30",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/confirm/VERIFY/gpu_01/completion.json": "eea178ffc0972bc992acefaa91d64c2143ef7ba35a348dfc1e144540355283ea",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/confirm/VERIFY/replay_01/completion.json": "276d368b1ec8cca7687da94203caeacc75366a566385abf51ab50d7ce33fd0aa",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/gpu_admission_confirm_VERIFY.json": "79fb97d5849f35fb2746c58317dc00c1ae492e67e7acf3162667d1e16a6df2ab",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/confirm/VERIFY/gpu_01/attempts.jsonl": "485f656068e9e00c87943bf9ed38ce13c34c506679fa7939b85e31bfd2f0477d",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/confirm/VERIFY/gpu_01/model_identity.json": "4284e9742ce7e7b2a70a3e0b2563121be23021d1f3298a229707b42e583b6877",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/recall_role_fresh4_verify_20261015_v1.resource.json": "9243dad0b5e09311a5c2a768d2190399ff2ea006fc6dceb49aad46616ef564a5",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/cpu_01/completion.json": "efa775ea6eb11a19912abee31575dc22532731b696fb1948d7c461044b61123e",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/input_qa_01/completion.json": "82386dbdc49935e7c10e4fb5a62a0e11ca0626d350bfa9670ad7f7ada801b509",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/gpu_01/completion.json": "53b97e13fd5956a13c820f37f6258d55b192160171ae5a0e18200b1e7389ae59",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/output_qa_01/completion.json": "1abcaea55806785bcf74b8d4dc7a0b0fa27b89f97eaf5a34a1654c96db23ab5d",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/gpu_admission_confirm_POSITIVE.json": "ce86fede2f665b0e4e3d2b6ce1006c0fd9bc394d6016df429c4d5ca8e257f768",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/gpu_01/attempts.jsonl": "f9085dbfff8a6544b533ddc73be1dccfc0d184b62669ae30ccb1da097fa0071a",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/POSITIVE/gpu_01/model_identity.json": "45db6efdec71df744dd1d707fd80ad1dbb64110b94c9865742224dd845a4a09b",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/recall_role_fresh4_admission_20261015_v1.resource.json": "862005da05555000cc49426871473ac93e32a44d0b560ede0b8e84f6bf37d965",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/confirm/inputs_01/completion.json": "0857590a476df0f987ac8d3fae2b6a67be3b1da00cc3c46b375e58bdfea0de50",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/confirm/chain_01/completion.json": "90aa6eadf8dfb1d6ed11a870468e74f740ef66cc52dfdff1196423e721b695a1",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/confirm/comparison_01/result.json": "dc7237b9bed3a513b48492f8169d204279370d807454cd310657a07a32f83d67",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/positive_fresh_registration.json": "5261f403ebb9dbebce47085c91ae7580f0465952c45493335689c5482c0c6350",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/protocol.json": "c2e2b7a47e511703ca30ddb57a27dc84e5584c605cac8013ae4cdd1c8ab2f149",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/registration_confirm.json": "090ec76fd703b9f87b747c30278346ba87059e3a526969f9eb97d8d437714b34",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/selection_before_new_confirmation.json": "09fd81cf192b6d08cc46455dc8a90ef0e042be98e2e52b687ccc571f53a7a57b",
+    "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1/fresh_01/reference_01/completion.json": "857d46c69000c27f58f7dbfd67b1a3b940e8f986dd0c08a8286ac8b767aa11f3"
+  }
+}

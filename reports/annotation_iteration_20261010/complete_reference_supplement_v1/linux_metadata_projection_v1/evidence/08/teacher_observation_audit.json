@@ -1,0 +1,42 @@
+{
+  "status": "PASS_ROOT_ACTUAL_COMPLETE_CLEAN_TEACHER_WINDOW_SUPPLY_SEMANTIC_REFERENCE_PENDING",
+  "utc": "2026-10-10T18:43:08.260686+00:00",
+  "window_id": "WxtbjNsCQ8A:SLOT6:0",
+  "original_pngs_delivered": 64,
+  "effective_pngs_delivered": 8,
+  "native_video_delivered": true,
+  "tool_issues": [],
+  "proposal_geometry_identity_issues": [],
+  "actual_pair_tools": 181,
+  "pair_audit": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call03\\audit.json",
+    "sha256": "9e74decfb7cbda30b5686cab5a1d83e7f6f9f561848577029343d5c36467c834"
+  },
+  "terminal": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call03\\terminal.json",
+    "sha256": "b2ce6e8a54a6d49e4100e6944dd349e1e349d1ab7367aa45778571e29d3c1b7c"
+  },
+  "raw": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call03\\stream.jsonl",
+    "sha256": "d18426d246238194e8b4ed4e92aedf9565bcb4e214e3315f3cf667aa7ff70562"
+  },
+  "freeze": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call03\\freeze.json",
+    "sha256": "97d153cc07bdb5ec240c02c5934a6deb3b9409a6cf1e6cb9be01594d7c6832f7"
+  },
+  "proposal": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call03\\w08_proposal.json",
+    "sha256": "240973e95df9db3486e0829cf875cc13e9cb29a0c483ba4a3c8f7b0f2d4917af"
+  },
+  "program_bound_facts": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call03\\w08_program_bound_facts.json",
+    "sha256": "e6d49d3c9c4352267f08bd8dd75ea188dc3dbdbdf7970393174764ae91ed7e73"
+  },
+  "actual_CLI_status": "SUCCESS",
+  "global_CLI": 29,
+  "actual_pair_wall_seconds": 2744.125,
+  "cash_cost": "UNKNOWN_NOT_ZERO",
+  "teacher_semantics_not_truth": true,
+  "training_admitted": false,
+  "new_optimizer_updates": 0
+}

@@ -1,0 +1,110 @@
+{
+  "status": "CLOSED_BOUNDED_W01_DIAGNOSTICS_NOT_TRAINING_ADMISSION",
+  "utc": "2026-10-10T08:55:35.870111+00:00",
+  "full_diagnostic_sha256": "66af68a8d9e4ee90f0a2bb42e892f80654711ca4107403c23a670e7fed4b0f97",
+  "single_frame": {
+    "actual_model": "gemini-3.8-flash-high",
+    "stream_sha256": "f75b13c89269aeb5f815bde2fb682e0c72de0cce0f904137aa72e38137c3f052",
+    "terminal": {
+      "started_utc": "2026-10-10T08:46:32.906162+00:00",
+      "finished_utc": "2026-10-10T08:47:06.234914+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 33.32800000000134,
+      "exit_zero_not_acceptance": true,
+      "output_exists": true,
+      "output_sha256": "7d7a1f74fce496f15049dead7e43fc0439292ddc364455edb0ee729f8ee5abad",
+      "cash_cost": "UNKNOWN_NOT_ZERO"
+    },
+    "declared_max_seconds": 180,
+    "actual_wall_seconds_with_startup_and_shutdown": 33.32800000000134,
+    "strict_wall_budget_met": true,
+    "print_timeout_not_a_hard_wall_deadline": true,
+    "actual_PNG_read_count": 1,
+    "tool_issues": [],
+    "actual_result_status": "SUCCESS",
+    "actual_result_usage": {
+      "input_tokens": 26585,
+      "output_tokens": 1695,
+      "thinking_tokens": 1136,
+      "cache_read_tokens": 20370,
+      "total_tokens": 28280
+    },
+    "output_sha256": "7d7a1f74fce496f15049dead7e43fc0439292ddc364455edb0ee729f8ee5abad",
+    "output": {
+      "actual_image_read": true,
+      "visible_subject": "一名留有黑色刘海短发的年轻男子，面部朝向画面前方偏右，视线偏向画面左侧，身着一件带有领口图案的深灰色圆领T恤。",
+      "subtitle_text": "siempre puedes ignorar a esas personas",
+      "subtitle_legibility": "clear",
+      "visible_details": [
+        "人物身后的浅色墙面上挂着一座木质挂钟，表盘可见指针与刻度，下方标有“REGULATOR”字样局部",
+        "画面底部有一行清晰可读的浅黄色带黑边字幕，文字为“siempre puedes ignorar a esas personas”",
+        "人物T恤胸前隐约可见圆形红白边缘印花图案的一部分",
+        "画面右侧为室内墙壁转角及局部阴影区域"
+      ],
+      "uncertainties": [
+        "单张静态图像无法确认该字幕是否为画面中人物所说还是画外音",
+        "无法从单帧确定人物具体年龄、身份背景及动作发展过程",
+        "T恤上的完整印花图案未完整露出"
+      ]
+    },
+    "cash_cost": "UNKNOWN_NOT_ZERO",
+    "semantic_correctness": "NOT_CERTIFIED_BY_TOOL_COMPLETION",
+    "root_previously_observed_subject_and_subtitle_match": true
+  },
+  "fixed_second_half32": {
+    "actual_model": "gemini-3.8-flash-high",
+    "stream_sha256": "306e5f0a0a1c200571ab6fb723e7846c48610fb25176507c1c978dc6ad955c77",
+    "terminal": {
+      "started_utc": "2026-10-10T08:50:22.639319+00:00",
+      "finished_utc": "2026-10-10T08:54:35.019844+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 252.38999999999942,
+      "exit_zero_not_acceptance": true,
+      "output_exists": false,
+      "output_sha256": null,
+      "cash_cost": "UNKNOWN_NOT_ZERO"
+    },
+    "declared_max_seconds": 240,
+    "actual_wall_seconds_with_startup_and_shutdown": 252.38999999999942,
+    "strict_wall_budget_met": false,
+    "print_timeout_not_a_hard_wall_deadline": true,
+    "actual_PNG_read_count": 32,
+    "tool_issues": [],
+    "actual_result_status": "SUCCESS",
+    "actual_result_usage": {
+      "input_tokens": 186172,
+      "output_tokens": 9998,
+      "thinking_tokens": 6776,
+      "cache_read_tokens": 1260744,
+      "total_tokens": 196170
+    },
+    "output_sha256": null,
+    "output": null,
+    "cash_cost": "UNKNOWN_NOT_ZERO",
+    "semantic_correctness": "NOT_CERTIFIED_BY_TOOL_COMPLETION",
+    "fact_geometry_issues": [
+      "EXPECTED_32_FACTS_MISSING"
+    ],
+    "F37_root_previously_observed_subtitle_match": false,
+    "F37_observation": null,
+    "subtitle_literal_disagreements_with_independent": [],
+    "agreement_is_not_gold": true
+  },
+  "original_preregistration_deviation_preserved": true,
+  "post_stop_distinct_windows": 1,
+  "conservative_new_model_task_count": 3,
+  "new_independent_full_review_records": 1,
+  "new_optimizer_updates": 0,
+  "new_426_calls": 0,
+  "actual_new_CLI_invocations": 6,
+  "pre_inference_connection_failures": 2,
+  "model_turns_with_inference_including_original_interruption": 4,
+  "original_STOP_sha256": "23aa541da75975bccb89f5129cf6704f8f29a541f37e8293be37de27201f2db0",
+  "original_STOP_unchanged": true,
+  "current_37_66_zip_sha256": "07730c9e02e68d1a1ce54e7ef5a8aa616346cf8f2f8d78426ed36bc3eb481496",
+  "new_official_score": null,
+  "pro_used_or_reserved": 6,
+  "pro_remaining": 2,
+  "interpretation": "Single-frame success is evidence of this fresh-context recognition only. Fixed-half results require actual geometry and factual review, and neither establishes unique causation or dataset gold.",
+  "training_admitted": false
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "CPU_EXISTING_PROCESS_PEAK_RESOURCE_ENVELOPE_V2",
+  "status": "ACTUAL_EXISTING_PREPARE_WHOLE_PROCESS_PEAK_REUSED_AS_CONSERVATIVE_OVERHEAD",
+  "actual_peak_rss_kib": 2561208,
+  "actual_CPU_peak_rss_bytes": 2622676992,
+  "conservative_overhead_bound_bytes": 2622676992,
+  "actual_proof_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/local_boundary_v4/dev/cpu_01/CH_L37YS_W001.S00.start/cpu_input.json",
+    "sha256": "c9a2e824f94f21cb11973fd7c4a8d1bbee7d0649e87429c1eeda7b62ec099767",
+    "bytes": 26912
+  },
+  "CPU_completion_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/local_boundary_v4/dev/cpu_01/completion.json",
+    "sha256": "bef397627a786c33a33afe2df61e529893add09781fcf88b7442b1a27dbd9a2a",
+    "bytes": 29856
+  },
+  "CPU_proof_count": 37,
+  "isolated_import_peak_observed": false,
+  "whole_process_peak_includes_import_and_previous_input_allocations": true,
+  "source_specific_union_RGB_tensor_and_codec_memory_must_be_reserved_separately": true,
+  "measured_production_peak": false,
+  "new_import_model_processor_or_input_calls": 0
+}

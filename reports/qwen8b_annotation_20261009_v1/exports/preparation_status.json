@@ -1,0 +1,429 @@
+{
+  "utc": "2026-10-09T11:04:38.354669+00:00",
+  "expected_sources": 50,
+  "expected_spatial_frames": 600,
+  "expected_ratio_targets": 1200,
+  "gemini_accepted_sources": 50,
+  "temporal_candidate_events": 600,
+  "doubao_drafted_sources": 17,
+  "doubao_reviewed_sources": 1,
+  "reviewed_crop_rows": 24,
+  "weak_crop_sft_rows": {
+    "train": 13,
+    "validation": 0
+  },
+  "quarantined_rows": 11,
+  "source_status": [
+    {
+      "source_id": "-esJrBWj2d8",
+      "split": "validation",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "0tmA_C6XwfM",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": true,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "37rzWOQsNIw",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": true,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "3eYKfiOEJNs",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": true,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "4wU_LUjG5Ic",
+      "split": "validation",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "91IHQYk1IQM",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": true,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "98MoyGZKHXc",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": true,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "_xMr-HKMfVA",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": true,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "akI8YFjEmUw",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "AwmHb44_ouw",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "b626MiF1ew4",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "Bhxk-O1Y7Ho",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "byxOvuiIJV0",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "cjibtmSLxQ4",
+      "split": "validation",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "E11zDS9XGzg",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": true,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "EE-bNr36nyA",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": true,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "eQu1rNs0an0",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": true,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "EYqVtI9YWJA",
+      "split": "validation",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "fWutDQy1nnY",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "GsAD1KT1xo8",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": true,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "gzDbaEs1Rlg",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "Hl-__g2gn_A",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": true,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "HT5vyqe0Xaw",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": true,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "i3wAGJaaktw",
+      "split": "validation",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "iVt07TCkFM0",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "J0nA4VgnoCo",
+      "split": "validation",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "jcoYJXDG9sw",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "JgHubY5Vw3Y",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": true,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "JKpqYvAdIsw",
+      "split": "validation",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "kLxoNp-UchI",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "LRw_obCPUt0",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "NyBmCxDoHJU",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": true,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "oDXZc0tZe04",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "PJrm840pAUI",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": true,
+      "doubao_review": true,
+      "accepted_crop_targets": 13
+    },
+    {
+      "source_id": "qqR6AEXwxoQ",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "RBCABdttQmI",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "Se3oxnaPsz0",
+      "split": "validation",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "sTEELN-vY30",
+      "split": "validation",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "uGu_10sucQo",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "vdmoEJ5YbrQ",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "VuWGsYPqAX8",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": true,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "WG0MBPpPC6I",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "WxtbjNsCQ8A",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": true,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "XkqCExn6_Us",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "xmEERLqJ2kU",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "xwqBXPGE9pQ",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "xxdtq8mxegs",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "XzYM3PfTM4w",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "Yi4Ij2NM7U4",
+      "split": "validation",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    },
+    {
+      "source_id": "z_6gVvQb2d0",
+      "split": "train",
+      "gemini": true,
+      "doubao_draft": false,
+      "doubao_review": false,
+      "accepted_crop_targets": 0
+    }
+  ],
+  "actual_student_training_started": false,
+  "target_contract": "NEW_EXPLICIT_PIXEL_BOX_TARGET; existing center-only production decoder is not modified or directly compatible",
+  "complete_temporal_sft_rows": 0,
+  "temporal_alignment_quarantined_sources": [
+    "37rzWOQsNIw"
+  ],
+  "limitations": [
+    "Gemini candidates are not complete temporal targets or negative labels.",
+    "Teacher-reviewed crop labels are weak reference, not human gold.",
+    "Dataset source identity audit does not exclude semantic/reencoded overlap."
+  ]
+}

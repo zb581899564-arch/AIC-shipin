@@ -1,0 +1,94 @@
+{
+  "status": "COMPLETE_BOUNDED_REFERENCE_AND_EXACT_PLAN_G0_NO_426",
+  "utc": "2026-10-09T03:38:42.322823+00:00",
+  "decision_authority": "Host decision under user authorization, informed by Chrome research project GPT-6 Pro slot5",
+  "pro_reply_sha256": "c102f3970b3451b6b93f59f4aec15d889c3de6f5a437b51bfd8bf282002d14b6",
+  "final_decision_sha256": "0b13bd25a5640cf7cc740616f3a8453d0a717a79571e0df9c29826fd35e6e2c5",
+  "evidence": [
+    {
+      "file": "reference-qualification-report.json",
+      "bytes": 7502,
+      "sha256": "d34fc42cb93d42160acd01633e9738a22110a938b15ea86c0b2eff6b80c4c4c3"
+    },
+    {
+      "file": "plan-metadata-g0-readonly.json",
+      "bytes": 9652,
+      "sha256": "22868f31e89664b3c4d5b98901eba917894103d1e8988f732a7a1dfd9cbac541"
+    },
+    {
+      "file": "implementation-evidence-bindings.json",
+      "bytes": 1148,
+      "sha256": "c8f40a400ba4a5207da1e02620dded9c5208747d7a41b7dbd7fa6a746cc1dd11"
+    },
+    {
+      "file": "implementation-notes.md",
+      "bytes": 2650,
+      "sha256": "90122d35dd3cb0eb3cac363624ac1a4a25805a3dd1a9128a6c28356edb834bc1"
+    },
+    {
+      "file": "independent-g0-verification.json",
+      "bytes": 34427,
+      "sha256": "cfd12de62c518604b55e8a1a159fc2fec62e4c4a56b9285930012952617e2dd5"
+    },
+    {
+      "file": "fallback-registration-readonly.json",
+      "bytes": 878,
+      "sha256": "de214fa561297048c592ee5e48a5e8b3be760d6705b01f975fdc1e3751e92bc3"
+    },
+    {
+      "file": "input_scope.json",
+      "bytes": 6377,
+      "sha256": "93091690c7506eae2091dc7e3c346c768584c079bdf2d2c31701f14f67dc0f30"
+    },
+    {
+      "file": "reference_qualification.jsonl",
+      "bytes": 10893,
+      "sha256": "bd06df2bad71b2322180dae0b6a77b22c335827c4e8d924e1184cd9ff29bcfa2"
+    },
+    {
+      "file": "source_exposure.json",
+      "bytes": 2633,
+      "sha256": "87a13f64da347238fba68aa8c15d22828992bcda6f356038c33b89a8adeb2799"
+    },
+    {
+      "file": "two_window_plan.json",
+      "bytes": 71876,
+      "sha256": "e74a7767014ac71c108cb3f706d7196699bb18f6116f706408ce1bf9a42065fa"
+    },
+    {
+      "file": "cpu_acceptance.json",
+      "bytes": 2038,
+      "sha256": "24e7ced944898ad4c0a97b32b891de2092f66c04629c66f3b355fd0a6b14cb1a"
+    },
+    {
+      "file": "final-decision.md",
+      "bytes": 4363,
+      "sha256": "0b13bd25a5640cf7cc740616f3a8453d0a717a79571e0df9c29826fd35e6e2c5"
+    }
+  ],
+  "developer_records": 104,
+  "source_groups": 96,
+  "original_windows": 112,
+  "affected_records": 8,
+  "affected_groups": 8,
+  "planned_changed_requests": 16,
+  "reference_status": "NO_NEW_AUDITABLE_ENTRY_IN_FIXED_WHITELIST",
+  "reference_established": false,
+  "quality": "UNKNOWN",
+  "new_official_score": "UNKNOWN",
+  "new_model_calls": 0,
+  "new_decoder_calls": 0,
+  "new_optimizer_updates": 0,
+  "new_GPU_charge_seconds": 0,
+  "new_GPU_job_started": false,
+  "new_remote_launcher": false,
+  "new_remote_writes": false,
+  "new_426_ZIP": false,
+  "consumer_processor_admission": "NOT_RUN_NOT_NEEDED_FOR_CLOSED_METADATA_SCOPE",
+  "old_costs_and_offset": "UNCHANGED_NOT_RECOUNTED",
+  "historical_source_lock_schemas_protected": [
+    "files",
+    "production_files"
+  ],
+  "unregistered_assets": "UNKNOWN_NOT_GLOBALLY_SCANNED"
+}

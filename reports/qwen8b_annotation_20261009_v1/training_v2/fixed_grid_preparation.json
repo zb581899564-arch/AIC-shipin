@@ -1,0 +1,393 @@
+{
+  "status": "SELECTED_LABEL_INDEPENDENT_FIXED_GRID_HUMAN_TARGETS",
+  "human_evidence": {
+    "tsv_member_sha256": "13972d16f2f05016dcbb4a62563cc74db98e829facbd8151cd0276cf47b4bd98",
+    "mat_member_sha256": "6a9d2a0cee7f577736cd38ba3cdb746f86635012791eaaec933480ec00eb9d36",
+    "tsv_annotations": 1000,
+    "workers_per_source": 20,
+    "tsv_mat_worker_vectors_exact": true,
+    "mat_mean_recomputed_exact": true
+  },
+  "accepted_sources": 48,
+  "excluded_sources": [
+    "Se3oxnaPsz0",
+    "WG0MBPpPC6I"
+  ],
+  "source_groups": {
+    "train": 39,
+    "validation": 9
+  },
+  "windows": {
+    "train": 314,
+    "validation": 89
+  },
+  "native_sampled_frames": 6047,
+  "distinct_targets": 65,
+  "target_histogram": {
+    "20": 5,
+    "21": 29,
+    "22": 62,
+    "23": 109,
+    "24": 137,
+    "25": 171,
+    "26": 191,
+    "27": 213,
+    "28": 248,
+    "29": 207,
+    "30": 216,
+    "31": 197,
+    "32": 192,
+    "33": 219,
+    "34": 199,
+    "35": 183,
+    "36": 215,
+    "37": 201,
+    "38": 178,
+    "39": 184,
+    "40": 198,
+    "41": 180,
+    "42": 166,
+    "43": 151,
+    "44": 156,
+    "45": 153,
+    "46": 153,
+    "47": 132,
+    "48": 144,
+    "49": 130,
+    "50": 126,
+    "51": 107,
+    "52": 98,
+    "53": 85,
+    "54": 77,
+    "55": 62,
+    "56": 69,
+    "57": 63,
+    "58": 61,
+    "59": 62,
+    "60": 49,
+    "61": 45,
+    "62": 30,
+    "63": 28,
+    "64": 21,
+    "65": 21,
+    "66": 21,
+    "67": 20,
+    "68": 14,
+    "69": 7,
+    "70": 11,
+    "71": 14,
+    "72": 7,
+    "73": 5,
+    "74": 4,
+    "75": 4,
+    "76": 4,
+    "78": 3,
+    "79": 1,
+    "80": 1,
+    "81": 2,
+    "83": 3,
+    "86": 1,
+    "87": 1,
+    "90": 1
+  },
+  "sampling_uses_label_changes": false,
+  "sampling_uses_gemini_events": false,
+  "selected_targets": "Exact sum of twenty worker ratings at each sampled native frame",
+  "previous_label_change_sampled_variants_selected": false,
+  "all_original_candidates_preserved": true,
+  "source_reports": [
+    {
+      "source_id": "-esJrBWj2d8",
+      "samples": 116,
+      "reused_native_pngs": 0,
+      "new_native_pngs": 116
+    },
+    {
+      "source_id": "0tmA_C6XwfM",
+      "samples": 71,
+      "reused_native_pngs": 0,
+      "new_native_pngs": 71
+    },
+    {
+      "source_id": "37rzWOQsNIw",
+      "samples": 96,
+      "reused_native_pngs": 94,
+      "new_native_pngs": 2
+    },
+    {
+      "source_id": "3eYKfiOEJNs",
+      "samples": 98,
+      "reused_native_pngs": 0,
+      "new_native_pngs": 98
+    },
+    {
+      "source_id": "4wU_LUjG5Ic",
+      "samples": 84,
+      "reused_native_pngs": 82,
+      "new_native_pngs": 2
+    },
+    {
+      "source_id": "91IHQYk1IQM",
+      "samples": 56,
+      "reused_native_pngs": 54,
+      "new_native_pngs": 2
+    },
+    {
+      "source_id": "98MoyGZKHXc",
+      "samples": 94,
+      "reused_native_pngs": 0,
+      "new_native_pngs": 94
+    },
+    {
+      "source_id": "_xMr-HKMfVA",
+      "samples": 75,
+      "reused_native_pngs": 73,
+      "new_native_pngs": 2
+    },
+    {
+      "source_id": "akI8YFjEmUw",
+      "samples": 67,
+      "reused_native_pngs": 65,
+      "new_native_pngs": 2
+    },
+    {
+      "source_id": "AwmHb44_ouw",
+      "samples": 177,
+      "reused_native_pngs": 173,
+      "new_native_pngs": 4
+    },
+    {
+      "source_id": "b626MiF1ew4",
+      "samples": 118,
+      "reused_native_pngs": 0,
+      "new_native_pngs": 118
+    },
+    {
+      "source_id": "Bhxk-O1Y7Ho",
+      "samples": 226,
+      "reused_native_pngs": 220,
+      "new_native_pngs": 6
+    },
+    {
+      "source_id": "byxOvuiIJV0",
+      "samples": 78,
+      "reused_native_pngs": 74,
+      "new_native_pngs": 4
+    },
+    {
+      "source_id": "cjibtmSLxQ4",
+      "samples": 324,
+      "reused_native_pngs": 306,
+      "new_native_pngs": 18
+    },
+    {
+      "source_id": "E11zDS9XGzg",
+      "samples": 256,
+      "reused_native_pngs": 0,
+      "new_native_pngs": 256
+    },
+    {
+      "source_id": "EE-bNr36nyA",
+      "samples": 50,
+      "reused_native_pngs": 48,
+      "new_native_pngs": 2
+    },
+    {
+      "source_id": "eQu1rNs0an0",
+      "samples": 83,
+      "reused_native_pngs": 81,
+      "new_native_pngs": 2
+    },
+    {
+      "source_id": "EYqVtI9YWJA",
+      "samples": 100,
+      "reused_native_pngs": 94,
+      "new_native_pngs": 6
+    },
+    {
+      "source_id": "fWutDQy1nnY",
+      "samples": 293,
+      "reused_native_pngs": 283,
+      "new_native_pngs": 10
+    },
+    {
+      "source_id": "GsAD1KT1xo8",
+      "samples": 73,
+      "reused_native_pngs": 71,
+      "new_native_pngs": 2
+    },
+    {
+      "source_id": "gzDbaEs1Rlg",
+      "samples": 145,
+      "reused_native_pngs": 0,
+      "new_native_pngs": 145
+    },
+    {
+      "source_id": "Hl-__g2gn_A",
+      "samples": 122,
+      "reused_native_pngs": 120,
+      "new_native_pngs": 2
+    },
+    {
+      "source_id": "HT5vyqe0Xaw",
+      "samples": 162,
+      "reused_native_pngs": 158,
+      "new_native_pngs": 4
+    },
+    {
+      "source_id": "i3wAGJaaktw",
+      "samples": 79,
+      "reused_native_pngs": 73,
+      "new_native_pngs": 6
+    },
+    {
+      "source_id": "iVt07TCkFM0",
+      "samples": 53,
+      "reused_native_pngs": 51,
+      "new_native_pngs": 2
+    },
+    {
+      "source_id": "J0nA4VgnoCo",
+      "samples": 293,
+      "reused_native_pngs": 275,
+      "new_native_pngs": 18
+    },
+    {
+      "source_id": "jcoYJXDG9sw",
+      "samples": 100,
+      "reused_native_pngs": 98,
+      "new_native_pngs": 2
+    },
+    {
+      "source_id": "JgHubY5Vw3Y",
+      "samples": 72,
+      "reused_native_pngs": 70,
+      "new_native_pngs": 2
+    },
+    {
+      "source_id": "JKpqYvAdIsw",
+      "samples": 77,
+      "reused_native_pngs": 59,
+      "new_native_pngs": 18
+    },
+    {
+      "source_id": "kLxoNp-UchI",
+      "samples": 65,
+      "reused_native_pngs": 63,
+      "new_native_pngs": 2
+    },
+    {
+      "source_id": "LRw_obCPUt0",
+      "samples": 131,
+      "reused_native_pngs": 125,
+      "new_native_pngs": 6
+    },
+    {
+      "source_id": "NyBmCxDoHJU",
+      "samples": 95,
+      "reused_native_pngs": 0,
+      "new_native_pngs": 95
+    },
+    {
+      "source_id": "oDXZc0tZe04",
+      "samples": 191,
+      "reused_native_pngs": 187,
+      "new_native_pngs": 4
+    },
+    {
+      "source_id": "PJrm840pAUI",
+      "samples": 138,
+      "reused_native_pngs": 0,
+      "new_native_pngs": 138
+    },
+    {
+      "source_id": "qqR6AEXwxoQ",
+      "samples": 135,
+      "reused_native_pngs": 133,
+      "new_native_pngs": 2
+    },
+    {
+      "source_id": "RBCABdttQmI",
+      "samples": 183,
+      "reused_native_pngs": 181,
+      "new_native_pngs": 2
+    },
+    {
+      "source_id": "sTEELN-vY30",
+      "samples": 75,
+      "reused_native_pngs": 0,
+      "new_native_pngs": 75
+    },
+    {
+      "source_id": "uGu_10sucQo",
+      "samples": 84,
+      "reused_native_pngs": 0,
+      "new_native_pngs": 84
+    },
+    {
+      "source_id": "vdmoEJ5YbrQ",
+      "samples": 165,
+      "reused_native_pngs": 163,
+      "new_native_pngs": 2
+    },
+    {
+      "source_id": "VuWGsYPqAX8",
+      "samples": 109,
+      "reused_native_pngs": 0,
+      "new_native_pngs": 109
+    },
+    {
+      "source_id": "WxtbjNsCQ8A",
+      "samples": 133,
+      "reused_native_pngs": 131,
+      "new_native_pngs": 2
+    },
+    {
+      "source_id": "XkqCExn6_Us",
+      "samples": 94,
+      "reused_native_pngs": 92,
+      "new_native_pngs": 2
+    },
+    {
+      "source_id": "xmEERLqJ2kU",
+      "samples": 223,
+      "reused_native_pngs": 219,
+      "new_native_pngs": 4
+    },
+    {
+      "source_id": "xwqBXPGE9pQ",
+      "samples": 117,
+      "reused_native_pngs": 103,
+      "new_native_pngs": 14
+    },
+    {
+      "source_id": "xxdtq8mxegs",
+      "samples": 73,
+      "reused_native_pngs": 0,
+      "new_native_pngs": 73
+    },
+    {
+      "source_id": "XzYM3PfTM4w",
+      "samples": 56,
+      "reused_native_pngs": 52,
+      "new_native_pngs": 4
+    },
+    {
+      "source_id": "Yi4Ij2NM7U4",
+      "samples": 203,
+      "reused_native_pngs": 0,
+      "new_native_pngs": 203
+    },
+    {
+      "source_id": "z_6gVvQb2d0",
+      "samples": 139,
+      "reused_native_pngs": 135,
+      "new_native_pngs": 4
+    }
+  ],
+  "artifacts": {
+    "temporal_fixed_train.jsonl": "3eb93e2585679f0c24d71b5d13ece101b79aea53b15671948362581d116db62f",
+    "temporal_fixed_validation.jsonl": "fdcbfb1abda89ed29e016fa3973aeef4cedd16348248e57c97bcbde202c1b76a",
+    "fixed_grid_samples.jsonl": "3d1cd6ea55dc009940bec3c89428d5dfece33df6b0317c5b4f4b8a96bcf92c1b"
+  }
+}

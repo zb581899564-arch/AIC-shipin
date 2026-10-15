@@ -1,0 +1,13 @@
+# 新reader-native terminal范围的短裁决
+
+支持独立事前登记 `NEW_PYAV17_READER_NATIVE_TERMINAL_SCOPE`，用于本次同一PyAV17后续真实输入。它采用本次已保存压缩packet实际技术观测，不再要求reader-native终端等旧N/fps或旧另一reader的duration；这是明确更换新输入的技术时钟权威，不是旧5个equality FAIL通过、旧clock被纠正或科学质量获胜。旧5失败、全部原观测/旧D8窗口与framekeys/boxes保持。当前仍非prepare/model/package准入。
+
+信息范围可接受：固定426 source的字节、PTS、尺寸、packet duration是自动原帧实现所需技术元数据；未读预测/标签/评分或语义视频内容，不外传媒体，不训练/test伪标签或逐条选择输出。统一同一predicate应用全部426，不能只对已知5个ID给例外，不能把geometry技术差异当改高光规则依据。旧D8已精确native membership，KEEP/UNKNOWN按其原normalized recipe端点实现；新coreordinal→nativecut只服务refiner定位，VERIFY保原64 ordinals/pixelSHA，不能用新的physEnd顺便重采旧VERIFY输入。
+
+新metadata adapter应同时绑定原registration/完整clock/sourceSHA和本次terminal ref实际SHA。正常packet观测都在 `observations`：actual_source_sha256/source_SHA_read_bytes/video_stream/matching_packets/max_display_packet_pts_exact。旧5顶层是 `FAIL_PACKET_TERMINAL_WITNESS_NO_FALLBACK`，不是成功witnessschema；其n_frames/source身份必须从冻结registration与completion的video_id ref key一对一join，不臆造顶层字段。新对象另记reader-native候选、旧status/ref及新scope，不改旧terminal。exact重核单个match、same lastFRAME rawPTS/maxdisplayPTS、positive duration/size/payloadSHA、sourcebytesSHA；新end=(last-origin)+duration。不用旧N/fps、streamheader、epsilon或“平均fps duration”。
+
+首次源prepare的严格门应是：一次实际全frame decode的完整PTS/count/origin/geometry与旧证据逐项相同，真实last `Frame.duration`存在且positive，并在其actual timebase下exact等于所绑定packetduration。保实际解码器/library版本、原lastFramePTS、Frame.duration/timebase、packetref和计算过程，不能把packetduration赋到Frame.duration字段或宣称packet已有fullframe证明。随后普通processor、GPU输入等值及首次独立input/output replay各自完成，不能跳过。
+
+若Frame.duration为空/零或与packet不等，当前scope真实FAIL，保完整已生成PTS/RGB和失败，未开始的consumer不调用processor/model；不能转UNKNOWN/KEEP掩盖工程失败或重跑全426。最小接续先只读该失败源本次已保存Frame/packet/旧reader元数据，核timebase、field provenance、decoder版本及duration是否同一技术量。若发现明确代码/字段绑定bug，仅修独立新版本并重放已有元数据、恢复尚未完成阶段；不再次decode/packet-demux成功source。若实际量的差异仍存在，就没有当前scope通过理由。主控若提出另一个明确时钟权威，必须独立说明依据、事前冻结恢复范围及其未证明之处，原scope失败不改写；不能只因某个值更易通过就挑它。确需新增技术测量也限尚无合格证据的失败范围，先明确新目的，禁止自动全体重测。已有真实成功不重复，旧D8包不重封。
+
+这里未执行5个decode、再次packet读、processor、模型或生产。packet首测421PASS/5旧explicit-equality FAIL及03真实D8native零差均保持；新scope能否通过由后续首次实际frame测量决定。

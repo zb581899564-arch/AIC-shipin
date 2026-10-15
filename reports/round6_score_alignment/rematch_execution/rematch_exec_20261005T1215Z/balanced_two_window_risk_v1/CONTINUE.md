@@ -1,0 +1,18 @@
+# 唯一入口：balanced_two_window_risk_v1
+
+## 20261009 用户明确接受风险后的双窗均衡实验（实际2026-10-09T04:06:53.130391+00:00）
+
+用户最新明确要求按照讨论方案执行并打包ZIP，“本来我们就是在试的”。因此独立执行balanced_two_window_risk_v1，保留上一轮Pro/主控G0止步意见与所有历史STOP，不把用户接受风险说成独立质量证据或旧科学门通过。讨论已完成，本次不为知会再耗Pro，余3次。
+
+仅原恰好两窗且30<总域<60秒改为精确Fraction中点的等长两窗。原B8B/288adapter、B0 prompt、0..5 grammar/greedy/floor64/nativePTS/source97色彩白名单/16384input/256output/原像素预算保持。原B已训练，此路线新optimizer0、新32B/overview/空间模型0；不编造微调。新窗口、采样、时间选择独立实现，失败不转空、不补证据/裁段/并集或epsilon。
+
+当前stage=CPU_BALANCED_ACTUAL_INPUTS；完整实际owned命令[{'pid': 97515, 'ppid': 97514, 'pgid': 97514, 'command': '/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B balanced_two_window_risk_v1/bw_cpu.py', 'io': 'rchar: 6273376941\nwchar: 25939\nsyscr: 35822\nsyscw: 94\nread_bytes: 0\nwrite_bytes: 348160\ncancelled_write_bytes: 4096\n', 'open_files': ['pipe:[504941385]', '/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/balanced_two_window_risk_v1/inputs.cpu.log', '/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/balanced_two_window_risk_v1/inputs.cpu.log', '/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/baseline_a/m0_426_02/media/226.mp4']}]。身份仅本UTC快照，下次必须实核完整命令/-B/PPID/PGID/IO/fds。新计划prepared={'status': 'PASS_EXACT_USER_AUTHORIZED_BALANCED_WINDOW_PLAN', 'utc': '2026-10-09T04:02:45.193766+00:00', 'counts': {'nontest': {'records': 8, 'windows': 8, 'changed': 0}, 'developer': {'records': 104, 'windows': 112, 'changed': 16}, 'rematch': {'records': 426, 'windows': 521, 'changed': 116}}, 'old_V14_temporal_sha256': '178a6c7db101a216592cd271f5d61c080e4638cc9e324d10348387babfd31228', 'old_V14_time_calls_preserved': 521, 'new_model_calls': 0, 'new_optimizer_updates': 0}。NONTEST8原8窗全部exact引用；非测试104/96组/112窗中16变化真实新调用；完整426/521中116变化真实新调用、405原V14成功exact引用。这些是计划分母，完成数以各scope实际回执为准。当前scope={'nontest': {'read_utc': '2026-10-09T04:06:53.082069+00:00', 'fresh_done': 0, 'raw': 0, 'failures': 0, 'all_done_bound_sha': True, 'candidate_archives': []}, 'developer': {'read_utc': '2026-10-09T04:06:53.082254+00:00', 'fresh_done': 0, 'raw': 0, 'failures': 0, 'all_done_bound_sha': True, 'candidate_archives': []}, 'rematch': {'read_utc': '2026-10-09T04:06:53.099314+00:00', 'fresh_done': 0, 'raw': 0, 'failures': 0, 'all_done_bound_sha': True, 'candidate_archives': []}}。首真实CPU回放=None。已成功生成/已完成CPU回放只引用，不重跑；旧PCHIP/C/B边界/B1/D/Q/65CE/160及全部raw/UNKNOWN/旧成本不回写。
+
+锁SHA=None，冻结文件0，冻结全SHA=True，新done全部绑定SHA=True。真实GPU=NVIDIA RTX 6000 Ada Generation, 0 %, 182 MiB, 46068 MiB，disk剩188422418432bytes，共享active=None，ledger={'lines': 165, 'sha256': '4d1f46c4003adc7ef8bd994180d57cfd71b50e447e9db536b85912158216fb44', 'historical_offset': 7200}，费用回执={'developer': {'receipt': None, 'sha256': None, 'unique_terminal_match': None}, 'rematch': {'receipt': None, 'sha256': None, 'unique_terminal_match': None}}。活跃作业费用待自然终态追加，不能记0；旧7200offset/原空间18723.876秒/V14全部真实训练推理费用保留。CPU SHA/顺序解码/模型加载/独立回放或队列可能合法，不据GPU闲/旧PID判卡死。
+
+根completion=None；工程failure=None。后台NT8完整11strict→开发16真实生成及独立CPU→426的116真实生成/405exact并以521完整分母核验→全部新请求独立CPU→完整原空间源场exact→426全11strict/ZIP/独立final/全部GPU唯一终态账本。无独立质量参考，弱方向不作为本次用户接受风险的阻止条件，不据结果改配方；新官网分UNKNOWN，可能低于旧最佳37.63。仅最终完整真实验收和GitHub筛选同步后交付。包留Linux，不自动回传或官网提交。
+
+每15分钟静默接续，只写项目；工程异常保存原trace/raw/成功后独立新版本修复，不改冻结文件或重复launcher。共享任务/锁/连接/代理/服务保持，Mac在线不参与，既有小量项目控制直SSH授权保持；新model/data/批量产物/ZIP大流量仍须方向字节链路机场消耗说明和许可。不读100confirm、不手看复赛调参、不本地复刻官网分。仅允许GitHub core/协议/聚合/真实包路径大小SHA，不导出raw/逐帧/完整讨论/弱标签/整source_lock/resume/model/ZIP。
+
+<!-- END_CURRENT_BALANCED_TWO_WINDOW_RISK -->
+

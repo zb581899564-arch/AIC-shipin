@@ -1,0 +1,25 @@
+{
+  "status": "PASS_REAL_IMAGE_BATCH_PADDING_MASKING_AND_STRICT_OUTPUT_CHECKS",
+  "batch_shape": [
+    2,
+    1563
+  ],
+  "real_images": 20,
+  "assistant_roundtrip_exact": true,
+  "all_tensors_CPU": true,
+  "CUDA_initialized": false,
+  "invalid_temporal_cases_rejected": 6,
+  "invalid_crop_cases_rejected": 3,
+  "versions": {
+    "torch": "2.4.0+cu118",
+    "transformers": "4.57.6",
+    "peft": null,
+    "accelerate": null,
+    "Pillow": "11.3.0",
+    "scipy": "1.13.1"
+  },
+  "runtime_scope": "Windows CPU data preflight; Linux training runtime is checked separately",
+  "model_weights_loaded": false,
+  "optimizer_started": false,
+  "echo_evaluation_is_fixture_not_student_performance": true
+}

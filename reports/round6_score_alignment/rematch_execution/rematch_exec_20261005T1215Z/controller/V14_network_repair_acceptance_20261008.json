@@ -1,0 +1,130 @@
+{
+  "status": "PASS_SCOPED_WINDOWS_HKG_DERP_REPAIR_ACTUAL_SSH_RESTORED",
+  "utc": "2026-10-08T14:57:58.953837+00:00",
+  "cause": "Fake-IP DERP DNS and Tailscale default-interface binding to the local proxy interface prevented the TLS relay connection; same-IP physical-WLAN TLS succeeded.",
+  "installed_tailscale": "1.102.2",
+  "official_implementation": "https://github.com/tailscale/tailscale/blob/v1.102.2/net/netns/netns_windows.go",
+  "repair_scope": "Three audited HK DERP hostnames/IP /32 routes plus one per-service route-binding flag; local Tailscale refresh only.",
+  "previous_gap_receipt": "V14_monitor_connection_20261008T141744Z.json",
+  "previous_gap_preserved": true,
+  "before_tls_evidence": {
+    "default_interface_error": "UNEXPECTED_EOF_WHILE_READING",
+    "physical_WLAN_same_IP_verified_TLS_HTTP_status": 200
+  },
+  "repair_receipts": {
+    "HKG_DERP_route_repair_20261008.json": {
+      "sha256": "c504afa5be6850d42d8eda77e4f7eba8d988cb7de84a3bf5953eab32120448b3",
+      "utc": "2026-10-08T14:35:51.1553811Z",
+      "status": "PASS_THREE_HKG_DERP_ACTIVE_ROUTES"
+    },
+    "HKG_DERP_dns_repair_20261008.json": {
+      "sha256": "e76d58c94c23b1f188b8801e47c12b49107edafc467cf6fdb5cd8126a9ce0b9a",
+      "utc": "2026-10-08T14:40:24.8846503Z",
+      "status": "PASS_THREE_HKG_DERP_DNS_AND_LOCAL_REFRESH_PENDING_SSH"
+    },
+    "HKG_DERP_binding_repair_20261008.json": {
+      "sha256": "a226fde1967f787529f8336ba686799275e08567a44f60b02ff5d0cee4f84b1b",
+      "utc": "2026-10-08T14:42:48.6540618Z",
+      "status": "PASS_TAILSCALE_ROUTE_BINDING_FLAG_PENDING_SSH"
+    },
+    "HKG_DERP_persistent_routes_store_20261008.json": {
+      "sha256": "b067ccbbe7e108e7a0f3135e569d779f4fa17ba930982ab79a13b76334ebbf93",
+      "utc": "2026-10-08T14:53:40.6654837Z",
+      "status": "PASS_THREE_OWNED_HKG_ROUTES_PERSISTENT_AND_ACTIVE_STORE_VERIFIED"
+    }
+  },
+  "actual_windows_state": {
+    "routes": [
+      {
+        "address": "103.6.84.152",
+        "active": true,
+        "persistent": true,
+        "interface_index": 7,
+        "gateway": "192.168.0.1",
+        "metric": 5
+      },
+      {
+        "address": "205.147.105.30",
+        "active": true,
+        "persistent": true,
+        "interface_index": 7,
+        "gateway": "192.168.0.1",
+        "metric": 5
+      },
+      {
+        "address": "205.147.105.78",
+        "active": true,
+        "persistent": true,
+        "interface_index": 7,
+        "gateway": "192.168.0.1",
+        "metric": 5
+      }
+    ],
+    "dns": [
+      {
+        "name": "derp20b.tailscale.com",
+        "addresses": [
+          "103.6.84.152"
+        ]
+      },
+      {
+        "name": "derp20c.tailscale.com",
+        "addresses": [
+          "205.147.105.30"
+        ]
+      },
+      {
+        "name": "derp20d.tailscale.com",
+        "addresses": [
+          "205.147.105.78"
+        ]
+      }
+    ],
+    "service_binding_flag_verified": true,
+    "service_status": "Running"
+  },
+  "tailscale_ping_exit_code": 1,
+  "tailscale_ping": "pong from aic-inspur-vstain (100.127.244.47) via DERP(hkg) in 351ms\npong from aic-inspur-vstain (100.127.244.47) via DERP(hkg) in 341ms\npong from aic-inspur-vstain (100.127.244.47) via DERP(hkg) in 339ms",
+  "actual_path": "DERP(hkg)",
+  "UDP_direct_established": false,
+  "actual_linux": {
+    "utc": "2026-10-08T14:57:58.560623+00:00",
+    "hostname": "inspur-NP5570M5",
+    "artifacts": {
+      "progress.json": {
+        "stage": "RUNNING_REMATCH_TEMPORAL",
+        "utc": "2026-10-08T13:40:27.528594+00:00",
+        "pid": 1101256,
+        "uploaded": false,
+        "automatic_return": false,
+        "maximum_seconds": 14400,
+        "planned_output_bytes": 60000000
+      },
+      "completion.json": null,
+      "rematch_01/progress.json": {
+        "stage": "T_TEMPORAL",
+        "videos": 380,
+        "total": 426,
+        "windows": 449,
+        "failures": 0,
+        "wall_seconds": 4514.56772851292
+      },
+      "rematch_01/temporal.stage.json": null,
+      "rematch_01/failure.json": null
+    }
+  },
+  "comprehensive_snapshot_utc": "2026-10-08T14:54:16.233805+00:00",
+  "source_lock_sha256": "5295e8bc0f2b6a651e73321a5798b259816ccbe9a0582753dc3c200b5ef080e0",
+  "actual_T_optimizer_updates": 15,
+  "actual_backward_examples": 195,
+  "selected_epoch": 0,
+  "selected_original_B": true,
+  "selected_adapter_sha256": "8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23",
+  "new_T_improvement_claim": false,
+  "non_test_package_status": "PASS_COMPLETE_T_8B_PACKAGE_ON_LINUX",
+  "final_ZIP_complete": false,
+  "remote_processes_signalled": false,
+  "frozen_source_modified": false,
+  "launchers_repeated": false,
+  "large_transfer_bytes": 0
+}

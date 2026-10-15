@@ -1,0 +1,31 @@
+{
+  "schema": "BOUNDARY_V2_ONE_EVENT_INTERFACE_SMOKE_PROTOCOL_01",
+  "status": "APPROVED_NEW_EXPOSED_DEVELOPMENT_INTERFACE_ONLY",
+  "created_utc": "2026-10-13T17:42:00Z",
+  "source_rule": "row0 of previously frozen12 distinctVideoXum screen sources, originalB0 segment0; no GT selection",
+  "case_id": "v_fVg3StD8LL0_W000",
+  "events": 1,
+  "calls": 2,
+  "sides": [
+    "start",
+    "end"
+  ],
+  "half_window_exact": "3",
+  "native_distinct_frames": 64,
+  "new_complete_clocks": 0,
+  "reuse_old_RGB_when_original_ordinals_overlap": true,
+  "new_actual_pixels_only_for_missing_new_local_samples": true,
+  "unknown_preserves_original": true,
+  "pair_crossed_preserves_original": true,
+  "source_edge_rule": "inward only and newcut visiblecontext plus sameevent transition",
+  "model_parameters": 8782459120,
+  "optimizer_updates": 0,
+  "input_token_limit": 16384,
+  "output_token_limit": 256,
+  "CPU_threads_initial": 1,
+  "science_quality_claim": false,
+  "new_confirmation_claim": false,
+  "production_admission": false,
+  "user_risk_authorization": "USER_AUTHORIZATION.json",
+  "deadline": "2026-10-14T11:56:40Z"
+}

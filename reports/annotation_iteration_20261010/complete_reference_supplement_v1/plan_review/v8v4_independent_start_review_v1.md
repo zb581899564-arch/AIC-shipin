@@ -1,0 +1,13 @@
+# v8v4 path_projection_recovery_v1 实际独立复审
+
+结论：**REJECT，不能写 PASS_INDEPENDENT_UPDATED_ENGINEERING_START_REVIEW。** 原四项与追加全raw参数identity漏洞已修复；新增纯memory反例证明 ACK时序仍可错误放行。
+
+实际binding `11af865c6b1af9d521eb0684509039899181be22e131f3277dce1cfada17bd0f`，dry `201f5a061fe60f0eb8f2b08f3513ed3d8d4739d1476c79e48850614bac300ee7`，negative `1bf51afd60c5b6545bb631c1e30af0483b08649db47c7d4586aada5ff556c09a`。所有binding源码与prior bindings SHA匹配，64既有CPU cases按代码核对并引用，没有重跑。真实native positive 34/29共56组source SHA匹配。科学原文SHA `3544a33eae884774660e9bbab17379385151668683e553560436f2a347c487a9` 与已通过版本一致；五窗对原v6的字段独立核只有output/proposal路径投影，原科学/27片不重新扫描。ROOT仍负责actualRGB及全inputs审计。
+
+阻塞：[engine.py L122–123](<G:/ai/AIC视频/reports/annotation_iteration_20261010/complete_reference_supplement_v1/teacher_expansion/engineering_CLI36_37_split_fragment_v8v4/path_projection_recovery_v1/engine.py:122>)用latest DONE列表相邻判断文字ACK，列表顺序实际来自每工具首ACTIVE插入顺序。新增独立内存trace只把main ACK WRITE ACTIVE放到main VIEW DONE之前，其余完整202供给、schema、两批effective都保持；engine仍teacher_task_completed=true、ACK_complete=true，synthetic有效scopes下continuation eligible=true。expected行为应REJECT，因为完整片读完成之前就开始ACKwrite违反协议。
+
+[纯内存反例证据](<G:/ai/AIC视频/reports/annotation_iteration_20261010/complete_reference_supplement_v1/plan_review/v8v4_ack_order_memory_counterexample_v1.json>) SHA `be68cc188369852544c61b71b4dd7eecf0a5a99238cee371078ddac88f7214a1`；其入口仅在plan_review，源码先确认无模型/decoder/上传/真实文件write，virtual facts/proposals/ACK/raw全在memory，输出只有审查JSON。运行正常exit0。它不是实际媒体运行，也不说明真实教师曾违背规则；它证明当前验收guard缺少这条冻结时序。
+
+应新独立版本核：view ACTIVE<DONE<ACK planning response<ACK WRITE ACTIVE<DONE，原文字/ACKliteral identity不变，并负测early ACK/同response文字与ACK/缺ACTIVE等。旧v8v4/v8v3及全部CPU/失败保持，不回写已冻结文件。新增模型/AGY/媒体解码/上传均0，当前36/37 request与启动门均不存在。
+
+[机器可读实际复审JSON](<G:/ai/AIC视频/reports/annotation_iteration_20261010/complete_reference_supplement_v1/plan_review/v8v4_independent_start_review_v1.json>) SHA `0c4b48a61c150a35434d0c91be823a50324a266f0d9ac1ae6a44280a0b5a5de8`。修复后的正常36严格SUCCESS/wholePASS才能37、不使用网络例外的方向已通过，但其输入engine scope有效性仍被上述反例影响，故本次不放行。

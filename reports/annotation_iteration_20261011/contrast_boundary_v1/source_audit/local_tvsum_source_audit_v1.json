@@ -1,0 +1,2483 @@
+{
+  "schema": "LOCAL_TVSUM_CONTRAST_SOURCE_AUDIT_V1",
+  "status": "READ_ONLY_SOURCE_AUDIT_WITH_DETERMINISTIC_ROLE_PROPOSAL_NOT_TRAINING_OR_QUALITY_ADMISSION",
+  "utc": "2026-10-11T12:21:36.595424+00:00",
+  "current_recipe_initial_adapter_sha256": "8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23",
+  "audit_scope": "Local metadata/file hashing only; no media decoding or semantic reading; original successful CRC not repeated",
+  "role_sort": "Ascending case-sensitive source_id then full media_sha256; no media content selection",
+  "denominators": {
+    "TVSum": 50,
+    "silver_excluded_source_groups": 12,
+    "old_validation": 10,
+    "old_validation_not_silver": 4,
+    "non_silver_non_oldvalidation_full_videos": 34,
+    "official_vector_alignment_excluded": 1,
+    "expansion_candidates": 33,
+    "proposed_train": 20,
+    "proposed_processdev": 4,
+    "proposed_locked_oldvalidation": 4,
+    "reserve": 9,
+    "selected_source_groups": 28,
+    "planned_uniform_30s_windows_per_selected_source": 4,
+    "planned_windows": 112
+  },
+  "selection_is_proposal_only": true,
+  "windows_not_created": true,
+  "selected_media_bytes": 327806034,
+  "full34_media_bytes": 452027661,
+  "historical_training_receipt": {
+    "crop_optimizer_steps": 12,
+    "temporal_optimizer_steps": 20,
+    "older_crop_adapter_sha256": "cc26a1eb660ec28aade3761c6038fee51db33c331e01b4bf89cc282609562119",
+    "older_temporal_adapter_sha256": "315deddf774d24ac7dbd5164b0265981e3d0b26da64db304ccc6cfd48757717d",
+    "not_used_by_current_recipe": true
+  },
+  "limitations": [
+    "All 50 sources have historical Gemini observation; train40 have older TVSum optimizer exposure. Current recipe isolation does not establish globally unseen generalization.",
+    "Rematch source identities are anonymized; exact SHA comparison covers 425 available hashes only. Reencoded/partial/semantic duplicate exclusion remains unproved.",
+    "TVSum human 1..5 importance is not ordinary/highlight binary boundary truth; new full observation and semantic boundary labels remain required.",
+    "Se3oxnaPsz0 old validation video retained for proposed new boundary labels; its 4165 human scores vs4166 native frames prohibit automatic vector ordinal labels.",
+    "Historical license state UNRESOLVED_BUNDLED_WEBSCOPE_NOTICE_VS_CURRENT_AUTHOR_README retained; no new external license lookup performed."
+  ],
+  "evidence": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_execution\\rematch_exec_20261005T1215Z\\temporal_sft8b_v1\\inputs_01\\full_train.jsonl",
+      "bytes": 510892,
+      "sha256": "124801624736f960d15074ad65840d4e2850dcb7d8d5d3b16a2cb54e7eee4bc0"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\r7_temporal_pool\\round7_temporal_pool_20260921T090903Z\\inputs\\dev_temporal.jsonl",
+      "bytes": 114547,
+      "sha256": "53f7053fc3df698ce96c94b04f1af3b5c0c210ce93ecd3269b6306daf4c0a700"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\r7_temporal_pool\\round7_temporal_pool_20260921T090903Z\\inputs\\confirm_temporal.jsonl",
+      "bytes": 110138,
+      "sha256": "4b89f441ec2c029bbbc569cc3ed9a2c93f04205fad4e9748f44a4a445b0faf13"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\denominator24_v21.json",
+      "bytes": 15090,
+      "sha256": "da413af7014f868c18cb3ce2b56ff1de08d2cd94b80846d89d9b2d7e7b20ca24"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\linux_metadata_projection_v1\\config.json",
+      "bytes": 9677,
+      "sha256": "ed235026b57bf73be0fb7e8dc75852e79e93b7d9fb48dc49eb5e750b81adbbeb"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\corpus.json",
+      "bytes": 434430,
+      "sha256": "fd4b7c04d2d6ae855d429dbdf396f6039ce6c01a61857985c1d5d2afe1918a00"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\split.json",
+      "bytes": 9584,
+      "sha256": "cd921c398dce0cd4d232df01c78a877a5864fa4556ec8d97a3871e6102a25061"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\corpus_acceptance.json",
+      "bytes": 2384,
+      "sha256": "5d757bc62ab8fd18e603926f83c68c3593f6ab7e4c1f2ad6f4374af2ad5f3e81"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\exports\\preparation_status.json",
+      "bytes": 10672,
+      "sha256": "ded14a90414217cf05872fc1f87955d71dab636f1d0432be59d8236ffd5f56f6"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\preparation_completion.json",
+      "bytes": 5112,
+      "sha256": "420132698c461585efd5a474597129b32d46a2dac2b48cda5cc6945a56a2166b"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\training_v2\\data\\crop_balanced_train.jsonl",
+      "bytes": 141737,
+      "sha256": "b8581512c0dee15db2cc4b7286eec79b195647ef4059ffd323244d96bc093ba2"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\training_v2\\data\\temporal_fixed_train.jsonl",
+      "bytes": 889932,
+      "sha256": "3eb93e2585679f0c24d71b5d13ece101b79aea53b15671948362581d116db62f"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\training_v2\\finetune_20261009_v3\\result_summary.json",
+      "bytes": 3149,
+      "sha256": "4871f4313ee7c2e8ec0c733836bb1bb4d9429bc0e3ca3a89b5be847fef836355"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\training_v2\\finetune_20261009_v3\\independent_final_audit.json",
+      "bytes": 41288,
+      "sha256": "59974d69bf85d9887a304106b04bee0c8ebf2bbc38e5adb73de55833ad8f7dc4"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\tvsum_delivery_acceptance.json",
+      "bytes": 15794,
+      "sha256": "b717bc18f35862735e9dbc64cd2f340f6c63987877d9a5d75fada7fbbf76023b"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\DOWNLOAD_RESULT.md",
+      "bytes": 1661,
+      "sha256": "adb944e869738014ce229d691679a4361d590f8c89b4a3a93f5c77087d86aaa3"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\WebscopeReadMe.txt",
+      "bytes": 1875,
+      "sha256": "341fb9cd2b4f276ae6d497ea5f600b596698627bad1db54af1944171ce1e7eba"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\README",
+      "bytes": 4127,
+      "sha256": "a5fccdd34b27ebda8b7aa2975079b7d35c3ffc29b7e897ca8b19c0932ddcd026"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_execution\\rematch_exec_20261005T1215Z\\controller\\pts_v4_scan_01\\clean_manifest_v2.json",
+      "bytes": 263232,
+      "sha256": "ceb91ee9434ce3de6a55abf727e613b83368b547d3be3d1e71b46414c2f019f8"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "AwmHb44_ouw",
+      "source_group": "youtube:AwmHb44_ouw",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\AwmHb44_ouw\\AwmHb44_ouw.mp4",
+      "media_bytes": 19246027,
+      "media_sha256": "82ecca1de0363253060bb3c19e2f5dbd4080bfc0cd790db23c3e73ffd76a602f",
+      "category": "VT",
+      "native_frames": 10597,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\AwmHb44_ouw\\native_pts.npz",
+      "native_pts_sha256": "3ca7f2c450329778006fc59c09a8e2c6d482b84cbe1e95529119cd662025a6c7",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 353.58656666666667,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 10597,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": true,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "EXCLUDED_SILVER12"
+    },
+    {
+      "source_id": "98MoyGZKHXc",
+      "source_group": "youtube:98MoyGZKHXc",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\98MoyGZKHXc\\98MoyGZKHXc.mp4",
+      "media_bytes": 9817234,
+      "media_sha256": "e293ceb35a8f1ec514707c579ab9b78e678a0c686f895d25945b9a50432c000c",
+      "category": "VT",
+      "native_frames": 4688,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\98MoyGZKHXc\\native_pts.npz",
+      "native_pts_sha256": "3023d643c05e987d1837565024825113b6824856a985d728ec99e70258355e4a",
+      "native_time_base": [
+        1,
+        12800
+      ],
+      "source_duration_seconds": 187.52,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 4688,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "TRAIN_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 3
+    },
+    {
+      "source_id": "J0nA4VgnoCo",
+      "source_group": "youtube:J0nA4VgnoCo",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\J0nA4VgnoCo\\J0nA4VgnoCo.mp4",
+      "media_bytes": 31626560,
+      "media_sha256": "65c9490a2166d17736c38ed077f250290c548b1da8f1801f10ff53fad8e84a5b",
+      "category": "VT",
+      "native_frames": 14019,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\J0nA4VgnoCo\\native_pts.npz",
+      "native_pts_sha256": "e17cd086d791d91aece1c353a6b7065e78f15c5408b8628a29365de17e17e538",
+      "native_time_base": [
+        1,
+        24000
+      ],
+      "source_duration_seconds": 584.709125,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 14019,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": true,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": false,
+        "older_TVSum_crop_optimizer_training": false,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "validation",
+        "global_unseen": false
+      },
+      "role_proposal": "EXCLUDED_SILVER12"
+    },
+    {
+      "source_id": "gzDbaEs1Rlg",
+      "source_group": "youtube:gzDbaEs1Rlg",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\gzDbaEs1Rlg\\gzDbaEs1Rlg.mp4",
+      "media_bytes": 15419041,
+      "media_sha256": "6682bdee7edc1d697a1807bb3f84f50e3cacd98266fc93d1deb38adbb8d125c2",
+      "category": "VT",
+      "native_frames": 7210,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\gzDbaEs1Rlg\\native_pts.npz",
+      "native_pts_sha256": "5816319ed691dd9dd60a97484ccbe5d00d43455b6358275e44aa4bc021a2b66a",
+      "native_time_base": [
+        1,
+        12800
+      ],
+      "source_duration_seconds": 288.4,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 7210,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "PROCESS_DEV_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 22
+    },
+    {
+      "source_id": "XzYM3PfTM4w",
+      "source_group": "youtube:XzYM3PfTM4w",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\XzYM3PfTM4w\\XzYM3PfTM4w.mp4",
+      "media_bytes": 6010860,
+      "media_sha256": "c758df53e237aadc9e893a4389078b25f58000a782d3c69b8490195aae30dac0",
+      "category": "VT",
+      "native_frames": 3327,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\XzYM3PfTM4w\\native_pts.npz",
+      "native_pts_sha256": "5b8fa298451a078645d5a713237ea4ea4b45b04c14968e58afc62acfa6e9e09b",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 111.0109,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 3327,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "TRAIN_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 16
+    },
+    {
+      "source_id": "HT5vyqe0Xaw",
+      "source_group": "youtube:HT5vyqe0Xaw",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\HT5vyqe0Xaw\\HT5vyqe0Xaw.mp4",
+      "media_bytes": 17564055,
+      "media_sha256": "85fdd93e61fb670b5437666c9eb90aa1798889edbe07394749c00ca0d044c886",
+      "category": "VU",
+      "native_frames": 9671,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\HT5vyqe0Xaw\\native_pts.npz",
+      "native_pts_sha256": "480c52798394f9490f0c8a16ca755c70bde83a8d2acb38ac81a3cc0fe69ae002",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 322.6890333333333,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 9671,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": true,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "EXCLUDED_SILVER12"
+    },
+    {
+      "source_id": "sTEELN-vY30",
+      "source_group": "youtube:sTEELN-vY30",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\sTEELN-vY30\\sTEELN-vY30.mp4",
+      "media_bytes": 8065363,
+      "media_sha256": "b6767caf3ddb2a1750672427315fe61c63a854de26ca707f5e5041bf45557d48",
+      "category": "VU",
+      "native_frames": 4468,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\sTEELN-vY30\\native_pts.npz",
+      "native_pts_sha256": "f86eaea71c554e29d3f701a6c68dc4c5222a0145d522e861c98e76a56640a6e3",
+      "native_time_base": [
+        1,
+        15360
+      ],
+      "source_duration_seconds": 148.93333333333334,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 4468,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": false,
+        "older_TVSum_crop_optimizer_training": false,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "validation",
+        "global_unseen": false
+      },
+      "role_proposal": "LOCKED_ROLE_PROPOSAL_OLD_VALIDATION",
+      "deterministic_locked_rank": 3
+    },
+    {
+      "source_id": "vdmoEJ5YbrQ",
+      "source_group": "youtube:vdmoEJ5YbrQ",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\vdmoEJ5YbrQ\\vdmoEJ5YbrQ.mp4",
+      "media_bytes": 17926114,
+      "media_sha256": "77f719f5de3ca948691dd34e7dac5ed5783d1b98814fea035aa7cce6d21edb72",
+      "category": "VU",
+      "native_frames": 9870,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\vdmoEJ5YbrQ\\native_pts.npz",
+      "native_pts_sha256": "40c9c8e17c7dc37281773be211d41870317b09bac97e6c21b92bcb02fb283b1c",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 329.329,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 9870,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "RESERVE_NOT_SELECTED",
+      "deterministic_expansion_rank": 28
+    },
+    {
+      "source_id": "xwqBXPGE9pQ",
+      "source_group": "youtube:xwqBXPGE9pQ",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\xwqBXPGE9pQ\\xwqBXPGE9pQ.mp4",
+      "media_bytes": 12666392,
+      "media_sha256": "71bb39923112962e30006918c9e3a9dbcd248786f275568447e8a29ebdb380ff",
+      "category": "VU",
+      "native_frames": 7010,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\xwqBXPGE9pQ\\native_pts.npz",
+      "native_pts_sha256": "59712864531a09a153754a73fbafd458e878ee539a88aea5501e774b0509d050",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 233.90033333333332,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 7010,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "RESERVE_NOT_SELECTED",
+      "deterministic_expansion_rank": 30
+    },
+    {
+      "source_id": "akI8YFjEmUw",
+      "source_group": "youtube:akI8YFjEmUw",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\akI8YFjEmUw\\akI8YFjEmUw.mp4",
+      "media_bytes": 7222459,
+      "media_sha256": "28f8d4d89a14b30f9066ad5146e8b219c67d45291b9a1588af6d1f6c455acffe",
+      "category": "VU",
+      "native_frames": 3995,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\akI8YFjEmUw\\native_pts.npz",
+      "native_pts_sha256": "c7a149d80f393e1694e79f16442cb6d1721ca5582e634064770ba663fb9d74b1",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 133.29983333333334,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 3995,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "TRAIN_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 18
+    },
+    {
+      "source_id": "i3wAGJaaktw",
+      "source_group": "youtube:i3wAGJaaktw",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\i3wAGJaaktw\\i3wAGJaaktw.mp4",
+      "media_bytes": 8413810,
+      "media_sha256": "7a8cc3f5415702ce254200db00650cb42981ba0c0fa5b5ef4a910f7c66c69c21",
+      "category": "GA",
+      "native_frames": 4700,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\i3wAGJaaktw\\native_pts.npz",
+      "native_pts_sha256": "4ce61057fdde6fedf942a7cec95a2730282e38d8e6e9e4a2402116258778890f",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 156.82333333333332,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 4700,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": true,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": false,
+        "older_TVSum_crop_optimizer_training": false,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "validation",
+        "global_unseen": false
+      },
+      "role_proposal": "EXCLUDED_SILVER12"
+    },
+    {
+      "source_id": "Bhxk-O1Y7Ho",
+      "source_group": "youtube:Bhxk-O1Y7Ho",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\Bhxk-O1Y7Ho\\Bhxk-O1Y7Ho.mp4",
+      "media_bytes": 24536587,
+      "media_sha256": "a66202fe5943daee0a0984fd708ff3126168ded35750c099a54ae67705e1ff3f",
+      "category": "GA",
+      "native_frames": 13511,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\Bhxk-O1Y7Ho\\native_pts.npz",
+      "native_pts_sha256": "ae3d1e1d8b818a67ffb596b63bd9059f7740bd84f5c9382341d839020559f6be",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 450.8170333333333,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 13511,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "TRAIN_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 4
+    },
+    {
+      "source_id": "0tmA_C6XwfM",
+      "source_group": "youtube:0tmA_C6XwfM",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\0tmA_C6XwfM\\0tmA_C6XwfM.mp4",
+      "media_bytes": 7573592,
+      "media_sha256": "63a2f711416d2a911a4f00166fedb7ce01e2eaab18946c0222071322111b961b",
+      "category": "GA",
+      "native_frames": 3532,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\0tmA_C6XwfM\\native_pts.npz",
+      "native_pts_sha256": "65de7dc52e816568a019db3e9e6d75334728410cc9a88f804ca724d07e8aaf02",
+      "native_time_base": [
+        1,
+        12800
+      ],
+      "source_duration_seconds": 141.28,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 3532,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "TRAIN_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 0
+    },
+    {
+      "source_id": "3eYKfiOEJNs",
+      "source_group": "youtube:3eYKfiOEJNs",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\3eYKfiOEJNs\\3eYKfiOEJNs.mp4",
+      "media_bytes": 10488602,
+      "media_sha256": "d8c2669fbd08e8b2f35ebce82dfe5aa6cbf7e8fbee56df9e971ca12b7dd9e322",
+      "category": "GA",
+      "native_frames": 4853,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\3eYKfiOEJNs\\native_pts.npz",
+      "native_pts_sha256": "f68107b5038668be80c954f7aed0f254e3350c3cddd99bd2d5303fefc8b42875",
+      "native_time_base": [
+        1,
+        12800
+      ],
+      "source_duration_seconds": 194.12,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 4853,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "TRAIN_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 1
+    },
+    {
+      "source_id": "xxdtq8mxegs",
+      "source_group": "youtube:xxdtq8mxegs",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\xxdtq8mxegs\\xxdtq8mxegs.mp4",
+      "media_bytes": 7367068,
+      "media_sha256": "fe3200fd13dfbf74f5c02d73ec9acd7bd0c1f68eb876968bc74230549320c327",
+      "category": "GA",
+      "native_frames": 4324,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\xxdtq8mxegs\\native_pts.npz",
+      "native_pts_sha256": "b67d2a6b6a97e23ac65d70cee032e35876dfac30be663ec5b9411376a8f4fb97",
+      "native_time_base": [
+        1,
+        15360
+      ],
+      "source_duration_seconds": 144.13333333333333,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 4324,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "RESERVE_NOT_SELECTED",
+      "deterministic_expansion_rank": 31
+    },
+    {
+      "source_id": "WG0MBPpPC6I",
+      "source_group": "youtube:WG0MBPpPC6I",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\WG0MBPpPC6I\\WG0MBPpPC6I.mp4",
+      "media_bytes": 21473331,
+      "media_sha256": "0d68d94612da8efd687419dc030a485d61419c30290865d9ec1f9ed1062040f9",
+      "category": "MS",
+      "native_frames": 9535,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\WG0MBPpPC6I\\native_pts.npz",
+      "native_pts_sha256": "d0553615036dec66c865bc6d43dda5bea5b76a9ecab8f539b7090601e901ee72",
+      "native_time_base": [
+        1,
+        24000
+      ],
+      "source_duration_seconds": 397.68895833333335,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 9534,
+        "native_count_equal": false,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "QUARANTINED_UNTIL_ALIGNMENT_PROVEN"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": false,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "EXCLUDED_OFFICIAL_VECTOR_ALIGNMENT_1FRAME"
+    },
+    {
+      "source_id": "Hl-__g2gn_A",
+      "source_group": "youtube:Hl-__g2gn_A",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\Hl-__g2gn_A\\Hl-__g2gn_A.mp4",
+      "media_bytes": 13134659,
+      "media_sha256": "9386d64a62463f36213a043e6e74c76faf5eff746d7ef53035146c7bead40bd1",
+      "category": "MS",
+      "native_frames": 5846,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\Hl-__g2gn_A\\native_pts.npz",
+      "native_pts_sha256": "373330b8838501a52b18adff13ea2eb478575edbc00dc5a0684a339548fc8b7a",
+      "native_time_base": [
+        1,
+        24000
+      ],
+      "source_duration_seconds": 243.82691666666668,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 5846,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "TRAIN_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 8
+    },
+    {
+      "source_id": "Yi4Ij2NM7U4",
+      "source_group": "youtube:Yi4Ij2NM7U4",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\Yi4Ij2NM7U4\\Yi4Ij2NM7U4.mp4",
+      "media_bytes": 21884159,
+      "media_sha256": "26ec9f71ea771e5601a1f5c963fa425681ae2f86b3dfca483a64d58b5a65feb9",
+      "category": "MS",
+      "native_frames": 9731,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\Yi4Ij2NM7U4\\native_pts.npz",
+      "native_pts_sha256": "4948772b3d4e8f664eb0fcd22c265dd905f4e9ef774b78edf3cf7ff675818371",
+      "native_time_base": [
+        1,
+        12288
+      ],
+      "source_duration_seconds": 405.4583333333333,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 9731,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": true,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": false,
+        "older_TVSum_crop_optimizer_training": false,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "validation",
+        "global_unseen": false
+      },
+      "role_proposal": "EXCLUDED_SILVER12"
+    },
+    {
+      "source_id": "37rzWOQsNIw",
+      "source_group": "youtube:37rzWOQsNIw",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\37rzWOQsNIw\\37rzWOQsNIw.mp4",
+      "media_bytes": 10156252,
+      "media_sha256": "c4fb034705c03a890fed5cc46ff79d1e9aef5cd9edec1d22dfe7cc653b5fd98a",
+      "category": "MS",
+      "native_frames": 5742,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\37rzWOQsNIw\\native_pts.npz",
+      "native_pts_sha256": "82a51d793e0f2cbdd715af3043c9fa44b272e375b6644a09280633ef6d225c70",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 191.5914,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 5742,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": true,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "EXCLUDED_SILVER12"
+    },
+    {
+      "source_id": "LRw_obCPUt0",
+      "source_group": "youtube:LRw_obCPUt0",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\LRw_obCPUt0\\LRw_obCPUt0.mp4",
+      "media_bytes": 13697882,
+      "media_sha256": "ce57a731477468ddf799c29cfcbd11469e30cb96eb844c372a8447a90e1db858",
+      "category": "MS",
+      "native_frames": 6241,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\LRw_obCPUt0\\native_pts.npz",
+      "native_pts_sha256": "0e05d3098caac148796b73be43a15e89df3a89e489c53c28d67d8cb879da18e8",
+      "native_time_base": [
+        1,
+        24000
+      ],
+      "source_duration_seconds": 260.30170833333335,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 6241,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "TRAIN_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 10
+    },
+    {
+      "source_id": "cjibtmSLxQ4",
+      "source_group": "youtube:cjibtmSLxQ4",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\cjibtmSLxQ4\\cjibtmSLxQ4.mp4",
+      "media_bytes": 35194393,
+      "media_sha256": "43183ef7f35bfcbc39c122be797fdee5031103862c7c7da3b9ab74d222c79c9d",
+      "category": "PK",
+      "native_frames": 19406,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\cjibtmSLxQ4\\native_pts.npz",
+      "native_pts_sha256": "54556d7c52d7a7fbc8375358c40a60b39e2226779e101d1948cc6bea7a6f09d5",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 647.5135333333334,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 19406,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": true,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": false,
+        "older_TVSum_crop_optimizer_training": false,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "validation",
+        "global_unseen": false
+      },
+      "role_proposal": "EXCLUDED_SILVER12"
+    },
+    {
+      "source_id": "b626MiF1ew4",
+      "source_group": "youtube:b626MiF1ew4",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\b626MiF1ew4\\b626MiF1ew4.mp4",
+      "media_bytes": 12624955,
+      "media_sha256": "66d6dc7720db2ae750c9c85a7f6a0d55416a9a23ce6ca7d151969501d8606e1c",
+      "category": "PK",
+      "native_frames": 5661,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\b626MiF1ew4\\native_pts.npz",
+      "native_pts_sha256": "cc15d5cdb3525379444d9aabd1f97dd46862ede214376cb980e2d1c3c46a97ce",
+      "native_time_base": [
+        1,
+        12288
+      ],
+      "source_duration_seconds": 235.875,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 5661,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "TRAIN_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 19
+    },
+    {
+      "source_id": "XkqCExn6_Us",
+      "source_group": "youtube:XkqCExn6_Us",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\XkqCExn6_Us\\XkqCExn6_Us.mp4",
+      "media_bytes": 10210795,
+      "media_sha256": "ee3e102d0cda34b30c8eadaa162157616c398213dc88d0198ff4cc6476dd5fc9",
+      "category": "PK",
+      "native_frames": 5631,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\XkqCExn6_Us\\native_pts.npz",
+      "native_pts_sha256": "ed8c886208d84a41b787446695804d1f7bddeb536f9398c752ca8448a1a8594a",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 187.8877,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 5631,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "TRAIN_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 15
+    },
+    {
+      "source_id": "GsAD1KT1xo8",
+      "source_group": "youtube:GsAD1KT1xo8",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\GsAD1KT1xo8\\GsAD1KT1xo8.mp4",
+      "media_bytes": 7794439,
+      "media_sha256": "a195fc9d8e5330ee55c62dfc0a99eb5d130bf0444bb412992d1204eecd8f3a86",
+      "category": "PK",
+      "native_frames": 4356,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\GsAD1KT1xo8\\native_pts.npz",
+      "native_pts_sha256": "22752ca39e0d12307a4130c705dc90a9537a777225cc27dac1b96cd83db80e6d",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 145.3452,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 4356,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "TRAIN_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 7
+    },
+    {
+      "source_id": "PJrm840pAUI",
+      "source_group": "youtube:PJrm840pAUI",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\PJrm840pAUI\\PJrm840pAUI.mp4",
+      "media_bytes": 14766069,
+      "media_sha256": "790c560f5132928d456803ca5e23b03ca38b1eb8d3383b619afbed60dd5be86f",
+      "category": "PK",
+      "native_frames": 6580,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\PJrm840pAUI\\native_pts.npz",
+      "native_pts_sha256": "be79dbfe2b888ec1810a9099c2dd4e42b647f8ad94f5242eca86681df90d2588",
+      "native_time_base": [
+        1,
+        12288
+      ],
+      "source_duration_seconds": 274.1666666666667,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 6580,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "TRAIN_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 12
+    },
+    {
+      "source_id": "91IHQYk1IQM",
+      "source_group": "youtube:91IHQYk1IQM",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\91IHQYk1IQM\\91IHQYk1IQM.mp4",
+      "media_bytes": 5830349,
+      "media_sha256": "327f8cd1ff27ecec1de291e396ac7c40521253fa208f2e3c477c5b1e84964f05",
+      "category": "PR",
+      "native_frames": 3312,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\91IHQYk1IQM\\native_pts.npz",
+      "native_pts_sha256": "3983f5b192f112ae74bbdfb89c72893b889199101fdfc7d62ed1a4b4f6184927",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 110.5104,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 3312,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "TRAIN_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 2
+    },
+    {
+      "source_id": "RBCABdttQmI",
+      "source_group": "youtube:RBCABdttQmI",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\RBCABdttQmI\\RBCABdttQmI.mp4",
+      "media_bytes": 19590609,
+      "media_sha256": "2411ac74f1e8a049072063bd579b4aa034e5c01a388c67cdcc7959763562b36b",
+      "category": "PR",
+      "native_frames": 10917,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\RBCABdttQmI\\native_pts.npz",
+      "native_pts_sha256": "2fade70f6edfb3a0c105f2ca10d51238559038451b42367b4d71cc2cc09620eb",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 364.2639,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 10917,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "TRAIN_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 13
+    },
+    {
+      "source_id": "z_6gVvQb2d0",
+      "source_group": "youtube:z_6gVvQb2d0",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\z_6gVvQb2d0\\z_6gVvQb2d0.mp4",
+      "media_bytes": 15043855,
+      "media_sha256": "fe77605cdf8c234219ce423a90a93e44e003e55567bdb9bb87a3fb5fec0063cd",
+      "category": "PR",
+      "native_frames": 8281,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\z_6gVvQb2d0\\native_pts.npz",
+      "native_pts_sha256": "696f2a5b9038e48ab27d39598c64414a9a3c5692bddda7d34dd0a5a49e47d445",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 276.3093666666667,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 8281,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "RESERVE_NOT_SELECTED",
+      "deterministic_expansion_rank": 32
+    },
+    {
+      "source_id": "fWutDQy1nnY",
+      "source_group": "youtube:fWutDQy1nnY",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\fWutDQy1nnY\\fWutDQy1nnY.mp4",
+      "media_bytes": 31792596,
+      "media_sha256": "d50d740e77517611ea231e844d409ebdf51e05037ef8cd17a22cd983d2464fc3",
+      "category": "PR",
+      "native_frames": 17527,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\fWutDQy1nnY\\native_pts.npz",
+      "native_pts_sha256": "7bf2bdb84879901f6aa8c6141c47fda25b6d50a4aafd42af44e3e5520c2c1af8",
+      "native_time_base": [
+        1,
+        29917
+      ],
+      "source_duration_seconds": 585.8541966106227,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 17527,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "PROCESS_DEV_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 21
+    },
+    {
+      "source_id": "4wU_LUjG5Ic",
+      "source_group": "youtube:4wU_LUjG5Ic",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\4wU_LUjG5Ic\\4wU_LUjG5Ic.mp4",
+      "media_bytes": 8815620,
+      "media_sha256": "2779762f2c332931c9fb4e61783b81df6e34b487dc3a94c882781c981e6c4869",
+      "category": "PR",
+      "native_frames": 4005,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\4wU_LUjG5Ic\\native_pts.npz",
+      "native_pts_sha256": "3dc2a37af1b49edef337d85b8272d99aa65b41adce5cd247b677d2f8dc2ebfbe",
+      "native_time_base": [
+        1,
+        24000
+      ],
+      "source_duration_seconds": 167.041875,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 4005,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": false,
+        "older_TVSum_crop_optimizer_training": false,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "validation",
+        "global_unseen": false
+      },
+      "role_proposal": "LOCKED_ROLE_PROPOSAL_OLD_VALIDATION",
+      "deterministic_locked_rank": 0
+    },
+    {
+      "source_id": "VuWGsYPqAX8",
+      "source_group": "youtube:VuWGsYPqAX8",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\VuWGsYPqAX8\\VuWGsYPqAX8.mp4",
+      "media_bytes": 11537377,
+      "media_sha256": "9476a6d8bc6fdcff909fa2885ba82ba7696b3d05fca2f070e313139e434eabe3",
+      "category": "FM",
+      "native_frames": 5412,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\VuWGsYPqAX8\\native_pts.npz",
+      "native_pts_sha256": "24c985413db8ce25eb194f307271c943101e0cc5fa250c7c98247a9e6f9c6bb2",
+      "native_time_base": [
+        1,
+        12800
+      ],
+      "source_duration_seconds": 216.48,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 5412,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "TRAIN_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 14
+    },
+    {
+      "source_id": "JKpqYvAdIsw",
+      "source_group": "youtube:JKpqYvAdIsw",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\JKpqYvAdIsw\\JKpqYvAdIsw.mp4",
+      "media_bytes": 8201511,
+      "media_sha256": "da63a55d05c49f042699b366f3026ba77c8695208b40eb40b506867604caf905",
+      "category": "FM",
+      "native_frames": 3802,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\JKpqYvAdIsw\\native_pts.npz",
+      "native_pts_sha256": "8327abcc47e086cce24735c3543182902ba0031c6237b298f9204c7e9824a4c6",
+      "native_time_base": [
+        1,
+        12800
+      ],
+      "source_duration_seconds": 152.08,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 3802,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": false,
+        "older_TVSum_crop_optimizer_training": false,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "validation",
+        "global_unseen": false
+      },
+      "role_proposal": "LOCKED_ROLE_PROPOSAL_OLD_VALIDATION",
+      "deterministic_locked_rank": 1
+    },
+    {
+      "source_id": "xmEERLqJ2kU",
+      "source_group": "youtube:xmEERLqJ2kU",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\xmEERLqJ2kU\\xmEERLqJ2kU.mp4",
+      "media_bytes": 24129938,
+      "media_sha256": "14184d35578cc9e672428f693ae74328ecb54b003d85857ff2afbf8354a90081",
+      "category": "FM",
+      "native_frames": 13365,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\xmEERLqJ2kU\\native_pts.npz",
+      "native_pts_sha256": "055e9593952c2a8aca9b50c41ec834f3dc75fac2f888366bc354cb6e31f0a8c2",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 445.9455,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 13365,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "RESERVE_NOT_SELECTED",
+      "deterministic_expansion_rank": 29
+    },
+    {
+      "source_id": "byxOvuiIJV0",
+      "source_group": "youtube:byxOvuiIJV0",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\byxOvuiIJV0\\byxOvuiIJV0.mp4",
+      "media_bytes": 8234183,
+      "media_sha256": "b94f772069a7479b54c27b50650bccdfb0b75bb573abf8bda27dba1a5af75abd",
+      "category": "FM",
+      "native_frames": 3705,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\byxOvuiIJV0\\native_pts.npz",
+      "native_pts_sha256": "88045b076abd86b90d2723971651b3f853e8121c0bfdc9009049bff91f1cdcb0",
+      "native_time_base": [
+        1,
+        24000
+      ],
+      "source_duration_seconds": 154.529375,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 3705,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": true,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "EXCLUDED_SILVER12"
+    },
+    {
+      "source_id": "_xMr-HKMfVA",
+      "source_group": "youtube:_xMr-HKMfVA",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\_xMr-HKMfVA\\_xMr-HKMfVA.mp4",
+      "media_bytes": 8040777,
+      "media_sha256": "1d9cd42e19931934ea362f7509bf69f0e98a13da801414998d58296fca4bcbbe",
+      "category": "FM",
+      "native_frames": 4463,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\_xMr-HKMfVA\\native_pts.npz",
+      "native_pts_sha256": "e33ed02609e6f262d06aaa7ce12cc1a19c79f9d9bf37b43b68ab58d49ff1ef62",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 148.91543333333334,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 4463,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "TRAIN_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 17
+    },
+    {
+      "source_id": "WxtbjNsCQ8A",
+      "source_group": "youtube:WxtbjNsCQ8A",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\WxtbjNsCQ8A\\WxtbjNsCQ8A.mp4",
+      "media_bytes": 14014038,
+      "media_sha256": "b6c658e4d5258fcba10207b8c49ed624cabfe951ed9c9a96aa4ed6fada96d388",
+      "category": "BK",
+      "native_frames": 7959,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\WxtbjNsCQ8A\\native_pts.npz",
+      "native_pts_sha256": "72e134b671cbbf0dbbd36c632705a5e57f1e4023ac4ab5d7bbddd3f7aa100210",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 265.5653,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 7959,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": true,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "EXCLUDED_SILVER12"
+    },
+    {
+      "source_id": "uGu_10sucQo",
+      "source_group": "youtube:uGu_10sucQo",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\uGu_10sucQo\\uGu_10sucQo.mp4",
+      "media_bytes": 8256585,
+      "media_sha256": "302cfeab45f174688d2a709cc4528087a5ba17d4fb9880ceac8fe8db87007b51",
+      "category": "BK",
+      "native_frames": 4009,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\uGu_10sucQo\\native_pts.npz",
+      "native_pts_sha256": "372c4974b05cac86814f65d42d44152a5b6fc3358de286de66872f1297759e6f",
+      "native_time_base": [
+        1,
+        12288
+      ],
+      "source_duration_seconds": 167.04166666666666,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 4009,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "RESERVE_NOT_SELECTED",
+      "deterministic_expansion_rank": 27
+    },
+    {
+      "source_id": "EE-bNr36nyA",
+      "source_group": "youtube:EE-bNr36nyA",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\EE-bNr36nyA\\EE-bNr36nyA.mp4",
+      "media_bytes": 5274150,
+      "media_sha256": "0e11bb5bb60ac4842b2ee500c9cf985395a083ae92c3f498f1e91f12aa8e1691",
+      "category": "BK",
+      "native_frames": 2941,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\EE-bNr36nyA\\native_pts.npz",
+      "native_pts_sha256": "5247b6a45107eb00ea7daf1b64abaa4b0cf5bb3d7e211f7dce6952db6f8e6414",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 98.13136666666666,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 2941,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "TRAIN_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 6
+    },
+    {
+      "source_id": "Se3oxnaPsz0",
+      "source_group": "youtube:Se3oxnaPsz0",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\Se3oxnaPsz0\\Se3oxnaPsz0.mp4",
+      "media_bytes": 7584394,
+      "media_sha256": "87bf58a787009bce2add1a743bca81b98b33e7bb8edee80c1ff7c7070ae368e6",
+      "category": "BK",
+      "native_frames": 4166,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\Se3oxnaPsz0\\native_pts.npz",
+      "native_pts_sha256": "c529da8b73801837775ffc02bab0b3a67553313ddcc2e82ba23224da2565a031",
+      "native_time_base": [
+        1,
+        15360
+      ],
+      "source_duration_seconds": 138.86666666666667,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 4165,
+        "native_count_equal": false,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "QUARANTINED_UNTIL_ALIGNMENT_PROVEN"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": false,
+        "older_TVSum_crop_optimizer_training": false,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "validation",
+        "global_unseen": false
+      },
+      "role_proposal": "LOCKED_ROLE_PROPOSAL_OLD_VALIDATION",
+      "deterministic_locked_rank": 2
+    },
+    {
+      "source_id": "oDXZc0tZe04",
+      "source_group": "youtube:oDXZc0tZe04",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\oDXZc0tZe04\\oDXZc0tZe04.mp4",
+      "media_bytes": 20654776,
+      "media_sha256": "dd2cddeaeb6bc44dea976337af5c8b79b0030abbe2438ed8549fe9304621efd2",
+      "category": "BK",
+      "native_frames": 11414,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\oDXZc0tZe04\\native_pts.npz",
+      "native_pts_sha256": "a4afb7769d3b6e761f3af4be548e7c74aafd460d1b4615249d9322fdfaf062d4",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 380.8471333333333,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 11414,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "RESERVE_NOT_SELECTED",
+      "deterministic_expansion_rank": 25
+    },
+    {
+      "source_id": "qqR6AEXwxoQ",
+      "source_group": "youtube:qqR6AEXwxoQ",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\qqR6AEXwxoQ\\qqR6AEXwxoQ.mp4",
+      "media_bytes": 14617342,
+      "media_sha256": "77987b565d016441183ec928ef985f1a1d805b4c36c833a0b0b2705fff6a092d",
+      "category": "BT",
+      "native_frames": 8073,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\qqR6AEXwxoQ\\native_pts.npz",
+      "native_pts_sha256": "8c5c975ffa9f4c5dc4c21211752c0a9b098f408cbba950a110da155a94ea759c",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 269.3691,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 8073,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "RESERVE_NOT_SELECTED",
+      "deterministic_expansion_rank": 26
+    },
+    {
+      "source_id": "EYqVtI9YWJA",
+      "source_group": "youtube:EYqVtI9YWJA",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\EYqVtI9YWJA\\EYqVtI9YWJA.mp4",
+      "media_bytes": 10713251,
+      "media_sha256": "6ffcc966ab00a6096d7b256cffd09408efa7db376df7732644f875b8ff27f390",
+      "category": "BT",
+      "native_frames": 5939,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\EYqVtI9YWJA\\native_pts.npz",
+      "native_pts_sha256": "589dba719d7a14bc846a056b8a39c00e87987055e115973729e08cdcf4b05c46",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 198.16463333333334,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 5939,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": true,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": false,
+        "older_TVSum_crop_optimizer_training": false,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "validation",
+        "global_unseen": false
+      },
+      "role_proposal": "EXCLUDED_SILVER12"
+    },
+    {
+      "source_id": "eQu1rNs0an0",
+      "source_group": "youtube:eQu1rNs0an0",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\eQu1rNs0an0\\eQu1rNs0an0.mp4",
+      "media_bytes": 8817667,
+      "media_sha256": "7a3daec4c22feace99c4e193ce72e4a3e17bbedd4f0c6feb39e3e9030e6fb05f",
+      "category": "BT",
+      "native_frames": 4931,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\eQu1rNs0an0\\native_pts.npz",
+      "native_pts_sha256": "6e6e79b47fba0da26563ef5944f47a45de76965b4fecb16490d83615b1425eab",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 164.53103333333334,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 4931,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "PROCESS_DEV_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 20
+    },
+    {
+      "source_id": "JgHubY5Vw3Y",
+      "source_group": "youtube:JgHubY5Vw3Y",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\JgHubY5Vw3Y\\JgHubY5Vw3Y.mp4",
+      "media_bytes": 7682265,
+      "media_sha256": "dff35488cc8dfd1b4962d82d8a96f475a051f163ed7dea4be8a0d10456e5b7c5",
+      "category": "BT",
+      "native_frames": 4304,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\JgHubY5Vw3Y\\native_pts.npz",
+      "native_pts_sha256": "3d040bd8a40adbf1f90761228991ac79041f67cc43e1b12e6fd8f89131a2c276",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 143.61013333333332,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 4304,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "TRAIN_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 9
+    },
+    {
+      "source_id": "iVt07TCkFM0",
+      "source_group": "youtube:iVt07TCkFM0",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\iVt07TCkFM0\\iVt07TCkFM0.mp4",
+      "media_bytes": 5538282,
+      "media_sha256": "7c34621e37ff0cc6d7f8838e8c6468e67eea934484e3c7ecf8eca7409c35e3f7",
+      "category": "BT",
+      "native_frames": 2500,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\iVt07TCkFM0\\native_pts.npz",
+      "native_pts_sha256": "27ec9a46b3313a6be5a52e4676a9dff1761477d05a3f9b5cacba2c7cb82a76c6",
+      "native_time_base": [
+        1,
+        24000
+      ],
+      "source_duration_seconds": 104.27083333333333,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 2500,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "PROCESS_DEV_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 23
+    },
+    {
+      "source_id": "E11zDS9XGzg",
+      "source_group": "youtube:E11zDS9XGzg",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\E11zDS9XGzg\\E11zDS9XGzg.mp4",
+      "media_bytes": 27524696,
+      "media_sha256": "f4370b8fd985c3b41bf5590988669b18794ea64fea3921a8109962a91c324986",
+      "category": "DS",
+      "native_frames": 15307,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\E11zDS9XGzg\\native_pts.npz",
+      "native_pts_sha256": "1ce6c72c996857bb50157972769f3c08ef49b1aa95655af2c3b3f96ac3866528",
+      "native_time_base": [
+        1,
+        15360
+      ],
+      "source_duration_seconds": 510.23333333333335,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 15307,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "TRAIN_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 5
+    },
+    {
+      "source_id": "NyBmCxDoHJU",
+      "source_group": "youtube:NyBmCxDoHJU",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\NyBmCxDoHJU\\NyBmCxDoHJU.mp4",
+      "media_bytes": 10213204,
+      "media_sha256": "6960e8850f04eae077a85e3befddaed36ce1196ac84d9efd8f8560ac90e557b7",
+      "category": "DS",
+      "native_frames": 4740,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\NyBmCxDoHJU\\native_pts.npz",
+      "native_pts_sha256": "9861e05659d2c8387bd7dc4da207d9f335b9369be8bf8f37f3f8f1a2157a9780",
+      "native_time_base": [
+        1,
+        12800
+      ],
+      "source_duration_seconds": 189.6,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 4740,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "TRAIN_ROLE_PROPOSAL",
+      "deterministic_expansion_rank": 11
+    },
+    {
+      "source_id": "kLxoNp-UchI",
+      "source_group": "youtube:kLxoNp-UchI",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\kLxoNp-UchI\\kLxoNp-UchI.mp4",
+      "media_bytes": 6970411,
+      "media_sha256": "0c91bfa880e3af0e1716e7456ada0a304a97911eef76b1cd4fdce5066a52e8f7",
+      "category": "DS",
+      "native_frames": 3896,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\kLxoNp-UchI\\native_pts.npz",
+      "native_pts_sha256": "0a1944ba5f7d52a7ab662f6602efdfd17b7a6c0a361a635015495d7ec5429d12",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 129.99653333333333,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 3896,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": true,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "EXCLUDED_SILVER12"
+    },
+    {
+      "source_id": "jcoYJXDG9sw",
+      "source_group": "youtube:jcoYJXDG9sw",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\jcoYJXDG9sw\\jcoYJXDG9sw.mp4",
+      "media_bytes": 14753114,
+      "media_sha256": "3354cee170c1b9ace768883f058150869874ed27c2b60cf08b9f2272b5aa1db9",
+      "category": "DS",
+      "native_frames": 5971,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\jcoYJXDG9sw\\native_pts.npz",
+      "native_pts_sha256": "8287f36749a500db6e666a8d0dcd65808240ec5d08ce59c84e29a2d7495dc229",
+      "native_time_base": [
+        1,
+        30000
+      ],
+      "source_duration_seconds": 199.23236666666668,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 5971,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": false,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": true,
+        "older_TVSum_crop_optimizer_training": true,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "train",
+        "global_unseen": false
+      },
+      "role_proposal": "RESERVE_NOT_SELECTED",
+      "deterministic_expansion_rank": 24
+    },
+    {
+      "source_id": "-esJrBWj2d8",
+      "source_group": "youtube:-esJrBWj2d8",
+      "media_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\-esJrBWj2d8\\-esJrBWj2d8.mp4",
+      "media_bytes": 12547350,
+      "media_sha256": "811186cdec40ef58049f0cc951c07a9f6f7d2b5cb27511e01094b829bbd10a9e",
+      "category": "DS",
+      "native_frames": 6912,
+      "native_pts_path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\input\\-esJrBWj2d8\\native_pts.npz",
+      "native_pts_sha256": "214da5b3368e703ebb3ebdde8eed27510553e7a11414902913fc1edd59eee781",
+      "native_time_base": [
+        1,
+        15360
+      ],
+      "source_duration_seconds": 230.4,
+      "human_labels": {
+        "archive_path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum\\ydata-tvsum50-v1_1\\ydata-tvsum50-data.zip",
+        "archive_member": "data/ydata-tvsum50-anno.tsv",
+        "source_id_field": 0,
+        "category_field": 1,
+        "score_vector_field": 2,
+        "format": "TSV rows, 3 fields, score vector comma separated integers 1..5",
+        "annotator_rows": 20,
+        "vector_length": 6912,
+        "native_count_equal": true,
+        "alignment_scope": "COUNT_EQUAL_AND_HISTORICAL_NATIVE_PTS; NOT_HUMAN_BINARY_HIGHLIGHT_BOUNDARY",
+        "official_importance_must_not_be_binary_negative": true,
+        "ordinal_importance_use": "METADATA_IDENTITY_AND_COUNT_VALIDATED"
+      },
+      "current_recipe_overlap": {
+        "B602_youtube_id": false,
+        "B602_exact_media_sha": false,
+        "R7_dev_youtube_id": false,
+        "R7_confirm_youtube_id": false,
+        "silver12_source_group": true,
+        "rematch_available425_exact_media_sha": false
+      },
+      "historical_project_exposure": {
+        "older_TVSum_temporal_optimizer_training": false,
+        "older_TVSum_crop_optimizer_training": false,
+        "older_Gemini_native_video_observation": true,
+        "older_source_split": "validation",
+        "global_unseen": false
+      },
+      "role_proposal": "EXCLUDED_SILVER12"
+    }
+  ],
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "new_media_files": 0,
+  "new_transfer_bytes": 0,
+  "old_files_modified": false
+}

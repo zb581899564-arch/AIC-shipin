@@ -1,0 +1,43 @@
+{
+  "status": "ROOT_APPROVED_START_SCHEMA_RECOVERY_SINGLE_CLI39_JOB22",
+  "utc": "2026-10-11T10:16:21.177185+00:00",
+  "execution_binding_sha256": "2da8d2a693a9c329ab1cc90436454677176fb202d7e4dd3b861335f1262ceeec",
+  "dry_run_sha256": "1a5c7849417cead28d857cb9c732f2e4d0a64ec5f655574d59a8a2519100516e",
+  "negative_receipt_sha256": "27cd0fc254ced42c35a4a3f9e28fa5378934106e57548ef7c6678e282d4cbb1d",
+  "user_authorization": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\schema_recovery_22_23_user_authorization_v1.json",
+    "sha256": "b507cd5a057c874dc766668bc7736609a0904effdcbd1cf41ac570f561078d67"
+  },
+  "CLI": 39,
+  "global_cap": 40,
+  "no41": true,
+  "automatic_retry": false,
+  "fixed_job_indices": [
+    22
+  ],
+  "timeout_seconds": 3600,
+  "ROOT_w20_complete_independent_semantic_recovery_PASS": true,
+  "w20_semantic_recovery_receipt": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_root_semantic_recovery_receipt_v1.json",
+    "sha256": "637c81aaff183ed9777890891259ffdd2f6a72bdc44c0371d5fc5bd1f0195553",
+    "status": "PASS_ROOT20_INDEPENDENT_FINITE_REFERENCE_WITH_UNKNOWN_PRESERVED_NOT_TRAINING"
+  },
+  "w20_reference_binding": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_complete_reference_v1.json",
+    "sha256": "62998d79a1806d8510ac5c23851bf2b699c79bb4c1f44cc015e4c7a4c611dec5",
+    "window_id": "cjibtmSLxQ4:SLOT6:13",
+    "reference_kind": "FINITE_OBSERVATION_SILVER_EDITING_ADVICE_NOT_GOLD",
+    "source_sha256": "43183ef7f35bfcbc39c122be797fdee5031103862c7c7da3b9ab74d222c79c9d",
+    "source_window": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\source_window_plan.json",
+      "sha256": "09ecb28971932bd3bf8ac275c30d0a6fd534345442f2d2ec3529fa3f8e1e4b22"
+    },
+    "training_admitted": false
+  },
+  "independent_static_review": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\plan_review\\schema_recovery_22_23_v1_independent_static_review.json",
+    "sha256": "4a23a09318915baae414fee4cef3aada2e116ca060500b73f1f05328b6357eb7"
+  },
+  "actual_input_SHA_count": 1271,
+  "scientific_training_or_quality_PASS": false
+}

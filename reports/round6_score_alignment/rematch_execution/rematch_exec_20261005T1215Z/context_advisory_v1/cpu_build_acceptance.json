@@ -1,0 +1,16 @@
+{
+  "status": "PASS_CPU_ENGINEERING_GATES_AND_ACTUAL_MODULE_BINDING",
+  "investment_cases": 5,
+  "bootstrap_unbalanced_group_case": true,
+  "actual_bound_model_engine": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/precision_helpers/engine.py",
+  "processor_code_bindings": {
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/context_advisory_v1/context_contract.py": "73106da0a583eee1285c9cbb9b7a8bdf14f919bd970117dd4d3ea2c29a535dfc",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/context_advisory_v1/runtime.py": "73f014e20034e0c61e9d57fe927ec7c69392f2d5f5e7a2f3f9f06ca6efa614b9",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/context_advisory_v1/experiment.py": "da4cb613eded66626f271577e255d3b6767fc6a091d3b968d5f7343f986bfc1e",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/context_advisory_v1/tests.py": "9600aadc4ca7c8296d762dca21e679215dc779fd0c4468d001a620672b6d368e"
+  },
+  "actual_original_processor_proof_sha256": "884ebb4383b509d45395d441c724bd69bdd7f3ad5ba2c4c64ff9e05aa1477d07",
+  "processor_proof_reused_no_new_processor_calls": true,
+  "new_model_calls": 0,
+  "optimizer_updates": 0
+}

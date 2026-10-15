@@ -1,0 +1,196 @@
+{
+  "status": "PASS_FIXED_NATIVE64_SILVER_SFT_ENGINEERING_ONLY",
+  "optimizer_steps": 4,
+  "examples_backward": 16,
+  "updates": [
+    {
+      "step": 1,
+      "epoch": 0,
+      "window_ids": [
+        "WxtbjNsCQ8A:SLOT6:5",
+        "WxtbjNsCQ8A:SLOT6:0",
+        "kLxoNp-UchI:SLOT6:1",
+        "HT5vyqe0Xaw:SLOT6:2"
+      ],
+      "nonzero_gradient_tensors": 288,
+      "gradient_norm": 6.007959161732299,
+      "clip_input_norm": 6.007959365844727,
+      "actual_weights_changed": true,
+      "previous_lora_sha256": "e0c82f3bb9bd7628d9a8161158086ea7ae051dfdde175be2c7b383a7ecd2f2c5",
+      "lora_sha256": "4a91034bfacbbd469776698b3e2ed3ce37e310c930b13667a8ca9544536c70ec"
+    },
+    {
+      "step": 2,
+      "epoch": 0,
+      "window_ids": [
+        "AwmHb44_ouw:SLOT6:10",
+        "kLxoNp-UchI:SLOT6:2",
+        "AwmHb44_ouw:SLOT6:11",
+        "byxOvuiIJV0:SLOT6:2"
+      ],
+      "nonzero_gradient_tensors": 288,
+      "gradient_norm": 5.5216419405334145,
+      "clip_input_norm": 5.521641731262207,
+      "actual_weights_changed": true,
+      "previous_lora_sha256": "4a91034bfacbbd469776698b3e2ed3ce37e310c930b13667a8ca9544536c70ec",
+      "lora_sha256": "acdf33d5eed291adff1485ab1b5ed5cfdde976133c74e722d2d9ef17681501d5"
+    },
+    {
+      "step": 3,
+      "epoch": 1,
+      "window_ids": [
+        "AwmHb44_ouw:SLOT6:10",
+        "kLxoNp-UchI:SLOT6:2",
+        "WxtbjNsCQ8A:SLOT6:0",
+        "WxtbjNsCQ8A:SLOT6:5"
+      ],
+      "nonzero_gradient_tensors": 288,
+      "gradient_norm": 4.660193121183442,
+      "clip_input_norm": 4.660192966461182,
+      "actual_weights_changed": true,
+      "previous_lora_sha256": "acdf33d5eed291adff1485ab1b5ed5cfdde976133c74e722d2d9ef17681501d5",
+      "lora_sha256": "2b053ef2cc12cfae1c47ece49c47ccfe7c463dc84043403e37189a6aa5636fc2"
+    },
+    {
+      "step": 4,
+      "epoch": 1,
+      "window_ids": [
+        "AwmHb44_ouw:SLOT6:11",
+        "kLxoNp-UchI:SLOT6:1",
+        "HT5vyqe0Xaw:SLOT6:2",
+        "byxOvuiIJV0:SLOT6:2"
+      ],
+      "nonzero_gradient_tensors": 288,
+      "gradient_norm": 4.778952128138323,
+      "clip_input_norm": 4.778952121734619,
+      "actual_weights_changed": true,
+      "previous_lora_sha256": "2b053ef2cc12cfae1c47ece49c47ccfe7c463dc84043403e37189a6aa5636fc2",
+      "lora_sha256": "838c7e1254ba8da03c06a8d2bd130ae318fc24b39df00e99679e03b7d03e4b71"
+    }
+  ],
+  "losses": [
+    1.1432816982269287,
+    2.9069302082061768,
+    1.4483057260513306,
+    1.248782992362976,
+    1.5635302066802979,
+    1.0720388889312744,
+    2.6030304431915283,
+    1.527055025100708,
+    1.513305425643921,
+    1.0547373294830322,
+    2.407323122024536,
+    1.1003215312957764,
+    2.255157709121704,
+    1.3727147579193115,
+    1.1227630376815796,
+    1.4683820009231567
+  ],
+  "new_optimizer_updates": 4,
+  "quality_evaluation_pending": true,
+  "lock_sha256": "8cbea442c9f40d881fe5892f9dfba07c7825b2f282200eebcf5a0c3279789a76",
+  "config_sha256": "ed235026b57bf73be0fb7e8dc75852e79e93b7d9fb48dc49eb5e750b81adbbeb",
+  "source_order": [
+    "AwmHb44_ouw:SLOT6:10",
+    "AwmHb44_ouw:SLOT6:11",
+    "HT5vyqe0Xaw:SLOT6:2",
+    "WxtbjNsCQ8A:SLOT6:0",
+    "WxtbjNsCQ8A:SLOT6:5",
+    "byxOvuiIJV0:SLOT6:2",
+    "kLxoNp-UchI:SLOT6:1",
+    "kLxoNp-UchI:SLOT6:2"
+  ],
+  "schedule": {
+    "window_ids": [
+      "AwmHb44_ouw:SLOT6:10",
+      "AwmHb44_ouw:SLOT6:11",
+      "HT5vyqe0Xaw:SLOT6:2",
+      "WxtbjNsCQ8A:SLOT6:0",
+      "WxtbjNsCQ8A:SLOT6:5",
+      "byxOvuiIJV0:SLOT6:2",
+      "kLxoNp-UchI:SLOT6:1",
+      "kLxoNp-UchI:SLOT6:2"
+    ],
+    "batches": [
+      {
+        "epoch": 0,
+        "indices": [
+          4,
+          3,
+          6,
+          2
+        ]
+      },
+      {
+        "epoch": 0,
+        "indices": [
+          0,
+          7,
+          1,
+          5
+        ]
+      },
+      {
+        "epoch": 1,
+        "indices": [
+          0,
+          7,
+          3,
+          4
+        ]
+      },
+      {
+        "epoch": 1,
+        "indices": [
+          1,
+          6,
+          2,
+          5
+        ]
+      }
+    ],
+    "source_weights": [
+      "4/5",
+      "4/5",
+      "8/5",
+      "4/5",
+      "4/5",
+      "8/5",
+      "4/5",
+      "4/5"
+    ],
+    "window_ce_coefficient": "1/4",
+    "updates": 4
+  },
+  "final_checkpoint_only": true,
+  "original_B_preserved": true,
+  "native_cpu_preflight_receipt": {
+    "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/native_inputs_01/receipt.json",
+    "sha256": "b2df35fa1ec04fd58390e24aeccde981bbf0d5638175f20a6a769228a60e9ac0"
+  },
+  "initial_lora_tensor_sha256": "e0c82f3bb9bd7628d9a8161158086ea7ae051dfdde175be2c7b383a7ecd2f2c5",
+  "final_adapter_dir": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/train_01/final_adapter",
+  "final_adapter_sha256": "5c582329e9f15d13cc0237dd3672c07ae2cb0b474ccf7241d1e3d6472db0858f",
+  "final_adapter_config_sha256": "5fcca0f53c2e6848be016684f43804f122b8b039a6863dd77cb4b6c7a073ec6f",
+  "saved_tensor_identity_count": 288,
+  "changed_final_lora_tensors": 288,
+  "finite_losses": true,
+  "frozen_before": {
+    "sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+    "parameters": 8767123696,
+    "method": "sorted canonical names and all unique frozen parameter bytes"
+  },
+  "frozen_after": {
+    "sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+    "parameters": 8767123696,
+    "method": "sorted canonical names and all unique frozen parameter bytes"
+  },
+  "frozen_reload": {
+    "sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+    "parameters": 8767123696,
+    "method": "sorted canonical names and all unique frozen parameter bytes"
+  },
+  "first_step_nonzero_gradients": true,
+  "peak_allocated_bytes": 22486044160,
+  "training_complete": true
+}

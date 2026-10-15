@@ -1,0 +1,57 @@
+{
+  "schema": "CHARADES_FIXED_GEOMETRIC_BOUNDARY_PROXY_V1",
+  "status": "FROZEN_PRE_FINE_GEOMETRIC_PROXY_RULE_NOT_SCIENCE_PASS",
+  "rule": {
+    "unique_positive_action_intersection": true,
+    "censored_intersection_is_unknown": true,
+    "both_overlap_fractions_strictly_greater_than": "1/2",
+    "half_window_exact": "3",
+    "anchors": "coarse start+min(1,length/2), coarse end-min(1,length/2)",
+    "touching_intervals_are_not_positive_overlap": true,
+    "same_event_semantics": "UNKNOWN",
+    "fine_outputs_read_for_matching": false,
+    "whole_source_precision_recall_F1": false
+  },
+  "diagnostic_role_selection_rule": {
+    "fixed_endpoint_set": "geometric diagnostic + target strictly in context + predeclared available",
+    "minimum_distinct_sources": 3,
+    "BASE_pointwise_not_worse_than_both_TIME_and_coarse": true,
+    "BASE_mean_strictly_less_than_both_TIME_and_coarse": true,
+    "BASE_declared_action_support_covers_both_TIME_and_coarse": true,
+    "engineering_all_planned_outputs_required": true,
+    "tolerance_seconds_exact": "0",
+    "semantic_identity": "UNKNOWN",
+    "scientific_role_winner": false
+  },
+  "expected_sources": 21,
+  "expected_source_roles": {
+    "dev": 11,
+    "confirm": 10
+  },
+  "expected_coarse_windows": 38,
+  "current_planned_event_counts": {
+    "dev": 20,
+    "confirm": 18
+  },
+  "planned_events_selected_by": "pre-frozen coarse source/window/segment + native geometry only; cap20",
+  "availability_frozen_before_fine_outputs": true,
+  "required_native_frames": 64,
+  "typed_unavailable_status": "SHORT_NATIVE_CONTEXT_UNAVAILABLE",
+  "skip_applied_decision": "UNKNOWN_SHORT_NATIVE_CONTEXT_UNAVAILABLE",
+  "skip_roles_keep_original_no_actual_call": true,
+  "code_sha256": {
+    "metric.py": "92b5d1ec4a4ace3418ed1d938ce2d8b62e53c66895dafe4f9a0fe4e03fcfe7e9",
+    "freeze_from_coarse.py": "d6ae20667ac1272d8f8b12b7d11b478809980591f856917edcb1d69547e9227e",
+    "evaluate_roles.py": "9c15f722a9c2510403e275f1bd726befc74d185af937de824e4e569a35560393"
+  },
+  "fine_results_read_for_matching": false,
+  "scientific_quality_claim": false,
+  "same_event_semantics_verified": false,
+  "whole_source_precision_recall_F1_admitted": false,
+  "old_quality_gates_and_failures_unchanged": true,
+  "new_media_or_processor_or_model_calls": 0,
+  "current_official_rule_receipt_sha256": "b3dc2b7c080145efa3d72f413f4bb6fa8081f55b00bda97000fe83ed8284945b",
+  "execute_only_after_parent_registration": true,
+  "dev_role_freeze_before_confirmation": true,
+  "confirmation_reselects_role": false
+}

@@ -1,0 +1,101 @@
+{
+  "status": "PASS_GEMINI_REAL48_COMPLETE_RAW_IDENTITY_GEOMETRY_AND_UI_READS",
+  "utc": "2026-10-09T05:18:39.3543574Z",
+  "model_ui": "Gemini 3.8 Flash High",
+  "actual_png_read_entries_observed": 48,
+  "manifest_read_observed": true,
+  "ui_read_observation_ranges": [
+    [
+      0,
+      5
+    ],
+    [
+      6,
+      12
+    ],
+    [
+      12,
+      18
+    ],
+    [
+      18,
+      22
+    ],
+    [
+      22,
+      29
+    ],
+    [
+      28,
+      33
+    ],
+    [
+      33,
+      39
+    ],
+    [
+      36,
+      41
+    ],
+    [
+      42,
+      47
+    ]
+  ],
+  "output_frames": 48,
+  "crop_tasks": 96,
+  "valid_crops": 96,
+  "raw_json_files": 9,
+  "earlier_saved_raw_files_unchanged": true,
+  "actual_accuracy": "NOT_MEASURED",
+  "new_training_updates": 0,
+  "raw_files": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\antigravity_label_probe_20261009\\output\\real_tvsum_v1\\batch_00.json",
+      "bytes": 5377,
+      "sha256": "3c0c37aa780050635fe0e19f477f4e872b9a330f47baea8be23e1da9de2b4dd5"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\antigravity_label_probe_20261009\\output\\real_tvsum_v1\\batch_01.json",
+      "bytes": 5284,
+      "sha256": "5c91df8553b420ab97474caeb43effdaa7028245d153d4167328f7521f063743"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\antigravity_label_probe_20261009\\output\\real_tvsum_v1\\batch_02.json",
+      "bytes": 5298,
+      "sha256": "67e002e1f909276cd6a407951a05910d8178af61ecd87de663a2b980c7962bbf"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\antigravity_label_probe_20261009\\output\\real_tvsum_v1\\batch_03.json",
+      "bytes": 5364,
+      "sha256": "b15144617eca90db88dafa2669a539a377c5b0f4583f75729547cb790e664dfe"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\antigravity_label_probe_20261009\\output\\real_tvsum_v1\\batch_04.json",
+      "bytes": 5198,
+      "sha256": "b0e4ee6a8ac2232e2175272748b15f2fb09f3b88a6f6cee0e255f768d9aaac8f"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\antigravity_label_probe_20261009\\output\\real_tvsum_v1\\batch_05.json",
+      "bytes": 5078,
+      "sha256": "0ead7ee613f98414910de4c239ebf409d31662a3b762b336ad212578a5e55c62"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\antigravity_label_probe_20261009\\output\\real_tvsum_v1\\batch_06.json",
+      "bytes": 5054,
+      "sha256": "5fc239dee4b22c6ff5494da04d3077df1d3f58f92cbe6a7117c5f89cbdd7c550"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\antigravity_label_probe_20261009\\output\\real_tvsum_v1\\batch_07.json",
+      "bytes": 5045,
+      "sha256": "d10392d345e4318307287264e019e2a27b5908f28209b7ebd2038c7cca147263"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\antigravity_label_probe_20261009\\output\\real_tvsum_v1\\summary.json",
+      "bytes": 2024,
+      "sha256": "f54a62c5fb8a505180a115d5fb6a8b97a71df92085672f01691a634f07d24000"
+    }
+  ],
+  "validation_initial_issue": "Checker incorrectly compared absent zero categories versus explicit zero categories; original validation preserved, checker fixed without editing labels",
+  "validation_report": "validation_v2.json"
+}

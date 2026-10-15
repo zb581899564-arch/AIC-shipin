@@ -1,0 +1,28 @@
+{
+  "status": "PASS_24_LOCAL_CPU_OBSERVATION_INPUTS_NOT_TRAINING_ADMISSION",
+  "utc": "2026-10-10T05:57:58.445422+00:00",
+  "source_window_plan_sha256": "09ecb28971932bd3bf8ac275c30d0a6fd534345442f2d2ec3529fa3f8e1e4b22",
+  "processor_binding_sha256": "272ab26a6dc9bbe42db40531eec316f91aed5f4073b6ab9d79a2aa80d1294c29",
+  "receipt_bindings": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\student_views_cpu_receipt.json",
+      "sha256": "614d49772248bd3d260842c0c32f795eff6ef5381079dd75fc6488a293d2161a"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\remaining_student_views_cpu_receipt.json",
+      "sha256": "8f5cd24ef31d88d950a2fa93e0d6f8567214b64cdeaa33b2639b3e8c2d73f356"
+    }
+  ],
+  "source_groups": 12,
+  "windows": 24,
+  "original_pngs": 1536,
+  "actual_processor_tensor_reconstruction_pngs": 1536,
+  "input_tokens_min": 5717,
+  "input_tokens_max": 7477,
+  "new_optimizer_updates": 0,
+  "new_student_model_calls": 0,
+  "linux_processor_execution": false,
+  "all_silver_training_admission_pending": true,
+  "large_source_upload_authorized": false,
+  "upload_request_pending": true
+}

@@ -1,0 +1,1249 @@
+{
+  "status": "PASS_EFFECTIVE20_NATIVE64_CPU_INPUTS_NOT_YET_GPU_LOCK_ADMISSION",
+  "utc": "2026-10-13T05:02:04.906563+00:00",
+  "registration_sha256": "9a4c052bb7c68c6ced989301049f6f7969c45e4bdaaf3f504b84d71abab0eb0b",
+  "sources": 20,
+  "screen": 12,
+  "confirm": 8,
+  "windows": 92,
+  "accepted": [
+    {
+      "video_id": "v_fVg3StD8LL0",
+      "group": "screen",
+      "slot": 1,
+      "selection_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/01_v_fVg3StD8LL0/selection.json",
+      "reference_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/01_v_fVg3StD8LL0/references.json",
+      "reference_sha256": "d35741eaa20d97df53c2d8b1efd5142a24c7442b5bdea740687fed2b8fdbdee9",
+      "media_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/01_v_fVg3StD8LL0/media/completion.json",
+      "media_completion_sha256": "e6e28f7058cfc57d83507dd0ae5aef623e73499d16613970f3da2223de8127b8",
+      "cpu_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/01_v_fVg3StD8LL0/cpu/completion.json",
+      "cpu_completion_sha256": "9ff4af7e386e9c558127be1cf0df7130d9d55b244a82dc8d1fb5405cf59544ae",
+      "proofs": [
+        {
+          "case_id": "v_fVg3StD8LL0_W000",
+          "video_id": "v_fVg3StD8LL0",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/01_v_fVg3StD8LL0/cpu/v_fVg3StD8LL0/v_fVg3StD8LL0_W000/input.json",
+          "input_sha256": "19d252adaee56f8c312a838f6a588aa0e3e33cec50d8335974ae5aced8276772",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/01_v_fVg3StD8LL0/cpu/v_fVg3StD8LL0/v_fVg3StD8LL0_W000/cpu_input.json",
+          "proof_sha256": "7f00623ba977b3031ba8e8c933b8ac1d65f8c091d292a7448a7e7af37e8d170a",
+          "input_tokens": 10032
+        },
+        {
+          "case_id": "v_fVg3StD8LL0_W001",
+          "video_id": "v_fVg3StD8LL0",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/01_v_fVg3StD8LL0/cpu/v_fVg3StD8LL0/v_fVg3StD8LL0_W001/input.json",
+          "input_sha256": "42199e218e5b2f70f0ec406c13e697bb44b77fd6f7b65933a55224fd97c1c0d5",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/01_v_fVg3StD8LL0/cpu/v_fVg3StD8LL0/v_fVg3StD8LL0_W001/cpu_input.json",
+          "proof_sha256": "f4e2b738bee02d3d14461e9c4ab705d5c6cf75533a111304238f3a5f9170c606",
+          "input_tokens": 10032
+        },
+        {
+          "case_id": "v_fVg3StD8LL0_W002",
+          "video_id": "v_fVg3StD8LL0",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/01_v_fVg3StD8LL0/cpu/v_fVg3StD8LL0/v_fVg3StD8LL0_W002/input.json",
+          "input_sha256": "1feb02b1a3556d7a433cc9778b9f2c82ce7ee68dd9193a6cbc633bacfe57bd90",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/01_v_fVg3StD8LL0/cpu/v_fVg3StD8LL0/v_fVg3StD8LL0_W002/cpu_input.json",
+          "proof_sha256": "17398180311bc67eda2933c9436237029e80d83840d1ee57b9f775b40fe8e6b0",
+          "input_tokens": 10032
+        }
+      ]
+    },
+    {
+      "video_id": "v_SEebwJMNMQs",
+      "group": "screen",
+      "slot": 2,
+      "selection_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/02_v_SEebwJMNMQs/selection.json",
+      "reference_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/02_v_SEebwJMNMQs/references.json",
+      "reference_sha256": "cbea128f022ce121e75175d0914ef2b0ef919548dd3c719debf6a6cded9396b7",
+      "media_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/02_v_SEebwJMNMQs/media/completion.json",
+      "media_completion_sha256": "321bb6d2187e04d1c4843abbc4d8a9829279df76eb002de8daefe382bc85ccdb",
+      "cpu_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/02_v_SEebwJMNMQs/cpu/completion.json",
+      "cpu_completion_sha256": "6c14707900484197e38971d02a802e910f39a16f86c7a03ecc3912cb74a2ed71",
+      "proofs": [
+        {
+          "case_id": "v_SEebwJMNMQs_W000",
+          "video_id": "v_SEebwJMNMQs",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/02_v_SEebwJMNMQs/cpu/v_SEebwJMNMQs/v_SEebwJMNMQs_W000/input.json",
+          "input_sha256": "a55d09f07948bcf42295585c1c614595e51b367deef36c310e7d48701ab74c36",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/02_v_SEebwJMNMQs/cpu/v_SEebwJMNMQs/v_SEebwJMNMQs_W000/cpu_input.json",
+          "proof_sha256": "eddefd8a1dcd9a8725a5f80475078d3b9ff36258fd6377933ea2cdfe2ff75220",
+          "input_tokens": 10037
+        },
+        {
+          "case_id": "v_SEebwJMNMQs_W001",
+          "video_id": "v_SEebwJMNMQs",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/02_v_SEebwJMNMQs/cpu/v_SEebwJMNMQs/v_SEebwJMNMQs_W001/input.json",
+          "input_sha256": "c69a2694815debde20c997276173b7e1f57ff9a4ac0e3caa314a0274cc1bd9b7",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/02_v_SEebwJMNMQs/cpu/v_SEebwJMNMQs/v_SEebwJMNMQs_W001/cpu_input.json",
+          "proof_sha256": "f456c09758850b8b6bc75f1c6d0c7f0fcfda01ca0d02aa951facf5d41498249a",
+          "input_tokens": 10037
+        },
+        {
+          "case_id": "v_SEebwJMNMQs_W002",
+          "video_id": "v_SEebwJMNMQs",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/02_v_SEebwJMNMQs/cpu/v_SEebwJMNMQs/v_SEebwJMNMQs_W002/input.json",
+          "input_sha256": "90b5cc23dac50e2d690cdcacc730618d50a1246aed06b96ee7af9e8dbc7c5679",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/02_v_SEebwJMNMQs/cpu/v_SEebwJMNMQs/v_SEebwJMNMQs_W002/cpu_input.json",
+          "proof_sha256": "0f24d7fd47872698c17a6e6cabc71b03a9e08f64e2317f7e77afed4b0f6c237b",
+          "input_tokens": 10037
+        },
+        {
+          "case_id": "v_SEebwJMNMQs_W003",
+          "video_id": "v_SEebwJMNMQs",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/02_v_SEebwJMNMQs/cpu/v_SEebwJMNMQs/v_SEebwJMNMQs_W003/input.json",
+          "input_sha256": "052617b25236970e4ca11c54561ab9c29419b8d850b7430a308829460c6b78b0",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/02_v_SEebwJMNMQs/cpu/v_SEebwJMNMQs/v_SEebwJMNMQs_W003/cpu_input.json",
+          "proof_sha256": "6fdf0b19a2869538f46c2d483aa78471639bcea5b4ea52450dd7a94ac714b950",
+          "input_tokens": 10037
+        },
+        {
+          "case_id": "v_SEebwJMNMQs_W004",
+          "video_id": "v_SEebwJMNMQs",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/02_v_SEebwJMNMQs/cpu/v_SEebwJMNMQs/v_SEebwJMNMQs_W004/input.json",
+          "input_sha256": "ed98b30cad1d8de124319d70f05154a2bb25dd312e59c6334d49d2c84c938b60",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/02_v_SEebwJMNMQs/cpu/v_SEebwJMNMQs/v_SEebwJMNMQs_W004/cpu_input.json",
+          "proof_sha256": "75f6e908d0acad37038807af3774faa539ab23944604fbc6f8efb6002a25f39d",
+          "input_tokens": 10037
+        },
+        {
+          "case_id": "v_SEebwJMNMQs_W005",
+          "video_id": "v_SEebwJMNMQs",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/02_v_SEebwJMNMQs/cpu/v_SEebwJMNMQs/v_SEebwJMNMQs_W005/input.json",
+          "input_sha256": "92382f4fa6739bf958d907044bbc21c14b21552e77abcae5944d72b9e090a858",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/02_v_SEebwJMNMQs/cpu/v_SEebwJMNMQs/v_SEebwJMNMQs_W005/cpu_input.json",
+          "proof_sha256": "71d043ff1f4b71e7f1b07f96584e564786ec6ed05f35745b96cb3e18ef6a24e9",
+          "input_tokens": 10037
+        },
+        {
+          "case_id": "v_SEebwJMNMQs_W006",
+          "video_id": "v_SEebwJMNMQs",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/02_v_SEebwJMNMQs/cpu/v_SEebwJMNMQs/v_SEebwJMNMQs_W006/input.json",
+          "input_sha256": "4beaaa3015f348352795706a6102cf6c32f8881d5c336537bd89b40ae44142f5",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/02_v_SEebwJMNMQs/cpu/v_SEebwJMNMQs/v_SEebwJMNMQs_W006/cpu_input.json",
+          "proof_sha256": "39bd14fc1f19b407ab8bc7f10243869fda0c707f31eba6afbdd150516e7a850b",
+          "input_tokens": 10037
+        },
+        {
+          "case_id": "v_SEebwJMNMQs_W007",
+          "video_id": "v_SEebwJMNMQs",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/02_v_SEebwJMNMQs/cpu/v_SEebwJMNMQs/v_SEebwJMNMQs_W007/input.json",
+          "input_sha256": "726c4176b1571e5e0666ba1016ade777f57bd4855c6ebb8d42b6cb5d701b5f2e",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/02_v_SEebwJMNMQs/cpu/v_SEebwJMNMQs/v_SEebwJMNMQs_W007/cpu_input.json",
+          "proof_sha256": "b174bf70af7352f3b6625392a5bb6f9e838999b8d317bf82dcb336c0e29c5570",
+          "input_tokens": 10037
+        }
+      ]
+    },
+    {
+      "video_id": "v_OzjjQ4SZ8PY",
+      "group": "screen",
+      "slot": 3,
+      "selection_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/03_v_OzjjQ4SZ8PY/selection.json",
+      "reference_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/03_v_OzjjQ4SZ8PY/references.json",
+      "reference_sha256": "5a1cd33c3bbfdd852b1bca253454a68bc260dbd15fa5532e03b8691cc9a15e88",
+      "media_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/03_v_OzjjQ4SZ8PY/media/completion.json",
+      "media_completion_sha256": "dcb6ce90ff6a234f4791ea802d7517162f26ae1628e4004efe42fbb96d19e2ac",
+      "cpu_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/03_v_OzjjQ4SZ8PY/cpu/completion.json",
+      "cpu_completion_sha256": "665b88f30d5e6fff048766cf6b01b966736bd12039fe42b8029da160c47e57e3",
+      "proofs": [
+        {
+          "case_id": "v_OzjjQ4SZ8PY_W000",
+          "video_id": "v_OzjjQ4SZ8PY",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/03_v_OzjjQ4SZ8PY/cpu/v_OzjjQ4SZ8PY/v_OzjjQ4SZ8PY_W000/input.json",
+          "input_sha256": "e941fc55eb09e6f805aa2934c5732cd8a5f15ac0366ed8c50b0b4c48b6d315f0",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/03_v_OzjjQ4SZ8PY/cpu/v_OzjjQ4SZ8PY/v_OzjjQ4SZ8PY_W000/cpu_input.json",
+          "proof_sha256": "ad7fcc59d3d11c8d6d962ae23ee7d465740dc6921bd574523b351f706cf0e279",
+          "input_tokens": 12084
+        },
+        {
+          "case_id": "v_OzjjQ4SZ8PY_W001",
+          "video_id": "v_OzjjQ4SZ8PY",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/03_v_OzjjQ4SZ8PY/cpu/v_OzjjQ4SZ8PY/v_OzjjQ4SZ8PY_W001/input.json",
+          "input_sha256": "0ca63b8081fdf3b72b338a643818cff00f3347caef6cf21a5e8113d8bc1f902d",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/03_v_OzjjQ4SZ8PY/cpu/v_OzjjQ4SZ8PY/v_OzjjQ4SZ8PY_W001/cpu_input.json",
+          "proof_sha256": "5f2f468afe68fb88b621e6677ab173d9d5dac41735b897de44c23a20224fd594",
+          "input_tokens": 12084
+        },
+        {
+          "case_id": "v_OzjjQ4SZ8PY_W002",
+          "video_id": "v_OzjjQ4SZ8PY",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/03_v_OzjjQ4SZ8PY/cpu/v_OzjjQ4SZ8PY/v_OzjjQ4SZ8PY_W002/input.json",
+          "input_sha256": "55e24ff3ab9f99a49f49b9e9e04e4b7e111424697f0bfef44d61d82fbc034ed3",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/03_v_OzjjQ4SZ8PY/cpu/v_OzjjQ4SZ8PY/v_OzjjQ4SZ8PY_W002/cpu_input.json",
+          "proof_sha256": "cad9f6c9b7ee8e68fa55590dc0f8bf56249b409fb06fdd95fcb503e490987fc9",
+          "input_tokens": 12084
+        },
+        {
+          "case_id": "v_OzjjQ4SZ8PY_W003",
+          "video_id": "v_OzjjQ4SZ8PY",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/03_v_OzjjQ4SZ8PY/cpu/v_OzjjQ4SZ8PY/v_OzjjQ4SZ8PY_W003/input.json",
+          "input_sha256": "c21f288cea6c7d865edc553bdb90e70dd1760225365c7ea30ae1b9911f166f0c",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/03_v_OzjjQ4SZ8PY/cpu/v_OzjjQ4SZ8PY/v_OzjjQ4SZ8PY_W003/cpu_input.json",
+          "proof_sha256": "a7e835ffad3c7656e2acb3e24c6d69b3cf9a275125329b76fbb0fda34be2e504",
+          "input_tokens": 12084
+        },
+        {
+          "case_id": "v_OzjjQ4SZ8PY_W004",
+          "video_id": "v_OzjjQ4SZ8PY",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/03_v_OzjjQ4SZ8PY/cpu/v_OzjjQ4SZ8PY/v_OzjjQ4SZ8PY_W004/input.json",
+          "input_sha256": "63f6d9f7ceeb27c35a00152839b371e087e2ebbd2e08f775787db89364d4d5d8",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/03_v_OzjjQ4SZ8PY/cpu/v_OzjjQ4SZ8PY/v_OzjjQ4SZ8PY_W004/cpu_input.json",
+          "proof_sha256": "fc8079dbfbe70732686091d2db6ddda2d8ae41dac9998b2f57092234edbcef25",
+          "input_tokens": 12084
+        },
+        {
+          "case_id": "v_OzjjQ4SZ8PY_W005",
+          "video_id": "v_OzjjQ4SZ8PY",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/03_v_OzjjQ4SZ8PY/cpu/v_OzjjQ4SZ8PY/v_OzjjQ4SZ8PY_W005/input.json",
+          "input_sha256": "ddd88c2e4ed32a9e33122455a11f45ea76108172df2cb57fe2af4e8cdbc0bfb6",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/03_v_OzjjQ4SZ8PY/cpu/v_OzjjQ4SZ8PY/v_OzjjQ4SZ8PY_W005/cpu_input.json",
+          "proof_sha256": "21a20d6eb1ea84fbb39240be8fb248fabe57424cbafd5865af2fcbdf56dba03e",
+          "input_tokens": 12084
+        }
+      ]
+    },
+    {
+      "video_id": "v_eWP99kNayuU",
+      "group": "screen",
+      "slot": 4,
+      "selection_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/04_v_eWP99kNayuU/selection.json",
+      "reference_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/04_v_eWP99kNayuU/references.json",
+      "reference_sha256": "7e67d688044b43ecf4a971f51adb90ab278a1126796c7352594a76a28794fd56",
+      "media_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/04_v_eWP99kNayuU/media/completion.json",
+      "media_completion_sha256": "b5a179dc4dd8325f735c54e4ba52d80960c91b65172d356614723044a3925db1",
+      "cpu_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/04_v_eWP99kNayuU/cpu/completion.json",
+      "cpu_completion_sha256": "ce73aabbb9e7c8cbb8037f4bf9d55b74030f61528e4f3b2df355b37321a41f9b",
+      "proofs": [
+        {
+          "case_id": "v_eWP99kNayuU_W000",
+          "video_id": "v_eWP99kNayuU",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/04_v_eWP99kNayuU/cpu/v_eWP99kNayuU/v_eWP99kNayuU_W000/input.json",
+          "input_sha256": "854c07648011365ccb18a0f8a10e0ad0965a44267fbc256d55a358315b148374",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/04_v_eWP99kNayuU/cpu/v_eWP99kNayuU/v_eWP99kNayuU_W000/cpu_input.json",
+          "proof_sha256": "0f061dd51dd5648831e6f3920483098f11fde2c93ea8c9bc616c9db758d919b9",
+          "input_tokens": 12078
+        },
+        {
+          "case_id": "v_eWP99kNayuU_W001",
+          "video_id": "v_eWP99kNayuU",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/04_v_eWP99kNayuU/cpu/v_eWP99kNayuU/v_eWP99kNayuU_W001/input.json",
+          "input_sha256": "aa54ec2000fc816d02a3f3153321bc885b3545dbba05991dc231040e44b17976",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/04_v_eWP99kNayuU/cpu/v_eWP99kNayuU/v_eWP99kNayuU_W001/cpu_input.json",
+          "proof_sha256": "7fbe91cf12df71f2ba6918fbfd7fcd604c7654e253e1e6628a62c9569d9c49f1",
+          "input_tokens": 12078
+        }
+      ]
+    },
+    {
+      "video_id": "v_b_iUgvzb1-0",
+      "group": "screen",
+      "slot": 5,
+      "selection_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/05_v_b_iUgvzb1-0/selection.json",
+      "reference_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/05_v_b_iUgvzb1-0/references.json",
+      "reference_sha256": "d99181819a6aa50805796a21e3bf51400ea796c0d34220f671852acabb3abca7",
+      "media_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/05_v_b_iUgvzb1-0/media/completion.json",
+      "media_completion_sha256": "3af96bd96e0c263f51256817e9842318e988917459c58862f08b3f6dbef69a6e",
+      "cpu_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/05_v_b_iUgvzb1-0/cpu/completion.json",
+      "cpu_completion_sha256": "f928e61203b2e36caf88d336c62f72ed0d79fb4e361184cae4df0b5b16c60473",
+      "proofs": [
+        {
+          "case_id": "v_b_iUgvzb1-0_W000",
+          "video_id": "v_b_iUgvzb1-0",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/05_v_b_iUgvzb1-0/cpu/v_b_iUgvzb1-0/v_b_iUgvzb1-0_W000/input.json",
+          "input_sha256": "abdb7bc1b12f9f581bffc0b0580c34d35f920f6e708350fb997e66908f0177a5",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/05_v_b_iUgvzb1-0/cpu/v_b_iUgvzb1-0/v_b_iUgvzb1-0_W000/cpu_input.json",
+          "proof_sha256": "5cb25544fd4a82758d11ea610a057488a7096def608087eaa164351a6fc2acb6",
+          "input_tokens": 5713
+        },
+        {
+          "case_id": "v_b_iUgvzb1-0_W001",
+          "video_id": "v_b_iUgvzb1-0",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/05_v_b_iUgvzb1-0/cpu/v_b_iUgvzb1-0/v_b_iUgvzb1-0_W001/input.json",
+          "input_sha256": "02ecf24974081ea6bfd91fc80f7cfc1767b0d1a3cf2961ccd5bcca12fe05251f",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/05_v_b_iUgvzb1-0/cpu/v_b_iUgvzb1-0/v_b_iUgvzb1-0_W001/cpu_input.json",
+          "proof_sha256": "714632439aea079dec747ec061292d244f372e881c564fe2e437859fc80a116a",
+          "input_tokens": 5713
+        }
+      ]
+    },
+    {
+      "video_id": "v_LHewj6shKGw",
+      "group": "screen",
+      "slot": 6,
+      "selection_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/06_v_LHewj6shKGw/selection.json",
+      "reference_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/06_v_LHewj6shKGw/references.json",
+      "reference_sha256": "37cc74f713312b314a183783a48d5977321cec0b588b9683d0356eb40ae11d3e",
+      "media_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/06_v_LHewj6shKGw/media/completion.json",
+      "media_completion_sha256": "756dafa0408e2390e6e65d77a7d310c1c89a390840555949b793f7eeebf30583",
+      "cpu_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/06_v_LHewj6shKGw/cpu/completion.json",
+      "cpu_completion_sha256": "f10ba483e5498258d1709a89dade7ba623d7f667c2d1276a80651dc831e2653b",
+      "proofs": [
+        {
+          "case_id": "v_LHewj6shKGw_W000",
+          "video_id": "v_LHewj6shKGw",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/06_v_LHewj6shKGw/cpu/v_LHewj6shKGw/v_LHewj6shKGw_W000/input.json",
+          "input_sha256": "47926117c047be567c8e18569b8a8b5f688059a9cd3ea7015504d5c89540d2e5",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/06_v_LHewj6shKGw/cpu/v_LHewj6shKGw/v_LHewj6shKGw_W000/cpu_input.json",
+          "proof_sha256": "c0e28a424217580efcd6e9a928b4558b9139ecee73224ec1277e97858483b9e8",
+          "input_tokens": 10035
+        },
+        {
+          "case_id": "v_LHewj6shKGw_W001",
+          "video_id": "v_LHewj6shKGw",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/06_v_LHewj6shKGw/cpu/v_LHewj6shKGw/v_LHewj6shKGw_W001/input.json",
+          "input_sha256": "fac353e426f232f2c6445986a2383a9c90cb67a0a346a5627cd8f98410317c92",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/06_v_LHewj6shKGw/cpu/v_LHewj6shKGw/v_LHewj6shKGw_W001/cpu_input.json",
+          "proof_sha256": "51862b69367df4d1172f45246c947aa4e0dcbd5c1b68841d83de5fb661fe3db5",
+          "input_tokens": 10035
+        },
+        {
+          "case_id": "v_LHewj6shKGw_W002",
+          "video_id": "v_LHewj6shKGw",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/06_v_LHewj6shKGw/cpu/v_LHewj6shKGw/v_LHewj6shKGw_W002/input.json",
+          "input_sha256": "2a5c2a20c1fa79fd76a5fc692d43840f8b88ba474e7e7eda1c1b9f6098a6362c",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/06_v_LHewj6shKGw/cpu/v_LHewj6shKGw/v_LHewj6shKGw_W002/cpu_input.json",
+          "proof_sha256": "232a07d27aa241ef8b61ba8a5a57462feb09387390290bc2e4154755a820f130",
+          "input_tokens": 10035
+        }
+      ]
+    },
+    {
+      "video_id": "v_tgPjcWP7Vig",
+      "group": "screen",
+      "slot": 7,
+      "selection_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/07_v_tgPjcWP7Vig/selection.json",
+      "reference_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/07_v_tgPjcWP7Vig/references.json",
+      "reference_sha256": "ca00f3843abf65c7ea53b234f0cc0e7933a676576ee6381a4d7956e78bb34db8",
+      "media_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/07_v_tgPjcWP7Vig/media/completion.json",
+      "media_completion_sha256": "a14ba6deaa839753947f659ca630f83e4d784afa12ef752a10a9baa4d8eb2c51",
+      "cpu_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/07_v_tgPjcWP7Vig/cpu/completion.json",
+      "cpu_completion_sha256": "4a11fc4ec0d658fd3b82027af59b7153a0ba9ca7eb3fcfb44b27bc811d059731",
+      "proofs": [
+        {
+          "case_id": "v_tgPjcWP7Vig_W000",
+          "video_id": "v_tgPjcWP7Vig",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/07_v_tgPjcWP7Vig/cpu/v_tgPjcWP7Vig/v_tgPjcWP7Vig_W000/input.json",
+          "input_sha256": "29f22a3a31c4813085ef1483bc68303d5e213190cb49752132b18c6fb92c5c60",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/07_v_tgPjcWP7Vig/cpu/v_tgPjcWP7Vig/v_tgPjcWP7Vig_W000/cpu_input.json",
+          "proof_sha256": "15f14b3124ea323b4d8cad50a2907bfc1f677cb3248d642c5511d1d9d15b261d",
+          "input_tokens": 10037
+        },
+        {
+          "case_id": "v_tgPjcWP7Vig_W001",
+          "video_id": "v_tgPjcWP7Vig",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/07_v_tgPjcWP7Vig/cpu/v_tgPjcWP7Vig/v_tgPjcWP7Vig_W001/input.json",
+          "input_sha256": "9a3d4215a1614b1fb1dcfe0d6eaf3037ba312cadad8ea1e864cb5b2f903b8a8d",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/07_v_tgPjcWP7Vig/cpu/v_tgPjcWP7Vig/v_tgPjcWP7Vig_W001/cpu_input.json",
+          "proof_sha256": "38615fd664ee47bd733ddd9bd1bb754e1f8f3a9fe5e42521a7af0eb1713f3bd0",
+          "input_tokens": 10037
+        },
+        {
+          "case_id": "v_tgPjcWP7Vig_W002",
+          "video_id": "v_tgPjcWP7Vig",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/07_v_tgPjcWP7Vig/cpu/v_tgPjcWP7Vig/v_tgPjcWP7Vig_W002/input.json",
+          "input_sha256": "bee1df6ef940de4e6ca26c153d876abb3fb16d56bfc825a002707c577761e466",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/07_v_tgPjcWP7Vig/cpu/v_tgPjcWP7Vig/v_tgPjcWP7Vig_W002/cpu_input.json",
+          "proof_sha256": "f3a4c57c56af7cd15f6c07f9b746e4f978ac413597562bec9d7f80011abf03ca",
+          "input_tokens": 10037
+        },
+        {
+          "case_id": "v_tgPjcWP7Vig_W003",
+          "video_id": "v_tgPjcWP7Vig",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/07_v_tgPjcWP7Vig/cpu/v_tgPjcWP7Vig/v_tgPjcWP7Vig_W003/input.json",
+          "input_sha256": "04aa3e967c58b4d0627e6d7fae71caf053812f36adeabf943f8a82f4bceffba3",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/07_v_tgPjcWP7Vig/cpu/v_tgPjcWP7Vig/v_tgPjcWP7Vig_W003/cpu_input.json",
+          "proof_sha256": "51b3e6ac2346ed1314359b7ca21badc89d3d7e711e3c67e75351727cf3867e71",
+          "input_tokens": 10037
+        },
+        {
+          "case_id": "v_tgPjcWP7Vig_W004",
+          "video_id": "v_tgPjcWP7Vig",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/07_v_tgPjcWP7Vig/cpu/v_tgPjcWP7Vig/v_tgPjcWP7Vig_W004/input.json",
+          "input_sha256": "549f33b66c9c11479a8bb4c7aa94897cc4a0ca5e5f57e22067a51c6bbf58578c",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/07_v_tgPjcWP7Vig/cpu/v_tgPjcWP7Vig/v_tgPjcWP7Vig_W004/cpu_input.json",
+          "proof_sha256": "af0d22f8e4561ee4ebfc2acb8ffe37aa8d0c698353431f30718d4d6351aaa6c3",
+          "input_tokens": 10037
+        },
+        {
+          "case_id": "v_tgPjcWP7Vig_W005",
+          "video_id": "v_tgPjcWP7Vig",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/07_v_tgPjcWP7Vig/cpu/v_tgPjcWP7Vig/v_tgPjcWP7Vig_W005/input.json",
+          "input_sha256": "c2267e8b4fd3c7c1a9c40c0fdcccbcf8918d67e1b40c74327fa28b364a2598f4",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/07_v_tgPjcWP7Vig/cpu/v_tgPjcWP7Vig/v_tgPjcWP7Vig_W005/cpu_input.json",
+          "proof_sha256": "5b3c588803ced691ca0e2a5198ba89745551f036dabbdfea6062daf4136c0643",
+          "input_tokens": 10037
+        }
+      ]
+    },
+    {
+      "video_id": "v_fdd5ixvEXOE",
+      "group": "screen",
+      "slot": 8,
+      "selection_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/08_v_fdd5ixvEXOE/selection.json",
+      "reference_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/08_v_fdd5ixvEXOE/references.json",
+      "reference_sha256": "e8465a40ef681db1d0fed950d3e3dc46524d21b39504c20422abb33c4f084589",
+      "media_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/08_v_fdd5ixvEXOE/media/completion.json",
+      "media_completion_sha256": "e236a3368ff3acb9188017f1fe84cbbb1a9a19c9f5a3ec791eaf3b7aed81a58f",
+      "cpu_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/08_v_fdd5ixvEXOE/cpu/completion.json",
+      "cpu_completion_sha256": "fea62e41091da6487373a259e3b418f5273a5edc9e34ebe4f36a04b228a6b6cd",
+      "proofs": [
+        {
+          "case_id": "v_fdd5ixvEXOE_W000",
+          "video_id": "v_fdd5ixvEXOE",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/08_v_fdd5ixvEXOE/cpu/v_fdd5ixvEXOE/v_fdd5ixvEXOE_W000/input.json",
+          "input_sha256": "9c53cb1572ffe4411168c984ea695f60f8d3551491ee3619881384e559a48344",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/08_v_fdd5ixvEXOE/cpu/v_fdd5ixvEXOE/v_fdd5ixvEXOE_W000/cpu_input.json",
+          "proof_sha256": "1926651bb66310ece95ea915b08ebeb9a4c1239e81653b3dedf47853c907137d",
+          "input_tokens": 2993
+        },
+        {
+          "case_id": "v_fdd5ixvEXOE_W001",
+          "video_id": "v_fdd5ixvEXOE",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/08_v_fdd5ixvEXOE/cpu/v_fdd5ixvEXOE/v_fdd5ixvEXOE_W001/input.json",
+          "input_sha256": "810dc29f86b6d1fbcb5d5d37e1b3a62c6afc99069500737b1e1a0b57b73eb62a",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/08_v_fdd5ixvEXOE/cpu/v_fdd5ixvEXOE/v_fdd5ixvEXOE_W001/cpu_input.json",
+          "proof_sha256": "9bb95f3e102366b6f370866561170225a421a18833fb25499bb030c4f16664b2",
+          "input_tokens": 2993
+        },
+        {
+          "case_id": "v_fdd5ixvEXOE_W002",
+          "video_id": "v_fdd5ixvEXOE",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/08_v_fdd5ixvEXOE/cpu/v_fdd5ixvEXOE/v_fdd5ixvEXOE_W002/input.json",
+          "input_sha256": "1a423a0ab7a7e1ae555e12f0ffd0bb5420b689bdd3bb896cc8461f58ad22ce22",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/08_v_fdd5ixvEXOE/cpu/v_fdd5ixvEXOE/v_fdd5ixvEXOE_W002/cpu_input.json",
+          "proof_sha256": "6b6162a55a90defdb4a7f88d8f1a33ed156e594e1a71c8c7c5f4a0d2828394e4",
+          "input_tokens": 2993
+        }
+      ]
+    },
+    {
+      "video_id": "v_InA8Xbg-hvo",
+      "group": "screen",
+      "slot": 9,
+      "selection_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/09_v_InA8Xbg-hvo/selection.json",
+      "reference_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/09_v_InA8Xbg-hvo/references.json",
+      "reference_sha256": "fe29df8c3000eb447c5f894b4d508892c43ed47cc4e952b041c475aa23cd9f97",
+      "media_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/09_v_InA8Xbg-hvo/media/completion.json",
+      "media_completion_sha256": "30c1fb04bddd4b29ff4e41d1086d462790d132c5ff50b85ab841a7adbe0f331a",
+      "cpu_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/09_v_InA8Xbg-hvo/cpu/completion.json",
+      "cpu_completion_sha256": "9d7960381193f5b98938c1b556e4fe3593f4bc69fcc09d20e32665da73130152",
+      "proofs": [
+        {
+          "case_id": "v_InA8Xbg-hvo_W000",
+          "video_id": "v_InA8Xbg-hvo",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/09_v_InA8Xbg-hvo/cpu/v_InA8Xbg-hvo/v_InA8Xbg-hvo_W000/input.json",
+          "input_sha256": "90e34df00d0ee111034c87395af9c5d74f370eb6a307e312dc3a2952ae0b114a",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/09_v_InA8Xbg-hvo/cpu/v_InA8Xbg-hvo/v_InA8Xbg-hvo_W000/cpu_input.json",
+          "proof_sha256": "2b649f63f2bc2372e4c45ad699d41074259a26c00c02ac50124798ac7067ac9e",
+          "input_tokens": 12084
+        },
+        {
+          "case_id": "v_InA8Xbg-hvo_W001",
+          "video_id": "v_InA8Xbg-hvo",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/09_v_InA8Xbg-hvo/cpu/v_InA8Xbg-hvo/v_InA8Xbg-hvo_W001/input.json",
+          "input_sha256": "5cf9efa6f2f3aee404d866359abbcfa7bd225d07c3c40a7f776dee427504f564",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/09_v_InA8Xbg-hvo/cpu/v_InA8Xbg-hvo/v_InA8Xbg-hvo_W001/cpu_input.json",
+          "proof_sha256": "eb8850c03d912f072ee0f1c6101facb18677dbc044861c10e384331ddbad9af8",
+          "input_tokens": 12084
+        },
+        {
+          "case_id": "v_InA8Xbg-hvo_W002",
+          "video_id": "v_InA8Xbg-hvo",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/09_v_InA8Xbg-hvo/cpu/v_InA8Xbg-hvo/v_InA8Xbg-hvo_W002/input.json",
+          "input_sha256": "6caa8f59220fea81ad19aa608b4f252cc7633b8abaf07c42390e5e58382c946e",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/09_v_InA8Xbg-hvo/cpu/v_InA8Xbg-hvo/v_InA8Xbg-hvo_W002/cpu_input.json",
+          "proof_sha256": "c4680c9f1f31913094caa2cee5a71ec598d7ae2c9f7689d6bb20b0b3d1fbee5e",
+          "input_tokens": 12084
+        },
+        {
+          "case_id": "v_InA8Xbg-hvo_W003",
+          "video_id": "v_InA8Xbg-hvo",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/09_v_InA8Xbg-hvo/cpu/v_InA8Xbg-hvo/v_InA8Xbg-hvo_W003/input.json",
+          "input_sha256": "9dddf7510eee6039e1627299f367fb48a62995206b2b362d900d65594660db16",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/09_v_InA8Xbg-hvo/cpu/v_InA8Xbg-hvo/v_InA8Xbg-hvo_W003/cpu_input.json",
+          "proof_sha256": "8621528cad6c9eba0ecd245a668d32fe719918761f76160fe76baab811f6efc5",
+          "input_tokens": 12084
+        },
+        {
+          "case_id": "v_InA8Xbg-hvo_W004",
+          "video_id": "v_InA8Xbg-hvo",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/09_v_InA8Xbg-hvo/cpu/v_InA8Xbg-hvo/v_InA8Xbg-hvo_W004/input.json",
+          "input_sha256": "6d449964f7cb47c9208acfa8c94eb5c7b9c44c5a069c4618baac8f480a81281e",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/09_v_InA8Xbg-hvo/cpu/v_InA8Xbg-hvo/v_InA8Xbg-hvo_W004/cpu_input.json",
+          "proof_sha256": "933b4a0d16f2c873596a624a685c7241f925487db0d674ee29047c2ea832f01e",
+          "input_tokens": 12084
+        },
+        {
+          "case_id": "v_InA8Xbg-hvo_W005",
+          "video_id": "v_InA8Xbg-hvo",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/09_v_InA8Xbg-hvo/cpu/v_InA8Xbg-hvo/v_InA8Xbg-hvo_W005/input.json",
+          "input_sha256": "7e75f81b6d5fe2225b69faaf55f51387514ec1b8bb94de350ea0e8d3c855bd06",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/09_v_InA8Xbg-hvo/cpu/v_InA8Xbg-hvo/v_InA8Xbg-hvo_W005/cpu_input.json",
+          "proof_sha256": "975c4761fac1cb9f65ecbef24ef395ced366b27317066f537c872ada6933943e",
+          "input_tokens": 12084
+        }
+      ]
+    },
+    {
+      "video_id": "v_D9A_9FH7e-A",
+      "group": "screen",
+      "slot": 10,
+      "selection_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/10_v_D9A_9FH7e-A/selection.json",
+      "reference_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/10_v_D9A_9FH7e-A/references.json",
+      "reference_sha256": "c2431c530ef048ef9ea73c1f3f31afc3ddbee90175fee83b28d02d798bb6c641",
+      "media_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/10_v_D9A_9FH7e-A/media/completion.json",
+      "media_completion_sha256": "9c58fe3b54f53a652322efd42c7291383c32d6150b8f1dd88963328fa16b66b6",
+      "cpu_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/10_v_D9A_9FH7e-A/cpu/completion.json",
+      "cpu_completion_sha256": "2456c25e76da3d861c7c63d6bfe9dfa303cfba99b7f4669057fef5dca107df08",
+      "proofs": [
+        {
+          "case_id": "v_D9A_9FH7e-A_W000",
+          "video_id": "v_D9A_9FH7e-A",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/10_v_D9A_9FH7e-A/cpu/v_D9A_9FH7e-A/v_D9A_9FH7e-A_W000/input.json",
+          "input_sha256": "314ee30d98e89790d26086f17caaa60f795912bd11c64ccf2cb8dfb26259acb9",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/10_v_D9A_9FH7e-A/cpu/v_D9A_9FH7e-A/v_D9A_9FH7e-A_W000/cpu_input.json",
+          "proof_sha256": "1ebd7e4fda2e31b3d8c5e4040c7efa019ecf6dda18f36659d0aff83f8b68e139",
+          "input_tokens": 10037
+        },
+        {
+          "case_id": "v_D9A_9FH7e-A_W001",
+          "video_id": "v_D9A_9FH7e-A",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/10_v_D9A_9FH7e-A/cpu/v_D9A_9FH7e-A/v_D9A_9FH7e-A_W001/input.json",
+          "input_sha256": "eda2fce8a9b97c04db4f59efe95be395d35611363120a0c88b04954873f1bb47",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/10_v_D9A_9FH7e-A/cpu/v_D9A_9FH7e-A/v_D9A_9FH7e-A_W001/cpu_input.json",
+          "proof_sha256": "35c055820bbdc5f55df6fc9284cda59bd6d19098983c581f5ac9ad29ec2da1b1",
+          "input_tokens": 10037
+        },
+        {
+          "case_id": "v_D9A_9FH7e-A_W002",
+          "video_id": "v_D9A_9FH7e-A",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/10_v_D9A_9FH7e-A/cpu/v_D9A_9FH7e-A/v_D9A_9FH7e-A_W002/input.json",
+          "input_sha256": "2d1b35473f03b2bcf6acf8066a60444f7fcb21a9d59f3250678a90a4a99b7efe",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/10_v_D9A_9FH7e-A/cpu/v_D9A_9FH7e-A/v_D9A_9FH7e-A_W002/cpu_input.json",
+          "proof_sha256": "1394f678802eb97f5f455ee961df77b25ecc8f7c9e0fd8bb849b72775638216f",
+          "input_tokens": 10037
+        },
+        {
+          "case_id": "v_D9A_9FH7e-A_W003",
+          "video_id": "v_D9A_9FH7e-A",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/10_v_D9A_9FH7e-A/cpu/v_D9A_9FH7e-A/v_D9A_9FH7e-A_W003/input.json",
+          "input_sha256": "efa63a96b7928ff836387549ef08d066d07e3bda980b9799f2dbb9dbd0e2b831",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/10_v_D9A_9FH7e-A/cpu/v_D9A_9FH7e-A/v_D9A_9FH7e-A_W003/cpu_input.json",
+          "proof_sha256": "2bee1198e539511d19c5a32b84a478e8e9e8dc473691637c4cef2904244fa313",
+          "input_tokens": 10037
+        },
+        {
+          "case_id": "v_D9A_9FH7e-A_W004",
+          "video_id": "v_D9A_9FH7e-A",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/10_v_D9A_9FH7e-A/cpu/v_D9A_9FH7e-A/v_D9A_9FH7e-A_W004/input.json",
+          "input_sha256": "35198bf25ad5446ecbe0132fc8baa3e487e104d8bae749feee262d76e8549307",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/10_v_D9A_9FH7e-A/cpu/v_D9A_9FH7e-A/v_D9A_9FH7e-A_W004/cpu_input.json",
+          "proof_sha256": "c06dec0efe8ddebcc729cab26832d02c08fcd7eaeda79b60529fd16f88be2caf",
+          "input_tokens": 10037
+        },
+        {
+          "case_id": "v_D9A_9FH7e-A_W005",
+          "video_id": "v_D9A_9FH7e-A",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/10_v_D9A_9FH7e-A/cpu/v_D9A_9FH7e-A/v_D9A_9FH7e-A_W005/input.json",
+          "input_sha256": "137c909d4bece4ad9c77a91a681e34f82127ea839741bab52b2c5a916fb17e50",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/10_v_D9A_9FH7e-A/cpu/v_D9A_9FH7e-A/v_D9A_9FH7e-A_W005/cpu_input.json",
+          "proof_sha256": "5ec5a69f9a1600960139b0b1f0ef6669bed22dd4d4315fc03b38b247862cf88a",
+          "input_tokens": 10037
+        }
+      ]
+    },
+    {
+      "video_id": "v_QCj7IGUGs2Y",
+      "group": "screen",
+      "slot": 11,
+      "selection_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/11_v_QCj7IGUGs2Y/selection.json",
+      "reference_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/11_v_QCj7IGUGs2Y/references.json",
+      "reference_sha256": "7c8372002bba6fea4631b91d1a7562fafc11c0626e79d8ac878534348c37ab60",
+      "media_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/11_v_QCj7IGUGs2Y/media/completion.json",
+      "media_completion_sha256": "c5ada5855bc48041d48aa64c4ac95515c4e23f5b303b38a86946a414b0638df9",
+      "cpu_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/11_v_QCj7IGUGs2Y/cpu/completion.json",
+      "cpu_completion_sha256": "dc1060880002de464a254b7c38e8b01fa54ec22087b8080f15dfdc8cc9e25668",
+      "proofs": [
+        {
+          "case_id": "v_QCj7IGUGs2Y_W000",
+          "video_id": "v_QCj7IGUGs2Y",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/11_v_QCj7IGUGs2Y/cpu/v_QCj7IGUGs2Y/v_QCj7IGUGs2Y_W000/input.json",
+          "input_sha256": "26bfc84281f4360fe589ce33c75691c7f4bbbc5897a4978cf5380abe45d7ce3f",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/11_v_QCj7IGUGs2Y/cpu/v_QCj7IGUGs2Y/v_QCj7IGUGs2Y_W000/cpu_input.json",
+          "proof_sha256": "607a8e83c1921551856e42074869a2ef9d34f6d6bfb671328969a6085e7ee562",
+          "input_tokens": 12083
+        },
+        {
+          "case_id": "v_QCj7IGUGs2Y_W001",
+          "video_id": "v_QCj7IGUGs2Y",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/11_v_QCj7IGUGs2Y/cpu/v_QCj7IGUGs2Y/v_QCj7IGUGs2Y_W001/input.json",
+          "input_sha256": "c5a4636808fe677dd611f48f7846d61a3bd8e9e1fff7c7926dc2029b38091c21",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/11_v_QCj7IGUGs2Y/cpu/v_QCj7IGUGs2Y/v_QCj7IGUGs2Y_W001/cpu_input.json",
+          "proof_sha256": "c1279b246ea002013a995afcf61d489d7f375c57c628b5789f43ec947145b926",
+          "input_tokens": 12083
+        },
+        {
+          "case_id": "v_QCj7IGUGs2Y_W002",
+          "video_id": "v_QCj7IGUGs2Y",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/11_v_QCj7IGUGs2Y/cpu/v_QCj7IGUGs2Y/v_QCj7IGUGs2Y_W002/input.json",
+          "input_sha256": "c80a5f4ea253a32622cad52f2dd421ef2ca39ed465d9ad7acd243c02ffe44298",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/11_v_QCj7IGUGs2Y/cpu/v_QCj7IGUGs2Y/v_QCj7IGUGs2Y_W002/cpu_input.json",
+          "proof_sha256": "dc17cbc42db63059aebf1d72470c7aa5be5e456b1f82973ef1154bc41d5d2e55",
+          "input_tokens": 12083
+        },
+        {
+          "case_id": "v_QCj7IGUGs2Y_W003",
+          "video_id": "v_QCj7IGUGs2Y",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/11_v_QCj7IGUGs2Y/cpu/v_QCj7IGUGs2Y/v_QCj7IGUGs2Y_W003/input.json",
+          "input_sha256": "ffe949bfeabeb46c8858b7d8b7973e8d693f451dfe3d0781996eb0d36ba633f0",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/11_v_QCj7IGUGs2Y/cpu/v_QCj7IGUGs2Y/v_QCj7IGUGs2Y_W003/cpu_input.json",
+          "proof_sha256": "e4a3bf11dd9973cc550e180b77c91ba69de9b0cc21c60cc7cebb1cc7500478f9",
+          "input_tokens": 12083
+        },
+        {
+          "case_id": "v_QCj7IGUGs2Y_W004",
+          "video_id": "v_QCj7IGUGs2Y",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/11_v_QCj7IGUGs2Y/cpu/v_QCj7IGUGs2Y/v_QCj7IGUGs2Y_W004/input.json",
+          "input_sha256": "b4090a14f928e95596433e7371b18f4f7770c32c13634fa1d4188dba7f6c020a",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/11_v_QCj7IGUGs2Y/cpu/v_QCj7IGUGs2Y/v_QCj7IGUGs2Y_W004/cpu_input.json",
+          "proof_sha256": "5f22e21edfa03ed457cb042756139d3ca932559d852c4a4e1ef5f75561ad9130",
+          "input_tokens": 12083
+        }
+      ]
+    },
+    {
+      "video_id": "v_YL3MvJVk6u0",
+      "group": "screen",
+      "slot": 12,
+      "selection_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/12_v_YL3MvJVk6u0/selection.json",
+      "reference_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/12_v_YL3MvJVk6u0/references.json",
+      "reference_sha256": "984853b71c9722d10f9eb8207127f21334455985c2ae9ccd44a2f2a7c3b64d27",
+      "media_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/12_v_YL3MvJVk6u0/media/completion.json",
+      "media_completion_sha256": "4ff250e344f9db3621e381cb29047b1e4473844fb66f9bce22cddc0695f6f4f9",
+      "cpu_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/12_v_YL3MvJVk6u0/cpu/completion.json",
+      "cpu_completion_sha256": "f1668c2e9421d4431d8ecb087e66da2f570ea56aeffe1b216a2ff8ec63f800f8",
+      "proofs": [
+        {
+          "case_id": "v_YL3MvJVk6u0_W000",
+          "video_id": "v_YL3MvJVk6u0",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/12_v_YL3MvJVk6u0/cpu/v_YL3MvJVk6u0/v_YL3MvJVk6u0_W000/input.json",
+          "input_sha256": "75cf66ef592da57543bcad1f3c2ff83806fe88957a96ce4d4361b5d185ed4271",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/12_v_YL3MvJVk6u0/cpu/v_YL3MvJVk6u0/v_YL3MvJVk6u0_W000/cpu_input.json",
+          "proof_sha256": "6cedf1d5a63ffabab8c84ddd1792d7b4c33df864d20eaab445b0ef31517531f6",
+          "input_tokens": 2994
+        },
+        {
+          "case_id": "v_YL3MvJVk6u0_W001",
+          "video_id": "v_YL3MvJVk6u0",
+          "group": "screen",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/12_v_YL3MvJVk6u0/cpu/v_YL3MvJVk6u0/v_YL3MvJVk6u0_W001/input.json",
+          "input_sha256": "9c2d31fb792dc5975187edc11f9fcb1c15aaeb0f7b55c584e19760287fd9b723",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/12_v_YL3MvJVk6u0/cpu/v_YL3MvJVk6u0/v_YL3MvJVk6u0_W001/cpu_input.json",
+          "proof_sha256": "815d7acddcd400a8a18fba63cc501b54562cc1982c32d47347b6313c3d855d7f",
+          "input_tokens": 2994
+        }
+      ]
+    },
+    {
+      "video_id": "v_qH3HnhEaeok",
+      "group": "confirm",
+      "slot": 13,
+      "selection_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/13_v_qH3HnhEaeok/selection.json",
+      "reference_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/13_v_qH3HnhEaeok/references.json",
+      "reference_sha256": "33d64012294dc6a21017401b25897bc1a4c01febf43192c32fc3881f5401729f",
+      "media_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/13_v_qH3HnhEaeok/media/completion.json",
+      "media_completion_sha256": "c969b949fcd0ba2faaf8d56857cb8289d0f6866fbe61010cd93431f0fed9a3bd",
+      "cpu_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/13_v_qH3HnhEaeok/cpu/completion.json",
+      "cpu_completion_sha256": "9b4800f8020d33ea7a4744881f98ef3de3b4fede9ff077692f263d582f25c5b5",
+      "proofs": [
+        {
+          "case_id": "v_qH3HnhEaeok_W000",
+          "video_id": "v_qH3HnhEaeok",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/13_v_qH3HnhEaeok/cpu/v_qH3HnhEaeok/v_qH3HnhEaeok_W000/input.json",
+          "input_sha256": "7283c65acb894529fcbb539fc8b053da533dfd4a537fab3f3115a1b8267d6145",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/13_v_qH3HnhEaeok/cpu/v_qH3HnhEaeok/v_qH3HnhEaeok_W000/cpu_input.json",
+          "proof_sha256": "3f53bc96051a474d8e294059e6a8c7c05954702fdee65135cf6f95db8f383d22",
+          "input_tokens": 3604
+        },
+        {
+          "case_id": "v_qH3HnhEaeok_W001",
+          "video_id": "v_qH3HnhEaeok",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/13_v_qH3HnhEaeok/cpu/v_qH3HnhEaeok/v_qH3HnhEaeok_W001/input.json",
+          "input_sha256": "c99e8d02213bf9a23389958de07a9fc8a22a35d9c928a457087faf300c926d29",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/13_v_qH3HnhEaeok/cpu/v_qH3HnhEaeok/v_qH3HnhEaeok_W001/cpu_input.json",
+          "proof_sha256": "deb5f335f35348b2d67f0cbe371eddf4473cbb4a5cf6204000a2b82d0c90d761",
+          "input_tokens": 3604
+        },
+        {
+          "case_id": "v_qH3HnhEaeok_W002",
+          "video_id": "v_qH3HnhEaeok",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/13_v_qH3HnhEaeok/cpu/v_qH3HnhEaeok/v_qH3HnhEaeok_W002/input.json",
+          "input_sha256": "352a085d0b4a75b800fc03136d5c4ae4b0afa3dc5abeeb4f95cef5f9ec500779",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/13_v_qH3HnhEaeok/cpu/v_qH3HnhEaeok/v_qH3HnhEaeok_W002/cpu_input.json",
+          "proof_sha256": "a3e1d24ff2f0e8540e4bed612a3a6915c799ecfe8359caf4dab0d5a701862418",
+          "input_tokens": 3604
+        },
+        {
+          "case_id": "v_qH3HnhEaeok_W003",
+          "video_id": "v_qH3HnhEaeok",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/13_v_qH3HnhEaeok/cpu/v_qH3HnhEaeok/v_qH3HnhEaeok_W003/input.json",
+          "input_sha256": "ba53d3aa6c06a61bcbeba2da46409bec368aa3008ebe30309ae2846c94ec086f",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/13_v_qH3HnhEaeok/cpu/v_qH3HnhEaeok/v_qH3HnhEaeok_W003/cpu_input.json",
+          "proof_sha256": "5af89252a36a276063eb8a69363425ac62898aa4f30fc9df6d5b9d40203edda6",
+          "input_tokens": 3604
+        },
+        {
+          "case_id": "v_qH3HnhEaeok_W004",
+          "video_id": "v_qH3HnhEaeok",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/13_v_qH3HnhEaeok/cpu/v_qH3HnhEaeok/v_qH3HnhEaeok_W004/input.json",
+          "input_sha256": "25018ac6560aa59f181d2d358bdf9a8822a259cb3c5c3e043386eab5f0969b3f",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/13_v_qH3HnhEaeok/cpu/v_qH3HnhEaeok/v_qH3HnhEaeok_W004/cpu_input.json",
+          "proof_sha256": "741ada55bb88ec2be615dbe4d711a35a9b02bceaf853a6d37904a7286c4c45cb",
+          "input_tokens": 3604
+        },
+        {
+          "case_id": "v_qH3HnhEaeok_W005",
+          "video_id": "v_qH3HnhEaeok",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/13_v_qH3HnhEaeok/cpu/v_qH3HnhEaeok/v_qH3HnhEaeok_W005/input.json",
+          "input_sha256": "a2a47a7f74ea54a6c79a7bc8f51e28d66aac1b5de3d9e5ddb344d6b56094d8d2",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/13_v_qH3HnhEaeok/cpu/v_qH3HnhEaeok/v_qH3HnhEaeok_W005/cpu_input.json",
+          "proof_sha256": "393d3d6e00c466450d71574181146a3e0b4473307f84266df224a7dab6f92467",
+          "input_tokens": 3604
+        },
+        {
+          "case_id": "v_qH3HnhEaeok_W006",
+          "video_id": "v_qH3HnhEaeok",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/13_v_qH3HnhEaeok/cpu/v_qH3HnhEaeok/v_qH3HnhEaeok_W006/input.json",
+          "input_sha256": "ae76d607807bb14515dbf68ad7ad68507210acdb6166a156bdd779bf73e992d7",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/13_v_qH3HnhEaeok/cpu/v_qH3HnhEaeok/v_qH3HnhEaeok_W006/cpu_input.json",
+          "proof_sha256": "156e0b980c288407c75c9215881cfe532cb4785642b093c1eba3d6d84aa449a9",
+          "input_tokens": 3604
+        }
+      ]
+    },
+    {
+      "video_id": "v_pYbOylWZx-s",
+      "group": "confirm",
+      "slot": 14,
+      "selection_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/14_v_pYbOylWZx-s/selection.json",
+      "reference_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/14_v_pYbOylWZx-s/references.json",
+      "reference_sha256": "f7173e80d67e3024053058c60cb8c09952b7ed3e63c99fcf1be4ceee53986961",
+      "media_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/14_v_pYbOylWZx-s/media/completion.json",
+      "media_completion_sha256": "24dc55e63c882cb8d99dbf2fe66bbfa486cee0620a8ea679039ed6727ec042de",
+      "cpu_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/14_v_pYbOylWZx-s/cpu/completion.json",
+      "cpu_completion_sha256": "e4451834b3aa8f3f2968fdd55263ee8c8743504c2054fa6c7a25314cb8c3e90e",
+      "proofs": [
+        {
+          "case_id": "v_pYbOylWZx-s_W000",
+          "video_id": "v_pYbOylWZx-s",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/14_v_pYbOylWZx-s/cpu/v_pYbOylWZx-s/v_pYbOylWZx-s_W000/input.json",
+          "input_sha256": "6e809e2f3848edc8628dd3e81d70be4ece224959f3ea953facde6da53ff20474",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/14_v_pYbOylWZx-s/cpu/v_pYbOylWZx-s/v_pYbOylWZx-s_W000/cpu_input.json",
+          "proof_sha256": "79bc08888e6762bbb326947c1ef308dea612caa089681cd6ad7e735938e76243",
+          "input_tokens": 12085
+        },
+        {
+          "case_id": "v_pYbOylWZx-s_W001",
+          "video_id": "v_pYbOylWZx-s",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/14_v_pYbOylWZx-s/cpu/v_pYbOylWZx-s/v_pYbOylWZx-s_W001/input.json",
+          "input_sha256": "0394f5bb71ba996e47d643e24b402dafdd61fd1fc498ba6c40d0bfa99b63d8fb",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/14_v_pYbOylWZx-s/cpu/v_pYbOylWZx-s/v_pYbOylWZx-s_W001/cpu_input.json",
+          "proof_sha256": "952d25a96513c0e9ca7fa98115490859fdd29be710cd5099026ef74bf39429a7",
+          "input_tokens": 12085
+        },
+        {
+          "case_id": "v_pYbOylWZx-s_W002",
+          "video_id": "v_pYbOylWZx-s",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/14_v_pYbOylWZx-s/cpu/v_pYbOylWZx-s/v_pYbOylWZx-s_W002/input.json",
+          "input_sha256": "d8e63c28087a76fb81068fb5e2062b3ab1703eac7aa7c5d544d58b30175c3bf7",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/14_v_pYbOylWZx-s/cpu/v_pYbOylWZx-s/v_pYbOylWZx-s_W002/cpu_input.json",
+          "proof_sha256": "58e05eedae7441c2b3674199d662ff33c7ea05814ad73c700c6ad9b485b13c06",
+          "input_tokens": 12085
+        },
+        {
+          "case_id": "v_pYbOylWZx-s_W003",
+          "video_id": "v_pYbOylWZx-s",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/14_v_pYbOylWZx-s/cpu/v_pYbOylWZx-s/v_pYbOylWZx-s_W003/input.json",
+          "input_sha256": "41f91bc2814d3fbec4380b01fa2353d691c66a26b082a4e280548244e2c4537d",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/14_v_pYbOylWZx-s/cpu/v_pYbOylWZx-s/v_pYbOylWZx-s_W003/cpu_input.json",
+          "proof_sha256": "285c3232fd4028c46daffb2ceec16dcc958a53a1c559a193fe0079379ffae30b",
+          "input_tokens": 12085
+        },
+        {
+          "case_id": "v_pYbOylWZx-s_W004",
+          "video_id": "v_pYbOylWZx-s",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/14_v_pYbOylWZx-s/cpu/v_pYbOylWZx-s/v_pYbOylWZx-s_W004/input.json",
+          "input_sha256": "08730951bb31ff867b38a3d292d1db05674788c5b4682c31d00435283475894e",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/14_v_pYbOylWZx-s/cpu/v_pYbOylWZx-s/v_pYbOylWZx-s_W004/cpu_input.json",
+          "proof_sha256": "eb0d5ba3bfa6114827dfb86157987cd17ffc0c3c42a9b4af4108a354fac26c54",
+          "input_tokens": 12085
+        }
+      ]
+    },
+    {
+      "video_id": "v_jzDXtd0__DM",
+      "group": "confirm",
+      "slot": 15,
+      "selection_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/15_v_jzDXtd0__DM/selection.json",
+      "reference_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/15_v_jzDXtd0__DM/references.json",
+      "reference_sha256": "eb4c302213efa1669a66c5bd550fb98617450836328a36105b0369d2e5c1c93e",
+      "media_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/15_v_jzDXtd0__DM/media/completion.json",
+      "media_completion_sha256": "efcd00ecfe6c6168fbdd85749431069095cca4c1ac7c61c754466c9a0ebc4fbe",
+      "cpu_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/15_v_jzDXtd0__DM/cpu/completion.json",
+      "cpu_completion_sha256": "086841e684079aba0c32107ad72af6bf61437dde7a6d43e89cfedb0f4b64616c",
+      "proofs": [
+        {
+          "case_id": "v_jzDXtd0__DM_W000",
+          "video_id": "v_jzDXtd0__DM",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/15_v_jzDXtd0__DM/cpu/v_jzDXtd0__DM/v_jzDXtd0__DM_W000/input.json",
+          "input_sha256": "7e49fbdcce2b40bbd09c855fa02a43bc0cb42514a69d122a45b3fa879d1c79df",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/15_v_jzDXtd0__DM/cpu/v_jzDXtd0__DM/v_jzDXtd0__DM_W000/cpu_input.json",
+          "proof_sha256": "19610c3daf230574e0b4d276b38d42c13ecd423717cd357b30f7fe30c18b54cb",
+          "input_tokens": 12084
+        },
+        {
+          "case_id": "v_jzDXtd0__DM_W001",
+          "video_id": "v_jzDXtd0__DM",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/15_v_jzDXtd0__DM/cpu/v_jzDXtd0__DM/v_jzDXtd0__DM_W001/input.json",
+          "input_sha256": "087c218d82d048a9ed9db821599305bbef5f6f77ebe45cc74bebfe283106ca46",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/15_v_jzDXtd0__DM/cpu/v_jzDXtd0__DM/v_jzDXtd0__DM_W001/cpu_input.json",
+          "proof_sha256": "4c580053083c5745ecd34e26a8f8c9298b2362acdc3b96ca4985dee495ea3097",
+          "input_tokens": 12084
+        },
+        {
+          "case_id": "v_jzDXtd0__DM_W002",
+          "video_id": "v_jzDXtd0__DM",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/15_v_jzDXtd0__DM/cpu/v_jzDXtd0__DM/v_jzDXtd0__DM_W002/input.json",
+          "input_sha256": "b33591f7cfc0c04c14dcdbee32a01d2256c5c8b9be6b0124e5c9ddafd88c21d4",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/15_v_jzDXtd0__DM/cpu/v_jzDXtd0__DM/v_jzDXtd0__DM_W002/cpu_input.json",
+          "proof_sha256": "e2477de0640f20660869ebfc75906fb9ca08e5896d470c4e9d12b79b5cc9431f",
+          "input_tokens": 12084
+        },
+        {
+          "case_id": "v_jzDXtd0__DM_W003",
+          "video_id": "v_jzDXtd0__DM",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/15_v_jzDXtd0__DM/cpu/v_jzDXtd0__DM/v_jzDXtd0__DM_W003/input.json",
+          "input_sha256": "8a0cab35d53df152b3665c0fc5571b4d979053f483502071bba74018b50f98da",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/15_v_jzDXtd0__DM/cpu/v_jzDXtd0__DM/v_jzDXtd0__DM_W003/cpu_input.json",
+          "proof_sha256": "b3b8dee34a3efc6f55303989524531121208a3ca79fe52033d9f26a6f0aa78d6",
+          "input_tokens": 12084
+        },
+        {
+          "case_id": "v_jzDXtd0__DM_W004",
+          "video_id": "v_jzDXtd0__DM",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/15_v_jzDXtd0__DM/cpu/v_jzDXtd0__DM/v_jzDXtd0__DM_W004/input.json",
+          "input_sha256": "4e4157db04de84a14d11ce34a680519931e1fa3bb120029921504f45421a2782",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/15_v_jzDXtd0__DM/cpu/v_jzDXtd0__DM/v_jzDXtd0__DM_W004/cpu_input.json",
+          "proof_sha256": "8d4fa2f4a22fb32e92ad885ca9fd1ed99265d5592643ff85a072d3269861e7de",
+          "input_tokens": 12084
+        },
+        {
+          "case_id": "v_jzDXtd0__DM_W005",
+          "video_id": "v_jzDXtd0__DM",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/15_v_jzDXtd0__DM/cpu/v_jzDXtd0__DM/v_jzDXtd0__DM_W005/input.json",
+          "input_sha256": "449da91642573269bc8d0f77249b33cf93dadab08eda64ff76fc5fcbeb5cf87f",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/15_v_jzDXtd0__DM/cpu/v_jzDXtd0__DM/v_jzDXtd0__DM_W005/cpu_input.json",
+          "proof_sha256": "95902c6210e3e334213d18d205f72cf660b0997005356115a890e8a401465afa",
+          "input_tokens": 12084
+        },
+        {
+          "case_id": "v_jzDXtd0__DM_W006",
+          "video_id": "v_jzDXtd0__DM",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/15_v_jzDXtd0__DM/cpu/v_jzDXtd0__DM/v_jzDXtd0__DM_W006/input.json",
+          "input_sha256": "8d9b71bb0c85bcc19975cc872f0e9423af40cb620fc9e35f18c61e4e1c498884",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/15_v_jzDXtd0__DM/cpu/v_jzDXtd0__DM/v_jzDXtd0__DM_W006/cpu_input.json",
+          "proof_sha256": "20b43add585a2d93ca19594d658d0399d7f16363df0d3a417a41da3cb08db35b",
+          "input_tokens": 12084
+        }
+      ]
+    },
+    {
+      "video_id": "v_2Sev8z4P7pE",
+      "group": "confirm",
+      "slot": 16,
+      "selection_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/16_v_2Sev8z4P7pE/selection.json",
+      "reference_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/16_v_2Sev8z4P7pE/references.json",
+      "reference_sha256": "2d500b2a5aa37e17fc272ebe7045da8beb59618f34262d9f73a6889026c9fd8f",
+      "media_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/16_v_2Sev8z4P7pE/media/completion.json",
+      "media_completion_sha256": "05a970825f6676238b7ea7ef397e269358324e1e91a3f19f844d7ad62d672d0f",
+      "cpu_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/16_v_2Sev8z4P7pE/cpu/completion.json",
+      "cpu_completion_sha256": "4e1792c96ce96594e5309530c4ce8658561b12ac65427e35ff00f69a159a5ff1",
+      "proofs": [
+        {
+          "case_id": "v_2Sev8z4P7pE_W000",
+          "video_id": "v_2Sev8z4P7pE",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/16_v_2Sev8z4P7pE/cpu/v_2Sev8z4P7pE/v_2Sev8z4P7pE_W000/input.json",
+          "input_sha256": "43932568848000d31433f8e367e31f73d66cd2dc2a7697eeacc86a3c3c134ca1",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/16_v_2Sev8z4P7pE/cpu/v_2Sev8z4P7pE/v_2Sev8z4P7pE_W000/cpu_input.json",
+          "proof_sha256": "c4af21625562ebd3023d293a69ee568ef72ca18024443a6be8ca86c4410ec79a",
+          "input_tokens": 10994
+        },
+        {
+          "case_id": "v_2Sev8z4P7pE_W001",
+          "video_id": "v_2Sev8z4P7pE",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/16_v_2Sev8z4P7pE/cpu/v_2Sev8z4P7pE/v_2Sev8z4P7pE_W001/input.json",
+          "input_sha256": "f601bfbf0c54e82d7439325fd24d55c53fa9a3317664383e2a5534bbb2db53b3",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/16_v_2Sev8z4P7pE/cpu/v_2Sev8z4P7pE/v_2Sev8z4P7pE_W001/cpu_input.json",
+          "proof_sha256": "885d32f4ecd028d39156addc8ea55dd7994a9f41c47225dbdc308cee5a8e701c",
+          "input_tokens": 10994
+        }
+      ]
+    },
+    {
+      "video_id": "v_mb1LoOTM_NI",
+      "group": "confirm",
+      "slot": 17,
+      "selection_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/17_v_mb1LoOTM_NI/selection.json",
+      "reference_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/17_v_mb1LoOTM_NI/references.json",
+      "reference_sha256": "9aad87e55a3e9ef4f86ca80b76af8528034796bbc6f3dc64af8348f769039981",
+      "media_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/17_v_mb1LoOTM_NI/media/completion.json",
+      "media_completion_sha256": "b2100c3275b1e9454b37a2c051acb705f80fc793ae2bd685937d27603f2337c5",
+      "cpu_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/17_v_mb1LoOTM_NI/cpu/completion.json",
+      "cpu_completion_sha256": "8465d4c806b6cabdbe68f3b344a9afe2d1220128454891382fc0833a3ae53f66",
+      "proofs": [
+        {
+          "case_id": "v_mb1LoOTM_NI_W000",
+          "video_id": "v_mb1LoOTM_NI",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/17_v_mb1LoOTM_NI/cpu/v_mb1LoOTM_NI/v_mb1LoOTM_NI_W000/input.json",
+          "input_sha256": "75549fa44de6316d35e0e31d08940c6abd7e054df7c5ae40ccb3cdaa9e9101bb",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/17_v_mb1LoOTM_NI/cpu/v_mb1LoOTM_NI/v_mb1LoOTM_NI_W000/cpu_input.json",
+          "proof_sha256": "55cd1efa2c77d67d4c4964365ee52c600cf7df299cd1db27cbd22485c0f5079e",
+          "input_tokens": 7472
+        },
+        {
+          "case_id": "v_mb1LoOTM_NI_W001",
+          "video_id": "v_mb1LoOTM_NI",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/17_v_mb1LoOTM_NI/cpu/v_mb1LoOTM_NI/v_mb1LoOTM_NI_W001/input.json",
+          "input_sha256": "5c4c732a38a4244872267f36bce323a2b0f722023be16ae0b93c6a9b442e70d4",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/17_v_mb1LoOTM_NI/cpu/v_mb1LoOTM_NI/v_mb1LoOTM_NI_W001/cpu_input.json",
+          "proof_sha256": "b86863e25c5ae3cb71f9bb22d9aeea9e2cd27a8be349395f59557eedd042b99b",
+          "input_tokens": 7472
+        },
+        {
+          "case_id": "v_mb1LoOTM_NI_W002",
+          "video_id": "v_mb1LoOTM_NI",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/17_v_mb1LoOTM_NI/cpu/v_mb1LoOTM_NI/v_mb1LoOTM_NI_W002/input.json",
+          "input_sha256": "80f76517cb405235bf0d47ee7ea7fc85506990a6f43c424d47d58d5e428c356a",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/17_v_mb1LoOTM_NI/cpu/v_mb1LoOTM_NI/v_mb1LoOTM_NI_W002/cpu_input.json",
+          "proof_sha256": "92d1fd4a68ec08872603206f49e447dbb811bec96e72bfc3dc0d0edb43ec9777",
+          "input_tokens": 7472
+        }
+      ]
+    },
+    {
+      "video_id": "v_Jz9ZxenBLa8",
+      "group": "confirm",
+      "slot": 18,
+      "selection_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/18_v_Jz9ZxenBLa8/selection.json",
+      "reference_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/18_v_Jz9ZxenBLa8/references.json",
+      "reference_sha256": "067ee0511db2c56e2f93487b886cb61031bf2b4911906ecc79fbd9092a6914f5",
+      "media_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/18_v_Jz9ZxenBLa8/media/completion.json",
+      "media_completion_sha256": "dafcde287921c3695c886e953176fbd4c6ad8de4daba82bb61e52d8545a944f2",
+      "cpu_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/18_v_Jz9ZxenBLa8/cpu/completion.json",
+      "cpu_completion_sha256": "88df8dfae5984fe9e65fd82e2886e7ed63a21d2222f655eb10bfe90708cf445e",
+      "proofs": [
+        {
+          "case_id": "v_Jz9ZxenBLa8_W000",
+          "video_id": "v_Jz9ZxenBLa8",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/18_v_Jz9ZxenBLa8/cpu/v_Jz9ZxenBLa8/v_Jz9ZxenBLa8_W000/input.json",
+          "input_sha256": "b3a1099dbc3dc432a831f5c6df36f7e15bdd7fc5b9ce7fd221cce4ced88ae8c9",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/18_v_Jz9ZxenBLa8/cpu/v_Jz9ZxenBLa8/v_Jz9ZxenBLa8_W000/cpu_input.json",
+          "proof_sha256": "1d059457e9ffe357cce577ef35cc4df08724f3ed8a7c809f17f755d79269373f",
+          "input_tokens": 10037
+        },
+        {
+          "case_id": "v_Jz9ZxenBLa8_W001",
+          "video_id": "v_Jz9ZxenBLa8",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/18_v_Jz9ZxenBLa8/cpu/v_Jz9ZxenBLa8/v_Jz9ZxenBLa8_W001/input.json",
+          "input_sha256": "6b7d5c055e7c870677ef6f8be5a3221129edcf1e74f330caddfbfaa7fe8022fa",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/18_v_Jz9ZxenBLa8/cpu/v_Jz9ZxenBLa8/v_Jz9ZxenBLa8_W001/cpu_input.json",
+          "proof_sha256": "6be3c55ee9db4b069d759311d7370f824e0ce6bdfd2d179a13748ee303e56c39",
+          "input_tokens": 10037
+        },
+        {
+          "case_id": "v_Jz9ZxenBLa8_W002",
+          "video_id": "v_Jz9ZxenBLa8",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/18_v_Jz9ZxenBLa8/cpu/v_Jz9ZxenBLa8/v_Jz9ZxenBLa8_W002/input.json",
+          "input_sha256": "37fd2eda58adb53ed1a7f45dd073bd0976db3d5f83f72100adfb3d8f94c26c94",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/18_v_Jz9ZxenBLa8/cpu/v_Jz9ZxenBLa8/v_Jz9ZxenBLa8_W002/cpu_input.json",
+          "proof_sha256": "20cbd2375b8940975dd702624801bed60e224131f7feb6532c2b84e9c0be23c6",
+          "input_tokens": 10037
+        },
+        {
+          "case_id": "v_Jz9ZxenBLa8_W003",
+          "video_id": "v_Jz9ZxenBLa8",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/18_v_Jz9ZxenBLa8/cpu/v_Jz9ZxenBLa8/v_Jz9ZxenBLa8_W003/input.json",
+          "input_sha256": "40c1d3ff4b7b2dfdb69c0f73bd1f53a8f1bec3ef88a74e157d95df48094d8f49",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/18_v_Jz9ZxenBLa8/cpu/v_Jz9ZxenBLa8/v_Jz9ZxenBLa8_W003/cpu_input.json",
+          "proof_sha256": "44221e78c3fb89941c59f8961f4386e251dc1516ebc4df83cc9691f15271e08a",
+          "input_tokens": 10037
+        }
+      ]
+    },
+    {
+      "video_id": "v_m4EcgRjCpi8",
+      "group": "confirm",
+      "slot": 19,
+      "selection_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/19_v_m4EcgRjCpi8/selection.json",
+      "reference_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/19_v_m4EcgRjCpi8/references.json",
+      "reference_sha256": "faf7b5cded3e8cb6c0d335ececa12cf4ff45feeead3021b5f8627f912b0dae6b",
+      "media_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/19_v_m4EcgRjCpi8/media/completion.json",
+      "media_completion_sha256": "b9e463b47074b0b7a225c42744971fc7a73d7f107935b847f74d3270e19fbf3c",
+      "cpu_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/19_v_m4EcgRjCpi8/cpu/completion.json",
+      "cpu_completion_sha256": "df282aab946eb9c78a0ac336af5ca1c16e5eb58108303bae23a423b317743ef2",
+      "proofs": [
+        {
+          "case_id": "v_m4EcgRjCpi8_W000",
+          "video_id": "v_m4EcgRjCpi8",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/19_v_m4EcgRjCpi8/cpu/v_m4EcgRjCpi8/v_m4EcgRjCpi8_W000/input.json",
+          "input_sha256": "9e6b6307ab549fd7a9bb0d197e5e934c44068f3c19fcf99bf2e26245c135b367",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/19_v_m4EcgRjCpi8/cpu/v_m4EcgRjCpi8/v_m4EcgRjCpi8_W000/cpu_input.json",
+          "proof_sha256": "95ee3c8b4b4fe7c6779608ff29224985440231e0544c3208ca27693728fe3305",
+          "input_tokens": 12084
+        },
+        {
+          "case_id": "v_m4EcgRjCpi8_W001",
+          "video_id": "v_m4EcgRjCpi8",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/19_v_m4EcgRjCpi8/cpu/v_m4EcgRjCpi8/v_m4EcgRjCpi8_W001/input.json",
+          "input_sha256": "8900cfc66aacffe967bc8232465916f401de30d3522af3b3fb376b59bb03c0c9",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/19_v_m4EcgRjCpi8/cpu/v_m4EcgRjCpi8/v_m4EcgRjCpi8_W001/cpu_input.json",
+          "proof_sha256": "b8020b5ffefc67fe0e0d129d37973582e4e8f79408fb37d77039c0802ae6d693",
+          "input_tokens": 12084
+        },
+        {
+          "case_id": "v_m4EcgRjCpi8_W002",
+          "video_id": "v_m4EcgRjCpi8",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/19_v_m4EcgRjCpi8/cpu/v_m4EcgRjCpi8/v_m4EcgRjCpi8_W002/input.json",
+          "input_sha256": "80b896cb384b969fa060589c53efb0002c991944a1cee446a0d708ed7e752a08",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/19_v_m4EcgRjCpi8/cpu/v_m4EcgRjCpi8/v_m4EcgRjCpi8_W002/cpu_input.json",
+          "proof_sha256": "30f176cca9504c1d4871ba66412a49eadbc69613dd8a3364e2593900bb427b25",
+          "input_tokens": 12084
+        },
+        {
+          "case_id": "v_m4EcgRjCpi8_W003",
+          "video_id": "v_m4EcgRjCpi8",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/19_v_m4EcgRjCpi8/cpu/v_m4EcgRjCpi8/v_m4EcgRjCpi8_W003/input.json",
+          "input_sha256": "4a3bda11e691893666958ca6cbb6959297e3c44381fe90413b073b3b1d1fd370",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/19_v_m4EcgRjCpi8/cpu/v_m4EcgRjCpi8/v_m4EcgRjCpi8_W003/cpu_input.json",
+          "proof_sha256": "29f1fb7913fcbc196f3d4c0327ffb42c2661c7f5fe910cdcc84661b1508b197c",
+          "input_tokens": 12084
+        },
+        {
+          "case_id": "v_m4EcgRjCpi8_W004",
+          "video_id": "v_m4EcgRjCpi8",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/19_v_m4EcgRjCpi8/cpu/v_m4EcgRjCpi8/v_m4EcgRjCpi8_W004/input.json",
+          "input_sha256": "c47e010a243b09af3aa04d8ec5a5fe8624340dbc2383ed4fd6211e866412b011",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/19_v_m4EcgRjCpi8/cpu/v_m4EcgRjCpi8/v_m4EcgRjCpi8_W004/cpu_input.json",
+          "proof_sha256": "0c9206be7ec4e5c01bf0791cce2086ee6be1401db7989f57b3527f4c215f9970",
+          "input_tokens": 12084
+        },
+        {
+          "case_id": "v_m4EcgRjCpi8_W005",
+          "video_id": "v_m4EcgRjCpi8",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/19_v_m4EcgRjCpi8/cpu/v_m4EcgRjCpi8/v_m4EcgRjCpi8_W005/input.json",
+          "input_sha256": "2bfc763834da630d0d2f08122e368f1a4c98c4321f58c0d71195f8c9da4ff466",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/19_v_m4EcgRjCpi8/cpu/v_m4EcgRjCpi8/v_m4EcgRjCpi8_W005/cpu_input.json",
+          "proof_sha256": "a8201d77948da24bcba17c350e462344fa26f7d1f751f40c7036d961b03e22d0",
+          "input_tokens": 12084
+        },
+        {
+          "case_id": "v_m4EcgRjCpi8_W006",
+          "video_id": "v_m4EcgRjCpi8",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/19_v_m4EcgRjCpi8/cpu/v_m4EcgRjCpi8/v_m4EcgRjCpi8_W006/input.json",
+          "input_sha256": "b50a0b56c893f8a10666ee9c1c90475c5fb74e812baa734ab4fa0a79477ef12f",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/19_v_m4EcgRjCpi8/cpu/v_m4EcgRjCpi8/v_m4EcgRjCpi8_W006/cpu_input.json",
+          "proof_sha256": "3cc7462d52bfd0533afee4d57d3ca5ec6bd77d1882f1fc0a45f2dcf0bf68a70d",
+          "input_tokens": 12084
+        }
+      ]
+    },
+    {
+      "video_id": "v_WBkqGBFsdgI",
+      "group": "confirm",
+      "slot": 20,
+      "selection_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/20_v_WBkqGBFsdgI/selection.json",
+      "reference_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/20_v_WBkqGBFsdgI/references.json",
+      "reference_sha256": "a8fe41b9fc2bcc4e58e8b15de5cba73147888a330439fdb04fddf302bebab789",
+      "media_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/20_v_WBkqGBFsdgI/media/completion.json",
+      "media_completion_sha256": "6af23dc7ebd519e8b27c1950bc828b1e7bdc82b0d6076732738e9bf27ebe3eb9",
+      "cpu_completion_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/20_v_WBkqGBFsdgI/cpu/completion.json",
+      "cpu_completion_sha256": "f1a28aa686ed5a8aacbea4f489257b69917529205ef8a2393f8d929ae11eb894",
+      "proofs": [
+        {
+          "case_id": "v_WBkqGBFsdgI_W000",
+          "video_id": "v_WBkqGBFsdgI",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/20_v_WBkqGBFsdgI/cpu/v_WBkqGBFsdgI/v_WBkqGBFsdgI_W000/input.json",
+          "input_sha256": "45f0b7e39fd3f123c7485bc64bcc582b949540b9512cd866fc60abc0e7881e90",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/20_v_WBkqGBFsdgI/cpu/v_WBkqGBFsdgI/v_WBkqGBFsdgI_W000/cpu_input.json",
+          "proof_sha256": "11f8b90eb76c6177fcbc4d34c0631360e4e2fc1e3188d0bd94a4b587b349b443",
+          "input_tokens": 12083
+        },
+        {
+          "case_id": "v_WBkqGBFsdgI_W001",
+          "video_id": "v_WBkqGBFsdgI",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/20_v_WBkqGBFsdgI/cpu/v_WBkqGBFsdgI/v_WBkqGBFsdgI_W001/input.json",
+          "input_sha256": "529f32d230a21cb648ad89fc30ed44c08b319d12eae5530bb6e84f9caab4c50b",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/20_v_WBkqGBFsdgI/cpu/v_WBkqGBFsdgI/v_WBkqGBFsdgI_W001/cpu_input.json",
+          "proof_sha256": "aa327eb15d6e19ae19693aa320bd96ecc4cb60b4f1e575575587194ff770220f",
+          "input_tokens": 12083
+        },
+        {
+          "case_id": "v_WBkqGBFsdgI_W002",
+          "video_id": "v_WBkqGBFsdgI",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/20_v_WBkqGBFsdgI/cpu/v_WBkqGBFsdgI/v_WBkqGBFsdgI_W002/input.json",
+          "input_sha256": "d9fb78ae90c0f6f31b760d20a8ae1b8faa4b9c18d8cde5918a278f357de30ee0",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/20_v_WBkqGBFsdgI/cpu/v_WBkqGBFsdgI/v_WBkqGBFsdgI_W002/cpu_input.json",
+          "proof_sha256": "aa70dde4a7c2d61aff7c7078e15adfd4a9e66309f76327b50bc326ca6562de19",
+          "input_tokens": 12083
+        },
+        {
+          "case_id": "v_WBkqGBFsdgI_W003",
+          "video_id": "v_WBkqGBFsdgI",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/20_v_WBkqGBFsdgI/cpu/v_WBkqGBFsdgI/v_WBkqGBFsdgI_W003/input.json",
+          "input_sha256": "d3ff02d7357d92cde9320d60f673bdd00d4e6c010d6aac543bfe49a1e939379d",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/20_v_WBkqGBFsdgI/cpu/v_WBkqGBFsdgI/v_WBkqGBFsdgI_W003/cpu_input.json",
+          "proof_sha256": "05b656cb67ed7dd255570813ca427f31d63de09ed1da2a62e1321a53a2e565ac",
+          "input_tokens": 12083
+        },
+        {
+          "case_id": "v_WBkqGBFsdgI_W004",
+          "video_id": "v_WBkqGBFsdgI",
+          "group": "confirm",
+          "input_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/20_v_WBkqGBFsdgI/cpu/v_WBkqGBFsdgI/v_WBkqGBFsdgI_W004/input.json",
+          "input_sha256": "cb0cc8adceb5f6c1ca10775ae031c7a2986a529cae6920fc175eecc234eb1d23",
+          "proof_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/20_v_WBkqGBFsdgI/cpu/v_WBkqGBFsdgI/v_WBkqGBFsdgI_W004/cpu_input.json",
+          "proof_sha256": "df56588e76489413c2af182e6dc93331174ebc1c0adb15a019424cd0781fa6bf",
+          "input_tokens": 12083
+        }
+      ]
+    }
+  ],
+  "replacements": [
+    {
+      "slot": 1,
+      "failed_source": "v_cy-RLevyo_8",
+      "replacement_source": "v_fVg3StD8LL0",
+      "group": "screen",
+      "reason": "Retained real native endpoint failure, not prediction or reference score",
+      "evidence": {
+        "failure_path": "direct_cpu_probe_05/failure.json",
+        "diagnostic_path": "direct_actual_clock_diagnostic_05.json",
+        "physical_end_exact": "853/6",
+        "original_manual_end_exact": "142.33",
+        "complete_clock_retained_do_not_decode_again": true
+      }
+    },
+    {
+      "slot": 6,
+      "failed_source": "v_mh_0QLZhrSY",
+      "replacement_source": "v_LHewj6shKGw",
+      "group": "screen",
+      "reason": "Actual native original seconds admission failed; no model answer or metric examined",
+      "failure_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/06_v_mh_0QLZhrSY/cpu/failure.json",
+      "failure_sha256": "f549f53422772dfa41973f4eaef9ed4c7ac98811413a72bcfed00399dc6129a4"
+    },
+    {
+      "slot": 14,
+      "failed_source": "v_hbipKjS0G7w",
+      "replacement_source": "v_pYbOylWZx-s",
+      "group": "confirm",
+      "reason": "Actual native original seconds admission failed; no model answer or metric examined",
+      "failure_path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/direct_cohort_06/14_v_hbipKjS0G7w/cpu/failure.json",
+      "failure_sha256": "09aa21800cedfa0a18f1901121bd86c84eac44c1a5d7fa4ebaa84cbe9cb733a7"
+    }
+  ],
+  "source_selection_uses_predictions_or_quality_scores": false,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "require_independent_all_input_review_frozen_source_lock_and_unique_wrapper": true
+}

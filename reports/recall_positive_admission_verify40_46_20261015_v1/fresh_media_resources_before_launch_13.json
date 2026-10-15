@@ -1,0 +1,35 @@
+{
+  "utc": "2026-10-15T04:41:45.033966+00:00",
+  "host": "inspur-NP5570M5",
+  "disk": [
+    943412031488,
+    815644405760,
+    79768014848
+  ],
+  "memory": "MemTotal:       131643236 kB\nMemFree:        12018076 kB\nMemAvailable:   122297036 kB\nBuffers:          828316 kB\nCached:         108167512 kB\nSwapCached:       156352 kB\nActive:         94808220 kB\nInactive:       17491472 kB\nActive(anon):     538844 kB\nInactive(anon):  2819212 kB\nActive(file):   94269376 kB\nInactive(file): 14672260 kB\nUnevictable:          12 kB\nMlocked:               4 kB\nSwapTotal:      134217724 kB\nSwapFree:       131504124 kB\nDirty:               692 kB\nWriteback:             0 kB\nAnonPages:       3253176 kB\nMapped:           387544 kB\nShmem:             54184 kB\nKReclaimable:    2530016 kB\nSlab:            3423064 kB\nSReclaimable:    2530016 kB\nSUnreclaim:       893048 kB\nKernelStack:       26912 kB\nPageTables:        50956 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    200039340 kB\nCommitted_AS:   14962228 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:      311252 kB\nVmallocChunk:          0 kB\nPercpu:           120704 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:     6056808 kB\nDirectMap2M:    80619520 kB\nDirectMap1G:    49283072 kB\n",
+  "commands": [
+    "    PID    PPID STAT %CPU   RSS COMMAND",
+    " 214304  214303 SNl   245 1295700 java -Xms128m -Xmx1024m -cp /home/inspur/aicomp/zhangbo-v36-rc2-first-visit-20261015/source/runtime/rc2-exploration-state.jar org.uma.jmetal.runner.rc2.V36Rc2FirstVisitRunner --plan /home/inspur/aicomp/zhangbo-v36-rc2-first-visit-20261015/source/outputs/exploration-screen/exploration-plans/RC2FIRST-100_5_3_1-20261014-Q.properties --execute",
+    "   2615       1 Sl   23.6 95208 /opt/teamviewer/tv_bin/teamviewerd -d",
+    " 214261  214260 S     9.1 18380 python3 -B /home/inspur/aicomp/zhangbo-v36-rc2-first-visit-20261015/source/scripts/run_rc2_retention_linux.py --first-visit --registry /home/inspur/aicomp/zhangbo-v36-rc2-first-visit-20261015/source/outputs/exploration-screen/exploration-registry.tsv --prior /home/inspur/aicomp/zhangbo-v36-rc2-d50k-20261014/source/outputs/d50k-screen --execute --approval RC2_FIRST_VISIT_7_RUNS_APPROVED --first-only",
+    " 214814    1316 Ss    4.0  8832 sshd: inspur [priv]",
+    "2624347       1 Ssl   1.9 221240 /opt/todesk/bin/ToDesk_Service",
+    "   1136       1 Rsl   1.7 10340 /usr/lib/policykit-1/polkitd --no-debug",
+    "   3840    3637 SLl   0.9 73276 mongod --keyFile /data/mongodb.key --replSet rs0 --auth --bind_ip_all",
+    "   1115       1 Ss    0.7 148736 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only",
+    "2923483    4654 Ssl   0.7 35196 /home/inspur/codex-network-test-20261013/easytier-core -c /home/inspur/codex-network-test-20261013/direct-test.toml --rpc-portal 127.0.0.1:15889 --console-log-level warn",
+    "   4869    4654 Ssl   0.6 681380 /usr/bin/gnome-shell",
+    "   5245    4855 Sl    0.5 54876 /opt/todesk/bin/ToDesk",
+    " 214812    1316 Ss    0.5  6844 sshd: [accepted]",
+    " 214813  214812 S     0.5  4564 sshd: [net]",
+    "      1       0 Ss    0.4  9272 /sbin/init splash",
+    "   1117       1 Ssl   0.4 10448 /usr/sbin/NetworkManager --no-daemon",
+    "   1290       1 Ssl   0.2 44936 /usr/sbin/tailscaled --state=/var/lib/tailscale/tailscaled.state --socket=/run/tailscale/tailscaled.sock --port=41641",
+    "   3639    3468 Ssl   0.2 42200 mysqld --default-authentication-plugin=mysql_native_password",
+    "1284919 1244689 Z     0.2     0 [python] <defunct>",
+    "    595       1 S<s   0.1 141440 /lib/systemd/systemd-journald"
+  ],
+  "gpu": "0, 184, 0\n",
+  "actual_dev_status": "PASS_POSITIVE_DEV_FROZEN_PENDING_FRESH_CONFIRMATION",
+  "new_media_calls": 0
+}

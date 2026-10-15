@@ -1,0 +1,66 @@
+{
+  "status": "PASS_EVIDENCE_AND_BYTE_EXACT_EXISTING_BEST_DELIVERY_NEW_ADAPTER_NOT_PROMOTED",
+  "packaged_utc": "2026-10-11T12:12:44.557410+00:00",
+  "format_repairs": "CLI39 final self-read and CLI40 eight duplicated Windows separators recovered by separate typed receipts; original rejected audits and raw preserved.",
+  "dataset": {
+    "total_planned": 24,
+    "qualified": 20,
+    "rejected": 4,
+    "pending": 0,
+    "train_windows": 8,
+    "evaluation_windows": 12,
+    "remaining_two_windows_completed": true
+  },
+  "training": {
+    "actual_optimizer_updates": 4,
+    "examples_backward": 16,
+    "changed_lora_tensors": 288,
+    "base_and_vision_frozen": true,
+    "adapter": {
+      "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/train_01/final_adapter/adapter_model.safetensors",
+      "bytes": 61384752,
+      "sha256": "5c582329e9f15d13cc0237dd3672c07ae2cb0b474ccf7241d1e3d6472db0858f"
+    }
+  },
+  "evaluation": {
+    "actual_model_calls": 24,
+    "independent_cpu_reconstructed": 24,
+    "quality_gate_passed": false,
+    "scope": "FINITE_OBSERVATION_SILVER_DIAGNOSTIC_NOT_GOLD_OR_OFFICIAL",
+    "locked_macro_f1_gain_exact": "413572397742217017171715/20821616955026425283298703",
+    "locked_macro_f1_gain": 0.01986264556856997,
+    "frozen_required_gain": 0.05,
+    "failed_checks": [
+      "locked_positive_macro_f1_gain_min",
+      "no_new_unrelated_spill",
+      "recall_nondecrease",
+      "unknown_conservative_nonnegative"
+    ]
+  },
+  "new_candidate": {
+    "started": false,
+    "new_426_predictions": false,
+    "new_finetuned_submission_zip": false,
+    "official_score": null
+  },
+  "existing_best_submission": {
+    "path": "G:\\ai\\AIC视频\\deliveries\\SILVER24_SFT_20261011\\candidate_SAFE_BEST_37_66.zip",
+    "bytes": 306167,
+    "sha256": "07730c9e02e68d1a1ce54e7ef5a8aa616346cf8f2f8d78426ed36bc3eb481496",
+    "records": 426,
+    "frames": 102112,
+    "historical_user_reported_score": 37.66,
+    "score_independently_logged_in_this_run": false,
+    "new_training_output": false,
+    "official_upload_this_run": false,
+    "verification_this_run": "Byte SHA, CRC, unique JSONL, parsed count and identity uniqueness; prior independent strict provenance acceptance referenced, not rerun."
+  },
+  "resource_cost": {
+    "actual_new_gpu_runner_seconds": 1023.8475991366431,
+    "unique_terminal_equal": true,
+    "historical_costs_preserved": true,
+    "cash": "UNKNOWN_NOT_ZERO"
+  },
+  "completion_timestamp_note": "completion.utc is the execute-report creation timestamp, not the finish timestamp; original bytes preserved. Phase terminal times and independent_quality.execution.json supply actual finish evidence.",
+  "next_scientific_work_not_started": "Use a separately frozen experiment with new training sources and normal-versus-event/boundary contrast labels. Keep this locked evaluation diagnostic exposed; never move its windows into training or retune this failed recipe against it."
+}

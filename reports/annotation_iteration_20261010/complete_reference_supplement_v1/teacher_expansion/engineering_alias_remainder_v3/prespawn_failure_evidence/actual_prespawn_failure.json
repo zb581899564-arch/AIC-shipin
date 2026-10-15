@@ -1,0 +1,108 @@
+{
+  "status": "ACTUAL_WINDOWS_CREATEPROCESS_FAILURE_BEFORE_AGY_CHILD_NO_RETRY",
+  "utc": "2026-10-10T22:50:54.419203+00:00",
+  "actual_exec_tool_result": {
+    "chunk_id": "ae4856",
+    "exit_code": 1,
+    "wall_time_seconds": 1.2319542,
+    "exception": "FileNotFoundError: [WinError 206] 文件名或扩展名太长。",
+    "location": "launch.py subprocess.Popen(cmd,cwd=a,env=env,stdout=out,stderr=err)",
+    "controller_error": "subprocess.CalledProcessError: run_call.py 34 returned non-zero exit status 1"
+  },
+  "command_reconstruction_method": "subprocess.list2cmdline of frozen launch command and exact saved prompt; reconstruction only, no process/model probe",
+  "commandline_utf16_code_units_including_NUL": 56391,
+  "prompt_characters": 55047,
+  "prompt_bytes": 58187,
+  "registered_runner": {
+    "utc": "2026-10-10T22:48:34.049873+00:00",
+    "runner_pid": 35612,
+    "runner_command": [
+      "E:\\conda\\python.exe",
+      "-B",
+      "reports/annotation_iteration_20261010/complete_reference_supplement_v1/teacher_expansion/engineering_alias_remainder_v3/controller.py"
+    ],
+    "runner_source_sha256": "35460c336505501d6577a911c596a46f18166384a42e38a353b5e822c2a5471c",
+    "root_start_admission_sha256": "9a7b99b1ec87ebe31e1fdef1eb3ca088849ee527310dca88af15d65804b392c2",
+    "fixed_routing": {
+      "34": [
+        17,
+        18
+      ],
+      "35": [
+        19,
+        20
+      ],
+      "36": [
+        21,
+        22,
+        23
+      ]
+    },
+    "global_cap": 36,
+    "automatic_retry": false,
+    "cash_cost": "UNKNOWN_NOT_ZERO"
+  },
+  "request": {
+    "utc": "2026-10-10T22:48:34.315252+00:00",
+    "model": "gemini-3.8-flash-high",
+    "freeze_sha256": "0ae42bcd50135edf4d73682aa2ebd9670734147c699baae3c3e658a9a8e77a36",
+    "prompt_sha256": "254f800cfcb24a769f16cbb5d81f42a213b731a9156b3ce82573af0fe5dcb4fb",
+    "root_start_admission_sha256": "9a7b99b1ec87ebe31e1fdef1eb3ca088849ee527310dca88af15d65804b392c2",
+    "conversation_id": null,
+    "CLI_before": 33,
+    "CLI_after": 34,
+    "timeout_seconds": 7200,
+    "automatic_retry": false
+  },
+  "child_process_created": false,
+  "actual_model_calls": 0,
+  "actual_tools": 0,
+  "stream_bytes": 0,
+  "stderr_bytes": 0,
+  "absent_child_artifacts": [
+    "process.json",
+    "terminal.json",
+    "agy.log"
+  ],
+  "all_frozen_input_sha_verified": true,
+  "checked_input_count": 785,
+  "successful_teacher_outputs": 0,
+  "global_ledger_registered_count": 34,
+  "global_cap": 36,
+  "automatic_retry": false,
+  "further_calls_launched": false,
+  "ledger_not_rewound": true,
+  "global_registration_reconciliation": "ROOT_DECISION_REQUIRED_NO_SELF_REUSE",
+  "cash_cost": "UNKNOWN_NOT_ZERO",
+  "agy_natural_terminal": "NOT_CREATED_PROCESS_NEVER_STARTED",
+  "engineering_parent_terminal": "ACTUAL_EXEC_EXIT1",
+  "observer": {
+    "session_id": 68472,
+    "started_once": true,
+    "stopped_by_owned_session_CTRL_C": true,
+    "stop_tool_chunk": "0c0ac6",
+    "exit_code": 1,
+    "stop_wall_seconds": 0.015393,
+    "last_actual_progress": "CLI34 DONE_tools0",
+    "reason": "No child could produce terminal; stopped owned read-only observer after prespawn failure"
+  },
+  "old_frozen_sources_and_receipts_unchanged": true,
+  "bindings": {
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\registered.json": "ba063cfd974ca68153aa85eca2ddadf0348606f0b7ad07a408e2f78d272867b0",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\root_start_admission.json": "9a7b99b1ec87ebe31e1fdef1eb3ca088849ee527310dca88af15d65804b392c2",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\controller.py": "35460c336505501d6577a911c596a46f18166384a42e38a353b5e822c2a5471c",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\launch.py": "1dde53f1c4a55c3874aad4a4346bfb383eebb1cac2e74417dbea63aa54f35e45",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\run_call.py": "5574713a868365673c0d1e073296fab32697727d781307046011e217405a0fee",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\observer.py": "d5bc480986f0ae8e70cc388164c12d208d72797e06ec8e06884805102695dfb5",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\execution_code_binding.json": "1f70ae31dd0b5b73ebf5b6e414ae0199b2385dec4373960d44a9e45c0fd14682",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\call34\\request.json": "e7895aec15efbf4c6d0579b88edb050ca54f0be3f1e50e52c3d01d6523dadcc2",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\call34\\prompt.txt": "254f800cfcb24a769f16cbb5d81f42a213b731a9156b3ce82573af0fe5dcb4fb",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\call34\\freeze.json": "0ae42bcd50135edf4d73682aa2ebd9670734147c699baae3c3e658a9a8e77a36",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\call34\\stream.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\call34\\stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\prespawn_failure_evidence\\ledger_after_registered34.jsonl": "89ca0c326c1e9c80a4fedfee8a972b8761ffb37b4779220a110694b8841e4a51",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\prespawn_failure_evidence\\record_failure.py": "8308555e39fa8c9648c91fe636e58837c399363e4e718c807799bc3bc88abdc9"
+  },
+  "raw_stdout_copy": "No AGY stdout exists; zero-byte stream preserved. Exception text and timing above copied from actual exec result metadata, not represented as an original shell log.",
+  "next_action": "STOP; do not rerun original controller or consume next planned scope without explicit ROOT engineering admission"
+}

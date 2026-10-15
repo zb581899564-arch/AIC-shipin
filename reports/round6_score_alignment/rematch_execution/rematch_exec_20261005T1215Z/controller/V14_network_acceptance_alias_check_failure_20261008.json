@@ -1,0 +1,13 @@
+{
+  "status": "LOCAL_ACCEPTANCE_ASSERTION_ALIAS_ERROR_NOT_NETWORK_FAILURE",
+  "error": "Expected Linux OS hostname in tailscale pong, but actual Tailscale peer alias is aic-inspur-vstain.",
+  "actual_pongs": 3,
+  "actual_peer_ip": "100.127.244.47",
+  "actual_path": "DERP(hkg)",
+  "actual_ms": [346, 339, 892],
+  "tailscale_exit_code": 1,
+  "tailscale_stderr": "direct connection not established",
+  "correction": "Require three pongs for exact peer IP through the audited relay; separately require actual SSH hostname inspur-NP5570M5.",
+  "repair_repeated": false,
+  "final_acceptance_written_before_error": false
+}

@@ -1,0 +1,21 @@
+{
+  "status": "LOCAL_NATIVE64_RGB_ENTRY_IMPLEMENTED_NOT_REAL_INPUT_ACCEPTANCE",
+  "recorded_utc": "2026-10-12T18:07:24.437321+00:00",
+  "previous_receipt": "preparation_receipt_03.json",
+  "execution_contract": "NATIVE_RGB_EXECUTION.md",
+  "implementation": "improvement/human_reference_v1/prepare_rgb_remote.py",
+  "checks": [
+    "Synthetic seek PTS selection preserves exact original ordinal/pixel order",
+    "Missing selected frame, duplicate decode PTS and changed geometry rejected",
+    "Syntax checked for new RGB entry and synthetic test"
+  ],
+  "checks_are_synthetic_only": true,
+  "entry_requires_real_twenty_source_download_mapping_and_known_separation": true,
+  "successful_window_caches_skip_rgb_decode_on_explicit_resume": true,
+  "actual_new_media_downloads": 0,
+  "actual_native_decodes": 0,
+  "actual_model_calls": 0,
+  "actual_comparisons": 0,
+  "actual_new_zips": 0,
+  "pending": "Previously asked specific 861654036-byte ETH-to-Linux media approval remains unanswered"
+}

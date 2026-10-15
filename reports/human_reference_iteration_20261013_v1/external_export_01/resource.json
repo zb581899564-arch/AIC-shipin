@@ -1,0 +1,38 @@
+{
+  "name": "human_summe20_original_b_native64_20261013_v1",
+  "command": [
+    "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+    "-B",
+    "/home/inspur/aic_video_work/human_reference_iteration_20261013_v1/code/infer_human_01.py"
+  ],
+  "started_utc": "2026-10-13T01:38:10.910778+00:00",
+  "runner_pid": 4099995,
+  "reserved_seconds": 21600,
+  "teardown_reserve_seconds": 120,
+  "prior_charged_seconds": 225068.16396423196,
+  "gpu_time_mode": "UNLIMITED",
+  "max_total_gpu_seconds": null,
+  "resource_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
+  "disk_before": {
+    "free_bytes": 170197680128,
+    "work_bytes": 110162624512
+  },
+  "planned_output_bytes": 536870912,
+  "capacity_reason": "All twenty original sources and actual native64 CPU inputs accepted; unchanged B8B with prior measured capacity; dynamic shared no-external-compute lock and actual remaining outputs, no fixed utilization or free-VRAM gate",
+  "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+  "project_disk_limit_bytes": null,
+  "project_ram_limit_bytes": null,
+  "project_vram_limit_bytes": null,
+  "runner_source_sha256": "9997d41fbe2bb51726914b4698b874cf939c52aac02048fa9b3bb753c64c6cec",
+  "child_pid": 4100010,
+  "finished_utc": "2026-10-13T01:56:49.201993+00:00",
+  "charged_seconds": 1118.2912989277393,
+  "exit_code": 0,
+  "stop_reason": null,
+  "sampled_peak_memory_mib": 22414,
+  "status": "completed",
+  "disk_after": {
+    "free_bytes": 170179289088,
+    "work_bytes": 110171738112
+  }
+}

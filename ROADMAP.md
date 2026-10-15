@@ -1,4 +1,135 @@
-# AIC 冲击 50+ 分路线图
+## 20261012 精确成绩更新：PRE075_POST050为40.42，当前用户反馈最佳
+
+用户明确反馈最新PRE075_POST050包40.42分；对应deliveries/ASYMMETRIC_BOUNDARY_PRE075_POST050_8B_20261012/candidate_ASYMMETRIC_BOUNDARY_PRE075_POST050_8B.zip，既有交付SHA cbfacd675aca7b6bbc3287ccebfd81e605945501cd1fef392681ff2e9761fec3。较40.26提高0.16，较37.66提高2.76。来源为用户精确反馈，没有新截图或独立登录官网；此前40.4几反馈保留。最新成绩回执reports/boundary_refinement_20261012_v1/official_score_feedback_40_42_20261012.json，current_state.json与risk policy同步。
+
+本轮仅记录成绩并提出后续建议，没有新实验、模型、训练或封包；旧aic继续已删除。原协议/源锁、完成与交付回执、旧包和失败均保持，正式开发参考FAILED不因线上提高而回写。建议先少量开头/结尾单因素开发对照，再建立可靠非测试时间与构图诊断后决定空间改进；尚未授权启动这些新方案。以下为各自时点历史。
+
+## 20261012 新时间边界包已本地交付：PRE075_POST050，待用户测分
+
+本次用户授权的单个新候选已完成：deliveries/ASYMMETRIC_BOUNDARY_PRE075_POST050_8B_20261012/candidate_ASYMMETRIC_BOUNDARY_PRE075_POST050_8B.zip；365298字节，SHA cbfacd675aca7b6bbc3287ccebfd81e605945501cd1fef392681ff2e9761fec3。426视频全部非空，共121266帧；40.26基线118027帧及裁剪框全部保持，统一新增3239帧，涉及341视频，未删除任何基线帧。
+
+配方从原均衡方案原始时间端点一次扩展：前3/4秒、后1/2秒，依原精确窗夹边和连续冻结全源空间场域选择原生PTS帧；不是重复扩展40.26包。104非测试开发记录/96源组预登记弱参考筛查选择此配方，组宏IoU0.58175635→0.58261071，差0.00085435，配对bootstrap区间[-0.00429001,0.00644004]跨0；只支持风险试包，未证明语义质量或提分，正式质量参考FAILED保留，新官网分UNKNOWN。已暴露源组32与无记录交集源组64的诊断以uncertainty_diagnostic_group_v2.json为准，旧有重叠分组诊断保留。
+
+原始0秒与0.5秒key集合精确重现102112/118027；426精确原生时间/全源场核查、独立11strict、单JSONL、CRC、成员SHA与本地交付副本均通过，新ZIP不同于全部12历史ZIP，旧37.66/40.26及全部历史ZIP SHA保持。源锁326958d4925a1715a0c0a2b7229f7e1af0e688a36186a496286ec755d41bef1d，唯一本地CPU封包进程自然exit0。入口reports/boundary_refinement_20261012_v1/current_state.json与controller_completion_receipt.json；交付目录local_delivery_receipt.json。
+
+本次新model/decoder/processor/optimizer均0，原B8B参数8782459120；不读测试GT、不按测试视频手调、不自动官网提交，不恢复闭源或旧心跳，不用Mac。用户手工提交后再绑定新分数；当前已知最佳仍为用户反馈的40.26。严禁重复已完成source export、原生CPU核验、独立11strict或package_candidate.py；新任务已交付，以下均为各自时点历史。
+
+## 20261012 新授权：以40.26为基线的单个CPU时间边界候选
+
+用户最新明确要求：以40.26包为基线，继续优化时间边界，自己分析验证并交付一个新可提交ZIP。本新阶段授权取代上一晚08:00截止对这次新任务的限制；不重启任何旧已完成chain/模型/重放/打包，旧aic仍已删除。唯一新本地入口improvement/boundary_refinement_v1/package_candidate.py，状态reports/boundary_refinement_20261012_v1/current_state.json；原37.66/40.26及全部旧失败、raw、冻结、费用均保持。
+
+先固定开发网格，在104个已有非测试开发记录/96源组/112原有效回答上进行弱参考筛查；只取此前闭源结果作历史弱正例，不恢复闭源。选定统一原始端点前3/4秒、后1/2秒，候选ASYMMETRIC_BOUNDARY_PRE075_POST050_8B；不重复扩展40.26结果。开发组宏IoU0.58175635→0.58261071，差0.00085435且bootstrap区间跨0，仅风险诊断、正式质量门仍FAILED。T01已知KEEP9/9和ORDINARY0/6保持；四个原失败/未运行六源参考不转空。
+
+已固定PROTOCOL SHA8ab1c787886f6acfa38598fcc4fb81fb0c5d43ef85d6832b512085acea054c95后才读426新membership。现有完整空间场/原始时间回答的约5MB输入包已下载，全部成员SHA/CRC/安全解压通过。依原精确窗夹边并限于连续冻结源域，必须精确重现0与0.5秒既有102112/118027帧且保留40.26全部框；通过426/原生PTS/全源场/独立11strict/新ZIP验收后仅交付一个新包。模型、训练、decoder、processor均0；不读测试GT或人工按测试视频调参、不自动提交，不新增大数据/模型，不用Mac。如下均为旧任务/成绩历史记录。
+
+## 20261012 最新成绩反馈：原均衡＋0.5秒40.26，当前用户反馈最佳
+
+用户说明按上一条四个链接从上到下上传，并明确原均衡＋0.5秒为40.26；截图四行DONE。对应上传顺序：DENSE128_NATIVE_REALIZABLE_8B=36.29，DENSE128_CONTEXT025_SOURCE_DOMAIN=38.26，BOUNDARY_CONTEXT_025=39.34，BOUNDARY_CONTEXT_050=40.26。截图显示顺序与上传顺序相反，包名绑定依据用户说明和已核实际ZIP SHA，并未独立登录官网。
+
+当前最佳：deliveries/BOUNDARY_CONTEXT_050_20261012/candidate_BOUNDARY_CONTEXT_050.zip；356057字节，SHA200a3ef337eefd9fe296c781a2335ed16696f3539ee2602601da45f1cceef32b；用户反馈线上40.26，较原37.66提高2.60。原37.66及其包、冻结/raw/费用、原context失败与正式质量参考FAILED均保持；不回写已接受的历史交付/完成回执。
+
+成绩截图和四包实际SHA绑定回执：reports/overnight_risk_20261012_v1/score_feedback_20261012/official_score_feedback.json；当前状态及risk policy已更新。本条仅记录反馈，新增模型/训练/提交/实验均0；aic仍已删除。后续分析以40.26为基线，不能据历史UNKNOWN或pending重跑任务。以下均为各自时点的历史记录。
+
+## 20261012 夜间收尾：四份新风险ZIP已本地交付，aic已删除
+
+四份均为426完整视频、非空426，通过独立11strict、原生帧/全源空间场、Linux与Windows大小/SHA、ZIP CRC及单JSONL成员校验；四份ZIP SHA互不相同，原37.66包SHA保持。入口reports/overnight_risk_20261012_v1/current_state.json及four_new_zip_local_inventory.json。
+
+- BOUNDARY_CONTEXT_025：deliveries/BOUNDARY_CONTEXT_025_20261012/candidate_BOUNDARY_CONTEXT_025.zip；330573字节/110145帧；SHA432298bae7a5b44d8bbb85823e5aeaf357502ecf80e50db5bca1de09fa442e26。
+- BOUNDARY_CONTEXT_050：deliveries/BOUNDARY_CONTEXT_050_20261012/candidate_BOUNDARY_CONTEXT_050.zip；356057字节/118027帧；SHA200a3ef337eefd9fe296c781a2335ed16696f3539ee2602601da45f1cceef32b。
+- DENSE128_NATIVE_REALIZABLE_8B：deliveries/DENSE128_NATIVE_REALIZABLE_8B_20261012/candidate_DENSE128_NATIVE_REALIZABLE_8B.zip；292114字节/98272帧；SHA0892872858b241fc7623bbf07817b3c4df6aa936e3d51a2adee2a8e30ecb3a7c。
+- DENSE128_CONTEXT025_SOURCE_DOMAIN：deliveries/DENSE128_CONTEXT025_SOURCE_DOMAIN_20261012/candidate_DENSE128_CONTEXT025_SOURCE_DOMAIN.zip；316965字节/106299帧；SHA2b7f1125e3c468b9b5fe2f0d2c3a77d3545f8576c8f48606be53d3ac096a7322。保留dense核心98272帧和原框，新增8027；统一±1/4秒原窗native PTS谓词且落在冻结field连续源域，426独立精确核查通过。
+
+原预登记context025因源field外尾帧失败，failure SHA caf8976a561e2273146821f52bf0f6a6dabf9ac825f343b2b3bcf4d85bb0ef72仍FAILED；第4包是失败后独立登记的统一源域变体，不改raw、不加epsilon、不针对单视频手调。源域恢复唯一CPU任务已自然完成，新模型/decoder/processor/optimizer均0。
+
+实际dense生产521新GPU回答与521独立CPU重放完整通过，GPU费用7089.326830865815秒、峰值22992MiB、唯一completed/exit0账本不变；owned实际命令为空。不要重复任何已完成chain/prepare/GPU/replay/package。原dense v1失败与314证明、六pilot、全部raw/费用/冻结/旧37.66保持。aic已由App工具确认删除(deleteStatus=deleted)，回执automation_delete_receipt.json；本晚停止新增实验。
+
+四个官网分均UNKNOWN，原正式质量参考FAILED仍保留，用户接受风险；仅格式/来源/完整性通过，不声称提分或新微调。原B8B，今晚optimizer0；手工提交由用户进行，不自动官网提交。闭源标注继续退役、百度网盘上传/禁Mac、严格SSH和共享资源保护仍有效。以下条目均为历史快照，不能据历史pending或PID重启已完成任务。
+
+## 20261012 最新接续：第3新包已交付，context源域恢复仅CPU运行
+
+521新GPU回答和521独立CPU重放均自然完成，pure DENSE128_NATIVE_REALIZABLE_8B已本地交付：deliveries/DENSE128_NATIVE_REALIZABLE_8B_20261012/candidate_DENSE128_NATIVE_REALIZABLE_8B.zip，292114bytes，SHA0892872858b241fc7623bbf07817b3c4df6aa936e3d51a2adee2a8e30ecb3a7c；426视频/98272帧/非空426，独立11strict与Windows/Linux大小、SHA、CRC、成员SHA全过。原生产GPU费用7089.326830865815秒，峰值22992MiB，唯一completed/exit0账本保持，不能重复GPU或CPU重放，也不重建已交付pure。
+
+原context025在空间场membership guard自然失败：一个额外尾帧不在原冻结field中，未创建输出目录。原chain失败SHA caf8976a561e2273146821f52bf0f6a6dabf9ac825f343b2b3bcf4d85bb0ef72保持FAILED。独立审查实际确认426源field均连续无洞，baseline98272全在域内；新变体统一要求原窗夹边native PTS谓词且ordinal在冻结field连续域内，不epsilon、不改raw或单视频硬编码。它是失败后新增的源域context配方，不声称原预登记方案或语义质量通过。
+
+唯一新CPU入口Linux overnight_risk_20261012_v1/dense128_context025_recovery_v1/context_package.py，2026-10-11T21:51:05Z启动一次，CUDA空、模型/decoder/processor/训练均0。准确入口launch.claim.json、launch.json、context_package.log与context025_package_01；新registration SHA aafd3213815bfe96616e872af3bb7de8fa6765aa94404323e2942d2dcdec5b34，recovery_source_lock SHA cd888ab53b59a64203f911489794188ba0b02a9f27e86cb2f2d6883470cce979，实际2124文件含2114原done/raw/GPU transfer/CPU proof及纯包/失败/源域证据。本地current_state.json有新入口。禁止再次launch；仍须新426/全源场/独立11strict/CRC与SHA验收后回传第4包DENSE128_CONTEXT025_SOURCE_DOMAIN。当前3交付/1pending，aic保持；官网分UNKNOWN、不自动提交、原37.66/原失败与费用/闭源退役/禁Mac/严格共享资源均保持，08:00后不新启实验。
+
+## 20261012 里程碑：521新回答完成，独立CPU重放运行中
+
+2026-10-11T20:23:43Z唯一dense128_v2生产GPU自然完成，521 BEGIN/521 ACCEPTED/521 done，426视频/521窗/invalid0；原B8B参数8782459120，optimizer0、旧回答别名0。GPU completion SHAb687227c2b868e182d6190e17dc85d6bafd9680fea63fb2f3c7d4f81f7ae83d2；实际费用7089.326830865815秒、峰值22992MiB、exit0，唯一账本终态与resource实际相同，resource SHA6c76da0814149a86dcd7f95644c1da213d12b993dcc9097b946b27b13f79b380。共享GPU已释放，不能重复521模型。
+
+20:23:44Z实核原父链已自动进入PRODUCTION_CPU_REPLAY_RUNNING，独立dense_replay.py rematch子进程CUDA为空，父链CUDA0；实际完整argv/PPID/PGID/IO/fds见reports/overnight_risk_20261012_v1/heartbeat_20261012_v2_042344.json，主控完成回执dense_v2_gpu521_completion_control_receipt.json。此次仅确认模型工程完成，独立521 CPU重放、426全源空间场/11strict/ZIP验收和两新包回传仍待完成，不宣称质量或提分通过。
+
+继续既有dense128_v2/production_chain.launch.json和chain_01/chain_state.json，禁止再次chain/prepare/GPU或成功CPU重放。CPU自然通过后由现有链打包pure DENSE128_NATIVE_REALIZABLE_8B及预登记DENSE128_CONTEXT025；context失败时仍交付已验收pure，不再跑模型。当前2新ZIP已交付/2pending，aic保持；正式质量FAILED、未知官网分、37.66旧包、闭源退役、严格SSH/共享锁、禁Mac和08:00后不新启实验均保持。
+
+## 20261012 里程碑：521输入验收通过，新生产GPU实际回答开始
+
+2026-10-11T18:23:48Z原v2链完成CPU准备，426源/521窗完整验收；314旧成功proof+1修复target+206新准备，未重复成功解码。独立只读521个request/proof/SHA/window/native PTS/tensor-key/预算及锁绑定核查通过(新decoder/processor/model均0)，max输入13002tokens、max实际像素25165824，只有source273/index2触发padding-aware resize。
+
+CPU acceptance SHA6d8e259a00de3bb2a908668c979783e74830acd554a4e180aa44d34eb48a8651；新production_source_lock实际21529文件，SHA24aa7cfd25a0a1c40168b74d73b5cac8b48c5321fc322be6addd7aed8c828998。18:25:34Z唯一共享GPU wrapper dense128_native_rematch521_20261012_v2启动，18:28:11Z实际首个回答工程接受，显存实测21840MiB；父/runner/子完整命令与PPID/PGID/IO已核，当前GPU活动属于该唯一作业，终态尚未产生。不可因加载/哈希或CUDA准备过程再启launcher。
+
+唯一入口仍dense128_v2/production_chain.launch.json与chain_01/chain_state.json；本地reports/overnight_risk_20261012_v1/current_state.json及dense_v2_independent_521_cpu_lock_receipt.json。后续仅由已启动链继续521真实回答→521独立CPU重放→pure新包→预登记context025；不提前单窗重放造成重复成功CPU。若context失败仍交付已验收pure，不重跑模型。原六pilot/175.729秒、v1自然CPU失败/314proof、正式质量参考FAILED及37.66旧包保持；当前2新ZIP已交付/2pending，分数UNKNOWN、optimizer0、不自动官网提交。aic继续，08:00后不新启实验，已有合法作业自然结束并完成验收下载。
+
+## 20261012 实际恢复：dense128_v2运行，314+1份CPU证明直接移交
+
+旧dense128_v1于2026-10-11T17:37:35Z自然CPU失败：source273/index2原生23帧被processor补齐24帧，缩放按23计造成实际25,362,432像素超固定25,165,824预算；原失败、314份成功CPU proof及六pilot/费用均保持，旧生产GPU0，禁止重启v1。
+
+新dense128_v2仅对原有效grid超预算输入调整确定性resize cap，原采样/帧/PTS/B0 prompt/grammar/token预算不变；失败23窗已实际CPU通过(24,772,608像素、12352tokens)，直接移交不重复解码。314旧proof+6pilot纯预测grid/identity审计通过，新冻结锁包含该审计实际SHA。恢复为314旧proof引用+1已修复target引用+206尚未运行新准备=521，完整输入未全部验收前不启动GPU。
+
+唯一新链2026-10-11T18:01:09Z启动一次，Linux overnight_risk_20261012_v1/dense128_v2/dense_chain.py；入口production_chain.launch.json与chain_01/chain_state.json。本地入口reports/overnight_risk_20261012_v1/current_state.json。18:02:42Z已275/426视频、316/521窗(314旧+1target+1新)，完整父/子命令与IO实核；父CUDA=实核GPU0、仅CPU子屏蔽自身CUDA，生产模型0。GPU新任务唯一dense128_native_rematch521_20261012_v2，前瞻时限21600秒(六pilot推算521约15259秒，原14400秒不足风险)，不改旧协议或调用预算；之后521独立CPU重放、pure与预登记context025包。不得重复chain、prepare、target、成功GPU或成功CPU replay；context失败也须交付已完成pure，不重复模型。
+
+两份BOUNDARY_CONTEXT_025/050已本地交付保持，四候选目标仍2交付/2pending。正式质量参考FAILED保留，新官网分UNKNOWN，optimizer0；不把37.66改名，不读测试GT/逐条手调，不恢复闭源标注，不自动官网提交，不新增未经规模许可的大数据或模型，不用Mac。严格SSH、共享GPU锁和唯一账本继续；aic已更新新v2入口，每15分钟接续，08:00后不新增实验，已启合法作业自然结束并验收回传。
+
+## 20261012 实际接续：128帧全426新链已启动，先CPU准备
+
+新dense128六源6次真实生成与独立CPU重放通过；175.72922131605446秒、峰值21184MiB、唯一账本终态已核。固定双AI银标选中KEEP28/59、ORDINARY7/38，三KEEP源均非零，正式质量参考FAILED仍保留，仅按用户接受风险继续。
+
+全426/521新链Linux overnight_risk_20261012_v1/dense128_v1/dense_chain.py于2026-10-11T17:04:03Z启动一次；2026-10-11T17:06:22Z实际16/426 CPU视频、16/521窗口、生产模型0，完整活动命令见reports/overnight_risk_20261012_v1/dense_production_live_0106.json。已核19606继承冻结来源；后续521真实CPU输入全部通过后才冻结新production_source_lock并经唯一共享GPU wrapper生成521新回答→521独立CPU重放→pure DENSE128_NATIVE_REALIZABLE_8B及预登记DENSE128_CONTEXT025两新ZIP。不得重复链/prepare/模型或成功重放；context失败时pure完成包仍可交付，不因此重跑521。链父CUDA为实核唯一GPU索引，禁止以空CUDA屏蔽启动链。
+
+现有025/050两份新风险ZIP本地交付保持。aic每15分钟核实际状态并完成剩余验收/小包回传，当前预登记共4个新候选，2交付/2待完成，不能因为前两个交付就停止。新分数UNKNOWN、不自动官网提交、训练0、旧37.66及失败/raw/费用不改。上午08:00后不新增实验，已有合法作业自然结束并验收。
+
+## 20261012 实际交付更新：两份新风险ZIP已回传，128帧候选准备中
+
+统一边界上下文两档均完成426独立11项验收与本地CRC/SHA/预测交叉核验，原框保持：温和0.25秒ZIP330573字节，SHA432298bae7a5b44d8bbb85823e5aeaf357502ecf80e50db5bca1de09fa442e26，110145帧（新增8033）；0.5秒ZIP356057字节，SHA200a3ef337eefd9fe296c781a2335ed16696f3539ee2602601da45f1cceef32b，118027帧（新增15915）。本地分别deliveries/BOUNDARY_CONTEXT_025_20261012与BOUNDARY_CONTEXT_050_20261012，确为新预测，非旧37.66改名。新官网分均UNKNOWN，用户接受风险；不能声称提分已验证。CPU零新模型/训练，全部历史模型费用保留。
+
+不要重跑已完成boundary_package.py、boundary025_package.py或旧机制infer_v2.py。旧机制5次实答已独立部分CPU重放通过（4原生有效、1原生失败、3窗UNRUN），费用113.77065153233707秒自然终态保留。下一步新dense128_v1，先固定六源CPU输入→6次真实GPU→独立CPU重放→按用户风险范围决定全426。回执/实际入口以reports/overnight_risk_20261012_v1/current_state.json为准；aic心跳继续；dense128六源CPU实际输入768帧通过，新独立6次GPU任务dense128_native_pilot6_20261012_v1于2026-10-11T16:50:31Z启动一次，source_lock SHA4cff45a470f3e9bdc8a63035db18f0c65f23ed5c11d27a01622f946a6421aabe；未完成不能宣称PASS，勿重复launcher。
+
+## 20261012 最新授权：夜间迭代并交付风险候选ZIP
+
+用户明确要求今晚持续自主探索、迭代，必须做出新的可提交ZIP，接受科学效果未知的风险包；明显劣化或工程/格式不合法方案不打包。此授权取代此前仅局部机制诊断/不允许426与新ZIP的后续执行限制，但不将原正式质量参考FAILED改写为PASS，也不改冻结历史与原失败。禁止把37.66旧包改名冒充新包或声称未经官网验证的新分数。
+
+新独立执行根：Linux round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/overnight_risk_20261012_v1，Windows reports/overnight_risk_20261012_v1。先生成全视频统一±0.5秒边界缓冲候选，复用已验收的原B时间回答和独立全源空间场；再登记更密原生视频观察的新8B候选，以原生帧可实现生成约束防止零真实帧区间。每个新配方先固定输入、规则与资源；不手看复赛调参、不读测试GT、不恢复闭源标注、不自动官网提交。完整426/源帧/空间来源/格式/ZIP CRC与SHA验收后小量回传新包。上传百度网盘、禁Mac、严格SSH和共享锁不变。今晚心跳automation id=aic，每15分钟接续，阶段无变化保持安静；2026-10-12 08:00 Asia/Taipei后不新增实验，已有合法任务自然结束并验收交付。
+
+上一局部机制v2已经自然failed：5次真实调用，4次工程有效，T03原B输出五个短区间，其中第3、4段各零原生帧；T01/T02二次筛选结果不变。GPU费用113.77065153233707秒、峰值19306MiB，唯一账本终态已核；不重复v2 launcher，不将该失败转空。下一步独立CPU部分重放，T04–T06原版本UNRUN保留。
+
+## 20261011 当前阶段：新方向两轮小试完成止步，准备独立时间参考
+
+用户“开始推进”后实际完成14次模型调用：同8B空间四图12次，macro IoU增量0，固定开发门失败；现成32B双窗分别19.1965/24.8623秒，1/2接口通过，存在未支持物体事实、4段超总3段及重叠边界，自然failed费用终态已保留。旧37.66 ZIP SHA不变，本轮optimizer0、426推理0、无新提交ZIP。共享owned GPU/server全部退出，勿重复上述launcher或在同参考补考。
+
+主控结论/证据入口 reports/spatial_scale_pilot_20261011/REPORT.md 与 completion_receipt.json；教师详细诊断 reports/open_teacher_pilot_20261011/quality_diagnostic.json。新contract_v2.py只是CPU通过的后续单列表契约，未做真实模型验证，不回写v1。下一阶段先补6–8不同源独立时间参考，覆盖动作结果/普通/未知，再登记同8B拒绝与边界精修。闭源流程退役、旧contrast取消、上传百度网盘/禁Mac、严格SSH和共享资源规则保持。
+
+## 20261011 当前阶段：空间开发筛查止步，开源教师双窗诊断
+
+新空间尺度配方12真实调用与独立CPU验收完成，四图macro IoU原/新均0.708158779413312，增量0、正增量0/4，固定开发门未通过。不得重跑同配方、读GNMC保留集或开展426；冻结代码/回执保留。按已接受新方案继续现成32B两个过程暴露难窗的短输出诊断，新入口 improvement/open_teacher_pilot/pilot.py，协议 reports/open_teacher_pilot_20261011/PROTOCOL.md；本轮只2次调用，批量标注/训练/426均未准入。旧contrast和闭源标注保持退役。
+
+## 20261011 当前阶段：用户授权推进新空间尺度开发筛查
+
+用户最新指示“开始推进”，因此先前新方向 ANALYSIS_ONLY 限制自此被本次分阶段执行授权取代。当前新入口 improvement/spatial_scale_pilot，协议 reports/spatial_scale_pilot_20261011/PROTOCOL.md。仅原8B的四GNMC开发图本地非商业空间诊断；训练与426仍须后续各自数据/科学/资源门。闭源Agent流程保持退役，旧contrast_boundary_v1不恢复；不按下方历史自动接续文字启动旧任务。百度网盘默认上传、无Mac跳板、严格SSH指纹及共享GPU资源规则继续生效。
+
+<!-- CURRENT_SPATIAL_SCALE_PILOT_20261011 -->
+
+# AIC视频当前路线与历史记录
+
+## 当前：37.66诊断与新方案，仅分析（2026-10-11）
+
+旧闭源Agent标注/contrast_boundary_v1已取消并退役，无活动标注、训练或桥接；不恢复下文历史入口。用户本次要求先分析再决定，尚未授权新实验。已复核37.66包SHA、银标续训失败分项与现成32B实际文件SHA；没有加载模型。
+
+提出的优先顺序：固定37.66和参考做时间/空间误差分解 → 检查最大宽度裁剪的尺度限制 → 有证据再做同8B联合选框 → 普通片段拒绝/边界；开源教师只做有限辅助对照，不先扩标或下载大权重。完整方案 reports/strategy_reset_20261011/PROPOSED_PLAN.md。
+
+旧闭源流程清单、成本根因和退役见 reports/strategy_reset_20261011/TECH_DEBT_RETIREMENT.md；唯一当前标注控制入口 improvement/annotation_pipeline/control.py，ANALYSIS_ONLY且执行明确拒绝。历史源码与回执保留原字节，不把准备/格式成功当质量通过。
+
+下方原路线图全部保留为历史记录，包括旧“正在运行”“下一门”“自动接续”和旧上传路线；不得作为当前启动授权，日期按各自原时点理解。
+
+---
 
 ## 当前：取消人为资源额度（2026-10-07，用户明确纠正）
 

@@ -1,0 +1,102 @@
+{
+  "utc": "2026-10-09T03:26:21.789221+00:00",
+  "status": "PASS_SAMPLED_IMAGE_VISUAL_LABELING_ONLY_NOT_REAL_HIGHLIGHT_QUALITY",
+  "model_ui": "Gemini 3.8 Flash Medium",
+  "direct_mp4_ui": "REJECTED_Invalid Media_Unsupported file format",
+  "input_type": "one PNG sheet of six frames from self-created synthetic video",
+  "native_full_video_observation": false,
+  "checks": [
+    {
+      "panel": "A",
+      "source_frame": 3,
+      "text_exact": true,
+      "pts_exact": true
+    },
+    {
+      "panel": "B",
+      "source_frame": 17,
+      "text_exact": true,
+      "pts_exact": true
+    },
+    {
+      "panel": "C",
+      "source_frame": 53,
+      "text_exact": true,
+      "pts_exact": true,
+      "actual_decoded_green_box_xyxy": [
+        20,
+        214,
+        145,
+        226
+      ],
+      "teacher_box_xyxy": [
+        7,
+        217,
+        137,
+        228
+      ],
+      "iou": 0.5610015982951518,
+      "left_edge_error_px": 13
+    },
+    {
+      "panel": "D",
+      "source_frame": 67,
+      "text_exact": true,
+      "pts_exact": true
+    },
+    {
+      "panel": "E",
+      "source_frame": 102,
+      "text_exact": true,
+      "pts_exact": true,
+      "actual_decoded_green_box_xyxy": [
+        20,
+        214,
+        261,
+        226
+      ],
+      "teacher_box_xyxy": [
+        7,
+        217,
+        263,
+        228
+      ],
+      "iou": 0.6128849957615146,
+      "left_edge_error_px": 13
+    },
+    {
+      "panel": "F",
+      "source_frame": 118,
+      "text_exact": true,
+      "pts_exact": true,
+      "actual_decoded_green_box_xyxy": [
+        20,
+        214,
+        298,
+        226
+      ],
+      "teacher_box_xyxy": [
+        7,
+        217,
+        303,
+        228
+      ],
+      "iou": 0.6117359413202934,
+      "left_edge_error_px": 13
+    }
+  ],
+  "text_correct": 6,
+  "text_denominator": 6,
+  "mean_box_iou": 0.59520751179232,
+  "box_metric": "decoded green-pixel bounding box, xyxy exclusive; synthetic geometry only",
+  "real_video_highlight_quality": "NOT_TESTED",
+  "training_started": false,
+  "test_data_used": false,
+  "first_agent_task": "WAITING_FOR_DIRECTORY_COMMAND_APPROVAL_NOT_APPROVED",
+  "hashes": {
+    "input\\clip.mp4": "d1a6f16476faf02cc78781a52ac465ef24db19ee166d7a2431751fb979f4a9d2",
+    "input\\observations.png": "0151af4059a43669305c420db421d7ef35b556cd5cf99579f748ffd9e07340ef",
+    "output\\direct_visual_labels.json": "9489b64a3cde77cc84ecb1f600e556375cd980b54adbd0ab53defaea4dadb39d",
+    "output\\direct_visual_report.md": "a4fd778becdc06329177a034fbf71ab1708b4d9debdb3321a924c41f66a4c6e4"
+  }
+}

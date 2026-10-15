@@ -1,0 +1,18 @@
+{
+  "utc": "2026-10-09T14:42:35.306630+00:00",
+  "status": "PASS_REMOTE_ZIP_CRC_SAFE_EXTRACTION_ALL_SELECTED_FILE_HASHES",
+  "zip": "/home/inspur/aic_video_work/datasets/qwen8b_annotation_20261009_v2.incoming.zip",
+  "zip_bytes": 1269695818,
+  "zip_sha256": "45af6f8edc267be4a126cd1f86fb99172f11632202da947d9cb3eca2246ff57c",
+  "destination": "/home/inspur/aic_video_work/datasets/qwen8b_annotation_20261009_v2",
+  "manifest_sha256": "adfe72e2318ec11913175fefb2ba987393d8f442a097efc16b2474a112b94ba1",
+  "archive_files": 6353,
+  "extracted_selected": {
+    "status": "PASS_SELECTED_RELEASE_ALL_FILE_HASHES",
+    "files": 6352,
+    "bytes": 1282495610
+  },
+  "expanded_bytes": 1283624783,
+  "model_weights_loaded": false,
+  "optimizer_started": false
+}

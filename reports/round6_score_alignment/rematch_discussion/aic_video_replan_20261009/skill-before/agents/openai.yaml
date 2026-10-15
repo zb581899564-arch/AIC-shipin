@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI一锅炖"
+  short_description: "完整MD共享的多模型批判讨论，Chrome Pro最多三次，主控参与并兜底裁决"
+  default_prompt: "使用 $ai-yiguodun（AI一锅炖）主持本任务的多模型讨论，以完整Markdown文件共享上下文，并遵守Pro最多三次的限制。"

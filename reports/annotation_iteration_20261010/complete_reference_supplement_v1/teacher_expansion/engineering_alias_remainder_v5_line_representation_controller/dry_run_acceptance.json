@@ -1,0 +1,97 @@
+{
+  "status": "PASS_PREPARED_10PY_AST_ALL_V4_BINDINGS_UNCHANGED_NO_MODEL",
+  "AST": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v5_line_representation_controller\\common.py",
+      "sha256": "2a1f3d37f9374edac955fa4f2a0f9d31e970cacb6fc38405f3bfa0fe5a4171ea"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v5_line_representation_controller\\controller.py",
+      "sha256": "837b03e221116dfd8a1a681d166e168fb36ffc8a47c958810943916be486651f"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v5_line_representation_controller\\cost.py",
+      "sha256": "97687813453891e07ac6c8314364d1b8eaa9fa985f29080fd6f27e2de455a084"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v5_line_representation_controller\\engine.py",
+      "sha256": "2b599c41b0932d48848c0df2d4b65f134208f8d1751109e88461c52431b63bb9"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v5_line_representation_controller\\observer.py",
+      "sha256": "afd46f066e1b72719b8a9a63d717263bca6aa82b41e6e2b168a32fece90eaf45"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v5_line_representation_controller\\original_engine.py",
+      "sha256": "c22b9bda70e60226e8dfd00bd2858020fe9fca2c48540dc2b6523a741a3ec2f2"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v5_line_representation_controller\\prepare.py",
+      "sha256": "57c59a4210a0c0ac153c5fccdd100836f6e2ea2f6e19e05f0729b89a1e4d2ba1"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v5_line_representation_controller\\progress.py",
+      "sha256": "3523df0f898135c916708707f85fdfd8ad614911d8f8eb10dff4bf2de6f6fbfb"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v5_line_representation_controller\\reconstruct.py",
+      "sha256": "402dbc75d17ac3faf7b131dfad347eea992c734d1e156960e26dd7a6456655c9"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v5_line_representation_controller\\verify.py",
+      "sha256": "73bc1cf009c6226928a9861579ba05018e4f603ff2c7d7aa9643344a53cd5b1e"
+    }
+  ],
+  "calls": [
+    {
+      "CLI": 34,
+      "jobs": [
+        17,
+        18
+      ],
+      "fullcore": 143,
+      "context_steps": 1,
+      "freeze_sha256": "cfca713ca60aad3752f278c088da18204b91627fb986db981737384b6e9394fb",
+      "bootstrap_sha256": "21703cd8f8392f26f0bf1c522dee8bf988e5a9d652c90786c1eb7942255cfb31",
+      "bytes": 37626,
+      "Python_splitlines": 212,
+      "Go_split_LF": 213
+    },
+    {
+      "CLI": 35,
+      "jobs": [
+        19,
+        20
+      ],
+      "fullcore": 183,
+      "context_steps": 0,
+      "freeze_sha256": "5f2c1fc27c6b6779ca677fb749488d9b52eb1082b9d1b1daecd094c942998091",
+      "bootstrap_sha256": "763fa6756ec240115ba2bfad359d8eef5eab52642c83408d5770fb66f67d0dde",
+      "bytes": 46274,
+      "Python_splitlines": 259,
+      "Go_split_LF": 260
+    },
+    {
+      "CLI": 36,
+      "jobs": [
+        21,
+        22,
+        23
+      ],
+      "fullcore": 273,
+      "context_steps": 0,
+      "freeze_sha256": "c050b6aadbc3ad8fc487d747248bab88bcdd57b401f7734c3acea3c601b68dee",
+      "bootstrap_sha256": "ed5fb3e57192311bf7ca24d7dab12b3f7a1e7dfde050ac37491ca65629e64191",
+      "bytes": 66659,
+      "Python_splitlines": 376,
+      "Go_split_LF": 377
+    }
+  ],
+  "frozen_prior_input_count": 1211,
+  "execution_binding_sha256": "5b591d630298d48e8ecb0a0fcb707ff18b0e72acd513a6a909065e9a0d2b5dd8",
+  "root_actual_erratum_sha256": "80b6c4145fb639e88b36bbf27730d96ed0f7a508c8edc6109dda7bbec40bbc37",
+  "original_v4_alias_media_context_science_unchanged": true,
+  "new_AGY_or_model_calls": 0,
+  "new_video_decode": 0,
+  "cash_cost": "UNKNOWN_NOT_ZERO"
+}

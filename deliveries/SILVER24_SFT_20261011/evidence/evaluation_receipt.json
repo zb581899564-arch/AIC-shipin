@@ -1,0 +1,2666 @@
+{
+  "status": "PASS_FINAL_ONLY_EVALUATION_ENGINEERING",
+  "new_optimizer_updates": 0,
+  "final_training_receipt_sha256": "c3a5a89c0a0552d449b0f78c601677b28ac8c950c00d027959665b7b03b721c9",
+  "lock_sha256": "8cbea442c9f40d881fe5892f9dfba07c7825b2f282200eebcf5a0c3279789a76",
+  "config_sha256": "ed235026b57bf73be0fb7e8dc75852e79e93b7d9fb48dc49eb5e750b81adbbeb",
+  "predictions": {
+    "original_B": {
+      "-esJrBWj2d8:SLOT6:1": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "13/2",
+            "23/2"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/original_B/00.raw.json",
+        "raw_sha256": "1d56357722198440a88f2f032cdb2c67c96377c3ef3c5551a153ae83bf1acb69",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            195,
+            345
+          ]
+        ]
+      },
+      "-esJrBWj2d8:SLOT6:6": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "27/2",
+            "35/2"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/original_B/01.raw.json",
+        "raw_sha256": "f82a28b904e54a63623d06435b89b68302dcbfdca8c3ce178f509ad42c3f631c",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            405,
+            525
+          ]
+        ]
+      },
+      "EYqVtI9YWJA:SLOT6:3": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "424/25",
+            "587/25"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/original_B/02.raw.json",
+        "raw_sha256": "52d04ff4523e20e8257002fd81ddc86fc7915eee7a3ce65aa3619e3bb6e985f9",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            508,
+            703
+          ]
+        ]
+      },
+      "EYqVtI9YWJA:SLOT6:4": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "25/2",
+            "53/2"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/original_B/03.raw.json",
+        "raw_sha256": "91e348c0b121f62ba954b1cb9eaf0939d56361188ff9220810541f3618da8f06",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            375,
+            794
+          ]
+        ]
+      },
+      "J0nA4VgnoCo:SLOT6:11": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "0",
+            "13/2"
+          ],
+          [
+            "21/2",
+            "53/2"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/original_B/04.raw.json",
+        "raw_sha256": "548fd47dc7cbb0b298451e395541161b77c7debb6d3981c69a5456f4a8f0b49c",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            0,
+            155
+          ],
+          [
+            251,
+            635
+          ]
+        ]
+      },
+      "J0nA4VgnoCo:SLOT6:2": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "17/2",
+            "53/2"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/original_B/05.raw.json",
+        "raw_sha256": "bec74c50c4327bea2ab8f47e8c0bdedfcb29ef072bcf66409c72d814eff13d4c",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            204,
+            635
+          ]
+        ]
+      },
+      "Yi4Ij2NM7U4:SLOT6:3": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "21/2",
+            "35/2"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/original_B/06.raw.json",
+        "raw_sha256": "4873a0ae38e235a83946771176aa4a3a8f0b035d94eaf0f6d84e450a5b3a687f",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            252,
+            420
+          ]
+        ]
+      },
+      "Yi4Ij2NM7U4:SLOT6:6": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "7007/2000",
+            "17017/2000"
+          ],
+          [
+            "37037/2000",
+            "11011/400"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/original_B/07.raw.json",
+        "raw_sha256": "30eca4cba656b0d6e476789889a76253b9f1ac57e6aba3b61a899973fad349d2",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            85,
+            205
+          ],
+          [
+            445,
+            661
+          ]
+        ]
+      },
+      "cjibtmSLxQ4:SLOT6:13": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "3/2",
+            "18333/10000"
+          ],
+          [
+            "5/2",
+            "9/2"
+          ],
+          [
+            "33/2",
+            "39/2"
+          ],
+          [
+            "41/2",
+            "59/2"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/original_B/08.raw.json",
+        "raw_sha256": "e5e53e5f4b11a257e7687b6c7c447afb0e47ed5843a0c0f12daf41429ab31857",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            45,
+            55
+          ],
+          [
+            75,
+            135
+          ],
+          [
+            494,
+            584
+          ],
+          [
+            614,
+            884
+          ]
+        ]
+      },
+      "cjibtmSLxQ4:SLOT6:16": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "33/2",
+            "59/2"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/original_B/09.raw.json",
+        "raw_sha256": "4c083f28135f4d129b3ffd59fc21e51dcec84c0e5b96ed19c3a03679a17ae322",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            495,
+            884
+          ]
+        ]
+      },
+      "i3wAGJaaktw:SLOT6:2": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "694/25",
+            "744/25"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/original_B/10.raw.json",
+        "raw_sha256": "782e0a96b8a1199179a1eff9aff30cd0d996b8c780ac29b9cc8cd36731ce68fd",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            832,
+            892
+          ]
+        ]
+      },
+      "i3wAGJaaktw:SLOT6:3": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "0",
+            "32/25"
+          ],
+          [
+            "52/25",
+            "84/25"
+          ],
+          [
+            "112/25",
+            "144/25"
+          ],
+          [
+            "186/25",
+            "218/25"
+          ],
+          [
+            "536/25",
+            "726/25"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/original_B/11.raw.json",
+        "raw_sha256": "a543d255def3c19c033a23394cb049288859753d0c5104d9d8889739e0df3a74",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            0,
+            38
+          ],
+          [
+            62,
+            101
+          ],
+          [
+            134,
+            172
+          ],
+          [
+            223,
+            261
+          ],
+          [
+            642,
+            870
+          ]
+        ]
+      }
+    },
+    "new_final": {
+      "-esJrBWj2d8:SLOT6:1": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "13/2",
+            "23/2"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/new_final/00.raw.json",
+        "raw_sha256": "19be0f61d783cfcc482c769f04835d599e1800c3ea565d4dc9e0c91eb356cf67",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            195,
+            345
+          ]
+        ]
+      },
+      "-esJrBWj2d8:SLOT6:6": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "27/2",
+            "35/2"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/new_final/01.raw.json",
+        "raw_sha256": "37d81b5fde7caffab31a54686c0db4318b6e69e8d4172d4d48fe1b0e59373c20",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            405,
+            525
+          ]
+        ]
+      },
+      "EYqVtI9YWJA:SLOT6:3": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "424/25",
+            "587/25"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/new_final/02.raw.json",
+        "raw_sha256": "f055a017a4e91daeaab4c73d9ce98f336e0484dc69596d52989cce8090e76b31",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            508,
+            703
+          ]
+        ]
+      },
+      "EYqVtI9YWJA:SLOT6:4": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "25/2",
+            "53/2"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/new_final/03.raw.json",
+        "raw_sha256": "05d2470fd08e1c9739da7909ae71792fd14c474391a63ad1eb44d84132c7eb8a",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            375,
+            794
+          ]
+        ]
+      },
+      "J0nA4VgnoCo:SLOT6:11": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "0",
+            "65667/10000"
+          ],
+          [
+            "105667/10000",
+            "265667/10000"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/new_final/04.raw.json",
+        "raw_sha256": "a0b0b52aeccbde94d4866f620b031d165cbd90d4acdf844ddb0aeacfcc9b3a5f",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            0,
+            157
+          ],
+          [
+            253,
+            637
+          ]
+        ]
+      },
+      "J0nA4VgnoCo:SLOT6:2": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "17/2",
+            "25/2"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/new_final/05.raw.json",
+        "raw_sha256": "f5daabccccfc057b2d3d0181c896263d73ff2ed2fcfabae08ce249499685d9b6",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            204,
+            300
+          ]
+        ]
+      },
+      "Yi4Ij2NM7U4:SLOT6:3": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "103333/10000",
+            "173333/10000"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/new_final/06.raw.json",
+        "raw_sha256": "40784674eaa8425f15663af5a4aea09a6c2b4baf72a6dd1fb7b1d22840c792d6",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            248,
+            416
+          ]
+        ]
+      },
+      "Yi4Ij2NM7U4:SLOT6:6": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "7007/2000",
+            "17017/2000"
+          ],
+          [
+            "37037/2000",
+            "11011/400"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/new_final/07.raw.json",
+        "raw_sha256": "08f9f7499100c7aff4bcbd4984ef0b152490f70b472b60c6d42099e47219a9bb",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            85,
+            205
+          ],
+          [
+            445,
+            661
+          ]
+        ]
+      },
+      "cjibtmSLxQ4:SLOT6:13": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "3/2",
+            "7/4"
+          ],
+          [
+            "5/2",
+            "19/4"
+          ],
+          [
+            "33/2",
+            "79/4"
+          ],
+          [
+            "55/2",
+            "30"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/new_final/08.raw.json",
+        "raw_sha256": "8c16ae1b2656aa3ac9313122395bbfc3f98633e4893679f831b599a295e4e582",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            45,
+            52
+          ],
+          [
+            75,
+            142
+          ],
+          [
+            494,
+            592
+          ],
+          [
+            824,
+            899
+          ]
+        ]
+      },
+      "cjibtmSLxQ4:SLOT6:16": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "399/25",
+            "727/25"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/new_final/09.raw.json",
+        "raw_sha256": "966b974abb3f3d87f2ac1bb740770c96c82f5341510439d8fae3a9220b80b042",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            478,
+            872
+          ]
+        ]
+      },
+      "i3wAGJaaktw:SLOT6:2": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "694/25",
+            "744/25"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/new_final/10.raw.json",
+        "raw_sha256": "25ed99e5e27569de6fb76011a25e427ecf601dfda52b9b5a6ebc454f2b47af1a",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            832,
+            892
+          ]
+        ]
+      },
+      "i3wAGJaaktw:SLOT6:3": {
+        "status": "MODEL_OK",
+        "parsed_segments": [
+          [
+            "0",
+            "13333/10000"
+          ],
+          [
+            "26667/10000",
+            "33333/10000"
+          ],
+          [
+            "46667/10000",
+            "53333/10000"
+          ],
+          [
+            "76667/10000",
+            "83333/10000"
+          ],
+          [
+            "96667/10000",
+            "103333/10000"
+          ]
+        ],
+        "error": null,
+        "raw_receipt": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/new_final/11.raw.json",
+        "raw_sha256": "cbc8684599ef2e5b3afc2746e262c308fb56311f71b0c3276c39aab89a873459",
+        "parse_warnings": [],
+        "native_frame_ranges": [
+          [
+            0,
+            40
+          ],
+          [
+            80,
+            100
+          ],
+          [
+            140,
+            160
+          ],
+          [
+            230,
+            250
+          ],
+          [
+            290,
+            309
+          ]
+        ]
+      }
+    }
+  },
+  "quality_claim": false,
+  "final_only": true,
+  "official_submission_authorized": false,
+  "scientific_status": "STOP_FIXED_SILVER_QUALITY_GATE_NO_426_NO_RETUNING",
+  "scientific_gate_sha256": "e8519b73e18613ca8c18359d17b6bece12f5b6fe5a46f3626389990210062635",
+  "summaries": {
+    "original_B": {
+      "process_dev": {
+        "youtube:-esJrBWj2d8": {
+          "domain": [
+            [
+              "30",
+              "60"
+            ],
+            [
+              "180",
+              "210"
+            ]
+          ],
+          "keep": [
+            [
+              "482/15",
+              "646/15"
+            ],
+            [
+              "3269/60",
+              "289/5"
+            ],
+            [
+              "180",
+              "5521/30"
+            ]
+          ],
+          "no": [
+            [
+              "30",
+              "482/15"
+            ],
+            [
+              "646/15",
+              "3269/60"
+            ],
+            [
+              "289/5",
+              "60"
+            ],
+            [
+              "5521/30",
+              "210"
+            ]
+          ],
+          "unknown": [],
+          "prediction": [
+            [
+              "73/2",
+              "83/2"
+            ],
+            [
+              "387/2",
+              "395/2"
+            ]
+          ],
+          "reference_events": [
+            [
+              [
+                "482/15",
+                "646/15"
+              ]
+            ],
+            [
+              [
+                "3269/60",
+                "289/5"
+              ]
+            ],
+            [
+              [
+                "180",
+                "5521/30"
+              ]
+            ]
+          ],
+          "predicted_events": [
+            [
+              [
+                "73/2",
+                "83/2"
+              ]
+            ],
+            [
+              [
+                "387/2",
+                "395/2"
+              ]
+            ]
+          ],
+          "positive_empty_windows": 0,
+          "complete_windows": 2,
+          "window_count": 2,
+          "metrics": {
+            "tp": "5",
+            "fp": "4",
+            "fn": "797/60",
+            "precision": "5/9",
+            "recall": "300/1097",
+            "f1": "600/1637",
+            "f1_lower": "600/1637",
+            "f1_upper": "600/1637",
+            "known_positive_duration": "1097/60",
+            "known_no_duration": "2503/60",
+            "unknown_duration": "0",
+            "selected_unknown_duration": "0",
+            "prediction_duration": "9",
+            "known_no_false_positive_duration": "4",
+            "known_no_false_positive_rate": "240/2503"
+          },
+          "event_metrics": {
+            "reference_events": 3,
+            "predicted_events": 2,
+            "matched_events": 0,
+            "event_recall": "0",
+            "matches": [],
+            "local_diagnostic_threshold": "1/2",
+            "official_threshold_claimed": false,
+            "unmatched_reference_indices": [
+              0,
+              1,
+              2
+            ]
+          }
+        },
+        "youtube:i3wAGJaaktw": {
+          "domain": [
+            [
+              "60",
+              "90"
+            ],
+            [
+              "90",
+              "120"
+            ]
+          ],
+          "keep": [
+            [
+              "1310309/15000",
+              "107107/1200"
+            ],
+            [
+              "911911/10000",
+              "93093/1000"
+            ],
+            [
+              "93093/1000",
+              "949949/10000"
+            ]
+          ],
+          "no": [
+            [
+              "60",
+              "1310309/15000"
+            ],
+            [
+              "107107/1200",
+              "90"
+            ],
+            [
+              "90",
+              "911911/10000"
+            ],
+            [
+              "949949/10000",
+              "2935933/30000"
+            ],
+            [
+              "5956951/60000",
+              "120"
+            ]
+          ],
+          "unknown": [
+            [
+              "2935933/30000",
+              "5956951/60000"
+            ]
+          ],
+          "prediction": [
+            [
+              "2194/25",
+              "2244/25"
+            ],
+            [
+              "90",
+              "2282/25"
+            ],
+            [
+              "2302/25",
+              "2334/25"
+            ],
+            [
+              "2362/25",
+              "2394/25"
+            ],
+            [
+              "2436/25",
+              "2468/25"
+            ],
+            [
+              "2786/25",
+              "2976/25"
+            ]
+          ],
+          "reference_events": [
+            [
+              [
+                "1310309/15000",
+                "107107/1200"
+              ]
+            ],
+            [
+              [
+                "911911/10000",
+                "93093/1000"
+              ]
+            ],
+            [
+              [
+                "93093/1000",
+                "949949/10000"
+              ]
+            ]
+          ],
+          "predicted_events": [
+            [
+              [
+                "2194/25",
+                "2244/25"
+              ]
+            ],
+            [
+              [
+                "90",
+                "2282/25"
+              ]
+            ],
+            [
+              [
+                "2302/25",
+                "2334/25"
+              ]
+            ],
+            [
+              [
+                "2362/25",
+                "2394/25"
+              ]
+            ],
+            [
+              [
+                "2436/25",
+                "2468/25"
+              ]
+            ],
+            [
+              [
+                "2786/25",
+                "2976/25"
+              ]
+            ]
+          ],
+          "positive_empty_windows": 0,
+          "complete_windows": 1,
+          "window_count": 2,
+          "metrics": {
+            "tp": "101389/30000",
+            "fp": "6553/625",
+            "fn": "34891/15000",
+            "precision": "101389/415933",
+            "recall": "101389/171171",
+            "f1": "101389/293552",
+            "f1_lower": "405556/1259293",
+            "f1_upper": "127056/319219",
+            "known_positive_duration": "57057/10000",
+            "known_no_duration": "3172573/60000",
+            "unknown_duration": "17017/12000",
+            "selected_unknown_duration": "25667/30000",
+            "prediction_duration": "368/25",
+            "known_no_false_positive_duration": "6553/625",
+            "known_no_false_positive_rate": "629088/3172573"
+          },
+          "event_metrics": {
+            "reference_events": 3,
+            "predicted_events": 6,
+            "matched_events": 1,
+            "event_recall": "1/3",
+            "matches": [
+              {
+                "reference_index": 0,
+                "prediction_index": 0,
+                "iou": "44875/72182",
+                "signed_start_error": "6091/15000",
+                "signed_end_error": "121/240"
+              }
+            ],
+            "local_diagnostic_threshold": "1/2",
+            "official_threshold_claimed": false,
+            "unmatched_reference_indices": [
+              1,
+              2
+            ]
+          }
+        }
+      },
+      "locked_evaluation": {
+        "youtube:EYqVtI9YWJA": {
+          "domain": [
+            [
+              "90",
+              "120"
+            ],
+            [
+              "120",
+              "150"
+            ]
+          ],
+          "keep": [
+            [
+              "1944943/20000",
+              "987987/10000"
+            ],
+            [
+              "987987/10000",
+              "3064061/30000"
+            ],
+            [
+              "3064061/30000",
+              "194194/1875"
+            ],
+            [
+              "1064063/10000",
+              "2173171/20000"
+            ],
+            [
+              "833833/7500",
+              "1724723/15000"
+            ],
+            [
+              "33033/250",
+              "679679/5000"
+            ],
+            [
+              "679679/5000",
+              "4235231/30000"
+            ],
+            [
+              "4235231/30000",
+              "1080079/7500"
+            ],
+            [
+              "1080079/7500",
+              "4395391/30000"
+            ],
+            [
+              "4395391/30000",
+              "278278/1875"
+            ]
+          ],
+          "no": [
+            [
+              "90",
+              "1944943/20000"
+            ],
+            [
+              "194194/1875",
+              "1064063/10000"
+            ],
+            [
+              "2173171/20000",
+              "833833/7500"
+            ],
+            [
+              "1724723/15000",
+              "120"
+            ],
+            [
+              "120",
+              "33033/250"
+            ],
+            [
+              "278278/1875",
+              "150"
+            ]
+          ],
+          "unknown": [],
+          "prediction": [
+            [
+              "2674/25",
+              "2837/25"
+            ],
+            [
+              "265/2",
+              "293/2"
+            ]
+          ],
+          "reference_events": [
+            [
+              [
+                "1944943/20000",
+                "987987/10000"
+              ]
+            ],
+            [
+              [
+                "987987/10000",
+                "3064061/30000"
+              ]
+            ],
+            [
+              [
+                "3064061/30000",
+                "194194/1875"
+              ]
+            ],
+            [
+              [
+                "1064063/10000",
+                "2173171/20000"
+              ]
+            ],
+            [
+              [
+                "833833/7500",
+                "1724723/15000"
+              ]
+            ],
+            [
+              [
+                "33033/250",
+                "679679/5000"
+              ]
+            ],
+            [
+              [
+                "679679/5000",
+                "4235231/30000"
+              ]
+            ],
+            [
+              [
+                "4235231/30000",
+                "1080079/7500"
+              ]
+            ],
+            [
+              [
+                "1080079/7500",
+                "4395391/30000"
+              ]
+            ],
+            [
+              [
+                "4395391/30000",
+                "278278/1875"
+              ]
+            ]
+          ],
+          "predicted_events": [
+            [
+              [
+                "2674/25",
+                "2837/25"
+              ]
+            ],
+            [
+              [
+                "265/2",
+                "293/2"
+              ]
+            ]
+          ],
+          "positive_empty_windows": 0,
+          "complete_windows": 2,
+          "window_count": 2,
+          "metrics": {
+            "tp": "1080049/60000",
+            "fp": "151151/60000",
+            "fn": "213223/20000",
+            "precision": "1080049/1231200",
+            "recall": "1080049/1719718",
+            "f1": "1080049/1475459",
+            "f1_lower": "1080049/1475459",
+            "f1_upper": "1080049/1475459",
+            "known_positive_duration": "859859/30000",
+            "known_no_duration": "940141/30000",
+            "unknown_duration": "0",
+            "selected_unknown_duration": "0",
+            "prediction_duration": "513/25",
+            "known_no_false_positive_duration": "151151/60000",
+            "known_no_false_positive_rate": "151151/1880282"
+          },
+          "event_metrics": {
+            "reference_events": 10,
+            "predicted_events": 2,
+            "matched_events": 0,
+            "event_recall": "0",
+            "matches": [],
+            "local_diagnostic_threshold": "1/2",
+            "official_threshold_claimed": false,
+            "unmatched_reference_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        },
+        "youtube:J0nA4VgnoCo": {
+          "domain": [
+            [
+              "330",
+              "360"
+            ],
+            [
+              "60",
+              "90"
+            ]
+          ],
+          "keep": [
+            [
+              "3184181/9600",
+              "533533/1600"
+            ],
+            [
+              "16149133/48000",
+              "16263247/48000"
+            ]
+          ],
+          "no": [
+            [
+              "330",
+              "3184181/9600"
+            ],
+            [
+              "533533/1600",
+              "16149133/48000"
+            ],
+            [
+              "16263247/48000",
+              "360"
+            ],
+            [
+              "60",
+              "90"
+            ]
+          ],
+          "unknown": [],
+          "prediction": [
+            [
+              "330",
+              "673/2"
+            ],
+            [
+              "681/2",
+              "713/2"
+            ],
+            [
+              "137/2",
+              "173/2"
+            ]
+          ],
+          "reference_events": [
+            [
+              [
+                "3184181/9600",
+                "533533/1600"
+              ]
+            ],
+            [
+              [
+                "16149133/48000",
+                "16263247/48000"
+              ]
+            ]
+          ],
+          "predicted_events": [
+            [
+              [
+                "330",
+                "673/2"
+              ]
+            ],
+            [
+              [
+                "681/2",
+                "713/2"
+              ]
+            ],
+            [
+              [
+                "137/2",
+                "173/2"
+              ]
+            ]
+          ],
+          "positive_empty_windows": 0,
+          "complete_windows": 2,
+          "window_count": 2,
+          "metrics": {
+            "tp": "5497/3000",
+            "fp": "116003/3000",
+            "fn": "111247/48000",
+            "precision": "5497/121500",
+            "recall": "87952/199199",
+            "f1": "175904/2143199",
+            "f1_lower": "175904/2143199",
+            "f1_upper": "175904/2143199",
+            "known_positive_duration": "199199/48000",
+            "known_no_duration": "2680801/48000",
+            "unknown_duration": "0",
+            "selected_unknown_duration": "0",
+            "prediction_duration": "81/2",
+            "known_no_false_positive_duration": "116003/3000",
+            "known_no_false_positive_rate": "1856048/2680801"
+          },
+          "event_metrics": {
+            "reference_events": 2,
+            "predicted_events": 3,
+            "matched_events": 0,
+            "event_recall": "0",
+            "matches": [],
+            "local_diagnostic_threshold": "1/2",
+            "official_threshold_claimed": false,
+            "unmatched_reference_indices": [
+              0,
+              1
+            ]
+          }
+        },
+        "youtube:Yi4Ij2NM7U4": {
+          "domain": [
+            [
+              "90",
+              "120"
+            ],
+            [
+              "180",
+              "210"
+            ]
+          ],
+          "keep": [
+            [
+              "4445/48",
+              "4673/48"
+            ],
+            [
+              "1573/16",
+              "4901/48"
+            ],
+            [
+              "4901/48",
+              "2599/24"
+            ],
+            [
+              "5723/48",
+              "120"
+            ],
+            [
+              "1495/8",
+              "3013/16"
+            ],
+            [
+              "9769/48",
+              "3279/16"
+            ]
+          ],
+          "no": [
+            [
+              "90",
+              "4445/48"
+            ],
+            [
+              "4673/48",
+              "1573/16"
+            ],
+            [
+              "2599/24",
+              "5723/48"
+            ],
+            [
+              "180",
+              "1495/8"
+            ],
+            [
+              "3013/16",
+              "9769/48"
+            ],
+            [
+              "3279/16",
+              "210"
+            ]
+          ],
+          "unknown": [],
+          "prediction": [
+            [
+              "201/2",
+              "215/2"
+            ],
+            [
+              "367007/2000",
+              "377017/2000"
+            ],
+            [
+              "397037/2000",
+              "83011/400"
+            ]
+          ],
+          "reference_events": [
+            [
+              [
+                "4445/48",
+                "4673/48"
+              ]
+            ],
+            [
+              [
+                "1573/16",
+                "4901/48"
+              ]
+            ],
+            [
+              [
+                "4901/48",
+                "2599/24"
+              ]
+            ],
+            [
+              [
+                "5723/48",
+                "120"
+              ]
+            ],
+            [
+              [
+                "1495/8",
+                "3013/16"
+              ]
+            ],
+            [
+              [
+                "9769/48",
+                "3279/16"
+              ]
+            ]
+          ],
+          "predicted_events": [
+            [
+              [
+                "201/2",
+                "215/2"
+              ]
+            ],
+            [
+              [
+                "367007/2000",
+                "377017/2000"
+              ]
+            ],
+            [
+              [
+                "397037/2000",
+                "83011/400"
+              ]
+            ]
+          ],
+          "positive_empty_windows": 0,
+          "complete_windows": 2,
+          "window_count": 2,
+          "metrics": {
+            "tp": "473/48",
+            "fp": "66959/6000",
+            "fn": "17/2",
+            "precision": "59125/126084",
+            "recall": "473/881",
+            "f1": "118250/236209",
+            "f1_lower": "118250/236209",
+            "f1_upper": "118250/236209",
+            "known_positive_duration": "881/48",
+            "known_no_duration": "1999/48",
+            "unknown_duration": "0",
+            "selected_unknown_duration": "0",
+            "prediction_duration": "10507/500",
+            "known_no_false_positive_duration": "66959/6000",
+            "known_no_false_positive_rate": "66959/249875"
+          },
+          "event_metrics": {
+            "reference_events": 6,
+            "predicted_events": 3,
+            "matched_events": 1,
+            "event_recall": "1/6",
+            "matches": [
+              {
+                "reference_index": 2,
+                "prediction_index": 0,
+                "iou": "259/374",
+                "signed_start_error": "-77/48",
+                "signed_end_error": "-19/24"
+              }
+            ],
+            "local_diagnostic_threshold": "1/2",
+            "official_threshold_claimed": false,
+            "unmatched_reference_indices": [
+              0,
+              1,
+              3,
+              4,
+              5
+            ]
+          }
+        },
+        "youtube:cjibtmSLxQ4": {
+          "domain": [
+            [
+              "390",
+              "420"
+            ],
+            [
+              "480",
+              "510"
+            ]
+          ],
+          "keep": [
+            [
+              "739739/1875",
+              "793793/2000"
+            ],
+            [
+              "249249/625",
+              "2421419/6000"
+            ],
+            [
+              "2421419/6000",
+              "203203/500"
+            ],
+            [
+              "302302/625",
+              "7296289/15000"
+            ],
+            [
+              "7410403/15000",
+              "14877863/30000"
+            ],
+            [
+              "10087077/20000",
+              "953953/1875"
+            ]
+          ],
+          "no": [
+            [
+              "390",
+              "739739/1875"
+            ],
+            [
+              "203203/500",
+              "420"
+            ],
+            [
+              "480",
+              "302302/625"
+            ],
+            [
+              "7296289/15000",
+              "7410403/15000"
+            ],
+            [
+              "14877863/30000",
+              "10087077/20000"
+            ],
+            [
+              "6115109/12000",
+              "510"
+            ]
+          ],
+          "unknown": [
+            [
+              "793793/2000",
+              "249249/625"
+            ],
+            [
+              "953953/1875",
+              "6115109/12000"
+            ]
+          ],
+          "prediction": [
+            [
+              "783/2",
+              "3918333/10000"
+            ],
+            [
+              "785/2",
+              "789/2"
+            ],
+            [
+              "813/2",
+              "819/2"
+            ],
+            [
+              "821/2",
+              "839/2"
+            ],
+            [
+              "993/2",
+              "1019/2"
+            ]
+          ],
+          "reference_events": [
+            [
+              [
+                "739739/1875",
+                "793793/2000"
+              ]
+            ],
+            [
+              [
+                "249249/625",
+                "2421419/6000"
+              ]
+            ],
+            [
+              [
+                "2421419/6000",
+                "203203/500"
+              ]
+            ],
+            [
+              [
+                "302302/625",
+                "7296289/15000"
+              ]
+            ],
+            [
+              [
+                "7410403/15000",
+                "14877863/30000"
+              ]
+            ],
+            [
+              [
+                "10087077/20000",
+                "953953/1875"
+              ]
+            ]
+          ],
+          "predicted_events": [
+            [
+              [
+                "783/2",
+                "3918333/10000"
+              ]
+            ],
+            [
+              [
+                "785/2",
+                "789/2"
+              ]
+            ],
+            [
+              [
+                "813/2",
+                "819/2"
+              ]
+            ],
+            [
+              [
+                "821/2",
+                "839/2"
+              ]
+            ],
+            [
+              [
+                "993/2",
+                "1019/2"
+              ]
+            ]
+          ],
+          "positive_empty_windows": 0,
+          "complete_windows": 0,
+          "window_count": 2,
+          "metrics": {
+            "tp": "53053/12000",
+            "fp": "443743/20000",
+            "fn": "73073/5000",
+            "precision": "265265/1596494",
+            "recall": "265/1141",
+            "f1": "106106/547727",
+            "f1_lower": "265265/1450899",
+            "f1_upper": "205846/941881",
+            "known_positive_duration": "1142141/60000",
+            "known_no_duration": "286837/7500",
+            "unknown_duration": "163163/60000",
+            "selected_unknown_duration": "2719/3750",
+            "prediction_duration": "273333/10000",
+            "known_no_false_positive_duration": "443743/20000",
+            "known_no_false_positive_rate": "1331229/2294696"
+          },
+          "event_metrics": {
+            "reference_events": 6,
+            "predicted_events": 5,
+            "matched_events": 0,
+            "event_recall": "0",
+            "matches": [],
+            "local_diagnostic_threshold": "1/2",
+            "official_threshold_claimed": false,
+            "unmatched_reference_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        }
+      }
+    },
+    "new_final": {
+      "process_dev": {
+        "youtube:-esJrBWj2d8": {
+          "domain": [
+            [
+              "30",
+              "60"
+            ],
+            [
+              "180",
+              "210"
+            ]
+          ],
+          "keep": [
+            [
+              "482/15",
+              "646/15"
+            ],
+            [
+              "3269/60",
+              "289/5"
+            ],
+            [
+              "180",
+              "5521/30"
+            ]
+          ],
+          "no": [
+            [
+              "30",
+              "482/15"
+            ],
+            [
+              "646/15",
+              "3269/60"
+            ],
+            [
+              "289/5",
+              "60"
+            ],
+            [
+              "5521/30",
+              "210"
+            ]
+          ],
+          "unknown": [],
+          "prediction": [
+            [
+              "73/2",
+              "83/2"
+            ],
+            [
+              "387/2",
+              "395/2"
+            ]
+          ],
+          "reference_events": [
+            [
+              [
+                "482/15",
+                "646/15"
+              ]
+            ],
+            [
+              [
+                "3269/60",
+                "289/5"
+              ]
+            ],
+            [
+              [
+                "180",
+                "5521/30"
+              ]
+            ]
+          ],
+          "predicted_events": [
+            [
+              [
+                "73/2",
+                "83/2"
+              ]
+            ],
+            [
+              [
+                "387/2",
+                "395/2"
+              ]
+            ]
+          ],
+          "positive_empty_windows": 0,
+          "complete_windows": 2,
+          "window_count": 2,
+          "metrics": {
+            "tp": "5",
+            "fp": "4",
+            "fn": "797/60",
+            "precision": "5/9",
+            "recall": "300/1097",
+            "f1": "600/1637",
+            "f1_lower": "600/1637",
+            "f1_upper": "600/1637",
+            "known_positive_duration": "1097/60",
+            "known_no_duration": "2503/60",
+            "unknown_duration": "0",
+            "selected_unknown_duration": "0",
+            "prediction_duration": "9",
+            "known_no_false_positive_duration": "4",
+            "known_no_false_positive_rate": "240/2503"
+          },
+          "event_metrics": {
+            "reference_events": 3,
+            "predicted_events": 2,
+            "matched_events": 0,
+            "event_recall": "0",
+            "matches": [],
+            "local_diagnostic_threshold": "1/2",
+            "official_threshold_claimed": false,
+            "unmatched_reference_indices": [
+              0,
+              1,
+              2
+            ]
+          }
+        },
+        "youtube:i3wAGJaaktw": {
+          "domain": [
+            [
+              "60",
+              "90"
+            ],
+            [
+              "90",
+              "120"
+            ]
+          ],
+          "keep": [
+            [
+              "1310309/15000",
+              "107107/1200"
+            ],
+            [
+              "911911/10000",
+              "93093/1000"
+            ],
+            [
+              "93093/1000",
+              "949949/10000"
+            ]
+          ],
+          "no": [
+            [
+              "60",
+              "1310309/15000"
+            ],
+            [
+              "107107/1200",
+              "90"
+            ],
+            [
+              "90",
+              "911911/10000"
+            ],
+            [
+              "949949/10000",
+              "2935933/30000"
+            ],
+            [
+              "5956951/60000",
+              "120"
+            ]
+          ],
+          "unknown": [
+            [
+              "2935933/30000",
+              "5956951/60000"
+            ]
+          ],
+          "prediction": [
+            [
+              "2194/25",
+              "2244/25"
+            ],
+            [
+              "90",
+              "913333/10000"
+            ],
+            [
+              "926667/10000",
+              "933333/10000"
+            ],
+            [
+              "946667/10000",
+              "953333/10000"
+            ],
+            [
+              "976667/10000",
+              "983333/10000"
+            ],
+            [
+              "996667/10000",
+              "1003333/10000"
+            ]
+          ],
+          "reference_events": [
+            [
+              [
+                "1310309/15000",
+                "107107/1200"
+              ]
+            ],
+            [
+              [
+                "911911/10000",
+                "93093/1000"
+              ]
+            ],
+            [
+              [
+                "93093/1000",
+                "949949/10000"
+              ]
+            ]
+          ],
+          "predicted_events": [
+            [
+              [
+                "2194/25",
+                "2244/25"
+              ]
+            ],
+            [
+              [
+                "90",
+                "913333/10000"
+              ]
+            ],
+            [
+              [
+                "926667/10000",
+                "933333/10000"
+              ]
+            ],
+            [
+              [
+                "946667/10000",
+                "953333/10000"
+              ]
+            ],
+            [
+              [
+                "976667/10000",
+                "983333/10000"
+              ]
+            ],
+            [
+              [
+                "996667/10000",
+                "1003333/10000"
+              ]
+            ]
+          ],
+          "positive_empty_windows": 0,
+          "complete_windows": 1,
+          "window_count": 2,
+          "metrics": {
+            "tp": "15797/6000",
+            "fp": "1449/500",
+            "fn": "46093/15000",
+            "precision": "15797/33185",
+            "recall": "78985/171171",
+            "f1": "78985/168548",
+            "f1_lower": "315940/759277",
+            "f1_upper": "93051/182614",
+            "known_positive_duration": "57057/10000",
+            "known_no_duration": "3172573/60000",
+            "unknown_duration": "17017/12000",
+            "selected_unknown_duration": "7033/15000",
+            "prediction_duration": "59997/10000",
+            "known_no_false_positive_duration": "1449/500",
+            "known_no_false_positive_rate": "173880/3172573"
+          },
+          "event_metrics": {
+            "reference_events": 3,
+            "predicted_events": 6,
+            "matched_events": 1,
+            "event_recall": "1/3",
+            "matches": [
+              {
+                "reference_index": 0,
+                "prediction_index": 0,
+                "iou": "44875/72182",
+                "signed_start_error": "6091/15000",
+                "signed_end_error": "121/240"
+              }
+            ],
+            "local_diagnostic_threshold": "1/2",
+            "official_threshold_claimed": false,
+            "unmatched_reference_indices": [
+              1,
+              2
+            ]
+          }
+        }
+      },
+      "locked_evaluation": {
+        "youtube:EYqVtI9YWJA": {
+          "domain": [
+            [
+              "90",
+              "120"
+            ],
+            [
+              "120",
+              "150"
+            ]
+          ],
+          "keep": [
+            [
+              "1944943/20000",
+              "987987/10000"
+            ],
+            [
+              "987987/10000",
+              "3064061/30000"
+            ],
+            [
+              "3064061/30000",
+              "194194/1875"
+            ],
+            [
+              "1064063/10000",
+              "2173171/20000"
+            ],
+            [
+              "833833/7500",
+              "1724723/15000"
+            ],
+            [
+              "33033/250",
+              "679679/5000"
+            ],
+            [
+              "679679/5000",
+              "4235231/30000"
+            ],
+            [
+              "4235231/30000",
+              "1080079/7500"
+            ],
+            [
+              "1080079/7500",
+              "4395391/30000"
+            ],
+            [
+              "4395391/30000",
+              "278278/1875"
+            ]
+          ],
+          "no": [
+            [
+              "90",
+              "1944943/20000"
+            ],
+            [
+              "194194/1875",
+              "1064063/10000"
+            ],
+            [
+              "2173171/20000",
+              "833833/7500"
+            ],
+            [
+              "1724723/15000",
+              "120"
+            ],
+            [
+              "120",
+              "33033/250"
+            ],
+            [
+              "278278/1875",
+              "150"
+            ]
+          ],
+          "unknown": [],
+          "prediction": [
+            [
+              "2674/25",
+              "2837/25"
+            ],
+            [
+              "265/2",
+              "293/2"
+            ]
+          ],
+          "reference_events": [
+            [
+              [
+                "1944943/20000",
+                "987987/10000"
+              ]
+            ],
+            [
+              [
+                "987987/10000",
+                "3064061/30000"
+              ]
+            ],
+            [
+              [
+                "3064061/30000",
+                "194194/1875"
+              ]
+            ],
+            [
+              [
+                "1064063/10000",
+                "2173171/20000"
+              ]
+            ],
+            [
+              [
+                "833833/7500",
+                "1724723/15000"
+              ]
+            ],
+            [
+              [
+                "33033/250",
+                "679679/5000"
+              ]
+            ],
+            [
+              [
+                "679679/5000",
+                "4235231/30000"
+              ]
+            ],
+            [
+              [
+                "4235231/30000",
+                "1080079/7500"
+              ]
+            ],
+            [
+              [
+                "1080079/7500",
+                "4395391/30000"
+              ]
+            ],
+            [
+              [
+                "4395391/30000",
+                "278278/1875"
+              ]
+            ]
+          ],
+          "predicted_events": [
+            [
+              [
+                "2674/25",
+                "2837/25"
+              ]
+            ],
+            [
+              [
+                "265/2",
+                "293/2"
+              ]
+            ]
+          ],
+          "positive_empty_windows": 0,
+          "complete_windows": 2,
+          "window_count": 2,
+          "metrics": {
+            "tp": "1080049/60000",
+            "fp": "151151/60000",
+            "fn": "213223/20000",
+            "precision": "1080049/1231200",
+            "recall": "1080049/1719718",
+            "f1": "1080049/1475459",
+            "f1_lower": "1080049/1475459",
+            "f1_upper": "1080049/1475459",
+            "known_positive_duration": "859859/30000",
+            "known_no_duration": "940141/30000",
+            "unknown_duration": "0",
+            "selected_unknown_duration": "0",
+            "prediction_duration": "513/25",
+            "known_no_false_positive_duration": "151151/60000",
+            "known_no_false_positive_rate": "151151/1880282"
+          },
+          "event_metrics": {
+            "reference_events": 10,
+            "predicted_events": 2,
+            "matched_events": 0,
+            "event_recall": "0",
+            "matches": [],
+            "local_diagnostic_threshold": "1/2",
+            "official_threshold_claimed": false,
+            "unmatched_reference_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        },
+        "youtube:J0nA4VgnoCo": {
+          "domain": [
+            [
+              "330",
+              "360"
+            ],
+            [
+              "60",
+              "90"
+            ]
+          ],
+          "keep": [
+            [
+              "3184181/9600",
+              "533533/1600"
+            ],
+            [
+              "16149133/48000",
+              "16263247/48000"
+            ]
+          ],
+          "no": [
+            [
+              "330",
+              "3184181/9600"
+            ],
+            [
+              "533533/1600",
+              "16149133/48000"
+            ],
+            [
+              "16263247/48000",
+              "360"
+            ],
+            [
+              "60",
+              "90"
+            ]
+          ],
+          "unknown": [],
+          "prediction": [
+            [
+              "330",
+              "3365667/10000"
+            ],
+            [
+              "3405667/10000",
+              "3565667/10000"
+            ],
+            [
+              "137/2",
+              "145/2"
+            ]
+          ],
+          "reference_events": [
+            [
+              [
+                "3184181/9600",
+                "533533/1600"
+              ]
+            ],
+            [
+              [
+                "16149133/48000",
+                "16263247/48000"
+              ]
+            ]
+          ],
+          "predicted_events": [
+            [
+              [
+                "330",
+                "3365667/10000"
+              ]
+            ],
+            [
+              [
+                "3405667/10000",
+                "3565667/10000"
+              ]
+            ],
+            [
+              [
+                "137/2",
+                "145/2"
+              ]
+            ]
+          ],
+          "positive_empty_windows": 0,
+          "complete_windows": 2,
+          "window_count": 2,
+          "metrics": {
+            "tp": "56971/30000",
+            "fp": "74003/3000",
+            "fn": "540227/240000",
+            "precision": "56971/797001",
+            "recall": "455768/995995",
+            "f1": "911536/7372003",
+            "f1_lower": "911536/7372003",
+            "f1_upper": "911536/7372003",
+            "known_positive_duration": "199199/48000",
+            "known_no_duration": "2680801/48000",
+            "unknown_duration": "0",
+            "selected_unknown_duration": "0",
+            "prediction_duration": "265667/10000",
+            "known_no_false_positive_duration": "74003/3000",
+            "known_no_false_positive_rate": "1184048/2680801"
+          },
+          "event_metrics": {
+            "reference_events": 2,
+            "predicted_events": 3,
+            "matched_events": 0,
+            "event_recall": "0",
+            "matches": [],
+            "local_diagnostic_threshold": "1/2",
+            "official_threshold_claimed": false,
+            "unmatched_reference_indices": [
+              0,
+              1
+            ]
+          }
+        },
+        "youtube:Yi4Ij2NM7U4": {
+          "domain": [
+            [
+              "90",
+              "120"
+            ],
+            [
+              "180",
+              "210"
+            ]
+          ],
+          "keep": [
+            [
+              "4445/48",
+              "4673/48"
+            ],
+            [
+              "1573/16",
+              "4901/48"
+            ],
+            [
+              "4901/48",
+              "2599/24"
+            ],
+            [
+              "5723/48",
+              "120"
+            ],
+            [
+              "1495/8",
+              "3013/16"
+            ],
+            [
+              "9769/48",
+              "3279/16"
+            ]
+          ],
+          "no": [
+            [
+              "90",
+              "4445/48"
+            ],
+            [
+              "4673/48",
+              "1573/16"
+            ],
+            [
+              "2599/24",
+              "5723/48"
+            ],
+            [
+              "180",
+              "1495/8"
+            ],
+            [
+              "3013/16",
+              "9769/48"
+            ],
+            [
+              "3279/16",
+              "210"
+            ]
+          ],
+          "unknown": [],
+          "prediction": [
+            [
+              "1003333/10000",
+              "1073333/10000"
+            ],
+            [
+              "367007/2000",
+              "377017/2000"
+            ],
+            [
+              "397037/2000",
+              "83011/400"
+            ]
+          ],
+          "reference_events": [
+            [
+              [
+                "4445/48",
+                "4673/48"
+              ]
+            ],
+            [
+              [
+                "1573/16",
+                "4901/48"
+              ]
+            ],
+            [
+              [
+                "4901/48",
+                "2599/24"
+              ]
+            ],
+            [
+              [
+                "5723/48",
+                "120"
+              ]
+            ],
+            [
+              [
+                "1495/8",
+                "3013/16"
+              ]
+            ],
+            [
+              [
+                "9769/48",
+                "3279/16"
+              ]
+            ]
+          ],
+          "predicted_events": [
+            [
+              [
+                "1003333/10000",
+                "1073333/10000"
+              ]
+            ],
+            [
+              [
+                "367007/2000",
+                "377017/2000"
+              ]
+            ],
+            [
+              [
+                "397037/2000",
+                "83011/400"
+              ]
+            ]
+          ],
+          "positive_empty_windows": 0,
+          "complete_windows": 2,
+          "window_count": 2,
+          "metrics": {
+            "tp": "473/48",
+            "fp": "66959/6000",
+            "fn": "17/2",
+            "precision": "59125/126084",
+            "recall": "473/881",
+            "f1": "118250/236209",
+            "f1_lower": "118250/236209",
+            "f1_upper": "118250/236209",
+            "known_positive_duration": "881/48",
+            "known_no_duration": "1999/48",
+            "unknown_duration": "0",
+            "selected_unknown_duration": "0",
+            "prediction_duration": "10507/500",
+            "known_no_false_positive_duration": "66959/6000",
+            "known_no_false_positive_rate": "66959/249875"
+          },
+          "event_metrics": {
+            "reference_events": 6,
+            "predicted_events": 3,
+            "matched_events": 1,
+            "event_recall": "1/6",
+            "matches": [
+              {
+                "reference_index": 2,
+                "prediction_index": 0,
+                "iou": "156874/238751",
+                "signed_start_error": "-26563/15000",
+                "signed_end_error": "-28751/30000"
+              }
+            ],
+            "local_diagnostic_threshold": "1/2",
+            "official_threshold_claimed": false,
+            "unmatched_reference_indices": [
+              0,
+              1,
+              3,
+              4,
+              5
+            ]
+          }
+        },
+        "youtube:cjibtmSLxQ4": {
+          "domain": [
+            [
+              "390",
+              "420"
+            ],
+            [
+              "480",
+              "510"
+            ]
+          ],
+          "keep": [
+            [
+              "739739/1875",
+              "793793/2000"
+            ],
+            [
+              "249249/625",
+              "2421419/6000"
+            ],
+            [
+              "2421419/6000",
+              "203203/500"
+            ],
+            [
+              "302302/625",
+              "7296289/15000"
+            ],
+            [
+              "7410403/15000",
+              "14877863/30000"
+            ],
+            [
+              "10087077/20000",
+              "953953/1875"
+            ]
+          ],
+          "no": [
+            [
+              "390",
+              "739739/1875"
+            ],
+            [
+              "203203/500",
+              "420"
+            ],
+            [
+              "480",
+              "302302/625"
+            ],
+            [
+              "7296289/15000",
+              "7410403/15000"
+            ],
+            [
+              "14877863/30000",
+              "10087077/20000"
+            ],
+            [
+              "6115109/12000",
+              "510"
+            ]
+          ],
+          "unknown": [
+            [
+              "793793/2000",
+              "249249/625"
+            ],
+            [
+              "953953/1875",
+              "6115109/12000"
+            ]
+          ],
+          "prediction": [
+            [
+              "783/2",
+              "1567/4"
+            ],
+            [
+              "785/2",
+              "1579/4"
+            ],
+            [
+              "813/2",
+              "1639/4"
+            ],
+            [
+              "835/2",
+              "420"
+            ],
+            [
+              "12399/25",
+              "12727/25"
+            ]
+          ],
+          "reference_events": [
+            [
+              [
+                "739739/1875",
+                "793793/2000"
+              ]
+            ],
+            [
+              [
+                "249249/625",
+                "2421419/6000"
+              ]
+            ],
+            [
+              [
+                "2421419/6000",
+                "203203/500"
+              ]
+            ],
+            [
+              [
+                "302302/625",
+                "7296289/15000"
+              ]
+            ],
+            [
+              [
+                "7410403/15000",
+                "14877863/30000"
+              ]
+            ],
+            [
+              [
+                "10087077/20000",
+                "953953/1875"
+              ]
+            ]
+          ],
+          "predicted_events": [
+            [
+              [
+                "783/2",
+                "1567/4"
+              ]
+            ],
+            [
+              [
+                "785/2",
+                "1579/4"
+              ]
+            ],
+            [
+              [
+                "813/2",
+                "1639/4"
+              ]
+            ],
+            [
+              [
+                "835/2",
+                "420"
+              ]
+            ],
+            [
+              [
+                "12399/25",
+                "12727/25"
+              ]
+            ]
+          ],
+          "positive_empty_windows": 0,
+          "complete_windows": 0,
+          "window_count": 2,
+          "metrics": {
+            "tp": "278617/60000",
+            "fp": "985279/60000",
+            "fn": "215881/15000",
+            "precision": "278617/1263896",
+            "recall": "278617/1142141",
+            "f1": "557234/2406037",
+            "f1_lower": "278617/1284600",
+            "f1_upper": "593842/2442645",
+            "known_positive_duration": "1142141/60000",
+            "known_no_duration": "286837/7500",
+            "unknown_duration": "163163/60000",
+            "selected_unknown_duration": "572/1875",
+            "prediction_duration": "2137/100",
+            "known_no_false_positive_duration": "985279/60000",
+            "known_no_false_positive_rate": "985279/2294696"
+          },
+          "event_metrics": {
+            "reference_events": 6,
+            "predicted_events": 5,
+            "matched_events": 0,
+            "event_recall": "0",
+            "matches": [],
+            "local_diagnostic_threshold": "1/2",
+            "official_threshold_claimed": false,
+            "unmatched_reference_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        }
+      }
+    }
+  },
+  "model_calls": 24,
+  "quality_gate_passed": false
+}

@@ -1,0 +1,27 @@
+{
+  "status": "PREPARATION_REVISION2_ONLY_NO_AGY_START_PENDING_ROOT_REVIEW",
+  "utc": "2026-10-10T23:47:16.7437061Z",
+  "actual_owned_v6_processes": [],
+  "sources": {
+    "prepare.py": "97a0d7fc986f572b8652fcc2ac0f78d16dbc2653a50184f8b9e2b154e2b37d7c",
+    "audit.py": "92ed439d8fe45ef4f2742c516c98711744ead7d458a6fb45efec31a1ae54d476",
+    "controller.py": "2904e922048e6955fb49fe882e97390bc120ccf05ef0f258fb6a73ce3645e01b",
+    "observer.py": "d04fbb4c1392edc4da4aec9987a4eea3e4b0c73de40335a73e459e77c5db7cab",
+    "launch.py": "5b1c445a1cc2c3b5f100773cf312d730710f8d139cb59909ebc6b6c7954b2a10",
+    "engine.py": "f76d8a416b67cc7c6a063c3d00bc8aff68dcb9373dfb19e1c7f0ba03bd3c2a6f",
+    "verify.py": "fcb7af83a42e4ef47e48a4666599ace6350131f41e92010bfdb1432a3e4958f0",
+    "run_call.py": "e9570cbb4ab11e9f26302f53573bc5ec14262988b4c72d6e88e4d444a261726d",
+    "common.py": "522ca76bd074a55c71bdcb7933b7e351c8ed47e8fa040df0670597f43645ad9e",
+    "prompt.py": "b19a367aaf105b614e273f83cf801dcba06530b23792a8775c9a7b51156a6df8"
+  },
+  "execution_binding_sha256": "4456f422563da164bbb37fa1ebb0cef94fcf004b5d40d642a797a21896822f51",
+  "dry_run_sha256": "4b1770f5eda01fcc4f161610f54b6941d11e03993a74e0c634f91f15aab24fe1",
+  "independent_CPU_negative_sha256": "1104051d3771877c2471f6d894080c38294d52dce9908d85ea975ba3294cde63",
+  "requests35_36": 0,
+  "new_AGY_children": 0,
+  "new_model_calls": 0,
+  "new_video_decode": 0,
+  "whole34_reclassified_success": false,
+  "duplicate_feeledger_entries": 0,
+  "root_gate_exists": false
+}

@@ -1,0 +1,304 @@
+{
+  "schema": "independent_review_completion_and_errata_v1",
+  "utc": "2026-10-10 07:12:51 UTC",
+  "initial_all_256_floor64_pngs_actually_read": true,
+  "initial_8_files_sha_preserved": true,
+  "student_effective_all_256_pngs_actually_read": true,
+  "student_counts": [
+    {
+      "window": "W01",
+      "frames": 64,
+      "successful_batches": 8,
+      "batch_size": 8
+    },
+    {
+      "window": "W02",
+      "frames": 64,
+      "successful_batches": 8,
+      "batch_size": 8
+    },
+    {
+      "window": "W10",
+      "frames": 64,
+      "successful_batches": 13,
+      "batch_sizes": [
+        8,
+        8,
+        8,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "window": "W11",
+      "frames": 64,
+      "successful_batches": 16,
+      "batch_size": 4
+    }
+  ],
+  "errata": [
+    {
+      "affected_json": "02_AwmHb44_ouw_W10.independent_student_view_review_v1.json",
+      "affected_md": "02_AwmHb44_ouw_W10.independent_student_view_review_v1.md",
+      "description": "MD首段8批是模板计数错误；JSON actual_viewing.batches=13正确，但student_view_inventory.read_batch仍沿用8图模板，属于记录错误。实际成功批序为F00-F07、F08-F15、F16-F23（三批8图），F24-F27至F60-F63（十批4图）。此前截断首批未计已见，随后F00-F07完整重读。不影响64张图片实际观察与SHA/PTS绑定。已封存JSON/MD原字节不改。",
+      "actual_successful_batch_inventory": [
+        {
+          "batch": 1,
+          "frame_ids": [
+            "F00",
+            "F01",
+            "F02",
+            "F03",
+            "F04",
+            "F05",
+            "F06",
+            "F07"
+          ]
+        },
+        {
+          "batch": 2,
+          "frame_ids": [
+            "F08",
+            "F09",
+            "F10",
+            "F11",
+            "F12",
+            "F13",
+            "F14",
+            "F15"
+          ]
+        },
+        {
+          "batch": 3,
+          "frame_ids": [
+            "F16",
+            "F17",
+            "F18",
+            "F19",
+            "F20",
+            "F21",
+            "F22",
+            "F23"
+          ]
+        },
+        {
+          "batch": 4,
+          "frame_ids": [
+            "F24",
+            "F25",
+            "F26",
+            "F27"
+          ]
+        },
+        {
+          "batch": 5,
+          "frame_ids": [
+            "F28",
+            "F29",
+            "F30",
+            "F31"
+          ]
+        },
+        {
+          "batch": 6,
+          "frame_ids": [
+            "F32",
+            "F33",
+            "F34",
+            "F35"
+          ]
+        },
+        {
+          "batch": 7,
+          "frame_ids": [
+            "F36",
+            "F37",
+            "F38",
+            "F39"
+          ]
+        },
+        {
+          "batch": 8,
+          "frame_ids": [
+            "F40",
+            "F41",
+            "F42",
+            "F43"
+          ]
+        },
+        {
+          "batch": 9,
+          "frame_ids": [
+            "F44",
+            "F45",
+            "F46",
+            "F47"
+          ]
+        },
+        {
+          "batch": 10,
+          "frame_ids": [
+            "F48",
+            "F49",
+            "F50",
+            "F51"
+          ]
+        },
+        {
+          "batch": 11,
+          "frame_ids": [
+            "F52",
+            "F53",
+            "F54",
+            "F55"
+          ]
+        },
+        {
+          "batch": 12,
+          "frame_ids": [
+            "F56",
+            "F57",
+            "F58",
+            "F59"
+          ]
+        },
+        {
+          "batch": 13,
+          "frame_ids": [
+            "F60",
+            "F61",
+            "F62",
+            "F63"
+          ]
+        }
+      ]
+    }
+  ],
+  "audio_evidence_clarification": "所有记录中的无音频应解释为本轮未提供或未观察音频证据；没有检查原音轨，不代表原视频无音轨。",
+  "K_NO_U_changed_after_effective_view": false,
+  "full_window_target_admitted": false,
+  "training_admitted": false,
+  "full_native_frames_observed": false,
+  "student_processor_visibility_verified": true,
+  "student_visibility_scope": "64 actual local CPU effective-view PNGs per window; Linux processor execution not verified",
+  "risk01": {
+    "actual_frames": 60,
+    "successful_batches": 15,
+    "batch_size": 4,
+    "all_png_sha_match": true,
+    "json_path": "G:/ai/AIC视频/reports/annotation_iteration_20261010/slot6_silver24_v1/blind_reviews/initial/risk01_independent_facts_v1.json",
+    "json_sha256": "66498b663d1080202eb3fa9987b2b56b2c6263ca1405c9590414b614c678a4e4",
+    "md_sha256": "a93a92e1f0d7f3e720d28ec2e7c6a2cbedd283b0ae61b6be4780565e36ecc912",
+    "partial_teacher_information_received_before_seal": true,
+    "partial_information_outside_supplement": "W02 F18-F24 direction description; disclosure in risk01; original four-window reviews sealed earlier"
+  },
+  "sealed_artifacts": [
+    {
+      "path": "G:/ai/AIC视频/reports/annotation_iteration_20261010/slot6_silver24_v1/blind_reviews/initial/00_kLxoNp-UchI_W01.independent_initial_blind_v1.json",
+      "bytes": 69700,
+      "sha256": "307c8c03a528c9b86db95f6539d5470f4d1e6bb988bcb9bd08a170a3fa1ed25e"
+    },
+    {
+      "path": "G:/ai/AIC视频/reports/annotation_iteration_20261010/slot6_silver24_v1/blind_reviews/initial/00_kLxoNp-UchI_W01.independent_initial_blind_v1.md",
+      "bytes": 4504,
+      "sha256": "5fa7bffc57b6ca62e81d6c25fa63b951baccd72c13c4d760a1bd924649a020b6"
+    },
+    {
+      "path": "G:/ai/AIC视频/reports/annotation_iteration_20261010/slot6_silver24_v1/blind_reviews/initial/00_kLxoNp-UchI_W01.independent_student_view_review_v1.json",
+      "bytes": 60026,
+      "sha256": "27c0713caf4833874eb04a6bf83f454fc8e895a9603e9a2a31d6c894172f4319"
+    },
+    {
+      "path": "G:/ai/AIC视频/reports/annotation_iteration_20261010/slot6_silver24_v1/blind_reviews/initial/00_kLxoNp-UchI_W01.independent_student_view_review_v1.md",
+      "bytes": 1151,
+      "sha256": "45b75ea2bd035d70d95da5fdb1b9206d89956ab721ab0684ef827d2df862428e"
+    },
+    {
+      "path": "G:/ai/AIC视频/reports/annotation_iteration_20261010/slot6_silver24_v1/blind_reviews/initial/01_kLxoNp-UchI_W02.independent_initial_blind_v1.json",
+      "bytes": 67012,
+      "sha256": "e9a6402f66c5b5e6adb1ce7a8525bdefab9e6b2572f26f0f261baf14e643ef42"
+    },
+    {
+      "path": "G:/ai/AIC视频/reports/annotation_iteration_20261010/slot6_silver24_v1/blind_reviews/initial/01_kLxoNp-UchI_W02.independent_initial_blind_v1.md",
+      "bytes": 4183,
+      "sha256": "7783787d17588507fa27fc5c944e2bf271de0ecf12875510184dad2c72135509"
+    },
+    {
+      "path": "G:/ai/AIC视频/reports/annotation_iteration_20261010/slot6_silver24_v1/blind_reviews/initial/01_kLxoNp-UchI_W02.independent_student_view_review_v1.json",
+      "bytes": 59036,
+      "sha256": "f4d9559f727054c4a080946b268c85a6d96f527702bf23e570bf264ea7ceb2bd"
+    },
+    {
+      "path": "G:/ai/AIC视频/reports/annotation_iteration_20261010/slot6_silver24_v1/blind_reviews/initial/01_kLxoNp-UchI_W02.independent_student_view_review_v1.md",
+      "bytes": 1199,
+      "sha256": "e04c72ade362f316e44a1ae678ce7054c8b70c5baf12eb0c9d535770d5031816"
+    },
+    {
+      "path": "G:/ai/AIC视频/reports/annotation_iteration_20261010/slot6_silver24_v1/blind_reviews/initial/02_AwmHb44_ouw_W10.independent_initial_blind_v1.json",
+      "bytes": 63012,
+      "sha256": "a8b6e30dcc4fdd79fe4ef53bc6b2f7605ae06616d62aa9c7faaad9c56e46904d"
+    },
+    {
+      "path": "G:/ai/AIC视频/reports/annotation_iteration_20261010/slot6_silver24_v1/blind_reviews/initial/02_AwmHb44_ouw_W10.independent_initial_blind_v1.md",
+      "bytes": 2526,
+      "sha256": "7ff060be87edaaf0ac3102db376c5c17c3a6e8f0c5bc71f18acdd42779ed598e"
+    },
+    {
+      "path": "G:/ai/AIC视频/reports/annotation_iteration_20261010/slot6_silver24_v1/blind_reviews/initial/02_AwmHb44_ouw_W10.independent_student_view_review_v1.json",
+      "bytes": 54960,
+      "sha256": "a736f675f96bcd94958c9123cb629a1aa2db8e71da4f476a78dee746961d8f74"
+    },
+    {
+      "path": "G:/ai/AIC视频/reports/annotation_iteration_20261010/slot6_silver24_v1/blind_reviews/initial/02_AwmHb44_ouw_W10.independent_student_view_review_v1.md",
+      "bytes": 1281,
+      "sha256": "19782d0b5307d0a21096d9ce8dcea5d7d24e6a95dc36ff0d56e53d47afaf6db5"
+    },
+    {
+      "path": "G:/ai/AIC视频/reports/annotation_iteration_20261010/slot6_silver24_v1/blind_reviews/initial/03_AwmHb44_ouw_W11.independent_initial_blind_v1.json",
+      "bytes": 62049,
+      "sha256": "4f4f9a9b38340f778ac6347da26af2e4a3dda6818c373b9840824f118f039afa"
+    },
+    {
+      "path": "G:/ai/AIC视频/reports/annotation_iteration_20261010/slot6_silver24_v1/blind_reviews/initial/03_AwmHb44_ouw_W11.independent_initial_blind_v1.md",
+      "bytes": 1607,
+      "sha256": "1077f7e621c740bcea4bb5dd877afa455ed7b99e520b9c987454741d63d4146e"
+    },
+    {
+      "path": "G:/ai/AIC视频/reports/annotation_iteration_20261010/slot6_silver24_v1/blind_reviews/initial/03_AwmHb44_ouw_W11.independent_student_view_review_v1.json",
+      "bytes": 53376,
+      "sha256": "5dedac64801609e233ca4d4dad27a4834f8d4dfdfedaae19e1b729085c707dcf"
+    },
+    {
+      "path": "G:/ai/AIC视频/reports/annotation_iteration_20261010/slot6_silver24_v1/blind_reviews/initial/03_AwmHb44_ouw_W11.independent_student_view_review_v1.md",
+      "bytes": 1308,
+      "sha256": "2463ae6e9abdfda0743e69fa8a86b7e3269583487688d536584f17f994e6e046"
+    }
+  ],
+  "unresolved_summary": [
+    {
+      "window": "W01",
+      "issue": "切点及台阶到草地连续动作未见；具体U仍影响完整窗边界。"
+    },
+    {
+      "window": "W02",
+      "issue": "F25-F28/F34-F39失焦、F29-F33姿态类别与其他切点未解；risk01只缩小F02/F03切镜。"
+    },
+    {
+      "window": "W10",
+      "issue": "F00-F04接触点功能/结果未确证；F24-F63讲述意义缺本轮音频证据。"
+    },
+    {
+      "window": "W11",
+      "issue": "F00-F63全窗讲述意义缺本轮音频证据，整窗U保留。"
+    }
+  ]
+}
+

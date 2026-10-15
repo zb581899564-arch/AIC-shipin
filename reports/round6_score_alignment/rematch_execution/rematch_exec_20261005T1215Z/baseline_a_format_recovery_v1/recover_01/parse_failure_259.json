@@ -1,0 +1,49 @@
+{
+  "constraint_calls": 59,
+  "constraint_stats": {
+    "cache_hits": 0,
+    "calls": 59,
+    "candidate_token_count": 502,
+    "dead_ends": 0,
+    "full_context_decodes": 29176
+  },
+  "generated_tokens": 59,
+  "output_valid": true,
+  "parse_errors": [],
+  "parse_warnings": [],
+  "parsed_segments": [
+    [
+      0.0,
+      1.36
+    ],
+    [
+      3.72,
+      4.72
+    ],
+    [
+      6.72,
+      7.72
+    ],
+    [
+      10.72,
+      11.72
+    ],
+    [
+      13.72,
+      14.72
+    ]
+  ],
+  "peak_memory_mib": 11626.58,
+  "raw_output": "{\"segments\":[[0.0,1.36],[3.72,4.72],[6.72,7.72],[10.72,11.72],[13.72,14.72]]}",
+  "sampled_frames": 64,
+  "seconds": 9.827576069161296,
+  "status": "MODEL_OK",
+  "task": {
+    "case": "parse_failure_259",
+    "end": 30.0,
+    "index": 0,
+    "old_window_sha256": "eb5b45466a81a406e8662481eb366e95392c7c0dee52ccd652e28e98b142129e",
+    "start": 0.0,
+    "video_id": "259"
+  }
+}

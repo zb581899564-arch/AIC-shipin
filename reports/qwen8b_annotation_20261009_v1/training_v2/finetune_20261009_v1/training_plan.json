@@ -1,0 +1,62 @@
+{
+  "utc": "2026-10-09T14:56:23.851138+00:00",
+  "authorization": "开始安排任务，进行微调",
+  "run_id": "annotation_finetune_20261009_v1",
+  "tasks": [
+    "crop_train",
+    "temporal_train",
+    "crop_adapter_validation",
+    "crop_matched_base_validation",
+    "temporal_adapter_validation",
+    "temporal_matched_base_validation"
+  ],
+  "recipe": {
+    "crop": {
+      "model_config_sha256": "5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661",
+      "min_pixels": 4096,
+      "max_input_tokens": 16384,
+      "lora_rank": 8,
+      "lora_alpha": 16,
+      "lora_dropout": 0.05,
+      "gradient_accumulation_steps": 16,
+      "learning_rate": 1e-05,
+      "epochs": 1,
+      "status": "INITIAL_PILOT_RECIPE_NOT_QUALITY_VALIDATED",
+      "task": "spatial_pixel_crop",
+      "max_pixels": 262144,
+      "train_file": "training_v2/data/crop_balanced_train.jsonl",
+      "validation_file": "training_v2/data/crop_full_validation.jsonl"
+    },
+    "temporal": {
+      "model_config_sha256": "5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661",
+      "min_pixels": 4096,
+      "max_input_tokens": 16384,
+      "lora_rank": 8,
+      "lora_alpha": 16,
+      "lora_dropout": 0.05,
+      "gradient_accumulation_steps": 16,
+      "learning_rate": 1e-05,
+      "epochs": 1,
+      "status": "INITIAL_PILOT_RECIPE_NOT_QUALITY_VALIDATED",
+      "task": "temporal_tvsum_importance_x20",
+      "max_pixels": 65536,
+      "train_file": "training_v2/data/temporal_fixed_train.jsonl",
+      "validation_file": "training_v2/data/temporal_fixed_validation.jsonl"
+    }
+  },
+  "planned_optimizer_steps": {
+    "crop": 12,
+    "temporal": 20
+  },
+  "evaluation_memory_behavior": "prediction_loss_only=True; no accumulation of vocabulary logits",
+  "first_step_acceptance": [
+    "finite model loss",
+    "finite nonzero trainable gradients",
+    "LoRA tensor bytes change",
+    "measured peak GPU allocations"
+  ],
+  "gpu_exclusivity": "existing shared gpu_run lock and ledger",
+  "production_replacement": false,
+  "mac_transfer_override": "User AGENTS requires Mac jump; legacy resource policy DIRECT route not used",
+  "official_score_claim": null
+}

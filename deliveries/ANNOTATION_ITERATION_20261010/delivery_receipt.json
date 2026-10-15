@@ -1,0 +1,48 @@
+{
+  "status": "COMPLETE_FORMAT_ACCEPTED_EXPERIMENTAL_AND_HISTORICAL_FALLBACK_LOCAL",
+  "utc": "2026-10-09T18:59:43.8916508Z",
+  "new_candidate": {
+    "path": "G:\\ai\\AIC视频\\deliveries\\ANNOTATION_ITERATION_20261010\\NEW_237STEP_EXPERIMENTAL\\candidate_IMAGE_SCORE_237STEP_8B.zip",
+    "bytes": 12384,
+    "sha256": "01969ab4c8221b279dfa58fe1c9f3c5c47cd01fe8cd7dea312bde93cdb3d6325",
+    "videos": 426,
+    "selected_frames": 3189,
+    "empty_videos": 407,
+    "training_optimizer_steps": 237,
+    "actual_inference_blocks": 510,
+    "all_11_strict_checks": true,
+    "independent_cpu_replay": true,
+    "local_crc_source_geometry_pass": true,
+    "official_score": null,
+    "uploaded": false,
+    "limitation": "Very conservative selection; only 19 nonempty videos. Format acceptance does not establish competition quality."
+  },
+  "historical_fallback": {
+    "path": "G:\\ai\\AIC视频\\deliveries\\ANNOTATION_ITERATION_20261010\\SAFE_37_66\\candidate_SAFE_37_66.zip",
+    "bytes": 306167,
+    "sha256": "07730c9e02e68d1a1ce54e7ef5a8aa616346cf8f2f8d78426ed36bc3eb481496",
+    "historical_user_reported_score": 37.66,
+    "videos": 426,
+    "selected_frames": 102112,
+    "newly_trained": false
+  },
+  "annotation": {
+    "bins": 90,
+    "reject": 34,
+    "keep": 37,
+    "clips": 6,
+    "admitted_teacher_training_labels": 0,
+    "unknown": 19
+  },
+  "gpu_resource_seconds": {
+    "contest_two_jobs": 1612.6697934446856,
+    "total_new_eight_jobs": 4598.5611091526225,
+    "terminal_receipts_unique": true,
+    "old_costs_preserved": true,
+    "first_six_jobs": 2985.891315707937
+  },
+  "owned_jobs_active_at_collection": 0,
+  "production_replaced": false,
+  "public_push": false,
+  "recommendation": "Historical 37.66 package remains the known scored option; new package is an unscored experiment."
+}

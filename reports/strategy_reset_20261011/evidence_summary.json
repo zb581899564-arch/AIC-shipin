@@ -1,0 +1,93 @@
+{
+  "schema": "STRATEGY_RESET_READONLY_EVIDENCE_V1",
+  "utc": "2026-10-11T14:37:35.865291+00:00",
+  "evidence": [
+    {
+      "path": "G:\\ai\\AIC视频\\deliveries\\BALANCED_TWO_WINDOW_8B_20261009\\candidate_BALANCED_TWO_WINDOW_8B.zip",
+      "bytes": 306167,
+      "sha256": "07730c9e02e68d1a1ce54e7ef5a8aa616346cf8f2f8d78426ed36bc3eb481496"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\deliveries\\SILVER24_SFT_20261011\\evidence\\independent_quality_receipt.json",
+      "bytes": 29038,
+      "sha256": "330e2cd6961293ad66ea7b8b9f5632522dc2b8d2def68182ab9fd18344b9d2f0"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\next_candidate_diagnostics_v1\\spatial_geometry_v2.json",
+      "bytes": 7934,
+      "sha256": "1e8b86f94429dafb47b9ce04c89c32ffcc81c51da1a18c438b00504c30b65254"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\user_cancellation_receipt_20261011.json",
+      "bytes": 747,
+      "sha256": "b0386fec4c3e873d03b3d5b29038f2d8a1a50df8d01a89bb8870d6e4650ad505"
+    }
+  ],
+  "silver_evaluation": {
+    "locked_macro_f1_delta": 0.01986264556856997,
+    "failed_checks": [
+      "locked_positive_macro_f1_gain_min",
+      "no_new_unrelated_spill",
+      "recall_nondecrease",
+      "unknown_conservative_nonnegative"
+    ],
+    "quality_scope": "FINITE_OBSERVATION_SILVER_DIAGNOSTIC_NOT_GOLD_OR_OFFICIAL",
+    "sources": {
+      "youtube:EYqVtI9YWJA": {
+        "f1_delta": 0.0,
+        "new_confirmed_no_spill_seconds": 0.0
+      },
+      "youtube:J0nA4VgnoCo": {
+        "f1_delta": 0.04157290946591105,
+        "new_confirmed_no_spill_seconds": 0.0667
+      },
+      "youtube:Yi4Ij2NM7U4": {
+        "f1_delta": 0.0,
+        "new_confirmed_no_spill_seconds": 0.0
+      },
+      "youtube:cjibtmSLxQ4": {
+        "f1_delta": 0.03787767280836884,
+        "new_confirmed_no_spill_seconds": 1.3174666666666666
+      }
+    }
+  },
+  "recent_teacher_calls": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\teacher_calls\\000\\terminal.json",
+      "sha256": "929487b5427deddb47a299de7572a2b05f1bd03fabf47f856222e8a85eae53a5",
+      "wall_seconds": 14.078999999997905,
+      "exit_code": 3,
+      "result_status": "ERROR",
+      "output_tokens": 0
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\teacher_calls\\000_attempt_02\\terminal.json",
+      "sha256": "432db0d76612c57f8da5ea5900dfe7d48b34aacf6a34fc1296df6907454c774c",
+      "wall_seconds": 153.375,
+      "exit_code": 0,
+      "result_status": "SUCCESS",
+      "output_tokens": 14607
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\teacher_calls\\001_attempt_01\\terminal.json",
+      "sha256": "1264d9fb0c13e83cf503bdf6d1ee89563cccb4904d1267c2a629f400da9a174c",
+      "wall_seconds": 212.6090000000113,
+      "exit_code": 0,
+      "result_status": "SUCCESS",
+      "output_tokens": 20457
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\teacher_calls\\004_attempt_01\\terminal.json",
+      "sha256": "7a594b274e70c7fb3265a91caf5b1b5d883b5eee155a190759cffc492beb23d6",
+      "wall_seconds": 246.53100000000268,
+      "exit_code": 0,
+      "result_status": "SUCCESS",
+      "output_tokens": 23566
+    }
+  ],
+  "mean_success_window_seconds": 204.1716666666713,
+  "mean_success_output_tokens": 19543.333333333332,
+  "model_calls_in_this_review": 0,
+  "training_in_this_review": false,
+  "remaining_parameter_allowance": 217540880
+}

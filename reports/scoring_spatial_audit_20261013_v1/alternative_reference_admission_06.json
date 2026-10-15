@@ -1,0 +1,72 @@
+{
+  "checked_date": "2026-10-13",
+  "scope": "BOUNDED_NONCONTACT_PRIMARY_METADATA_AND_NATIVE_RATIO_COUNTS",
+  "status": "NO_NEW_NATIVE_TARGET_RATIO_REFERENCE_ADMITTED",
+  "official_rule_receipt_reused": "official_rule_check_02.json",
+  "author_contact_declined_and_no_message_sent": true,
+  "routes": [
+    {
+      "name": "SACD",
+      "primary_page": "https://cg.cs.tsinghua.edu.cn/SACD/",
+      "primary_publication": "https://link.springer.com/article/10.1007/s41095-021-0263-3",
+      "paper_download_error": "Web reader refused author PDF of 11556255 bytes; no PDF downloaded. Publisher abstract was read instead.",
+      "published_image_count": 2777,
+      "published_task": "Subject-conditioned arbitrary-aspect composition windows and ranked pairs",
+      "target_ratio_native_annotation_groups_verified": false,
+      "dataset_specific_usage_terms_verified": false,
+      "download_page_reported_size": "452.8 MB (rounded site display, not verified bytes)",
+      "article_CC_BY_4_not_transferred_to_dataset": true,
+      "media_and_labels_downloaded": false,
+      "decision": "NO_DIRECT_FIXED_RATIO_REFERENCE_OR_EXECUTION_ADMISSION_FROM_METADATA"
+    },
+    {
+      "name": "SID / GenCrop",
+      "primary_repo": "https://github.com/jhong93/gencrop",
+      "SID_bibliography_link_is_same_repository": true,
+      "scope": "Synthetic outpainting and subject-aware training; Unsplash data requires access request",
+      "old_Portrait1K_exact_9_16_zero_and_H2V_mechanical_labels_not_recomputed": true,
+      "decision": "NOT_ANOTHER_NEW_INDEPENDENT_NATIVE_HUMAN_CROP_REFERENCE"
+    },
+    {
+      "name": "FLMS design-constraint extension",
+      "primary_repo": "https://github.com/CyberAgentAILab/cropping-design-constraints",
+      "scope": "Layout blank-space and aspect constraints added to FLMS image annotations",
+      "decision": "NO_AUTOMATIC_REPLACEMENT_FOR_NATIVE_VIDEO_FIXED_RATIO_CROP_TRUTH",
+      "data_downloaded": false
+    },
+    {
+      "name": "FCDB untouched exact-ratio annotation subset",
+      "primary_page": "https://yiling-chen.github.io/flickr-cropping-dataset/",
+      "primary_repo": "https://github.com/yiling-chen/flickr-cropping-dataset",
+      "revision": "546a02124e137be508d52104c667cab05e3aae48",
+      "existing_README_and_LICENSE_reused": true,
+      "author_page_declares_Flickr_Creative_Commons_image_origins": true,
+      "individual_image_licenses_not_verified": true,
+      "author_shared_media_copy_research_only": true,
+      "annotation_license": "MIT",
+      "schema_source": "scripts/cropping_browser.py at pinned revision: x=crop[0], y=crop[1], w=crop[2], h=crop[3], rectangle end=(x+w,y+h)",
+      "schema": "Original x,y,width,height, not xyxy",
+      "scope_registered_before_read": "METADATA_RATIO_SCOPE_06.md",
+      "receipt": "fcdb_native_ratio_06/receipt.json",
+      "result": "fcdb_native_ratio_06/result.json",
+      "annotation_bytes": 384325,
+      "rows": 1714,
+      "invalid_rows": 0,
+      "duplicate_source_ids": 0,
+      "exact_9_16": 0,
+      "exact_16_9": 0,
+      "within_one_height_pixel_9_16": 0,
+      "within_one_height_pixel_16_9": 8,
+      "near_matches_not_admitted_or_modified": true,
+      "model_quality_or_parameters_evaluated": false,
+      "decision": "STOP_DIRECT_EXACT_RATIO_SUBSET_EMPTY_NO_MEDIA_OR_MODEL"
+    }
+  ],
+  "new_media_downloads": 0,
+  "new_native_decodes": 0,
+  "new_model_calls": 0,
+  "new_training": 0,
+  "new_submission_zips": 0,
+  "all_reasonable_improvement_routes_exhausted": false,
+  "no_old_gate_changed_or_success_stage_restarted": true
+}

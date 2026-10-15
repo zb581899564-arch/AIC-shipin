@@ -1,0 +1,84 @@
+{
+  "run_id": "round6_p1b_fix2_20260917T0951Z",
+  "commands": [
+    {
+      "command": "python round6_score_alignment/p1b/build_page.py",
+      "exit_code": 0,
+      "elapsed_sec": 0.092,
+      "stdout_tail": "{\"out\": \"G:\\\\ai\\\\AIC视频\\\\round6_score_alignment\\\\p1b\\\\annotate.html\", \"manifest\": \"G:\\\\ai\\\\AIC视频\\\\round6_score_alignment\\\\p1b\\\\pilot_manifest.json\", \"samples\": 8, \"server\": \"http://127.0.0.1:8765\", \"bytes\": 75960}\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": "python round6_score_alignment/p1b/test_fix2_frame.py",
+      "exit_code": 0,
+      "elapsed_sec": 0.58,
+      "stdout_tail": "{\"passed\": 10, \"total\": 10}\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": "node round6_score_alignment/p1b/test_fix2_page.js",
+      "exit_code": 0,
+      "elapsed_sec": 0.103,
+      "stdout_tail": "{\"passed\":30,\"total\":30}\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": "python round6_score_alignment/p1b/test_fix2_draft.py",
+      "exit_code": 0,
+      "elapsed_sec": 0.097,
+      "stdout_tail": "{\"matched\": 13, \"total\": 13}\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": "node round6_score_alignment/p1b/run_boundary_cases.js round6_score_alignment/p1b/pilot_manifest.json round6_score_alignment/p1b/boundary_cases.json reports/round6_score_alignment/phase1b_fix2/boundary_js.json",
+      "exit_code": 0,
+      "elapsed_sec": 0.081,
+      "stdout_tail": "{\n \"cases\": 28,\n \"passed\": 28,\n \"failed\": []\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": "python round6_score_alignment/p1b/validate_exports.py cases --manifest round6_score_alignment/p1b/pilot_manifest.json --cases round6_score_alignment/p1b/boundary_cases.json --out reports/round6_score_alignment/phase1b_fix2/boundary_python.json",
+      "exit_code": 0,
+      "elapsed_sec": 0.1,
+      "stdout_tail": "  },\n      \"problems\": [],\n      \"pass\": true\n    },\n    {\n      \"id\": \"B06_no_highlight_with_leftover_interval_is_blocked\",\n      \"why\": \"冲突必须报错，不能静默丢弃\",\n      \"expect\": {\n        \"valid\": false,\n        \"mode\": \"BLOCKED_BY_VALIDATION\",\n        \"reference\": false\n      },\n      \"got\": {\n        \"valid\": false,\n        \"mode\": \"BLOCKED_BY_VALIDATION\",\n        \"reference\": false\n      },\n      \"problems\": [\n        \"NO_HIGHLIGHT conflicts with the remaining intervals/keyframes; clear them explic\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": "python round6_score_alignment/p1b/validate_exports.py compare --python reports/round6_score_alignment/phase1b_fix2/boundary_python.json --js reports/round6_score_alignment/phase1b_fix2/boundary_js.json --out reports/round6_score_alignment/phase1b_fix2/boundary_compare.json",
+      "exit_code": 0,
+      "elapsed_sec": 0.102,
+      "stdout_tail": "{\n  \"schema\": \"p1b_case_comparison_v1\",\n  \"cases_python\": 28,\n  \"cases_js\": 28,\n  \"divergences\": [],\n  \"identical\": true\n}\n\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": "python round6_score_alignment/p1b/test_fix2_consumer.py",
+      "exit_code": 0,
+      "elapsed_sec": 0.345,
+      "stdout_tail": "{\"validator\": true, \"sparse\": \"SPARSE_DIAGNOSTIC\", \"unannotated\": \"NOT_COMPUTABLE\"}\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": "python -m py_compile round6_score_alignment/p1b/frame_server.py round6_score_alignment/p1b/validate_exports.py round6_score_alignment/p1b/test_fix2_frame.py round6_score_alignment/p1b/test_fix2_draft.py round6_score_alignment/p1b/test_fix2_consumer.py",
+      "exit_code": 0,
+      "elapsed_sec": 0.116,
+      "stdout_tail": "",
+      "stderr_tail": ""
+    },
+    {
+      "command": "node --check round6_score_alignment/p1b/annotation_core.js",
+      "exit_code": 0,
+      "elapsed_sec": 0.078,
+      "stdout_tail": "",
+      "stderr_tail": ""
+    },
+    {
+      "command": "node --check round6_score_alignment/p1b/test_fix2_page.js",
+      "exit_code": 0,
+      "elapsed_sec": 0.08,
+      "stdout_tail": "",
+      "stderr_tail": ""
+    }
+  ],
+  "total_wall_sec": 1.774,
+  "all_exit_zero": true
+}

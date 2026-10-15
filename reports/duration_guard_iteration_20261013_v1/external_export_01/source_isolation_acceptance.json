@@ -1,0 +1,57 @@
+{
+  "status": "PASS_KNOWN_SOURCE_IDENTITY_AND_BYTE_SEPARATION",
+  "registered_sources": 5,
+  "registration_sha256": "e81897743f4d8592f25b4fbae59995989d64c500e467b8699388d8b4aa192512",
+  "media_completion_sha256": "3a846eeb068264259a7fcc84e78988a0fc9534dd65693069e931a78f68ab01d8",
+  "known_identity_snapshot_sha256": "caa86c72a09f039601fd41b93453570e5ee6c5f3f31beb0e77fb583e09ee53c4",
+  "current_training_provenance": {
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/config.json": "cb6dc9e877d64d048bb652556f332cfc4b378d731d3526edcc25600714a47d36",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_full_v1/config.json": "7c05b28c75f2ea4aede7844712d8945b9b79ea8c5402e906514c1cfe755e0de3",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_v1/inputs_01/full_train.jsonl": "124801624736f960d15074ad65840d4e2850dcb7d8d5d3b16a2cb54e7eee4bc0",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_v1/inputs_01/r7_train_registry.json": "71552f64ccdb125ca11a451baf5b8a22491d51d73db1a42e0ce1a545262d1cd4"
+  },
+  "intersections": [],
+  "actual_original_media": [
+    {
+      "source_name": "Bike Polo",
+      "bytes": 32958947,
+      "crc32": "0007a1d5",
+      "sha256": "15bfd5b4c1be4f37ec7a3b742df9fae64a07856d3a0e8397ab3272bfc0e368cb"
+    },
+    {
+      "source_name": "Paintball",
+      "bytes": 18182076,
+      "crc32": "573723de",
+      "sha256": "60c9952ab4954bfdfb6081fc66cbe70f6fe83578b692f814533a5b353e7e7ed3"
+    },
+    {
+      "source_name": "paluma_jump",
+      "bytes": 12568117,
+      "crc32": "7d14504f",
+      "sha256": "de70aba91ad44db1d4725379e6c7db04495690eb28b87e1540cc014355c8361e"
+    },
+    {
+      "source_name": "Valparaiso_Downhill",
+      "bytes": 59625615,
+      "crc32": "00fc87df",
+      "sha256": "5eebb20e0a5ba37f58a3b6804b2f635747db14218f6a6c1f6d672b3e5334e7f1"
+    },
+    {
+      "source_name": "Statue of Liberty",
+      "bytes": 17418685,
+      "crc32": "eadfcf0f",
+      "sha256": "77b95fab3e29c83ae80f2739826bda174be21235afd821724c2a379a68563718"
+    }
+  ],
+  "scope_limitations": [
+    "Base-model pretraining data is not completely known",
+    "SumMe source titles do not provide canonical YouTube identifiers",
+    "Official numeric video IDs do not provide original source identifiers",
+    "Different identifier namespaces alone do not prove semantic separation",
+    "Exact byte comparisons cannot detect re-encoding or excerpts"
+  ],
+  "semantic_separation_proven": false,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "audit_code_sha256": "7f0d24f630c6955728e67b376cd8ac2d15060d7a342d47ae22fa736753af644c"
+}

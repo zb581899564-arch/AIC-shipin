@@ -1,0 +1,89 @@
+{
+  "schema": "USER_SCREENSHOT_SCORE_BINDING_FIVE_TEMPORAL_ZIPS_V1",
+  "recorded_utc": "2026-10-14T12:21:00.765850+00:00",
+  "human_message": "我是按顺序上传的，40.46是复核加双端细化和高光复核，你自己对照一下",
+  "screenshot_path": "C:\\Users\\33056\\AppData\\Local\\Temp\\codex-clipboard-f8d485ee-d194-490c-9f45-706863efb207.png",
+  "evidence": "USER_PROVIDED_SCREENSHOT_PLUS_EXPLICIT_UPLOAD_ORDER; NOT_INDEPENDENT_WEBSITE_LOGIN",
+  "screenshot_display_order": "newest_first; reverse_of_frozen_delivery_upload_order",
+  "displayed_time_timezone": "NOT_SHOWN_IN_SCREENSHOT",
+  "score_precision_as_displayed": 2,
+  "packages": [
+    {
+      "upload_order": 1,
+      "arm": "START",
+      "label": "起点细化",
+      "user_reported_score": 40.43,
+      "score_time_as_displayed": "2026-10-14 20:17:14",
+      "score_status_as_displayed": "DONE",
+      "local_zip": "G:\\ai\\AIC视频\\deliveries\\AIC20H_TEMPORAL_START_20261014\\candidate_TEMPORAL_START.zip",
+      "ZIP_SHA256": "f0394513a51f263402400ab1e9aa680c801bc017e5305ac32e5ac45b53fe694f",
+      "canonical_SHA256": "3d1e1586ee80512913fd5c5a040363fce7990509a247d5df025a6eeef60a579b",
+      "delta_vs_original_D8_40_44": -0.01
+    },
+    {
+      "upload_order": 2,
+      "arm": "END",
+      "label": "终点细化",
+      "user_reported_score": 40.44,
+      "score_time_as_displayed": "2026-10-14 20:17:16",
+      "score_status_as_displayed": "DONE",
+      "local_zip": "G:\\ai\\AIC视频\\deliveries\\AIC20H_TEMPORAL_END_20261014\\candidate_TEMPORAL_END.zip",
+      "ZIP_SHA256": "52d0f1b7fad648d3d1ddb80fcde6297e477eff980fe71fc954af687e8b97b59c",
+      "canonical_SHA256": "e5cbedba54ce422ce3c1e493d0e73cffdd12a80995fe2e67b57200e4bfe0f265",
+      "delta_vs_original_D8_40_44": 0.0
+    },
+    {
+      "upload_order": 3,
+      "arm": "BOTH",
+      "label": "双端细化",
+      "user_reported_score": 40.43,
+      "score_time_as_displayed": "2026-10-14 20:17:19",
+      "score_status_as_displayed": "DONE",
+      "local_zip": "G:\\ai\\AIC视频\\deliveries\\AIC20H_TEMPORAL_BOTH_20261014\\candidate_TEMPORAL_BOTH.zip",
+      "ZIP_SHA256": "2b3885237c1e5d75df0ce6b31c578f62c36fee61e120798c1c6054190bf8eb37",
+      "canonical_SHA256": "a549d27e6c2a26f2288a3326b11445ab206cf9e755cd47aab5a06cccd919ef90",
+      "delta_vs_original_D8_40_44": -0.01
+    },
+    {
+      "upload_order": 4,
+      "arm": "VERIFY",
+      "label": "高光复核",
+      "user_reported_score": 40.46,
+      "score_time_as_displayed": "2026-10-14 20:18:21",
+      "score_status_as_displayed": "DONE",
+      "local_zip": "G:\\ai\\AIC视频\\deliveries\\AIC20H_TEMPORAL_VERIFY_20261014\\candidate_TEMPORAL_VERIFY.zip",
+      "ZIP_SHA256": "86593725c6bad919dc0d342fe98ad65e489a13a6e492da5de3afd247a3226543",
+      "canonical_SHA256": "68f7e3c0c9413fb8ab7def413fce5388679d5fe3600d5be946c593fb9907789a",
+      "delta_vs_original_D8_40_44": 0.02
+    },
+    {
+      "upload_order": 5,
+      "arm": "VERIFY_BOTH",
+      "label": "复核加双端细化",
+      "user_reported_score": 40.46,
+      "score_time_as_displayed": "2026-10-14 20:18:23",
+      "score_status_as_displayed": "DONE",
+      "local_zip": "G:\\ai\\AIC视频\\deliveries\\AIC20H_TEMPORAL_VERIFY_BOTH_20261014\\candidate_TEMPORAL_VERIFY_BOTH.zip",
+      "ZIP_SHA256": "06aa6b861c5f70bce1246a28439d025caeffd3abd2972e787c1841374aca4ed3",
+      "canonical_SHA256": "813be587fbeb82f475830d6c05ecaeb3446a44aaf08241402925f2da1264e1c5",
+      "delta_vs_original_D8_40_44": 0.02
+    }
+  ],
+  "original_frozen_experiment_baseline": {
+    "arm": "D8",
+    "user_reported_score": 40.44,
+    "not_rewritten": true
+  },
+  "current_best_user_reported_score": 40.46,
+  "current_best_arms": [
+    "VERIFY",
+    "VERIFY_BOTH"
+  ],
+  "current_best_displayed_gain_vs_D8": 0.02,
+  "lower_complexity_reference_arm": "VERIFY",
+  "reference_reason": "Tied at displayed score; VERIFY changes fewer frames and omits endpoint refinements; no claim about unrounded score equivalence",
+  "new_experiments_or_model_or_package_runs": 0,
+  "Goal_remains_complete": true,
+  "automation_remains_deleted": true,
+  "old_failed_gates_or_frozen_completion_receipts_modified": false
+}

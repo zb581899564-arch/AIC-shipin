@@ -1,0 +1,29 @@
+{
+  "status": "DOWNLOADING_PINNED_TEACHER_WEIGHTS",
+  "utc": "2026-10-07T04:21:06.181114+00:00",
+  "pid": 50872,
+  "file": "Qwen3VL-32B-Instruct-Q4_K_M.gguf",
+  "file_bytes_downloaded": 14747600564,
+  "file_expected_bytes": 19762150432,
+  "total_expected_bytes": 20958945472,
+  "total_completed_bytes": 0,
+  "elapsed_seconds": 2684.609000000026,
+  "attempt": 3,
+  "failures": [
+    {
+      "attempt": 1,
+      "type": "OSError",
+      "http_code": null
+    },
+    {
+      "attempt": 2,
+      "type": "TimeoutError",
+      "http_code": null
+    }
+  ],
+  "project_disk_quota_bytes": null,
+  "staging_host": "Windows",
+  "inference_host": "Linux",
+  "Mac_used": false,
+  "model_loaded": false
+}

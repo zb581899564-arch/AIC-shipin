@@ -1,0 +1,23 @@
+{
+  "status": "PASS_TWO_ACTUAL_ROOT_REVIEWED_BOUNDARY_OBSERVATIONS_REFERENCE_PENDING",
+  "utc": "2026-10-10T18:06:26.808685+00:00",
+  "main_review": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\11_byx_w04_main_preteacher_review.json",
+    "sha256": "f44deeca33d32deaa35782803da320f713f4ae5da2b734214a9994fe7f9bf3f8"
+  },
+  "observations": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\boundary_phase_v2_task03\\main_observation.json",
+      "sha256": "40c685ef6cbbd0331352f75caa599e0f23990222a11af501a590205421cc3c18"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\boundary_phase_v2_task04\\main_observation.json",
+      "sha256": "9e472058237afd26b659f9b321116005a7bb2404dd3dccb97c088f7b11f8c225"
+    }
+  ],
+  "new_actual_native_images": 2,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "training_admitted": false,
+  "unobserved_landing_not_backfilled": true
+}

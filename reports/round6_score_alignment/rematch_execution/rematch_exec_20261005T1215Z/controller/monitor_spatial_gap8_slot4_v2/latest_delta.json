@@ -1,0 +1,56 @@
+{
+  "utc": "2026-10-09T02:32:55.063463+00:00",
+  "previous_utc": "2026-10-09T02:27:25.888369+00:00",
+  "added": 197,
+  "changed": 201,
+  "net_bytes": 282807,
+  "stage": "NO_426_FINITE_SG8_EVIDENCE_COMPLETE",
+  "done_count": 53,
+  "raw_count": 53,
+  "cpu_replay_count": 53,
+  "reused_probe_count": 3,
+  "owned_process_count": 0,
+  "all_done_bound_SHA_pass": true,
+  "source_lock_sha256": "4c6520788d67a0117e11a3a00bcfa56e397169ea4705bc261c7de39d94acff62",
+  "frozen_files": 18104,
+  "completion": null,
+  "resource": {
+    "name": "aic_SG8_slot4_v2_diagnostic",
+    "command": [
+      "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+      "-B",
+      "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/spatial_gap8_pchip_slot4_v2/sg8_engine.py"
+    ],
+    "started_utc": "2026-10-09T02:24:27.215626+00:00",
+    "runner_pid": 4189896,
+    "reserved_seconds": 21600,
+    "teardown_reserve_seconds": 120,
+    "prior_charged_seconds": 207833.19048556918,
+    "gpu_time_mode": "UNLIMITED",
+    "max_total_gpu_seconds": null,
+    "resource_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
+    "disk_before": {
+      "free_bytes": 188359802880,
+      "work_bytes": 91823517696
+    },
+    "planned_output_bytes": 2259191517,
+    "capacity_reason": "Finite 53 missing original 8B single-frame probes plus independent CPU replay and full-field serialization estimated from actual source/frame artifacts; live shared conflicts and physical capacity",
+    "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+    "project_disk_limit_bytes": null,
+    "project_ram_limit_bytes": null,
+    "project_vram_limit_bytes": null,
+    "runner_source_sha256": "9997d41fbe2bb51726914b4698b874cf939c52aac02048fa9b3bb753c64c6cec",
+    "child_pid": 4189900,
+    "finished_utc": "2026-10-09T02:32:42.439174+00:00",
+    "charged_seconds": 495.22363770753145,
+    "exit_code": 0,
+    "stop_reason": null,
+    "sampled_peak_memory_mib": 17384,
+    "status": "completed",
+    "disk_after": {
+      "free_bytes": 188358434816,
+      "work_bytes": 91824484352
+    }
+  },
+  "non_atomic_component_reads": true
+}

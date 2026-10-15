@@ -1,0 +1,22 @@
+{
+  "status": "LOCAL_CPU_PROCESSOR_ENTRY_IMPLEMENTED_NOT_REAL_ENCODING_ACCEPTANCE",
+  "recorded_utc": "2026-10-12T18:22:31.150583+00:00",
+  "previous_receipt": "preparation_receipt_04.json",
+  "execution_contract": "PROCESSOR_EXECUTION.md",
+  "implementation": "improvement/human_reference_v1/prepare_processor_remote.py",
+  "checks": [
+    "Incomplete RGB admission rejected before loading runtime or processor",
+    "Incomplete RGB rejection created no processor output directory",
+    "Syntax checked for new CPU processor entry and gate check"
+  ],
+  "targeted_rejection_check_pass": true,
+  "actual_processor_loaded": false,
+  "original_runtime_path_not_live_verified_this_turn": true,
+  "actual_media_downloads": 0,
+  "actual_native_decodes": 0,
+  "actual_cpu_processor_encodes": 0,
+  "actual_model_calls": 0,
+  "actual_comparisons": 0,
+  "actual_new_zips": 0,
+  "pending": "Previously asked specific 861654036-byte ETH-to-Linux media approval remains unanswered"
+}

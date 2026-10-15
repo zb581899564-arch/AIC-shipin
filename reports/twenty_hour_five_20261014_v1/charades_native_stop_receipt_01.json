@@ -1,0 +1,209 @@
+{
+  "status": "MAIN_AUTHORIZED_OLD_FULL_DOMAIN_CHAIN_STOPPED_PRESERVE_ALL_SUCCESS",
+  "utc": "2026-10-13T17:37:48.129656+00:00",
+  "old_pid": 815380,
+  "old_process_state": "EXITED",
+  "stop_signal": "SIGINT",
+  "new_model_calls": 0,
+  "CPU_encoding_interrupted": false,
+  "current_source": "KPNJ5",
+  "old_failure_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_chain_01/failure.json",
+  "old_failure_sha256": "b47e9781968793aaa981f869049bb32b7ff92da1b5ab486a7e4184151222baea",
+  "successful_media": [
+    {
+      "source_id": "GLOMM",
+      "receipt_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/media_01/GLOMM/completion.json",
+      "receipt_sha256": "b535d5a55fef323d2ba1aabacdcafb1845f6a29707af885d456b222a89f2d495",
+      "bytes": 890482,
+      "sha256": "5e61fe7443f6ffbcc5e7c163cced2f1369acffc0c7aa3755aeba65d6be6ad44a",
+      "compressed_bytes": 887362
+    },
+    {
+      "source_id": "OO6BH",
+      "receipt_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/media_01/OO6BH/completion.json",
+      "receipt_sha256": "11cab72593755be8cc73051a35219506072d8169d8ab8cfb7282cc29b00a2ea4",
+      "bytes": 2130918,
+      "sha256": "fd9ac7951f38634d05f56a74194881ed4e9dacca0b8a47a3f3dba995329bcb59",
+      "compressed_bytes": 2099973
+    },
+    {
+      "source_id": "VGTX8",
+      "receipt_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/media_01/VGTX8/completion.json",
+      "receipt_sha256": "6113edd4c419797ca3d9fd07ff32f0c62c92c993041dfb626eac053f5347c917",
+      "bytes": 2401195,
+      "sha256": "d58100907c565499fdf0447427ba988fd1ba6fb8edd4a8ec91bfe239a1f0d0c8",
+      "compressed_bytes": 2386091
+    },
+    {
+      "source_id": "LJ2J6",
+      "receipt_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/media_01/LJ2J6/completion.json",
+      "receipt_sha256": "e4f92f22f072ac3bbccb9332d2f48b479a8740fd640d88059eedec56f456d31c",
+      "bytes": 3769994,
+      "sha256": "a01a89dab4a39be3d7b522500b23bfda021eb3ee335ce78b0a08cb3f174899cd",
+      "compressed_bytes": 3752670
+    },
+    {
+      "source_id": "J8KES",
+      "receipt_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/media_01/J8KES/completion.json",
+      "receipt_sha256": "fdbfbeb54bb12a50097117eb93c4ec0017437aa82824e051c81fbcf3b54ca27a",
+      "bytes": 6112166,
+      "sha256": "722c61e7526ff0c1c24a08773d659fceb439e6e0bf253a5d24e1424f4306a509",
+      "compressed_bytes": 6092912
+    },
+    {
+      "source_id": "UJT87",
+      "receipt_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/media_01/UJT87/completion.json",
+      "receipt_sha256": "5b43bdc6f65a66bd00dc8c7ca02290cb3c4a73ec44e391f857b9a25ee6d52dcd",
+      "bytes": 2481170,
+      "sha256": "c6d1dcbb66eeb1564f5e2247cc2ff6cd2b81607030f0acb9610117b0d75eba29",
+      "compressed_bytes": 2466406
+    },
+    {
+      "source_id": "L37YS",
+      "receipt_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/media_01/L37YS/completion.json",
+      "receipt_sha256": "d8eaa64246580b2d8b3559a12e889b1d0a31d9b05e8468db25c33d7b1a8f56f5",
+      "bytes": 13941831,
+      "sha256": "c834efedfaaef9e3e69e8935153a0eb31f4bd58af3755df977d9c5bd3bb78c3c",
+      "compressed_bytes": 13922042
+    },
+    {
+      "source_id": "2JTRG",
+      "receipt_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/media_01/2JTRG/completion.json",
+      "receipt_sha256": "af12c02f030297685c31cc368e4f9b1c38bd0b39f7d454e729c7aa72cd209a70",
+      "bytes": 8946602,
+      "sha256": "ad15f9dba84cd7b912b72a61385b14d2f82ace18b31a4efdeed41f2f05d3e686",
+      "compressed_bytes": 8930392
+    },
+    {
+      "source_id": "7FQ5Q",
+      "receipt_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/media_01/7FQ5Q/completion.json",
+      "receipt_sha256": "fa394dd9779abaa8bb977ce7a2d05498ed278335b92c83818e92e3022807d073",
+      "bytes": 14548181,
+      "sha256": "7f34fa96405c22bf6ec48bfc60db3cbf8517af1983a7173cb10cec0fefe0b2ab",
+      "compressed_bytes": 14536721
+    },
+    {
+      "source_id": "IYVVM",
+      "receipt_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/media_01/IYVVM/completion.json",
+      "receipt_sha256": "4d2b2dc190c3d0cea78d8766279f2e61ad44eaea16588ce932abd8299de6f20f",
+      "bytes": 3315770,
+      "sha256": "b3f82454582a083fdec6db41f1dfbde9b06b9b6fdca4f6697839b33a36b60212",
+      "compressed_bytes": 3291119
+    },
+    {
+      "source_id": "TWZA4",
+      "receipt_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/media_01/TWZA4/completion.json",
+      "receipt_sha256": "efe50713fcd4796eb33c9b5662402d317d4aae622dea750d01fcb412941f0717",
+      "bytes": 2204691,
+      "sha256": "f3139f7b633ad7608f167fc85f15aec6c806949a3aeb4398f0ef40da726f4d70",
+      "compressed_bytes": 2185817
+    }
+  ],
+  "complete_native_clocks": [
+    {
+      "source_id": "GLOMM",
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/GLOMM/native_clock.json",
+      "sha256": "27502b66cc4663e4bef598ac4d508f4976821f65f1f5b668d2f1f6a785ef1eb7"
+    },
+    {
+      "source_id": "OO6BH",
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/OO6BH/native_clock.json",
+      "sha256": "b6bc005a1f3728591f98374227219f07b0692b658910f205d31d1773581fa199"
+    },
+    {
+      "source_id": "VGTX8",
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/VGTX8/native_clock.json",
+      "sha256": "3f54e1bcba2e53e88d086dc01d94cd02dc210c4c4da0f6fd12d9570883a0ab9e"
+    },
+    {
+      "source_id": "LJ2J6",
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/LJ2J6/native_clock.json",
+      "sha256": "3e47db863ab47766307e4308dea748f2b5419cd0ca58ffc5be011609d7f0c07a"
+    },
+    {
+      "source_id": "J8KES",
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/J8KES/native_clock.json",
+      "sha256": "b797fd24b7e52afa3fe58c6182ba574e1b8ba386f3591d7011afc75446151824"
+    },
+    {
+      "source_id": "UJT87",
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/UJT87/native_clock.json",
+      "sha256": "bf8a95368fa10d2bd7094e9f32c51e353f0fc0d2674efdc421743ab240080d96"
+    },
+    {
+      "source_id": "L37YS",
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/L37YS/native_clock.json",
+      "sha256": "7e9628123c9012ddc4c00570d7a76f7bd8a58cdf221b05228796a7b12ab1e672"
+    },
+    {
+      "source_id": "2JTRG",
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/2JTRG/native_clock.json",
+      "sha256": "dd731939328f8ffee77e80a71827f3cdd4e04aa839af7dcb86d850388def34a7"
+    },
+    {
+      "source_id": "7FQ5Q",
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/7FQ5Q/native_clock.json",
+      "sha256": "63cde4c1bc107312ab7711c1211e81b4c98ec5aa1e930376b0be115ec5fc3a18"
+    },
+    {
+      "source_id": "IYVVM",
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/IYVVM/native_clock.json",
+      "sha256": "18cd4cde70dc89c1d1cca9452c87d076853bf5ce96a2b13d17748a9e0b261617"
+    },
+    {
+      "source_id": "TWZA4",
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/TWZA4/native_clock.json",
+      "sha256": "1776a67af9a7cea8c67019eb90f469cceef105974769d2e41e635b815c1fc596"
+    }
+  ],
+  "successful_CPU_proofs": [
+    {
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/J8KES/W000/cpu_input.json",
+      "sha256": "96f15f7a7df3664a5a7c410c1bc6490d379c67607546f04cba88832d8c70f61f",
+      "case_id": "CH_J8KES_W000"
+    },
+    {
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/J8KES/W001/cpu_input.json",
+      "sha256": "59db7f60f2ddf43419546db6d5bcf3167d2e2ace35d815a6af5e59e8eaa110bf",
+      "case_id": "CH_J8KES_W001"
+    },
+    {
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/7FQ5Q/W000/cpu_input.json",
+      "sha256": "a1880ef870473ea94a28af42de7ff7e67d080077322fa1c89fa23f244b2665eb",
+      "case_id": "CH_7FQ5Q_W000"
+    },
+    {
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/7FQ5Q/W001/cpu_input.json",
+      "sha256": "06706a45c1760dcd19849cadc504941fc832e77a92fb5ef19289fe3bca39e7f7",
+      "case_id": "CH_7FQ5Q_W001"
+    }
+  ],
+  "partial": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/media_01/KPNJ5/KPNJ5.compressed.partial",
+    "bytes": 1048576,
+    "sha256": "718067ec0c32850de043c85826b83944a24f2470e244dd3429caa3f0e6426a5f",
+    "local_header_acceptance_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/media_01/KPNJ5/local_header_acceptance.json",
+    "local_header_acceptance_sha256": "dd21a2d335dd6bef5e2607c6e16707b67e0230d73771dec813a97682005e85b4"
+  },
+  "old_full_domain_gate_and_failures_unchanged": true,
+  "original_chain_may_not_restart": true,
+  "partial_v2_not_launched": true,
+  "log_tail": [
+    "    globals()[args.stage]()",
+    "  File \"/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/code/pipeline.py\", line 181, in run",
+    "    media = download_member(source, reg['archive'], known_hashes, reg_sha)",
+    "  File \"/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/code/archive_member.py\", line 88, in download_member",
+    "    range_bytes(archive, payload_start, compressed, partial, 'compressed_member_body', source_id)",
+    "  File \"/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/code/archive_member.py\", line 41, in range_bytes",
+    "    while chunk := response.read(min(1 << 20, length-received+1)):",
+    "  File \"/home/inspur/anaconda3/envs/qwen/lib/python3.10/http/client.py\", line 466, in read",
+    "    s = self.fp.read(amt)",
+    "  File \"/home/inspur/anaconda3/envs/qwen/lib/python3.10/socket.py\", line 717, in readinto",
+    "    return self._sock.recv_into(b)",
+    "  File \"/home/inspur/anaconda3/envs/qwen/lib/python3.10/ssl.py\", line 1307, in recv_into",
+    "    return self.read(nbytes, buffer)",
+    "  File \"/home/inspur/anaconda3/envs/qwen/lib/python3.10/ssl.py\", line 1163, in read",
+    "    return self._sslobj.read(len, buffer)",
+    "KeyboardInterrupt"
+  ]
+}

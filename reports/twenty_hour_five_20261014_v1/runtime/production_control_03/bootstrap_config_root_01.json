@@ -1,0 +1,237 @@
+{
+  "schema": "TEMPORAL_PRODUCTION_METADATA_BOOTSTRAP_V1",
+  "status": "COMPLETE_FIELD_DRAFT_PENDING_SERVER_CODE_SHA_AND_ROOT_REVIEW",
+  "metadata_build_approved": false,
+  "formal_prepare_or_GPU_execution_by_builder": false,
+  "current_source_or_GPU_execution_authority": false,
+  "test_GT_read": false,
+  "whole_graph_batch_roles_frozen_before_first_model": true,
+  "deadline": "2026-10-14T11:56:40Z",
+  "required_code_files": {},
+  "required_code_files_status": "PENDING_MAIN_SERVER_DEPLOYMENT_ACTUAL_PATH_SHA_FREEZE",
+  "required_code_scope": [
+    "temporal_production_bootstrap_v1/code",
+    "temporal_production_inputs_v4/code",
+    "temporal_production_runtime_v4/code",
+    "temporal_production_control_v3/code",
+    "production_stream_cache_v2/code",
+    "local_boundary_v4/code",
+    "candidate_verify_v2/code",
+    "unchanged_original_B_runtime_and_source_color_helpers_actually_imported"
+  ],
+  "package_code_is_separately_frozen_not_a_production_runtime_dependency": true,
+  "unique_gpu_job_prefix": "aic20h_formal426_native_v4_time_20261014_v1",
+  "CPU_resource_envelope_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/resource_envelope_17/CPU_resource_envelope_01.json",
+    "sha256": "c90a7c7a169d9f4a67e5e78225b829e920d59c1b76df9cf4d787d9af90a52e60"
+  },
+  "GPU_host_resource_envelope_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/resource_envelope_17/GPU_host_resource_envelope_01.json",
+    "sha256": "4be92aa2abfc8fe548c11daa70ad886e132eba7d27384454b98b97f40124cfc5"
+  },
+  "CPU_process_overhead_bound_bytes": 2622676992,
+  "GPU_host_resource_bound": {
+    "memory_bytes": 27013789672,
+    "disk_bytes": 0
+  },
+  "QA_memory_bound_bytes": 5030606848,
+  "QA_memory_bound_basis": {
+    "controller_function": "controller.replay_bound",
+    "formula": "2622676992 + 2*(64*2073600*3) + 4*402916864",
+    "actual_existing_CPU_process_peak_bytes": 2622676992,
+    "maximum_original_source_pixel_area": 2073600,
+    "maximum_prefill_tensor_code_bound_bytes": 402916864,
+    "cold_load_HWM_observed": false,
+    "bound_is_reservation_not_available_memory_threshold": true
+  },
+  "metadata_output_bound_bytes": 14147625812,
+  "metadata_output_bound_basis": {
+    "kind": "EXPLICIT_PROSPECTIVE_JSON_AND_PROOF_COPY_RESERVATION_NOT_FIT_GUARANTEE",
+    "formula": "4*5838453 + 8*1633456 + 1995*(4*8574*128 + 794624) + 426*(8*8574*128 + 65536)",
+    "existing_original_plan_bytes": 5838453,
+    "existing_D8_clocks_bytes": 1633456,
+    "maximum_original_source_n_frames": 8574,
+    "maximum_nominal_logical_requests": 1995,
+    "source_count": 426,
+    "exact_point_JSON_byte_allowance": 128,
+    "input_and_proof_point_copy_allowance_per_request": 4,
+    "source_clock_and_global_metadata_point_copy_allowance": 8,
+    "canonical_tensor_and_RGB_bytes_included": false,
+    "actual_canonical_and_staging_capacity_checked_separately": true,
+    "actual_growth_exceeding_reservation_requires_STOP_RETAIN_ALL": true
+  },
+  "source_storage_estimator_template_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_bootstrap_v1/refs/prospective_source_storage_estimator_template_01.json",
+    "sha256": "db27421643f9d6f4265d8623532f786ed2225213c8550e8f093aa7785d82d38d"
+  },
+  "frozen_GPU_budget_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_bootstrap_v1/refs/frozen_GPU_budget_template_01.json",
+    "sha256": "546b634d3d8ef0574d4362e1d3d4ee0ee3b9984e32241285db5dc5bfe2b39ecd"
+  },
+  "input_registration_template": {
+    "schema": "TEMPORAL_PRODUCTION_INPUTS_V4_DUAL_RECIPE_READER_NATIVE_VERIFY_ORDINAL_CONTEXT",
+    "source_scope": "FORMAL426_AUTOMATIC_NEW_INFERENCE_INPUTS_ONLY",
+    "training": false,
+    "test_GT_read": false,
+    "old_successful_outputs_modified": false,
+    "request_algorithm_frozen_before_any_new_model_results": true,
+    "dual_coordinate_consumer_adapter_frozen": true,
+    "metadata_initialization_approved": true,
+    "main_agent_actual_production_preparation_approved": true,
+    "actual_preparation_permission_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_inputs_v4/actual_preparation_permission.json",
+    "final_actual_preparation_permission_required_status": "APPROVED_ONCE_NEW_V4_FORMAL_SOURCE_DECODE_AND_PROCESSOR",
+    "future_conditional_flags_are_not_current_execution_permission": true,
+    "required_code_files": {},
+    "deadline": "2026-10-14T11:56:40Z",
+    "endpoint_model_role": "TIME_ENABLED",
+    "verify_model_role": "TIME_ENABLED",
+    "boundary_library_directory": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/local_boundary_v4/code",
+    "verify_library_directory": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/candidate_verify_v2/code",
+    "cache_library_directory": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/production_stream_cache_v2/code",
+    "cache_root": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/production_stream_v4",
+    "official_rules_ref": {
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_bootstrap_v1/refs/official_rules_01.json",
+      "sha256": "b3dc2b7c080145efa3d72f413f4bb6fa8081f55b00bda97000fe83ed8284945b"
+    },
+    "selected_uniform_development_role_ref": {
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_bootstrap_v1/refs/selected_uniform_risk_role_01.json",
+      "sha256": "bbd87ec6a7882b9818cc19b37f4803d63ff6d31be1a1e26630b230102e7d8a84"
+    },
+    "reader_native_terminal_scope_ref": {
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_bootstrap_v1/refs/reader_native_scope_authorization_02.json",
+      "sha256": "25ca7dd20b53719065d074c90a8b5c43f9cc87c4e715f751e5e12983da5082a7"
+    },
+    "original_plan_ref": {
+      "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/balanced_two_window_risk_v3/input_01/rematch_plan.json",
+      "sha256": "6ac37ae102836fdf2a44cbf676129a2678019fda34f81874601fe1c5dc055ae7"
+    },
+    "accepted_coarse_temporal_ref": {
+      "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/rematch_01/temporal.jsonl",
+      "sha256": "22df3234d0cc73d376c7e2beb7d68732fc19c5f123a05bb18bba52851cf001ce"
+    },
+    "original_clock_registry_ref": {
+      "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/baseline_pts_v4/scan_01/clock_registry.json",
+      "sha256": "1058aba02e5e959bc8e4842cbde0eadced192a8201d5c833ae50a7c0aac07909"
+    },
+    "D8_normalized_windows_ref": {
+      "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/boundary_refinement_20261012_v1/input_export_02/temporal_inputs.json",
+      "sha256": "240c8b0adbaabf092648bb407d72d82fbe598a40c5fa90c1917096812c254715"
+    },
+    "D8_original_clocks_ref": {
+      "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/boundary_refinement_20261012_v1/input_export_02/clocks.json",
+      "sha256": "ba2fae48554bb5b55fae19fa428877e9704213edbc592f428d8a43c36cb40b60"
+    },
+    "packet_registration_ref": {
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/native_terminal_packet_witness_v1/registration_01.json",
+      "sha256": "9b77b2dd03d94dcdb0de8a5c9f0dc858bc138968048d2b9a7dba5e7b03c8ad5e"
+    },
+    "packet_completion_ref": {
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/native_terminal_packet_witness_v1/run_01/completion.json",
+      "sha256": "4b753f82a818c7c10c1bc0545902e4f11b473f47bca700f01b1b2a695b82dc79"
+    },
+    "source_color_config_ref": {
+      "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/config.json",
+      "sha256": "cb6dc9e877d64d048bb652556f332cfc4b378d731d3526edcc25600714a47d36"
+    },
+    "old_spatial_field_refs": {
+      "field_frames.jsonl": {
+        "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/rematch_01/field_frames.jsonl",
+        "sha256": "17ba37aadc4cf705e1ff95a78a58d8befcab9e34f7132ef0775f1ed1df0d8bca"
+      },
+      "field_shots.jsonl": {
+        "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/rematch_01/field_shots.jsonl",
+        "sha256": "8e81df10c685527145069cd9c65316ab6341c9da7d6e39bb282ed6c60ce12f1e"
+      },
+      "anchor_requests.jsonl": {
+        "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/rematch_01/anchor_requests.jsonl",
+        "sha256": "9cb7c4e36597dc8ae723ac3b686b2c3b1f04d5982503478fdf19ee72b18c4798"
+      },
+      "anchor_output.jsonl": {
+        "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/rematch_01/anchor_output.jsonl",
+        "sha256": "8f83cd967d7d1f95243ac4ae3cddc7fdb78abb3d4842a78f81f6b187fb1562ab"
+      }
+    },
+    "cache_policy": {
+      "schema": "PRODUCTION_EXACT_STREAM_CACHE_V1",
+      "root": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/production_stream_v4",
+      "mode": "PRODUCTION",
+      "process_lock_backend": "LINUX_PERSISTENT_FLOCK_V2",
+      "main_agent_new_production_cache_approved": true,
+      "new_independent_root": true,
+      "staging_declared_ephemeral_before_model": true,
+      "canonical_retention": "PERMANENT_LOSSLESS_EXACT_INPUT",
+      "independent_replay_code_sha256": "f3c0d3d85b52c156f223afd75afe09af194628bade210bd853d40f992c756d38",
+      "input_storage_codec": "PIXEL_UINT8_BIT_LUT_V1",
+      "frozen_RGB_leases": {},
+      "frozen_RGB_leases_source": "FIRST_IMMUTABLE_FULL_PLAN_RGB_GROUPS_INITIALIZER_REPLACES_THIS_EMPTY_DRAFT",
+      "actual_first_independent_input_replay_required": true,
+      "unique_natural_completed_exit0_GPU_terminal_required": true,
+      "all_frozen_consumers_required_before_new_ephemeral_RGB_release": true,
+      "permanent_canonical_tensor_raw_proof_retention": true,
+      "old_successful_RGB_or_proofs_or_clocks_deleted": false
+    }
+  },
+  "runtime_protocol_template": {
+    "schema": "TEMPORAL_PRODUCTION_RUNTIME_V4",
+    "training": false,
+    "test_GT_read": false,
+    "old_successful_outputs_modified": false,
+    "algorithm_and_uniform_roles_frozen_before_production": true,
+    "weight_check_strategy": "FULL_ENGINE_LOAD_AND_FULL_BATCH_END_BASE_288_ADAPTER_REHASH_PER_CALL_FROZEN_INVENTORY",
+    "actual_physical_parameters": 8782459120,
+    "optimizer_updates": 0,
+    "natural_terminal_per_batch_before_RGB_release": true,
+    "native_terminal_scope": "NEW_PYAV17_READER_NATIVE_TERMINAL_SCOPE_V4_VERIFY_ORDINAL_CONTEXT",
+    "dual_coordinate_application": "LEGACY_RECIPE_KEEP_UNKNOWN_NATIVE_CUT_ONLY_MOVED_REFINE",
+    "original_B_config_sha256": "cb6dc9e877d64d048bb652556f332cfc4b378d731d3526edcc25600714a47d36",
+    "deadline": "2026-10-14T11:56:40Z",
+    "endpoint_model_role": "TIME_ENABLED",
+    "verify_model_role": "TIME_ENABLED",
+    "required_code_files": {},
+    "input_root": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_inputs_v4",
+    "input_library_directory": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_inputs_v4/code",
+    "selection_is_default_risk_role_not_scientific_quality_PASS": true,
+    "failure_action": "RETAIN_BEGIN_RAW_AND_FAILURE_BLOCK_NO_UNKNOWN_FALLBACK_NO_MODEL_RETRY"
+  },
+  "control_registration_template": {
+    "schema": "TEMPORAL_PRODUCTION_CONTROL_V3",
+    "training": false,
+    "test_GT_read": false,
+    "old_successes_modified": false,
+    "whole_graph_batches_and_roles_frozen_before_first_model": true,
+    "main_controller_execution_approved": true,
+    "future_conditional_flags_are_not_current_execution_permission": true,
+    "main_execution_admission_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_control_v3/main_execution_admission.json",
+    "final_main_execution_admission_required_status": "PASS_MAIN_CONTROLLED_PRODUCTION_BOOTSTRAP_AND_EXECUTION",
+    "deadline": "2026-10-14T11:56:40Z",
+    "required_code_files": {},
+    "input_root_name": "temporal_production_inputs_v4",
+    "runtime_root_name": "temporal_production_runtime_v4",
+    "cache_version_root_name": "production_stream_cache_v2",
+    "cache_library_directory": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/production_stream_cache_v2/code",
+    "preexisting_source_completion_refs": {},
+    "no_whole_chain_retry": true,
+    "complete_source_all_consumers_in_one_batch": true,
+    "batch_membership_uses_only_frozen_source_order_and_capacity": true,
+    "concurrency_uses_current_resource_bytes_and_core_pressure": true,
+    "source_staging_buffers_maximum": 2,
+    "deadline_stops_new_jobs_and_calls_not_running_jobs": true,
+    "global_completion_is_engineering_closure_not_scientific_quality_PASS": true
+  },
+  "first_bootstrap_generated_immutable_bindings": [
+    "input_registration_template.required_code_files and retained rules/selection/scope refs",
+    "INPUT/plan_01/full_plan.json and first actual MODEL denominator",
+    "INPUT/cache_initialization.json and full frozen RGB lease graph",
+    "BOOTSTRAP/bootstrap_run_01/actual_GPU_budget.json",
+    "BOOTSTRAP/bootstrap_run_01/capacity_grouping_receipt.json original bytes and RUNTIME/bindings exact retained copy",
+    "runtime_protocol_template.input_registration_ref/full_plan_ref/cache_initialization_ref/cache_global_request_lock_ref/selected_uniform_development_role_ref/required_code_files",
+    "RUNTIME/batches/Bnnn.json exact members and gpu_max_seconds/gpu_queue_seconds",
+    "CONTROL/batch_index.json",
+    "control_registration_template.runtime_protocol_ref/frozen_batch_index_ref/global_graph_sha256/current_official_rule_ref/resource_refs/resource_bounds/required_code_files"
+  ],
+  "source_preparation_and_controller_final_permission_files_created_by_builder": false,
+  "production_source_decode_calls": 0,
+  "production_processor_calls": 0,
+  "production_GPU_calls": 0,
+  "completion_or_five_ZIP_delivery_guaranteed": false
+}

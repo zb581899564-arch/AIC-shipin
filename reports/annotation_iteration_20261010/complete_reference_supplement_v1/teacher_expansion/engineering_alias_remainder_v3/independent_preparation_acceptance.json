@@ -1,0 +1,122 @@
+{
+  "utc": "2026-10-10T22:41:22.577653+00:00",
+  "status": "PASS_INDEPENDENT_ALIAS_AND_LITERAL_CLOCK_TRANSFER_PREPARATION_NO_MODEL",
+  "verifier_source_sha256": "9f11cb3ec2029b9c600c0d4c160ef9440bc2b3a76c79a4b7105914275b5f2dc5",
+  "AST": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\audit.py",
+      "sha256": "a784fedec73bf65740172d95809b8cb9ae0a2de7d31bf8e4393a10237dc24d85"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\common.py",
+      "sha256": "92ec0fcdfdd508940b2fe32095800c1a76f1d0d36ef702b72083053c072d837b"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\controller.py",
+      "sha256": "35460c336505501d6577a911c596a46f18166384a42e38a353b5e822c2a5471c"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\launch.py",
+      "sha256": "1dde53f1c4a55c3874aad4a4346bfb383eebb1cac2e74417dbea63aa54f35e45"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\observer.py",
+      "sha256": "d5bc480986f0ae8e70cc388164c12d208d72797e06ec8e06884805102695dfb5"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\prepare.py",
+      "sha256": "f2102eec5a0f88e878a08bdbb070d9c7fdb435e921bff4383e83a4c25a4961e8"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\prompt.py",
+      "sha256": "561e37bc7b86ef18f3477c71dd11456697d8e7490e4c843ba2d23ba47bb83c96"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\run_call.py",
+      "sha256": "5574713a868365673c0d1e073296fab32697727d781307046011e217405a0fee"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\verify.py",
+      "sha256": "9f11cb3ec2029b9c600c0d4c160ef9440bc2b3a76c79a4b7105914275b5f2dc5"
+    }
+  ],
+  "calls": [
+    {
+      "CLI": 34,
+      "jobs": [
+        17,
+        18
+      ],
+      "core_tool_calls": 141,
+      "context_steps": 1,
+      "scope_prefix_core_counts": {
+        "17": 51,
+        "18": 141
+      },
+      "input_count": 785,
+      "freeze_sha256": "0ae42bcd50135edf4d73682aa2ebd9670734147c699baae3c3e658a9a8e77a36",
+      "index_sha256": "ac9bd4a56624e9f392bdb43f54140de1f67c76dec1b437a1bd2e1e8a8913c121",
+      "prompt_sha256": "254f800cfcb24a769f16cbb5d81f42a213b731a9156b3ce82573af0fe5dcb4fb",
+      "literal_sha256": "d9c602a6d05ca71b0699e429a08736871d55d8b1040e2d584a820b409bf4015b",
+      "all_inputs_SHA_verified": true
+    },
+    {
+      "CLI": 35,
+      "jobs": [
+        19,
+        20
+      ],
+      "core_tool_calls": 181,
+      "context_steps": 0,
+      "scope_prefix_core_counts": {
+        "19": 91,
+        "20": 181
+      },
+      "input_count": 817,
+      "freeze_sha256": "1bd7f86af7cb78fe55fb5ffc0ed857c995db43a6b14298a9b2828dc72a5b3039",
+      "index_sha256": "ad6fabedb9f32aadad9e41df4903e67108a7867acf4a54b781efdc050b71af2e",
+      "prompt_sha256": "508b254f705e53135791d9fe7a9cb1c8585db45a18565ad18e12949e5a1815d4",
+      "literal_sha256": "84ee69e829a2899f3ee3cce9358d65ffba189855239d611c345b1c54821e7d03",
+      "all_inputs_SHA_verified": true
+    },
+    {
+      "CLI": 36,
+      "jobs": [
+        21,
+        22,
+        23
+      ],
+      "core_tool_calls": 271,
+      "context_steps": 0,
+      "scope_prefix_core_counts": {
+        "21": 91,
+        "22": 181,
+        "23": 271
+      },
+      "input_count": 890,
+      "freeze_sha256": "947ac66e560c6339b8bcd38a921dd659b0fe2b108b21cfc99e74911aa1ec6ca6",
+      "index_sha256": "2eebdd3bdfcdc59738a7b633053b5f7cffd5ca8232e0ec913c940280f9375949",
+      "prompt_sha256": "38da861de1c260049fa70ade2f138f1938aa4b3c0571544f75a353966338b5de",
+      "literal_sha256": "a9e1c2f1789f6e2a4bdabc2033a3bb98f93906342a4f94bcc4816b92e537d992",
+      "all_inputs_SHA_verified": true
+    }
+  ],
+  "alias_binding_sha256": "c2a32ef7316a30b89617c5c45b551ac305274e764a61caa41709ce2cf62af620",
+  "execution_binding_sha256": "1f70ae31dd0b5b73ebf5b6e414ae0199b2385dec4373960d44a9e45c0fd14682",
+  "dry_run_sha256": "fee466c86208a7d921964e64b6669aa5dbab0b863ba6b4b87799a904ce645984",
+  "all479_alias_payloads_byte_exact": true,
+  "native64_identity_per_window_preserved": true,
+  "old32_facts_JSON_raw_bytes_exact": true,
+  "F35_old_DONE193_without_fact_explicit": true,
+  "all_scope_prefix_dynamic_counts_verified": true,
+  "in_memory_media_ERROR_negative_test_rejects": true,
+  "synthetic_test_is_not_actual_observation_evidence": true,
+  "original33_raw_audit_unchanged": true,
+  "global_CLI": 33,
+  "global_cap": 36,
+  "root_start_gate_absent": true,
+  "new_model_calls": 0,
+  "new_video_decode": 0,
+  "new_optimizer": 0,
+  "cash_cost": "UNKNOWN_NOT_ZERO"
+}

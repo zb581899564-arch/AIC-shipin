@@ -1,0 +1,645 @@
+{
+  "utc": "2026-10-09T03:39:32.321860+00:00",
+  "status": "COMPLETE_SYNTHETIC_FRAMEWISE_GEOMETRY_AUDIT_NOT_HIGHLIGHT_QUALITY",
+  "model": "Gemini 3.8 Flash Medium",
+  "denominator": 24,
+  "rows": 24,
+  "unique_frames": 24,
+  "missing_frames": [],
+  "duplicates": 0,
+  "pts_exact": 24,
+  "file_exact": 24,
+  "visibility_correct": 24,
+  "positive_frames": 20,
+  "negative_frames": 4,
+  "positive_box_count": 20,
+  "mean_iou": 0.9902565336684868,
+  "median_iou": 0.9966442953020134,
+  "min_iou": 0.9752609752609752,
+  "iou_ge_0_9": 20,
+  "iou_ge_0_95": 20,
+  "mean_edge_abs_error_px": 0.2,
+  "max_edge_abs_error_px": 1,
+  "all_boxes_legal": true,
+  "negative_null_correct": 4,
+  "checks": [
+    {
+      "frame": 0,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": true,
+      "teacher_box": [
+        100,
+        230,
+        228,
+        330
+      ],
+      "truth_box": [
+        100,
+        229,
+        228,
+        329
+      ],
+      "iou": 0.9801980198019802,
+      "edge_abs_error": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "legal": true
+    },
+    {
+      "frame": 1,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": true,
+      "teacher_box": [
+        372,
+        40,
+        473,
+        120
+      ],
+      "truth_box": [
+        372,
+        40,
+        473,
+        120
+      ],
+      "iou": 1.0,
+      "edge_abs_error": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "legal": true
+    },
+    {
+      "frame": 2,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": true,
+      "teacher_box": [
+        487,
+        186,
+        583,
+        260
+      ],
+      "truth_box": [
+        487,
+        186,
+        582,
+        259
+      ],
+      "iou": 0.9762105855855856,
+      "edge_abs_error": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "legal": true
+    },
+    {
+      "frame": 3,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": true,
+      "teacher_box": [
+        301,
+        105,
+        450,
+        198
+      ],
+      "truth_box": [
+        301,
+        105,
+        449,
+        198
+      ],
+      "iou": 0.9932885906040269,
+      "edge_abs_error": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "legal": true
+    },
+    {
+      "frame": 4,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": true,
+      "teacher_box": [
+        483,
+        225,
+        604,
+        301
+      ],
+      "truth_box": [
+        483,
+        225,
+        603,
+        300
+      ],
+      "iou": 0.97868638538495,
+      "edge_abs_error": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "legal": true
+    },
+    {
+      "frame": 5,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": false,
+      "teacher_box": null,
+      "truth_box": null,
+      "correct_null": true
+    },
+    {
+      "frame": 6,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": false,
+      "teacher_box": null,
+      "truth_box": null,
+      "correct_null": true
+    },
+    {
+      "frame": 7,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": true,
+      "teacher_box": [
+        155,
+        109,
+        266,
+        172
+      ],
+      "truth_box": [
+        156,
+        109,
+        266,
+        171
+      ],
+      "iou": 0.9752609752609752,
+      "edge_abs_error": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "legal": true
+    },
+    {
+      "frame": 8,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": true,
+      "teacher_box": [
+        408,
+        181,
+        556,
+        234
+      ],
+      "truth_box": [
+        408,
+        181,
+        556,
+        234
+      ],
+      "iou": 1.0,
+      "edge_abs_error": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "legal": true
+    },
+    {
+      "frame": 9,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": true,
+      "teacher_box": [
+        434,
+        265,
+        563,
+        319
+      ],
+      "truth_box": [
+        434,
+        266,
+        563,
+        319
+      ],
+      "iou": 0.9814814814814815,
+      "edge_abs_error": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "legal": true
+    },
+    {
+      "frame": 10,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": true,
+      "teacher_box": [
+        77,
+        231,
+        201,
+        289
+      ],
+      "truth_box": [
+        77,
+        231,
+        201,
+        289
+      ],
+      "iou": 1.0,
+      "edge_abs_error": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "legal": true
+    },
+    {
+      "frame": 11,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": true,
+      "teacher_box": [
+        213,
+        115,
+        308,
+        200
+      ],
+      "truth_box": [
+        213,
+        116,
+        308,
+        201
+      ],
+      "iou": 0.9767441860465116,
+      "edge_abs_error": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "legal": true
+    },
+    {
+      "frame": 12,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": true,
+      "teacher_box": [
+        29,
+        114,
+        139,
+        157
+      ],
+      "truth_box": [
+        29,
+        114,
+        139,
+        157
+      ],
+      "iou": 1.0,
+      "edge_abs_error": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "legal": true
+    },
+    {
+      "frame": 13,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": true,
+      "teacher_box": [
+        292,
+        130,
+        375,
+        173
+      ],
+      "truth_box": [
+        292,
+        130,
+        374,
+        173
+      ],
+      "iou": 0.9879518072289156,
+      "edge_abs_error": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "legal": true
+    },
+    {
+      "frame": 14,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": true,
+      "teacher_box": [
+        154,
+        151,
+        235,
+        234
+      ],
+      "truth_box": [
+        155,
+        151,
+        234,
+        234
+      ],
+      "iou": 0.9753086419753086,
+      "edge_abs_error": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "legal": true
+    },
+    {
+      "frame": 15,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": false,
+      "teacher_box": null,
+      "truth_box": null,
+      "correct_null": true
+    },
+    {
+      "frame": 16,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": true,
+      "teacher_box": [
+        515,
+        196,
+        619,
+        246
+      ],
+      "truth_box": [
+        515,
+        197,
+        619,
+        246
+      ],
+      "iou": 0.98,
+      "edge_abs_error": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "legal": true
+    },
+    {
+      "frame": 17,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": true,
+      "teacher_box": [
+        286,
+        145,
+        396,
+        198
+      ],
+      "truth_box": [
+        286,
+        145,
+        396,
+        198
+      ],
+      "iou": 1.0,
+      "edge_abs_error": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "legal": true
+    },
+    {
+      "frame": 18,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": true,
+      "teacher_box": [
+        92,
+        170,
+        169,
+        228
+      ],
+      "truth_box": [
+        92,
+        170,
+        169,
+        228
+      ],
+      "iou": 1.0,
+      "edge_abs_error": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "legal": true
+    },
+    {
+      "frame": 19,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": true,
+      "teacher_box": [
+        66,
+        266,
+        166,
+        338
+      ],
+      "truth_box": [
+        66,
+        266,
+        166,
+        338
+      ],
+      "iou": 1.0,
+      "edge_abs_error": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "legal": true
+    },
+    {
+      "frame": 20,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": true,
+      "teacher_box": [
+        206,
+        226,
+        344,
+        305
+      ],
+      "truth_box": [
+        206,
+        226,
+        344,
+        305
+      ],
+      "iou": 1.0,
+      "edge_abs_error": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "legal": true
+    },
+    {
+      "frame": 21,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": true,
+      "teacher_box": [
+        221,
+        126,
+        333,
+        203
+      ],
+      "truth_box": [
+        221,
+        126,
+        333,
+        203
+      ],
+      "iou": 1.0,
+      "edge_abs_error": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "legal": true
+    },
+    {
+      "frame": 22,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": true,
+      "teacher_box": [
+        333,
+        135,
+        473,
+        215
+      ],
+      "truth_box": [
+        333,
+        135,
+        473,
+        215
+      ],
+      "iou": 1.0,
+      "edge_abs_error": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "legal": true
+    },
+    {
+      "frame": 23,
+      "record_count": 1,
+      "pts_match": true,
+      "file_match": true,
+      "visibility_correct": true,
+      "target_visible": false,
+      "teacher_box": null,
+      "truth_box": null,
+      "correct_null": true
+    }
+  ],
+  "input_hashes_unchanged": true,
+  "raw_output_sha256": {
+    "batch_00.json": "d3ec959d65eb578ab75c019f8c7d5c80aabf2a493e6d9bed49b2eccef15b7a94",
+    "batch_01.json": "e9218fae2e9c2edf29bf444473d5d9bb8608c87d77ee23d60cec290eba271c95",
+    "batch_02.json": "1bbf27906a30d03519a25b34ab7cbbb32e1655a54bf37d234a682c5735b30e06",
+    "batch_03.json": "7d1bcd63e33892bfdf726e0b809fd181d83776a40209c5844cd178b81c89ae6e"
+  },
+  "limits": [
+    "Synthetic bright rectangle with circular distractor only",
+    "No real-world highlight or aesthetic crop truth",
+    "PTS copied from manifest, not inferred by model",
+    "Exact source PNGs viewed; not raw MP4 full-frame decoding by Agent",
+    "Tool-call observation count requires UI audit"
+  ]
+}

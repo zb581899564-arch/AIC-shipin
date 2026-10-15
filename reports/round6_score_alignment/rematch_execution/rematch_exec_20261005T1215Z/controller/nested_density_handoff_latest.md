@@ -1,0 +1,12 @@
+## 20261009单次嵌套原生帧密度探索（实际快照2026-10-08T22:01:31.326996+00:00）
+
+原C/32B边界/历史B1科学拒绝均保留。B1实际完整86新/26旧/112B0与全部CPU回放工程失败0，固定all104差-0.009816273304981254、扩展72组差-0.01620639512922189，自然completed/exit0/null/charge628.2130209468305秒、原所属命令0。原弱参考不是质量真值，不重跑成功或翻转负结果。
+
+唯一nested_density_v1/CONTINUE.md与PROTOCOL.md。原B8B/原B0 prompt与0..5 grammar/greedy保持，原floor64全部物理帧保留，再为每对非连续相邻序号加入一个向下取整中点，最多127物理帧。这是独立新输入协议，原窗口/PTS/端点/源RGB不改；固定原总video像素预算会使实际空间grid减小，真实记录，不称视频tensor相等或纯时间因果。既有104/96/112与24/72分组已被观察，不称新holdout。全部120真实native/processor/token/grid/RGB CPU接口先准入，再单次冻结与8非测试真实新生成/独立回放/11strict；112开发全部新生成/全CPU回放后才固定弱输出集合投入门，GO才426/521与空间exact缓存/独立ZIP。无overview/32B/新optimizer，不无限换提示或造提升。
+
+当前stage=STOP_DENSITY_INVESTMENT_AGENT_CONTINUES，冻结文件18325、锁SHA=7249d3fda860cf56ba13f825fa85482b4fa367b55769493fd1bbf149709327c6；完整所属命令0、实际D done120、逐窗failure0、已done绑定SHATrue、原120B0及86B1保留SHATrue。实际scope计数{'nontest_01': 8, 'developer_01': 112, 'rematch_01': 0}；CPU与计划/冻结/启动不是生成。各实际GPU回执{'nontest': {'status': 'completed', 'finished_utc': '2026-10-08T21:11:25.780071+00:00', 'exit_code': 0, 'stop_reason': None, 'charged_seconds': 206.10976109094918, 'unique_ledger_match': True}, 'developer': {'status': 'completed', 'finished_utc': '2026-10-08T21:38:30.571169+00:00', 'exit_code': 0, 'stop_reason': None, 'charged_seconds': 1030.6187106659636, 'unique_ledger_match': True}}；ledger161/历史offset7200保持，尚未终态的活跃GPU作业费用待自然终态追加，已完成费用按真实回执记录，不写0成本。实际独立CPU回放聚合{'nontest_01': {'status': 'PASS_ALL_SCOPE_NESTED_DENSITY_NATIVE_CPU_REPLAY', 'actual_proof_count': 7, 'first_proof_sha256': 'e51362e9cdd991512f2a4a231e8cd76aea467f1740c8b1b2f1470b418ef84189', 'full_private_receipt_sha256': '10788a0f1b69dfea95e5710938c0c020dbe29e3ffbcd1a7f6d317d9f17734ab7'}, 'developer_01': {'status': 'PASS_ALL_SCOPE_NESTED_DENSITY_NATIVE_CPU_REPLAY', 'actual_proof_count': 112, 'first_proof_sha256': 'e51362e9cdd991512f2a4a231e8cd76aea467f1740c8b1b2f1470b418ef84189', 'full_private_receipt_sha256': '8c47e8dc6d4c0bb41364b5537ad310f3eaacfb0fe583b261f294cb52d26ac933'}}；已完成的回放和成功生成不重复。组件各自UTC/bytes/mtime与完整命令/-B/父子PGID/IO/fds及资源账本见private monitor，不凭GPU闲或短暂无回执认卡死。
+
+aic-linux每15分钟failed_runs_only静默，入口controller/checkpoint_nested_density_v1.py。冻源码/旧raw/STOP/UNKNOWN/成功验收/外部任务/共享锁/7200账本/连接保留；工程异常仅新版本真实复现修复与exact成功复用。Mac在线不参与，既有小量控制直SSH授权保持，新大模型/数据/批量产物/ZIP流量先许可。只有新的426完整真实final/8和426各11strict/实际ZIP字节SHA CRC身份/所有GPU终态账本及筛选GitHub齐后一次通知/删除监控，不归档、不自动回传或官网提交，新官网分UNKNOWN，未保证超过37.63。
+
+<!-- END_CURRENT_NESTED_DENSITY -->
+

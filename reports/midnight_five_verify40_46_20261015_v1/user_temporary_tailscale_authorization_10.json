@@ -1,0 +1,12 @@
+{
+  "UTC": "2026-10-15T09:48:44.737848+00:00",
+  "question": "默认EasyTier入口SSH握手超时，是否允许临时使用已有aic-inspur-tailscale部署小量控制、启动推理并接收最终ZIP，不改配置且可能境外中继",
+  "human_answer": "允许临时用Tailscale继续",
+  "old_home_SCP_exit": 255,
+  "read_only_tailscale_host": "inspur-NP5570M5",
+  "remote_control_file_absent": true,
+  "remote_code_and_stage_absent": true,
+  "control_bytes": 16770,
+  "control_sha256": "d50b5553163c4ca369784d6aca61e4994f2afb66ec1056ac62c9a91574796fd9",
+  "no_existing_success_repeated": true
+}

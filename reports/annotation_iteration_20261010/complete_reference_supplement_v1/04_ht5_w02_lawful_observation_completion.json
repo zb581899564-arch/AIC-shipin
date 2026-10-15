@@ -1,0 +1,47 @@
+{
+  "status": "PASS_ROOT_INDEPENDENT_COMPLETED_WINDOW_MEDIA_SCOPE_WITH_ERROR_METADATA_PRESERVED",
+  "utc": "2026-10-10T17:05:05.995805+00:00",
+  "window_id": "HT5vyqe0Xaw:SLOT6:2",
+  "original_pngs_delivered": 64,
+  "effective_pngs_delivered": 8,
+  "native_video_delivered": true,
+  "tool_issues": [],
+  "proposal_geometry_identity_issues": [],
+  "ordered_tool_count": 91,
+  "prefix_audit": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v3_network\\call01\\w04_completed_scope_audit.json",
+    "sha256": "b131941381b3388f481a2196158dd35a7d32afe986feab97cebfc296d3f27b65"
+  },
+  "stream_prefix": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v3_network\\call01\\w04_completed_scope_stream_prefix.jsonl",
+    "sha256": "b5ed03ae014c5559c49682ddf08397a855f717e624b0a2197d22589156d33167",
+    "bytes": 101239
+  },
+  "proposal": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v3_network\\call01\\w04_proposal.json",
+    "sha256": "107e113d8816a59f064b6192a0eb1ebf86c943df7117bc792a01c5b9f8185c54"
+  },
+  "program_bound_facts": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v3_network\\call01\\w04_program_bound_facts_completed_scope.json",
+    "sha256": "c53d1fb75ca814e5abd75da1731e1ade87660e2a39e68099e5638fcd693b67f4"
+  },
+  "parent_CLI_terminal_present": false,
+  "parent_job_cost": "PENDING_ACTUAL_TERMINAL",
+  "error_message_steps": [
+    {
+      "conversation_id": "a9af6eeb-4ccb-4d70-8548-4ac91a4b91a4",
+      "step_index": 117,
+      "state": "DONE",
+      "step_type": "error_message",
+      "duration_seconds": 0
+    }
+  ],
+  "error_body_unavailable_in_stream": true,
+  "error_not_rewritten_as_success": true,
+  "whole_CLI_status_not_inferred": true,
+  "teacher_semantic_proposal_not_truth": true,
+  "semantic_rejections": [
+    "Static sample alone does not prove stationary vehicle. F61 closed-door claim is not used. Root does not infer rescue, towing force or audio absence from teacher narration."
+  ],
+  "new_optimizer_updates": 0
+}

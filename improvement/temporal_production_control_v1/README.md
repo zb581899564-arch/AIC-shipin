@@ -1,0 +1,33 @@
+# 全生产批 controller 原型 v1
+
+当前仅新代码和controller专属纯检查，未部署/启动生产，不读取正式视频或GT，不运行decode/processor/GPU、lease释放或旧成功pure套。总控负责首次bootstrap、代码/规则/角色/截止锁、最终review/admit/唯一启动；controller从明确许可文件读取授权，不自行产生科学准入/角色选择/5个ZIP。
+
+全局source/request/consumer算法、统一TIME/BASE endpoint角色及TIME VERIFY先冻结。批列表在首次正式model前全部冻结：来源顺序连续块，每source全部endpoint/VERIFY消费者同批，仅按实际storage estimate与当时容量分组，不根据预测/指标。源没有候选仍完成新native clock覆盖；可折入相邻GPU批，或标 `cpu_only_empty_batch=true`、request/logical空、budget0、gpu_job_name=null，controller仅准备/记录clock，不启动fake GPU0job。
+
+配置显式 `temporal_production_inputs_v2`、`temporal_production_runtime_v2`、`production_stream_cache_v2`。旧v1所有字节/失败/pure保存。新input v2只处理明确416 LEGACY_CFR_N_DIV_FPS/None的n/fps exact规划见证与10原native endticks分支；新AV实测正lastduration、完整old PTS/origin/end严格核验不放松，未知Null拒绝。runtime v2是原8py独立copy，只有schema/root/显式input版本和permanent namespace变化，数学/prompt/角色/自然终态门不变。cache v2 canonical schema/API同v1，但policy必须 `process_lock_backend=LINUX_PERSISTENT_FLOCK_V2`，绝不v1/v2写同root，不外层locked再嵌已有API锁，不fork于持锁context，不删除永久guard。
+
+CPU多source串行各自AVthread1/torchthread1，process个数由当前affinity core数量、load1min及available memory/disk bytes计算，没有固定workers、GB或利用率阈值。每source保守union RGB、64 RGB、processor actual size总video pixel raw上界及永久/临时bytes，加已实测CPU process overhead。prepare与first input replay共享原子资源reservation，避免调度线程同时判FIT后超配。GPU冷加载/fullhash host包络由最大checkpoint shard与真实BASE host peak证据冻结，不猜10GB；GPU活跃时也保守预留该host envelope。可用容量不足等待，截止不启动新source/job，已开始工作自然结束；fatal停止追加source并等待已开始进程，不杀peer/外部任务。
+
+双缓冲：prepare0 → GPU0同时prepare1 → natural GPU0 → GPU1同时first-input/output-QA/close0 → close0完成后再prepare2。每批全部CPU source完成→runtime admit_batch核真实proof→已获总控授权的controller写具体batch GPUpermit→唯一现有gpu_run name/load一次；每批natural completed0后先immutable完整resource/ledger原字节snapshot，全部consumer首次独立输入重放、输出-only QA和critic accept完成才release该批新ephemeral RGB，canonical/raw/proof/clock永久保持。多个GPU job不并行，不426次reload。每phase BEGIN/exit/ref有唯一append-only journal和whole-chain launchclaim；已BEGIN/已成功不自动重做，异常保留且禁止wholechain retry。显式bootstrap的preexisting_source_completion_refs仅引用已成功同scope来源，不重新prepare；未登记旧尝试STOP。
+
+总控bootstrap：本root `/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_control_v1` 下 registration.json；新inputs/runtime自己的registration/protocol/batches和初始化cache/source lock已创建并绑定。controller不会偷偷重新project/init旧successful graph。
+
+registration字段：schema `TEMPORAL_PRODUCTION_CONTROL_V1`；input_root_name/runtime_root_name对应v2；cache_version_root_name=`production_stream_cache_v2`，cache_library_directory正式该root/code；runtime_protocol_ref；frozen_batch_index_ref（root自身，含global_graph_sha256和有序batch_refs）；global_graph_sha256；whole_graph_batches_and_roles_frozen_before_first_model=true；training/test_GT_read/old_successes_modified=false；main_controller_execution_approved=true；deadline；current_official_rule_ref；required_code_files所有control/input/runtime/cache代码绝对path→SHA；CPU_resource_envelope_ref及CPU_process_overhead_bound_bytes；GPU_host_resource_envelope_ref及GPU_host_resource_bound={memory_bytes,disk_bytes}，均来自实际证据。可选preexisting_source_completion_refs严格永久相对refs。
+
+main_execution_admission_path仅path（避免registration/admission SHA互相引用循环）。总控最后创建该文件：status `PASS_MAIN_CONTROLLED_PRODUCTION_BOOTSTRAP_AND_EXECUTION`、registration_sha256=实际完整reg SHA、allow_controller_issue_batch_gpu_admission=true。launchclaim再绑定该admission文件SHA。所有global frozen batch_refs须在首次model前存在；runtime batch还需GPUmax/queue秒数和planned_GPU_output_bytes实测预算字段，唯一job名由batch_id生成并全局核无重复。批logical/actual IDs由原graph自动提取不重算eventID。
+
+未来获总控准入后唯一CLI：
+
+```text
+# Parent CUDA_VISIBLE_DEVICES must be explicitly nonempty; do not rerun whole chain.
+python controller.py --registration ROOT/registration.json
+```
+
+controller的CPU child仅隐藏自身CUDA，source调用新input prepare_source；first输入child精确调用输入层已有first_input_replay一次。root bootstrap最终code冻结后，runtime/canonical policy independent_replay_code_sha256必须为runtime_v2/replay_batch.py当前SHA。CPU/source/BATCH_INPUT_ADMIT proof完成后controller仅凭总控已给具体自动批许可写gpu_admission，绝不把source_prepare成功冒称GPU许可。
+
+aggregate.py读取各真实自然terminal、首次输入/输出/weights/token/native QA、critic全部consumer acceptance/所有新RGB released lifecycle，核全source/actual MODEL/logical IDs无遗漏、重复、拆批、异常或pending。它不重复成功processor/模型/全tensor重放，仅核当前永久文件SHA；输出events665、endpoints1330（含typed结构保留）、verification665与source_clocks426，P_hash→原video_id字符串0..425一一映射，不重算event/endpoint IDs。完整new raw/normalizedPTS/origin/end/正duration witness、原clock引用与独立exact equality witness均追溯；CFR老末端仅规划证据，package root须按同branch审原Null endtick。
+
+exports_01/global_completion.json字段与root package_family.checked_inputs直接对应：accepted_export_refs、frozen_development_selection_ref、global_refiner_role/global_VERIFY_role、status PASS_COMPLETE_ALL_PROSPECTIVE_TEMPORAL_REQUESTS_AND_FIRST_INDEPENDENT_REPLAYS、0失败/0缺失、8.78245912B/optimizer0、无testGT、完整PTS一致、原0..425 sourceIDs、全部端点/VERIFY/event及actual MODEL proof、native witnesses/original bindings、多批独立terminal refs。此PASS只是全426工程闭环，scientific_quality_claim=false，旧SCI失败门不改，five_ZIPs_claimed=false；root负责metadata-only D8 baseline、空间场/格式/差异/风险准入和封包。
+
+资源envelope必要keys：CPU文件 actual_peak_rss_kib/conservative_overhead_bound_bytes/actual_proof_ref(path+SHA)，reg.overhead不小于实测peak×1024；GPU文件 observed_BASE_host_peak_rss_bytes/maximum_checkpoint_shard_bytes/conservative_host_memory_bound_bytes/observed_peak_proof_ref/maximum_shard_manifest_ref(path+SHA)，reg.GPU_host_resource_bound.memory_bytes≥conservative值≥observed peak+最大shard。这里只是可审查的保守包络，observed peak不冒称未采集的cold-load HWM。first replay仅需当前真实tensor/RGB RAM与小proof输出bytes，绝不再预留一整source的新canonical/staging磁盘来阻断原批closure。
+

@@ -1,0 +1,36 @@
+{
+  "schema": "CHARADES_METADATA_DIRECTORY_PROTOCOL_01",
+  "scope": "CHARADES_METADATA_AND_ARCHIVE_DIRECTORY_ONLY",
+  "approved": true,
+  "root": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1",
+  "annotation": {
+    "url": "https://ai2-public-datasets.s3-us-west-2.amazonaws.com/charades/Charades.zip",
+    "bytes": 3519822,
+    "etag": "8f64f8d7d4cdf0e207e53f8e1fe1703b"
+  },
+  "video": {
+    "url": "https://ai2-public-datasets.s3-us-west-2.amazonaws.com/charades/Charades_v1.zip",
+    "bytes": 58807341227,
+    "etag": "fa450a0dd79ec4e5453a6d0f9dd9bd34-7011"
+  },
+  "primary_sources": 20,
+  "dev_sources": 10,
+  "confirm_sources": 10,
+  "engineering_replacements": 40,
+  "sample_order": "sha256(UTF8 charades-boundary-v1: + original author train id), ascending; no label/model/metric-based source choice",
+  "max_metadata_payload_bytes": 12582912,
+  "deadline": "2026-10-14T11:56:40+00:00",
+  "range_policy": "If-Match and exact206/Content-Range/body length; no whole media ZIP fallback; preserve success and failure; no repeat successful downloads",
+  "http_receipt_sha256": "d35b7ae04831cd670dbd2b078f57074a42040a6eeae566cf9a378935b06e7472",
+  "current_rule_receipt_sha256": "b3dc2b7c080145efa3d72f413f4bb6fa8081f55b00bda97000fe83ed8284945b",
+  "license_scope": "Internal student/noncommercial research and evaluation only; no training, no original media/GT redistribution; bounded interpretation of original AI2 license",
+  "actual_purpose_receipt": "reports/scoring_spatial_audit_20261013_v1/actual_purpose_reply_10.json",
+  "authority": "User20h goal and existing public source directly to Linux standing authorization; not a new model authorization",
+  "media_bodies_authorized_in_this_stage": false,
+  "new_GPU_authorized_in_this_stage": false,
+  "target_semantics": "Action localization proxy only, not unconditional high-light or native-frame boundary GT",
+  "avoid_GT_endpoint_windowing": true,
+  "do_not_contact_author": true,
+  "old_completed_stages_not_rerun": true,
+  "script_sha256": "FREEZE_FROM_COMPLETED_SCRIPT_BEFORE_FIRST_METADATA_REQUEST"
+}

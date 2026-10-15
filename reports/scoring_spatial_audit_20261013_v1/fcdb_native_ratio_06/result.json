@@ -1,0 +1,28 @@
+{
+  "scope": "ORIGINAL_ANNOTATION_GEOMETRY_COUNTS_ONLY_NO_MEDIA_OR_MODEL",
+  "rows": 1714,
+  "groups": {
+    "cropping_training_set.json": 1369,
+    "cropping_testing_set.json": 345
+  },
+  "invalid_schema_rows": 0,
+  "duplicate_source_ids": 0,
+  "coordinate_contract": "original x,y,width,height; no conversion or alteration",
+  "ratios": {
+    "9:16": {
+      "exact_ids": [],
+      "within_one_pixel_count": 0,
+      "exact_count": 0
+    },
+    "16:9": {
+      "exact_ids": [],
+      "within_one_pixel_count": 8,
+      "exact_count": 0
+    }
+  },
+  "near_ratio_not_admitted_as_exact_truth": true,
+  "algorithm_quality_evaluated": false,
+  "independent_cohort_registered": false,
+  "media_or_model_admitted": false,
+  "gate_decision": "METADATA_ONLY_NO_EXECUTION_ADMISSION"
+}

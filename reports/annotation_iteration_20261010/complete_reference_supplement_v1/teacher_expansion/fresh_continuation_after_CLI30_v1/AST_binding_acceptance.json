@@ -1,0 +1,74 @@
+{
+  "utc": "2026-10-10T19:43:52.224895+00:00",
+  "status": "PASS_AST_ACTUAL_FROZEN_SHA_INHERITANCE_NO_MODEL",
+  "runner_sha256": "05f1a8f3d2ee9c0b517266e1cda68e59f1f06c359a1559b07514cb2c35957760",
+  "binding_sha256": "0ac57f155cffb541be8d9916aa695cca04728f998fef5bb161ec3ed5539d19a5",
+  "checks": [
+    {
+      "call": 5,
+      "jobs": [
+        12,
+        13
+      ],
+      "CLI_after": 31,
+      "frozen_inputs": 162,
+      "actual_all_SHA_PASS": true
+    },
+    {
+      "call": 6,
+      "jobs": [
+        14,
+        15
+      ],
+      "CLI_after": 32,
+      "frozen_inputs": 162,
+      "actual_all_SHA_PASS": true
+    },
+    {
+      "call": 7,
+      "jobs": [
+        16,
+        17
+      ],
+      "CLI_after": 33,
+      "frozen_inputs": 162,
+      "actual_all_SHA_PASS": true
+    },
+    {
+      "call": 8,
+      "jobs": [
+        18,
+        19
+      ],
+      "CLI_after": 34,
+      "frozen_inputs": 162,
+      "actual_all_SHA_PASS": true
+    },
+    {
+      "call": 9,
+      "jobs": [
+        20,
+        21
+      ],
+      "CLI_after": 35,
+      "frozen_inputs": 162,
+      "actual_all_SHA_PASS": true
+    },
+    {
+      "call": 10,
+      "jobs": [
+        22,
+        23
+      ],
+      "CLI_after": 36,
+      "frozen_inputs": 162,
+      "actual_all_SHA_PASS": true
+    }
+  ],
+  "old_sources_and_freezes_unchanged": true,
+  "readonly_model_metadata_sha256": "c63c2270b6a869f6608d41cfd054e6f1ba9b6ee77608309a6a6fac179b06a21c",
+  "original401_classification_sha256": "5d33b397f82b6b99adf4903daed4c1e7f91db5fbae2fbd433f6e89999e5a38ec",
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "new_426": 0
+}

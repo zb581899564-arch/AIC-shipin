@@ -1,0 +1,29 @@
+{
+  "status": "PASS_ROOT_READ_ALL64_ERRATA_AND_RECHECK_ACTUAL64_BINDINGS_NOT_NEW_BLIND_REVIEW",
+  "utc": "2026-10-10T18:54:27.368425+00:00",
+  "original_blind_review": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\08_WxtbjNsCQ8A_W00.independent_student64_review_v1.json",
+    "sha256": "a32d5050341f5cbe33e2d2578710c73ff5b0eaf038c757cd2d5ab332f344a875"
+  },
+  "corrected_nonblind_review": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\08_WxtbjNsCQ8A_W00.student64_fact_errata_reinspection_v1.json",
+    "sha256": "ca255ab22bed4b25515d5bcd018574f2ed89cecbaf664d3f6c9138830ace2537"
+  },
+  "actual_reinspection_by_delegate": 64,
+  "root_read_all64_comparisons": true,
+  "root_current_PNG_RGB_receipt_bindings": 64,
+  "root_direct64_image_inspection": false,
+  "original_semantic_error_cause": "UNKNOWN",
+  "unsupported_black_claims_corrected": [
+    "F06",
+    "F07",
+    "F10",
+    "F12",
+    "F15",
+    "F16"
+  ],
+  "remaining_student_initial_target_observable": "UNKNOWN_PRESERVED",
+  "teacher_exposure": false,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0
+}

@@ -1,0 +1,20 @@
+{
+  "status": "LOCAL_MAPPING_V2_AND_NATIVE_WINDOW_ENGINEERING_NOT_REAL_DATA_ACCEPTANCE",
+  "correction": "engineering_correction_01.json",
+  "previous_receipt": "preparation_receipt_01.json",
+  "checks": [
+    "Synthetic nonconstant-rate mapping accepted without nominal-FPS duration inference",
+    "Changed count, duplicate PTS, CRC, endpoint and unsupported end evidence rejected",
+    "Exact 60-second two-window and 60.1-second three-window partitions pass",
+    "Every native ordinal assigned once, fixed64 sample ordinals match integer-floor rule",
+    "Insufficient physical frames rejected without repeated-frame fallback",
+    "Syntax parsed for four affected modules"
+  ],
+  "synthetic_checks_pass": true,
+  "real_video_mapping_run": false,
+  "actual_new_media_downloads": 0,
+  "actual_model_calls": 0,
+  "actual_comparisons": 0,
+  "actual_new_zips": 0,
+  "pending": "Existing specific ETH-to-Linux 861654036-byte download permission remains unanswered"
+}

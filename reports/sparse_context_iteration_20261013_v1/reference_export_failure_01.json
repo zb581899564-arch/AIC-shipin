@@ -1,0 +1,12 @@
+{
+  "status": "FAILED_REFERENCE_EXPORT01_EXIT1_NO_LOCAL_EXPORT_NO_MEDIA_OR_MODEL",
+  "utc": "2026-10-13T05:50:30.032132+00:00",
+  "actual_remote_exit_code": 1,
+  "original_script_sha256": "fdfc85652992c29e5bb4d178c7d0ffe2a05c8c8a4f62be3f99ab41525a24c773",
+  "local_symptom_reproduction": "TypeError: dict() got multiple values for keyword argument 'author_duration_raw'",
+  "remote_stderr_not_previously_saved": true,
+  "successful_reference_file_exists": false,
+  "new_annotation_downloads": 0,
+  "new_media_downloads": 0,
+  "new_model_calls": 0
+}

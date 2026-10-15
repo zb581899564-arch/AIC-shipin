@@ -1,0 +1,16 @@
+{
+  "status": "PASS_ALL_REGISTERED_HUMAN_NATIVE_INPUTS",
+  "registered_sources": 20,
+  "accepted_sources": 20,
+  "accepted_windows": 116,
+  "frame_mapping_failures": 0,
+  "known_source_separation_pass": true,
+  "registration_sha256": "deb7767c268859e910ffe9184891c8cc2504671a2c38268b5e07ec1fe22709af",
+  "evaluation_policy_sha256": "5526d836e95fb245e41ecec692b6f5643bb490ac457e3779d0ece78697f378e9",
+  "mapping_contract_sha256": "692c8ab5326ada093d5f016ed3c2d1477dbbfb9948054f22a5f1d091db4332bd",
+  "processor_completion_sha256": "575936c15ef1ee11464c33836437d597417470dc6833d466963c91ad23390f2f",
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "GPU_launch_admitted": false,
+  "requires_frozen_full_source_input_lock_and_unique_gpu_wrapper": true
+}

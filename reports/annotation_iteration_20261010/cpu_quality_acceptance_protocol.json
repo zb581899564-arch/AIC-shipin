@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-09T17:26:44.807072+00:00",
+  "new_dev_answers_read": false,
+  "code_sha256": {
+    "evaluate_iteration_v2.py": "813b8430755cba49e8debf455f99cfdbe61a235e084e31b0b60c751f3c248b9e",
+    "audit_native_domains.py": "465498e1ecad980064c583a56bf0f8ccb0f697e7373829bb2c79fbf64e72f0c5",
+    "selector_contract.py": "90cb71baf6ea84d7ed812ac2e11193a751254db713da721a86fb1c178a126b0b",
+    "PROSPECTIVE_STAGE2.md": "cf883128f91d33d406b46c37fd1194379c463d834e5bc0c8424644e3e7c88ab3",
+    "selector_threshold.json": "b42137063a73cc710bbfab3c54a77f2570452728bdefd1b7fa6e63c93347651e"
+  },
+  "stage2_rule": "research_pass AND exact native partitions AND 9-source equal macro proxy F new > base",
+  "threshold_fixed_before_predictions": 49
+}

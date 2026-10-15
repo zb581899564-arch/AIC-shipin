@@ -1,0 +1,142 @@
+{
+  "utc": "2026-10-10T20:41:17.073679+00:00",
+  "status": "PASS_AST_ACTUAL_SHA_LITERAL_PATHS_PREPARED_NO_MODEL_PENDING_ROOT_START",
+  "AST": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\audit_completed_window.py",
+      "sha256": "d4121b6b7a0456a66e2e8c86a7cece2d13f4588e8dba7217a03d9dc84c22ff1f",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\audit_pair.py",
+      "sha256": "ccc627973164f8953baa341b5c3ed7d7b72c338fbee7d42dca359d7cff263c9b",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\controller.py",
+      "sha256": "190eac63bd03bc1d9042eb98738421affc3d2593324c4e3043b4909b109c1419",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\launch.py",
+      "sha256": "8664046752f15ac78bebdbe81ca324d8b9437734c708a204387b4751d18de370",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\observe_receipts.py",
+      "sha256": "f5502af3d8db6340452a4bc2bba2e86d1104e1d9c613d13ea2e6b5c6adf1c234",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\progress.py",
+      "sha256": "23f54df447d945ddfa0279acc84f9c5444657a90119a42eb40034f7cde54d180",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\prompt.py",
+      "sha256": "b2beabbcd864032db9a25f93e5b18652953c14bd0d01a6453c3ae44a304c88b3",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\run_pair.py",
+      "sha256": "6557d7680098b3461509fb7395849e44325ec93001f8d223ad790e446d6883a8",
+      "AST_PASS": true
+    }
+  ],
+  "calls": [
+    {
+      "call": 6,
+      "jobs": [
+        14,
+        15
+      ],
+      "CLI_after": 32,
+      "input_count": 190,
+      "old_index_sha256": "02b4da1d4d3641c0a70f7743a251d725c041a3bf87deefd119b4c3349073140b",
+      "new_index_sha256": "02b4da1d4d3641c0a70f7743a251d725c041a3bf87deefd119b4c3349073140b",
+      "literal_preview_arguments_sha256": "d1f98a332d17326e962c1dcdbf7233250785368c8e0a269bfaeabc85eaa50a35",
+      "prompt_sha256": "42630e3ebf9f385ff2f18ef0fc0215127d45824a440012b2f676186eb771eb08",
+      "freeze_sha256": "61fc2f89bb57adf547482d4e266079e34ef9d79547369142469a1870f1a93162",
+      "all_old_inputs_SHA_verified": true
+    },
+    {
+      "call": 7,
+      "jobs": [
+        16,
+        17
+      ],
+      "CLI_after": 33,
+      "input_count": 190,
+      "old_index_sha256": "59407adb54ebaffd8a5819732c3f2f08c61c8460fe5bd3c180039e62e5506e06",
+      "new_index_sha256": "59407adb54ebaffd8a5819732c3f2f08c61c8460fe5bd3c180039e62e5506e06",
+      "literal_preview_arguments_sha256": "dba0288a06edae4ba4cf22d272a8bc37af6a48839ff78f99cc253c9f1de0cc85",
+      "prompt_sha256": "8a7eb990a67009bb689a418e0ca49df4fac7fcfc9c66504d8f62e614084d85f6",
+      "freeze_sha256": "cd5dfe3b1e260d83387df3400b5eb6c4ecac81db4318777fc1f40bb1ef9a5f77",
+      "all_old_inputs_SHA_verified": true
+    },
+    {
+      "call": 8,
+      "jobs": [
+        18,
+        19
+      ],
+      "CLI_after": 34,
+      "input_count": 190,
+      "old_index_sha256": "342eb813efcb03e8a9ec7c25d39f8123bda736fee3494c5220c7f8d41e494290",
+      "new_index_sha256": "342eb813efcb03e8a9ec7c25d39f8123bda736fee3494c5220c7f8d41e494290",
+      "literal_preview_arguments_sha256": "c1189c8265597ddefce35e5370d80105aaa1b0ce6c190504e6c9cd4c807d08a6",
+      "prompt_sha256": "ff874574fb2cd9a482d088d39780e6cca035aa78f79dca6a2004459c73ec5eec",
+      "freeze_sha256": "388f98e132f464c72dd62f8be4c60fa718e8671a14a5c0016e7a66583807dd46",
+      "all_old_inputs_SHA_verified": true
+    },
+    {
+      "call": 9,
+      "jobs": [
+        20,
+        21
+      ],
+      "CLI_after": 35,
+      "input_count": 190,
+      "old_index_sha256": "83cbf73ef07f79ec4238bbe306e69e559e0280eec3cf0830296503eac0ff575c",
+      "new_index_sha256": "83cbf73ef07f79ec4238bbe306e69e559e0280eec3cf0830296503eac0ff575c",
+      "literal_preview_arguments_sha256": "3f7c8791e2aed77e49caf35b1f1e163fb50e5ab1843554ccaf80392d08eb73ee",
+      "prompt_sha256": "622be936194d8eab06ce58bb1750ceaae99894a64de3dcd01804b4931bff34fe",
+      "freeze_sha256": "da56db85c663fe6f2e5ba4ef5cdad545aa694b934a1a99ba5f9b1f380bf1326b",
+      "all_old_inputs_SHA_verified": true
+    },
+    {
+      "call": 10,
+      "jobs": [
+        22,
+        23
+      ],
+      "CLI_after": 36,
+      "input_count": 190,
+      "old_index_sha256": "09e7051115e27b1ea5ce9432267123a5ac5cc588da1c563e32417319fd1d7df1",
+      "new_index_sha256": "09e7051115e27b1ea5ce9432267123a5ac5cc588da1c563e32417319fd1d7df1",
+      "literal_preview_arguments_sha256": "c052d243e3b21830b17ae08a06dd5b0f5063f3dbe55a90ea0d61758305854191",
+      "prompt_sha256": "dfb485485fb3c4cff65748f8dbf3c2ad66a917054535ab91456eed1744ad9beb",
+      "freeze_sha256": "36ef5cf346bd900a95bd3c3db5785f9d5ac1de12eb6f8394e0503d15454a48cb",
+      "all_old_inputs_SHA_verified": true
+    }
+  ],
+  "all_original_indices_byte_exact": true,
+  "all_original_outputs_paths_preserved": true,
+  "original_media_and_frozen_inputs_unchanged": true,
+  "exact_eight_AbsolutePath_arguments_per_window": true,
+  "explicit_ERROR_tools_reject_task_completion": true,
+  "old_failed_or_successful_audits_not_modified": true,
+  "fixed_denominator": 24,
+  "teacher_expansion_denominator": 21,
+  "actual_student_frames": 64,
+  "timeout_seconds": 7200,
+  "model": "gemini-3.8-flash-high",
+  "global_cap": 36,
+  "new_model_calls": 0,
+  "new_decode": 0,
+  "new_optimizer_updates": 0,
+  "new_426": 0,
+  "execution_binding_sha256": "9aa9a698653d11fe72f0540d4eeffa2e0e203b81153fd57a00984a2140a73883",
+  "requires_root_start_admission": true,
+  "cash_cost": "UNKNOWN_NOT_ZERO"
+}

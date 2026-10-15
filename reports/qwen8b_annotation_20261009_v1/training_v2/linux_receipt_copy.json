@@ -1,0 +1,29 @@
+{
+  "utc": "2026-10-09T14:45:32.820326+00:00",
+  "status": "PASS_REMOTE_RECEIPTS_COPIED_EXACT_BYTES",
+  "route": "LINUX_MACMINI_PROXYJUMP_WINDOWS",
+  "files": {
+    "upload_verification.json": {
+      "remote_path": "/home/inspur/aic_video_work/datasets/qwen8b_annotation_20261009_v2/upload_verification.json",
+      "bytes": 751,
+      "sha256": "ae5a08e492144878bbd9d4abbdc76de7f9502a71b77b4396956204fbfe69a1b7"
+    },
+    "linux_readiness_completion.json": {
+      "remote_path": "/home/inspur/aic_video_work/datasets/qwen8b_annotation_20261009_v2/linux_readiness_completion.json",
+      "bytes": 2165,
+      "sha256": "91bd7bc2ade1f0879d742f25a2af48b8a29318889094969753f317ef4f87219d"
+    },
+    "linux_cpu_preflight/crop/preflight.json": {
+      "remote_path": "/home/inspur/aic_video_work/runs/qwen_annotation_v2_crop_preflight_001/preflight.json",
+      "bytes": 447,
+      "sha256": "f923a83d3e10bddd6e166f5c7974211109526f61f5b470a65d88ed5986676400"
+    },
+    "linux_cpu_preflight/temporal/preflight.json": {
+      "remote_path": "/home/inspur/aic_video_work/runs/qwen_annotation_v2_temporal_preflight_001/preflight.json",
+      "bytes": 448,
+      "sha256": "b10e1b2fed92cb10693528927cfb05bc6ee6ababbeecff09eefea1fb43cdb2c9"
+    }
+  },
+  "cpu_jobs_rerun": false,
+  "training_started": false
+}

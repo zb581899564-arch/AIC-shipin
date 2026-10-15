@@ -1,0 +1,11 @@
+实际 v1 FAILED/exit1 保留：1 BEGIN START、0 ACCEPTED，start raw 已保存；resource charged_seconds=166.093628…，无end BEGIN。failure SHA e4ca3e0dca99efba16df2bcad78734237278bdef0f37ea9fe4ed5b71e880f0b0，raw SHA 3a644a092e837851e8238eb7bb2256aa05df72e0f7a0b15b35049e5254b27cc6。root原本提及的旧base-only12恢复代码在当前两实际文件未见，不把记忆当证据、不更改该历史。
+
+错误证据：finally先layer_state(False)通过，随后 engine.adapter_identity 在 require(active_adapter default and all requires_grad false)失败；active default已由layer_state核过，288adapter实值检查在该断言前完成，故本次是PEFT context re-enable梯度标志副作用。post frozen证明没有保存，不能凭trace补成accepted。v1代码假定context连同gradient一起恢复的判断不足，新pure fixture显式模拟这个副作用。
+
+独立v2仅允许原never-started END新1call。finally第一步restore_frozen_gradients先记录实际trainable tensor/parameter/name，再model.requires_grad_(False)，after0后再144层/实际physical inventory/full base hash/288adapter实值核查。单call前checkpoint使用engine.load_model刚完成的完整身份检查、call后full rehash，策略事前登记；不再重复同一pre-call全8B hash。
+
+admit与新root source_lock引用完整原TIME2call成功输入及v1失败/raw/request/初始state/source锁/费用/唯一failed ledger。registration remaining_recovery SHA必须封全部关系，v1START不能进入newREQUEST_IDS。audit-start独立只读其已有token/native metadata，标UNACCEPTED_POST_STATE_PROOF，accepted_endpoint_result null、accepted新增0；未执行该audit。新replay只核1 END第一次output，input replay仍引用TIME成功proof；export无两例pair、不改变v1FAILED。
+
+一次Linux纯检查通过3AST：复现144 activation恢复而gradient仍trainable的旧失败；显式restore恢复normal和exception路径/allFalse/physical inventory；静态finally第一步是restore；new budget1且只END，原TIME源分母2保持；audit/replay无generate/input encode/media调用，export不称完整pair。实际admit/processor/media/model为0，未部署。原failed v1全部4文件逐SHA与manifest保持，不重跑任何旧stage。
+
+生产输入工作已暂停，当前只有codec/clock/旧metadata结构只读审阅，没有正式426 source decode、CPU encode或GPU。待本小修复交接后按主控恢复该独立code任务。

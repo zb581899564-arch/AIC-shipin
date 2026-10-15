@@ -1,0 +1,182 @@
+{
+  "split": "dev",
+  "common_rows": 90,
+  "metric_name": "WEAK_TEACHER temporal F1 (union intervals)",
+  "note": "weak-label internal metric for candidate selection only; NOT an AIC official score",
+  "invalid_outputs_kept_in_denominator": true,
+  "arms": {
+    "T0_BASE": {
+      "n_rows": 90,
+      "valid_rate": 0.9111,
+      "empty_rate": 0.0889,
+      "WEAK_TEACHER_temporal_mean_f1": 0.456243,
+      "WEAK_TEACHER_temporal_median_f1": 0.51036,
+      "mean_precision": 0.416104,
+      "mean_recall": 0.657789,
+      "mean_pred_duration_ratio": 0.606841,
+      "model": "/home/inspur/aic_video_work/models/Qwen3-VL-4B-Instruct",
+      "adapter": null,
+      "summary_from_run": {
+        "n_rows": 90,
+        "valid_rate": 0.9111,
+        "empty_rate": 0.0889,
+        "mean_f1": 0.456243,
+        "mean_precision": 0.416104,
+        "mean_recall": 0.657789,
+        "mean_pred_duration_ratio": 0.606841,
+        "total_generate_seconds": 188.6,
+        "peak_memory_mib": 9976.2
+      }
+    },
+    "T1_QVH_LORA": {
+      "n_rows": 90,
+      "valid_rate": 0.8,
+      "empty_rate": 0.2,
+      "WEAK_TEACHER_temporal_mean_f1": 0.45943,
+      "WEAK_TEACHER_temporal_median_f1": 0.513795,
+      "mean_precision": 0.391843,
+      "mean_recall": 0.669938,
+      "mean_pred_duration_ratio": 0.584775,
+      "model": "/home/inspur/aic_video_work/models/Qwen3-VL-4B-Instruct",
+      "adapter": "/home/inspur/aic_video_work/training_round2_20260910/formal_v1/best",
+      "summary_from_run": {
+        "n_rows": 90,
+        "valid_rate": 0.8,
+        "empty_rate": 0.2,
+        "mean_f1": 0.45943,
+        "mean_precision": 0.391843,
+        "mean_recall": 0.669938,
+        "mean_pred_duration_ratio": 0.584775,
+        "total_generate_seconds": 156.3,
+        "peak_memory_mib": 10020.6
+      }
+    },
+    "T2_ORARL_TEMPORAL": {
+      "n_rows": 90,
+      "valid_rate": 0.9778,
+      "empty_rate": 0.0222,
+      "WEAK_TEACHER_temporal_mean_f1": 0.583697,
+      "WEAK_TEACHER_temporal_median_f1": 0.625172,
+      "mean_precision": 0.515193,
+      "mean_recall": 0.812939,
+      "mean_pred_duration_ratio": 0.696428,
+      "model": "/home/inspur/aic_video_work/orarl_round1/model/Video-ORA-4B",
+      "adapter": null,
+      "summary_from_run": {
+        "n_rows": 90,
+        "valid_rate": 0.9778,
+        "empty_rate": 0.0222,
+        "mean_f1": 0.583697,
+        "mean_precision": 0.515193,
+        "mean_recall": 0.812939,
+        "mean_pred_duration_ratio": 0.696428,
+        "total_generate_seconds": 125.7,
+        "peak_memory_mib": 10128.8
+      }
+    }
+  },
+  "pairwise_vs_T1": {
+    "T0_BASE": {
+      "unit": "youtube_id (paired)",
+      "n_groups": 80,
+      "n_bootstrap": 10000,
+      "seed": 20260916,
+      "observed_mean_diff": 0.001002,
+      "ci95_low": -0.07099,
+      "ci95_high": 0.075011,
+      "frac_gt_0": 0.502,
+      "n_groups_positive": 31,
+      "group_win_rate": 0.3875
+    },
+    "T2_ORARL_TEMPORAL": {
+      "unit": "youtube_id (paired)",
+      "n_groups": 80,
+      "n_bootstrap": 10000,
+      "seed": 20260916,
+      "observed_mean_diff": 0.132414,
+      "ci95_low": 0.062387,
+      "ci95_high": 0.20472,
+      "frac_gt_0": 0.9999,
+      "n_groups_positive": 46,
+      "group_win_rate": 0.575
+    }
+  },
+  "stratified_by_clip_duration": {
+    "Q1": {
+      "n_rows": 24,
+      "arms": {
+        "T0_BASE": {
+          "mean_f1": 0.503391,
+          "valid_rate": 1.0,
+          "delta_vs_T1": 0.046524
+        },
+        "T1_QVH_LORA": {
+          "mean_f1": 0.456867,
+          "valid_rate": 0.875
+        },
+        "T2_ORARL_TEMPORAL": {
+          "mean_f1": 0.580021,
+          "valid_rate": 0.9583,
+          "delta_vs_T1": 0.123154
+        }
+      }
+    },
+    "Q2": {
+      "n_rows": 21,
+      "arms": {
+        "T0_BASE": {
+          "mean_f1": 0.511651,
+          "valid_rate": 0.9524,
+          "delta_vs_T1": -0.013561
+        },
+        "T1_QVH_LORA": {
+          "mean_f1": 0.525212,
+          "valid_rate": 0.9048
+        },
+        "T2_ORARL_TEMPORAL": {
+          "mean_f1": 0.547766,
+          "valid_rate": 0.9524,
+          "delta_vs_T1": 0.022554
+        }
+      }
+    },
+    "Q3": {
+      "n_rows": 23,
+      "arms": {
+        "T0_BASE": {
+          "mean_f1": 0.402535,
+          "valid_rate": 0.8696,
+          "delta_vs_T1": -0.040491
+        },
+        "T1_QVH_LORA": {
+          "mean_f1": 0.443026,
+          "valid_rate": 0.6957
+        },
+        "T2_ORARL_TEMPORAL": {
+          "mean_f1": 0.616452,
+          "valid_rate": 1.0,
+          "delta_vs_T1": 0.173426
+        }
+      }
+    },
+    "Q4": {
+      "n_rows": 22,
+      "arms": {
+        "T0_BASE": {
+          "mean_f1": 0.40807,
+          "valid_rate": 0.8182,
+          "delta_vs_T1": -0.008514
+        },
+        "T1_QVH_LORA": {
+          "mean_f1": 0.416584,
+          "valid_rate": 0.7273
+        },
+        "T2_ORARL_TEMPORAL": {
+          "mean_f1": 0.587763,
+          "valid_rate": 1.0,
+          "delta_vs_T1": 0.171179
+        }
+      }
+    }
+  }
+}

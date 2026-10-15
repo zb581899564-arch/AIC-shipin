@@ -1,0 +1,58 @@
+{
+  "utc": "2026-10-10T10:13:52.192978+00:00",
+  "available_teacher_subject_records_reviewed": 32,
+  "all_available_records_reviewed": true,
+  "missing_teacher_frame_ids": [
+    "F16",
+    "F17",
+    "F18",
+    "F19",
+    "F20",
+    "F21",
+    "F22",
+    "F23",
+    "F24",
+    "F25",
+    "F26",
+    "F27",
+    "F28",
+    "F29",
+    "F30",
+    "F31",
+    "F48",
+    "F49",
+    "F50",
+    "F51",
+    "F52",
+    "F53",
+    "F54",
+    "F55",
+    "F56",
+    "F57",
+    "F58",
+    "F59",
+    "F60",
+    "F61",
+    "F62",
+    "F63"
+  ],
+  "corrections": [
+    {
+      "frame_id": "F03",
+      "corrected": "室内挂钟前深色T恤人物的上半身，手部姿态不同",
+      "reason": "单帧不确证发声或动作经过，只保留可见姿态与主体"
+    },
+    {
+      "frame_id": "F04",
+      "corrected": "室内挂钟前深色T恤人物的上半身，手部姿态不同",
+      "reason": "单帧不确证发声或动作经过，只保留可见姿态与主体"
+    },
+    {
+      "frame_id": "F05",
+      "corrected": "室内挂钟前深色T恤人物的上半身，手部姿态不同",
+      "reason": "单帧不确证发声或动作经过，只保留可见姿态与主体"
+    }
+  ],
+  "native_F11_subtitle_false_positive_confirmed_by_individual_PNG": true,
+  "training_admitted": false
+}

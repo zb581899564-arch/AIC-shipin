@@ -1,0 +1,9 @@
+# 真实CPU processor验收入口：代码准备，尚未运行
+
+prepare_processor_remote.py先读20源真实RGB completion，并重新核下载许可、原生映射、已知来源隔离和缓存清单的绑定；前置失败时拒绝导入runtime/processor或创建输出。全部前置通过后，复用原B的EMPTY_PROMPT、native PTS处理与processor编码函数，local_files_only读取现有原processor/tokenizer，不读取模型权重，不生成回答、不读取人工摘要。
+
+每个原生64帧窗口核NPZ及像素SHA，以真实CPU编码生成input_ids等逐tensor签名、原生时间和processor身份；输入不超过既定16384 tokens。独立processor_01逐窗保存实际证据，明确resume时保留相同输入/代码的成功proof，不重复成功encode；失败保留独立failure.json，须按修复协议继续。
+
+所有登记源及窗口通过后才写不可变native_input_acceptance.json，绑定注册、评价策略、v2映射契约和processor完成回执。它证明真实CPU输入完成，GPU_launch_admitted仍为false；还须冻结完整新源/代码/输入锁、核共享实时资源并经唯一GPU wrapper，才能做原B新开发推理。实际模型/adapter身份与参数总数须在模型加载时再核，不把processor资产身份称权重身份。
+
+本轮只做不完整RGB前置的拒绝检查及语法检查；没有真正加载processor或模型，也没有真实CPU encode、GPU、候选比较或新ZIP。当前依然等待此前提出的具体媒体下载许可。

@@ -1,0 +1,97 @@
+{
+  "status": "PASS_NEW_ROOT_COMPOSED_ACTUAL_MEDIA_PENDING_SEMANTIC_EVALUATION_REFERENCE",
+  "utc": "2026-10-10T21:51:40.601766+00:00",
+  "window_id": "i3wAGJaaktw:SLOT6:2",
+  "original_pngs_delivered": 64,
+  "effective_pngs_delivered": 8,
+  "native_video_delivered": true,
+  "tool_issues": [],
+  "proposal_geometry_identity_issues": [],
+  "media_observers": {
+    "native64": "GEMINI_REAL_CLI32_DONE",
+    "native_video": "GEMINI_REAL_CLI32_DONE",
+    "effective8": "GEMINI_REAL_CLI32_DONE"
+  },
+  "original_Gemini_strict_task_completed": false,
+  "original_strict_failure_preserved": true,
+  "original_strict_audit": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\call06\\audit.json",
+    "sha256": "8f7f6c1907d38e77407896d3292b7389a2e87804c14edb9411b3b65831983298"
+  },
+  "actual_media_inventory": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\call06\\actual_media_completion_evidence_original_strict_failed.json",
+    "sha256": "63b37ded18dfdab858b3d5dbeb099007cc0385f72e3c0175c36c5fff0e1e7028"
+  },
+  "protocol": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\14_15_root_actual_media_composition_protocol_v1.json",
+    "sha256": "7692b2b460c405143c63109f5b0c1f8ea276dc05f3785657694ebfb153635201"
+  },
+  "original_raw": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\call06\\stream.jsonl",
+    "sha256": "77153ff662b93c550fe0933de9472e5af5bd44e03208a9e9fc21bb9cc3495a7a"
+  },
+  "original_terminal": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\call06\\terminal.json",
+    "sha256": "9ccbffb7815f96caf5060710fd4d1aff09742ecfafc895f75e7183bece822f11"
+  },
+  "program_bound_facts": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\call06\\w14_program_bound_facts.json",
+    "sha256": "a4074526171301b96094f1b40bda02871c45c01fecf0b25fdff84d8dac0a4814"
+  },
+  "proposal": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call06\\w14_proposal.json",
+    "sha256": "d9721f7bfb6f902ca7fa52e2b389a88e90a322ead5eeb1638ff5828ed082af18"
+  },
+  "index": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\call06\\index.json",
+    "sha256": "02b4da1d4d3641c0a70f7743a251d725c041a3bf87deefd119b4c3349073140b"
+  },
+  "freeze": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\call06\\freeze.json",
+    "sha256": "61fc2f89bb57adf547482d4e266079e34ef9d79547369142469a1870f1a93162"
+  },
+  "student_processor": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\14_i3wAGJaaktw_W02\\student_views\\receipt.json",
+    "sha256": "8f517e18b40990a0c8529dbefafe489a2fc2035c8d513c1d18a1fec76bfa6a03"
+  },
+  "actual_same_index_reads_not_media": [
+    3,
+    128,
+    130,
+    134,
+    157,
+    159,
+    175,
+    184,
+    193,
+    203,
+    212
+  ],
+  "actual_bare_nonmedia_metadata": [
+    {
+      "conversation_id": "926df26a-e04a-4075-9ad7-830ebb336108",
+      "step_index": 1,
+      "state": "DONE",
+      "step_type": "error_message",
+      "duration_seconds": 0
+    },
+    {
+      "conversation_id": "926df26a-e04a-4075-9ad7-830ebb336108",
+      "step_index": 194,
+      "state": "DONE",
+      "step_type": "error_message",
+      "duration_seconds": 0
+    },
+    {
+      "conversation_id": "926df26a-e04a-4075-9ad7-830ebb336108",
+      "step_index": 275,
+      "state": "DONE",
+      "step_type": "error_message",
+      "duration_seconds": 0
+    }
+  ],
+  "root_new_images": 0,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "training_admitted": false
+}

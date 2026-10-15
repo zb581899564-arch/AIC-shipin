@@ -1,0 +1,61 @@
+{
+  "status": "PASS_ROOT_INDEPENDENT_FIXED_SELF_CHECK_SCOPE_MEDIA_PENDING_SEMANTIC_REFERENCE",
+  "utc": "2026-10-10T22:17:45.897239+00:00",
+  "window_id": "EYqVtI9YWJA:SLOT6:3",
+  "original_pngs_delivered": 64,
+  "effective_pngs_delivered": 8,
+  "native_video_delivered": true,
+  "tool_issues": [],
+  "proposal_geometry_identity_issues": [],
+  "ordered_core_tool_count": 91,
+  "original_index_read_steps": [
+    2,
+    4,
+    6
+  ],
+  "additional_index_reads": 2,
+  "exact_frozen_index_read_only_selfchecks": true,
+  "same_index_hard_count_limit": false,
+  "actual_proposal_self_reads": [],
+  "bare_error_metadata": [],
+  "bare_error_cause": null,
+  "prefix_audit": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\call07\\w16_completed_scope_audit.json",
+    "sha256": "8a695d708672135280bbb7ec7e2b79695779102e9b5ee85fb864991b81c8e737"
+  },
+  "stream_prefix": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\call07\\w16_completed_scope_stream_prefix.jsonl",
+    "sha256": "5971044330abe408daefa6e72f8573da6bf94fca63dd40d4a2ca9cf291ec52b6",
+    "bytes": 86886
+  },
+  "proposal": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w16_proposal.json",
+    "sha256": "ef2730b96dd5e6258b8d030d8b3db3f55cf7360e118137138de44395cf38a442"
+  },
+  "program_bound_facts": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\call07\\w16_program_bound_facts_completed_scope.json",
+    "sha256": "408eba9a852221aba65c8e39d859d11fb63d80bc6cffe88964d3f99188b596cc"
+  },
+  "protocol": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\PROTOCOL.md",
+    "sha256": "e2c22d9052a73d32766d2bcb9b1a75b5649486f8227f801afe4412a6203971a9"
+  },
+  "freeze": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\call07\\freeze.json",
+    "sha256": "8f59047a345a0b9978f872ee03541617cd37636303cab75d21fafe785b69d78b"
+  },
+  "request": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\call07\\request.json",
+    "sha256": "99c1f2cbaadf4ddf2b31988f63a49c2aa2f5c6957dc4aa3500f61dccb4562e29"
+  },
+  "global_CLI": 33,
+  "parent_terminal_at_original_scope_audit": false,
+  "whole_CLI_status_not_inferred": true,
+  "whole_job_cost": "PENDING_ACTUAL_PARENT_TERMINAL",
+  "cash_cost": "UNKNOWN_NOT_ZERO",
+  "teacher_semantics_not_truth": true,
+  "root_semantic_facts_read_not_asserted_by_this_helper": true,
+  "semantic_admission_pending": true,
+  "training_admitted": false,
+  "new_optimizer_updates": 0
+}

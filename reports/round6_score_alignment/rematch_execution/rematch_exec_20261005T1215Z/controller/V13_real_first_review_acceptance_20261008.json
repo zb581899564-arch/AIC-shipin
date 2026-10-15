@@ -1,0 +1,22 @@
+{
+  "status": "PASS_REAL_V13_BLOCKED_LEGACY_BLIND_REVIEW_INDEPENDENT_CPU_REPLAY_NOT_TRAINING_OR_TRUTH",
+  "utc": "2026-10-08T10:41:00.525475+00:00",
+  "source_lock_sha256": "620df12b8cd6bb85d3bf64fc120314d400d30aa9887dfc0a58d0d4152ede8159",
+  "first_review_receipt_sha256": "63e9d518bcbaf4c22b27246d7f706370d409d697afa0a797b4c2e9dd87c88799",
+  "actual_new_review_model_calls": 1,
+  "new_label_model_calls": 0,
+  "old_success_generation_repeated": false,
+  "independent_CPU_revalidation_model_calls": 0,
+  "original_validator_and_input_and_raw_SHA_pass": true,
+  "actual_HTTP_request_processor_applied_grammar_and_response_SHA_pass": true,
+  "actual_review_HTTP_wall_seconds": 26.858058,
+  "actual_teacher_weight_and_runtime_identity_pass": true,
+  "physical_frame_and_native_clock_SHA_pass": true,
+  "original_label_record_unchanged": true,
+  "actual_prompt_tokens": 14016,
+  "support_class": "UNKNOWN",
+  "original_review_status": "UNKNOWN_WEAK_SELECTION_DISAGREEMENT",
+  "new_T_optimizer_updates": 0,
+  "semantic_training_admitted": false,
+  "same_teacher_comparison_not_human_truth": true
+}

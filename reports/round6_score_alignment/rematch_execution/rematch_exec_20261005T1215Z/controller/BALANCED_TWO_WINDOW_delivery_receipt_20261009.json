@@ -1,0 +1,28 @@
+{
+  "status": "PASS_426_FINAL_DELIVERABLE_PUBLICATION_AND_MONITOR_DELETED",
+  "utc": "2026-10-09T06:06:05.397740+00:00",
+  "automation_id": "aic",
+  "automation_delete_status": "deleted",
+  "chat_archived": false,
+  "publication_receipt_sha256": "564cfe9ab0ab4d6f3808afe5a570e9f438310a6343b6df386c1c1e1c01746675",
+  "commit": "23fe721d0a7dc0dc4d6a60abc93a47693c272316",
+  "production_weight": "ORIGINAL_B_8B",
+  "new_optimizer_updates": 0,
+  "official_score": null,
+  "zip_bytes": 306167,
+  "zip_sha256": "07730c9e02e68d1a1ce54e7ef5a8aa616346cf8f2f8d78426ed36bc3eb481496",
+  "remote_handoff": {
+    "status": "PASS_UNBOUND_FINAL_DELIVERY_HANDOFF_ONLY",
+    "bytes": 28130,
+    "sha256": "e4b9398a9f26fe6f0390e4af8c2ec35c801d7856a44971cc9fd49a5cc04492f0"
+  },
+  "local_unbound_handoffs": {
+    "G:\\ai\\AIC视频\\AGENTS.md": "0d2bd42b620febdf4eb3b8b6b8a0dc1833c60e43127424e91c62ef39ae6b38a7",
+    "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_execution\\rematch_exec_20261005T1215Z\\STATUS_AUTOPILOT_20261007.md": "f7401787f8b9b2e74c455bc4118704b8a37cbec8e73193be313f50f7eb7e79d5",
+    "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_execution\\rematch_exec_20261005T1215Z\\balanced_two_window_risk_v3\\CONTINUE.md": "6d40b39ad713bdae05c89f62d0a284b1b23c057b7c1c53ba9f6b23cb94906074",
+    "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_execution\\rematch_exec_20261005T1215Z\\controller\\BALANCED_TWO_WINDOW_RISK_EXECUTION_20261009.md": "6d40b39ad713bdae05c89f62d0a284b1b23c057b7c1c53ba9f6b23cb94906074"
+  },
+  "new_model_decoder_optimizer_calls": 0,
+  "automatic_return": false,
+  "official_submission": false
+}

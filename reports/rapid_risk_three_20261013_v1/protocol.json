@@ -1,0 +1,56 @@
+{
+  "schema": "THREE_BOUNDED_SPATIAL_RISK_ZIPS_V1",
+  "baseline": {
+    "zip_SHA256": "8aec42ae06a8cacab93aa8e052d89d5df41dc57e56d73a79cdef6dd02c6cb4ad",
+    "member_SHA256": "1e3568b6cc45fea480d0613e295ad861a755ef4a508acd3822f9a0607a19de12",
+    "frame_count": 122050,
+    "model_parameters": 8782459120
+  },
+  "arms": {
+    "R16_099": {
+      "ratios": [
+        [
+          16,
+          9
+        ]
+      ],
+      "scale_numerator": 99,
+      "scale_denominator": 100
+    },
+    "R9_099": {
+      "ratios": [
+        [
+          9,
+          16
+        ]
+      ],
+      "scale_numerator": 99,
+      "scale_denominator": 100
+    },
+    "RBOTH_098": {
+      "ratios": [
+        [
+          16,
+          9
+        ],
+        [
+          9,
+          16
+        ]
+      ],
+      "scale_numerator": 98,
+      "scale_denominator": 100
+    }
+  },
+  "geometry": "neww=ceil(oldw*scale);dx=floor((oldw-neww)/2);dy=floor((oldw-neww)*target_h/(2*target_w)); newbox nested in original; original box-center preserved with x<=0.5pixel,y<1pixel integer-placement error; no semantic retuning",
+  "frame_membership": "exact D8 same122050, no boundary changes",
+  "reason": "bound output perturbation before reading test prediction statistics; static external human width diagnostics support testing scale; no 70percent model output released",
+  "quantitative_bound": "IoU(old,new)>=(ceil(oldw*scale)/oldw)^2>=scale^2; Jaccard metric implies worst IoU loss versus any fixedGT<=1-scale^2; geometry bound is not validation proof",
+  "parameter_selection": "fixed99 and98 from predeclared2%/4%maximum area-Jaccard perturbation tolerances; no test-content/statistics/GT or leaderboard used for choice",
+  "human_quality_status": "UNVALIDATED_EXPLORATORY_RISK_ONLY, old gates remain failed",
+  "no_new_model_calls": true,
+  "no_new_training": true,
+  "test_labels_read": false,
+  "deadline_UTC": "2026-10-13T15:42:00Z",
+  "Linux_root": "/home/inspur/aic_video_work/rapid_risk_three_20261013_v1"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "CPU_PREPARE_REJECTED_NO_MODEL",
+  "stage": "main path projection proof",
+  "error": "default json.dumps ensure_ascii=True mismatched original UTF8 Chinese path JSON",
+  "actual_verified_correction": "ensure_ascii=False makes exact projected text equality",
+  "no_index_freeze_or_plan_written": true,
+  "original_execution_code_binding_preserved": true,
+  "new_models": 0,
+  "new_decode": 0
+}

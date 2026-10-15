@@ -1,0 +1,71 @@
+{
+  "status": "COMPLETE_TWO_ORDINARY_ROUNDS_PRO_SLOT5_AND_FINAL_RELAY_WITH_ACTUAL_G0_NO_426",
+  "utc": "2026-10-09T03:42:54.193820+00:00",
+  "packet": {
+    "file": "context-final.md",
+    "bytes": 793724,
+    "sha256": "e86ccd6489ba2a0790c09ca49515be87b0131430ad8aeb15413e605b871d017d"
+  },
+  "previous_packet_exact_prefix": true,
+  "pro": {
+    "file": "pro-p01.md",
+    "bytes": 21278,
+    "sha256": "c102f3970b3451b6b93f59f4aec15d889c3de6f5a437b51bfd8bf282002d14b6"
+  },
+  "pro_slot": 5,
+  "pro_remaining": 3,
+  "final_receipts": [
+    {
+      "seat": "sol",
+      "file": "sol-final-ack.md",
+      "bytes": 2256,
+      "sha256": "ab087d05a72433f8479658b6ac2f40c4f72d356f716e352e114d725ab724e485",
+      "complete_final_response": true,
+      "packet_text_read": "SELF_REPORTED_COMPLETE",
+      "raw_packet_byte_hash_verification": "SELF_REPORTED_NOT_HOST_REEXECUTION"
+    },
+    {
+      "seat": "tibo",
+      "file": "tibo-final-ack.md",
+      "bytes": 969,
+      "sha256": "3c0d2794f5d19defbd3a201b569c8b28c60dcaaf635606e30fe493088219f5a2",
+      "complete_final_response": true,
+      "packet_text_read": "SELF_REPORTED_COMPLETE",
+      "raw_packet_byte_hash_verification": "EXPLICIT_NOT_INDEPENDENTLY_VERIFIED_TEXT_EXTRACTION_SIZE_DIFFERS"
+    },
+    {
+      "seat": "grok",
+      "file": "grok-final-ack.md",
+      "bytes": 1223,
+      "sha256": "acdd2b477b2e9a56455e10a992242dd3d46d568d6baed9e01288b58a5ae4388e",
+      "complete_final_response": true,
+      "packet_text_read": "SELF_REPORTED_COMPLETE",
+      "raw_packet_byte_hash_verification": "SELF_REPORTED_NOT_HOST_REEXECUTION"
+    },
+    {
+      "seat": "gemini",
+      "file": "gemini-final-ack.md",
+      "bytes": 4627,
+      "sha256": "01a40774af821a512b47c68caf840e7b75b240b239258cf392dafd5267f49678",
+      "complete_final_response": true,
+      "packet_text_read": "SELF_REPORTED_COMPLETE",
+      "raw_packet_byte_hash_verification": "SELF_REPORTED_NOT_HOST_REEXECUTION"
+    }
+  ],
+  "work_completion": {
+    "file": "closure.json",
+    "bytes": 3299,
+    "sha256": "324c836167dae7f8683e81e12896bbe19efb6c59db7c93293befc81a299e9459"
+  },
+  "runtime": {
+    "file": "final-runtime-readonly.json",
+    "bytes": 330,
+    "sha256": "97556de107bdc2c9227ab8a389fcf0cfad814d5d002a1010d75e5cc372b679f0"
+  },
+  "scientific_quality": "UNKNOWN",
+  "new_426_ZIP": false,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "publication": "PRIVATE_NO_NEW_GITHUB_PUBLICATION_THIS_TURN",
+  "no_automation_recreated": true
+}

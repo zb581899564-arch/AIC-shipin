@@ -1,0 +1,21 @@
+{
+  "schema": "LOCAL_BOUNDARY_ACTIVATION_ABLATION_V1",
+  "hypothesis": "LOCAL_BOUNDARY_TIME_ADAPTER_ACTIVATION_ABLATION",
+  "validation_scope": "PAIRED_TWO_CALL_SAME_INPUT_ACTIVATION_DIAGNOSTIC",
+  "source_root": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/local_boundary_v2",
+  "max_new_model_calls": 2,
+  "actual_physical_parameters": 8782459120,
+  "activated_base_parameters": 8767123696,
+  "disable_time_adapter_layers": 144,
+  "optimizer_updates": 0,
+  "new_input_processor_encodes": 0,
+  "new_media_decodes": 0,
+  "coarse_and_verify_time_adapter_unchanged": true,
+  "old_base_only12_failed_status_and_cost_unchanged": true,
+  "quality_gate_or_change_based_selection_admitted": false,
+  "gpu_job_name": "aic20h_local_boundary_base_activation2_20261014_v1",
+  "deadline": "2026-10-14T11:56:40Z",
+  "max_gpu_seconds": 900,
+  "selection_based_on_change": false,
+  "developer_data_exposed": true
+}

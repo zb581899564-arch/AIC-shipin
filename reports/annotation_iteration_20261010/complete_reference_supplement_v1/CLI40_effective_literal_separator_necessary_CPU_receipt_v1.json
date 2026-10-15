@@ -1,0 +1,84 @@
+{
+  "status": "PASS_NECESSARY_EXACT_EIGHT_SEPARATOR_GUARD_CPU_NO_ACTUAL_RECOVERY",
+  "utc": "2026-10-11T11:22:11.177069+00:00",
+  "helpers": {
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\recover_CLI40_effective_literal_separator_v1.py": "0a0e87d7e5421c5fc8b63506ccc2d530081eed8a8580a08cf72f4927ace17025",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\accept_teacher_schema_recovery23_literal_separator_recovery_v3.py": "b7963a805471837b36f15fb6eedc07fc03dd6f42da34a88116bad17e2b9a7c1c"
+  },
+  "positive": {
+    "exact_eight_paths_sixteen_ACTIVE_DONE_changes": true,
+    "exact_document_guard": true,
+    "in_memory_only": true
+  },
+  "counterexample_classes": [
+    {
+      "counterexample_class": "additional_separator_not_allowed",
+      "rejected": true,
+      "memory_only": true
+    },
+    {
+      "counterexample_class": "wrong_ordinal_or_filename",
+      "rejected": true,
+      "memory_only": true
+    },
+    {
+      "counterexample_class": "different_case_not_normalized",
+      "rejected": true,
+      "memory_only": true
+    },
+    {
+      "counterexample_class": "ranged_view_parameters",
+      "rejected": true,
+      "memory_only": true
+    },
+    {
+      "counterexample_class": "ACTIVE_DONE_toolname_conflict",
+      "rejected": true,
+      "memory_only": true
+    },
+    {
+      "counterexample_class": "missing_ACTIVE_or_wrong_step",
+      "rejected": true,
+      "memory_only": true
+    },
+    {
+      "counterexample_class": "real_media_ERROR",
+      "rejected": true,
+      "memory_only": true
+    },
+    {
+      "counterexample_class": "outside_or_extra_issue_not_hidden",
+      "rejected": true,
+      "memory_only": true
+    },
+    {
+      "counterexample_class": "not_natural_SUCCESS_or_timeout",
+      "rejected": true,
+      "memory_only": true
+    },
+    {
+      "counterexample_class": "byte_drift_or_later_write",
+      "rejected": true,
+      "memory_only": true
+    },
+    {
+      "counterexample_class": "missing_128_or_19ACK_completion",
+      "rejected": true,
+      "memory_only": true
+    },
+    {
+      "counterexample_class": "schema_or_effective_batch_failure",
+      "rejected": true,
+      "memory_only": true
+    }
+  ],
+  "source": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\verify_CLI40_effective_literal_separator_v1.py",
+    "sha256": "fabd25e9165f5adf7cb425697b480a5cfe46d698ce7939e66d7715c788179636"
+  },
+  "new_model_calls": 0,
+  "new_decoder_calls": 0,
+  "new_processor_calls": 0,
+  "actual_recovery_executed": false,
+  "old_tests_repeated": false
+}

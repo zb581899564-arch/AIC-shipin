@@ -1,0 +1,9 @@
+# 原始人工帧映射：读取媒体前固定
+
+按作者原档同名WebM与MAT的原始ordinal对应，必须逐源完整解码得到严格递增原生PTS。帧数须与MAT nFrames及user_score行数精确一致，不能补零、截断、复制帧或拉伸标注。原档成员大小、CRC和实际SHA绑定下载回执；名字匹配本身不证明时间映射。
+
+PTS以实际第一帧为原点，归一化后首点恰为0；物理末端必须大于最后PTS并有来源证据。原生物理跨度相对nFrames/FPS和MAT video_duration的差均不能超过两个标注标称帧周期。此量只做原始编码/标注元数据相容性筛查，不移动原生PTS、不补epsilon、不声称人工偏好切点具有两个周期的误差保证。不符者保留映射失败，不能静默换编码或丢源后缩小分母。
+
+开发导出契约：GPU前生成并冻结的native_input_acceptance.json须绑定源注册/评价策略SHA、20/20实际通过、来源隔离、映射失败0和optimizer0，此回执不得为加入模型结果而回写。GPU/独立CPU重放后另建developer_export_acceptance.json，绑定原native验收及导出SHA；developer_prediction_export.json须20源、模型参数8782459120、started_windows=successful_windows、完整连续半开原生时间窗口和未改动原segments。无这两阶段实际验收，评价入口拒绝读取预测。
+
+各源native_clock包含source_name、source_bytes、source_crc32、source_sha256、n_frames、normalized_exact_pts、physical_end_exact及其末端来源。未选帧不叫普通。标签与窗口不进模型提示，先冻结screen入选者再算confirm，不以确认结果重选配方。人体摘要代理通过仍需另做旧40源局部事实否决，才能考虑封包；本文件或编译成功不代表真实映射/推理已通过。

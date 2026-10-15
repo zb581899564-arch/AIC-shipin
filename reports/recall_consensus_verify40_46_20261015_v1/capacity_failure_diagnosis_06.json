@@ -1,0 +1,271 @@
+{
+  "video_size": {
+    "shortest_edge": 4096,
+    "longest_edge": 25165824
+  },
+  "source_summaries": [
+    {
+      "video_id": "v_rrNJt73BG_8",
+      "media_bytes": 4476707,
+      "clock_keys": [
+        "original_exact_pts",
+        "physical_end_exact",
+        "first_original_pts_exact",
+        "last_frame_duration_exact",
+        "native_frames",
+        "width",
+        "height",
+        "fps_num",
+        "fps_den",
+        "video_stream_index",
+        "stream_time_base_exact",
+        "stream_start_time",
+        "container_start_time_microseconds",
+        "container_duration_microseconds_diagnostic_only",
+        "decoder_version",
+        "timeline_shift_applied",
+        "original_zero_origin_verified"
+      ],
+      "width": 658,
+      "height": 480,
+      "n_frames": null
+    },
+    {
+      "video_id": "v_17nr8u_ze0o",
+      "media_bytes": 8183799,
+      "clock_keys": [
+        "original_exact_pts",
+        "physical_end_exact",
+        "first_original_pts_exact",
+        "last_frame_duration_exact",
+        "native_frames",
+        "width",
+        "height",
+        "fps_num",
+        "fps_den",
+        "video_stream_index",
+        "stream_time_base_exact",
+        "stream_start_time",
+        "container_start_time_microseconds",
+        "container_duration_microseconds_diagnostic_only",
+        "decoder_version",
+        "timeline_shift_applied",
+        "original_zero_origin_verified"
+      ],
+      "width": 854,
+      "height": 480,
+      "n_frames": null
+    },
+    {
+      "video_id": "v_isUCIXYjOXE",
+      "media_bytes": 4851500,
+      "clock_keys": [
+        "original_exact_pts",
+        "physical_end_exact",
+        "first_original_pts_exact",
+        "last_frame_duration_exact",
+        "native_frames",
+        "width",
+        "height",
+        "fps_num",
+        "fps_den",
+        "video_stream_index",
+        "stream_time_base_exact",
+        "stream_start_time",
+        "container_start_time_microseconds",
+        "container_duration_microseconds_diagnostic_only",
+        "decoder_version",
+        "timeline_shift_applied",
+        "original_zero_origin_verified"
+      ],
+      "width": 854,
+      "height": 480,
+      "n_frames": null
+    },
+    {
+      "video_id": "v_IGamNJ5yIh4",
+      "media_bytes": 2931217,
+      "clock_keys": [
+        "original_exact_pts",
+        "physical_end_exact",
+        "first_original_pts_exact",
+        "last_frame_duration_exact",
+        "native_frames",
+        "width",
+        "height",
+        "fps_num",
+        "fps_den",
+        "video_stream_index",
+        "stream_time_base_exact",
+        "stream_start_time",
+        "container_start_time_microseconds",
+        "container_duration_microseconds_diagnostic_only",
+        "decoder_version",
+        "timeline_shift_applied",
+        "original_zero_origin_verified"
+      ],
+      "width": 480,
+      "height": 360,
+      "n_frames": null
+    }
+  ],
+  "preparation_files": [
+    {
+      "path": "/home/inspur/aic_video_work/recall_consensus_verify40_46_20261015_v1/confirm/inputs_01/implementation_closure.json",
+      "keys": [
+        "files"
+      ],
+      "summary": {}
+    },
+    {
+      "path": "/home/inspur/aic_video_work/recall_consensus_verify40_46_20261015_v1/confirm/inputs_01/launch_claim.json",
+      "keys": [
+        "pid",
+        "group",
+        "utc",
+        "reference_completion_sha256",
+        "development_selection",
+        "no_recovered_primary_cache_or_first_QA",
+        "parent_CUDA_environment_not_modified",
+        "this_process_CUDA_VISIBLE_DEVICES",
+        "model_calls"
+      ],
+      "summary": {}
+    },
+    {
+      "path": "/home/inspur/aic_video_work/recall_consensus_verify40_46_20261015_v1/confirm/inputs_01/failure.json",
+      "keys": [
+        "current",
+        "stage",
+        "successful_entries",
+        "complete_sources",
+        "error",
+        "traceback",
+        "successful_stages_must_not_repeat",
+        "actual_primary_encode_calls_started",
+        "actual_primary_encode_calls_returned",
+        "preserve_all_media_clocks_RGB_cache_and_partial",
+        "implicit_resume",
+        "model_calls"
+      ],
+      "summary": {}
+    },
+    {
+      "path": "/home/inspur/aic_video_work/recall_consensus_verify40_46_20261015_v1/confirm/inputs_01/source_clocks.json",
+      "keys": [
+        "schema",
+        "sources"
+      ],
+      "summary": {
+        "schema": "RECALL_SOURCE_CLOCKS_V1"
+      }
+    },
+    {
+      "path": "/home/inspur/aic_video_work/recall_consensus_verify40_46_20261015_v1/confirm/inputs_01/view_plan.json",
+      "keys": [
+        "schema",
+        "group",
+        "baseline_plan",
+        "overlap_plan",
+        "unique_views",
+        "role_aliases",
+        "actual_input_count",
+        "baseline_alias_count",
+        "overlap_alias_count",
+        "shared_actual_inputs",
+        "maximum_possible_VERIFY_calls",
+        "same_view_actual_calls",
+        "scientific_quality_pass",
+        "GPU_admitted",
+        "model_calls"
+      ],
+      "summary": {
+        "schema": "RECALL_UNIQUE_ACTUAL_VIEW_PLAN_V1",
+        "actual_input_count": 32
+      }
+    }
+  ],
+  "failure": {
+    "current": "v_rrNJt73BG_8",
+    "stage": "RGB_UNION",
+    "successful_entries": [],
+    "complete_sources": [],
+    "error": "ValueError('Actual resources cannot hold this source union/unique-view lossless outputs; retain and stop')",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/inspur/aic_video_work/recall_consensus_verify40_46_20261015_v1/code/prepare_fresh_inputs.py\", line 317, in prepare\n    bound = capacity(folder, source, len(wanted), len(views), processor)\n  File \"/home/inspur/aic_video_work/recall_consensus_verify40_46_20261015_v1/code/prepare_fresh_inputs.py\", line 207, in capacity\n    io.require(snapshot['available_memory_bytes'] > need_memory and snapshot['free_output_disk_bytes'] > need_disk,\n  File \"/home/inspur/aic_video_work/recall_consensus_verify40_46_20261015_v1/code/model_common.py\", line 45, in require\n    raise ValueError(reason)\nValueError: Actual resources cannot hold this source union/unique-view lossless outputs; retain and stop\n",
+    "successful_stages_must_not_repeat": true,
+    "actual_primary_encode_calls_started": 0,
+    "actual_primary_encode_calls_returned": 0,
+    "preserve_all_media_clocks_RGB_cache_and_partial": true,
+    "implicit_resume": false,
+    "model_calls": 0
+  },
+  "installed_original_processor_path": "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/lib/python3.10/site-packages/transformers/models/qwen3_vl/video_processing_qwen3_vl.py",
+  "processor_source_relevant_lines": [
+    {
+      "line": 34,
+      "text": "\n\ndef smart_resize(\n    num_frames: int,\n    height: int,\n    width: int,"
+    },
+    {
+      "line": 41,
+      "text": "    factor: int = 32,\n    min_pixels: int = 128 * 128,\n    max_pixels: int = 16 * 16 * 2 * 2 * 2 * 6144,\n):\n    if num_frames < temporal_factor:\n        raise ValueError(f\"t:{num_frames} must be larger than temporal_factor:{temporal_factor}\")"
+    },
+    {
+      "line": 55,
+      "text": "    t_bar = round(num_frames / temporal_factor) * temporal_factor\n\n    if t_bar * h_bar * w_bar > max_pixels:\n        beta = math.sqrt((num_frames * height * width) / max_pixels)\n        h_bar = max(factor, math.floor(height / beta / factor) * factor)\n        w_bar = max(factor, math.floor(width / beta / factor) * factor)"
+    },
+    {
+      "line": 56,
+      "text": "\n    if t_bar * h_bar * w_bar > max_pixels:\n        beta = math.sqrt((num_frames * height * width) / max_pixels)\n        h_bar = max(factor, math.floor(height / beta / factor) * factor)\n        w_bar = max(factor, math.floor(width / beta / factor) * factor)\n    elif t_bar * h_bar * w_bar < min_pixels:"
+    },
+    {
+      "line": 60,
+      "text": "        w_bar = max(factor, math.floor(width / beta / factor) * factor)\n    elif t_bar * h_bar * w_bar < min_pixels:\n        beta = math.sqrt(min_pixels / (num_frames * height * width))\n        h_bar = math.ceil(height * beta / factor) * factor\n        w_bar = math.ceil(width * beta / factor) * factor\n"
+    },
+    {
+      "line": 89,
+      "text": "class Qwen3VLVideoProcessor(BaseVideoProcessor):\n    resample = PILImageResampling.BICUBIC\n    size = {\"shortest_edge\": 128 * 32 * 32, \"longest_edge\": 32 * 32 * 768}\n    image_mean = [0.5, 0.5, 0.5]\n    image_std = [0.5, 0.5, 0.5]\n    do_resize = True"
+    },
+    {
+      "line": 92,
+      "text": "    image_mean = [0.5, 0.5, 0.5]\n    image_std = [0.5, 0.5, 0.5]\n    do_resize = True\n    do_rescale = True\n    do_normalize = True\n    do_convert_rgb = True"
+    },
+    {
+      "line": 96,
+      "text": "    do_normalize = True\n    do_convert_rgb = True\n    patch_size = 16\n    temporal_patch_size = 2\n    merge_size = 2\n    fps = 2"
+    },
+    {
+      "line": 97,
+      "text": "    do_convert_rgb = True\n    patch_size = 16\n    temporal_patch_size = 2\n    merge_size = 2\n    fps = 2\n    min_frames = 4"
+    },
+    {
+      "line": 98,
+      "text": "    patch_size = 16\n    temporal_patch_size = 2\n    merge_size = 2\n    fps = 2\n    min_frames = 4\n    max_frames = 768"
+    },
+    {
+      "line": 109,
+      "text": "        super().__init__(**kwargs)\n        if self.size is not None and (\n            self.size.get(\"shortest_edge\", None) is None or self.size.get(\"longest_edge\", None) is None\n        ):\n            raise ValueError(\"size must contain 'shortest_edge' and 'longest_edge' keys.\")\n"
+    },
+    {
+      "line": 111,
+      "text": "            self.size.get(\"shortest_edge\", None) is None or self.size.get(\"longest_edge\", None) is None\n        ):\n            raise ValueError(\"size must contain 'shortest_edge' and 'longest_edge' keys.\")\n\n    def _further_process_kwargs(\n        self,"
+    },
+    {
+      "line": 122,
+      "text": "        Can be overridden by subclasses to customize the processing of kwargs.\n        \"\"\"\n        if size is not None and (\"shortest_edge\" not in size or \"longest_edge\" not in size):\n            raise ValueError(\"size must contain 'shortest_edge' and 'longest_edge' keys.\")\n\n        return super()._further_process_kwargs(size=size, **kwargs)"
+    },
+    {
+      "line": 123,
+      "text": "        \"\"\"\n        if size is not None and (\"shortest_edge\" not in size or \"longest_edge\" not in size):\n            raise ValueError(\"size must contain 'shortest_edge' and 'longest_edge' keys.\")\n\n        return super()._further_process_kwargs(size=size, **kwargs)\n"
+    },
+    {
+      "line": 201,
+      "text": "            num_frames, height, width = T, H, W\n            if do_resize:\n                resized_height, resized_width = smart_resize(\n                    num_frames=num_frames,\n                    height=height,\n                    width=width,"
+    },
+    {
+      "line": 208,
+      "text": "                    factor=patch_size * merge_size,\n                    min_pixels=size.shortest_edge,\n                    max_pixels=size.longest_edge,\n                )\n                stacked_videos = stacked_videos.view(B * T, C, H, W)\n                stacked_videos = self.resize("
+    }
+  ],
+  "available_memory_bytes": 126520836096,
+  "GPU_calls": 0
+}

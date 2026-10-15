@@ -1,0 +1,51 @@
+{
+  "status": "ROOT_APPROVED_START_MANUAL_CLI38_ONCE_FIXED21_23_AFTER_ZERO_TOOL_LOCATION37",
+  "utc": "2026-10-11T09:36:15.626303+00:00",
+  "execution_binding_sha256": "ebdb7341908df4a79993fe11e789637e2aee8c831ea09a44567106e5cde69038",
+  "dry_run_sha256": "9d2234ec225042dbac5d3f7ed36dcec24eb06255e2a8efc75659fcd2053ac711",
+  "negative_receipt_sha256": "395bb78e7f5b648877952d07b2cd1f475affdc12da9cc16baea8a7249d15a8cd",
+  "manual_user_authorization": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\manual_CLI38_user_retry_authorization_v1.json",
+    "sha256": "41f737a89232b04d688f4686dc84a380fc4a3c110aae086f38e3ffb9774d9a76"
+  },
+  "ROOT_w20_complete_independent_semantic_recovery_PASS": true,
+  "w20_semantic_recovery_receipt": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_root_semantic_recovery_receipt_v1.json",
+    "sha256": "637c81aaff183ed9777890891259ffdd2f6a72bdc44c0371d5fc5bd1f0195553",
+    "status": "PASS_ROOT20_INDEPENDENT_FINITE_REFERENCE_WITH_UNKNOWN_PRESERVED_NOT_TRAINING"
+  },
+  "w20_reference_binding": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_complete_reference_v1.json",
+    "sha256": "62998d79a1806d8510ac5c23851bf2b699c79bb4c1f44cc015e4c7a4c611dec5",
+    "window_id": "cjibtmSLxQ4:SLOT6:13",
+    "reference_kind": "FINITE_OBSERVATION_SILVER_EDITING_ADVICE_NOT_GOLD",
+    "source_sha256": "43183ef7f35bfcbc39c122be797fdee5031103862c7c7da3b9ab74d222c79c9d",
+    "source_window": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\source_window_plan.json",
+      "sha256": "09ecb28971932bd3bf8ac275c30d0a6fd534345442f2d2ec3529fa3f8e1e4b22"
+    },
+    "training_admitted": false
+  },
+  "CLI": 38,
+  "global_cap": 38,
+  "no39": true,
+  "automatic_retry": false,
+  "fixed_job_indices": [
+    21,
+    22,
+    23
+  ],
+  "timeout_seconds": 7200,
+  "prior37_actual_ERROR_preserved": true,
+  "IP_recovery_not_yet_verified": true,
+  "scientific_batch_training_admission": false,
+  "new_optimizer_updates": 0,
+  "source": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\admit_manual_cli38_retry_v1.py",
+    "sha256": "5b4d5ca8cd63d4219344caaa73ba33e4332b2a50452f82e1daa4b69649035624"
+  },
+  "root_actual_source_review": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\plan_review\\ROOT_manual_CLI38_retry_source_review_v1.json",
+    "sha256": "a99e1b30aeec9a36128d6852a3e88854ffa15df0461cc70bc09b74ac5135b033"
+  }
+}

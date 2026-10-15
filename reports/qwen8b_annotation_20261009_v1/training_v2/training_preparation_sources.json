@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "temporal-training-preparation",
+      "title": "时间评分训练准备",
+      "queries": [
+        {
+          "id": "human-native-checks",
+          "source": {
+            "label": "选定人工时间评分数据审核",
+            "files": [
+              {
+                "label": "selected_data_audit.json"
+              },
+              {
+                "label": "preflight_actual_temporal_fixed/preflight.json"
+              }
+            ],
+            "filters": [
+              "固定2秒网格，采样不使用标签变化",
+              "每帧原始20人工评分总和",
+              "排除两条帧数差一帧的源"
+            ],
+            "caveats": [
+              "目标为TVSum帧重要性，不能证明动作语义起止边界。",
+              "Gemini600条事件区间均未进入训练目标。",
+              "未加载8B权重、未计算loss或启动优化器。"
+            ]
+          },
+          "columns": [
+            "sources",
+            "native_frames",
+            "train_sequences",
+            "validation_sequences"
+          ],
+          "rows": [
+            {
+              "sources": 48,
+              "native_frames": 6047,
+              "train_sequences": 314,
+              "validation_sequences": 89
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "crop-and-package-preparation",
+      "title": "裁剪与传输包准备",
+      "queries": [
+        {
+          "id": "crop-release-checks",
+          "source": {
+            "label": "裁剪CPU预检与发布回执",
+            "files": [
+              {
+                "label": "preflight_actual_crop/preflight.json"
+              },
+              {
+                "label": "release_completion.json"
+              }
+            ],
+            "caveats": [
+              "裁剪是模型弱标签，验证一致性不是人工质量金标。",
+              "数据包仍在本地，未上传或开训。"
+            ]
+          },
+          "columns": [
+            "crop_train",
+            "crop_validation",
+            "zip_bytes",
+            "archive_files"
+          ],
+          "rows": [
+            {
+              "crop_train": 181,
+              "crop_validation": 148,
+              "zip_bytes": 1269695818,
+              "archive_files": 6353
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "status": "ROOT_SEMANTIC_EVALUATION_ADJUDICATION_COMPLETE",
+  "utc": "2026-10-10T23:32:36.967653+00:00",
+  "window_id": "J0nA4VgnoCo:SLOT6:2",
+  "candidate_prediction_exposure": false,
+  "root_read_all64_teacher_facts": true,
+  "root_read_all64_native_and_student_facts": true,
+  "all_NO_ranges_reviewed": true,
+  "selected_preteacher_event_indices": [],
+  "unknown_local_exact": [],
+  "consequential_unknowns": [],
+  "evidence": {
+    "preteacher_main_review": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\18_j0n_w02_main_preteacher_review.json",
+      "sha256": "c88180f132fee3902e71b8f8ac10e2f3a6573a74fab0858c2f37e6db7e12f117"
+    },
+    "teacher_observation_audit": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\18_j0n_w02_lawful_observation_completion.json",
+      "sha256": "93c6df4e18496134b9b72e8a2136714445a6a3ec591510b3a62b48d25efa1ed0"
+    },
+    "original_teacher_proposal": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v4_bootstrap_file\\call34\\w18_proposal.json",
+      "sha256": "da9af8275018004a8d5be996c073f47514ce86999fdae3bf447bac97c0f52a7c"
+    },
+    "original_teacher_bound_fact_audit": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v4_bootstrap_file\\call34\\w18_completed_scope_audit.json",
+      "sha256": "1e65ea853800abf92640c517134e5bf39fa0a2ed7b0f5386a83703794e3ec430"
+    },
+    "exposed_independent_semantic_crosscheck": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_semantic_crosschecks_v1\\18_J0nA4VgnoCo_W02.teacher_semantic_crosscheck_v1.json",
+      "sha256": "83884166502bab3d1c11f0cfb235ff1d24d2ed6d10d2796197cf1343ead2fdbc"
+    },
+    "root_actual_postteacher_pixels": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\18_j0n_w02_root_actual_postteacher_pixels_v1.json",
+      "sha256": "7fa44b7872a6290c5396094bf5f16ffee030bfd9903bde2dd7107dbc965590e0"
+    }
+  },
+  "differences_adjudicated": [
+    "Student initial NO is retained. Its target observable UNKNOWN refers to no retained physical event; it does not require inventing KEEP or an unseen impact. Root full finite sampled-domain editorial choice is NO with concrete segment reasons.",
+    "Actual F06/F17/F18/F60/F63 show bending, holding a bent rod, ordinary reaching and unstable tilted framing, without a visible distinctive treatment/impact/result. No audio, argument, intent, damage or ground-object function is inferred.",
+    "Full-domain NO is finite visual editing advice based on all64 supplied observations, not proof that no action could occur between samples.",
+    "Teacher all four contiguous NO subdivisions and zero KEEP events agree the frozen finite sampled visual editorial decision. No approximate internal teacher subdivision becomes a measured physical-action cut.",
+    "Actual originalF16 does not show extraction from the boot. Actual F19/F62 are ordinary rod-holding/upper-car reaching images. Independent original native/studentF60 crosscheck excludes a wheel-repair posture. Object origin/material/purpose, impact and repair result are not labelled.",
+    "Mouth/hand/body postures are visible; teacher volume, greeting, conversation content, emotion, prop-use and no-audio assertions are not accepted as sensory evidence.",
+    "Student original physical target UNKNOWN and between-sample limits remain sealed. No distinct finite visual highlight is selected; all-domain NO is editing advice, not proof that no physical event ever occurred.",
+    "Actual immutable completed media prefix precedes the later CLI34 out-of-whitelist transcript reads and API connection error. Whole CLI34 is REJECTED and remains REJECTED; this finite reference uses only separately verified early media/facts plus independent reviews, not its terminal success."
+  ],
+  "actual_root_observation_scope": {
+    "native_sample_indices": [
+      6,
+      17,
+      18,
+      60,
+      63
+    ],
+    "student_sample_indices": [
+      18,
+      63
+    ],
+    "additional_postteacher_native_samples": [
+      16,
+      19,
+      62
+    ],
+    "read_native_static_facts": 64,
+    "read_student_static_facts": 64,
+    "read_teacher_static_facts": 64,
+    "root_direct64_image_review": false,
+    "root_native_video_view": false,
+    "teacher_actual_video_delivery": true,
+    "original_parent_terminal_not_inferred": true,
+    "whole_CLI34_status": "REJECTED_ACTUAL_POST_SCOPE_OUTSIDE_READ_AND_NETWORK_ERROR"
+  },
+  "reference_scope_and_reason": "Locked-evaluation-only finite sampled visual all-NO silver. Ordinary tilted parking views, holding rod, repeated gestures and reaching show no distinct retained highlight. Physical intent/function/result/between-frame limits remain unknown in the original records. Not human gold, physical no-event proof or official score; failed whole CLI34 stays failed."
+}

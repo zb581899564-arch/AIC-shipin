@@ -1,0 +1,393 @@
+{
+  "run_id": "round6_p1a_20260917T0430Z",
+  "created_utc": "2026-09-17T04:39:45Z",
+  "commands": [
+    "python round6_score_alignment/p1a/run_p1a.py",
+    "python -m unittest discover -s round6_score_alignment/p1a/tests -t round6_score_alignment/p1a"
+  ],
+  "test_suite": {
+    "counts": {
+      "tests_run": 83,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 83
+    },
+    "elapsed_seconds": 0.089,
+    "stdout_tail": "ok\ntest_historical_prose_wrapped_object_still_parses (tests.test_segments.ThreeStateTests.test_historical_prose_wrapped_object_still_parses) ... ok\ntest_nan_and_infinity_are_invalid (tests.test_segments.ThreeStateTests.test_nan_and_infinity_are_invalid) ... ok\ntest_overlapping_segments_warn_but_stay_valid_and_sorted (tests.test_segments.ThreeStateTests.test_overlapping_segments_warn_but_stay_valid_and_sorted) ... ok\ntest_reversed_interval_is_invalid (tests.test_segments.ThreeStateTests.test_reversed_interval_is_invalid) ... ok\ntest_single_interval_is_valid_nonempty (tests.test_segments.ThreeStateTests.test_single_interval_is_valid_nonempty) ... ok\ntest_six_and_seven_intervals_exceed_the_configured_maximum (tests.test_segments.ThreeStateTests.test_six_and_seven_intervals_exceed_the_configured_maximum) ... ok\ntest_zero_maximum_rejects_every_interval (tests.test_segments.ThreeStateTests.test_zero_maximum_rejects_every_interval) ... ok\ntest_intervals_and_merge (tests.test_timebase.HelperTests.test_intervals_and_merge) ... ok\ntest_origin_offset_is_zero_for_exact_multiples_and_subframe_otherwise (tests.test_timebase.HelperTests.test_origin_offset_is_zero_for_exact_multiples_and_subframe_otherwise) ... ok\ntest_ceil_halfopen_matches_timestamp_policy_without_window_offset (tests.test_timebase.LegacyConventionTests.test_ceil_halfopen_matches_timestamp_policy_without_window_offset) ... ok\ntest_compare_conventions_reports_all_three (tests.test_timebase.LegacyConventionTests.test_compare_conventions_reports_all_three) ... ok\ntest_legacy_invalid_input_raises_instead_of_guessing (tests.test_timebase.LegacyConventionTests.test_legacy_invalid_input_raises_instead_of_guessing) ... ok\ntest_round_inclusive_adds_the_endpoint_frame (tests.test_timebase.LegacyConventionTests.test_round_inclusive_adds_the_endpoint_frame) ... ok\ntest_round_inclusive_clamps_to_n_minus_1 (tests.test_timebase.LegacyConventionTests.test_round_inclusive_clamps_to_n_minus_1) ... ok\ntest_adjacent_windows_do_not_overlap_or_gap (tests.test_timebase.TimestampHalfOpenTests.test_adjacent_windows_do_not_overlap_or_gap) ... ok\ntest_illegal_frame_indices_are_rejected (tests.test_timebase.TimestampHalfOpenTests.test_illegal_frame_indices_are_rejected) ... ok\ntest_integer_fps_one_second_is_30_frames (tests.test_timebase.TimestampHalfOpenTests.test_integer_fps_one_second_is_30_frames) ... ok\ntest_interval_past_the_end_is_empty (tests.test_timebase.TimestampHalfOpenTests.test_interval_past_the_end_is_empty) ... ok\ntest_non_integer_fps_23976 (tests.test_timebase.TimestampHalfOpenTests.test_non_integer_fps_23976) ... ok\ntest_non_integer_fps_2997 (tests.test_timebase.TimestampHalfOpenTests.test_non_integer_fps_2997) ... ok\ntest_non_positive_fps_and_frame_count_are_rejected (tests.test_timebase.TimestampHalfOpenTests.test_non_positive_fps_and_frame_count_are_rejected) ... ok\ntest_reversed_or_equal_interval_is_rejected (tests.test_timebase.TimestampHalfOpenTests.test_reversed_or_equal_interval_is_rejected) ... ok\ntest_sampling_origin_frame_is_clamped (tests.test_timebase.TimestampHalfOpenTests.test_sampling_origin_frame_is_clamped) ... ok\ntest_video_last_frame_is_inclusive_of_n_minus_1 (tests.test_timebase.TimestampHalfOpenTests.test_video_last_frame_is_inclusive_of_n_minus_1) ... ok\ntest_window_origin_offset_changes_absolute_interval (tests.test_timebase.TimestampHalfOpenTests.test_window_origin_offset_changes_absolute_interval) ... ok\ntest_explicit_pts_is_honoured_half_open (tests.test_timebase.VfrTests.test_explicit_pts_is_honoured_half_open) ... ok\ntest_vfr_frame_indices_are_bounded (tests.test_timebase.VfrTests.test_vfr_frame_indices_are_bounded) ... ok\ntest_vfr_rejects_non_monotonic_and_non_finite_pts (tests.test_timebase.VfrTests.test_vfr_rejects_non_monotonic_and_non_finite_pts) ... ok\ntest_vfr_without_pts_is_refused (tests.test_timebase.VfrTests.test_vfr_without_pts_is_refused) ... ok\n\n----------------------------------------------------------------------\nRan 83 tests in 0.089s\n\nOK\n",
+    "outcomes": [
+      {
+        "test": "test_legacy_copies_across_a_long_distance (tests.test_compose.LegacyReplayRuleTests.test_legacy_copies_across_a_long_distance)",
+        "status": "pass"
+      },
+      {
+        "test": "test_legacy_frame_selection_is_round_inclusive (tests.test_compose.LegacyReplayRuleTests.test_legacy_frame_selection_is_round_inclusive)",
+        "status": "pass"
+      },
+      {
+        "test": "test_overlapping_or_invalid_shots_are_rejected (tests.test_compose.ShotMapValidationTests.test_overlapping_or_invalid_shots_are_rejected)",
+        "status": "pass"
+      },
+      {
+        "test": "test_shot_of_returns_none_outside_declared_shots (tests.test_compose.ShotMapValidationTests.test_shot_of_returns_none_outside_declared_shots)",
+        "status": "pass"
+      },
+      {
+        "test": "test_invalid_output_stays_invalid_and_gets_no_fallback_span (tests.test_compose.ThreeStateCompositionTests.test_invalid_output_stays_invalid_and_gets_no_fallback_span)",
+        "status": "pass"
+      },
+      {
+        "test": "test_legacy_mode_applies_the_historical_centred_span_only_when_asked (tests.test_compose.ThreeStateCompositionTests.test_legacy_mode_applies_the_historical_centred_span_only_when_asked)",
+        "status": "pass"
+      },
+      {
+        "test": "test_legal_empty_stays_empty_and_gets_no_fallback_span (tests.test_compose.ThreeStateCompositionTests.test_legal_empty_stays_empty_and_gets_no_fallback_span)",
+        "status": "pass"
+      },
+      {
+        "test": "test_declared_gap_limit_turns_far_within_shot_frames_into_gaps (tests.test_compose.TraceableModeTests.test_declared_gap_limit_turns_far_within_shot_frames_into_gaps)",
+        "status": "pass"
+      },
+      {
+        "test": "test_gap_frames_carry_no_box_and_are_not_dropped (tests.test_compose.TraceableModeTests.test_gap_frames_carry_no_box_and_are_not_dropped)",
+        "status": "pass"
+      },
+      {
+        "test": "test_nonpositive_declared_gap_limit_is_rejected (tests.test_compose.TraceableModeTests.test_nonpositive_declared_gap_limit_is_rejected)",
+        "status": "pass"
+      },
+      {
+        "test": "test_provenance_split_with_declared_shots (tests.test_compose.TraceableModeTests.test_provenance_split_with_declared_shots)",
+        "status": "pass"
+      },
+      {
+        "test": "test_shot_boundaries_are_respected (tests.test_compose.TraceableModeTests.test_shot_boundaries_are_respected)",
+        "status": "pass"
+      },
+      {
+        "test": "test_within_shot_interpolation_requires_a_declared_gap_limit (tests.test_compose.TraceableModeTests.test_within_shot_interpolation_requires_a_declared_gap_limit)",
+        "status": "pass"
+      },
+      {
+        "test": "test_without_a_declared_shot_map_no_box_is_invented (tests.test_compose.TraceableModeTests.test_without_a_declared_shot_map_no_box_is_invented)",
+        "status": "pass"
+      },
+      {
+        "test": "test_both_empty_scores_one_hundred (tests.test_scoring.JointMathTests.test_both_empty_scores_one_hundred)",
+        "status": "pass"
+      },
+      {
+        "test": "test_decomposition_fields (tests.test_scoring.JointMathTests.test_decomposition_fields)",
+        "status": "pass"
+      },
+      {
+        "test": "test_duplicate_frame_is_counted_in_n_pred_and_lowers_the_score (tests.test_scoring.JointMathTests.test_duplicate_frame_is_counted_in_n_pred_and_lowers_the_score)",
+        "status": "pass"
+      },
+      {
+        "test": "test_exact_match_scores_one_hundred (tests.test_scoring.JointMathTests.test_exact_match_scores_one_hundred)",
+        "status": "pass"
+      },
+      {
+        "test": "test_hand_computed_iou_of_one_third (tests.test_scoring.JointMathTests.test_hand_computed_iou_of_one_third)",
+        "status": "pass"
+      },
+      {
+        "test": "test_macro_mean_differs_from_frame_micro_pooling (tests.test_scoring.JointMathTests.test_macro_mean_differs_from_frame_micro_pooling)",
+        "status": "pass"
+      },
+      {
+        "test": "test_one_side_empty_scores_zero_for_that_video (tests.test_scoring.JointMathTests.test_one_side_empty_scores_zero_for_that_video)",
+        "status": "pass"
+      },
+      {
+        "test": "test_partial_time_intersection_uses_the_formula (tests.test_scoring.JointMathTests.test_partial_time_intersection_uses_the_formula)",
+        "status": "pass"
+      },
+      {
+        "test": "test_same_frame_but_zero_spatial_iou_scores_zero (tests.test_scoring.JointMathTests.test_same_frame_but_zero_spatial_iou_scores_zero)",
+        "status": "pass"
+      },
+      {
+        "test": "test_duplicate_reference_frame_is_rejected (tests.test_scoring.ReferenceCoverageTests.test_duplicate_reference_frame_is_rejected)",
+        "status": "pass"
+      },
+      {
+        "test": "test_incomplete_reference_is_not_computable (tests.test_scoring.ReferenceCoverageTests.test_incomplete_reference_is_not_computable)",
+        "status": "pass"
+      },
+      {
+        "test": "test_no_reference_is_not_computable (tests.test_scoring.ReferenceCoverageTests.test_no_reference_is_not_computable)",
+        "status": "pass"
+      },
+      {
+        "test": "test_reference_with_unknown_video_is_rejected (tests.test_scoring.ReferenceCoverageTests.test_reference_with_unknown_video_is_rejected)",
+        "status": "pass"
+      },
+      {
+        "test": "test_sparse_reference_yields_sparse_diagnostic_only (tests.test_scoring.ReferenceCoverageTests.test_sparse_reference_yields_sparse_diagnostic_only)",
+        "status": "pass"
+      },
+      {
+        "test": "test_bool_frame_is_invalid (tests.test_scoring.StrictValidationTests.test_bool_frame_is_invalid)",
+        "status": "pass"
+      },
+      {
+        "test": "test_frame_equals_n_frames_is_invalid (tests.test_scoring.StrictValidationTests.test_frame_equals_n_frames_is_invalid)",
+        "status": "pass"
+      },
+      {
+        "test": "test_invalid_input_is_never_reported_as_zero_or_partial_score (tests.test_scoring.StrictValidationTests.test_invalid_input_is_never_reported_as_zero_or_partial_score)",
+        "status": "pass"
+      },
+      {
+        "test": "test_invalid_json_line_is_invalid (tests.test_scoring.StrictValidationTests.test_invalid_json_line_is_invalid)",
+        "status": "pass"
+      },
+      {
+        "test": "test_missing_prediction_line_is_invalid (tests.test_scoring.StrictValidationTests.test_missing_prediction_line_is_invalid)",
+        "status": "pass"
+      },
+      {
+        "test": "test_nan_box_is_invalid (tests.test_scoring.StrictValidationTests.test_nan_box_is_invalid)",
+        "status": "pass"
+      },
+      {
+        "test": "test_non_object_row_is_invalid (tests.test_scoring.StrictValidationTests.test_non_object_row_is_invalid)",
+        "status": "pass"
+      },
+      {
+        "test": "test_out_of_bounds_box_is_invalid (tests.test_scoring.StrictValidationTests.test_out_of_bounds_box_is_invalid)",
+        "status": "pass"
+      },
+      {
+        "test": "test_vendored_agrees_on_hand_cases (tests.test_scoring.VendoredCrossCheckTests.test_vendored_agrees_on_hand_cases)",
+        "status": "pass"
+      },
+      {
+        "test": "test_invalid_constraints_are_rejected (tests.test_segments.ConstraintAndLabelTests.test_invalid_constraints_are_rejected)",
+        "status": "pass"
+      },
+      {
+        "test": "test_seven_segment_label_is_reported_and_left_untouched (tests.test_segments.ConstraintAndLabelTests.test_seven_segment_label_is_reported_and_left_untouched)",
+        "status": "pass"
+      },
+      {
+        "test": "test_union_length (tests.test_segments.ConstraintAndLabelTests.test_union_length)",
+        "status": "pass"
+      },
+      {
+        "test": "test_legacy_accepts_non_empty (tests.test_segments.LegacyBehaviourTests.test_legacy_accepts_non_empty)",
+        "status": "pass"
+      },
+      {
+        "test": "test_legacy_rejects_too_many_segments (tests.test_segments.LegacyBehaviourTests.test_legacy_rejects_too_many_segments)",
+        "status": "pass"
+      },
+      {
+        "test": "test_legacy_treats_empty_as_failure_and_reports_its_reason (tests.test_segments.LegacyBehaviourTests.test_legacy_treats_empty_as_failure_and_reports_its_reason)",
+        "status": "pass"
+      },
+      {
+        "test": "test_prompt_hides_the_empty_option_when_min_segments_is_positive (tests.test_segments.PromptTests.test_prompt_hides_the_empty_option_when_min_segments_is_positive)",
+        "status": "pass"
+      },
+      {
+        "test": "test_prompt_is_shared_and_configured_by_one_constraint (tests.test_segments.PromptTests.test_prompt_is_shared_and_configured_by_one_constraint)",
+        "status": "pass"
+      },
+      {
+        "test": "test_prompt_rejects_non_positive_duration (tests.test_segments.PromptTests.test_prompt_rejects_non_positive_duration)",
+        "status": "pass"
+      },
+      {
+        "test": "test_ambiguous_multiple_objects_are_invalid (tests.test_segments.ThreeStateTests.test_ambiguous_multiple_objects_are_invalid)",
+        "status": "pass"
+      },
+      {
+        "test": "test_bool_and_non_numeric_bounds_are_invalid (tests.test_segments.ThreeStateTests.test_bool_and_non_numeric_bounds_are_invalid)",
+        "status": "pass"
+      },
+      {
+        "test": "test_duration_tolerance_boundary (tests.test_segments.ThreeStateTests.test_duration_tolerance_boundary)",
+        "status": "pass"
+      },
+      {
+        "test": "test_empty_below_min_segments_is_invalid (tests.test_segments.ThreeStateTests.test_empty_below_min_segments_is_invalid)",
+        "status": "pass"
+      },
+      {
+        "test": "test_empty_output_and_unparseable_text_are_invalid (tests.test_segments.ThreeStateTests.test_empty_output_and_unparseable_text_are_invalid)",
+        "status": "pass"
+      },
+      {
+        "test": "test_explicit_empty_is_valid_empty_not_a_failure (tests.test_segments.ThreeStateTests.test_explicit_empty_is_valid_empty_not_a_failure)",
+        "status": "pass"
+      },
+      {
+        "test": "test_five_intervals_at_the_configured_maximum (tests.test_segments.ThreeStateTests.test_five_intervals_at_the_configured_maximum)",
+        "status": "pass"
+      },
+      {
+        "test": "test_historical_fenced_text_still_parses (tests.test_segments.ThreeStateTests.test_historical_fenced_text_still_parses)",
+        "status": "pass"
+      },
+      {
+        "test": "test_historical_prose_wrapped_object_still_parses (tests.test_segments.ThreeStateTests.test_historical_prose_wrapped_object_still_parses)",
+        "status": "pass"
+      },
+      {
+        "test": "test_nan_and_infinity_are_invalid (tests.test_segments.ThreeStateTests.test_nan_and_infinity_are_invalid)",
+        "status": "pass"
+      },
+      {
+        "test": "test_overlapping_segments_warn_but_stay_valid_and_sorted (tests.test_segments.ThreeStateTests.test_overlapping_segments_warn_but_stay_valid_and_sorted)",
+        "status": "pass"
+      },
+      {
+        "test": "test_reversed_interval_is_invalid (tests.test_segments.ThreeStateTests.test_reversed_interval_is_invalid)",
+        "status": "pass"
+      },
+      {
+        "test": "test_single_interval_is_valid_nonempty (tests.test_segments.ThreeStateTests.test_single_interval_is_valid_nonempty)",
+        "status": "pass"
+      },
+      {
+        "test": "test_six_and_seven_intervals_exceed_the_configured_maximum (tests.test_segments.ThreeStateTests.test_six_and_seven_intervals_exceed_the_configured_maximum)",
+        "status": "pass"
+      },
+      {
+        "test": "test_zero_maximum_rejects_every_interval (tests.test_segments.ThreeStateTests.test_zero_maximum_rejects_every_interval)",
+        "status": "pass"
+      },
+      {
+        "test": "test_intervals_and_merge (tests.test_timebase.HelperTests.test_intervals_and_merge)",
+        "status": "pass"
+      },
+      {
+        "test": "test_origin_offset_is_zero_for_exact_multiples_and_subframe_otherwise (tests.test_timebase.HelperTests.test_origin_offset_is_zero_for_exact_multiples_and_subframe_otherwise)",
+        "status": "pass"
+      },
+      {
+        "test": "test_ceil_halfopen_matches_timestamp_policy_without_window_offset (tests.test_timebase.LegacyConventionTests.test_ceil_halfopen_matches_timestamp_policy_without_window_offset)",
+        "status": "pass"
+      },
+      {
+        "test": "test_compare_conventions_reports_all_three (tests.test_timebase.LegacyConventionTests.test_compare_conventions_reports_all_three)",
+        "status": "pass"
+      },
+      {
+        "test": "test_legacy_invalid_input_raises_instead_of_guessing (tests.test_timebase.LegacyConventionTests.test_legacy_invalid_input_raises_instead_of_guessing)",
+        "status": "pass"
+      },
+      {
+        "test": "test_round_inclusive_adds_the_endpoint_frame (tests.test_timebase.LegacyConventionTests.test_round_inclusive_adds_the_endpoint_frame)",
+        "status": "pass"
+      },
+      {
+        "test": "test_round_inclusive_clamps_to_n_minus_1 (tests.test_timebase.LegacyConventionTests.test_round_inclusive_clamps_to_n_minus_1)",
+        "status": "pass"
+      },
+      {
+        "test": "test_adjacent_windows_do_not_overlap_or_gap (tests.test_timebase.TimestampHalfOpenTests.test_adjacent_windows_do_not_overlap_or_gap)",
+        "status": "pass"
+      },
+      {
+        "test": "test_illegal_frame_indices_are_rejected (tests.test_timebase.TimestampHalfOpenTests.test_illegal_frame_indices_are_rejected)",
+        "status": "pass"
+      },
+      {
+        "test": "test_integer_fps_one_second_is_30_frames (tests.test_timebase.TimestampHalfOpenTests.test_integer_fps_one_second_is_30_frames)",
+        "status": "pass"
+      },
+      {
+        "test": "test_interval_past_the_end_is_empty (tests.test_timebase.TimestampHalfOpenTests.test_interval_past_the_end_is_empty)",
+        "status": "pass"
+      },
+      {
+        "test": "test_non_integer_fps_23976 (tests.test_timebase.TimestampHalfOpenTests.test_non_integer_fps_23976)",
+        "status": "pass"
+      },
+      {
+        "test": "test_non_integer_fps_2997 (tests.test_timebase.TimestampHalfOpenTests.test_non_integer_fps_2997)",
+        "status": "pass"
+      },
+      {
+        "test": "test_non_positive_fps_and_frame_count_are_rejected (tests.test_timebase.TimestampHalfOpenTests.test_non_positive_fps_and_frame_count_are_rejected)",
+        "status": "pass"
+      },
+      {
+        "test": "test_reversed_or_equal_interval_is_rejected (tests.test_timebase.TimestampHalfOpenTests.test_reversed_or_equal_interval_is_rejected)",
+        "status": "pass"
+      },
+      {
+        "test": "test_sampling_origin_frame_is_clamped (tests.test_timebase.TimestampHalfOpenTests.test_sampling_origin_frame_is_clamped)",
+        "status": "pass"
+      },
+      {
+        "test": "test_video_last_frame_is_inclusive_of_n_minus_1 (tests.test_timebase.TimestampHalfOpenTests.test_video_last_frame_is_inclusive_of_n_minus_1)",
+        "status": "pass"
+      },
+      {
+        "test": "test_window_origin_offset_changes_absolute_interval (tests.test_timebase.TimestampHalfOpenTests.test_window_origin_offset_changes_absolute_interval)",
+        "status": "pass"
+      },
+      {
+        "test": "test_explicit_pts_is_honoured_half_open (tests.test_timebase.VfrTests.test_explicit_pts_is_honoured_half_open)",
+        "status": "pass"
+      },
+      {
+        "test": "test_vfr_frame_indices_are_bounded (tests.test_timebase.VfrTests.test_vfr_frame_indices_are_bounded)",
+        "status": "pass"
+      },
+      {
+        "test": "test_vfr_rejects_non_monotonic_and_non_finite_pts (tests.test_timebase.VfrTests.test_vfr_rejects_non_monotonic_and_non_finite_pts)",
+        "status": "pass"
+      },
+      {
+        "test": "test_vfr_without_pts_is_refused (tests.test_timebase.VfrTests.test_vfr_without_pts_is_refused)",
+        "status": "pass"
+      }
+    ],
+    "ok": true
+  },
+  "replay_integration_checks": {
+    "legacy_rule_reproduces_recorded_package": {
+      "videos_identical_including_boxes": 174,
+      "videos_total": 174,
+      "frame_count_mismatches": 0,
+      "box_mismatch_count": 0,
+      "packaged_frame_count": 40568,
+      "pass": true
+    },
+    "recorded_window_text_parse_consistency": {
+      "windows": 203,
+      "matched": 203,
+      "pass": true
+    },
+    "new_policy_reports_frame_set_difference": {
+      "frames_new_policy": 40384,
+      "frames_legacy_policy": 40568,
+      "frames_added_total": 1,
+      "frames_removed_total": 185,
+      "non_zero_origin_offsets": 11,
+      "pass": true
+    },
+    "new_spatial_mode_reports_gaps_instead_of_copying": {
+      "needs_spatial_inference": 3200,
+      "legacy_nearest_copies": 3243,
+      "pass": true
+    },
+    "protected_inputs_unchanged": {
+      "problems": [],
+      "pass": true
+    }
+  },
+  "label_cardinality_snapshot": {
+    "checked": false,
+    "reason": "the 818-row split files live only on the remote workspace and P1a must not connect remotely; the 7-segment row is recorded in phase0 evidence (split_manifest.json max n_segments = 7 in train)",
+    "phase0_evidence": "reports/temporal_round5/evidence/split_manifest.json",
+    "phase0_evidence_exists": true
+  },
+  "wall_seconds": 1.17
+}

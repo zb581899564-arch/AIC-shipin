@@ -1,0 +1,656 @@
+{
+  "GPU_used": false,
+  "checked_utc": "2026-10-05T14:41:54.498402+00:00",
+  "collector_sha256": "77182e1658f0b0b23e7c552956c3b7c888d931c6ac9013551fee05cfcd9ed185",
+  "images_exported_or_displayed": false,
+  "input_manifest_sha256": "7b3e187451eb15f80647b4441a4a41f030f4be1438a95ef5b7982a53554f153a",
+  "labels_read": false,
+  "models_run": false,
+  "numeric_worker_sha256": "0ab8632ded07c7b3c13c362845d7e46d68f67d721ccd2bd74eff58bb0bd81638",
+  "records": [
+    {
+      "numeric_evidence_path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/nontest_clock_numeric_01/qvh_000056_9x16.numeric.json",
+      "numeric_evidence_sha256": "cd964a12b983b3f0c1acec8e1d2295445153098e589d888abc472309ffbf7580",
+      "source_hash_verified_before_and_after": true,
+      "source_sha256": "b255c19a7aec1f2544f700e25d0b721879f3fa23349349158581adacf78667bc",
+      "v3_audit": {
+        "cfr_tolerance_changed": false,
+        "contract_authority": "LOCAL_SOURCE_FRAME_IDENTITY_NOT_OFFICIAL_TIMESTAMP_ORIGIN_REQUIREMENT",
+        "decord_all_frame_binding_checked": true,
+        "decord_all_frame_timestamp_count": 3750,
+        "decord_clock_mode": "RAW_AND_RELATIVE_EQUIVALENT_ZERO_ORIGIN",
+        "decord_ends_strictly_monotonic": true,
+        "decord_max_frame_duration_error_sec": 8.544921874999167e-06,
+        "decord_max_normalized_cfr_error_sec": 7.32421875682121e-06,
+        "decord_max_raw_binding_error_sec": 7.32421875682121e-06,
+        "decord_max_relative_binding_error_sec": 7.32421875682121e-06,
+        "decord_probe_indices": [
+          0,
+          1,
+          2,
+          1875,
+          3747,
+          3748,
+          3749
+        ],
+        "decord_probes": {
+          "0": [
+            0.0,
+            0.03999999910593033
+          ],
+          "1": [
+            0.03999999910593033,
+            0.07999999821186066
+          ],
+          "2": [
+            0.07999999821186066,
+            0.11999999731779099
+          ],
+          "1875": [
+            75.0,
+            75.04000091552734
+          ],
+          "3747": [
+            149.8800048828125,
+            149.9199981689453
+          ],
+          "3748": [
+            149.9199981689453,
+            149.9600067138672
+          ],
+          "3749": [
+            149.9600067138672,
+            150.0
+          ]
+        },
+        "decord_raw_binding_tolerance_sec": 7.8125e-05,
+        "decord_raw_clock_frame_precision_resolvable": true,
+        "decord_relative_binding_tolerance_sec": 7.8125e-05,
+        "decord_relative_clock_frame_precision_resolvable": true,
+        "decord_starts_strictly_monotonic": true,
+        "failures": [],
+        "max_normalized_cfr_error_sec": 0.0,
+        "media_rewritten": false,
+        "one_frame_tolerance_sec": 0.040001,
+        "origin_contract": "SOURCE_RELATIVE_ZERO_IS_SOURCE_FRAME_0_RAW_PTS_MINUS_FIRST_FRAME_PTS",
+        "pass": true,
+        "raw_first_pts_sec": 0.0,
+        "raw_pts_count": 3750,
+        "raw_pts_numeric": true,
+        "raw_pts_strictly_monotonic": true,
+        "source_frame_to_legacy_relative_time": "source_relative_time = frame_index / registered_fps",
+        "source_frame_to_raw_pts": "raw_pts = raw_first_pts + source_relative_pts",
+        "source_relative_first_pts_sec": 0.0,
+        "stream_origin_binding_tolerance_sec": 7.8125e-05,
+        "stream_start_metadata_known": true,
+        "stream_start_time_sec": 0.0,
+        "stream_time_base": "1/12800"
+      },
+      "video_id": "qvh_000056_9x16"
+    },
+    {
+      "numeric_evidence_path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/nontest_clock_numeric_01/qvh_000063_9x16.numeric.json",
+      "numeric_evidence_sha256": "7a7d2615cb598b399575cfc9c9c316056229c9dc2fec45fc7711d89be8b48047",
+      "source_hash_verified_before_and_after": true,
+      "source_sha256": "1153519d4eff8640e8fa8c83c481b0f46d37b9b32d1053e1056c156296ae2c37",
+      "v3_audit": {
+        "cfr_tolerance_changed": false,
+        "contract_authority": "LOCAL_SOURCE_FRAME_IDENTITY_NOT_OFFICIAL_TIMESTAMP_ORIGIN_REQUIREMENT",
+        "decord_all_frame_binding_checked": true,
+        "decord_all_frame_timestamp_count": 4496,
+        "decord_clock_mode": "RAW_AND_RELATIVE_EQUIVALENT_ZERO_ORIGIN",
+        "decord_ends_strictly_monotonic": true,
+        "decord_max_frame_duration_error_sec": 1.0953776041669472e-05,
+        "decord_max_normalized_cfr_error_sec": 7.61718749231477e-06,
+        "decord_max_raw_binding_error_sec": 7.61718749231477e-06,
+        "decord_max_relative_binding_error_sec": 7.61718749231477e-06,
+        "decord_probe_indices": [
+          0,
+          1,
+          2,
+          2248,
+          4493,
+          4494,
+          4495
+        ],
+        "decord_probes": {
+          "0": [
+            0.0,
+            0.03336666524410248
+          ],
+          "1": [
+            0.03336666524410248,
+            0.06673333048820496
+          ],
+          "2": [
+            0.06673333048820496,
+            0.10010000318288803
+          ],
+          "2248": [
+            75.00827026367188,
+            75.04163360595703
+          ],
+          "4493": [
+            149.9164276123047,
+            149.94979858398438
+          ],
+          "4494": [
+            149.94979858398438,
+            149.98316955566406
+          ],
+          "4495": [
+            149.98316955566406,
+            150.01654052734375
+          ]
+        },
+        "decord_raw_binding_tolerance_sec": 3.57587734858195e-05,
+        "decord_raw_clock_frame_precision_resolvable": true,
+        "decord_relative_binding_tolerance_sec": 3.57587734858195e-05,
+        "decord_relative_clock_frame_precision_resolvable": true,
+        "decord_starts_strictly_monotonic": true,
+        "failures": [],
+        "max_normalized_cfr_error_sec": 2.842170943040401e-14,
+        "media_rewritten": false,
+        "one_frame_tolerance_sec": 0.03336766666666667,
+        "origin_contract": "SOURCE_RELATIVE_ZERO_IS_SOURCE_FRAME_0_RAW_PTS_MINUS_FIRST_FRAME_PTS",
+        "pass": true,
+        "raw_first_pts_sec": 0.0,
+        "raw_pts_count": 4496,
+        "raw_pts_numeric": true,
+        "raw_pts_strictly_monotonic": true,
+        "source_frame_to_legacy_relative_time": "source_relative_time = frame_index / registered_fps",
+        "source_frame_to_raw_pts": "raw_pts = raw_first_pts + source_relative_pts",
+        "source_relative_first_pts_sec": 0.0,
+        "stream_origin_binding_tolerance_sec": 3.3333333333333335e-05,
+        "stream_start_metadata_known": true,
+        "stream_start_time_sec": 0.0,
+        "stream_time_base": "1/30000"
+      },
+      "video_id": "qvh_000063_9x16"
+    },
+    {
+      "numeric_evidence_path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/nontest_clock_numeric_01/qvh_000161_9x16.numeric.json",
+      "numeric_evidence_sha256": "94e8e62e42d77cb352f2f85daa8f1c22e232fb33e1a4336a6dce2a652707570a",
+      "source_hash_verified_before_and_after": true,
+      "source_sha256": "c0296c590c7c242ccda825027777f14cdf5b4d7353593df50d1c88545a90bc11",
+      "v3_audit": {
+        "cfr_tolerance_changed": false,
+        "contract_authority": "LOCAL_SOURCE_FRAME_IDENTITY_NOT_OFFICIAL_TIMESTAMP_ORIGIN_REQUIREMENT",
+        "decord_all_frame_binding_checked": true,
+        "decord_all_frame_timestamp_count": 4500,
+        "decord_clock_mode": "RAW_AND_RELATIVE_EQUIVALENT_ZERO_ORIGIN",
+        "decord_ends_strictly_monotonic": true,
+        "decord_max_frame_duration_error_sec": 8.13802083333287e-06,
+        "decord_max_normalized_cfr_error_sec": 7.120768231061447e-06,
+        "decord_max_raw_binding_error_sec": 7.120768231061447e-06,
+        "decord_max_relative_binding_error_sec": 7.120768231061447e-06,
+        "decord_probe_indices": [
+          0,
+          1,
+          2,
+          2250,
+          4497,
+          4498,
+          4499
+        ],
+        "decord_probes": {
+          "0": [
+            0.0,
+            0.03333333507180214
+          ],
+          "1": [
+            0.03333333507180214,
+            0.06666667014360428
+          ],
+          "2": [
+            0.06666667014360428,
+            0.10000000149011612
+          ],
+          "2250": [
+            75.0,
+            75.03333282470703
+          ],
+          "4497": [
+            149.89999389648438,
+            149.93333435058594
+          ],
+          "4498": [
+            149.93333435058594,
+            149.96665954589844
+          ],
+          "4499": [
+            149.96665954589844,
+            150.0
+          ]
+        },
+        "decord_raw_binding_tolerance_sec": 6.510416666666667e-05,
+        "decord_raw_clock_frame_precision_resolvable": true,
+        "decord_relative_binding_tolerance_sec": 6.510416666666667e-05,
+        "decord_relative_clock_frame_precision_resolvable": true,
+        "decord_starts_strictly_monotonic": true,
+        "failures": [],
+        "max_normalized_cfr_error_sec": 0.0,
+        "media_rewritten": false,
+        "one_frame_tolerance_sec": 0.033334333333333334,
+        "origin_contract": "SOURCE_RELATIVE_ZERO_IS_SOURCE_FRAME_0_RAW_PTS_MINUS_FIRST_FRAME_PTS",
+        "pass": true,
+        "raw_first_pts_sec": 0.0,
+        "raw_pts_count": 4500,
+        "raw_pts_numeric": true,
+        "raw_pts_strictly_monotonic": true,
+        "source_frame_to_legacy_relative_time": "source_relative_time = frame_index / registered_fps",
+        "source_frame_to_raw_pts": "raw_pts = raw_first_pts + source_relative_pts",
+        "source_relative_first_pts_sec": 0.0,
+        "stream_origin_binding_tolerance_sec": 6.510416666666667e-05,
+        "stream_start_metadata_known": true,
+        "stream_start_time_sec": 0.0,
+        "stream_time_base": "1/15360"
+      },
+      "video_id": "qvh_000161_9x16"
+    },
+    {
+      "numeric_evidence_path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/nontest_clock_numeric_01/qvh_000202_9x16.numeric.json",
+      "numeric_evidence_sha256": "e77a94c65728b6aa79a290d21d99ebf3707a5a4c4bdd876a52eb9540378003af",
+      "source_hash_verified_before_and_after": true,
+      "source_sha256": "a3d5ae5dca648aef9694afe7a1387a037c2d57ee2345df0af6ce5f50e6abe28a",
+      "v3_audit": {
+        "cfr_tolerance_changed": false,
+        "contract_authority": "LOCAL_SOURCE_FRAME_IDENTITY_NOT_OFFICIAL_TIMESTAMP_ORIGIN_REQUIREMENT",
+        "decord_all_frame_binding_checked": true,
+        "decord_all_frame_timestamp_count": 3131,
+        "decord_clock_mode": "RAW_AND_RELATIVE_EQUIVALENT_ZERO_ORIGIN",
+        "decord_ends_strictly_monotonic": true,
+        "decord_max_frame_duration_error_sec": 6.713867187500833e-06,
+        "decord_max_normalized_cfr_error_sec": 3.662109378410605e-06,
+        "decord_max_raw_binding_error_sec": 3.662109378410605e-06,
+        "decord_max_relative_binding_error_sec": 3.662109378410605e-06,
+        "decord_probe_indices": [
+          0,
+          1,
+          2,
+          1565,
+          3128,
+          3129,
+          3130
+        ],
+        "decord_probes": {
+          "0": [
+            0.0,
+            0.03999999910593033
+          ],
+          "1": [
+            0.03999999910593033,
+            0.07999999821186066
+          ],
+          "2": [
+            0.07999999821186066,
+            0.11999999731779099
+          ],
+          "1565": [
+            62.599998474121094,
+            62.63999938964844
+          ],
+          "3128": [
+            125.12000274658203,
+            125.16000366210938
+          ],
+          "3129": [
+            125.16000366210938,
+            125.19999694824219
+          ],
+          "3130": [
+            125.19999694824219,
+            125.23999786376953
+          ]
+        },
+        "decord_raw_binding_tolerance_sec": 7.8125e-05,
+        "decord_raw_clock_frame_precision_resolvable": true,
+        "decord_relative_binding_tolerance_sec": 7.8125e-05,
+        "decord_relative_clock_frame_precision_resolvable": true,
+        "decord_starts_strictly_monotonic": true,
+        "failures": [],
+        "max_normalized_cfr_error_sec": 0.0,
+        "media_rewritten": false,
+        "one_frame_tolerance_sec": 0.040001,
+        "origin_contract": "SOURCE_RELATIVE_ZERO_IS_SOURCE_FRAME_0_RAW_PTS_MINUS_FIRST_FRAME_PTS",
+        "pass": true,
+        "raw_first_pts_sec": 0.0,
+        "raw_pts_count": 3131,
+        "raw_pts_numeric": true,
+        "raw_pts_strictly_monotonic": true,
+        "source_frame_to_legacy_relative_time": "source_relative_time = frame_index / registered_fps",
+        "source_frame_to_raw_pts": "raw_pts = raw_first_pts + source_relative_pts",
+        "source_relative_first_pts_sec": 0.0,
+        "stream_origin_binding_tolerance_sec": 7.8125e-05,
+        "stream_start_metadata_known": true,
+        "stream_start_time_sec": 0.0,
+        "stream_time_base": "1/12800"
+      },
+      "video_id": "qvh_000202_9x16"
+    },
+    {
+      "numeric_evidence_path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/nontest_clock_numeric_01/qvh_000213_9x16.numeric.json",
+      "numeric_evidence_sha256": "cd964a12b983b3f0c1acec8e1d2295445153098e589d888abc472309ffbf7580",
+      "source_hash_verified_before_and_after": true,
+      "source_sha256": "7eb1b112f5ec458606ef66881f8a3d1d52348604844464aa2f08d969e9f80e99",
+      "v3_audit": {
+        "cfr_tolerance_changed": false,
+        "contract_authority": "LOCAL_SOURCE_FRAME_IDENTITY_NOT_OFFICIAL_TIMESTAMP_ORIGIN_REQUIREMENT",
+        "decord_all_frame_binding_checked": true,
+        "decord_all_frame_timestamp_count": 3750,
+        "decord_clock_mode": "RAW_AND_RELATIVE_EQUIVALENT_ZERO_ORIGIN",
+        "decord_ends_strictly_monotonic": true,
+        "decord_max_frame_duration_error_sec": 8.544921874999167e-06,
+        "decord_max_normalized_cfr_error_sec": 7.32421875682121e-06,
+        "decord_max_raw_binding_error_sec": 7.32421875682121e-06,
+        "decord_max_relative_binding_error_sec": 7.32421875682121e-06,
+        "decord_probe_indices": [
+          0,
+          1,
+          2,
+          1875,
+          3747,
+          3748,
+          3749
+        ],
+        "decord_probes": {
+          "0": [
+            0.0,
+            0.03999999910593033
+          ],
+          "1": [
+            0.03999999910593033,
+            0.07999999821186066
+          ],
+          "2": [
+            0.07999999821186066,
+            0.11999999731779099
+          ],
+          "1875": [
+            75.0,
+            75.04000091552734
+          ],
+          "3747": [
+            149.8800048828125,
+            149.9199981689453
+          ],
+          "3748": [
+            149.9199981689453,
+            149.9600067138672
+          ],
+          "3749": [
+            149.9600067138672,
+            150.0
+          ]
+        },
+        "decord_raw_binding_tolerance_sec": 7.8125e-05,
+        "decord_raw_clock_frame_precision_resolvable": true,
+        "decord_relative_binding_tolerance_sec": 7.8125e-05,
+        "decord_relative_clock_frame_precision_resolvable": true,
+        "decord_starts_strictly_monotonic": true,
+        "failures": [],
+        "max_normalized_cfr_error_sec": 0.0,
+        "media_rewritten": false,
+        "one_frame_tolerance_sec": 0.040001,
+        "origin_contract": "SOURCE_RELATIVE_ZERO_IS_SOURCE_FRAME_0_RAW_PTS_MINUS_FIRST_FRAME_PTS",
+        "pass": true,
+        "raw_first_pts_sec": 0.0,
+        "raw_pts_count": 3750,
+        "raw_pts_numeric": true,
+        "raw_pts_strictly_monotonic": true,
+        "source_frame_to_legacy_relative_time": "source_relative_time = frame_index / registered_fps",
+        "source_frame_to_raw_pts": "raw_pts = raw_first_pts + source_relative_pts",
+        "source_relative_first_pts_sec": 0.0,
+        "stream_origin_binding_tolerance_sec": 7.8125e-05,
+        "stream_start_metadata_known": true,
+        "stream_start_time_sec": 0.0,
+        "stream_time_base": "1/12800"
+      },
+      "video_id": "qvh_000213_9x16"
+    },
+    {
+      "numeric_evidence_path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/nontest_clock_numeric_01/qvh_000526_9x16.numeric.json",
+      "numeric_evidence_sha256": "cd964a12b983b3f0c1acec8e1d2295445153098e589d888abc472309ffbf7580",
+      "source_hash_verified_before_and_after": true,
+      "source_sha256": "5ee1e374632a73cd17903a6acd4c2664b66c3a5b9aae20b96e1cd400133df71e",
+      "v3_audit": {
+        "cfr_tolerance_changed": false,
+        "contract_authority": "LOCAL_SOURCE_FRAME_IDENTITY_NOT_OFFICIAL_TIMESTAMP_ORIGIN_REQUIREMENT",
+        "decord_all_frame_binding_checked": true,
+        "decord_all_frame_timestamp_count": 3750,
+        "decord_clock_mode": "RAW_AND_RELATIVE_EQUIVALENT_ZERO_ORIGIN",
+        "decord_ends_strictly_monotonic": true,
+        "decord_max_frame_duration_error_sec": 8.544921874999167e-06,
+        "decord_max_normalized_cfr_error_sec": 7.32421875682121e-06,
+        "decord_max_raw_binding_error_sec": 7.32421875682121e-06,
+        "decord_max_relative_binding_error_sec": 7.32421875682121e-06,
+        "decord_probe_indices": [
+          0,
+          1,
+          2,
+          1875,
+          3747,
+          3748,
+          3749
+        ],
+        "decord_probes": {
+          "0": [
+            0.0,
+            0.03999999910593033
+          ],
+          "1": [
+            0.03999999910593033,
+            0.07999999821186066
+          ],
+          "2": [
+            0.07999999821186066,
+            0.11999999731779099
+          ],
+          "1875": [
+            75.0,
+            75.04000091552734
+          ],
+          "3747": [
+            149.8800048828125,
+            149.9199981689453
+          ],
+          "3748": [
+            149.9199981689453,
+            149.9600067138672
+          ],
+          "3749": [
+            149.9600067138672,
+            150.0
+          ]
+        },
+        "decord_raw_binding_tolerance_sec": 7.8125e-05,
+        "decord_raw_clock_frame_precision_resolvable": true,
+        "decord_relative_binding_tolerance_sec": 7.8125e-05,
+        "decord_relative_clock_frame_precision_resolvable": true,
+        "decord_starts_strictly_monotonic": true,
+        "failures": [],
+        "max_normalized_cfr_error_sec": 0.0,
+        "media_rewritten": false,
+        "one_frame_tolerance_sec": 0.040001,
+        "origin_contract": "SOURCE_RELATIVE_ZERO_IS_SOURCE_FRAME_0_RAW_PTS_MINUS_FIRST_FRAME_PTS",
+        "pass": true,
+        "raw_first_pts_sec": 0.0,
+        "raw_pts_count": 3750,
+        "raw_pts_numeric": true,
+        "raw_pts_strictly_monotonic": true,
+        "source_frame_to_legacy_relative_time": "source_relative_time = frame_index / registered_fps",
+        "source_frame_to_raw_pts": "raw_pts = raw_first_pts + source_relative_pts",
+        "source_relative_first_pts_sec": 0.0,
+        "stream_origin_binding_tolerance_sec": 7.8125e-05,
+        "stream_start_metadata_known": true,
+        "stream_start_time_sec": 0.0,
+        "stream_time_base": "1/12800"
+      },
+      "video_id": "qvh_000526_9x16"
+    },
+    {
+      "numeric_evidence_path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/nontest_clock_numeric_01/qvh_000539_9x16.numeric.json",
+      "numeric_evidence_sha256": "caa44e404e6f26de1367686467c4cf8aaac6782a4fbd29d7b3cf946fac6eb036",
+      "source_hash_verified_before_and_after": true,
+      "source_sha256": "7c5826145365e339f77f58af353e37a92823ad166e8cebb6d2a49a111709ebf0",
+      "v3_audit": {
+        "cfr_tolerance_changed": false,
+        "contract_authority": "LOCAL_SOURCE_FRAME_IDENTITY_NOT_OFFICIAL_TIMESTAMP_ORIGIN_REQUIREMENT",
+        "decord_all_frame_binding_checked": true,
+        "decord_all_frame_timestamp_count": 3600,
+        "decord_clock_mode": "RAW_AND_RELATIVE_EQUIVALENT_ZERO_ORIGIN",
+        "decord_ends_strictly_monotonic": true,
+        "decord_max_frame_duration_error_sec": 1.0172526041664354e-05,
+        "decord_max_normalized_cfr_error_sec": 5.0862630303072365e-06,
+        "decord_max_raw_binding_error_sec": 5.0862630303072365e-06,
+        "decord_max_relative_binding_error_sec": 5.0862630303072365e-06,
+        "decord_probe_indices": [
+          0,
+          1,
+          2,
+          1800,
+          3597,
+          3598,
+          3599
+        ],
+        "decord_probes": {
+          "0": [
+            0.0,
+            0.0416666679084301
+          ],
+          "1": [
+            0.0416666679084301,
+            0.0833333358168602
+          ],
+          "2": [
+            0.0833333358168602,
+            0.125
+          ],
+          "1800": [
+            75.0,
+            75.04166412353516
+          ],
+          "3597": [
+            149.875,
+            149.9166717529297
+          ],
+          "3598": [
+            149.9166717529297,
+            149.9583282470703
+          ],
+          "3599": [
+            149.9583282470703,
+            150.0
+          ]
+        },
+        "decord_raw_binding_tolerance_sec": 8.138020833333333e-05,
+        "decord_raw_clock_frame_precision_resolvable": true,
+        "decord_relative_binding_tolerance_sec": 8.138020833333333e-05,
+        "decord_relative_clock_frame_precision_resolvable": true,
+        "decord_starts_strictly_monotonic": true,
+        "failures": [],
+        "max_normalized_cfr_error_sec": 0.0,
+        "media_rewritten": false,
+        "one_frame_tolerance_sec": 0.041667666666666665,
+        "origin_contract": "SOURCE_RELATIVE_ZERO_IS_SOURCE_FRAME_0_RAW_PTS_MINUS_FIRST_FRAME_PTS",
+        "pass": true,
+        "raw_first_pts_sec": 0.0,
+        "raw_pts_count": 3600,
+        "raw_pts_numeric": true,
+        "raw_pts_strictly_monotonic": true,
+        "source_frame_to_legacy_relative_time": "source_relative_time = frame_index / registered_fps",
+        "source_frame_to_raw_pts": "raw_pts = raw_first_pts + source_relative_pts",
+        "source_relative_first_pts_sec": 0.0,
+        "stream_origin_binding_tolerance_sec": 8.138020833333333e-05,
+        "stream_start_metadata_known": true,
+        "stream_start_time_sec": 0.0,
+        "stream_time_base": "1/12288"
+      },
+      "video_id": "qvh_000539_9x16"
+    },
+    {
+      "numeric_evidence_path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/nontest_clock_numeric_01/qvh_000878_9x16.numeric.json",
+      "numeric_evidence_sha256": "95ee370f8b8b4fdffc1a2408d49753935ebcc0657596f9700df062e2430bb21d",
+      "source_hash_verified_before_and_after": true,
+      "source_sha256": "ea0a289d3167e75ee949d323d34ffa9662d6b14269c47d7db3d19652acdd1020",
+      "v3_audit": {
+        "cfr_tolerance_changed": false,
+        "contract_authority": "LOCAL_SOURCE_FRAME_IDENTITY_NOT_OFFICIAL_TIMESTAMP_ORIGIN_REQUIREMENT",
+        "decord_all_frame_binding_checked": true,
+        "decord_all_frame_timestamp_count": 3597,
+        "decord_clock_mode": "RAW_AND_RELATIVE_EQUIVALENT_ZERO_ORIGIN",
+        "decord_ends_strictly_monotonic": true,
+        "decord_max_frame_duration_error_sec": 9.19596354166663e-06,
+        "decord_max_normalized_cfr_error_sec": 7.609049475831853e-06,
+        "decord_max_raw_binding_error_sec": 7.609049475831853e-06,
+        "decord_max_relative_binding_error_sec": 7.609049475831853e-06,
+        "decord_probe_indices": [
+          0,
+          1,
+          2,
+          1798,
+          3594,
+          3595,
+          3596
+        ],
+        "decord_probes": {
+          "0": [
+            0.0,
+            0.0417083315551281
+          ],
+          "1": [
+            0.0417083315551281,
+            0.0834166631102562
+          ],
+          "2": [
+            0.0834166631102562,
+            0.1251250058412552
+          ],
+          "1798": [
+            74.99158477783203,
+            75.03329467773438
+          ],
+          "3594": [
+            149.89974975585938,
+            149.9414520263672
+          ],
+          "3595": [
+            149.9414520263672,
+            149.98316955566406
+          ],
+          "3596": [
+            149.98316955566406,
+            150.02487182617188
+          ]
+        },
+        "decord_raw_binding_tolerance_sec": 4.1666666666666665e-05,
+        "decord_raw_clock_frame_precision_resolvable": true,
+        "decord_relative_binding_tolerance_sec": 4.1666666666666665e-05,
+        "decord_relative_clock_frame_precision_resolvable": true,
+        "decord_starts_strictly_monotonic": true,
+        "failures": [],
+        "max_normalized_cfr_error_sec": 2.842170943040401e-14,
+        "media_rewritten": false,
+        "one_frame_tolerance_sec": 0.041709333333333334,
+        "origin_contract": "SOURCE_RELATIVE_ZERO_IS_SOURCE_FRAME_0_RAW_PTS_MINUS_FIRST_FRAME_PTS",
+        "pass": true,
+        "raw_first_pts_sec": 0.0,
+        "raw_pts_count": 3597,
+        "raw_pts_numeric": true,
+        "raw_pts_strictly_monotonic": true,
+        "source_frame_to_legacy_relative_time": "source_relative_time = frame_index / registered_fps",
+        "source_frame_to_raw_pts": "raw_pts = raw_first_pts + source_relative_pts",
+        "source_relative_first_pts_sec": 0.0,
+        "stream_origin_binding_tolerance_sec": 4.1666666666666665e-05,
+        "stream_start_metadata_known": true,
+        "stream_start_time_sec": 0.0,
+        "stream_time_base": "1/24000"
+      },
+      "video_id": "qvh_000878_9x16"
+    }
+  ],
+  "schema": "aic_nontest_numeric_clock_v1",
+  "source_bytes_modified": false,
+  "source_count": 8,
+  "status": "COLLECTED_NOT_ADMISSION"
+}

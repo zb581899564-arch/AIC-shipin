@@ -1,0 +1,17 @@
+{
+  "status": "STOP_AUTOPILOT_PRESERVED",
+  "utc": "2026-10-08T05:46:19.536560+00:00",
+  "last_progress": {
+    "stage": "RUNNING_TEACHER_PILOT",
+    "utc": "2026-10-08T05:43:55.544268+00:00",
+    "pid": 480562,
+    "uploaded": false,
+    "automatic_return": false,
+    "maximum_seconds": 14400,
+    "planned_output_bytes": 13726801920
+  },
+  "error_type": "RuntimeError",
+  "reason": "stage teacher_pilot stopped: {\"status\": \"STOP_REAL_PILOT_PRESERVED\", \"reason\": \"every KEEP segment needs a selected physical evidence frame\", \"completed_review_count\": 0, \"optimizer_steps\": 0, \"no_labels_salvaged_or_removed\": true, \"utc\": \"2026-10-08T05:46:16.141606+00:00\"}",
+  "uploaded": false,
+  "automatic_return": false
+}

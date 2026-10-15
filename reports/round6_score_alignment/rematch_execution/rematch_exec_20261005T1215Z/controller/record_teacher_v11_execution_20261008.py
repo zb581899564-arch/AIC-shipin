@@ -40,6 +40,16 @@ print(json.dumps({n:base64.b64encode((p/n).read_bytes()).decode() for n in
     handoff = (snap.get('v8_stage_receipts') or {}).get('legacy_handoff') or {}
     real_format = (snap.get('v8_stage_receipts') or {}).get('new_format_real_probe') or {}
     pilot_progress = snap.get('pilot_progress') or {}
+    window_counts = snap.get('window_counts') or {}
+    review_counts = (snap.get('review_counts') or {}).get('teacher_01') or {}
+    pilot_terminal = snap.get('pilot_completion') or {}
+    pilot_state = (f"小试实际终态 `{pilot_terminal.get('status','MISSING_STATUS')}`，已完成标注{sum((pilot_terminal.get('counts') or {}).values())}/24、复查{sum((pilot_terminal.get('support_class_counts') or {}).values())}/24；弱支持统计 `{pilot_terminal.get('support_class_counts',{})}`，路由 `{pilot_terminal.get('route_decision','MISSING_ROUTE')}`。同教师一致性仍非真值，后续完整160复查和学生训练准入门保持。" if pilot_terminal else
+        f"当前原24窗已全部完成真实标注，模型原决定正{window_counts.get('positive',0)}/空{window_counts.get('explicit_empty',0)}；正在盲第二选择，已完成{pilot_progress.get('completed_reviews',0)}/24。模型判空尚非真值，争议逐条保留UNKNOWN，语义与训练尚未准入。"
+        if pilot_progress.get('stage') == 'REAL_PILOT_BLIND_SECOND_SELECTION' else
+        f"当前小试实际进度 `{pilot_progress.get('stage','NOT_STARTED')}`，已完成标注{pilot_progress.get('completed_windows',0)}/24、复查{pilot_progress.get('completed_reviews',0)}/24；准入以完整终态和逐条证据为准。")
+    full_progress = snap.get('teacher_progress') or {}
+    if full_progress:
+        pilot_state += f" 当前完整160主链进度 `{full_progress.get('status','MISSING_STATUS')}`，已遍历{full_progress.get('completed_windows',0)}/160、本阶段新调用{full_progress.get('fresh_model_calls',0)}、已核复用{full_progress.get('verified_reused_windows',0)}；存量小试24及旧成功2按原SHA核验，计数不能当本阶段新生成。"
     evidence = json.loads((RUN/ENTRY/'evidence_boundary_cpu_acceptance.json').read_bytes())
     legacy = json.loads((RUN/ENTRY/'legacy_reuse_cpu_acceptance.json').read_bytes())
     cost = json.loads((RUN/ENTRY/'legacy_cost_cpu_acceptance.json').read_bytes())
@@ -55,6 +65,7 @@ print(json.dumps({n:base64.b64encode((p/n).read_bytes()).decode() for n in
         actual_new_format_status=real_format.get('status'),
         actual_new_format_fresh_model_calls=real_format.get('fresh_model_calls',0),
         actual_pilot_progress=pilot_progress,
+        actual_window_counts=window_counts, actual_review_counts=review_counts,
         new_T_optimizer_updates=steps, old_STOP_preserved=True,
         raw_labels_or_per_frame_data_exported=False, large_transfers=0, automatic_return=False, uploaded=False)
     (RUN/'controller/autonomy_v11_registration_20261008.json').write_bytes(
@@ -66,7 +77,7 @@ print(json.dumps({n:base64.b64encode((p/n).read_bytes()).decode() for n in
 
 V10真实视觉8/8和2条非测试重输入通过，但首个pilot的[15,21)、[42,50)缺少模型所选实际证据帧而STOP；原raw SHA9977638522f91aa2661fd70b5179a7aed557ea816d5f451f6f50b010114f65fa、639锁、所有失败与成功保持。V11仅注册B边界/F物理帧独立编号和每段模型自行所选见证生成约束，所有合法1..5段/证据子集保持，原高光定义与原validator/16024输入字节不改，无后补证据/裁段/造空/UNKNOWN负类。
 
-旧2成功只在完整160内（不在pilot24）通过孤立原validator/全SHA原字节引用，新旧接口由exact manifest分开核；视觉8只在8实际HTTP构造CPU相等及模型/运行时/输入身份相同后引用，不重复成功生成、旧cost保留、引用新调用0。{format_state} 后台继续剩余23窗与盲第二选择。来源/PTS/模型确错工程STOP；语义争议逐条UNKNOWN并保留全分母；不要求小试必须出现空例，不把同教师一致性叫真值。
+旧2成功只在完整160内（不在pilot24）通过孤立原validator/全SHA原字节引用，新旧接口由exact manifest分开核；视觉8只在8实际HTTP构造CPU相等及模型/运行时/输入身份相同后引用，不重复成功生成、旧cost保留、引用新调用0。{format_state} {pilot_state} 来源/PTS/模型确错工程STOP；语义争议逐条UNKNOWN并保留全分母；不要求小试必须出现空例，不把同教师一致性叫真值。
 
 继续可靠完整窗口监督→完整160/复查→原B LoRA lr1e-5最多3epochs/前缀2–4真实更新保持optimizer/RNG→开发candidate0旧B→NONTEST8→426独立strict ZIP。监督只可靠边界时自主登记B边界精修；教师不可靠自主实现C同8B全源粗览/局部非测试匹配对照。路线B/C当前以协议为准，不假称运行。新T实际更新 `{steps}`，原教师科学STOP保持。
 

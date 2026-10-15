@@ -1,0 +1,65 @@
+{
+  "status": "PASS_FIVE_ORIGINAL_NATIVE_MAPPINGS_NOT_PROCESSOR_OR_SOURCE_ADMISSION",
+  "sources": 5,
+  "rows": [
+    {
+      "source_name": "Bike Polo",
+      "source_group": "SumMe:Bike Polo",
+      "bundle_path": "/home/inspur/aic_video_work/duration_guard_iteration_20261013_v1/mapping_01/Bike Polo.mapping_bundle.json",
+      "bundle_sha256": "5de65d1735d7ed3a020c42c2acaea9e271b80a33d3a5996dcb61b68014b02d1d",
+      "native_frames": 3064,
+      "windows": 4,
+      "new_decode": true
+    },
+    {
+      "source_name": "Paintball",
+      "source_group": "SumMe:Paintball",
+      "bundle_path": "/home/inspur/aic_video_work/duration_guard_iteration_20261013_v1/mapping_01/Paintball.mapping_bundle.json",
+      "bundle_sha256": "9ccbf85f2ec0b796ea3eba6b35c28fcced8b7b7fb5816e5164a8213a7469ad8b",
+      "native_frames": 6096,
+      "windows": 9,
+      "new_decode": true
+    },
+    {
+      "source_name": "paluma_jump",
+      "source_group": "SumMe:paluma_jump",
+      "bundle_path": "/home/inspur/aic_video_work/duration_guard_iteration_20261013_v1/mapping_01/paluma_jump.mapping_bundle.json",
+      "bundle_sha256": "26804990177cfe61255c05a7b0d10e53a8c34f7bfa87fcdcc40d5d8ca0225c00",
+      "native_frames": 2574,
+      "windows": 3,
+      "new_decode": true
+    },
+    {
+      "source_name": "Valparaiso_Downhill",
+      "source_group": "SumMe:Valparaiso_Downhill",
+      "bundle_path": "/home/inspur/aic_video_work/duration_guard_iteration_20261013_v1/mapping_01/Valparaiso_Downhill.mapping_bundle.json",
+      "bundle_sha256": "208284c19b22225c5944f7446446ce77a0704e82c447891ee495432802212870",
+      "native_frames": 5178,
+      "windows": 6,
+      "new_decode": true
+    },
+    {
+      "source_name": "Statue of Liberty",
+      "source_group": "SumMe:Statue of Liberty",
+      "bundle_path": "/home/inspur/aic_video_work/duration_guard_iteration_20261013_v1/mapping_01/Statue of Liberty.mapping_bundle.json",
+      "bundle_sha256": "fed527c9168983eab8f757d1fd1d090d9f513be82792e079a45462a6f0e1df0f",
+      "native_frames": 3863,
+      "windows": 6,
+      "new_decode": true
+    }
+  ],
+  "bindings": {
+    "registration_sha256": "e81897743f4d8592f25b4fbae59995989d64c500e467b8699388d8b4aa192512",
+    "mapping_contract_sha256": "9c6b4450a01a1f76dfea79980a4cb7f46cc2be1626b0461f5479230df36a64ea",
+    "mapper_sha256": "1dd3fcdee36e3c3d8ce48b89dc13d5ed98292657656c62ac2bd64cae77947e9b",
+    "measured_clock_sha256": "85a17855c8ec8a8f64bf99ddcb8cc3c8bfe8738899724417633de10b3aed1571",
+    "mapping_validator_sha256": "2c142aef27665ddd6c273b0ab1de4389dde6d76b80fdef662224baeb0e48cdd7",
+    "window_planner_sha256": "8ba176ea84c3ee739f1a57c53d1026b486172d5f271903c5a78741fb40787461",
+    "media_completion_sha256": "3a846eeb068264259a7fcc84e78988a0fc9534dd65693069e931a78f68ab01d8",
+    "source_isolation_sha256": "fe823049c310297fcd1c1bd0f977b2ff5909f285be997084c5299dbdc62b49cd"
+  },
+  "new_complete_decodes": 5,
+  "inherited_complete_clocks": 0,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0
+}

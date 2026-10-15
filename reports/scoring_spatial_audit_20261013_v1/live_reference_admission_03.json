@@ -1,0 +1,62 @@
+{
+  "status": "LIVE_YT_TECHNICAL_SCHEMA_OBSERVED_USE_AND_ORIGIN_MAPPING_UNRESOLVED",
+  "checked_date": "2026-10-13",
+  "metadata_only": true,
+  "official_first_party_repo": "https://github.com/steven413d/LIVE-YT-VideoCropping",
+  "original_paper": "https://arxiv.org/html/2604.24947v1",
+  "paper_license_applies_to_paper_not_automatically_to_data": "CC BY-NC-SA 4.0",
+  "public_directory_observed_in_browser": {
+    "url": "https://utexas.app.box.com/s/hylumfu8akjhdgdd4teynsyc6ickwv1j/folder/407721578256",
+    "institution_owner": "The University of Texas at Austin",
+    "account_owner": "ENGR-Box-ECE",
+    "display_total_size": "8 GB (rounded UI value, not exact approved payload)",
+    "display_file_count": 1802,
+    "children": ["study_videos", "video_bbox_labels.csv"],
+    "study_videos_files_display": 1801,
+    "study_first_sorted_non_video_file": ".DS_Store",
+    "directory_license_notice_observed": false,
+    "master_directory_two_pages_license_notice_observed": false,
+    "all_91_video_pages_enumerated": false
+  },
+  "schema_preview_observed_in_browser": {
+    "url": "https://utexas.app.box.com/s/hylumfu8akjhdgdd4teynsyc6ickwv1j/file/2398200515718",
+    "file_name": "video_bbox_labels.csv",
+    "display_size": "3 MB (rounded UI value)",
+    "columns_observed": ["video", "num_scenes", "frame0", "frame6", "frame12", "frame18"],
+    "cell_structure": "Python dict literal with left,right,top,bottom integer coordinates",
+    "source_width_height_and_original_media_ID_columns_observed": false,
+    "downloaded_raw_label_file": false,
+    "first31_video_labels_partially_exposed_by_automatic_preview": true,
+    "exposure_source_namespace": "LIVE_YT_VC_original_video1_through_video31",
+    "these_sources_must_not_be_called_strict_blind_confirmation": true,
+    "manual_reference_crop_coordinates_changed": false
+  },
+  "task_semantics": {
+    "native_target_ratio": "9:16",
+    "paper_source_clips": "1800 six-second 1080p/30fps clips sampled from YouTube-UGC and LSVQ",
+    "original_annotation": "30 sampled frames per clip, one human annotator per frame; 30 different raters across one clip",
+    "scale_is_human_selectable_not_height_preserving": true,
+    "dense_all_frame_human_crop_GT": false,
+    "highlight_frame_labels": false,
+    "VCpp_is_algorithmically_temporal_filtered_reference_not_independent_human_GT": true,
+    "unannotated_frames_unknown_not_ordinary": true,
+    "original_four_coordinate_box_required": true,
+    "integer_rounding_of_target_ratio_requires_schema_diagnostic_not_GT_projection": true
+  },
+  "new_primary_evidence": "Institution Box directory and actual CSV preview now read through background browser plugin; prior Jina TLS and web-reader access failures retained. No credentials/Cookies read or security bypass.",
+  "historical_route_report_checked": "reports/round6_score_alignment/p2r9_native_portrait_reference/round6_p2r9_20260920T040552Z/REPORT.md",
+  "historical_stop_is_not_reopened_by_public_download_button": true,
+  "unresolved": [
+    "Dataset-specific permitted scope for local competition-related research evaluation of original clips and labels",
+    "Mapping videoN identifiers to original YouTube-UGC/LSVQ origin IDs and attribution",
+    "Exact file bytes, original native frame clock and coordinate edge convention after permitted acquisition"
+  ],
+  "future_minimal_request": "Evaluation-only subset, no training, media/labels in submission, redistribution or external model service",
+  "message_sent": false,
+  "media_downloads": 0,
+  "model_calls": 0,
+  "real_candidate_score": null,
+  "production_or_package_admitted": false,
+  "stop_further_repetitive_license_search_on_unchanged_same_source": true,
+  "all_reasonable_improvement_directions_exhausted": false
+}

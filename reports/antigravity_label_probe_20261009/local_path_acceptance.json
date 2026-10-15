@@ -1,0 +1,28 @@
+{
+  "utc": "2026-10-09T03:35:55.430825+00:00",
+  "status": "PASS_LOCAL_PATH_VIDEO_AND_IMAGE_VISUAL_READ",
+  "actual_ui_tool_records": [
+    "Analyzed clip.mp4",
+    "Analyzed local_probe.png"
+  ],
+  "unseen_png_expected_center_text": "F83",
+  "unseen_png_exact": true,
+  "reported_video_centers": [
+    "F4",
+    "F14",
+    "F24",
+    "F34",
+    "F44",
+    "F54",
+    "F64",
+    "F74",
+    "F84",
+    "F94",
+    "F104",
+    "F114"
+  ],
+  "reported_video_centers_valid": true,
+  "sampling_limitation": "12 sampled frames; displayed whole-second timestamps are not exact native PTS. Decoding tool sample mapping not independently captured.",
+  "raw_receipt_sha256": "633dc3b94d00d08b658d88e8d8bc2771d571a9e7c97dad4602438f2912bb2a86",
+  "real_highlight_quality": "NOT_TESTED"
+}

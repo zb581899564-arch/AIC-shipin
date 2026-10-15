@@ -1,0 +1,219 @@
+{
+  "schema": "CONTRAST_BOUNDARY_INDEPENDENT_RUNTIME_REPAIRS_V1",
+  "utc": "2026-10-11T12:51:58.513809+00:00",
+  "status": "PASS_METADATA_PNG_PIXEL_AND_NEGATIVE_STREAM_TESTS_ONLY_NO_REAL_REFERENCE_OR_RUNTIME_ADMISSION",
+  "original_preparation_receipt": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\runtime_preparation_receipt.json",
+    "sha256": "7e16d8b2dd5017405136d42132e6efd26ac4efc1741c8437f5d57d4e9584cefa"
+  },
+  "original_receipt_preserved": true,
+  "changed_source_logic": [
+    "native runtime float fields equal direct float(Fraction); exact domain/sample PTS unchanged",
+    "pure NO explicit empty semantics; UNKNOWN-only evaluation false and no SFT",
+    "evaluation-only unknown coverage excluded from ordinary/mixed/highlight and complete/reference coverage; known sets retained in conservative metrics",
+    "actual RGB PNG dims/pixel SHA and 2x4 26header sheet tile equality via PIL",
+    "actual structured NDJSON ACTIVE/DONE view_file identities/path/SHA, missing exposed ID/metadata explicitly recorded, errors and synthetic textual IDs rejected"
+  ],
+  "tests": {
+    "test_exact_float_projection.py": {
+      "status": "PASS_EXACT_FRACTION_TO_FLOAT_PROJECTION_METADATA_ONLY",
+      "plan": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\source_window_plan_v1.json",
+        "sha256": "f8462f667b11e62541a6051cb671bafb16c0231e60dceaf310ad7f1701fc60d7"
+      },
+      "metadata_windows_verified": 96,
+      "old_decimal_roundtrip_false_rejections_reproduced": 35,
+      "old_rejected_window_ids": [
+        "91IHQYk1IQM:CONTRASTQ:0",
+        "91IHQYk1IQM:CONTRASTQ:1",
+        "91IHQYk1IQM:CONTRASTQ:2",
+        "91IHQYk1IQM:CONTRASTQ:3",
+        "Bhxk-O1Y7Ho:CONTRASTQ:0",
+        "Bhxk-O1Y7Ho:CONTRASTQ:1",
+        "Bhxk-O1Y7Ho:CONTRASTQ:3",
+        "GsAD1KT1xo8:CONTRASTQ:0",
+        "GsAD1KT1xo8:CONTRASTQ:1",
+        "GsAD1KT1xo8:CONTRASTQ:3",
+        "Hl-__g2gn_A:CONTRASTQ:0",
+        "Hl-__g2gn_A:CONTRASTQ:1",
+        "Hl-__g2gn_A:CONTRASTQ:3",
+        "JgHubY5Vw3Y:CONTRASTQ:0",
+        "JgHubY5Vw3Y:CONTRASTQ:1",
+        "JgHubY5Vw3Y:CONTRASTQ:3",
+        "RBCABdttQmI:CONTRASTQ:0",
+        "RBCABdttQmI:CONTRASTQ:1",
+        "RBCABdttQmI:CONTRASTQ:3",
+        "XkqCExn6_Us:CONTRASTQ:0",
+        "XkqCExn6_Us:CONTRASTQ:1",
+        "XkqCExn6_Us:CONTRASTQ:3",
+        "eQu1rNs0an0:CONTRASTQ:0",
+        "eQu1rNs0an0:CONTRASTQ:1",
+        "eQu1rNs0an0:CONTRASTQ:3",
+        "fWutDQy1nnY:CONTRASTQ:0",
+        "fWutDQy1nnY:CONTRASTQ:1",
+        "fWutDQy1nnY:CONTRASTQ:2",
+        "fWutDQy1nnY:CONTRASTQ:3",
+        "4wU_LUjG5Ic:CONTRASTQ:0",
+        "4wU_LUjG5Ic:CONTRASTQ:1",
+        "4wU_LUjG5Ic:CONTRASTQ:3",
+        "Se3oxnaPsz0:CONTRASTQ:0",
+        "Se3oxnaPsz0:CONTRASTQ:1",
+        "Se3oxnaPsz0:CONTRASTQ:3"
+      ],
+      "non_finite_decimal_domain_windows": 35,
+      "exact_native_membership_oracle_cases": 192,
+      "synthetic_non_finite_decimal_quarter_tested": true,
+      "wrong_float_nextafter_rejected": true,
+      "exact_domains_and_sample_pts_changed": false,
+      "model_calls": 0,
+      "decoder_calls": 0,
+      "processor_calls": 0,
+      "actual_runtime_encode_decode_verified": false
+    },
+    "test_cpu_contract.py": {
+      "status": "PASS_SYNTHETIC_CPU_ORACLES_AND_NEGATIVE_ADMISSION_ONLY",
+      "unknown_oracle_cases": 120,
+      "updates_tested": 32,
+      "backward_examples_tested": 128,
+      "model_calls": 0,
+      "native_video_decoder_calls": 0,
+      "processor_calls": 0,
+      "real_png_fixture_pixels_verified": true,
+      "synthetic_teacher_ndjson_only": true,
+      "actual_reference_admitted": false,
+      "actual_training_verified": false,
+      "actual_426_zip_verified": false
+    },
+    "test_teacher_error_smoke.py": {
+      "status": "PASS_ACTUAL_FAILED_TEACHER_STREAM_NEGATIVE_SMOKE_ONLY",
+      "stdout": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\teacher_calls\\000\\stdout.jsonl",
+        "sha256": "87718877a3ff1cac49bb692bcdd0b70802c2a2637daecf9d782b6c4bb6576e46"
+      },
+      "terminal": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\teacher_calls\\000\\terminal.json",
+        "sha256": "929487b5427deddb47a299de7572a2b05f1bd03fabf47f856222e8a85eae53a5"
+      },
+      "actual_error": "FAILED_PRECONDITION (code 400): User location is not supported for the API use.",
+      "actual_successful_image_tools": 0,
+      "actual_usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "thinking_tokens": 0,
+        "cache_read_tokens": 0,
+        "total_tokens": 0
+      },
+      "teacher_cash": "UNKNOWN_NOT_ZERO",
+      "actual_terminal_exit_code": 3,
+      "stream_acceptance": false,
+      "teacher_restarted": false,
+      "new_model_calls": 0,
+      "new_native_decoder_calls": 0,
+      "new_processor_calls": 0,
+      "new_optimizer_updates": 0
+    }
+  },
+  "actual_existing_contact_sheet_pixel_smoke": {
+    "manifest": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\observations\\003\\contact_sheet_manifest.json",
+      "sha256": "348ff93ad3c8f947aff972a8cd55f6fc2494611cf74a0af113745a08bfbc2229"
+    },
+    "window_id": "0tmA_C6XwfM:CONTRASTQ:3",
+    "acceptance": {
+      "source_pngs_pixel_verified": 64,
+      "unscaled_sheet_tiles_verified": 64,
+      "sheets_pixel_verified": 8,
+      "header_pixels_per_row": 26
+    },
+    "semantic_quality_claim": false,
+    "actual_teacher_observation_admitted": false
+  },
+  "file_sha256": {
+    "runtime/candidate_engine.py": "28be50938f355af2fa8a9a37db1ec916ff34ecf9a369e4be6c887da3c06c8ee0",
+    "runtime/candidate_package.py": "a415e5d9bb5bf891599a6006f05de97288e36b9bbb1dfa8b31df441eb5723113",
+    "runtime/candidate_replay.py": "f5f9a15fdff42871c1adf6c98f0580c888a5b256113e3f0f2b88ca8bf7e5abb4",
+    "runtime/candidate_static_preflight.py": "aee6aeaf04a98efaf4ee8d81493dd30c23df8a0ef0b758adc343b29251004b46",
+    "runtime/candidate_support.py": "087005d343a045910aeab6ac7cc3f5799be28626a89cd81f80fb46853ae566dc",
+    "runtime/common.py": "a0806b20a1990d0dde8cdb4b8d2e7bfb6f618788edb3b8863a6778f781df579d",
+    "runtime/evaluate.py": "3e142b4a22aacda5813800932973563f0ad379fd650c1585ab3fde65d5f4d363",
+    "runtime/freeze_inputs.py": "af050a6ba08347ecf880a3e998a2825ac4bf2fb5301bf8828d8ae85e885822a4",
+    "runtime/model_binding.py": "f48fffd32fe974b04e87de331f23afe3c028df0864f9e282645ce6746f9c9d92",
+    "runtime/native_runtime.py": "069d1c3af76b119889c9a21e84c39c50ea8c68c5d2d95d25220bcb93570743a1",
+    "runtime/objective.py": "38313cffae4d6939c413fe61e79608bb7836bdd9831082d4ec033aee3f41ce47",
+    "runtime/pipeline_controller.py": "2ceeecdcaa49b5d3f689f355bd00c8a22ec9176ab327eb30f13435eb9b3ed77e",
+    "runtime/preflight_native_inputs.py": "40abf661628aed8642e94b5f2b9e3e962e7ad933171c2a3b8a899e5e44977372",
+    "runtime/README.md": "5c62eafe5e81b6ed2e589f3f948b9c100e2214da24e1ff8c56e4bb0fb3cf3c7a",
+    "runtime/scientific_gate.py": "21609157e3d8e1a09a49a96581ea5f9f4c57f37f7a35ac3224248012272d8ade",
+    "runtime/test_cpu_contract.py": "e5cd9c31e606f128e5c1074ba8736199b1d6971129f6bcfa624082414f554ced",
+    "runtime/test_exact_float_projection.py": "171679f03f6597dd6c6b161279b1e6db216f6f3849509d6762fb546b6d32d657",
+    "runtime/test_teacher_error_smoke.py": "79fc23df1efbc99328c6100c4d5a8900dca748a57a5c56cd7d222ea6a297bbba",
+    "runtime/train.py": "38c6d422dbfee6773588d31d5a8dcbcf45c60e6b3edd75c41df261ea0982a93b",
+    "runtime/verify_evaluation.py": "0a7048781840b9902e3c58c0a006dd5f1e23b9de969e199ff34d875c43c8cd02",
+    "science_runtime/event_metrics.py": "460674b2dc600ea4dacdb12445ff09d8b7a7c4f4a50c3b662b04caf2ff60eba2",
+    "science_runtime/quality_contract.py": "fbfcfc734e9cc58553102a91dce15d94f3e24c2d917b43e5597de0c1272d5ca8",
+    "science_runtime/README.md": "ac1486473216482ec3ee8ffc3651c4b81692f58bebd547320f66ed78b71782d7",
+    "science_runtime/schema_example.json": "3ea906a4c3b41f5f24b9275124c9c154ead29c6bd756486c3fadd870a13d289e",
+    "science_runtime/science_contract.py": "35169f401b581b06e9d65da76c88433e72af3354cf30d8cf61ea0653c2537268"
+  },
+  "unchanged_time_authorities": {
+    "exact_fraction_domains": true,
+    "exact_eligible_and_planned_pts": true,
+    "source_window_plan_original_bytes": true,
+    "original405_candidate_float_semantics": true,
+    "original_parser_decimal_target_semantics": true
+  },
+  "encode_decode_review": {
+    "native_decode": "fraction native tick comparisons and exact domain membership stay authoritative; explicit float projection only at processor metadata",
+    "native_encode": "source PTS/window start are float(Fraction) projections; tensor/native identity checks stay byte-exact",
+    "candidate_changed": "existing direct float(exact) equality already correct",
+    "candidate_unchanged": "registered historical float authority deliberately retained",
+    "mistaken_exact_to_float_reverse_comparisons_found_and_fixed": 1,
+    "actual_native_encode_decode_executed": false
+  },
+  "actual_teacher_error_negative_smoke": {
+    "status": "PASS_ACTUAL_FAILED_TEACHER_STREAM_NEGATIVE_SMOKE_ONLY",
+    "stdout": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\teacher_calls\\000\\stdout.jsonl",
+      "sha256": "87718877a3ff1cac49bb692bcdd0b70802c2a2637daecf9d782b6c4bb6576e46"
+    },
+    "terminal": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261011\\contrast_boundary_v1\\teacher_calls\\000\\terminal.json",
+      "sha256": "929487b5427deddb47a299de7572a2b05f1bd03fabf47f856222e8a85eae53a5"
+    },
+    "actual_error": "FAILED_PRECONDITION (code 400): User location is not supported for the API use.",
+    "actual_successful_image_tools": 0,
+    "actual_usage": {
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "thinking_tokens": 0,
+      "cache_read_tokens": 0,
+      "total_tokens": 0
+    },
+    "teacher_cash": "UNKNOWN_NOT_ZERO",
+    "actual_terminal_exit_code": 3,
+    "stream_acceptance": false,
+    "teacher_restarted": false,
+    "new_model_calls": 0,
+    "new_native_decoder_calls": 0,
+    "new_processor_calls": 0,
+    "new_optimizer_updates": 0
+  },
+  "new_teacher_calls": 0,
+  "new_native_video_decoder_calls": 0,
+  "new_processor_calls": 0,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "ssh_calls": 0,
+  "production_replaced": false,
+  "actual_reference_admitted": false,
+  "actual_training_verified": false,
+  "actual_quality_gate_pass": false,
+  "actual_final_zip_verified": false,
+  "limitations": [
+    "actual teacher000 failed User location is not supported; zero successful image tools; cash remains UNKNOWN_NOT_ZERO",
+    "successful new teacher stream and full reference evidence remain unavailable; no retry launched",
+    "PNG pixel checks do not establish semantic labels, image tool bytes or model attention",
+    "isolated Linux native decoder/processor/model/GPU execution remains untested"
+  ],
+  "next_step": "Root may prepare remaining authorized CPU evidence; do not unlock training/quality or generate426 until real successful teacher evidence and complete fixed references are admitted."
+}

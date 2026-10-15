@@ -1,0 +1,15 @@
+{
+  "status": "STOP_AUTOPILOT_PRESERVED",
+  "utc": "2026-10-08T12:11:31.394857+00:00",
+  "last_progress": {
+    "stage": "RUNNING_STUDENT_ADMISSION",
+    "utc": "2026-10-08T12:08:26.094621+00:00",
+    "pid": 958640,
+    "uploaded": false,
+    "automatic_return": false
+  },
+  "error_type": "RuntimeError",
+  "reason": "CPU stage did not complete: student_admission",
+  "uploaded": false,
+  "automatic_return": false
+}

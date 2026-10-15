@@ -1,0 +1,39 @@
+{
+  "stage": "STOP_WIDTH_ONLY_SCREEN_REJECTED_NEW_SUPERVISED_ROUTE_PREPARATION",
+  "target": 3,
+  "delivered_target": 2,
+  "baseline": "D8_USER_REPORTED40.44",
+  "purpose_reply": "purpose_reply.json",
+  "protocol": "protocol.json",
+  "official_rule_check": "official_rule_check.json",
+  "remote_root": "/home/inspur/aic_video_work/gnmc_width_iteration_20261013_v1",
+  "unique_entry": "chain_launch.json,chain_started.json,input_acceptance.json,source_lock.json,completion.json,chain_failure.json",
+  "arm": "FIX_ORIGINAL_FOCUS_PREDICT_CONTINUOUS_WIDTH_ONLY",
+  "new_model_calls": 40,
+  "new_submission_zips": 0,
+  "production_admitted": false,
+  "original_source_independence": "UNKNOWN_BEYOND_FILE_AND_DUPLICATE_CHECKS",
+  "Linux_resident_compute": true,
+  "do_not_repeat_success_or_launch": true,
+  "next": "Do not rerun either chain or successful media/CPU/model/replay. Prepare an independent small human-GNMC spatial supervised LoRA research protocol; keep old registered gates, raw and failures. No new production admitted.",
+  "initial_failure": {
+    "model_answers": 0,
+    "charged_seconds": 62.10517555847764,
+    "cause": "common module namespace collision",
+    "preserved": true
+  },
+  "recovery": {
+    "entry": "recovery_01/completion.json",
+    "result": "recovery_01/screen/result.json",
+    "charged_seconds": 82.9012922141701,
+    "macro_IoU_delta": -0.012519053267489278,
+    "positive": 0,
+    "changed": 1,
+    "invalid": 0,
+    "independent_CPU_replay": "PASS",
+    "status": "completed_exit0"
+  },
+  "confirm_model_calls": 0,
+  "confirm_metrics_exposed": false,
+  "next_research_state": "../gnmc_spatial_sft_iteration_20261013_v1/current_state.json"
+}

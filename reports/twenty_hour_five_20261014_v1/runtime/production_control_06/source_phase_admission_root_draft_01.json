@@ -1,0 +1,62 @@
+{
+  "whole_plan_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_inputs_v5/plan_01/full_plan.json",
+    "sha256": "2424c82720b7c677f734b6f2de3d47b3bc67ae3e64171f5282749037327c0715"
+  },
+  "controller_registration_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_control_v6/registration.json",
+    "sha256": "PENDING_ROOT_FINAL_REGISTRATION_SHA"
+  },
+  "phase_code_ref": {
+    "bytes": 16262,
+    "sha256": "5121c49bc778ac600fa4170b86babe16abbd6f09cd6d04dc30559d6732e43707",
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_phase_v1/code/source.py"
+  },
+  "backend_admission_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_control_v6/backend_admission.json",
+    "sha256": "PENDING_ROOT_FINAL_BACKEND_ADMISSION_SHA"
+  },
+  "quiescent_handoff_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/prospective_cache_handoff_01/quiescent_handoff_completion_01.json",
+    "sha256": "PENDING_ROOT_ACTUAL_ALL_CHILD_NATURAL_TERMINALS"
+  },
+  "remaining_source_ids": [],
+  "backend_code_ref": {
+    "bytes": 21556,
+    "sha256": "598f1b580406f1a72bbc7faea7fc61fbd3f71c478e11bad7ae26fa6e52204d32",
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/prospective_cache_backend_v1/code/backend.py"
+  },
+  "status": "DRAFT_NO_SOURCE_CALLBACK_PERMISSION",
+  "first_normal_processor_replay_required": true,
+  "model_calls_authorized": 0,
+  "input_registration_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_inputs_v5/registration.json",
+    "sha256": "PENDING_ROOT_EXISTING_INPUT5_SHA"
+  },
+  "deadline": "2026-10-14T11:56:40Z",
+  "no_old_writer_active": true,
+  "schema": "TEMPORAL_PRODUCTION_SOURCE_PHASE_V1",
+  "original_graph_membership_and_roles_unchanged": true,
+  "source_algorithm_changed": false,
+  "original_successful_source_completion_refs": {},
+  "required_code_refs": [
+    {
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_inputs_v5/code/prepare_source.py",
+      "sha256": "4efbae1bd0bc78b376ed3d11031c3f746d586637b8458bbd65df604d12b9262c"
+    },
+    {
+      "bytes": 16262,
+      "sha256": "5121c49bc778ac600fa4170b86babe16abbd6f09cd6d04dc30559d6732e43707",
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_phase_v1/code/source.py"
+    },
+    {
+      "bytes": 21556,
+      "sha256": "598f1b580406f1a72bbc7faea7fc61fbd3f71c478e11bad7ae26fa6e52204d32",
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/prospective_cache_backend_v1/code/backend.py"
+    }
+  ],
+  "original_preparation_code_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_inputs_v5/code/prepare_source.py",
+    "sha256": "4efbae1bd0bc78b376ed3d11031c3f746d586637b8458bbd65df604d12b9262c"
+  }
+}

@@ -1,0 +1,612 @@
+{
+  "status": "PASS_LOCAL_DELIVERY_CRC_AND_METADATA_IDENTITY_LICENSE_UNRESOLVED",
+  "utc": "2026-10-09T04:34:32.848277+00:00",
+  "nested_archives": [
+    {
+      "file": "ydata-tvsum50-data.zip",
+      "status": "PASS_ALL_MEMBER_PATHS_AND_CRC",
+      "members": 3,
+      "regular_files": 2,
+      "payload_bytes": 14114604,
+      "files": [
+        {
+          "name": "data/ydata-tvsum50-anno.tsv",
+          "bytes": 14109120,
+          "crc32": 3556807714
+        },
+        {
+          "name": "data/ydata-tvsum50-info.tsv",
+          "bytes": 5484,
+          "crc32": 933268349
+        }
+      ]
+    },
+    {
+      "file": "ydata-tvsum50-matlab.zip",
+      "status": "PASS_ALL_MEMBER_PATHS_AND_CRC",
+      "members": 10,
+      "regular_files": 7,
+      "payload_bytes": 1114670,
+      "files": [
+        {
+          "name": "matlab/knapsack/html/knapsack_demo.html",
+          "bytes": 3272,
+          "crc32": 2589905293
+        },
+        {
+          "name": "matlab/knapsack/knapsack.m",
+          "bytes": 2506,
+          "crc32": 281417356
+        },
+        {
+          "name": "matlab/knapsack/knapsack_demo.m",
+          "bytes": 454,
+          "crc32": 2669696446
+        },
+        {
+          "name": "matlab/knapsack/license.txt",
+          "bytes": 1317,
+          "crc32": 4203624155
+        },
+        {
+          "name": "matlab/script_evaluate_result.m",
+          "bytes": 3849,
+          "crc32": 1310555998
+        },
+        {
+          "name": "matlab/solve_knapsack.m",
+          "bytes": 1140,
+          "crc32": 4195488910
+        },
+        {
+          "name": "matlab/ydata-tvsum50.mat",
+          "bytes": 1102132,
+          "crc32": 2724591636
+        }
+      ]
+    },
+    {
+      "file": "ydata-tvsum50-thumbnail.zip",
+      "status": "PASS_ALL_MEMBER_PATHS_AND_CRC",
+      "members": 51,
+      "regular_files": 50,
+      "payload_bytes": 555838,
+      "files": [
+        {
+          "name": "thumbnail/-esJrBWj2d8.jpg",
+          "bytes": 7339,
+          "crc32": 3891027798
+        },
+        {
+          "name": "thumbnail/0tmA_C6XwfM.jpg",
+          "bytes": 8616,
+          "crc32": 3508127962
+        },
+        {
+          "name": "thumbnail/37rzWOQsNIw.jpg",
+          "bytes": 10010,
+          "crc32": 2531999462
+        },
+        {
+          "name": "thumbnail/3eYKfiOEJNs.jpg",
+          "bytes": 13222,
+          "crc32": 2988038552
+        },
+        {
+          "name": "thumbnail/4wU_LUjG5Ic.jpg",
+          "bytes": 14735,
+          "crc32": 3423356511
+        },
+        {
+          "name": "thumbnail/91IHQYk1IQM.jpg",
+          "bytes": 11294,
+          "crc32": 2495269300
+        },
+        {
+          "name": "thumbnail/98MoyGZKHXc.jpg",
+          "bytes": 9765,
+          "crc32": 1685093854
+        },
+        {
+          "name": "thumbnail/_xMr-HKMfVA.jpg",
+          "bytes": 8318,
+          "crc32": 3815381816
+        },
+        {
+          "name": "thumbnail/akI8YFjEmUw.jpg",
+          "bytes": 12920,
+          "crc32": 3729364372
+        },
+        {
+          "name": "thumbnail/AwmHb44_ouw.jpg",
+          "bytes": 10694,
+          "crc32": 1701909438
+        },
+        {
+          "name": "thumbnail/b626MiF1ew4.jpg",
+          "bytes": 12124,
+          "crc32": 839909388
+        },
+        {
+          "name": "thumbnail/Bhxk-O1Y7Ho.jpg",
+          "bytes": 5159,
+          "crc32": 2163839417
+        },
+        {
+          "name": "thumbnail/byxOvuiIJV0.jpg",
+          "bytes": 10863,
+          "crc32": 4237410855
+        },
+        {
+          "name": "thumbnail/cjibtmSLxQ4.jpg",
+          "bytes": 10516,
+          "crc32": 4216335977
+        },
+        {
+          "name": "thumbnail/E11zDS9XGzg.jpg",
+          "bytes": 15316,
+          "crc32": 3292945144
+        },
+        {
+          "name": "thumbnail/EE-bNr36nyA.jpg",
+          "bytes": 8559,
+          "crc32": 4281610307
+        },
+        {
+          "name": "thumbnail/eQu1rNs0an0.jpg",
+          "bytes": 6746,
+          "crc32": 1322989611
+        },
+        {
+          "name": "thumbnail/EYqVtI9YWJA.jpg",
+          "bytes": 14985,
+          "crc32": 1454472269
+        },
+        {
+          "name": "thumbnail/fWutDQy1nnY.jpg",
+          "bytes": 12377,
+          "crc32": 3108012278
+        },
+        {
+          "name": "thumbnail/GsAD1KT1xo8.jpg",
+          "bytes": 9384,
+          "crc32": 341320376
+        },
+        {
+          "name": "thumbnail/gzDbaEs1Rlg.jpg",
+          "bytes": 10902,
+          "crc32": 3021066679
+        },
+        {
+          "name": "thumbnail/Hl-__g2gn_A.jpg",
+          "bytes": 15589,
+          "crc32": 4119257984
+        },
+        {
+          "name": "thumbnail/HT5vyqe0Xaw.jpg",
+          "bytes": 11267,
+          "crc32": 804898885
+        },
+        {
+          "name": "thumbnail/i3wAGJaaktw.jpg",
+          "bytes": 12990,
+          "crc32": 3136373906
+        },
+        {
+          "name": "thumbnail/iVt07TCkFM0.jpg",
+          "bytes": 14118,
+          "crc32": 1549613589
+        },
+        {
+          "name": "thumbnail/J0nA4VgnoCo.jpg",
+          "bytes": 9544,
+          "crc32": 4224867491
+        },
+        {
+          "name": "thumbnail/jcoYJXDG9sw.jpg",
+          "bytes": 6826,
+          "crc32": 4031639986
+        },
+        {
+          "name": "thumbnail/JgHubY5Vw3Y.jpg",
+          "bytes": 10430,
+          "crc32": 169484193
+        },
+        {
+          "name": "thumbnail/JKpqYvAdIsw.jpg",
+          "bytes": 6793,
+          "crc32": 1483506392
+        },
+        {
+          "name": "thumbnail/kLxoNp-UchI.jpg",
+          "bytes": 7779,
+          "crc32": 4276828018
+        },
+        {
+          "name": "thumbnail/LRw_obCPUt0.jpg",
+          "bytes": 7180,
+          "crc32": 2232996625
+        },
+        {
+          "name": "thumbnail/NyBmCxDoHJU.jpg",
+          "bytes": 8012,
+          "crc32": 2568701271
+        },
+        {
+          "name": "thumbnail/oDXZc0tZe04.jpg",
+          "bytes": 13256,
+          "crc32": 3060127916
+        },
+        {
+          "name": "thumbnail/PJrm840pAUI.jpg",
+          "bytes": 17607,
+          "crc32": 1495767174
+        },
+        {
+          "name": "thumbnail/qqR6AEXwxoQ.jpg",
+          "bytes": 11662,
+          "crc32": 4286084394
+        },
+        {
+          "name": "thumbnail/RBCABdttQmI.jpg",
+          "bytes": 20627,
+          "crc32": 2070200202
+        },
+        {
+          "name": "thumbnail/Se3oxnaPsz0.jpg",
+          "bytes": 11896,
+          "crc32": 3459433956
+        },
+        {
+          "name": "thumbnail/sTEELN-vY30.jpg",
+          "bytes": 12377,
+          "crc32": 1135353203
+        },
+        {
+          "name": "thumbnail/uGu_10sucQo.jpg",
+          "bytes": 11830,
+          "crc32": 1948764890
+        },
+        {
+          "name": "thumbnail/vdmoEJ5YbrQ.jpg",
+          "bytes": 8393,
+          "crc32": 55598153
+        },
+        {
+          "name": "thumbnail/VuWGsYPqAX8.jpg",
+          "bytes": 12190,
+          "crc32": 2923000183
+        },
+        {
+          "name": "thumbnail/WG0MBPpPC6I.jpg",
+          "bytes": 13661,
+          "crc32": 1899443343
+        },
+        {
+          "name": "thumbnail/WxtbjNsCQ8A.jpg",
+          "bytes": 16488,
+          "crc32": 186291867
+        },
+        {
+          "name": "thumbnail/XkqCExn6_Us.jpg",
+          "bytes": 13496,
+          "crc32": 2693770032
+        },
+        {
+          "name": "thumbnail/xmEERLqJ2kU.jpg",
+          "bytes": 11670,
+          "crc32": 3091037816
+        },
+        {
+          "name": "thumbnail/xwqBXPGE9pQ.jpg",
+          "bytes": 5124,
+          "crc32": 421178556
+        },
+        {
+          "name": "thumbnail/xxdtq8mxegs.jpg",
+          "bytes": 10295,
+          "crc32": 3494296238
+        },
+        {
+          "name": "thumbnail/XzYM3PfTM4w.jpg",
+          "bytes": 7330,
+          "crc32": 2630368400
+        },
+        {
+          "name": "thumbnail/Yi4Ij2NM7U4.jpg",
+          "bytes": 8620,
+          "crc32": 719543494
+        },
+        {
+          "name": "thumbnail/z_6gVvQb2d0.jpg",
+          "bytes": 14944,
+          "crc32": 991292724
+        }
+      ]
+    },
+    {
+      "file": "ydata-tvsum50-video.zip",
+      "status": "PASS_ALL_MEMBER_PATHS_AND_CRC",
+      "members": 51,
+      "regular_files": 50,
+      "payload_bytes": 681259038,
+      "files": [
+        {
+          "name": "video/-esJrBWj2d8.mp4",
+          "bytes": 12547350,
+          "crc32": 3945833777
+        },
+        {
+          "name": "video/0tmA_C6XwfM.mp4",
+          "bytes": 7573592,
+          "crc32": 2721637112
+        },
+        {
+          "name": "video/37rzWOQsNIw.mp4",
+          "bytes": 10156252,
+          "crc32": 2988056946
+        },
+        {
+          "name": "video/3eYKfiOEJNs.mp4",
+          "bytes": 10488602,
+          "crc32": 1753551230
+        },
+        {
+          "name": "video/4wU_LUjG5Ic.mp4",
+          "bytes": 8815620,
+          "crc32": 1917661837
+        },
+        {
+          "name": "video/91IHQYk1IQM.mp4",
+          "bytes": 5830349,
+          "crc32": 889252634
+        },
+        {
+          "name": "video/98MoyGZKHXc.mp4",
+          "bytes": 9817234,
+          "crc32": 1506023724
+        },
+        {
+          "name": "video/_xMr-HKMfVA.mp4",
+          "bytes": 8040777,
+          "crc32": 458993072
+        },
+        {
+          "name": "video/akI8YFjEmUw.mp4",
+          "bytes": 7222459,
+          "crc32": 1220962500
+        },
+        {
+          "name": "video/AwmHb44_ouw.mp4",
+          "bytes": 19246027,
+          "crc32": 2502063884
+        },
+        {
+          "name": "video/b626MiF1ew4.mp4",
+          "bytes": 12624955,
+          "crc32": 181743362
+        },
+        {
+          "name": "video/Bhxk-O1Y7Ho.mp4",
+          "bytes": 24536587,
+          "crc32": 2527391851
+        },
+        {
+          "name": "video/byxOvuiIJV0.mp4",
+          "bytes": 8234183,
+          "crc32": 3203810073
+        },
+        {
+          "name": "video/cjibtmSLxQ4.mp4",
+          "bytes": 35194393,
+          "crc32": 3325678868
+        },
+        {
+          "name": "video/E11zDS9XGzg.mp4",
+          "bytes": 27524696,
+          "crc32": 1950016405
+        },
+        {
+          "name": "video/EE-bNr36nyA.mp4",
+          "bytes": 5274150,
+          "crc32": 3604621812
+        },
+        {
+          "name": "video/eQu1rNs0an0.mp4",
+          "bytes": 8817667,
+          "crc32": 3085077789
+        },
+        {
+          "name": "video/EYqVtI9YWJA.mp4",
+          "bytes": 10713251,
+          "crc32": 1529401472
+        },
+        {
+          "name": "video/fWutDQy1nnY.mp4",
+          "bytes": 31792596,
+          "crc32": 1581759735
+        },
+        {
+          "name": "video/GsAD1KT1xo8.mp4",
+          "bytes": 7794439,
+          "crc32": 3551672635
+        },
+        {
+          "name": "video/gzDbaEs1Rlg.mp4",
+          "bytes": 15419041,
+          "crc32": 3681958144
+        },
+        {
+          "name": "video/Hl-__g2gn_A.mp4",
+          "bytes": 13134659,
+          "crc32": 2135606753
+        },
+        {
+          "name": "video/HT5vyqe0Xaw.mp4",
+          "bytes": 17564055,
+          "crc32": 2486241518
+        },
+        {
+          "name": "video/i3wAGJaaktw.mp4",
+          "bytes": 8413810,
+          "crc32": 1321703952
+        },
+        {
+          "name": "video/iVt07TCkFM0.mp4",
+          "bytes": 5538282,
+          "crc32": 1139017041
+        },
+        {
+          "name": "video/J0nA4VgnoCo.mp4",
+          "bytes": 31626560,
+          "crc32": 2214909828
+        },
+        {
+          "name": "video/jcoYJXDG9sw.mp4",
+          "bytes": 14753114,
+          "crc32": 1298461503
+        },
+        {
+          "name": "video/JgHubY5Vw3Y.mp4",
+          "bytes": 7682265,
+          "crc32": 2495363939
+        },
+        {
+          "name": "video/JKpqYvAdIsw.mp4",
+          "bytes": 8201511,
+          "crc32": 2701188476
+        },
+        {
+          "name": "video/kLxoNp-UchI.mp4",
+          "bytes": 6970411,
+          "crc32": 2847959454
+        },
+        {
+          "name": "video/LRw_obCPUt0.mp4",
+          "bytes": 13697882,
+          "crc32": 36073924
+        },
+        {
+          "name": "video/NyBmCxDoHJU.mp4",
+          "bytes": 10213204,
+          "crc32": 3866914156
+        },
+        {
+          "name": "video/oDXZc0tZe04.mp4",
+          "bytes": 20654776,
+          "crc32": 4175054959
+        },
+        {
+          "name": "video/PJrm840pAUI.mp4",
+          "bytes": 14766069,
+          "crc32": 3679681187
+        },
+        {
+          "name": "video/qqR6AEXwxoQ.mp4",
+          "bytes": 14617342,
+          "crc32": 3567475773
+        },
+        {
+          "name": "video/RBCABdttQmI.mp4",
+          "bytes": 19590609,
+          "crc32": 615763074
+        },
+        {
+          "name": "video/Se3oxnaPsz0.mp4",
+          "bytes": 7584394,
+          "crc32": 4062756231
+        },
+        {
+          "name": "video/sTEELN-vY30.mp4",
+          "bytes": 8065363,
+          "crc32": 3785659573
+        },
+        {
+          "name": "video/uGu_10sucQo.mp4",
+          "bytes": 8256585,
+          "crc32": 4143910214
+        },
+        {
+          "name": "video/vdmoEJ5YbrQ.mp4",
+          "bytes": 17926114,
+          "crc32": 3087846953
+        },
+        {
+          "name": "video/VuWGsYPqAX8.mp4",
+          "bytes": 11537377,
+          "crc32": 3980525805
+        },
+        {
+          "name": "video/WG0MBPpPC6I.mp4",
+          "bytes": 21473331,
+          "crc32": 1566735916
+        },
+        {
+          "name": "video/WxtbjNsCQ8A.mp4",
+          "bytes": 14014038,
+          "crc32": 3036438919
+        },
+        {
+          "name": "video/XkqCExn6_Us.mp4",
+          "bytes": 10210795,
+          "crc32": 3150868349
+        },
+        {
+          "name": "video/xmEERLqJ2kU.mp4",
+          "bytes": 24129938,
+          "crc32": 481485706
+        },
+        {
+          "name": "video/xwqBXPGE9pQ.mp4",
+          "bytes": 12666392,
+          "crc32": 2382940249
+        },
+        {
+          "name": "video/xxdtq8mxegs.mp4",
+          "bytes": 7367068,
+          "crc32": 1056791074
+        },
+        {
+          "name": "video/XzYM3PfTM4w.mp4",
+          "bytes": 6010860,
+          "crc32": 3237001471
+        },
+        {
+          "name": "video/Yi4Ij2NM7U4.mp4",
+          "bytes": 21884159,
+          "crc32": 3294541577
+        },
+        {
+          "name": "video/z_6gVvQb2d0.mp4",
+          "bytes": 15043855,
+          "crc32": 3612109932
+        }
+      ]
+    }
+  ],
+  "video_entries": 50,
+  "metadata_rows": 50,
+  "annotation_rows": 1000,
+  "judges_per_video": 20,
+  "importance_score_count": 7047060,
+  "category_counts": {
+    "VT": 5,
+    "VU": 5,
+    "GA": 5,
+    "MS": 5,
+    "PK": 5,
+    "PR": 5,
+    "FM": 5,
+    "BK": 5,
+    "BT": 5,
+    "DS": 5
+  },
+  "all_video_metadata_annotation_ids_equal": true,
+  "all_annotation_scores_in_1_to_5": true,
+  "all_tsv_mat_user_scores_and_consensus_equal": true,
+  "dense_score_entries_are_not_independent_judgments": true,
+  "video_decode_performed": false,
+  "training_admitted": false,
+  "external_teacher_upload_admitted": false,
+  "license_notice": "Bundled signed Yahoo agreement restriction conflicts with apparent current direct author distribution; no override presumed"
+}

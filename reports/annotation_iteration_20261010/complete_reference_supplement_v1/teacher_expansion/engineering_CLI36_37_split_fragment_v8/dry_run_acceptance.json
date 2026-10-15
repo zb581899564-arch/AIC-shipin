@@ -1,0 +1,109 @@
+{
+  "status": "PASS_10_AST_27_BOUNDED_COMPLETE_FRAGMENTS_EXACT_SCIENCE_ORIGINAL_MEDIA_CPU_ONLY_PENDING_ROOT",
+  "AST": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8\\audit.py",
+      "sha256": "2671c0d5d23e04bba33c23e14d2f6da71072fb775e1d5ace6ed74af857b486f5",
+      "bytes": 11918
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8\\common.py",
+      "sha256": "fc28ed69446b8d21ea65e68e1f4d186546d96aed4338e8567353d266e2cb5eb7",
+      "bytes": 4648
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8\\controller.py",
+      "sha256": "31927309d67a979cd5c6759884043e9b6034d5c13c653005c5cfee61649b614a",
+      "bytes": 3233
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8\\engine.py",
+      "sha256": "b4a41548540efec5640b021f9606ef3a81a0ce0ae94af9702af74c238dc87a0e",
+      "bytes": 13073
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8\\launch.py",
+      "sha256": "43bedb8690f085f4478abc7f9cde83a8452f73a79b2bc9f57a6a0c60f1117ade",
+      "bytes": 6281
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8\\observer.py",
+      "sha256": "982f2f409e5e3e79ffaa7922dee3287b9c96256803f3bd15db9034b44497ecdf",
+      "bytes": 1112
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8\\prepare.py",
+      "sha256": "ae5b594bb6a78d43766a9eb21a7decb4ff1c6ecb615c2e4d51da8d83fc638f43",
+      "bytes": 15134
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8\\prompt.py",
+      "sha256": "a3858cdaa446487c2288ca8e9da792fc240d54e8efedca25d858b73a0eac9ec3",
+      "bytes": 5182
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8\\run_call.py",
+      "sha256": "f782b58c3e1aa15bc0f77fa21089fff864484c1b47ca751bc9233af189b4dd08",
+      "bytes": 65
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8\\verify.py",
+      "sha256": "bdeb23685df8b54a3b39cd1f0728fd1914419aae03c07f9e94ab454370b63424",
+      "bytes": 13237
+    }
+  ],
+  "execution_binding_sha256": "7f1f9c0a6089ae60edc5bbfd51fa3b915d48957dca2e0bb9e23742d1cca3afd1",
+  "routing": [
+    {
+      "CLI": 36,
+      "jobs": [
+        19,
+        20
+      ],
+      "core": 202,
+      "scope_cores": [
+        102,
+        202
+      ],
+      "parts": 11,
+      "max_text_bytes": 24938,
+      "argv_units": 772
+    },
+    {
+      "CLI": 37,
+      "jobs": [
+        21,
+        22,
+        23
+      ],
+      "core": 302,
+      "scope_cores": [
+        102,
+        202,
+        302
+      ],
+      "parts": 16,
+      "max_text_bytes": 24934,
+      "argv_units": 772
+    }
+  ],
+  "freezes": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8\\call36\\freeze.json",
+      "sha256": "c465269f56904c3b7b4c4c3c6b572cafbfbca2145a14baa9203dafb76064cec8",
+      "inputs": 984
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8\\call37\\freeze.json",
+      "sha256": "28e867232ba84792f935b8c031348e784238954938441be693a8f1f2b078ba58",
+      "inputs": 1067
+    }
+  ],
+  "scientific_text_map_sha256": "dd6d8e2e10434ed95b1a09e55ec6fcb27d213297066154c9a366f8c35631326e",
+  "actual_barrier_positive_sha256": "4c4223c40f600bdce2ee38fdd4995c788c73122bce06b05e87e20f3e40982df1",
+  "actual_capacity_sha256": "45412115f7fbd8a721abee8bfaf726e2317e9454691028a4ea2e3825f8ef4e1a",
+  "runtime_capacity_PASS": false,
+  "new_model_calls": 0,
+  "new_video_decode": 0,
+  "cash_cost": "UNKNOWN_NOT_ZERO"
+}

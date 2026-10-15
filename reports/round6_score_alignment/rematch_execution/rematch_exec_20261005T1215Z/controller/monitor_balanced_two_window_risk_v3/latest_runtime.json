@@ -1,0 +1,201 @@
+{
+  "utc": "2026-10-09T05:28:29.822242+00:00",
+  "no_model_decoder_or_optimizer_calls": true,
+  "non_atomic_read": true,
+  "progress.json": {
+    "value": {
+      "stage": "RUNNING_REMATCH_BALANCED_TWO_WINDOW",
+      "utc": "2026-10-09T05:27:58.606864+00:00",
+      "pid": 314882,
+      "new_optimizer_updates": 0,
+      "new_32B_calls": 0,
+      "official_score": null,
+      "uploaded": false,
+      "records_completed": 426,
+      "total_records": 426,
+      "fresh_model_calls": 116,
+      "reused_exact_original_calls": 405,
+      "recovered_exact_prior_model_calls": 0,
+      "new_overview_calls": 0,
+      "wall_seconds": 1457.9665100760758
+    },
+    "sha256": "a69fc75d5f5868dddcf70381175367da66f686bf1e91d23e94c3b8189703f990",
+    "read_utc": "2026-10-09T05:28:29.822374+00:00"
+  },
+  "developer_01/developer.completion.json": {
+    "value": {
+      "status": "PASS_ALL_BALANCED_TWO_WINDOW_ATTEMPTS",
+      "utc": "2026-10-09T04:56:56.572271+00:00",
+      "records": 104,
+      "fresh_model_calls": 15,
+      "model_identity": {
+        "base_hash": {
+          "sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+          "parameters": 8767123696,
+          "method": "sorted canonical names and all unique frozen parameter bytes"
+        },
+        "logical_parameters": 8782459120,
+        "adapter_sha256": "8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23",
+        "adapter_saved_tensor_equality": 288,
+        "new_optimizer_updates": 0
+      },
+      "reused_exact_original_calls": 96,
+      "recovered_exact_prior_model_calls": 1,
+      "total_windows": 112,
+      "new_optimizer_updates": 0,
+      "new_32B_calls": 0,
+      "new_overview_calls": 0
+    },
+    "sha256": "80d4bebb7f85ae792a549172b00afea91d175448244e27653f0c6817553c6d44",
+    "read_utc": "2026-10-09T05:28:29.822437+00:00"
+  },
+  "developer_01/replay_acceptance.json": {
+    "value": {
+      "status": "PASS_ALL_BALANCED_NEW_REQUESTS_CPU_REPLAY",
+      "utc": "2026-10-09T05:00:18.514789+00:00",
+      "new_calls": 16,
+      "original_successes_referenced": 96,
+      "new_model_calls": 0,
+      "new_optimizer_updates": 0
+    },
+    "sha256": "deca3f209138c6ced8602567e3c0adea7448bb5616b81fedada6227302fca35d",
+    "read_utc": "2026-10-09T05:28:29.822558+00:00"
+  },
+  "developer_01/report.json": {
+    "value": {
+      "status": "PASS_ENGINEERING_USER_ACCEPTED_RISK_CONTINUE_426",
+      "utc": "2026-10-09T05:00:18.533125+00:00",
+      "records": 104,
+      "groups": 96,
+      "windows": 112,
+      "fresh_calls": 16,
+      "changed_native_sets": 8,
+      "independent_quality_reference": "UNKNOWN",
+      "official_score": null,
+      "new_training": false,
+      "quality_go_claim": false,
+      "user_override": "2026-10-09 proceed with the discussed experiment and ZIP; we are experimenting",
+      "weak_reference_not_used_to_select_or_retune_recipe": true
+    },
+    "sha256": "5c0fe96a569302fe9c039aa88158d44bf945bb9928c8f0f832a2178a2488eb08",
+    "read_utc": "2026-10-09T05:28:29.822606+00:00"
+  },
+  "rematch_01/rematch.completion.json": {
+    "value": {
+      "status": "PASS_ALL_BALANCED_TWO_WINDOW_ATTEMPTS",
+      "utc": "2026-10-09T05:27:58.609364+00:00",
+      "records": 426,
+      "fresh_model_calls": 116,
+      "model_identity": {
+        "base_hash": {
+          "sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+          "parameters": 8767123696,
+          "method": "sorted canonical names and all unique frozen parameter bytes"
+        },
+        "logical_parameters": 8782459120,
+        "adapter_sha256": "8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23",
+        "adapter_saved_tensor_equality": 288,
+        "new_optimizer_updates": 0
+      },
+      "reused_exact_original_calls": 405,
+      "recovered_exact_prior_model_calls": 0,
+      "total_windows": 521,
+      "new_optimizer_updates": 0,
+      "new_32B_calls": 0,
+      "new_overview_calls": 0
+    },
+    "sha256": "a3c50495f722e64cca70825bf6dbf555c460471fe3d6db370b2e4aed857da9c3",
+    "read_utc": "2026-10-09T05:28:29.822658+00:00"
+  },
+  "rematch_01/replay_acceptance.json": {
+    "value": null,
+    "sha256": null,
+    "read_utc": "2026-10-09T05:28:29.822677+00:00"
+  },
+  "execution_failure.json": {
+    "value": null,
+    "sha256": null,
+    "read_utc": "2026-10-09T05:28:29.822689+00:00"
+  },
+  "completion.json": {
+    "value": null,
+    "sha256": null,
+    "read_utc": "2026-10-09T05:28:29.822700+00:00"
+  },
+  "scopes": {
+    "developer": {
+      "fresh_done": 15,
+      "recovered_exact_prior_done": 1,
+      "accepted_route_done": 16,
+      "raw": 15,
+      "failures": 0,
+      "all_done_bound_sha": true,
+      "read_utc": "2026-10-09T05:28:29.832455+00:00"
+    },
+    "rematch": {
+      "fresh_done": 116,
+      "recovered_exact_prior_done": 0,
+      "accepted_route_done": 116,
+      "raw": 116,
+      "failures": 0,
+      "all_done_bound_sha": true,
+      "read_utc": "2026-10-09T05:28:29.914698+00:00"
+    }
+  },
+  "processes": [
+    {
+      "pid": 275576,
+      "ppid": 1,
+      "pgid": 275576,
+      "command": "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/balanced_two_window_risk_v3/controller.py",
+      "io": "rchar: 227724909047\nwchar: 11827702\nsyscr: 575745\nsyscw: 3284\nread_bytes: 1540096\nwrite_bytes: 15155200\ncancelled_write_bytes: 20480\n",
+      "open_files": [
+        "/dev/null",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/balanced_two_window_risk_v3/controller.log",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/balanced_two_window_risk_v3/controller.log",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/balanced_two_window_risk_v3/controller.lock",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/models/Qwen3-VL-8B-Instruct/model-00003-of-00004.safetensors"
+      ]
+    }
+  ],
+  "ledger": {
+    "lines": 168,
+    "sha256": "da3dd15b25f6923e6b5427e0376c0fe1e7b0da67a6ad3e5fbf2d1266f19b7867",
+    "read_utc": "2026-10-09T05:28:29.926627+00:00",
+    "historical_offset": 7200
+  },
+  "resources": {
+    "developer": {
+      "receipt": {
+        "status": "completed",
+        "exit_code": 0,
+        "stop_reason": null,
+        "charged_seconds": 226.98856798466295,
+        "started_utc": "2026-10-09T04:53:11.430632+00:00",
+        "sampled_peak_memory_mib": 19306
+      },
+      "sha256": "33beb2868e0bd17d2116ff74c752fa329c1fef2399dc704a6c6aff208f62f692",
+      "unique_terminal_match": true
+    },
+    "rematch": {
+      "receipt": {
+        "status": "completed",
+        "exit_code": 0,
+        "stop_reason": null,
+        "charged_seconds": 1589.5093126064166,
+        "started_utc": "2026-10-09T05:01:30.550285+00:00",
+        "sampled_peak_memory_mib": 23042
+      },
+      "sha256": "1b6ee2abb33c51a7734df7d70d4a0ad29463b67d05bdd40deab976cfb3411d08",
+      "unique_terminal_match": true
+    }
+  },
+  "GPU": "NVIDIA RTX 6000 Ada Generation, 0 %, 182 MiB, 46068 MiB",
+  "disk_free_bytes": 188306915328,
+  "shared_active": null,
+  "full_frozen_verification_reference": {
+    "path": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_execution\\rematch_exec_20261005T1215Z\\controller\\monitor_balanced_two_window_risk_v3\\latest.json",
+    "sha256": "99a3f8fc3f7e4a1cb953f88486e3f0a2278376ff4e3af518ce32e166335a1e08",
+    "scope": "earlier component snapshot; no repeated freeze or accepted replay"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "schema": "GPU_HOST_CODE_BOUNDED_RESOURCE_ENVELOPE_V2",
+  "status": "OBSERVATION_UNAVAILABLE_WITH_CODE_BOUNDED_ENVELOPE",
+  "cold_load_HWM_observed": false,
+  "observed_BASE_host_peak_rss_bytes": null,
+  "observed_peak_proof_ref": null,
+  "steady_RSS_is_not_HWM": true,
+  "actual_base_BF16_bytes": 17534247392,
+  "maximum_checkpoint_shard_bytes": 4999831048,
+  "actual_CPU_peak_rss_bytes": 2622676992,
+  "maximum_actual_logical_prefill_tensor_bytes": 286482312,
+  "maximum_actual_logical_prefill_tensor_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/local_boundary_v4/dev/cpu_01/CH_7FQ5Q_W000.S00.end/cpu_input.json",
+    "sha256": "5eb7b3813061ef006103384d230b400ffb7ce4d1fdced2e0e6edf6255165e9f0",
+    "bytes": 27087
+  },
+  "maximum_prefill_tensor_code_bound_bytes": 402916864,
+  "prefill_bound_derivation": {
+    "max_input_tokens": 16384,
+    "rows_per_merged_visual_token": 4,
+    "float32_patch_row_columns": 1536,
+    "float32_bytes": 4,
+    "int64_ID_and_mask_bytes_per_token": 16,
+    "metadata_grid_reserve_bytes": 1536,
+    "checked_existing_signature_count": 37
+  },
+  "explicit_additional_adapter_two_copy_at_8_bytes_per_parameter_margin": 245366784,
+  "explicit_additional_three_prefill_cache_signature_copy_margin_bytes": 1208750592,
+  "conservative_host_memory_bound_bytes": 27013789672,
+  "observed_host_peak_or_strict_allocator_max_claim": false,
+  "maximum_shard_manifest_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/resource_envelope_17/checkpoint_shard_manifest_01.json",
+    "sha256": "9909dd2f6363c5fb7850c6bade0b85a2eee423f7debfe53288eb79ad74c97a88",
+    "bytes": 3128
+  },
+  "CPU_resource_envelope_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/resource_envelope_17/CPU_resource_envelope_01.json",
+    "sha256": "c90a7c7a169d9f4a67e5e78225b829e920d59c1b76df9cf4d787d9af90a52e60",
+    "bytes": 1121
+  },
+  "model_identity_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/local_boundary_base_dev_v1/gpu_01/model_identity.json",
+    "sha256": "51c07e1814e37edea503442f217eed967bf9eed5c9ea2f7ec8403306844fb123",
+    "bytes": 13874
+  },
+  "existing_loader_code_ref": {
+    "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/engine.py",
+    "sha256": "73be89785dad2585c16713373ddfc561153c11289a9f6528962a16c01e7a9e6d",
+    "bytes": 12805
+  },
+  "model_architecture_metadata_ref": {
+    "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/models/Qwen3-VL-8B-Instruct/config.json",
+    "sha256": "5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661",
+    "bytes": 1474
+  },
+  "required_future_same_processor_and_input_token_cap": 16384,
+  "existing_resource_or_snapshot_metadata": [
+    {
+      "ref": {
+        "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/aic20h_charades_dev37_base_boundary_20261014_v1.resource.json",
+        "sha256": "5cd8935dc2d9b82e3fa224a88cfed1e489c4760e0dc7cfb07eca4ec18a3a3599",
+        "bytes": 2570
+      },
+      "present": true,
+      "status": "completed",
+      "recorded_RSS_or_HWM_fields": {},
+      "no_field_is_claimed_to_measure_GPU_cold_load_HWM": true
+    },
+    {
+      "ref": {
+        "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/local_boundary_base_dev_v1/controller_01/resource_before_wait.json",
+        "sha256": "9b90927a7259e5088f3597e5fc133f6f8290f8f19dee9549d4671c8a960aeb9a",
+        "bytes": 883
+      },
+      "present": true,
+      "status": null,
+      "recorded_RSS_or_HWM_fields": {},
+      "no_field_is_claimed_to_measure_GPU_cold_load_HWM": true
+    },
+    {
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/local_boundary_base_dev_v1/controller_01/resource_before_run.json",
+      "present": false
+    },
+    {
+      "ref": {
+        "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/aic20h_charades_dev37_time_boundary_20261014_v1.resource.json",
+        "sha256": "0851b422f3e028cb9dd9b7cc9a4a3e52c0112ec5674c10c538f22952750d7ff0",
+        "bytes": 1868
+      },
+      "present": true,
+      "status": "completed",
+      "recorded_RSS_or_HWM_fields": {},
+      "no_field_is_claimed_to_measure_GPU_cold_load_HWM": true
+    }
+  ],
+  "new_GPU_host_disk_temporary_bytes": 0,
+  "disk_note": "Existing local checkpoint, cuda-only map and no model offload; actual registered batch raw/proof output reserved separately",
+  "applicability": "Existing identical loader/weights/finite schema/accepted token cap; first real batch lifecycle and live capacity still required",
+  "new_model_calls": 0,
+  "full_weight_body_reads_or_hashes": 0
+}

@@ -1,0 +1,104 @@
+{
+  "status": "ROOT_SEMANTIC_EVALUATION_ADJUDICATION_COMPLETE",
+  "utc": "2026-10-11T09:59:06.067703+00:00",
+  "window_id": "cjibtmSLxQ4:SLOT6:16",
+  "candidate_prediction_exposure": false,
+  "root_read_all64_teacher_facts": true,
+  "root_read_all64_native_and_student_facts": true,
+  "all_NO_ranges_reviewed": true,
+  "selected_preteacher_event_indices": [
+    0,
+    1,
+    2
+  ],
+  "unknown_local_exact": [
+    [
+      "53953/1875",
+      "355109/12000"
+    ]
+  ],
+  "consequential_unknowns": [
+    {
+      "first": 61,
+      "last": 62,
+      "reason": "运动主体下降至下方暗边/遮挡，未清楚重现落地或结束；相关物理结果保持UNKNOWN"
+    }
+  ],
+  "evidence": {
+    "preteacher_main_review": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\21_cjibt_w16_main_preteacher_review_v2.json",
+      "sha256": "3bdf8f0d74751ae4241dd4d1b47f97a1bec0ab9cf585f96b07ee22e03c19c248"
+    },
+    "teacher_observation_audit": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\21_cjibt_w16_lawful_observation_completion_CLI38_v1.json",
+      "sha256": "bdde9292c11d953c5acd5dfb455e0199d963f4675a31cce0af755a101ca22355"
+    },
+    "original_teacher_proposal": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\manual_CLI38_retry_v1\\call38\\w21_proposal.json",
+      "sha256": "acb83d303e6b9ebcc308e9dda77999f50bd1a7fd49514e20190a03f1dee4afd2"
+    },
+    "original_teacher_bound_fact_audit": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\manual_CLI38_retry_v1\\call38\\w21_completed_scope_audit.json",
+      "sha256": "21a2becde78123aa6416e1d018546edc7b96607980131b1b1e98ff557435fcf1"
+    },
+    "boundary_observations": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\21_cjibt_w16_boundary_observations_acceptance.json",
+      "sha256": "dc846b47c70eca1e070041e20fca32474b1798fea4761517af7ec31a71d8e650"
+    },
+    "exposed_independent_semantic_crosscheck": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_semantic_crosschecks_v1\\21_cjibtmSLxQ4_W16.exposed_semantic_crosscheck_CLI38_v1.json",
+      "sha256": "f382680c58649dbd889432c437cc1c455ed62657d7891e544e0f84e8251d0ced"
+    },
+    "root_actual_postteacher_pixels": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\21_cjibt_w16_root_actual_postteacher_pixels_CLI38_v1.json",
+      "sha256": "33fd2637dc8058073cb4aedc44b836e3d97d0793f14639d40d8b1a2f0a683fd0"
+    }
+  },
+  "differences_adjudicated": [
+    "The static high-horizontal-pose photograph is a finite typical image only; no live movement or result is invented.",
+    "Projected high-body rotation/descent is actually visible, but F61..62 hides the subject at the lower dark border. Keep the visible part and explicitly mark its consequential result range UNKNOWN; do not claim a complete landing.",
+    "The illuminated device is a short clear distinct representative shot, not proof of a projected operation or a claimed effect.",
+    "Actual original effectiveF08 shows a high curled body near the tree, not a fully stretched horizontal body. This separately saved correction preserves the original native-only wording and the old boundary observation wording; it changes no source frame, time or candidate metric.",
+    "Student initial does not call a still photo or luminous device a complete live event. Root retains the already frozen finite typical-image targets only; no new movement, projector effect or complete physical operation is asserted.",
+    "Original effectiveF57/F60/F62 confirms high body posture then a lower curled body and hidden lower-blue-border result. F61..62 remains consequential UNKNOWN; the interior scene-return image narrows editing uncertainty without showing a landing.",
+    "Actual registered task14 is already projection, so the entrance uses F51/interior. Task13 is still a held photo, so the full-frame typical photo entrance uses interior/F08.",
+    "Teacher all-NO proposal is rejected for the frozen finite-image targets. F08..13 is a still photograph, not a newly observed live descent; a full physical event is not the target of this short representative photo.",
+    "F30..33 distinct luminous-device representative image is retained without naming a camera, operation or causal effect. F52..60 visible high-body/posture/descent sequence is retained without claiming a complete release, flip, touchdown or final outcome.",
+    "F61..62 consequential result UNKNOWN remains explicit. Teacher ordinary-crowd wording and all-NO do not supply the missing obscured contact. UNKNOWN ends at the separately preregistered scene-return editing midpoint, not an invented landing.",
+    "Teacher broad 0.6/0.7-second uncertainty ranges and some support PTS outside its proposed segments are preserved as original discrepancies, not silently narrowed. Final boundaries use the earlier independently reviewed exact ranges only.",
+    "All64 teacher/native/student static facts and ordinary NO spans were read. ROOT directly rechecked only five listed originals after the teacher disagreement, not all64 images or video; independent original blind observations remain separate.",
+    "Speech, intent, mental state, specific sport, historical attribution and audio absence are not established by these static observations and are excluded from the finite reference."
+  ],
+  "actual_root_observation_scope": {
+    "native_sample_indices": [
+      8,
+      30,
+      52,
+      57,
+      60,
+      62
+    ],
+    "student_sample_indices": [
+      8,
+      30,
+      57,
+      60,
+      62
+    ],
+    "additional_postteacher_native_samples": [
+      8,
+      30,
+      52,
+      60,
+      62
+    ],
+    "read_native_static_facts": 64,
+    "read_student_static_facts": 64,
+    "read_teacher_static_facts": 64,
+    "root_direct64_image_review": false,
+    "root_native_video_view": false,
+    "teacher_actual_video_delivery": true,
+    "original_parent_terminal_not_inferred": true
+  },
+  "reference_scope_and_reason": "Locked-evaluation-only finite visual editorial silver. Three preteacher representative image/visible-body events retained with ordinary NO and explicit consequential UNKNOWN for the obscured result. Not human gold, not a complete physical performance, and not training admission."
+}

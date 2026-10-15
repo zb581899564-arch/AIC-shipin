@@ -1,0 +1,79 @@
+{
+  "status": "PASS_FIVE_AUTHORIZED_ORIGINAL_MEDIA_TRANSFERS_NOT_INPUT_ADMISSION",
+  "rows": [
+    {
+      "status": "PASS_ORIGINAL_ZIP_MEMBER_CRC_SHA",
+      "source_name": "Bike Polo",
+      "source_group": "SumMe:Bike Polo",
+      "path": "/home/inspur/aic_video_work/duration_guard_iteration_20261013_v1/media_01/Bike Polo.webm",
+      "identity": {
+        "bytes": 32958947,
+        "crc32": "0007a1d5",
+        "sha256": "15bfd5b4c1be4f37ec7a3b742df9fae64a07856d3a0e8397ab3272bfc0e368cb"
+      },
+      "original_member": "videos/Bike Polo.webm",
+      "range_compressed_bytes": 32958947,
+      "original_archive_url": "https://data.vision.ee.ethz.ch/cvl/SumMe/SumMe.zip"
+    },
+    {
+      "status": "PASS_ORIGINAL_ZIP_MEMBER_CRC_SHA",
+      "source_name": "Paintball",
+      "source_group": "SumMe:Paintball",
+      "path": "/home/inspur/aic_video_work/duration_guard_iteration_20261013_v1/media_01/Paintball.webm",
+      "identity": {
+        "bytes": 18182076,
+        "crc32": "573723de",
+        "sha256": "60c9952ab4954bfdfb6081fc66cbe70f6fe83578b692f814533a5b353e7e7ed3"
+      },
+      "original_member": "videos/Paintball.webm",
+      "range_compressed_bytes": 18138748,
+      "original_archive_url": "https://data.vision.ee.ethz.ch/cvl/SumMe/SumMe.zip"
+    },
+    {
+      "status": "PASS_ORIGINAL_ZIP_MEMBER_CRC_SHA",
+      "source_name": "paluma_jump",
+      "source_group": "SumMe:paluma_jump",
+      "path": "/home/inspur/aic_video_work/duration_guard_iteration_20261013_v1/media_01/paluma_jump.webm",
+      "identity": {
+        "bytes": 12568117,
+        "crc32": "7d14504f",
+        "sha256": "de70aba91ad44db1d4725379e6c7db04495690eb28b87e1540cc014355c8361e"
+      },
+      "original_member": "videos/paluma_jump.webm",
+      "range_compressed_bytes": 12564225,
+      "original_archive_url": "https://data.vision.ee.ethz.ch/cvl/SumMe/SumMe.zip"
+    },
+    {
+      "status": "PASS_ORIGINAL_ZIP_MEMBER_CRC_SHA",
+      "source_name": "Valparaiso_Downhill",
+      "source_group": "SumMe:Valparaiso_Downhill",
+      "path": "/home/inspur/aic_video_work/duration_guard_iteration_20261013_v1/media_01/Valparaiso_Downhill.webm",
+      "identity": {
+        "bytes": 59625615,
+        "crc32": "00fc87df",
+        "sha256": "5eebb20e0a5ba37f58a3b6804b2f635747db14218f6a6c1f6d672b3e5334e7f1"
+      },
+      "original_member": "videos/Valparaiso_Downhill.webm",
+      "range_compressed_bytes": 59195590,
+      "original_archive_url": "https://data.vision.ee.ethz.ch/cvl/SumMe/SumMe.zip"
+    },
+    {
+      "status": "PASS_ORIGINAL_ZIP_MEMBER_CRC_SHA",
+      "source_name": "Statue of Liberty",
+      "source_group": "SumMe:Statue of Liberty",
+      "path": "/home/inspur/aic_video_work/duration_guard_iteration_20261013_v1/media_01/Statue of Liberty.webm",
+      "identity": {
+        "bytes": 17418685,
+        "crc32": "eadfcf0f",
+        "sha256": "77b95fab3e29c83ae80f2739826bda174be21235afd821724c2a379a68563718"
+      },
+      "original_member": "videos/Statue of Liberty.webm",
+      "range_compressed_bytes": 17418685,
+      "original_archive_url": "https://data.vision.ee.ethz.ch/cvl/SumMe/SumMe.zip"
+    }
+  ],
+  "sources": 5,
+  "native_mapping": "UNVERIFIED",
+  "new_model_calls": 0,
+  "total_media_file_bytes": 140753440
+}

@@ -1,0 +1,73 @@
+{
+  "status": "ROOT_EXPLICIT_SEPARATE_MEDIA_COMPOSITION_ORIGINAL_CLI32_STRICT_FAILED_UNCHANGED",
+  "utc": "2026-10-10T21:51:40.502554+00:00",
+  "original_protocol_authority": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\readonly_protocol_composed_media_inquiry_CLI31.json",
+    "sha256": "3fe5afeb157eb83f1e29d7c4fa0b4db6c99d202f69a8fc9d50692e4ffcdcfd68"
+  },
+  "original_strict_audit": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\call06\\audit.json",
+    "sha256": "8f7f6c1907d38e77407896d3292b7389a2e87804c14edb9411b3b65831983298"
+  },
+  "actual_media_inventory": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\call06\\actual_media_completion_evidence_original_strict_failed.json",
+    "sha256": "63b37ded18dfdab858b3d5dbeb099007cc0385f72e3c0175c36c5fff0e1e7028"
+  },
+  "original_terminal": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\call06\\terminal.json",
+    "sha256": "9ccbffb7815f96caf5060710fd4d1aff09742ecfafc895f75e7183bece822f11"
+  },
+  "original_raw": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\call06\\stream.jsonl",
+    "sha256": "77153ff662b93c550fe0933de9472e5af5bd44e03208a9e9fc21bb9cc3495a7a"
+  },
+  "rationale": "Original project protocol allows actual observations reused with separately adjudicated complete references. This separate composition accepts only the actually delivered native64/video/effective8 and real fact/proposal files; harmless same frozen index rereads are individually recorded as metadata, not media. Original exact181/191 strict failure, bare metadata and costs are immutable and never reclassified.",
+  "original_failed_tasks": [
+    14,
+    15
+  ],
+  "actual_index_read_steps": [
+    3,
+    128,
+    130,
+    134,
+    157,
+    159,
+    175,
+    184,
+    193,
+    203,
+    212
+  ],
+  "actual_bare_nonmedia_metadata": [
+    {
+      "conversation_id": "926df26a-e04a-4075-9ad7-830ebb336108",
+      "step_index": 1,
+      "state": "DONE",
+      "step_type": "error_message",
+      "duration_seconds": 0
+    },
+    {
+      "conversation_id": "926df26a-e04a-4075-9ad7-830ebb336108",
+      "step_index": 194,
+      "state": "DONE",
+      "step_type": "error_message",
+      "duration_seconds": 0
+    },
+    {
+      "conversation_id": "926df26a-e04a-4075-9ad7-830ebb336108",
+      "step_index": 275,
+      "state": "DONE",
+      "step_type": "error_message",
+      "duration_seconds": 0
+    }
+  ],
+  "no_original_failure_reclassified": true,
+  "no_AGY_retry": true,
+  "no_new_media": true,
+  "no_decoder": true,
+  "no_model": true,
+  "candidate_prediction_exposure": false,
+  "training_admitted": false,
+  "evaluation_only": true
+}

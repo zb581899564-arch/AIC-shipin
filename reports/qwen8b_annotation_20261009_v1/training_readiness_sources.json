@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "crop-readiness",
+      "title": "裁剪数据适合先导实验",
+      "queries": [
+        {
+          "id": "crop-checks",
+          "source": {
+            "label": "本地裁剪数据可用性检查",
+            "files": [
+              {
+                "label": "training_readiness_audit.json"
+              }
+            ],
+            "filters": [
+              "仅使用 PASS 裁剪标签",
+              "按视频分训练和验证"
+            ],
+            "caveats": [
+              "模型标注与自检，无独立人工金标。",
+              "未做 processor、loss 或训练运行。"
+            ],
+            "evidenceFlow": [
+              {
+                "kind": "validation",
+                "title": "实际检查",
+                "detail": "13个最终文件哈希匹配；543张图片均可读；框、比例、目标格式通过；跨集同源和完全相同RGB交叉均为0。"
+              }
+            ]
+          },
+          "columns": [
+            "subset",
+            "rows",
+            "identity_rows"
+          ],
+          "rows": [
+            {
+              "subset": "完整训练",
+              "rows": 531,
+              "identity_rows": 388
+            },
+            {
+              "subset": "完整验证",
+              "rows": 148,
+              "identity_rows": 72
+            },
+            {
+              "subset": "非原图训练",
+              "rows": 143,
+              "identity_rows": 0
+            },
+            {
+              "subset": "非原图验证",
+              "rows": 76,
+              "identity_rows": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "highlight-readiness",
+      "title": "高光标签仍为候选",
+      "queries": [
+        {
+          "id": "temporal-checks",
+          "source": {
+            "label": "原生视频候选标注审核",
+            "files": [
+              {
+                "label": "temporal_independent_audit.json"
+              }
+            ],
+            "caveats": [
+              "原生输入与输出身份通过，不代表时间边界质量通过。",
+              "一条视频时间错位已隔离，其余尚待核验；未标区间不作负例。"
+            ]
+          },
+          "columns": [
+            "sources",
+            "keep_candidates",
+            "unknown_candidates",
+            "complete_sft_rows"
+          ],
+          "rows": [
+            {
+              "sources": 50,
+              "keep_candidates": 449,
+              "unknown_candidates": 151,
+              "complete_sft_rows": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

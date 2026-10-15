@@ -1,0 +1,41 @@
+{
+  "status": "PASS_LOCAL_B2_ZIP_DELIVERY",
+  "utc": "2026-10-08T02:45:51.689217+00:00",
+  "authority": "用户明确请求：zip给我",
+  "prior_notice": "Linux→Windows，317401字节，既有SSH链路可能计入机场流量",
+  "source": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/rematch_01/candidate_B2_8B.zip",
+  "destination": "G:\\ai\\AIC视频\\deliveries\\B2_8B_20261008\\candidate_B2_8B.zip",
+  "ssh_alias": "aic-inspur-home",
+  "mac_used": false,
+  "transferred_this_request": true,
+  "payload_bytes": 317401,
+  "zip_bytes": 317401,
+  "zip_sha256": "0f8c95f01222a28a053e6f80b76b3d4d7ac3dc82077f4dd533605337bc6883a3",
+  "crc_pass": true,
+  "archive_names": [
+    "predictions.jsonl"
+  ],
+  "predictions_sha256": "0c0777a24ce84ae662221f2a04ed259cef6a3c0d67671e5238a3048c1ae700f4",
+  "video_records": 426,
+  "duplicate_video_records": 0,
+  "source_ids_exact": true,
+  "source_ids_sha256": "cb9d31a67deffebc1a04ffb96665b0361dd0eb0d419fb882bdca3c2eee8f15ff",
+  "linux_final_acceptance_sha256": "a365d7737e62084ab42b9883aa15d08921d2cd1c97c3e3128544744955e0e829",
+  "independent_strict_checks": {
+    "strict_loader_ok": true,
+    "video_record_set_exact": true,
+    "selected_key_set_exact": true,
+    "ratio_fields_exact": true,
+    "frames_sorted": true,
+    "provenance_key_set_exact": true,
+    "provenance_boxes_match_predictions": true,
+    "provenance_all_legal": true,
+    "provenance_sources_allowed": true,
+    "archive_single_file": true,
+    "archive_roundtrip_exact": true
+  },
+  "official_score": null,
+  "new_T_training_started": false,
+  "uploaded_to_aic": false,
+  "elapsed_seconds": 2.6560000000026776
+}

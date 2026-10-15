@@ -1,0 +1,38 @@
+{
+  "utc": "2026-10-08T22:14:23.710448+00:00",
+  "reason": "Unfrozen scaffold global module replacement changed bind/bound/end identifiers; corrected before deployment or model calls",
+  "changes": [
+    {
+      "path": "native_round_alignment_v1\\freeze.py",
+      "before": "cecd7f2b5a7e6620c235329cbd33c935f0382bc494351a2a3ec8ce8ab07599b1",
+      "after": "193ed073feb2adecd505c67d0e2f0843af952937c7472aa2c428f2428fc04190"
+    },
+    {
+      "path": "native_round_alignment_v1\\nr_common.py",
+      "before": "12e52ed9604e15af6fddb9991eee885fd08c61bf0fa94c1fdc6ef8a23094fbc5",
+      "after": "c902df1ae402a024924a5530c834436cc64a92671f5658c1c7430b4e5b4c9fed"
+    },
+    {
+      "path": "native_round_alignment_v1\\nr_cpu.py",
+      "before": "4d63fb9063c33e818254f2551056b8e40bd580fec8844f6336741797f2b58087",
+      "after": "887e03499916d2ce33c6326b53032767bfa4c646701d9176954a1c9f43881135"
+    },
+    {
+      "path": "native_round_alignment_v1\\nr_engine.py",
+      "before": "075629717ce48a2c0816eb49e3222b5e0b5fa44035acd117d77d31a095c0de8a",
+      "after": "c00b4472321fdadd68e9ade212ad10b60724d274944022cb45743c5c0178b863"
+    },
+    {
+      "path": "native_round_alignment_v1\\nr_prepare.py",
+      "before": "a839dd5c157c7e9d774a05a932eaacb97ed33082bd8eef503e3bc8055b3e64fb",
+      "after": "0386601320598e83e45ee30e0010a8e726b26aeea7d5cf5ec9635dea8f347ecb"
+    },
+    {
+      "path": "native_round_alignment_v1\\packager.py",
+      "before": "28204cef14350791825aeb13a85673add20673ce1a70b7d86b685f4e410ac760",
+      "after": "4ba82b33d72f00810f0c37ce60fd9e7543c6cbd93b810584c0cd631b6972a175"
+    }
+  ],
+  "new_model_calls": 0,
+  "historical_files_changed": 0
+}

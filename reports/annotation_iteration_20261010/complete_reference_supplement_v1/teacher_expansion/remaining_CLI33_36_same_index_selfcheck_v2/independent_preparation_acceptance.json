@@ -1,0 +1,118 @@
+{
+  "utc": "2026-10-10T21:47:32.055226+00:00",
+  "status": "PASS_INDEPENDENT_PREPARATION_ONLY_PENDING_ROOT_START",
+  "verifier_source_sha256": "16056221089544383edbcafcbdba11adddde3aa12afb42685d3bd1b3b3636c8e",
+  "AST": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\audit_completed_window.py",
+      "sha256": "3fee0f74ccce39700684d89c9ea494fdcc2ec7a90a829412b97c619a5e3bc4d1"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\audit_pair.py",
+      "sha256": "02ba0caf0385bcc99283cf8c75cd624c3bc8f8b4567e2abc33abfff62384db35"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\controller.py",
+      "sha256": "f6f263daec5de00acab9705e234e3748fc2e4ad8be07470b06055b0f84853cd2"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\launch.py",
+      "sha256": "6a7705936838cbe153642a2099107fef69da646142588da5fdd3e1547badcdd3"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\observe_receipts.py",
+      "sha256": "d4360609f152b3c73699e46afb3c287b2a0f781c5bd37e133d9e93bafac7cabc"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\progress.py",
+      "sha256": "23f54df447d945ddfa0279acc84f9c5444657a90119a42eb40034f7cde54d180"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\prompt.py",
+      "sha256": "bfe2a062ae7c1422665d5948851bb059d6d2cb41c8449d306290bb69a1c044f0"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\run_pair.py",
+      "sha256": "e7e9855a4b1c0b9e719dcacac1d7262d263edffc5527f236834eed3b441bf7d4"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\supply_policy.py",
+      "sha256": "c264c6142851f4386dfd3a02cab440ee5e9e084932fc4cff72833fd933ea5ca1"
+    }
+  ],
+  "calls": [
+    {
+      "call": 7,
+      "jobs": [
+        16,
+        17
+      ],
+      "CLI_after": 33,
+      "input_count": 198,
+      "index_sha256": "59407adb54ebaffd8a5819732c3f2f08c61c8460fe5bd3c180039e62e5506e06",
+      "freeze_sha256": "8f59047a345a0b9978f872ee03541617cd37636303cab75d21fafe785b69d78b",
+      "prompt_sha256": "81d6a59c69f680fab51cec1cb42083f4e657fa1f5f1f34f270a92fefd72b67dc",
+      "literal_preview_arguments_sha256": "065d9a38020772425bfc02475fd79cc0cf945bb98c3b0bf0b999adb302f6a5a9",
+      "all_inputs_SHA_verified": true,
+      "synthetic_index11_does_not_change181_core": true,
+      "duplicate_media_and_other_path_retained_for_rejection": true
+    },
+    {
+      "call": 8,
+      "jobs": [
+        18,
+        19
+      ],
+      "CLI_after": 34,
+      "input_count": 198,
+      "index_sha256": "342eb813efcb03e8a9ec7c25d39f8123bda736fee3494c5220c7f8d41e494290",
+      "freeze_sha256": "cd9133b0482f3651d4209241f288fd5ce852dd1e031fe11035411c6c963a324b",
+      "prompt_sha256": "6e26b7d9e50af1b3f3b5cbd55cbe7b046e37811f158154935bafbe5557b9fb20",
+      "literal_preview_arguments_sha256": "1e50ccb5817cb638ce94d21b9d9dbb40efcb0375210e4b9cc6f86c9095718e52",
+      "all_inputs_SHA_verified": true,
+      "synthetic_index11_does_not_change181_core": true,
+      "duplicate_media_and_other_path_retained_for_rejection": true
+    },
+    {
+      "call": 9,
+      "jobs": [
+        20,
+        21
+      ],
+      "CLI_after": 35,
+      "input_count": 198,
+      "index_sha256": "83cbf73ef07f79ec4238bbe306e69e559e0280eec3cf0830296503eac0ff575c",
+      "freeze_sha256": "32131bdb085f4a10168e75ee264192e8a6775e1f22334a137f04ee19a7f898f7",
+      "prompt_sha256": "e5b9945ac66469c96871837c5370447028de76d2f22b9d5f5c0652e198915b1c",
+      "literal_preview_arguments_sha256": "7fc1386ee93cbaad50d261311e9a137a92557496a40863e3f906312ade815590",
+      "all_inputs_SHA_verified": true,
+      "synthetic_index11_does_not_change181_core": true,
+      "duplicate_media_and_other_path_retained_for_rejection": true
+    },
+    {
+      "call": 10,
+      "jobs": [
+        22,
+        23
+      ],
+      "CLI_after": 36,
+      "input_count": 198,
+      "index_sha256": "09e7051115e27b1ea5ce9432267123a5ac5cc588da1c563e32417319fd1d7df1",
+      "freeze_sha256": "9860d9f9e20fc5ed154d028e37d910fd63739d032ed16c0259dac2912c1ccaea",
+      "prompt_sha256": "56b45d9c0f5bc9eb120b26773ad6726a9b4123931496a8d6a5e22f6f4996ecb7",
+      "literal_preview_arguments_sha256": "7e1ab5108511795e46261ade8e8d8f0a5f53d7e3b800b1039f2e2239e97093b7",
+      "all_inputs_SHA_verified": true,
+      "synthetic_index11_does_not_change181_core": true,
+      "duplicate_media_and_other_path_retained_for_rejection": true
+    }
+  ],
+  "execution_binding_sha256": "2b6a1e9193d34e481875dd6bc453a96be9c3e4513b0a50124b96f4f3919c66e7",
+  "dry_run_sha256": "35edf3dc28968687b6e10b9e0e0cd72f9bb8ba53dbc730acf90f7644a58151b5",
+  "global_actual_CLI": 32,
+  "new_model_calls": 0,
+  "new_decoder": 0,
+  "new_optimizer": 0,
+  "original32_strict_failure_unchanged": true,
+  "unexecuted_draft_r0_preserved": "Prior preparation draft preserved without launch; current reviewed version only at exact v2 root",
+  "root_start_gate_absent": true
+}

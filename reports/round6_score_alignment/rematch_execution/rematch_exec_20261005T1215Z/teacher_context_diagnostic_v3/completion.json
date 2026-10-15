@@ -1,0 +1,47 @@
+{
+  "status": "PASS_CONTEXT_DIAGNOSTIC_COMPLETE",
+  "request_count": 8,
+  "annotation_requests": 4,
+  "review_requests": 4,
+  "states": {
+    "POSITIVE": 3,
+    "NO_HIGHLIGHT": 1
+  },
+  "review_states": {
+    "SUPPORTED": 3,
+    "REJECTED_OR_UNCERTAIN": 1
+  },
+  "per_window": [
+    {
+      "window_id": "complete_cd3e09529324acc16114d2fa",
+      "split": "train",
+      "state": "POSITIVE",
+      "weak_review": "SUPPORTED"
+    },
+    {
+      "window_id": "complete_47c0dd5636aff0e0ebbc37a1",
+      "split": "train",
+      "state": "NO_HIGHLIGHT",
+      "weak_review": "REJECTED_OR_UNCERTAIN"
+    },
+    {
+      "window_id": "complete_999f44661e0ad2ba0fc003ab",
+      "split": "dev",
+      "state": "POSITIVE",
+      "weak_review": "SUPPORTED"
+    },
+    {
+      "window_id": "complete_e1e3a1030b7e5f5e7f4b9fb2",
+      "split": "dev",
+      "state": "POSITIVE",
+      "weak_review": "SUPPORTED"
+    }
+  ],
+  "same_teacher_not_independent_truth": true,
+  "new_training_labels": 0,
+  "student_training_admitted": false,
+  "optimizer_steps": 0,
+  "raw_receipts_sha256": "f9faf8e46d818fda93fbd5979a09fc0939b076f6ba85bfc7d506e99f3741ed48",
+  "wall_sec": 613.7024210728705,
+  "utc": "2026-10-07T17:02:48.473707+00:00"
+}

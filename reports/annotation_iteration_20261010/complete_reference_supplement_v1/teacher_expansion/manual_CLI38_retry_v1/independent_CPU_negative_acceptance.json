@@ -1,0 +1,259 @@
+{
+  "status": "PASS_NECESSARY_MANUAL38_PATH_AUTH_ZERO_TOOL_PRIOR_FAILURE_CPU_NO_MODEL_PENDING_ROOT_GATE",
+  "source_binding_sha256": "ebdb7341908df4a79993fe11e789637e2aee8c831ea09a44567106e5cde69038",
+  "new_cases": [
+    {
+      "name": "one_manual38_typed_authorization_positive",
+      "accepted": true,
+      "memory_only": true,
+      "new_model_calls": 0
+    },
+    {
+      "name": "old37_status_not_manual38_STOP",
+      "accepted": false,
+      "memory_only": true,
+      "new_model_calls": 0
+    },
+    {
+      "name": "missing_exact_human_quote_STOP",
+      "accepted": false,
+      "memory_only": true,
+      "new_model_calls": 0
+    },
+    {
+      "name": "automatic_retry_STOP",
+      "accepted": false,
+      "memory_only": true,
+      "new_model_calls": 0
+    },
+    {
+      "name": "wrong_scope_STOP",
+      "accepted": false,
+      "memory_only": true,
+      "new_model_calls": 0
+    },
+    {
+      "name": "no39_false_STOP",
+      "accepted": false,
+      "memory_only": true,
+      "new_model_calls": 0
+    },
+    {
+      "name": "cap39_STOP",
+      "accepted": false,
+      "memory_only": true,
+      "new_model_calls": 0
+    },
+    {
+      "name": "time_expansion_STOP",
+      "accepted": false,
+      "memory_only": true,
+      "new_model_calls": 0
+    },
+    {
+      "name": "claim_IP_verified_STOP",
+      "accepted": false,
+      "memory_only": true,
+      "new_model_calls": 0
+    },
+    {
+      "name": "cash_zero_STOP",
+      "accepted": false,
+      "memory_only": true,
+      "new_model_calls": 0
+    },
+    {
+      "name": "gate_wrong_counter_STOP",
+      "accepted": false,
+      "memory_only": true,
+      "new_model_calls": 0
+    },
+    {
+      "name": "actual_location_zero_tool_shape_positive",
+      "accepted": true,
+      "memory_only": true,
+      "new_model_calls": 0
+    },
+    {
+      "name": "different_error_type_STOP",
+      "accepted": false,
+      "memory_only": true,
+      "new_model_calls": 0
+    },
+    {
+      "name": "nonzero_tokens_STOP",
+      "accepted": false,
+      "memory_only": true,
+      "new_model_calls": 0
+    },
+    {
+      "name": "any_prior_tool_even_ACTIVE_STOP",
+      "accepted": false,
+      "memory_only": true,
+      "new_model_calls": 0
+    },
+    {
+      "name": "prior_output_exists_STOP",
+      "accepted": false,
+      "memory_only": true,
+      "new_model_calls": 0
+    },
+    {
+      "name": "prior_terminal_not_created_STOP",
+      "accepted": false,
+      "memory_only": true,
+      "new_model_calls": 0
+    },
+    {
+      "name": "duplicate_TERMINAL37_STOP",
+      "accepted": false,
+      "memory_only": true,
+      "new_model_calls": 0
+    }
+  ],
+  "guard_functions_byte_exact": {
+    "launch.py:verify_w20_recovery": "4348618551145d6321c88130974de3c01bb51bf123b95446c932ae9ca8af7796",
+    "observer.py:fact_payload_guard": "1196476bd36400e73c168097cf716ae65b24ee736ae55be4e62558953863c6c2",
+    "observer.py:proposal_path_guard": "a543254bfccaf88e55922db2ff498043f7f1e8d825d2aa139571805627eb437b",
+    "observer.py:request_owned_stop": "5ac5a4df4d5ab852999ae26a0ad2cbbc206190b9bd4843a92163e6f522fff2fb",
+    "observer.py:schema_scan": "1fff4f67cde7f8c62d1d1ad4136d7dcba0b6c6292b88409a9b9459800227e225",
+    "observer.py:seal_observed_scopes": "c3a4f804089f9df6478910e758186dc3490036ed2856d5caf5d5521caa939dfe",
+    "prompt.py:scientific_text": "d742bdfad181ec629d0742b7ea5bd5e581d2a3c9dd1035ae8b531d5796927057",
+    "prompt.py:piece": "c5f1eda66bb92d446f7f42291fdaf4c4c7f6062551e361ec6d4b4243aa78b503",
+    "prompt.py:header_body": "03b49ca20612a304baade9d7a876b7c98457417722b4079d0f1780e1a7fb85e2",
+    "prompt.py:native_body": "3a74ab9fd49bf00ef93e7437aa0aa5eb67f40453b3237eae009fa124ae5f3ac0",
+    "prompt.py:native_schema_notice": "cdffcd0b1b8462332860134d70c75a0920219ed6709a088dad9c1a19220489ca",
+    "prompt.py:proposal_example": "52815f143dfdd8b4fa2acfa810b6cfd9d8a0e71f05fb7bf6db10c05f72b039ae",
+    "prompt.py:proposal_body": "f9fac27d77d960457d0cf36a64090daedbf1ab7fc62fc830897f46b4c7e9ada2"
+  },
+  "parts": [
+    {
+      "part_id": "main",
+      "bytes": 7096,
+      "sha256": "d3a6848504944b5f5c3ab8eb4dddcaecb3abf81ff351630120cf970ca3858845",
+      "full_text_regenerated_exact": true
+    },
+    {
+      "part_id": "w21_header",
+      "bytes": 12834,
+      "sha256": "b8d0c7b3ffac1f31954e0ed8e5859cfad9c6310e2f3cdba9175a3aeaa162bdd7",
+      "full_text_regenerated_exact": true
+    },
+    {
+      "part_id": "w21_native00_15",
+      "bytes": 29049,
+      "sha256": "78f7d302d14223c3f091efd4a10efc46082bb3193926f9d74f528343e4a7ec2a",
+      "full_text_regenerated_exact": true
+    },
+    {
+      "part_id": "w21_native16_31",
+      "bytes": 29097,
+      "sha256": "af0818862ff2cd6c4aa76ccdeedc86e6895fcad2d83775c7ee1c10263e9af233",
+      "full_text_regenerated_exact": true
+    },
+    {
+      "part_id": "w21_native32_47",
+      "bytes": 29117,
+      "sha256": "96e53c656724883c4f369a326edd79d1285f0d29db0c5ac1b402573881fa3a34",
+      "full_text_regenerated_exact": true
+    },
+    {
+      "part_id": "w21_native48_63",
+      "bytes": 29115,
+      "sha256": "695c33bb46bf22bfabdb63dcda8fea741a434ad494fe6b4caa455a553e9c0048",
+      "full_text_regenerated_exact": true
+    },
+    {
+      "part_id": "w21_proposal_schema",
+      "bytes": 3862,
+      "sha256": "1e91e435ba5985cb62056cf51e777e92e29773882605fa88a4984249def94aa1",
+      "full_text_regenerated_exact": true
+    },
+    {
+      "part_id": "w22_header",
+      "bytes": 12699,
+      "sha256": "ac0808252735f8bceafa7731d2f99d99c303996540d76040d81d8a758b51b072",
+      "full_text_regenerated_exact": true
+    },
+    {
+      "part_id": "w22_native00_15",
+      "bytes": 28620,
+      "sha256": "13cf46a93f51f55b8830897aa9d20b3919ba03b79e6b5416b7f92cce8db6319b",
+      "full_text_regenerated_exact": true
+    },
+    {
+      "part_id": "w22_native16_31",
+      "bytes": 28642,
+      "sha256": "d1e2f4a62e300aed058b6139addb1ec1762eccbea5bc791a66eb5876c437fe86",
+      "full_text_regenerated_exact": true
+    },
+    {
+      "part_id": "w22_native32_47",
+      "bytes": 28672,
+      "sha256": "c564de1a3d540de68563225a7b8cbceaed0f16cb3c9f77782d091c76f46d3052",
+      "full_text_regenerated_exact": true
+    },
+    {
+      "part_id": "w22_native48_63",
+      "bytes": 28672,
+      "sha256": "6cffe1d2d6599b649884686cad33e1509e9661bf3067a136f5ff0ab827f26d77",
+      "full_text_regenerated_exact": true
+    },
+    {
+      "part_id": "w22_proposal_schema",
+      "bytes": 3862,
+      "sha256": "22394dfb58dff35aec4ecd09c99f3c1985eef0b312cdb846471bd839e6f2f86e",
+      "full_text_regenerated_exact": true
+    },
+    {
+      "part_id": "w23_header",
+      "bytes": 12703,
+      "sha256": "9b0dab3f65b58f7b0104ac3b51cfae651ab28eb7d4c19af85b3f8cad594f04e9",
+      "full_text_regenerated_exact": true
+    },
+    {
+      "part_id": "w23_native00_15",
+      "bytes": 28634,
+      "sha256": "23207ce47a3c8d5513ff549baae17e64d58472bebf2892a2bdc92885d460d75d",
+      "full_text_regenerated_exact": true
+    },
+    {
+      "part_id": "w23_native16_31",
+      "bytes": 28650,
+      "sha256": "c08972a5fcffb7d376658ea50dfa7491a4e4166ab9d8dd6e1b1034ba466539dc",
+      "full_text_regenerated_exact": true
+    },
+    {
+      "part_id": "w23_native32_47",
+      "bytes": 28680,
+      "sha256": "92585446459c6693c5c5ba46300e9fad57f9b89bf95497a14c433f0785907dda",
+      "full_text_regenerated_exact": true
+    },
+    {
+      "part_id": "w23_native48_63",
+      "bytes": 28678,
+      "sha256": "3bd7119d3328d7b5249236916b7c95f42455368290bdec686453f9cbd9ada838",
+      "full_text_regenerated_exact": true
+    },
+    {
+      "part_id": "w23_proposal_schema",
+      "bytes": 3862,
+      "sha256": "44dabd149968b04f80f61f61b8967627f234d70189294cade7bdc49479cd3734",
+      "full_text_regenerated_exact": true
+    }
+  ],
+  "argv_units": 738,
+  "core": 308,
+  "scope_cores": [
+    104,
+    206,
+    308
+  ],
+  "prior24_receipt_sha256": "9d67fdb955d5e519b3aebf7f7001d99b61232e9becdc1b4ab8e1c50b3837c52c",
+  "prior68_receipt_sha256": "5a81511285825104a70a511cb836f0196d01a1f03bc1e74bce7454cb305db1ac",
+  "prior51_24_68_repeated": false,
+  "new_PNG_decode": 0,
+  "new_processor_calls": 0,
+  "new_model_calls": 0,
+  "IP_recovery_verified": false
+}

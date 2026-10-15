@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "command": "python -m unittest discover -s round6_score_alignment/p2r_reference_gate/tests -v",
+  "tests_run": 25,
+  "passed": 25,
+  "failed": 0,
+  "errors": 0,
+  "coverage": [
+    "double empty",
+    "single empty",
+    "multiple references",
+    "sparse coverage",
+    "duplicate item/frame",
+    "NaN/Infinity/bool",
+    "out of bounds",
+    "wrong 16:9",
+    "valid 9:16",
+    "missing media",
+    "hash mismatch",
+    "source leakage",
+    "invalid JSON"
+  ]
+}

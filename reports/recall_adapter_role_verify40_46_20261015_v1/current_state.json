@@ -1,0 +1,198 @@
+{
+  "stage": "STOP_ROLE_FRESH_CONFIRM_REJECTED",
+  "baseline": "TEMPORAL_VERIFY_USER40.46",
+  "actual_model_calls": 98,
+  "actual_zips": 0,
+  "prior_positive_confirm": "STOP_POSITIVE_CONFIRM_REJECTED",
+  "old_goal": "complete",
+  "old_aic": "deleted",
+  "production_admitted": false,
+  "linux_root": "/home/inspur/aic_video_work/recall_adapter_role_verify40_46_20261015_v1",
+  "launch_receipt": "dev_launch_02.json",
+  "registration_sha256": "03eda8e880db2d456f7defe4f23022617f1f39452af5882637df40b32af8d652",
+  "protocol_sha256": "c2e2b7a47e511703ca30ddb57a27dc84e5584c605cac8013ae4cdd1c8ab2f149",
+  "actual_new_input_or_media_operations": {
+    "development": 0,
+    "first_fresh_media": 4,
+    "first_fresh_clocks": 4,
+    "first_fresh_RGB_unions": 4,
+    "first_fresh_primary_inputs": 28
+  },
+  "new_model_call_budget": {
+    "development": 10,
+    "first_fresh_maximums": {
+      "B0": 48,
+      "VERIFY": 240,
+      "admission": 80
+    }
+  },
+  "actual_adopted_first_input_QA": 10,
+  "actual_new_input_encodes": 0,
+  "actual_new_decodes": 0,
+  "actual_new_first_output_QA": 10,
+  "status_checked_utc": "2026-10-15T08:21:31.532051+00:00",
+  "dev_conditions": {
+    "full_group": true,
+    "macro_F1_not_lower": true,
+    "macro_recall_gain": true,
+    "every_source_loss_within_gate": true,
+    "macro_precision_not_lower": true,
+    "all_rater_recall_retained": true,
+    "all_baseline_native_frames_retained": true,
+    "real_changed_sources": true
+  },
+  "dev_macro": {
+    "f1": {
+      "baseline": 0.21729596061811673,
+      "baseline_exact": "50245948511994918944931088846444478001588916222663379933146667929243802887949850984745159629396052126983043/231232777494188429013876601193936958892478520847854829009090940272902250331179326682350070710378765554160000",
+      "augmented": 0.23140589995821392,
+      "augmented_exact": "1965034645508886889491773385062417040275675884404511912400983941224568234247431361241596269042210884354153306173314472710992087331134633408032808603/8491722319369223548033147016191705660056103208588517953097770418455285565159179914023107837431625808322433108639573886239886145230074677189332597120",
+      "delta": 0.014109939340097192,
+      "delta_exact": "2440006255542958708491029763855154995897589969354286653275039613075374921010100768327181096600375945102220972586422484960279842539881122487403731942816296323325209649052331382208267067906099231639667755101579903611/172928188897951105238470526737501554405646132651457453498077103561169313814801070878483175300426902620626759684533736690957631168897157369776154266185008270166895287395020703727811075978719361110965272919468259930000"
+    },
+    "recall": {
+      "baseline": 0.40364010325944977,
+      "baseline_exact": "491589060740470805741089895056217321317162761424127568167/1217889542616853539183365489287797759321263947236647040000",
+      "augmented": 0.4599527822158275,
+      "augmented_exact": "93361947259697244466229304016602880856432418338889268567/202981590436142256530560914881299626553543991206107840000",
+      "delta": 0.056312678956377794,
+      "delta_exact": "166069146543711339181491057127387619699/2949054273769422359605834096243652736000"
+    },
+    "precision": {
+      "baseline": 0.15091913416061745,
+      "baseline_exact": "148631695765786977/984843284401592000",
+      "augmented": 0.15765725880979561,
+      "augmented_exact": "5833386558719489640739/37000431206007038589120",
+      "delta": 0.006738124649178175,
+      "delta_exact": "20602836587444608204865378717/3057651447566714945283189468000"
+    }
+  },
+  "dev_decisions": {
+    "UNKNOWN": 1,
+    "KEEP": 9
+  },
+  "dev_GPU_charged_seconds": 293.8051031185314,
+  "dev_completion_receipt": "dev_completion_receipt_04.json",
+  "fresh_confirmation_admitted": true,
+  "activation_hypothesis": "More KEEP observed; improved refusal selectivity is not established by development PASS",
+  "fresh_launch_receipt": "fresh_chain_launch_09.json",
+  "fresh_registration_sha256": "5261f403ebb9dbebce47085c91ae7580f0465952c45493335689c5482c0c6350",
+  "fresh_media_sources": 4,
+  "fresh_media_bytes_adopted": 17756735,
+  "fresh_model_calls_at_launch": 0,
+  "fresh_cpu_primary_inputs": 28,
+  "fresh_independent_input_QA_completed_at_snapshot": 28,
+  "fresh_actual_GPU_model_calls_at_snapshot": 88,
+  "actual_new_role_development_calls": 10,
+  "actual_new_fresh_calls_at_snapshot": 28,
+  "fresh_independent_output_QA_completed_at_snapshot": 28,
+  "fresh_VERIFY_prepared_requests": 44,
+  "fresh_B0_unique_terminal": {
+    "name": "recall_role_fresh4_b0_20261015_v1",
+    "status": "completed",
+    "exit_code": 0,
+    "charged_seconds": 681.9433634784073,
+    "started_utc": "2026-10-15T06:56:50.418093+00:00",
+    "finished_utc": "2026-10-15T07:08:12.361366+00:00",
+    "exactly_one_ledger_match": true
+  },
+  "development_ACTIVE_abstentions_when_KEEP_allowed": 1,
+  "development_KEEP_allowed_cases": 10,
+  "development_abstention_diagnostic": "development_abstention_diagnostic_14.json",
+  "actual_model_calls_counter_scope": "COMPLETED_ACCEPTED_DEV10_PLUS_FRESH",
+  "fresh_actual_model_calls_begun_at_snapshot": 88,
+  "fresh_per_stage_accepted_at_snapshot": {
+    "B0": 28,
+    "VERIFY": 44,
+    "POSITIVE": 16
+  },
+  "fresh_unique_terminals_at_snapshot": {
+    "B0": {
+      "name": "recall_role_fresh4_b0_20261015_v1",
+      "status": "completed",
+      "exit_code": 0,
+      "charged_seconds": 681.9433634784073,
+      "started_utc": "2026-10-15T06:56:50.418093+00:00",
+      "finished_utc": "2026-10-15T07:08:12.361366+00:00",
+      "exactly_one_ledger_match": true
+    },
+    "VERIFY": {
+      "name": "recall_role_fresh4_verify_20261015_v1",
+      "status": "completed",
+      "exit_code": 0,
+      "charged_seconds": 996.9631937108934,
+      "started_utc": "2026-10-15T07:30:59.285833+00:00",
+      "finished_utc": "2026-10-15T07:47:36.248937+00:00",
+      "exactly_one_ledger_match": true
+    },
+    "POSITIVE": {
+      "name": "recall_role_fresh4_admission_20261015_v1",
+      "status": "completed",
+      "exit_code": 0,
+      "charged_seconds": 409.159145061858,
+      "started_utc": "2026-10-15T07:58:51.249188+00:00",
+      "finished_utc": "2026-10-15T08:05:40.408240+00:00",
+      "exactly_one_ledger_match": true
+    }
+  },
+  "exact_original_parent_alive_at_snapshot": false,
+  "future_cache_reader_engineering": {
+    "status": "PASS_BIT_EQUIVALENCE_NOT_MODEL_OR_QUALITY",
+    "receipt": "cache_reader_engineering_16.json",
+    "current_frozen_chain_changed": false,
+    "new_model_or_QA_calls": 0,
+    "single_sample_old_seconds": 5.315108899027109,
+    "single_sample_new_seconds": 0.8506272695958614
+  },
+  "actual_new_fresh_model_calls": 88,
+  "actual_new_fresh_first_input_QA": 88,
+  "actual_new_fresh_first_output_QA": 88,
+  "fresh_quality_pass": false,
+  "fresh_quality_conditions": {
+    "full_group": true,
+    "macro_F1_not_lower": true,
+    "macro_recall_gain": true,
+    "every_source_loss_within_gate": false,
+    "macro_precision_not_lower": false,
+    "all_rater_recall_retained": true,
+    "all_baseline_native_frames_retained": true,
+    "real_changed_sources": true
+  },
+  "fresh_macro": {
+    "f1": {
+      "baseline": 0.3212402248910281,
+      "augmented": 0.32373041719528484,
+      "delta": 0.0024901923042567283
+    },
+    "recall": {
+      "baseline": 0.39781455320660536,
+      "augmented": 0.49247917138701897,
+      "delta": 0.09466461818041362
+    },
+    "precision": {
+      "baseline": 0.3125520141137862,
+      "augmented": 0.25624351348288843,
+      "delta": -0.05630850063089778
+    }
+  },
+  "fresh_actual_admission_decisions": {
+    "KEEP": 16
+  },
+  "fresh_new_native_frames": 409,
+  "fresh_GPU_wrapper_charged_seconds": 2088.0657022511587,
+  "fresh_completion_receipt": "fresh_completion_receipt_11.json",
+  "readonly_diagnosis": "readonly_misselection_diagnostic_18.json",
+  "report": "REPORT.md",
+  "fixed40_admitted": false,
+  "fixed40_actual_calls": 0,
+  "production_actual_calls": 0,
+  "actual_submission_zips": 0,
+  "current_pipeline_active": false,
+  "baseline_preservation_receipt": "baseline_preservation_17.json",
+  "black_control_actual_started": false,
+  "black_control_actual_model_calls": 0,
+  "black_control_actual_launcher_or_PID": null,
+  "black_control_plan": "MINIMAL_CONTROL_PLAN_19.md",
+  "next_scope": "Review-only control proposal; no new inference, training, data acquisition, production, Goal or heartbeat authorized by that proposal",
+  "counter_scope_notes": "Legacy actual_new_input_encodes/new_decodes/actual_new_first_output_QA fields described the original dev10 only; fresh complete totals are explicit above."
+}

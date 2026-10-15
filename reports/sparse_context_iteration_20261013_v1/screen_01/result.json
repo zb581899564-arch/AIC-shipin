@@ -1,0 +1,30 @@
+{
+  "status": "PASS_SPARSE_SCREEN_PENDING_NEW_UNEXPOSED_CONFIRM8",
+  "chosen": "SPARSE50_POST025",
+  "qualified_for_package": false,
+  "eligible": [
+    "SPARSE50_POST025"
+  ],
+  "scores": {
+    "SPARSE50_PRE025": {
+      "macro_delta": -7.791115633420899e-05,
+      "changed_sources": 4,
+      "gate": false
+    },
+    "SPARSE50_POST025": {
+      "macro_delta": 0.0003012769355964489,
+      "changed_sources": 6,
+      "gate": true
+    }
+  },
+  "fact_pass": {
+    "SPARSE50_PRE025": true,
+    "SPARSE50_POST025": true
+  },
+  "confirmation_evaluated": false,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "new_submission_zips": 0,
+  "old_confirm_not_reused": true,
+  "all_old_failures_preserved": true
+}

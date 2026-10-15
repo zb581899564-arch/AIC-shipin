@@ -1,0 +1,48 @@
+{
+  "status": "PASS_ALL_REGULAR_FILES_EXTRACTED_WITHOUT_OVERWRITE",
+  "utc": "2026-10-09T04:31:56.376176+00:00",
+  "archive_sha256": "407d340bcd06fdc6d17374ebe6760b4a96816bcace228559c8283d9fb2520dea",
+  "extraction_root": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\data\\tvsum",
+  "files": [
+    {
+      "path": "data/tvsum/WebscopeReadMe.txt",
+      "archive_member": "./WebscopeReadMe.txt",
+      "bytes": 1875,
+      "sha256": "341fb9cd2b4f276ae6d497ea5f600b596698627bad1db54af1944171ce1e7eba"
+    },
+    {
+      "path": "data/tvsum/ydata-tvsum50-v1_1/README",
+      "archive_member": "./ydata-tvsum50-v1_1/README",
+      "bytes": 4127,
+      "sha256": "a5fccdd34b27ebda8b7aa2975079b7d35c3ffc29b7e897ca8b19c0932ddcd026"
+    },
+    {
+      "path": "data/tvsum/ydata-tvsum50-v1_1/ydata-tvsum50-data.zip",
+      "archive_member": "./ydata-tvsum50-v1_1/ydata-tvsum50-data.zip",
+      "bytes": 136125,
+      "sha256": "9f718779ba0847e9fc70a361a65037a14b8e48408a732aea699d2bccb4c4fc1f"
+    },
+    {
+      "path": "data/tvsum/ydata-tvsum50-v1_1/ydata-tvsum50-matlab.zip",
+      "archive_member": "./ydata-tvsum50-v1_1/ydata-tvsum50-matlab.zip",
+      "bytes": 655466,
+      "sha256": "bbe67f89964e8f42179869922708ef73a56db7d4de28a22f2e602f7243ba4e9d"
+    },
+    {
+      "path": "data/tvsum/ydata-tvsum50-v1_1/ydata-tvsum50-thumbnail.zip",
+      "archive_member": "./ydata-tvsum50-v1_1/ydata-tvsum50-thumbnail.zip",
+      "bytes": 561117,
+      "sha256": "53ee864bd10390c678f0e1c775aa4aba66ffe3daa57feaabd081d8e99d9ab68d"
+    },
+    {
+      "path": "data/tvsum/ydata-tvsum50-v1_1/ydata-tvsum50-video.zip",
+      "archive_member": "./ydata-tvsum50-v1_1/ydata-tvsum50-video.zip",
+      "bytes": 670834847,
+      "sha256": "3ac6ca002341b17a2211c8e920424201a50217f7128389e63905db4ae16f6a86"
+    }
+  ],
+  "file_count": 6,
+  "payload_bytes": 672193557,
+  "no_model_calls": true,
+  "no_remote_transfer": true
+}

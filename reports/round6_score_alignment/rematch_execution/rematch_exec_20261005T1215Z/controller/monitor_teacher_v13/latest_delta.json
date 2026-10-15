@@ -1,0 +1,282 @@
+{
+  "status": "READ_ONLY_ACTUAL_PROGRESS_DELTA_NOT_QUALITY_OR_TRAINING",
+  "previous_utc": "2026-10-08T11:51:55.763596+00:00",
+  "utc": "2026-10-08T12:06:56.331077+00:00",
+  "source_lock_sha256": "620df12b8cd6bb85d3bf64fc120314d400d30aa9887dfc0a58d0d4152ede8159",
+  "progress": {
+    "stage": "RUNNING_TEACHER_REVIEW",
+    "utc": "2026-10-08T10:35:44.896783+00:00",
+    "pid": 958640,
+    "uploaded": false,
+    "automatic_return": false,
+    "maximum_seconds": 12872,
+    "planned_output_bytes": 4050398346
+  },
+  "completion": null,
+  "owned_processes": 3,
+  "owned_servers": 1,
+  "review_progress": {
+    "status": "REAL_MISSING_BLIND_REVIEWS_RUNNING",
+    "utc": "2026-10-08T12:06:28.504579+00:00",
+    "selected_denominator": 160,
+    "original_completed_reviews": 28,
+    "fresh_model_calls": 131,
+    "total_completed_reviews": 159,
+    "new_label_calls": 0,
+    "last_window_id": "complete_fd4b7ef2b6bc4806c9924582",
+    "last_review_reused": false,
+    "new_T_optimizer_updates": 0
+  },
+  "fresh_completed_reviews": 132,
+  "fresh_review_failures": 0,
+  "all_original_receipt_SHA_pass": true,
+  "all_fresh_completed_review_SHA_pass": true,
+  "changed_artifact_count": 222,
+  "added_artifact_count": 220,
+  "net_artifact_byte_delta": 461760741,
+  "first_changed_artifacts": [
+    {
+      "path": "teacher_01/review_progress.json",
+      "before": {
+        "bytes": 371,
+        "mtime_ns": 1791460280311521661
+      },
+      "after": {
+        "bytes": 371,
+        "mtime_ns": 1791461188499614019
+      }
+    },
+    {
+      "path": "teacher_01/reviews/complete_d9bab9fa744bae3ac3399b20/done.json",
+      "before": null,
+      "after": {
+        "bytes": 1363,
+        "mtime_ns": 1791460319767238095
+      }
+    },
+    {
+      "path": "teacher_01/reviews/complete_d9bab9fa744bae3ac3399b20/http/http_receipt.json",
+      "before": null,
+      "after": {
+        "bytes": 417,
+        "mtime_ns": 1791460316403261614
+      }
+    },
+    {
+      "path": "teacher_01/reviews/complete_d9bab9fa744bae3ac3399b20/input_contract.json",
+      "before": null,
+      "after": {
+        "bytes": 9608,
+        "mtime_ns": 1791460319311241277
+      }
+    },
+    {
+      "path": "teacher_01/reviews/complete_d9bab9fa744bae3ac3399b20/processor.log",
+      "before": null,
+      "after": {
+        "bytes": 2728203,
+        "mtime_ns": 1791460316415261529
+      }
+    },
+    {
+      "path": "teacher_01/reviews/complete_d9bab9fa744bae3ac3399b20/review_receipt.json",
+      "before": null,
+      "after": {
+        "bytes": 40688,
+        "mtime_ns": 1791460319731238347
+      }
+    },
+    {
+      "path": "teacher_01/reviews/complete_d9bab9fa744bae3ac3399b20/runtime_grammar_validation.json",
+      "before": null,
+      "after": {
+        "bytes": 492,
+        "mtime_ns": 1791460319283241471
+      }
+    },
+    {
+      "path": "teacher_01/reviews/complete_d9bab9fa744bae3ac3399b20/server_response.json",
+      "before": null,
+      "after": {
+        "bytes": 1070840,
+        "mtime_ns": 1791460316415261529
+      }
+    },
+    {
+      "path": "teacher_01/reviews/complete_d9f5baa33445a1b5f88934b0/done.json",
+      "before": null,
+      "after": {
+        "bytes": 1363,
+        "mtime_ns": 1791460361310957270
+      }
+    },
+    {
+      "path": "teacher_01/reviews/complete_d9f5baa33445a1b5f88934b0/generation_relation_contract.json",
+      "before": null,
+      "after": {
+        "bytes": 1010,
+        "mtime_ns": 1791460320263234639
+      }
+    },
+    {
+      "path": "teacher_01/reviews/complete_d9f5baa33445a1b5f88934b0/generation_schema.json",
+      "before": null,
+      "after": {
+        "bytes": 22320,
+        "mtime_ns": 1791460320263234639
+      }
+    },
+    {
+      "path": "teacher_01/reviews/complete_d9f5baa33445a1b5f88934b0/http/http_receipt.json",
+      "before": null,
+      "after": {
+        "bytes": 417,
+        "mtime_ns": 1791460357014985506
+      }
+    }
+  ],
+  "process_IO_counter_delta": {
+    "958640": {
+      "rchar": 0,
+      "wchar": 0,
+      "read_bytes": 0,
+      "write_bytes": 0
+    },
+    "970353": {
+      "rchar": 3974707,
+      "wchar": 256129,
+      "read_bytes": 233472,
+      "write_bytes": 356352
+    },
+    "970357": {
+      "rchar": 4423489543,
+      "wchar": 492334773,
+      "read_bytes": 39858176,
+      "write_bytes": 446341120
+    }
+  },
+  "gpu": "0, NVIDIA RTX 6000 Ada Generation, 98 %, 37288 MiB, 46068 MiB",
+  "disk": {
+    "total": 943412031488,
+    "used": 703634407424,
+    "free": 191778013184
+  },
+  "shared_active_gpu_job": {
+    "name": "rematch_TAUTO_v13_teacher_review",
+    "command": [
+      "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+      "-B",
+      "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v13/teacher_label.py",
+      "--run-dir",
+      "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z",
+      "--out-dir",
+      "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v13/teacher_01",
+      "--selected-train",
+      "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v13/selection_01/selected_train.jsonl",
+      "--selected-dev",
+      "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v13/selection_01/selected_dev.jsonl",
+      "--selection-receipt",
+      "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v13/selection_01/selection_receipt.json",
+      "--teacher-admission",
+      "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v13/teacher_admission.json",
+      "--server-url",
+      "http://127.0.0.1:58263",
+      "--start-server",
+      "--phase",
+      "review",
+      "--ffprobe",
+      "/home/inspur/anaconda3/envs/Andy/bin/ffprobe"
+    ],
+    "started_utc": "2026-10-08T10:35:45.237537+00:00",
+    "runner_pid": 970353,
+    "reserved_seconds": 12872,
+    "teardown_reserve_seconds": 120,
+    "prior_charged_seconds": 186481.3688040306,
+    "gpu_time_mode": "UNLIMITED",
+    "max_total_gpu_seconds": null,
+    "resource_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
+    "disk_before": {
+      "free_bytes": 194778947584,
+      "work_bytes": 85376790528
+    },
+    "planned_output_bytes": 4050398346,
+    "capacity_reason": "only missing independent blind selections; all160 labels and28 completed reviews exact-byte/SHA reused, original real costs preserved",
+    "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+    "project_disk_limit_bytes": null,
+    "project_ram_limit_bytes": null,
+    "project_vram_limit_bytes": null,
+    "runner_source_sha256": "9997d41fbe2bb51726914b4698b874cf939c52aac02048fa9b3bb753c64c6cec",
+    "child_pid": 970357,
+    "elapsed_seconds": 5462.864743674174,
+    "last_checked_utc": "2026-10-08T12:06:48.383330+00:00",
+    "sampled_peak_memory_mib": 37098,
+    "disk_current": {
+      "free_bytes": 191778271232,
+      "work_bytes": 88465350656
+    }
+  },
+  "GPU_ledger": {
+    "records": 150,
+    "sha256": "709e95242961090beb3063796fa2d041c63b010c7a96a7ebefbbe06badc27084",
+    "last_record": {
+      "name": "rematch_TAUTO_v11_teacher_full",
+      "command": [
+        "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+        "-B",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v11/teacher_label.py",
+        "--run-dir",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z",
+        "--out-dir",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v11/teacher_01",
+        "--selected-train",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v11/selection_01/selected_train.jsonl",
+        "--selected-dev",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v11/selection_01/selected_dev.jsonl",
+        "--selection-receipt",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v11/selection_01/selection_receipt.json",
+        "--teacher-admission",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v11/teacher_admission.json",
+        "--server-url",
+        "http://127.0.0.1:50585",
+        "--start-server",
+        "--phase",
+        "all",
+        "--ffprobe",
+        "/home/inspur/anaconda3/envs/Andy/bin/ffprobe"
+      ],
+      "started_utc": "2026-10-08T07:23:21.861356+00:00",
+      "runner_pid": 631393,
+      "reserved_seconds": 47716,
+      "teardown_reserve_seconds": 120,
+      "prior_charged_seconds": 179732.5624463181,
+      "gpu_time_mode": "UNLIMITED",
+      "max_total_gpu_seconds": null,
+      "resource_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
+      "disk_before": {
+        "free_bytes": 199546523648,
+        "work_bytes": 80660365312
+      },
+      "planned_output_bytes": 15934445036,
+      "capacity_reason": "real two-window measured bytes/time scaled to fixed 160 windows and second weak semantic review",
+      "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+      "project_disk_limit_bytes": null,
+      "project_ram_limit_bytes": null,
+      "project_vram_limit_bytes": null,
+      "runner_source_sha256": "9997d41fbe2bb51726914b4698b874cf939c52aac02048fa9b3bb753c64c6cec",
+      "child_pid": 631397,
+      "finished_utc": "2026-10-08T09:15:50.667621+00:00",
+      "charged_seconds": 6748.806357712485,
+      "exit_code": 1,
+      "stop_reason": null,
+      "sampled_peak_memory_mib": 37098,
+      "status": "failed",
+      "disk_after": {
+        "free_bytes": 194862080000,
+        "work_bytes": 85305856000
+      }
+    },
+    "historical_offset_seconds": 7200
+  },
+  "new_T_optimizer_updates": 0,
+  "final_ZIP_complete": false
+}

@@ -1,0 +1,126 @@
+{
+  "status": "STOP_FIXED_SILVER_QUALITY_GATE_NO_426_NO_RETUNING",
+  "checks": {
+    "dev_four_windows_two_sources": true,
+    "locked_eight_windows_four_sources": true,
+    "locked_complete_silver_min": true,
+    "locked_all_four_sources_informative": true,
+    "positive_locked_sources_min": true,
+    "locked_sources_with_at_least_5sec_no_min": true,
+    "dev_positive_macro_gain_strictly_positive": true,
+    "locked_positive_macro_f1_gain_min": false,
+    "strictly_improved_locked_sources_min": true,
+    "unknown_positive_average_gain_strictly_positive": true,
+    "no_fp_nonincrease": true,
+    "no_new_unrelated_spill": false,
+    "positive_empty_nonincrease": true,
+    "precision_nondecrease": true,
+    "recall_nondecrease": false,
+    "event_recall_nondecrease": true,
+    "positive_source_nondegrade": true,
+    "unknown_conservative_nonnegative": false
+  },
+  "dev": {
+    "sources": {
+      "youtube:-esJrBWj2d8": {
+        "positive": true,
+        "f1_gain": "0",
+        "conservative_gain": "0",
+        "no_fp_nonincrease": true,
+        "no_new_unrelated_spill": true,
+        "new_confirmed_no_spill_seconds": "0",
+        "positive_empty_nonincrease": true,
+        "precision_nondecrease": true,
+        "recall_nondecrease": true,
+        "event_recall_nondecrease": true,
+        "positive_source_nondegrade": true,
+        "unknown_conservative_nonnegative": true
+      },
+      "youtube:i3wAGJaaktw": {
+        "positive": true,
+        "f1_gain": "1524322887/12369400624",
+        "conservative_gain": "4383352348/242375644663",
+        "no_fp_nonincrease": true,
+        "no_new_unrelated_spill": false,
+        "new_confirmed_no_spill_seconds": "3333/5000",
+        "positive_empty_nonincrease": true,
+        "precision_nondecrease": true,
+        "recall_nondecrease": false,
+        "event_recall_nondecrease": true,
+        "positive_source_nondegrade": true,
+        "unknown_conservative_nonnegative": true
+      }
+    },
+    "positive_sources": 2,
+    "positive_macro_gain": "1524322887/24738801248",
+    "conservative_positive_macro_gain": "2191676174/242375644663",
+    "strictly_improved_sources": 1
+  },
+  "locked": {
+    "sources": {
+      "youtube:EYqVtI9YWJA": {
+        "positive": true,
+        "f1_gain": "0",
+        "conservative_gain": "0",
+        "no_fp_nonincrease": true,
+        "no_new_unrelated_spill": true,
+        "new_confirmed_no_spill_seconds": "0",
+        "positive_empty_nonincrease": true,
+        "precision_nondecrease": true,
+        "recall_nondecrease": true,
+        "event_recall_nondecrease": true,
+        "positive_source_nondegrade": true,
+        "unknown_conservative_nonnegative": true
+      },
+      "youtube:J0nA4VgnoCo": {
+        "positive": true,
+        "f1_gain": "656838227952/15799669457597",
+        "conservative_gain": "656838227952/15799669457597",
+        "no_fp_nonincrease": true,
+        "no_new_unrelated_spill": false,
+        "new_confirmed_no_spill_seconds": "667/10000",
+        "positive_empty_nonincrease": true,
+        "precision_nondecrease": true,
+        "recall_nondecrease": true,
+        "event_recall_nondecrease": true,
+        "positive_source_nondegrade": true,
+        "unknown_conservative_nonnegative": true
+      },
+      "youtube:Yi4Ij2NM7U4": {
+        "positive": true,
+        "f1_gain": "0",
+        "conservative_gain": "0",
+        "no_fp_nonincrease": true,
+        "no_new_unrelated_spill": true,
+        "new_confirmed_no_spill_seconds": "0",
+        "positive_empty_nonincrease": true,
+        "precision_nondecrease": true,
+        "recall_nondecrease": true,
+        "event_recall_nondecrease": true,
+        "positive_source_nondegrade": true,
+        "unknown_conservative_nonnegative": true
+      },
+      "youtube:cjibtmSLxQ4": {
+        "positive": true,
+        "f1_gain": "49917145196/1317851427899",
+        "conservative_gain": "-2005713023/1209940332600",
+        "no_fp_nonincrease": true,
+        "no_new_unrelated_spill": false,
+        "new_confirmed_no_spill_seconds": "9881/7500",
+        "positive_empty_nonincrease": true,
+        "precision_nondecrease": true,
+        "recall_nondecrease": true,
+        "event_recall_nondecrease": true,
+        "positive_source_nondegrade": true,
+        "unknown_conservative_nonnegative": false
+      }
+    },
+    "positive_sources": 4,
+    "positive_macro_gain": "413572397742217017171715/20821616955026425283298703",
+    "conservative_positive_macro_gain": "763045461202439847649469/76466629273979903107048800",
+    "strictly_improved_sources": 2
+  },
+  "quality_claim": "FINITE_OBSERVATION_SILVER_DIAGNOSTIC_NOT_GOLD_OR_OFFICIAL",
+  "recipe_retuning_allowed": false,
+  "official_submission_authorized": false
+}

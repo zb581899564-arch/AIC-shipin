@@ -1,0 +1,84 @@
+{
+  "schema": "MAIN_READER_NATIVE_TERMINAL_SCOPE_V5",
+  "status": "FROZEN_NEW_READER_SCOPE_NOT_ACTUAL_DECODE_GPU_ADMISSION",
+  "frozen_utc": "2026-10-13T22:41:55.876171+00:00",
+  "authority": "USER20H_AUTONOMOUS_IMPROVEMENT_AND_ROOT_REVIEW",
+  "source_denominator": 426,
+  "reader_version": "17.1.0",
+  "source_identity_subset_exception": false,
+  "scope": "NEW_PYAV17_READER_NATIVE_TERMINAL_SCOPE_V5_VERIFY_SHORT_CONTEXT_UNKNOWN",
+  "old_D8_recipe_and_clock_refs_unchanged": true,
+  "old_reader_terminal_equality_failures_preserved": [
+    78,
+    79,
+    107,
+    122,
+    159
+  ],
+  "old_equality_failure_count": 5,
+  "old_clock_incorrect_claim": false,
+  "packet_first_measurement_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/native_terminal_packet_witness_v1/run_01/completion.json",
+    "sha256": "4b753f82a818c7c10c1bc0545902e4f11b473f47bca700f01b1b2a695b82dc79"
+  },
+  "new_measurements_must_not_be_repeated": true,
+  "first_new_RGB_decode_gate": [
+    "source_bytes_and_SHA_exact_original",
+    "complete_all_original_frame_PTS_exactly_equal_old",
+    "frame_count_and_origin_exactly_equal_old",
+    "frame_geometry_exactly_equal_old",
+    "actual_last_Frame_duration_positive_in_actual_frame_time_base",
+    "last_Frame_duration_exactly_equals_first_packet_observation_duration"
+  ],
+  "new_terminal_equals_old_Nfps_required": false,
+  "new_terminal_equals_old_native_endticks_required": false,
+  "KEEP_UNKNOWN_recipe_not_changed": true,
+  "native_cut_pivot_not_applied_for_KEEP_UNKNOWN": true,
+  "new_VERIFY_context": "ORIGINAL_ELIGIBLE_ORDINAL_DOMAIN_SAME_ORIGINAL64_ONLY_IF_ORIGINAL_N_EQUALS64_ELSE_PREMODEL_UNKNOWN",
+  "padding_or_resampling_old_visual64_allowed": false,
+  "failure_as_UNKNOWN_allowed": false,
+  "old_success_work_modified": false,
+  "test_GT_or_annotation_used": false,
+  "production_prepare_permission": false,
+  "production_GPU_permission": false,
+  "scientific_quality_claim": false,
+  "review_file": "critic/PYAV17_TERMINAL_SCOPE_REVIEW_16.md",
+  "previous_v3_scope_ref": {
+    "path": "reports\\twenty_hour_five_20261014_v1\\reader_native_scope_authorization_01.json",
+    "sha256": "e6ea57c5f4b0987f6cd18ef298bf4fcf8b10354b8ea1fab58280de57454159c9"
+  },
+  "new_VERIFY_timing_support_bound": "EXACT_ORIGINAL_ELIGIBLE_ORDINAL_DOMAIN_NOT_NOMINAL_SECONDS_30",
+  "nominal_B0_window_seconds_limit_is_not_new_VERIFY_timing_gate": true,
+  "original_CV_v2_or_input_v3_seconds_gate_modified": false,
+  "new_VERIFY_visual_frames_changed": false,
+  "new_VERIFY_actual_hi_not_clipped_or_fabricated": true,
+  "new_VERIFY_still_requires": [
+    "SAME_ORIGINAL64_ORDINAL_ORDER_AND_PIXEL_HASH_FOR_MODEL; STRICT_ORIGINAL_N_IDENTITY_AND_UNCHANGED_EVENT_FOR_STRUCTURAL_SHORT",
+    "ALL_ORIGINAL_SOURCE_PTS_AND_IDENTITY",
+    "ACTUAL_POSITIVE_NATIVE_TERMINAL",
+    "ALL_SAMPLES_AND_NATIVE_CANDIDATE_CUTS_IN_ACTUAL_ORDINAL_SUPPORT",
+    "MAX_INPUT_TOKENS_16384",
+    "FINITE_CONSERVATIVE_KEEP_UNKNOWN_DROP_GRAMMAR",
+    "ENGINEERING_FAILURE_BLOCKS_NO_UNKNOWN_FALLBACK"
+  ],
+  "reason": "Existing accepted source sampling is 1..64 actual native frames, with a valid 23-frame tail; new native64 model floor remains64. Preserve original identity and event while assigning original_N<64 a uniform pre-model UNKNOWN instead of padding, expanding the original visual support, or fabricating model calls.",
+  "new_VERIFY_original_visual_count_validation": "STRICT_ORIGINAL_ACTUAL_N_1_TO64_COUNT_ORDER_PIXEL_IDENTITY",
+  "new_VERIFY_model_native_frame_floor": 64,
+  "new_VERIFY_short_original_context": "STRUCTURAL_UNKNOWN_PRESERVE_D8_EVENT_NO_MODEL_NO_RGB_GROUP",
+  "short_original_count_rule_is_uniform_not_video_id_exception": true,
+  "short_original_window_is_old_legal_model_input_not_corrupt": true,
+  "new_VERIFY_short_context_rule_selected_before_any_formal_model": true,
+  "old_native64_floor_lowered": false,
+  "previous_v4_scope_ref": {
+    "path": "G:\\ai\\AIC视频\\reports\\twenty_hour_five_20261014_v1\\reader_native_scope_authorization_02.json",
+    "sha256": "25ca7dd20b53719065d074c90a8b5c43f9cc87c4e715f751e5e12983da5082a7"
+  },
+  "actual_original_sampling_diagnosis_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_bootstrap_v1/bootstrap_run_01/original_sample_count_diagnosis_01.json",
+    "sha256": "f2822b92a4a8a3802e278dddc937557e9e59fc934179506665f32a339999ea74"
+  },
+  "old_failed_metadata_bootstrap_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_bootstrap_v1/bootstrap_run_01/failure.json",
+    "sha256": "96c4dca2391cb12fb8e6f23f1c0d83403f4454df2b9354ce58d02e0600e68deb"
+  }
+}

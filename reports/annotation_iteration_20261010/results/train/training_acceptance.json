@@ -1,0 +1,24 @@
+{
+  "status": "PASS_REAL_LORA_TRAINING_FINITE_LOSS_GRADIENTS_AND_WEIGHT_CHANGES",
+  "utc": "2026-10-09T17:14:02.248367+00:00",
+  "result": {
+    "utc": "2026-10-09T17:14:01.509147+00:00",
+    "stage": "REAL_TRAIN_END",
+    "global_step": 237,
+    "final_lora_sha256": "130b157d2ea496db762c323d927993ce2983e8d78cf70b41e251fc32f65f9201",
+    "initial_lora_sha256": "787e74b9bd881ef1a697440070e9d0fb7864a571dd113d3dce5939510e4a5efb",
+    "trainable_parameters": 7667712,
+    "peak_allocated_bytes": 21238901248,
+    "peak_reserved_bytes": 25170018304
+  },
+  "train_metrics": {
+    "train_runtime": 1237.5144,
+    "train_samples_per_second": 0.761,
+    "train_steps_per_second": 0.192,
+    "total_flos": 6.825408231910061e+16,
+    "train_loss": 0.9159192561097286,
+    "epoch": 3.0
+  },
+  "validation_loss_only": true,
+  "production_adapter_replaced": false
+}

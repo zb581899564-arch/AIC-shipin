@@ -1,0 +1,90 @@
+{
+  "snapshot_path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/monitor_aic_linux/comprehensive_teacher_student_autopilot_v8_20261008T042418Z.json",
+  "snapshot": {
+    "utc": "2026-10-08T04:24:18.787377+00:00",
+    "host": "inspur-NP5570M5",
+    "version": "v8",
+    "entry": "teacher_student_autopilot_v8",
+    "processes": [
+      "400355       1  400355     131  100  0.0 /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v8/controller.py"
+    ],
+    "owned_servers": [],
+    "gpu": "0, NVIDIA RTX 6000 Ada Generation, 0 %, 182 MiB, 46068 MiB",
+    "memory": "总计         已用        空闲      共享    缓冲/缓存    可用\n内存：      128557        7125       53530          74       67902      120321\n交换：      131071        1937      129134",
+    "disk": {
+      "total": 943412031488,
+      "used": 694378979328,
+      "free": 201033441280
+    },
+    "window_counts": {},
+    "window_receipts": [],
+    "all_completed_window_file_sha_pass": true,
+    "new_zip_paths": [],
+    "source_lock_sha256": "f67587ae9446a678a888aecc33bdaa609bfafc84d9005fe08fecc97d985b69f6",
+    "launch_receipt": {
+      "status": "LAUNCHED_NOT_ACCEPTED",
+      "utc": "2026-10-08T04:22:07.221824+00:00",
+      "pid": 400355,
+      "pgid": 400355,
+      "command": [
+        "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+        "-B",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v8/controller.py"
+      ],
+      "source_lock_sha256": "f67587ae9446a678a888aecc33bdaa609bfafc84d9005fe08fecc97d985b69f6",
+      "automatic_return": false,
+      "uploaded": false
+    },
+    "review_counts": {
+      "pilot_01": {},
+      "teacher_01": {}
+    },
+    "registration": {
+      "pid": 400355,
+      "utc": "2026-10-08T04:23:38.019996+00:00",
+      "source_lock_sha256": "f67587ae9446a678a888aecc33bdaa609bfafc84d9005fe08fecc97d985b69f6",
+      "config_sha256": "3e494e4f65fc614fa5fa535d138964b00c243090a240e77588b0b1a0085a2b6f"
+    },
+    "progress": null,
+    "completion": null,
+    "pilot_progress": null,
+    "pilot_completion": null,
+    "distribution": null,
+    "semantic_quality": null,
+    "teacher_progress": null,
+    "teacher_completion": null,
+    "teacher_semantic_review": null,
+    "teacher_stop": null,
+    "student_progress": null,
+    "student_report": null,
+    "nontest8_package": null,
+    "nontest8_strict": null,
+    "rematch_package": null,
+    "rematch_strict": null,
+    "v8_stage_receipts": {
+      "visual_progress": null,
+      "visual_completion": null,
+      "pilot_decision": null,
+      "pilot_semantic": null,
+      "prefix": null,
+      "teacher_probe": null,
+      "teacher_semantic": null
+    },
+    "active_gpu_job": null,
+    "resource_receipts": {},
+    "queue_receipts": {},
+    "visual_case_results": {},
+    "artifact_activity": {
+      "visual_probe_01": {},
+      "teacher_01": {},
+      "pilot_01": {},
+      "student_01": {},
+      "nontest_01": {},
+      "rematch_01": {}
+    },
+    "production_stage_receipts": {
+      "nontest_01": {},
+      "rematch_01": {}
+    }
+  }
+}

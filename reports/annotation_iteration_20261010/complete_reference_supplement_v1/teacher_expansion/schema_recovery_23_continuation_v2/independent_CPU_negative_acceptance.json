@@ -1,0 +1,271 @@
+{
+  "status": "PASS_NECESSARY_TYPED39_RECOVERY_GUARDS_FRESH40_PROJECTION_NO_MODEL_PENDING_ROOT",
+  "source_binding_sha256": "a0be3fac8cf44b695b8bd379f85912f400e766a18406758b515f1782e028feae",
+  "new_cases": [
+    {
+      "name": "actual_TYPED_ROOT39_guard_document_positive_no_scope_reaudit",
+      "accepted": true,
+      "expected": true,
+      "memory_only": false
+    },
+    {
+      "name": "wholePASS_cannot_substitute_REJECT_recovery",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    },
+    {
+      "name": "untype_PASS_receipt_rejected",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    },
+    {
+      "name": "missing_ROOTscope_confirmation",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    },
+    {
+      "name": "oldwholeREJECT_not_preserved",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    },
+    {
+      "name": "wrong_receipt_window",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    },
+    {
+      "name": "resultERROR",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    },
+    {
+      "name": "natural_timeout",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    },
+    {
+      "name": "natural_exit_nonzero",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    },
+    {
+      "name": "prespawn_error",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    },
+    {
+      "name": "second_wholeissue",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    },
+    {
+      "name": "outside_tool_afterfinal",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    },
+    {
+      "name": "selfread_wrongpath",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    },
+    {
+      "name": "selfread_range",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    },
+    {
+      "name": "selfread_wrongstep",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    },
+    {
+      "name": "selfread_incomplete_metadata",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    },
+    {
+      "name": "mediaERROR",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    },
+    {
+      "name": "unfinished_tool",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    },
+    {
+      "name": "immutable_drift",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    },
+    {
+      "name": "rewritten_output",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    },
+    {
+      "name": "repeated_media",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    },
+    {
+      "name": "scope63",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    },
+    {
+      "name": "scope127core",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    },
+    {
+      "name": "missing_ACKproof",
+      "accepted": false,
+      "expected": false,
+      "memory_only": true
+    }
+  ],
+  "retained_original_scientific_engine_sources": {
+    "engine.py": "f862fcc886a0c038f09c95d0511bab3705dfebd4378b784569bde5097047cf34",
+    "common.py": "ccae065ae8d48653d4d0d6e58d7304c2ba81ffde9e6d5f9d73e3445dd92997ed",
+    "audit.py": "a3d58d060af03ca4d312f4802cc1da3bb2cbf30526e4d360a149059e0a556177",
+    "observer.py": "ab442d96efce9943601d49dc5c194df8a95b8dc54d2a727aaec8061843824b23",
+    "run_call.py": "f782b58c3e1aa15bc0f77fa21089fff864484c1b47ca751bc9233af189b4dd08"
+  },
+  "actual_recovery_binding": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\schema_recovery_CLI39_final_selfread_root_recovery_v1.json",
+    "sha256": "bf991024d851317d0d4dc7784622119d4e5478ed276c88b3d1e7e0d43fba684c",
+    "status": "ROOT_CONFIRMED_CLI39_NATURAL_SUCCESS_VALID_JOB22_SCOPE_ONLY_FINAL_PROPOSAL_SELFREAD_WHOLE_REJECT_PRESERVED"
+  },
+  "new_text_proofs": [
+    {
+      "part_id": "main",
+      "sha256": "b6ef6b1e2bffe7001802e78c9b5b6cc5430d0db6358588bb8d908f3e8e5f6046",
+      "bytes": 5933
+    },
+    {
+      "part_id": "w23_header",
+      "sha256": "d7c07ed00d3e6f3bfdbfb7cbb8b60966c0f76b251b29d58f68754c1fc73a46fd",
+      "bytes": 15838
+    },
+    {
+      "part_id": "w23_group00_schema",
+      "sha256": "b2f2e4bf04a627ce0d3fb666167bc090d056cbdd041eb371b37c3173d51a6d82",
+      "bytes": 8698
+    },
+    {
+      "part_id": "w23_group01_schema",
+      "sha256": "f6b8c939095335c80763eeb3e87ba2197327279332df4f2f9bd268ffce27f746",
+      "bytes": 8702
+    },
+    {
+      "part_id": "w23_group02_schema",
+      "sha256": "66ab9735cca74e7ef363197b0dd4269557f25916bcf41b020ff1a4c61d09ba9a",
+      "bytes": 8704
+    },
+    {
+      "part_id": "w23_group03_schema",
+      "sha256": "a9d45d4a1d5dd3263d85009c4ef4ed278107b0021d0c886b1cc4e492d9429462",
+      "bytes": 8696
+    },
+    {
+      "part_id": "w23_group04_schema",
+      "sha256": "89794edd8788531e1fae568be54ad1abfde13ebc80525332843d97c29831af56",
+      "bytes": 8700
+    },
+    {
+      "part_id": "w23_group05_schema",
+      "sha256": "243a9abefd19c892d2659cd7636c9fb7c21c4499ce4425a3582528bb5a3eba54",
+      "bytes": 8714
+    },
+    {
+      "part_id": "w23_group06_schema",
+      "sha256": "0f3dbda2672fc588190a59e349d6c971333100459b71a707289860afab96cda4",
+      "bytes": 8696
+    },
+    {
+      "part_id": "w23_group07_schema",
+      "sha256": "3804925417dcd539c36ffbde8bae8b52be31f806a1417bc52de1b12eba7dda33",
+      "bytes": 8706
+    },
+    {
+      "part_id": "w23_group08_schema",
+      "sha256": "0b57458592c3c4da77a3f4eee540a55bbec163b62ead86020b21b6270a18adb0",
+      "bytes": 8704
+    },
+    {
+      "part_id": "w23_group09_schema",
+      "sha256": "f6a6f89a8076218756f8cac1be38be2363b2103596cdc859ca059e6cb8aae347",
+      "bytes": 8722
+    },
+    {
+      "part_id": "w23_group10_schema",
+      "sha256": "ffd62def13fb727cc0f7014e1aefc97176b611e7d2a8372381af57cd54d09131",
+      "bytes": 8711
+    },
+    {
+      "part_id": "w23_group11_schema",
+      "sha256": "b89b7233b3e3a997fd68e30bbcb9a45e71140eb9a025019d18eac5fd261569da",
+      "bytes": 8711
+    },
+    {
+      "part_id": "w23_group12_schema",
+      "sha256": "255598de269eeec029af0ac4e391ec1442dd1c66ae23279b6e5ace663ee60b50",
+      "bytes": 8711
+    },
+    {
+      "part_id": "w23_group13_schema",
+      "sha256": "d64b8d2bbf1bd311681b29e16b96404fb3270074d19a47a2ccef1a9865e7cc41",
+      "bytes": 8711
+    },
+    {
+      "part_id": "w23_group14_schema",
+      "sha256": "70958cb1be14f285b54cf4aea3fa751cddb067b5618669d85791f82c99c82258",
+      "bytes": 8723
+    },
+    {
+      "part_id": "w23_group15_schema",
+      "sha256": "4a80ca7b7a4e93ddb4177d19afdd5dfc983947b34ebc2900f5bf12fa1afdf1e5",
+      "bytes": 8703
+    },
+    {
+      "part_id": "w23_proposal_schema",
+      "sha256": "f3d8d8ceef33190b52bdaebda1d45de2693f7c8ff76c2c0aa9a7bb188ff4e5c2",
+      "bytes": 3570
+    }
+  ],
+  "exact_science6_bytes_sha256": "3544a33eae884774660e9bbab17379385151668683e553560436f2a347c487a9",
+  "projection_scope128": true,
+  "argv_utf16_units_including_NUL": 794,
+  "old51_24_68_repeated": false,
+  "prior_v1_necessary_CPU_receipt": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_22_23_v1\\independent_CPU_negative_acceptance.json",
+    "sha256": "27cd0fc254ced42c35a4a3f9e28fa5378934106e57548ef7c6678e282d4cbb1d"
+  },
+  "new_model_calls": 0,
+  "new_RGB_decode": 0,
+  "new_decoder_calls": 0,
+  "new_processor_calls": 0
+}

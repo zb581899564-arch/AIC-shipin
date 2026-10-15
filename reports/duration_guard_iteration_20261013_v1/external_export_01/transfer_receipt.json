@@ -1,0 +1,83 @@
+{
+  "status": "PASS_WINDOWS_LINUX_BYTES_SHA_CRC_AND_ALL_EXPORT_MEMBER_SHA",
+  "path": "/home/inspur/aic_video_work/duration_guard_iteration_20261013_v1/export_receipts_01/external_export_01.zip",
+  "bytes": 163271,
+  "sha256": "5a8741658de0dd41149384a2a0775dc7e12a8bd448d6123b2e5ae91eaeff85b2",
+  "manifest": {
+    "native_input_acceptance.json": {
+      "bytes": 754,
+      "sha256": "f9695fda9b3ec8a5b59f47eb29dc15f53e4287b60d4bdba7f5811ee814176a3f"
+    },
+    "developer_prediction_export.json": {
+      "bytes": 951709,
+      "sha256": "d2f4ba963f39d2e85531bad78a58336a185b15131b0009e25977c8355f7750ed"
+    },
+    "developer_export_acceptance.json": {
+      "bytes": 575,
+      "sha256": "3f280f89e7dabd111b72bc47f1c66ac99e80d52db1ae691b367facb30e43189b"
+    },
+    "new5_chain_01/completion.json": {
+      "bytes": 577,
+      "sha256": "47b0ac15417eb439f6fd60f58247b693e9f74414914cb05a34392f8b91840281"
+    },
+    "new5_gpu_01/completion.json": {
+      "bytes": 8713,
+      "sha256": "462b5cceb4b1f2fcf784f3c2938fc5bdba2f12c0ea05cd8e3a3d0485e698a586"
+    },
+    "new5_replay_01/completion.json": {
+      "bytes": 7506,
+      "sha256": "ca26bed1b1fd0cdda5539615e0eab11a5e56a1cf9e74e212651cab6576b96121"
+    },
+    "new5_source_lock_01.json": {
+      "bytes": 41993,
+      "sha256": "7a5b2006d0a6405e6a0ce83032561d5fecee1aef2e505e5bf2eb404f222679bd"
+    },
+    "new5_source_registration_01.json": {
+      "bytes": 5920,
+      "sha256": "e81897743f4d8592f25b4fbae59995989d64c500e467b8699388d8b4aa192512"
+    },
+    "new5_cpu_registration_02.json": {
+      "bytes": 4314,
+      "sha256": "461545561c846ce7c0f8bac9c27a66cb93dfaca9eabe0c4447fc82022d5d8002"
+    },
+    "new5_inference_registration_02.json": {
+      "bytes": 3762,
+      "sha256": "63980c539e7d514fb7ae46920f45faf8ecc5f3771ff7832c9852fbbd69fc3393"
+    },
+    "mapping_01/completion.json": {
+      "bytes": 3005,
+      "sha256": "1b9c199d5a1cbecfd065c3ebbc4c6be20d795afe29e57212dc65c01b6aba6869"
+    },
+    "cpu_chain_01/completion.json": {
+      "bytes": 267,
+      "sha256": "61892f4539be6ffdc8c0452656edceae655d3006421c3c27f7744ce45ccf947b"
+    },
+    "new5_gpu_01/model_identity.json": {
+      "bytes": 537,
+      "sha256": "753093c6823763badf49c87d24fee196de247b8b5903245b49ef3577552faf0e"
+    },
+    "source_isolation_acceptance.json": {
+      "bytes": 2835,
+      "sha256": "fe823049c310297fcd1c1bd0f977b2ff5909f285be997084c5299dbdc62b49cd"
+    },
+    "media_01/completion.json": {
+      "bytes": 3247,
+      "sha256": "3a846eeb068264259a7fcc84e78988a0fc9534dd65693069e931a78f68ab01d8"
+    },
+    "resource.json": {
+      "bytes": 1607,
+      "sha256": "d82d230fa1206d75616407ad4550057c4cad7251a0b90b5548463f80292c561e"
+    },
+    "matching_gpu_ledger.json": {
+      "bytes": 1686,
+      "sha256": "40968293745e7c8ad858a2f20233eb9a48c3f3eaba6ad5c8c99825ad3b855fb2"
+    },
+    "terminal_audit.json": {
+      "bytes": 441,
+      "sha256": "5e85d928ebfe4fd2d35811b8117afa92a48a9422ea2e9f1b45c4f85836962fe5"
+    }
+  },
+  "new_model_calls": 0,
+  "new_CPU_replays": 0,
+  "local_archive": "G:\\ai\\AIC视频\\reports\\duration_guard_iteration_20261013_v1\\external_export_01.zip"
+}

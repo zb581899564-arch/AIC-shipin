@@ -1,0 +1,14 @@
+{
+  "status": "CPU_METADATA_AUDIT_ENGINEERING_FAILURE_BEFORE_REPORT",
+  "error": "ValueError: full training denominator mismatch",
+  "cause": "The first implementation compared 704 clip-level source_group strings to the training receipt's 602 original YouTube source groups. The original contract counts canonical youtube_id for source independence.",
+  "actual_registered_windows": 724,
+  "actual_parent_sample_ids": 704,
+  "actual_clip_source_group_strings": 704,
+  "actual_original_youtube_ids": 602,
+  "original_training_manifest_or_report_changed": false,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "new_GPU_jobs": 0,
+  "repair": "Use canonical youtube_id count for original source groups; retain clip-group count separately. This corrects an audit implementation assumption, not the research denominator."
+}

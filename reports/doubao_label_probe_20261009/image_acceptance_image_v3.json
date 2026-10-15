@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-09T07:23:39.908170+00:00",
+  "status": "PASS_RAW_FRAME_IDENTITY_GEOMETRY_AND_TIME_BOUNDS",
+  "model_ui": "豆包 2.1 Pro",
+  "source_id": "GsAD1KT1xo8",
+  "frame_count": 8,
+  "crop_states": {
+    "CROP": 16
+  },
+  "highlights": 18,
+  "union_selected_seconds": 64.345,
+  "reported_reads": {
+    "crop_expected": 8,
+    "crop_reported": 8,
+    "timeline_expected": 13,
+    "timeline_reported": 13
+  },
+  "image_input_not_native_video": true,
+  "spatial_review_panels": true,
+  "temporal_label_file": "G:\\ai\\AIC视频\\reports\\doubao_label_probe_20261009\\raw\\image_v2\\highlights.json",
+  "full_source_frame_observation": false,
+  "human_crop_truth_available": false,
+  "issues": [],
+  "raw_files": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\doubao_label_probe_20261009\\raw\\image_v3\\crop_keyframes.json",
+      "bytes": 8885,
+      "sha256": "b18c00dc8386a89df9307396066f3c2bddf0ebe71ccdd878252a2fc9b713e4b1"
+    }
+  ]
+}

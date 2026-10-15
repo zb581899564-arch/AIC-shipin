@@ -1,0 +1,26 @@
+{
+  "status": "PASS_USER_AUTHORIZED_V14_ZIP_RETURN_WINDOWS",
+  "utc": "2026-10-08T16:04:42.186167+00:00",
+  "user_authorization": "回传",
+  "source": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/rematch_01/candidate_T_8B.zip",
+  "destination": "G:\\ai\\AIC视频\\deliveries\\V14_8B_20261009\\candidate_T_8B.zip",
+  "bytes": 308278,
+  "sha256": "95173d936d09cfcf84bcff5755336e50dbfff94ac5a7e4cfba2953064022f3a2",
+  "copied_this_turn": true,
+  "transfer_direction": "Linux to Windows",
+  "link": "existing aic-inspur-home SSH alias with default strict host verification",
+  "zip_crc_pass": true,
+  "archive_members": [
+    "predictions.jsonl"
+  ],
+  "video_records": 426,
+  "unique_video_records": 426,
+  "predictions_sha256": "9ebd31540b905e08da3352709cf1ff38eb241b3be6b55ea087dff7df9304c4e4",
+  "same_bytes_as_independently_accepted_Linux_ZIP": true,
+  "accepted_receipt_sha256": "f8f17dcad75dd96ff0ddcc89caf9f6531ebdcb9e0965fae81a7d4236c2ecc027",
+  "selected_original_B": true,
+  "actual_new_T_optimizer_updates": 15,
+  "new_official_score": null,
+  "AIC_uploaded": false,
+  "GitHub_ZIP_exported": false
+}

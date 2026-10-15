@@ -1,0 +1,116 @@
+{
+  "status": "ROOT_SEMANTIC_EVALUATION_ADJUDICATION_COMPLETE",
+  "utc": "2026-10-11T10:49:46.714124+00:00",
+  "window_id": "Yi4Ij2NM7U4:SLOT6:3",
+  "candidate_prediction_exposure": false,
+  "root_read_all64_teacher_facts": true,
+  "root_read_all64_native_and_student_facts": true,
+  "all_NO_ranges_reviewed": true,
+  "selected_preteacher_event_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "unknown_local_exact": [],
+  "consequential_unknowns": [],
+  "evidence": {
+    "preteacher_main_review": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\22_yi4_w03_main_preteacher_review_v2.json",
+      "sha256": "31e21f1635392e4d4dbbfd9977e4a0c8f9c49b2d144e7b7875e4c82664815193"
+    },
+    "teacher_observation_audit": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\22_yi4_w03_lawful_observation_completion_CLI39_v1.json",
+      "sha256": "9635f8ae73ab16a9a6936ceead46fa540d267ce879155d90bb242d23fcf1d34a"
+    },
+    "original_teacher_proposal": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_22_23_v1\\call39\\w22_proposal.json",
+      "sha256": "e2ea781ff500647158a561db14a84d4564bc1693ad7dbe1c98012f973dc667e9"
+    },
+    "original_teacher_bound_fact_audit": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_22_23_v1\\call39\\w22_completed_scope_audit.json",
+      "sha256": "365a53e0cb0ea7cecedeca0ad4618e0abcc0bb27a34b48591a8152013c77f4e9"
+    },
+    "exposed_independent_semantic_crosscheck": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_semantic_crosschecks_v1\\22_Yi4Ij2NM7U4_W03.exposed_semantic_crosscheck_CLI39_v2.json",
+      "sha256": "49b45c3983763128bf587739268dfbde5ce03d892daf09ddba1d330ab7032422"
+    },
+    "root_actual_precompletion_pixels": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\22_yi4_root_actual_pixels_schema_recovery_v1.json",
+      "sha256": "f80f6946f0c76973589166b36b60f43cc532e40494602382ff3db3140cfb5c34"
+    },
+    "root_actual_postteacher_pixels": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\22_yi4_root_actual_postteacher_pixels_CLI39_v1.json",
+      "sha256": "6f9e5176736a17e6fd2bd8ce60f14b440ecf2264816f3dbcb73c1a23c264cb2f"
+    },
+    "actual_scope_engineering_recovery": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\schema_recovery_CLI39_final_selfread_root_recovery_v1.json",
+      "sha256": "bf991024d851317d0d4dc7784622119d4e5478ed276c88b3d1e7e0d43fba684c"
+    }
+  },
+  "historical_NO_reason_corrections": [
+    {
+      "first": 39,
+      "last": 61,
+      "original_reason": "重新站立和普通讲话持刀、置物，末端刀操作被手臂遮挡，不声称实际切割过程",
+      "corrected_reason": "F39..60为坐着戴墨镜/耳机、手持手机及普通嘴部或手部姿态；F61切回案板且刀接触被手臂遮挡。保留原NO范围，不声称讲话音频或实际切割。"
+    }
+  ],
+  "differences_adjudicated": [
+    "Original native E2 physical final mouth/recovery endpoint UNKNOWN after F39 cut stays sealed. Root separates the observable bite/notch result from finite representative face/hand images; neither asserts swallowing, spitting, taste or completed recovery. These target definitions are fixed before teacher/student final or model predictions, not chosen from metric outcomes.",
+    "Original native E3 includes occluded F61 knife preparation. Root finite target is the clear two-part result F62..63 only; the actual cutting instant and full cooking completion remain unknown and outside this image target.",
+    "No event overlap or semantic merging is introduced even where bite and later image excerpts touch; mandatory student effective-input comparison remains pending.",
+    "Actual original effectiveF06/F13 shows partial brown skin then a displayed white round surface; not every side being peeled clean. F23 mouth/white object contact and F25 upper notch are visible; swallowing or internal transfer remains unknown.",
+    "EffectiveF31/F38 supports only visible face/hand/body postures. Student full recovery endpoint UNKNOWN is not replaced by a complete physical aftermath target; the separately frozen finite typical images have no taste, emotion or causal assertion.",
+    "EffectiveF62/F63 supplies the board/object relationship but not the occluded knife contact. Multiple white parts already appear earlier; no newly produced result is inferred. The old native-only result-image wording remains preserved in its original record.",
+    "Student initial UNKNOWN for complete physical cutting/ingestion stays sealed. Root finite editorial targets were defined before teacher or candidate outputs, and the actual student originals now support those limited targets. All ordinary phone/ear-handling NO spans are separately reviewed.",
+    "Teacher all64 original facts and proposal are preserved. F13 fully peeled on every side, F24..30 internal chewing/force, F31..37 taste, pain, endurance, coughing/vomiting and intention are not established by these static images and are excluded from the finite reference.",
+    "The frozen four targets remain separate: partial skin/white surface display, mouth-contact/away-visible notch, finite face/hand/body postures, and the two already visible white parts beside the knife. They are representative image/editing targets, not a complete challenge, swallowing, recovery, actual cutting or completed cooking.",
+    "Teacher 10..18 second challenge merger is rejected. Original broad 1/.6/.8/.7 second uncertainties and F38 support outside its18-second KEEP remain preserved. Final exact boundary ranges and midpoint choices are the preregistered independent ones, with no narrowing or target selection from candidate predictions.",
+    "Original preteacher39..61 ordinary-NO reason is corrected from standing/knife wording to the actually observed sunglasses/earphones/phone scene and F61 occlusion. Original reason, range, allfour events and all boundary intervals are preserved.",
+    "Full physical ingestion/recovery/knife-contact unknowns remain explicit in sealed initial reviews and final scope explanation. Those outcomes were outside the preteacher finite-image targets; they are not converted into completed physical events or excluded after model metrics.",
+    "CLI39 completed128core media scope is accepted separately. Its naturalSUCCESS, single final proposal selfread, wholeREJECT and actual usage/cost remain bound. Scope integrity is not semantic truth or human gold."
+  ],
+  "actual_root_observation_scope": {
+    "native_sample_indices": [
+      6,
+      13,
+      23,
+      25,
+      31,
+      38,
+      61,
+      63
+    ],
+    "student_sample_indices": [
+      6,
+      13,
+      23,
+      25,
+      31,
+      38,
+      62,
+      63
+    ],
+    "additional_precompletion_native_samples": [
+      25,
+      61
+    ],
+    "additional_postteacher_native_samples": [
+      31,
+      63
+    ],
+    "read_native_static_facts": 64,
+    "read_student_static_facts": 64,
+    "read_teacher_static_facts": 64,
+    "root_direct64_image_review": false,
+    "root_native_video_view": false,
+    "teacher_actual_video_delivery": true,
+    "parent_whole_rejected_preserved": true
+  },
+  "serializer_source_binding": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\finalize_eval_window_NO_note_v3.py",
+    "sha256": "b1ee69b3ab095138ef08777acca3de5d31b58fae0d6b02394451151512a5c1a1"
+  },
+  "reference_scope_and_reason": "Locked-evaluation-only finite visual editorial silver. Four independently preregistered visible image/relationship targets with ordinary NO; no claims of taste, pain, swallowing, recovery, newly cut parts or full cooking completion. Physical-outcome unknowns stay in the bound original reviews and are outside these frozen image targets. Not human gold or training admission."
+}

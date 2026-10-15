@@ -1,0 +1,34 @@
+{
+  "created_utc": "2026-09-09T19:43:05.638537+00:00",
+  "status": "frozen_before_any_holdout_inference",
+  "dev_run": "/home/inspur/aic_video_work/runs/improvement_dev_v2",
+  "candidate_order": [
+    "windowed",
+    "multi"
+  ],
+  "policies": [
+    "single",
+    "windowed",
+    "multi"
+  ],
+  "holdout_sha256": "ecf13785fd6214c308cf7d9c0d0410263bf37de46bbf47cdf6428b77e46aaf79",
+  "source_hashes": {
+    "dev": "2a3a983cfa0680971806261dc2fc3b84c5a2115072fdac73ba14a2727954d955",
+    "inference_v2/__init__.py": "4484e3843678393180d25bba0bdf49ec5e2bf14994cf55c532338e0e41edb24a",
+    "inference_v2/baseline_v2.py": "be00177024135ba10bb4bad36c39ee3dd6502eef3494810a4b8e49008f04a9d9",
+    "inference_v2/qwen_io.py": "2e501be2c5bc99f1dab4efe9f71491f42c6732f26df1d5bc912cba2ea89a70f3",
+    "inference_v2/temporal.py": "74b3a611731b70ae724db9ec360e195b4de32edc2fe393c7dada58d0277f54b3",
+    "inference/baseline_qwen3vl.py": "a522244712831e7fddc605bce73b083851b7353dac1ceb2a9e4f41b948733631",
+    "evaluation_v2/temporal.py": "f8125b937ab9d3ec4f143ce8426483d5f0bd93894899dc09d1aad7854de7cb3b",
+    "improvement_round1/run_dev_suite.py": "c6dbec9dceb90aefa0e08dbca4891a6dd6a38af68cbe382e3ac240de888dba87",
+    "improvement_round1/environment.lock.txt": "7190e6cc6054a1efc20ea83c5ab9d2c40eab405f7b8b8cb6ab05a22d7fca1ae4"
+  },
+  "dev_summary_sha256": "95ef94c66587ebd5a7500cd784808cf4f4d99aeaee162713191123423abfd893",
+  "suite_sha256": "143019ec48f136b8a0b6d47a5afb2f95a636e9d5c4263c3a0cf0a95492b697c4",
+  "data_lock_sha256": "c7b76f994030748046ac59314ff74757d985e89f3de45d9e83d02b6e5ebca7fa",
+  "output": "/home/inspur/aic_video_work/runs/improvement_holdout_v2",
+  "training_used": false,
+  "official_aic_score": null,
+  "selection": "first dev-ranked candidate with holdout F1 >= single baseline",
+  "allow_holdout_tuning": false
+}

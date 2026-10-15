@@ -1,0 +1,69 @@
+{
+  "status": "PASS_CURRENT_RUNTIME_AST_AND16_SYNTHETIC_CPU_TESTS_NOT_REAL_INPUT_MODEL_OR_QUALITY_ADMISSION",
+  "utc": "2026-10-10T19:29:51.399791+00:00",
+  "runtime_files": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\common.py",
+      "sha256": "17db9cf9b9aed0b29af789e4f1330f8415dfe4e23951485bbcb9186ecc1eae33"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\evaluate.py",
+      "sha256": "0c836507483a7fc9fe3a9d9962608dc02ac7eba9cb9d08e761463e6f90ddb21e"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\freeze_inputs.py",
+      "sha256": "bccafa558ea36b16b04d6fecf3e708872fac15afe1761360555ec4628e19b07f"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\model_binding.py",
+      "sha256": "e99c66363d683ac813bf25e5995fc457638baea3eb3c153ced0646330c059bb2"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\native_runtime.py",
+      "sha256": "30cc62c99dc4e524fb8128a1bad27b30632098ca66e113b9e0e729bb079bb62d"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\objective.py",
+      "sha256": "118e8eb1cf631019fedf2d77f47532e6fa643cee63893a9d8c4e0761c1a509fe"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\preflight_native_inputs.py",
+      "sha256": "4c9f035c7ba4e5a53a8b99e72e6584290e2b518aaa8cfc4df94744f4931a2d8e"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\scientific_gate.py",
+      "sha256": "11b8516df794bdb7f781fd4b82ea54847a0b0ce52c9fc7e02ac57ead925851be"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\test_evaluation_reconstruction.py",
+      "sha256": "2b920e681d19f907b0cc9cc25a6354076cd4122058f40d0515e259090150d183"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\test_runtime.py",
+      "sha256": "cfde0d4713ab88c953b2d140e1dde391d3a9a1aef18ad28c6c446fdd4127e417"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\train.py",
+      "sha256": "de9191e759e346513ec583afbb29f57177a33fb3520918b57601b489ff374aa6"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\verify_evaluation.py",
+      "sha256": "a791b0d38e2489bded79aa8380bd93f34c6e6c42f4c2ad5d43a93d6fea7ff6a1"
+    }
+  ],
+  "actual_tests": 16,
+  "command": "python -B -m unittest test_runtime test_evaluation_reconstruction",
+  "actual_new_tests": [
+    "all24 synthetic acceptance",
+    "wrong output token identity rejection",
+    "wrong arm adapter rejection",
+    "wrong generation input rejection"
+  ],
+  "native_decoder_executed": false,
+  "actual_processor_executed": false,
+  "model_executed": false,
+  "CUDA_initialized": false,
+  "new_optimizer_updates": 0,
+  "real_quality_verified": false,
+  "unfrozen": true
+}

@@ -1,0 +1,29 @@
+{
+  "status": "ROOT_ACTUAL_ORIGINAL_IMAGE_RECHECK_NOT_NEW_BLIND_INITIAL",
+  "utc": "2026-10-11T10:20:46.976936+00:00",
+  "job_index": 23,
+  "window_id": "Yi4Ij2NM7U4:SLOT6:6",
+  "actual_images": [
+    {
+      "sample_index": 15,
+      "image": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\23_Yi4Ij2NM7U4_W06\\frames\\F15_O004491.png",
+        "sha256": "ae4240f1afac1b8e0d43a8597283a7dd2ed807a2f3072c95c533bad5e67521f0"
+      },
+      "visible_static_fact": "Clear transparent pack with several red-brown long foods, held beside the face and pointed at."
+    },
+    {
+      "sample_index": 50,
+      "image": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\23_Yi4Ij2NM7U4_W06\\frames\\F50_O004890.png",
+        "sha256": "17ac39772f05a4117b8b394edc758e65c17ffaaed1be0ab34f99a6b0f6584137"
+      },
+      "visible_static_fact": "Red bottle with white cap held beside the face and pointed at; no opening or pouring shown."
+    }
+  ],
+  "teacher_completed_content_read_at_recheck": false,
+  "root_direct64_image_review": false,
+  "root_video_view": false,
+  "candidate_prediction_exposure": false,
+  "training_admitted": false
+}

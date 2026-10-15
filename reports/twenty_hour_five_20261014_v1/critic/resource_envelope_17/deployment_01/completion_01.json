@@ -1,0 +1,39 @@
+{
+  "schema": "RESOURCE_ENVELOPE_METADATA_COMPLETION_17",
+  "status": "COMPLETE_EXISTING_METADATA_ONLY_CODE_ENVELOPE_NOT_COLD_HWM_MEASUREMENT",
+  "code_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/resource_envelope_17/code/collect_envelope_metadata_01.py",
+    "sha256": "a1f457d630f22c48599ca67ec13ea5cdfc94687f8e97ca7b4acccae2d5ef9a58",
+    "bytes": 11190
+  },
+  "CPU_envelope_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/resource_envelope_17/CPU_resource_envelope_01.json",
+    "sha256": "c90a7c7a169d9f4a67e5e78225b829e920d59c1b76df9cf4d787d9af90a52e60",
+    "bytes": 1121
+  },
+  "GPU_envelope_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/resource_envelope_17/GPU_host_resource_envelope_01.json",
+    "sha256": "4be92aa2abfc8fe548c11daa70ad886e132eba7d27384454b98b97f40124cfc5",
+    "bytes": 4869
+  },
+  "shard_manifest_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/resource_envelope_17/checkpoint_shard_manifest_01.json",
+    "sha256": "9909dd2f6363c5fb7850c6bade0b85a2eee423f7debfe53288eb79ad74c97a88",
+    "bytes": 3128
+  },
+  "CPU_observation_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/resource_envelope_17/CPU_metadata_observations_01.json",
+    "sha256": "ee1df649e684ccb28a6b635bb2ff7e754fcbd0f61f188e7edcf96d528f6c955f",
+    "bytes": 21245
+  },
+  "CPU_actual_peak_rss_kib": 2561208,
+  "maximum_actual_logical_prefill_tensor_bytes": 286482312,
+  "base_BF16_bytes": 17534247392,
+  "maximum_checkpoint_shard_bytes": 4999831048,
+  "prefill_tensor_code_bound_bytes": 402916864,
+  "GPU_host_memory_code_envelope_bytes": 27013789672,
+  "GPU_cold_load_HWM_observation_available": false,
+  "model_or_processor_or_decoder_calls": 0,
+  "full_weight_body_hashes": 0,
+  "old_proofs_or_files_modified": false
+}

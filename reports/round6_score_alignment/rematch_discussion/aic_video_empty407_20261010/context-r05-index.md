@@ -1,0 +1,48 @@
+# 本轮完整信息包
+
+{
+  "version": "EMPTY407_R05_CROSS_REVIEW",
+  "bytes": 2447911,
+  "sha256": "36801aaf7f5c36a40330fd58529a511b5c265c0fdbc0f578f531ddbe34b6c943",
+  "parts": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_discussion\\aic_video_empty407_20261010\\context-r05-part01.md",
+      "bytes": 349725,
+      "sha256": "deed1cc1df5ebf8bd0a16c9863e0f4493f642b449473447642b1ed7a65d78e56"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_discussion\\aic_video_empty407_20261010\\context-r05-part02.md",
+      "bytes": 349797,
+      "sha256": "a6d91b87f03dab9c5dce12365013ccc5567f0e208ed2eec644bfc61ac16c77c3"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_discussion\\aic_video_empty407_20261010\\context-r05-part03.md",
+      "bytes": 349722,
+      "sha256": "371c510fa956c56a7256a1c27b0b28976361a2dfe94c452c1fdf3da4d41123c1"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_discussion\\aic_video_empty407_20261010\\context-r05-part04.md",
+      "bytes": 349686,
+      "sha256": "9bc64c4332f21638876a40ea5bba89cdc14d7fde7aa17a989bd5ec290325f68b"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_discussion\\aic_video_empty407_20261010\\context-r05-part05.md",
+      "bytes": 349663,
+      "sha256": "034e19af7b1a585d1ec76bb0b4f798e43e4b5e7e5ab9d25f259100bcc60b25b1"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_discussion\\aic_video_empty407_20261010\\context-r05-part06.md",
+      "bytes": 349702,
+      "sha256": "5b83541b8aaecd56e987ab610a3c97b56444333151510a947210636f9fc70301"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\round6_score_alignment\\rematch_discussion\\aic_video_empty407_20261010\\context-r05-part07.md",
+      "bytes": 349616,
+      "sha256": "5c846bfc337e1750235f21ba8031ca6c38071840c89415fa6976fb89be83f461"
+    }
+  ],
+  "concat_byte_exact": true,
+  "actual_ui_sent": false
+}
+
+必须依次读全部7卷至END_EMPTY407_R05_CROSS_REVIEW，截断指出实际位置。索引SHA是主控声明，不能冒称独立主机验签。

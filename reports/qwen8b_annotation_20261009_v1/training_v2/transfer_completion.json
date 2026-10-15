@@ -1,0 +1,67 @@
+{
+  "status": "PASS_REMOTE_ZIP_SIZE_SHA",
+  "bytes": 1269695818,
+  "sha256": "45af6f8edc267be4a126cd1f86fb99172f11632202da947d9cb3eca2246ff57c",
+  "path": "/home/inspur/aic_video_work/datasets/qwen8b_annotation_20261009_v2.incoming.zip",
+  "verified_prefix_bytes": 56295424,
+  "preserved_prefix_actual_bytes": 56838144,
+  "late_buffered_bytes_omitted": 542720,
+  "all_parts_sha_verified": true,
+  "new_data_transferred": 0,
+  "utc": "2026-10-09T14:41:41.025796+00:00",
+  "route": "WINDOWS_MACMINI_PROXYJUMP_LINUX",
+  "training_started": false,
+  "parts": [
+    {
+      "part": 0,
+      "bytes": 151675050,
+      "sha256": "8e200d4d37a6a0137f997254f7857d52d2cb4557002c4d7124049fe8299abe20",
+      "path": "/home/inspur/aic_video_work/datasets/qwen8b_annotation_20261009_v2.transfer_parts/part_00.bin"
+    },
+    {
+      "part": 1,
+      "bytes": 151675050,
+      "sha256": "4e29b0bd4a988fc66ff18cf9de1d7a296e62291606b5ecd31538f6b6339f3ee7",
+      "path": "/home/inspur/aic_video_work/datasets/qwen8b_annotation_20261009_v2.transfer_parts/part_01.bin"
+    },
+    {
+      "part": 2,
+      "bytes": 151675050,
+      "sha256": "c9fbc8fde8c12d7f554724fe03cbb09d4f6b888e45e7b9975834805c12a0a447",
+      "path": "/home/inspur/aic_video_work/datasets/qwen8b_annotation_20261009_v2.transfer_parts/part_02.bin"
+    },
+    {
+      "part": 3,
+      "bytes": 151675050,
+      "sha256": "a3f5ada060b90802f2be9a6c2f1405b036bbdb2e1fff6eccaaec6f3e84fac4ba",
+      "path": "/home/inspur/aic_video_work/datasets/qwen8b_annotation_20261009_v2.transfer_parts/part_03.bin"
+    },
+    {
+      "part": 4,
+      "bytes": 151675050,
+      "sha256": "b10a92de4ece3417a0418535e7e2eeca66b526a646e3a0af683dcc03702aa760",
+      "path": "/home/inspur/aic_video_work/datasets/qwen8b_annotation_20261009_v2.transfer_parts/part_04.bin"
+    },
+    {
+      "part": 5,
+      "bytes": 151675050,
+      "sha256": "9bd51246725810c1a0f8e119d6a7d4fa29e92cb3b4952ee8eb3ec2530ff7fd08",
+      "path": "/home/inspur/aic_video_work/datasets/qwen8b_annotation_20261009_v2.transfer_parts/part_05.bin"
+    },
+    {
+      "part": 6,
+      "bytes": 151675050,
+      "sha256": "a929a4f82c27ae8895b0ec57484308aea5d259abb6c51864e995591787b4772c",
+      "path": "/home/inspur/aic_video_work/datasets/qwen8b_annotation_20261009_v2.transfer_parts/part_06.bin"
+    },
+    {
+      "part": 7,
+      "bytes": 151675044,
+      "sha256": "f1a5c57c1ed6af44f072e89fffadf091fecba3986df98f07ab0157b2563c3d76",
+      "path": "/home/inspur/aic_video_work/datasets/qwen8b_annotation_20261009_v2.transfer_parts/part_07.bin"
+    }
+  ],
+  "preserved_initial_merge_failure": true,
+  "initial_merge_failure_reason": "Early receiver flushed another 542720 bytes after its parent was stopped; exact-size guard refused merge before mutating files",
+  "repair": "Recheck all part hashes and read only the exact already-verified prefix length"
+}

@@ -1,0 +1,100 @@
+{
+  "status": "ROOT_SEMANTIC_EVALUATION_ADJUDICATION_COMPLETE",
+  "utc": "2026-10-10T22:22:49.771322+00:00",
+  "window_id": "EYqVtI9YWJA:SLOT6:3",
+  "candidate_prediction_exposure": false,
+  "root_read_all64_teacher_facts": true,
+  "root_read_all64_native_and_student_facts": true,
+  "all_NO_ranges_reviewed": true,
+  "selected_preteacher_event_indices": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "unknown_local_exact": [],
+  "consequential_unknowns": [],
+  "evidence": {
+    "preteacher_main_review": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\16_eyq_w03_main_preteacher_review_v2.json",
+      "sha256": "2b977550c35e11f2285681f5b1701d19c875fe4578475eb152f187bd892466e4"
+    },
+    "teacher_observation_audit": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\16_eyq_w03_lawful_observation_completion.json",
+      "sha256": "f72b42bd41a9ed1d7fb66b9836d8c79ff6450c353fcf3f24f7486823b53c2fe6"
+    },
+    "original_teacher_proposal": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w16_proposal.json",
+      "sha256": "ef2730b96dd5e6258b8d030d8b3db3f55cf7360e118137138de44395cf38a442"
+    },
+    "original_teacher_program_bound_facts": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\call07\\w16_program_bound_facts_completed_scope.json",
+      "sha256": "408eba9a852221aba65c8e39d859d11fb63d80bc6cffe88964d3f99188b596cc"
+    },
+    "boundary_observations": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\16_eyq_w03_boundary_observations_acceptance.json",
+      "sha256": "6b1f004eee7adfc25bda8d4711d70c1a9d3e0f92cb4595447b3bcf6842d4a89c"
+    },
+    "student_arithmetic_erratum": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\16_EYqVtI9YWJA_W03.student_boundary_arithmetic_errata_v1.json",
+      "sha256": "0aea5971fdce513bb3e124ac900d677928f29870d7d7f360a4b5c4897193aea8"
+    }
+  },
+  "differences_adjudicated": [
+    "Student physical start/completion UNKNOWN is preserved in the sealed initial review; finite representative-image boundaries are not an assertion of unseen physical preparation, precise tyre contact or full display completion.",
+    "Actual registered probes narrow the scene entrance and post-turn editing limits only. No student64 sample or source clock changed.",
+    "Student16 original F18/F19 arithmetic error is preserved with its program-derived erratum: actual gap7007/15000, not1001/2000. F44/F45 is also7007/15000; pose visibility rather than time gap limits full physical onset.",
+    "The paired image starts at clear F45, not blurred/cropped F44; observed probe09 does not create an invented preparation. F52 still has raised wheels before scene exit.",
+    "Gemini retains the entire performance scene as one continuous high-difficulty completed stunt. The preteacher five finite local highlights remain distinct; ordinary slow positioning F29..34 and F40..44 stays NO. No scene-wide forced event merge is used.",
+    "Actual original nativeF21 shows a high rear wheel and low front wheel. Actual native/effectiveF26 shows the black rider rear-wheel-high/front-wheel-low relation; two-wheel airborne jump, exact contact and bounce are not target facts. The raw teacher claims remain unchanged.",
+    "Actual original nativeF37 shows the two riders during turning, while effectiveF35/F38 supplies preparation/low-wheel return. Teacher difficulty, excellent balance and whole action completion are not inferred from the still images.",
+    "The full64 student review, limited direct original checks and frozen editorial boundary probes establish the finite representative target; teacher eight previews alone cannot certify every selected interval. Physical initial lift/final tyre contact/cut-before-lowering UNKNOWN remains in original independent reviews outside the explicitly declared finite typical-image targets.",
+    "All ordinary interview NO spans and intermediate ordinary riding NO spans were reviewed. Teacher decimal scene cuts and claimed audio absence are not used as exact native boundaries or audio evidence."
+  ],
+  "actual_root_observation_scope": {
+    "native_sample_indices": [
+      16,
+      17,
+      19,
+      20,
+      25,
+      26,
+      28,
+      34,
+      35,
+      36,
+      38,
+      39,
+      40,
+      44,
+      45,
+      52,
+      53
+    ],
+    "student_sample_indices": [
+      17,
+      20,
+      45,
+      52
+    ],
+    "additional_postteacher_native_samples": [
+      21,
+      26,
+      37
+    ],
+    "additional_postteacher_student_samples": [
+      26,
+      35,
+      38
+    ],
+    "read_native_static_facts": 64,
+    "read_student_static_facts": 64,
+    "read_teacher_static_facts": 64,
+    "root_direct64_image_review": false,
+    "root_native_video_view": false,
+    "teacher_actual_video_delivery": true,
+    "original_parent_terminal_not_inferred": true
+  },
+  "reference_scope_and_reason": "Locked-evaluation-only finite visual editorial silver. Clear local wheel-high/turn/paired representative images are independently adjudicated, ordinary riding is NO. Not a complete stunt-action annotation, human gold or official score; original unseen physical completeness limits and original teacher raw stay preserved."
+}

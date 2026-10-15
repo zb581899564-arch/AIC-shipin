@@ -1,0 +1,178 @@
+{
+  "status": "V2_21_REGISTERED_NOT_LAUNCHED",
+  "registration_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v2/registration_01.json",
+  "registration_sha256": "7fe78cd3fd64d9026e85cdc277e699bcdf53b0a84117890f2138e1f656f6e77b",
+  "source_registry_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v2/source_registry_01.json",
+  "source_registry_sha256": "01ea41b87c1120bd1ce8c2115995e7ba8f9bb2a35be5131f7bedef09e81f7f5b",
+  "sources": 21,
+  "role_counts": {
+    "dev": 11,
+    "confirm": 10
+  },
+  "worker_intersection": [],
+  "dev_unique_workers": 8,
+  "confirm_unique_workers": 10,
+  "dev": [
+    {
+      "source_id": "LJ2J6",
+      "worker_subject_id": "C7O9",
+      "clock_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/LJ2J6/native_clock.json",
+      "clock_sha256": "3e47db863ab47766307e4308dea748f2b5419cd0ca58ffc5be011609d7f0c07a"
+    },
+    {
+      "source_id": "2JTRG",
+      "worker_subject_id": "ZAWX",
+      "clock_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/2JTRG/native_clock.json",
+      "clock_sha256": "dd731939328f8ffee77e80a71827f3cdd4e04aa839af7dcb86d850388def34a7"
+    },
+    {
+      "source_id": "7FQ5Q",
+      "worker_subject_id": "ZAWX",
+      "clock_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/7FQ5Q/native_clock.json",
+      "clock_sha256": "63cde4c1bc107312ab7711c1211e81b4c98ec5aa1e930376b0be115ec5fc3a18"
+    },
+    {
+      "source_id": "L37YS",
+      "worker_subject_id": "RPBD",
+      "clock_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/L37YS/native_clock.json",
+      "clock_sha256": "7e9628123c9012ddc4c00570d7a76f7bd8a58cdf221b05228796a7b12ab1e672"
+    },
+    {
+      "source_id": "UJT87",
+      "worker_subject_id": "CCI9",
+      "clock_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/UJT87/native_clock.json",
+      "clock_sha256": "bf8a95368fa10d2bd7094e9f32c51e353f0fc0d2674efdc421743ab240080d96"
+    },
+    {
+      "source_id": "IYVVM",
+      "worker_subject_id": "YA10",
+      "clock_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/IYVVM/native_clock.json",
+      "clock_sha256": "18cd4cde70dc89c1d1cca9452c87d076853bf5ce96a2b13d17748a9e0b261617"
+    },
+    {
+      "source_id": "TWZA4",
+      "worker_subject_id": "KL48",
+      "clock_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/TWZA4/native_clock.json",
+      "clock_sha256": "1776a67af9a7cea8c67019eb90f469cceef105974769d2e41e635b815c1fc596"
+    },
+    {
+      "source_id": "J8KES",
+      "worker_subject_id": "C7O9",
+      "clock_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/J8KES/native_clock.json",
+      "clock_sha256": "b797fd24b7e52afa3fe58c6182ba574e1b8ba386f3591d7011afc75446151824"
+    },
+    {
+      "source_id": "GLOMM",
+      "worker_subject_id": "WG9D",
+      "clock_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/GLOMM/native_clock.json",
+      "clock_sha256": "27502b66cc4663e4bef598ac4d508f4976821f65f1f5b668d2f1f6a785ef1eb7"
+    },
+    {
+      "source_id": "OO6BH",
+      "worker_subject_id": "3H6W",
+      "clock_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/OO6BH/native_clock.json",
+      "clock_sha256": "b6bc005a1f3728591f98374227219f07b0692b658910f205d31d1773581fa199"
+    },
+    {
+      "source_id": "VGTX8",
+      "worker_subject_id": "CCI9",
+      "clock_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/VGTX8/native_clock.json",
+      "clock_sha256": "3f54e1bcba2e53e88d086dc01d94cd02dc210c4c4da0f6fd12d9570883a0ab9e"
+    }
+  ],
+  "confirm": [
+    {
+      "source_id": "LLOGB",
+      "worker_subject_id": "4JV9",
+      "compressed_bytes": 6812955,
+      "file_bytes": 6842081
+    },
+    {
+      "source_id": "3QXPC",
+      "worker_subject_id": "KFGP",
+      "compressed_bytes": 1637336,
+      "file_bytes": 1659833
+    },
+    {
+      "source_id": "UPZJ5",
+      "worker_subject_id": "PKND",
+      "compressed_bytes": 7682886,
+      "file_bytes": 7696619
+    },
+    {
+      "source_id": "D0E8H",
+      "worker_subject_id": "P6LJ",
+      "compressed_bytes": 2406653,
+      "file_bytes": 2477680
+    },
+    {
+      "source_id": "IADJE",
+      "worker_subject_id": "5LWB",
+      "compressed_bytes": 231648,
+      "file_bytes": 233888
+    },
+    {
+      "source_id": "PT0L3",
+      "worker_subject_id": "UTMU",
+      "compressed_bytes": 1595148,
+      "file_bytes": 1614269
+    },
+    {
+      "source_id": "4ZMEW",
+      "worker_subject_id": "DXDI",
+      "compressed_bytes": 1787428,
+      "file_bytes": 1841502
+    },
+    {
+      "source_id": "138LG",
+      "worker_subject_id": "H8N1",
+      "compressed_bytes": 811352,
+      "file_bytes": 828147
+    },
+    {
+      "source_id": "Z3AGB",
+      "worker_subject_id": "W4E6",
+      "compressed_bytes": 13357770,
+      "file_bytes": 13371432
+    },
+    {
+      "source_id": "JJLTF",
+      "worker_subject_id": "HR43",
+      "compressed_bytes": 6873852,
+      "file_bytes": 6885051
+    }
+  ],
+  "inherited_CPU_proofs": [
+    {
+      "case_id": "CH_7FQ5Q_W000",
+      "proof_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/7FQ5Q/W000/cpu_input.json",
+      "proof_sha256": "a1880ef870473ea94a28af42de7ff7e67d080077322fa1c89fa23f244b2665eb"
+    },
+    {
+      "case_id": "CH_7FQ5Q_W001",
+      "proof_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/7FQ5Q/W001/cpu_input.json",
+      "proof_sha256": "06706a45c1760dcd19849cadc504941fc832e77a92fb5ef19289fe3bca39e7f7"
+    },
+    {
+      "case_id": "CH_J8KES_W000",
+      "proof_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/J8KES/W000/cpu_input.json",
+      "proof_sha256": "96f15f7a7df3664a5a7c410c1bc6490d379c67607546f04cba88832d8c70f61f"
+    },
+    {
+      "case_id": "CH_J8KES_W001",
+      "proof_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/charades_boundary_v1/native_01/J8KES/W001/cpu_input.json",
+      "proof_sha256": "59db7f60f2ddf43419546db6d5bcf3167d2e2ace35d815a6af5e59e8eaa110bf"
+    }
+  ],
+  "fresh_compressed_bytes": 43197028,
+  "fresh_file_bytes": 43450502,
+  "not_resuming_partial_KPNJ5": true,
+  "new_model_calls": 0,
+  "new_media_requests": 0,
+  "new_complete_clock_decodes": 0,
+  "new_RGB_decodes": 0,
+  "new_CPU_processor_encodes": 0,
+  "old_gates_unchanged": true,
+  "scope": "PARTIAL_AUTHOR_ACTION_CLEAR_BOUNDARY_PROXY_NOT_WHOLE_SOURCE_GT",
+  "run_requires_main_review": true
+}

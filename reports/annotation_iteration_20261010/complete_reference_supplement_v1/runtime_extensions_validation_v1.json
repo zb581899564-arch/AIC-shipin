@@ -1,0 +1,26 @@
+{
+  "status": "PASS_ENGINEERING_STATIC_EXTENSIONS_AND_ACTUAL_PREMATURE_PROJECTION_REJECTION",
+  "utc": "2026-10-10T17:22:38.382873+00:00",
+  "runtime_files": {
+    "common.py": "fe719d1c11cdbc5b43d696190ea5052aea91abcadb05aa32dd79ad98d3e0e53c",
+    "evaluate.py": "0c836507483a7fc9fe3a9d9962608dc02ac7eba9cb9d08e761463e6f90ddb21e",
+    "freeze_inputs.py": "bccafa558ea36b16b04d6fecf3e708872fac15afe1761360555ec4628e19b07f",
+    "model_binding.py": "e99c66363d683ac813bf25e5995fc457638baea3eb3c153ced0646330c059bb2",
+    "native_runtime.py": "30cc62c99dc4e524fb8128a1bad27b30632098ca66e113b9e0e729bb079bb62d",
+    "objective.py": "118e8eb1cf631019fedf2d77f47532e6fa643cee63893a9d8c4e0761c1a509fe",
+    "preflight_native_inputs.py": "4c9f035c7ba4e5a53a8b99e72e6584290e2b518aaa8cfc4df94744f4931a2d8e",
+    "scientific_gate.py": "be5a33615c7423687b77d83a0a2fa0d7143a5ec02cb37d030a9cc82d064550d0",
+    "test_runtime.py": "d756edc7d3e5e1824237ea371278a13c672116d59030151e481a6bdb3bcb2d35",
+    "train.py": "de9191e759e346513ec583afbb29f57177a33fb3520918b57601b489ff374aa6"
+  },
+  "ast_pass": 10,
+  "freeze_cli_help_pass": true,
+  "current_reference_count": 5,
+  "actual_projection_probe_error": "ValueError: fixed sample admission differs",
+  "actual_projection_probe_exit": 1,
+  "projection_output_absent": true,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "actual_linux_cpu_preflight": "NOT_RUN",
+  "actual_training": "NOT_RUN"
+}

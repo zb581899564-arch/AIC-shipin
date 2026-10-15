@@ -1,0 +1,20 @@
+本轮已完成格式恢复、剩余两窗标注、数据验收、实际微调和独立评估。
+
+可提交文件：candidate_SAFE_BEST_37_66.zip
+这是原37.66分包的逐字节副本，426视频、102112帧，306167字节。
+SHA256：07730c9e02e68d1a1ce54e7ef5a8aa616346cf8f2f8d78426ed36bc3eb481496
+37.66来自用户此前提交反馈；本轮未提交官网，也没有新的官方成绩。
+
+本轮新微调结果：20合格窗口（8训练、12评估），4次真实optimizer更新，288个LoRA张量改变。基座和视觉权重冻结。24次评估回答全部由独立CPU重建核验。
+新适配器未通过质量门，锁定来源宏平均F1提升0.019863，要求至少0.05；普通片段新增误选、部分召回不退化和UNKNOWN保守性条件也未全部通过。这是有限可观察片段的silver诊断，不是官网评分。
+因此新适配器未替换生产模型，未启动新的426视频生成，本轮没有合格的新微调提交包。
+新适配器保留：/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/train_01/final_adapter/adapter_model.safetensors
+适配器SHA256：5c582329e9f15d13cc0237dd3672c07ae2cb0b474ccf7241d1e3d6472db0858f
+新增训练及评估GPU runner实际计费时长：1023.848秒，旧成本保留，现金单价未知。
+
+evidence/保留原始验收、训练、评估、独立复核和唯一终态费用回执。全部本地副本与远端SHA一致。格式修复保留旧REJECT及原raw，没有补造输出或把UNKNOWN当负样本。
+原completion.json的utc由控制器进入execute时写入，是报告创建时刻而非完成时刻；原文件未改。实际结束时间见费用回执和independent_quality.execution.json；采集时刻及completion文件mtime见remote_final_snapshot.json。
+
+下一轮建议：另立冻结实验，补充新的训练来源与普通片段/事件、边界对比标注。当前锁定评估已暴露，应保留作诊断，不能挪入训练或反复对它调参。下一轮尚未启动。
+
+提交时只选candidate_SAFE_BEST_37_66.zip。SILVER24_SFT_REVIEW_AND_SAFE_BEST.zip是交接资料包，不是赛题提交格式。

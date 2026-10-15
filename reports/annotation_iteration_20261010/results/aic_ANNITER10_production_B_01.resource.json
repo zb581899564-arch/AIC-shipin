@@ -1,0 +1,48 @@
+{
+  "name": "aic_ANNITER10_production_B_01",
+  "command": [
+    "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+    "-B",
+    "/home/inspur/aic_video_work/runs/annotation_iteration_20261010_v2/predict_scores.py",
+    "--root",
+    "/home/inspur/aic_video_work/datasets/qwen8b_annotation_20261009_v2",
+    "--model",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/models/Qwen3-VL-8B-Instruct",
+    "--data",
+    "/home/inspur/aic_video_work/datasets/qwen8b_annotation_20261009_v2/training_v2/data/temporal_fixed_validation.jsonl",
+    "--output",
+    "/home/inspur/aic_video_work/runs/annotation_iteration_20261010_v2/production_B_predictions.jsonl",
+    "--adapter",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/temporal_sft8b_full_v1/train_01/adapter"
+  ],
+  "started_utc": "2026-10-09T17:33:34.974959+00:00",
+  "runner_pid": 1185969,
+  "reserved_seconds": 14400,
+  "teardown_reserve_seconds": 120,
+  "prior_charged_seconds": 214370.86002131598,
+  "gpu_time_mode": "UNLIMITED",
+  "max_total_gpu_seconds": null,
+  "resource_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
+  "disk_before": {
+    "free_bytes": 183715459072,
+    "work_bytes": 96507723776
+  },
+  "planned_output_bytes": 2147483648,
+  "capacity_reason": "User authorized independent annotation iteration; existing immutable PNGs/model, measured pilot peaks and current shared conflicts; separate adapter plus exact full validation outputs",
+  "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+  "project_disk_limit_bytes": null,
+  "project_ram_limit_bytes": null,
+  "project_vram_limit_bytes": null,
+  "runner_source_sha256": "9997d41fbe2bb51726914b4698b874cf939c52aac02048fa9b3bb753c64c6cec",
+  "child_pid": 1185973,
+  "finished_utc": "2026-10-09T17:41:19.564723+00:00",
+  "charged_seconds": 464.5898536890745,
+  "exit_code": 0,
+  "stop_reason": null,
+  "sampled_peak_memory_mib": 18028,
+  "status": "completed",
+  "disk_after": {
+    "free_bytes": 183706615808,
+    "work_bytes": 96507797504
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "status": "PASS_10_AST_EXACT_ORIGINAL_MEDIA_NEW_FROZEN_PATHS_NO_MODEL_PENDING_ROOT",
+  "AST": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\audit.py",
+      "sha256": "92ed439d8fe45ef4f2742c516c98711744ead7d458a6fb45efec31a1ae54d476"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\common.py",
+      "sha256": "522ca76bd074a55c71bdcb7933b7e351c8ed47e8fa040df0670597f43645ad9e"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\controller.py",
+      "sha256": "2904e922048e6955fb49fe882e97390bc120ccf05ef0f258fb6a73ce3645e01b"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\engine.py",
+      "sha256": "f76d8a416b67cc7c6a063c3d00bc8aff68dcb9373dfb19e1c7f0ba03bd3c2a6f"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\launch.py",
+      "sha256": "5b1c445a1cc2c3b5f100773cf312d730710f8d139cb59909ebc6b6c7954b2a10"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\observer.py",
+      "sha256": "d04fbb4c1392edc4da4aec9987a4eea3e4b0c73de40335a73e459e77c5db7cab"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\prepare.py",
+      "sha256": "97a0d7fc986f572b8652fcc2ac0f78d16dbc2653a50184f8b9e2b154e2b37d7c"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\prompt.py",
+      "sha256": "b19a367aaf105b614e273f83cf801dcba06530b23792a8775c9a7b51156a6df8"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\run_call.py",
+      "sha256": "e9570cbb4ab11e9f26302f53573bc5ec14262988b4c72d6e88e4d444a261726d"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\verify.py",
+      "sha256": "fcb7af83a42e4ef47e48a4666599ace6350131f41e92010bfdb1432a3e4958f0"
+    }
+  ],
+  "calls": [
+    {
+      "CLI": 35,
+      "jobs": [
+        19,
+        20
+      ],
+      "core": 183,
+      "input_count": 921,
+      "argv_utf16_units_including_NUL": 743,
+      "freeze_sha256": "34077d448a3c1495acf254a7f1fab39aa0ffb76ed19959ed1d1324c0ef4150a7",
+      "index_sha256": "86df7fdd5c7627d51d989ab131e5041ec6a9f4ac9d214d5da941e5494f79bea5",
+      "bootstrap_sha256": "45e9768e2d5f9c8c1850d416fa302872b306f06b389ed4d4110d903435b7c5e2",
+      "bootstrap_bytes": 46545,
+      "Go_LF_lines": 261,
+      "Python_splitlines": 260,
+      "tailLF": true,
+      "noCR": true,
+      "short_sha256": "71e755803dc3f1cf3e08861e843f78080b31e75d634704cc1b38a6338d1fd04c",
+      "pixel_checks_sha256": "1fde1fcdbd3723f5dc57475953af2216dc701aa4db0cb356ddb6874c86582108"
+    },
+    {
+      "CLI": 36,
+      "jobs": [
+        21,
+        22,
+        23
+      ],
+      "core": 273,
+      "input_count": 994,
+      "argv_utf16_units_including_NUL": 743,
+      "freeze_sha256": "d61968a0ef2c7b0498e47fc798c818d7b7c258e4c16c44b688976633798a5b49",
+      "index_sha256": "c3eaf0232117a54b53c9c1d5a3e242634ed3aafe85c2ebb676448ceb20f57781",
+      "bootstrap_sha256": "552e332808253d6ebf2d70f2ace8bef8c8c5efd3bb9125bb14a888fd81878603",
+      "bootstrap_bytes": 67239,
+      "Go_LF_lines": 378,
+      "Python_splitlines": 377,
+      "tailLF": true,
+      "noCR": true,
+      "short_sha256": "412c4a90f550dedbe7bbcb1749c1a799e417e25831c1755931bbeabb03296901",
+      "pixel_checks_sha256": "7ba62a9fc19d0b2c4328b54b5d2bb682939aaa35819f54577c2564f9f1196e58"
+    }
+  ],
+  "execution_binding_sha256": "4456f422563da164bbb37fa1ebb0cef94fcf004b5d40d642a797a21896822f51",
+  "readiness_sha256": "1bb90f821be620a670eeedf4447499536ce9147d3c6a312db0f3ba399742d33c",
+  "reconciliation_sha256": "4422fab887a72627d2acd223d8a1e6b0864f860e40b0b72fa806ced8ac3b75cb",
+  "planned_aliases": 365,
+  "new_model_calls": 0,
+  "new_video_decode": 0,
+  "requires_independent_CPU_negative_receipt": true,
+  "cash_cost": "UNKNOWN_NOT_ZERO"
+}

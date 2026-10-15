@@ -1,0 +1,116 @@
+{
+  "status": "COMPLETE_SPATIAL_PREPARATION_AND_NATIVE_TEMPORAL_CANDIDATE_BATCH",
+  "utc": "2026-10-09T11:04:47.124268+00:00",
+  "crop_sources": 50,
+  "crop_sampled_frames": 600,
+  "crop_ratio_records": 1200,
+  "crop_verdict_counts": {
+    "PASS": 679,
+    "UNKNOWN": 496,
+    "REJECT": 25
+  },
+  "crop_sft": {
+    "train": {
+      "rows": 531,
+      "source_groups": 40,
+      "ratio_counts": {
+        "16x9": 426,
+        "9x16": 105
+      },
+      "nonidentity_rows": 143
+    },
+    "validation": {
+      "rows": 148,
+      "source_groups": 10,
+      "ratio_counts": {
+        "16x9": 107,
+        "9x16": 41
+      },
+      "nonidentity_rows": 76
+    }
+  },
+  "temporal_native_accepted_sources": 50,
+  "temporal_expected_sources": 50,
+  "temporal_candidate_events": 600,
+  "temporal_alignment_quarantined_sources": [
+    "37rzWOQsNIw"
+  ],
+  "temporal_complete_sft_rows": 0,
+  "temporal_pending_sources": [],
+  "input_observation_and_file_identity_verified": true,
+  "temporal_quality_independently_proven": false,
+  "spatial_quality": "MODEL_ANNOTATION_AND_SELF_REVIEW_NOT_HUMAN_GOLD",
+  "student_training_started": false,
+  "gpu_started": false,
+  "remote_file_transfer": false,
+  "new_model_calls_in_finalizer": 0,
+  "artifacts": {
+    "DATASET_README.md": {
+      "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\DATASET_README.md",
+      "bytes": 4849,
+      "sha256": "a73dd19ba7b8db27df441553edf945c3816c642ea04c8539dec3c9c5014770be"
+    },
+    "split.json": {
+      "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\split.json",
+      "bytes": 9584,
+      "sha256": "cd921c398dce0cd4d232df01c78a877a5864fa4556ec8d97a3871e6102a25061"
+    },
+    "corpus_acceptance.json": {
+      "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\corpus_acceptance.json",
+      "bytes": 2384,
+      "sha256": "5d757bc62ab8fd18e603926f83c68c3593f6ab7e4c1f2ad6f4374af2ad5f3e81"
+    },
+    "exports/codex_crop_v1/labels.jsonl": {
+      "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\exports\\codex_crop_v1\\labels.jsonl",
+      "bytes": 1980904,
+      "sha256": "e07d3ebe121900f6f39219cbe78559462839c70eabbfe6fd535a6be5b90c594c"
+    },
+    "exports/codex_crop_v1/crop_sft_train.jsonl": {
+      "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\exports\\codex_crop_v1\\crop_sft_train.jsonl",
+      "bytes": 1304067,
+      "sha256": "ca17b26ec3f94f45245e8015f1445125dd9fa768a34b5c54cf27e9a2824b1c0c"
+    },
+    "exports/codex_crop_v1/crop_sft_validation.jsonl": {
+      "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\exports\\codex_crop_v1\\crop_sft_validation.jsonl",
+      "bytes": 366824,
+      "sha256": "ccce93ae25ca8e5397c01c0b7ede5f194d24c5708b3becf087b3cd411b0127fc"
+    },
+    "exports/codex_crop_v1/crop_sft_train_nonidentity.jsonl": {
+      "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\exports\\codex_crop_v1\\crop_sft_train_nonidentity.jsonl",
+      "bytes": 352077,
+      "sha256": "e3f9a135c0fcf54efb48b74bcc696ab7550cb2a347d75254371eca8ea8781c0f"
+    },
+    "exports/codex_crop_v1/crop_sft_validation_nonidentity.jsonl": {
+      "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\exports\\codex_crop_v1\\crop_sft_validation_nonidentity.jsonl",
+      "bytes": 188283,
+      "sha256": "65db461c274974bb442a0bc96e200f2e037d020abe2e8a481c5a79dd4f532a74"
+    },
+    "exports/codex_crop_v1/acceptance.json": {
+      "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\exports\\codex_crop_v1\\acceptance.json",
+      "bytes": 10331,
+      "sha256": "20e0e51fa0e51175c6ba94967f794ab3c87cd3db1c2c22fc9a455db081d820ef"
+    },
+    "exports/codex_crop_v1/independent_audit.json": {
+      "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\exports\\codex_crop_v1\\independent_audit.json",
+      "bytes": 22187,
+      "sha256": "0ccde3de05f1a67634759c66aaf8aff08edd424d585ea04078509c1cc36f7e8f"
+    },
+    "exports/temporal_event_candidates.jsonl": {
+      "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\exports\\temporal_event_candidates.jsonl",
+      "bytes": 667734,
+      "sha256": "15606d63eca8890cd902c2785156fd82c45ac8f50814d74559ea962f398392a2"
+    },
+    "exports/temporal_independent_audit.json": {
+      "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\exports\\temporal_independent_audit.json",
+      "bytes": 45504,
+      "sha256": "87a3092fbc7b32301d58511c103f6782405e23cf6ccac90a2f5f071cae522c4b"
+    },
+    "exports/preparation_status.json": {
+      "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\exports\\preparation_status.json",
+      "bytes": 10672,
+      "sha256": "ded14a90414217cf05872fc1f87955d71dab636f1d0432be59d8236ffd5f56f6"
+    }
+  },
+  "protocol": "Spatial SFT is the new explicit integer-pixel box task. Temporal outputs are candidates; unseen domains are not negatives.",
+  "raw_outputs_and_failed_attempts_preserved": true
+}

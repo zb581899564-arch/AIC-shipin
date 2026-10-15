@@ -1,0 +1,216 @@
+{
+  "schema": "p1b_fix_test_results_v1",
+  "run_id": "round6_p1b_fix_20260917T1630Z",
+  "commands": [
+    {
+      "command": "node G:\\ai\\AIC视频\\round6_score_alignment\\p1b\\run_boundary_cases.js G:\\ai\\AIC视频\\round6_score_alignment\\p1b\\pilot_manifest.json G:\\ai\\AIC视频\\round6_score_alignment\\p1b\\boundary_cases.json G:\\ai\\AIC视频\\reports\\round6_score_alignment\\phase1b_fix\\cases_js.json",
+      "exit_code": 0,
+      "stdout_tail": "{\n \"cases\": 28,\n \"passed\": 28,\n \"failed\": []\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": "E:\\conda\\python.exe G:\\ai\\AIC视频\\round6_score_alignment\\p1b\\validate_exports.py cases --out G:\\ai\\AIC视频\\reports\\round6_score_alignment\\phase1b_fix\\cases_python.json",
+      "exit_code": 0,
+      "stdout_tail": "er_interval_is_blocked\",\n      \"why\": \"冲突必须报错，不能静默丢弃\",\n      \"expect\": {\n        \"valid\": false,\n        \"mode\": \"BLOCKED_BY_VALIDATION\",\n        \"reference\": false\n      },\n      \"got\": {\n        \"valid\": false,\n        \"mode\": \"BLOCKED_BY_VALIDATION\",\n        \"reference\": false\n      },\n      \"problems\": [\n        \"NO_HIGHLIGHT conflicts with the remaining intervals/keyframes; clear them explic\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": "E:\\conda\\python.exe G:\\ai\\AIC视频\\round6_score_alignment\\p1b\\validate_exports.py compare --python G:\\ai\\AIC视频\\reports\\round6_score_alignment\\phase1b_fix\\cases_python.json --js G:\\ai\\AIC视频\\reports\\round6_score_alignment\\phase1b_fix\\cases_js.json --out G:\\ai\\AIC视频\\reports\\round6_score_alignment\\phase1b_fix\\case_comparison.json",
+      "exit_code": 0,
+      "stdout_tail": "{\n  \"schema\": \"p1b_case_comparison_v1\",\n  \"cases_python\": 28,\n  \"cases_js\": 28,\n  \"divergences\": [],\n  \"identical\": true\n}\n\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": "E:\\conda\\python.exe G:\\ai\\AIC视频\\round6_score_alignment\\p1b\\check_fixed_page.py --out G:\\ai\\AIC视频\\reports\\round6_score_alignment\\phase1b_fix\\post_fix_reproduction.json",
+      "exit_code": 0,
+      "stdout_tail": "\": true,\n  \"blocking_alert_calls\": 0,\n  \"keyframes_go_to_kf_table\": true,\n  \"intervals_go_to_interval_table\": true,\n  \"per_endpoint_provenance\": true,\n  \"provenance_for_endpoint_frame\": true,\n  \"serves_exact_frame_mode\": true,\n  \"template_placeholders_left\": 0\n },\n \"js_cases\": {\n  \"cases\": 28,\n  \"passed\": 28,\n  \"failed\": []\n },\n \"python_cases\": {\n  \"cases\": 28,\n  \"passed\": 28,\n  \"failed\": []\n }\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": "E:\\conda\\python.exe G:\\ai\\AIC视频\\round6_score_alignment\\p1b\\run_ui_e2e.py",
+      "exit_code": 0,
+      "stdout_tail": "\\\",\\\\n          \\\\\\\"coverage\\\\\\\": \\\\\\\"sparse\\\\\\\",\\\\n          \\\\\\\"frames\\\\\\\": [\\\\n            {\\\\n              \\\\\\\"frame\\\\\\\": 64,\\\\n              \\\\\\\"box_xyw\\\\\\\": [\\\\n                30,\\\\n                20,\\\\n                200\\\\n              ]\\\\n            }\\\\n          ]\\\\n        }\\\\n      ]\\\\n    }\\\\n  },\\\\n  \\\\\\\"not_human_reviewed_unless_recorded\\\\\\\": true,\\\\n  \\\\\\\"label_status\\\\\\\": \\\\\n",
+      "stderr_tail": ""
+    }
+  ],
+  "shared_boundary_cases": {
+    "file": "round6_score_alignment/p1b/boundary_cases.json",
+    "expectations_source": "hand-written in the case file (never computed by the code under test)",
+    "js_core": {
+      "cases": 28,
+      "passed": 28,
+      "failed": []
+    },
+    "python": {
+      "cases": 28,
+      "passed": 28,
+      "failed": []
+    },
+    "cross_check": {
+      "identical": true,
+      "divergences": []
+    }
+  },
+  "invalid_input_probes": [
+    {
+      "probe": "nan_box",
+      "valid": false,
+      "reference_produced": false,
+      "problems": [
+        "keyframe 0: x must be a finite number (got nan)"
+      ],
+      "expected": "invalid and no reference"
+    },
+    {
+      "probe": "infinity_box",
+      "valid": false,
+      "reference_produced": false,
+      "problems": [
+        "keyframe 0: x must be a finite number (got inf)"
+      ],
+      "expected": "invalid and no reference"
+    },
+    {
+      "probe": "bool_box",
+      "valid": false,
+      "reference_produced": false,
+      "problems": [
+        "keyframe 0: x must be a finite number (got True)"
+      ],
+      "expected": "invalid and no reference"
+    },
+    {
+      "probe": "string_box",
+      "valid": false,
+      "reference_produced": false,
+      "problems": [
+        "keyframe 0: x must be a finite number (got '0')"
+      ],
+      "expected": "invalid and no reference"
+    },
+    {
+      "probe": "negative_width_box",
+      "valid": false,
+      "reference_produced": false,
+      "problems": [
+        "keyframe 0: w must be > 0"
+      ],
+      "expected": "invalid and no reference"
+    },
+    {
+      "probe": "out_of_bounds_box",
+      "valid": false,
+      "reference_produced": false,
+      "problems": [
+        "keyframe 0: box [400, 0, 320] with derived h=180.00 leaves the 534x300 frame"
+      ],
+      "expected": "invalid and no reference"
+    },
+    {
+      "probe": "duplicate_keyframe",
+      "valid": false,
+      "reference_produced": false,
+      "problems": [
+        "keyframe 1: duplicate keyframe for frame 12"
+      ],
+      "expected": "invalid and no reference"
+    },
+    {
+      "probe": "duplicate_interval",
+      "valid": false,
+      "reference_produced": false,
+      "problems": [
+        "interval 1: duplicate interval [10, 20)"
+      ],
+      "expected": "invalid and no reference"
+    },
+    {
+      "probe": "legacy_closed_end",
+      "valid": false,
+      "reference_produced": false,
+      "problems": [
+        "interval 0: legacy closed-end field without semantics; refusing to convert"
+      ],
+      "expected": "invalid and no reference"
+    },
+    {
+      "probe": "no_highlight_with_leftovers",
+      "valid": false,
+      "reference_produced": false,
+      "problems": [
+        "NO_HIGHLIGHT conflicts with the remaining intervals/keyframes; clear them explicitly or switch the status back (nothing is discarded silently)"
+      ],
+      "expected": "invalid and no reference (conflict reported, nothing discarded)"
+    }
+  ],
+  "diagnostics": {
+    "e2e_manifest_samples": [
+      "S01",
+      "S02"
+    ],
+    "e2e_manifest_file": "reports\\round6_score_alignment\\phase1b_fix\\ui_e2e\\synthetic_manifest.json"
+  },
+  "e2e_artifact_validation": [
+    {
+      "artifact": "step1_reference.json",
+      "valid": true,
+      "problems": [],
+      "expected_valid": true,
+      "pass": true
+    },
+    {
+      "artifact": "step2_restored_reference.json",
+      "valid": true,
+      "problems": [],
+      "expected_valid": true,
+      "pass": true
+    },
+    {
+      "artifact": "refusal_invalid_draft.json",
+      "valid": false,
+      "problems": [
+        "keyframe 0: w must be > 0"
+      ],
+      "expected_valid": false,
+      "pass": true
+    }
+  ],
+  "draft_validation": [
+    {
+      "draft": "step1_draft.json",
+      "import_valid": true,
+      "problems": []
+    }
+  ],
+  "p1a_consumption": {
+    "sparse_reference_with_matching_universe": {
+      "label": "A: universe == annotated sample",
+      "universe": [
+        "S01"
+      ],
+      "status": "SPARSE_DIAGNOSTIC",
+      "score": null,
+      "sparse_evidence": "SPARSE_EVIDENCE",
+      "reasons": [
+        "reference covers only declared sparse frames; unannotated frames are unverifiable (not negatives), so no full-video joint score, no per-video F1/precision/recall and no whole-video empty judgement are produced"
+      ]
+    },
+    "sparse_reference_with_unannotated_video": {
+      "label": "B: universe includes the unannotated S02",
+      "universe": [
+        "S01",
+        "S02"
+      ],
+      "status": "NOT_COMPUTABLE",
+      "score": null,
+      "sparse_evidence": null,
+      "reasons": [
+        "reference incomplete for scored videos: missing=1",
+        "reference has unscored videos: extra=0"
+      ]
+    },
+    "expected": "A -> SPARSE_DIAGNOSTIC with score null (sparse semantics preserved); B -> NOT_COMPUTABLE with score null (unannotated video never treated as empty ground truth)"
+  },
+  "failure_causes": [],
+  "all_pass": true
+}

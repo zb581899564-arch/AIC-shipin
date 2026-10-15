@@ -1,0 +1,921 @@
+{
+  "status": "PASS_BOUNDED_ORIGINAL_DOCUMENT_AND_ANNOTATION_RANGES",
+  "source_url": "https://data.vision.ee.ethz.ch/cvl/SumMe/SumMe.zip",
+  "full_archive_bytes": 2396688224,
+  "actual_range_payload_bytes": 158673,
+  "payload_budget": 5000000,
+  "videos_downloaded": 0,
+  "inventory": [
+    {
+      "name": "GT/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "header_offset": 0,
+      "crc32": "00000000",
+      "compression": 0
+    },
+    {
+      "name": "GT/Air_Force_One.mat",
+      "bytes": 3445,
+      "compressed_bytes": 3356,
+      "header_offset": 33,
+      "crc32": "b6344047",
+      "compression": 8
+    },
+    {
+      "name": "GT/Base jumping.mat",
+      "bytes": 4227,
+      "compressed_bytes": 4133,
+      "header_offset": 3439,
+      "crc32": "3bf5921c",
+      "compression": 8
+    },
+    {
+      "name": "GT/Bearpark_climbing.mat",
+      "bytes": 3115,
+      "compressed_bytes": 3043,
+      "header_offset": 7621,
+      "crc32": "d90bf9bc",
+      "compression": 8
+    },
+    {
+      "name": "GT/Bike Polo.mat",
+      "bytes": 2664,
+      "compressed_bytes": 2590,
+      "header_offset": 10718,
+      "crc32": "685f6eb8",
+      "compression": 8
+    },
+    {
+      "name": "GT/Bus_in_Rock_Tunnel.mat",
+      "bytes": 3608,
+      "compressed_bytes": 3511,
+      "header_offset": 13354,
+      "crc32": "b454f9e7",
+      "compression": 8
+    },
+    {
+      "name": "GT/Car_railcrossing.mat",
+      "bytes": 3340,
+      "compressed_bytes": 3243,
+      "header_offset": 16920,
+      "crc32": "b653cc29",
+      "compression": 8
+    },
+    {
+      "name": "GT/Cockpit_Landing.mat",
+      "bytes": 4688,
+      "compressed_bytes": 4522,
+      "header_offset": 20216,
+      "crc32": "bfcd6291",
+      "compression": 8
+    },
+    {
+      "name": "GT/Cooking.mat",
+      "bytes": 2324,
+      "compressed_bytes": 2275,
+      "header_offset": 24790,
+      "crc32": "a99c86bb",
+      "compression": 8
+    },
+    {
+      "name": "GT/Eiffel Tower.mat",
+      "bytes": 3575,
+      "compressed_bytes": 3490,
+      "header_offset": 27109,
+      "crc32": "a349e597",
+      "compression": 8
+    },
+    {
+      "name": "GT/Excavators river crossing.mat",
+      "bytes": 5578,
+      "compressed_bytes": 5416,
+      "header_offset": 30648,
+      "crc32": "5c215d7a",
+      "compression": 8
+    },
+    {
+      "name": "GT/Fire Domino.mat",
+      "bytes": 2486,
+      "compressed_bytes": 2433,
+      "header_offset": 36126,
+      "crc32": "a2ae289f",
+      "compression": 8
+    },
+    {
+      "name": "GT/Jumps.mat",
+      "bytes": 1980,
+      "compressed_bytes": 1926,
+      "header_offset": 38607,
+      "crc32": "4ebe4f3a",
+      "compression": 8
+    },
+    {
+      "name": "GT/Kids_playing_in_leaves.mat",
+      "bytes": 2860,
+      "compressed_bytes": 2790,
+      "header_offset": 40575,
+      "crc32": "dfec5e32",
+      "compression": 8
+    },
+    {
+      "name": "GT/Notre_Dame.mat",
+      "bytes": 4131,
+      "compressed_bytes": 4044,
+      "header_offset": 43424,
+      "crc32": "65b3013e",
+      "compression": 8
+    },
+    {
+      "name": "GT/Paintball.mat",
+      "bytes": 3809,
+      "compressed_bytes": 3683,
+      "header_offset": 47515,
+      "crc32": "bb8e1098",
+      "compression": 8
+    },
+    {
+      "name": "GT/Playing_on_water_slide.mat",
+      "bytes": 3147,
+      "compressed_bytes": 3083,
+      "header_offset": 51244,
+      "crc32": "c70042d5",
+      "compression": 8
+    },
+    {
+      "name": "GT/Saving dolphines.mat",
+      "bytes": 4247,
+      "compressed_bytes": 4129,
+      "header_offset": 54386,
+      "crc32": "ccafce7b",
+      "compression": 8
+    },
+    {
+      "name": "GT/Scuba.mat",
+      "bytes": 2601,
+      "compressed_bytes": 2542,
+      "header_offset": 58568,
+      "crc32": "e6e5b0f0",
+      "compression": 8
+    },
+    {
+      "name": "GT/St Maarten Landing.mat",
+      "bytes": 2265,
+      "compressed_bytes": 2207,
+      "header_offset": 61152,
+      "crc32": "8d7badff",
+      "compression": 8
+    },
+    {
+      "name": "GT/Statue of Liberty.mat",
+      "bytes": 2683,
+      "compressed_bytes": 2588,
+      "header_offset": 63414,
+      "crc32": "fb781428",
+      "compression": 8
+    },
+    {
+      "name": "GT/Uncut_Evening_Flight.mat",
+      "bytes": 4359,
+      "compressed_bytes": 4161,
+      "header_offset": 66056,
+      "crc32": "63eeea38",
+      "compression": 8
+    },
+    {
+      "name": "GT/Valparaiso_Downhill.mat",
+      "bytes": 4445,
+      "compressed_bytes": 4348,
+      "header_offset": 70274,
+      "crc32": "995188ac",
+      "compression": 8
+    },
+    {
+      "name": "GT/car_over_camera.mat",
+      "bytes": 3190,
+      "compressed_bytes": 3097,
+      "header_offset": 74678,
+      "crc32": "87edae44",
+      "compression": 8
+    },
+    {
+      "name": "GT/paluma_jump.mat",
+      "bytes": 2257,
+      "compressed_bytes": 2180,
+      "header_offset": 77827,
+      "crc32": "aaa2f0fb",
+      "compression": 8
+    },
+    {
+      "name": "GT/playing_ball.mat",
+      "bytes": 3028,
+      "compressed_bytes": 2954,
+      "header_offset": 80055,
+      "crc32": "39710224",
+      "compression": 8
+    },
+    {
+      "name": "README.txt",
+      "bytes": 1612,
+      "compressed_bytes": 813,
+      "header_offset": 83058,
+      "crc32": "2841a276",
+      "compression": 8
+    },
+    {
+      "name": "demo.m",
+      "bytes": 1684,
+      "compressed_bytes": 728,
+      "header_offset": 83911,
+      "crc32": "b071a612",
+      "compression": 8
+    },
+    {
+      "name": "matlab/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "header_offset": 84675,
+      "crc32": "00000000",
+      "compression": 0
+    },
+    {
+      "name": "matlab/summe_evaluateIOU.m",
+      "bytes": 2660,
+      "compressed_bytes": 665,
+      "header_offset": 84712,
+      "crc32": "f5d0b997",
+      "compression": 8
+    },
+    {
+      "name": "matlab/summe_evaluateSummary.m",
+      "bytes": 2233,
+      "compressed_bytes": 742,
+      "header_offset": 85433,
+      "crc32": "ec47b152",
+      "compression": 8
+    },
+    {
+      "name": "matlab/summe_evaluateSummary.m~",
+      "bytes": 2230,
+      "compressed_bytes": 738,
+      "header_offset": 86235,
+      "crc32": "9dee9be0",
+      "compression": 8
+    },
+    {
+      "name": "matlab/summe_plotAllResults.m",
+      "bytes": 4231,
+      "compressed_bytes": 1263,
+      "header_offset": 87034,
+      "crc32": "58dc4858",
+      "compression": 8
+    },
+    {
+      "name": "python/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "header_offset": 88356,
+      "crc32": "00000000",
+      "compression": 0
+    },
+    {
+      "name": "python/demo.py",
+      "bytes": 1935,
+      "compressed_bytes": 870,
+      "header_offset": 88393,
+      "crc32": "666ff525",
+      "compression": 8
+    },
+    {
+      "name": "python/demo.py~",
+      "bytes": 1935,
+      "compressed_bytes": 870,
+      "header_offset": 89307,
+      "crc32": "2a31f7c5",
+      "compression": 8
+    },
+    {
+      "name": "python/summe.py",
+      "bytes": 5104,
+      "compressed_bytes": 1539,
+      "header_offset": 90222,
+      "crc32": "6c89b8c7",
+      "compression": 8
+    },
+    {
+      "name": "python/summe.py~",
+      "bytes": 5104,
+      "compressed_bytes": 1539,
+      "header_offset": 91806,
+      "crc32": "6c89b8c7",
+      "compression": 8
+    },
+    {
+      "name": "videos/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "header_offset": 93391,
+      "crc32": "00000000",
+      "compression": 0
+    },
+    {
+      "name": "videos/.htaccess",
+      "bytes": 127,
+      "compressed_bytes": 76,
+      "header_offset": 93428,
+      "crc32": "2dbe2cc1",
+      "compression": 8
+    },
+    {
+      "name": "videos/Air_Force_One.mp4",
+      "bytes": 60482840,
+      "compressed_bytes": 41158378,
+      "header_offset": 93550,
+      "crc32": "2f82bcc3",
+      "compression": 8
+    },
+    {
+      "name": "videos/Air_Force_One.webm",
+      "bytes": 42841860,
+      "compressed_bytes": 42041478,
+      "header_offset": 41251982,
+      "crc32": "54f289d4",
+      "compression": 8
+    },
+    {
+      "name": "videos/Base jumping.mp4",
+      "bytes": 52150848,
+      "compressed_bytes": 50343827,
+      "header_offset": 83293515,
+      "crc32": "d035aeaf",
+      "compression": 8
+    },
+    {
+      "name": "videos/Base jumping.webm",
+      "bytes": 22834809,
+      "compressed_bytes": 22834809,
+      "header_offset": 133637395,
+      "crc32": "d7e2ab8a",
+      "compression": 0
+    },
+    {
+      "name": "videos/Bearpark_climbing.mp4",
+      "bytes": 124375584,
+      "compressed_bytes": 121636206,
+      "header_offset": 156472258,
+      "crc32": "6d6d8659",
+      "compression": 8
+    },
+    {
+      "name": "videos/Bearpark_climbing.webm",
+      "bytes": 112868112,
+      "compressed_bytes": 112704452,
+      "header_offset": 278108522,
+      "crc32": "b8f7ac17",
+      "compression": 8
+    },
+    {
+      "name": "videos/Bike Polo.mp4",
+      "bytes": 52347202,
+      "compressed_bytes": 42418495,
+      "header_offset": 390813033,
+      "crc32": "3851bbad",
+      "compression": 8
+    },
+    {
+      "name": "videos/Bike Polo.webm",
+      "bytes": 32958947,
+      "compressed_bytes": 32958947,
+      "header_offset": 433231578,
+      "crc32": "0007a1d5",
+      "compression": 0
+    },
+    {
+      "name": "videos/Bus_in_Rock_Tunnel.mp4",
+      "bytes": 47928740,
+      "compressed_bytes": 44398527,
+      "header_offset": 466190576,
+      "crc32": "c3ce3012",
+      "compression": 8
+    },
+    {
+      "name": "videos/Bus_in_Rock_Tunnel.webm",
+      "bytes": 19552754,
+      "compressed_bytes": 19517891,
+      "header_offset": 510589162,
+      "crc32": "c7c39155",
+      "compression": 8
+    },
+    {
+      "name": "videos/Car_railcrossing.mp4",
+      "bytes": 63667468,
+      "compressed_bytes": 46406438,
+      "header_offset": 530107113,
+      "crc32": "cefdaa62",
+      "compression": 8
+    },
+    {
+      "name": "videos/Car_railcrossing.webm",
+      "bytes": 30823409,
+      "compressed_bytes": 30815046,
+      "header_offset": 576513608,
+      "crc32": "0ee4e70f",
+      "compression": 8
+    },
+    {
+      "name": "videos/Cockpit_Landing.mp4",
+      "bytes": 93533028,
+      "compressed_bytes": 90039570,
+      "header_offset": 607328712,
+      "crc32": "5508fa6f",
+      "compression": 8
+    },
+    {
+      "name": "videos/Cockpit_Landing.webm",
+      "bytes": 81023115,
+      "compressed_bytes": 79657373,
+      "header_offset": 697368338,
+      "crc32": "77efb222",
+      "compression": 8
+    },
+    {
+      "name": "videos/Cooking.mp4",
+      "bytes": 19948168,
+      "compressed_bytes": 13569575,
+      "header_offset": 777025768,
+      "crc32": "d134bcea",
+      "compression": 8
+    },
+    {
+      "name": "videos/Cooking.webm",
+      "bytes": 6230579,
+      "compressed_bytes": 6229198,
+      "header_offset": 790595391,
+      "crc32": "d94131bd",
+      "compression": 8
+    },
+    {
+      "name": "videos/Eiffel Tower.mp4",
+      "bytes": 134154334,
+      "compressed_bytes": 129944714,
+      "header_offset": 796824638,
+      "crc32": "6916b1b0",
+      "compression": 8
+    },
+    {
+      "name": "videos/Eiffel Tower.webm",
+      "bytes": 141281111,
+      "compressed_bytes": 140849234,
+      "header_offset": 926769405,
+      "crc32": "ae50b2f4",
+      "compression": 8
+    },
+    {
+      "name": "videos/Excavators river crossing.mp4",
+      "bytes": 99182802,
+      "compressed_bytes": 74836166,
+      "header_offset": 1067618693,
+      "crc32": "5a31c86a",
+      "compression": 8
+    },
+    {
+      "name": "videos/Excavators river crossing.webm",
+      "bytes": 57029228,
+      "compressed_bytes": 54440148,
+      "header_offset": 1142454925,
+      "crc32": "bd9c776f",
+      "compression": 8
+    },
+    {
+      "name": "videos/Fire Domino.mp4",
+      "bytes": 13257686,
+      "compressed_bytes": 10826797,
+      "header_offset": 1196895140,
+      "crc32": "88bcb8e5",
+      "compression": 8
+    },
+    {
+      "name": "videos/Fire Domino.webm",
+      "bytes": 4366582,
+      "compressed_bytes": 4361737,
+      "header_offset": 1207721989,
+      "crc32": "55d27b01",
+      "compression": 8
+    },
+    {
+      "name": "videos/Jumps.mp4",
+      "bytes": 8499852,
+      "compressed_bytes": 6789974,
+      "header_offset": 1212083779,
+      "crc32": "eeb0bdce",
+      "compression": 8
+    },
+    {
+      "name": "videos/Jumps.webm",
+      "bytes": 2270634,
+      "compressed_bytes": 2265714,
+      "header_offset": 1218873799,
+      "crc32": "dda265c3",
+      "compression": 8
+    },
+    {
+      "name": "videos/Kids_playing_in_leaves.mp4",
+      "bytes": 59231206,
+      "compressed_bytes": 55119399,
+      "header_offset": 1221139560,
+      "crc32": "9b802381",
+      "compression": 8
+    },
+    {
+      "name": "videos/Kids_playing_in_leaves.webm",
+      "bytes": 29083512,
+      "compressed_bytes": 28672470,
+      "header_offset": 1276259022,
+      "crc32": "8e40a9a5",
+      "compression": 8
+    },
+    {
+      "name": "videos/Notre_Dame.mp4",
+      "bytes": 108412268,
+      "compressed_bytes": 103771463,
+      "header_offset": 1304931556,
+      "crc32": "4f7d00fc",
+      "compression": 8
+    },
+    {
+      "name": "videos/Notre_Dame.webm",
+      "bytes": 51776549,
+      "compressed_bytes": 51581255,
+      "header_offset": 1408703070,
+      "crc32": "6efb88fa",
+      "compression": 8
+    },
+    {
+      "name": "videos/Paintball.mp4",
+      "bytes": 68042258,
+      "compressed_bytes": 59678088,
+      "header_offset": 1460284377,
+      "crc32": "f9e1dd15",
+      "compression": 8
+    },
+    {
+      "name": "videos/Paintball.webm",
+      "bytes": 18182076,
+      "compressed_bytes": 18138748,
+      "header_offset": 1519962515,
+      "crc32": "573723de",
+      "compression": 8
+    },
+    {
+      "name": "videos/Playing_on_water_slide.mp4",
+      "bytes": 26500418,
+      "compressed_bytes": 22004908,
+      "header_offset": 1538101314,
+      "crc32": "7db50f96",
+      "compression": 8
+    },
+    {
+      "name": "videos/Playing_on_water_slide.webm",
+      "bytes": 17286723,
+      "compressed_bytes": 16809526,
+      "header_offset": 1560106285,
+      "crc32": "7120a0f8",
+      "compression": 8
+    },
+    {
+      "name": "videos/Saving dolphines.mp4",
+      "bytes": 91065842,
+      "compressed_bytes": 88578176,
+      "header_offset": 1576915875,
+      "crc32": "af6e7a5c",
+      "compression": 8
+    },
+    {
+      "name": "videos/Saving dolphines.webm",
+      "bytes": 60455145,
+      "compressed_bytes": 59397423,
+      "header_offset": 1665494108,
+      "crc32": "ac5b5222",
+      "compression": 8
+    },
+    {
+      "name": "videos/Scuba.mp4",
+      "bytes": 40467580,
+      "compressed_bytes": 40453015,
+      "header_offset": 1724891589,
+      "crc32": "7e63a33b",
+      "compression": 8
+    },
+    {
+      "name": "videos/Scuba.webm",
+      "bytes": 40677533,
+      "compressed_bytes": 40677533,
+      "header_offset": 1765344650,
+      "crc32": "ec7d4002",
+      "compression": 0
+    },
+    {
+      "name": "videos/St Maarten Landing.mp4",
+      "bytes": 5448842,
+      "compressed_bytes": 5422321,
+      "header_offset": 1806022230,
+      "crc32": "527e30c9",
+      "compression": 8
+    },
+    {
+      "name": "videos/St Maarten Landing.webm",
+      "bytes": 9085313,
+      "compressed_bytes": 9085313,
+      "header_offset": 1811444610,
+      "crc32": "046d9e3d",
+      "compression": 0
+    },
+    {
+      "name": "videos/Statue of Liberty.mp4",
+      "bytes": 39865444,
+      "compressed_bytes": 36767842,
+      "header_offset": 1820529983,
+      "crc32": "26d85259",
+      "compression": 8
+    },
+    {
+      "name": "videos/Statue of Liberty.webm",
+      "bytes": 17418685,
+      "compressed_bytes": 17418685,
+      "header_offset": 1857297883,
+      "crc32": "eadfcf0f",
+      "compression": 0
+    },
+    {
+      "name": "videos/Uncut_Evening_Flight.mp4",
+      "bytes": 129527376,
+      "compressed_bytes": 125508968,
+      "header_offset": 1874716627,
+      "crc32": "f1915f77",
+      "compression": 8
+    },
+    {
+      "name": "videos/Uncut_Evening_Flight.webm",
+      "bytes": 86539480,
+      "compressed_bytes": 85639837,
+      "header_offset": 2000225656,
+      "crc32": "e13c2622",
+      "compression": 8
+    },
+    {
+      "name": "videos/Valparaiso_Downhill.mp4",
+      "bytes": 127484968,
+      "compressed_bytes": 115242027,
+      "header_offset": 2085865555,
+      "crc32": "e2499e59",
+      "compression": 8
+    },
+    {
+      "name": "videos/Valparaiso_Downhill.webm",
+      "bytes": 59625615,
+      "compressed_bytes": 59195590,
+      "header_offset": 2201107642,
+      "crc32": "00fc87df",
+      "compression": 8
+    },
+    {
+      "name": "videos/car_over_camera.mp4",
+      "bytes": 28137398,
+      "compressed_bytes": 25988241,
+      "header_offset": 2260303293,
+      "crc32": "07eb8cb6",
+      "compression": 8
+    },
+    {
+      "name": "videos/car_over_camera.webm",
+      "bytes": 40116487,
+      "compressed_bytes": 38906512,
+      "header_offset": 2286291590,
+      "crc32": "d613d49b",
+      "compression": 8
+    },
+    {
+      "name": "videos/paluma_jump.mp4",
+      "bytes": 29224748,
+      "compressed_bytes": 28740713,
+      "header_offset": 2325198159,
+      "crc32": "211e61a3",
+      "compression": 8
+    },
+    {
+      "name": "videos/paluma_jump.webm",
+      "bytes": 12568117,
+      "compressed_bytes": 12564225,
+      "header_offset": 2353938924,
+      "crc32": "7d14504f",
+      "compression": 8
+    },
+    {
+      "name": "videos/playing_ball.mp4",
+      "bytes": 16916384,
+      "compressed_bytes": 15011288,
+      "header_offset": 2366503202,
+      "crc32": "760eb3e7",
+      "compression": 8
+    },
+    {
+      "name": "videos/playing_ball.webm",
+      "bytes": 15536532,
+      "compressed_bytes": 15167087,
+      "header_offset": 2381514543,
+      "crc32": "26dbb020",
+      "compression": 8
+    },
+    {
+      "name": "videos/videos2frames.sh~",
+      "bytes": 287,
+      "compressed_bytes": 204,
+      "header_offset": 2396681684,
+      "crc32": "739eb983",
+      "compression": 8
+    }
+  ],
+  "extracted_members": [
+    {
+      "name": "GT/Air_Force_One.mat",
+      "bytes": 3445,
+      "sha256": "0d85998c81235eb99490e6c9b500c88e192df014cb5de5b793e8a8ad7f7b5e1f",
+      "crc32": "b6344047"
+    },
+    {
+      "name": "GT/Base jumping.mat",
+      "bytes": 4227,
+      "sha256": "0388cf924d6420a72b0a03e3e40ee8a67eba089b3ea0bace27a32c6ff40704a4",
+      "crc32": "3bf5921c"
+    },
+    {
+      "name": "GT/Bearpark_climbing.mat",
+      "bytes": 3115,
+      "sha256": "7cf65193d5f08d9025b6d12506119fb640c7156deb6e495712dec652739cc6da",
+      "crc32": "d90bf9bc"
+    },
+    {
+      "name": "GT/Bike Polo.mat",
+      "bytes": 2664,
+      "sha256": "66886d1eafe54ecbe6ecb3109a688d03087f64d9bd5a51783f3ed267e0b47848",
+      "crc32": "685f6eb8"
+    },
+    {
+      "name": "GT/Bus_in_Rock_Tunnel.mat",
+      "bytes": 3608,
+      "sha256": "8d2f05fb589a41de949496dd1ba4a43e6cee27838e48285a7b3c5df34d85cd07",
+      "crc32": "b454f9e7"
+    },
+    {
+      "name": "GT/Car_railcrossing.mat",
+      "bytes": 3340,
+      "sha256": "3e4690427bf94bb864e2e34454506948afa4cc2224a1befb53fb2ee4465a7b66",
+      "crc32": "b653cc29"
+    },
+    {
+      "name": "GT/Cockpit_Landing.mat",
+      "bytes": 4688,
+      "sha256": "9ba34923e5f8f6cbd45d3e16dff801f9796e2c0ebed1df7e16d18ce5d112e4c7",
+      "crc32": "bfcd6291"
+    },
+    {
+      "name": "GT/Cooking.mat",
+      "bytes": 2324,
+      "sha256": "a1c9baf361db31ad49bf3f0f1bf7e3eb7cfba1a09ac9688d2194b8276c09c2a7",
+      "crc32": "a99c86bb"
+    },
+    {
+      "name": "GT/Eiffel Tower.mat",
+      "bytes": 3575,
+      "sha256": "971d934fe1e1279ec29b520571405bd4fd8577cfecead3a2195025037a7a392a",
+      "crc32": "a349e597"
+    },
+    {
+      "name": "GT/Excavators river crossing.mat",
+      "bytes": 5578,
+      "sha256": "78fa75262008ab77bdd4e2f232349ec7e54b74033c9254b603024fd8aa803c56",
+      "crc32": "5c215d7a"
+    },
+    {
+      "name": "GT/Fire Domino.mat",
+      "bytes": 2486,
+      "sha256": "091832849dced2154dac79f829da2d015c80c2ff90fece20d5e6da5e9d60e796",
+      "crc32": "a2ae289f"
+    },
+    {
+      "name": "GT/Jumps.mat",
+      "bytes": 1980,
+      "sha256": "f56df5a38031fd58fdcd6e78a189c48ce07e0fb5c863ea1a060408c300eb16b0",
+      "crc32": "4ebe4f3a"
+    },
+    {
+      "name": "GT/Kids_playing_in_leaves.mat",
+      "bytes": 2860,
+      "sha256": "b7445f993212548a6abe766c273c0d7d2172b9f818eddce2fab2ff5c5a43d0c4",
+      "crc32": "dfec5e32"
+    },
+    {
+      "name": "GT/Notre_Dame.mat",
+      "bytes": 4131,
+      "sha256": "4ae1f67e841456c8968456d8c08d0432f892b18c6ca872b1fc399a18e364d17d",
+      "crc32": "65b3013e"
+    },
+    {
+      "name": "GT/Paintball.mat",
+      "bytes": 3809,
+      "sha256": "43e45a5c85f312c8cd43545ba722289d11a1df69168358332ba1a30ec1173f7d",
+      "crc32": "bb8e1098"
+    },
+    {
+      "name": "GT/Playing_on_water_slide.mat",
+      "bytes": 3147,
+      "sha256": "f68f79b47fd363068632ab189e5cf72daa5e027013e7283b77eaf2b3e58a7cfc",
+      "crc32": "c70042d5"
+    },
+    {
+      "name": "GT/Saving dolphines.mat",
+      "bytes": 4247,
+      "sha256": "d3e38042f0c079804ed4e25b9ae0a1ffa9fdca5c6ab16f3bbdce99f5aad37339",
+      "crc32": "ccafce7b"
+    },
+    {
+      "name": "GT/Scuba.mat",
+      "bytes": 2601,
+      "sha256": "04601df2f1fd25a49a69ce81e296beee303b2143263dfb9dbb36643b8f0d5b00",
+      "crc32": "e6e5b0f0"
+    },
+    {
+      "name": "GT/St Maarten Landing.mat",
+      "bytes": 2265,
+      "sha256": "28a45ab34e2535a7165fad2753f97446bf69be99b406542903448be57a0b98c1",
+      "crc32": "8d7badff"
+    },
+    {
+      "name": "GT/Statue of Liberty.mat",
+      "bytes": 2683,
+      "sha256": "f955900fbaa0b54d305e335f3714ba8a4901b5a763bdcf45d4f6432036937b96",
+      "crc32": "fb781428"
+    },
+    {
+      "name": "GT/Uncut_Evening_Flight.mat",
+      "bytes": 4359,
+      "sha256": "aa9f49b67d74150be1df89fa264445e4fe1b94ac4cf757b074f708e380ee9c05",
+      "crc32": "63eeea38"
+    },
+    {
+      "name": "GT/Valparaiso_Downhill.mat",
+      "bytes": 4445,
+      "sha256": "0d6cefd60d0a859158a3e102a7490ccea3717d1096ccfd5531df0507c0f5684c",
+      "crc32": "995188ac"
+    },
+    {
+      "name": "GT/car_over_camera.mat",
+      "bytes": 3190,
+      "sha256": "595560197de1117bd2cab99e057619659173070bedcd56a2d3925fb48ce4823a",
+      "crc32": "87edae44"
+    },
+    {
+      "name": "GT/paluma_jump.mat",
+      "bytes": 2257,
+      "sha256": "352e368c3cb521b625a49c7a199bdcfd855182f1a54373978d35517f87127407",
+      "crc32": "aaa2f0fb"
+    },
+    {
+      "name": "GT/playing_ball.mat",
+      "bytes": 3028,
+      "sha256": "529cc3a485be9e5807e0f69d7b9c99c975293cbe8d5e52d348b1e3dcd319c8bc",
+      "crc32": "39710224"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 1612,
+      "sha256": "1a53eea8c22bd5fe1f65905077ae481bb515c841a7d52b6e8450188556f1b806",
+      "crc32": "2841a276"
+    },
+    {
+      "name": "demo.m",
+      "bytes": 1684,
+      "sha256": "44e08c66e69834c54b00557ce08010cac1c3bfa1eb755652177f576b2ae10659",
+      "crc32": "b071a612"
+    },
+    {
+      "name": "matlab/summe_evaluateIOU.m",
+      "bytes": 2660,
+      "sha256": "b4d672634210110a76aa06b13b6f29d99c4df6411faf2e9eaa5e36e25a1d8a63",
+      "crc32": "f5d0b997"
+    },
+    {
+      "name": "matlab/summe_evaluateSummary.m",
+      "bytes": 2233,
+      "sha256": "b2376082b0370aa9692fb5ca9df7b183428efe68497fa9d140c7e44db625aec9",
+      "crc32": "ec47b152"
+    },
+    {
+      "name": "matlab/summe_plotAllResults.m",
+      "bytes": 4231,
+      "sha256": "1b4f7fc4313eb4e3901105ede7964b10fed04efa4b8090937ff1205351490091",
+      "crc32": "58dc4858"
+    }
+  ],
+  "archive_sha256": "UNKNOWN_FULL_ARCHIVE_NOT_DOWNLOADED"
+}

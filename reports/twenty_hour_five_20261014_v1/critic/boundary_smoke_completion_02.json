@@ -1,0 +1,69 @@
+{
+  "recovery": {
+    "status": "EXPLICIT_PRECLAIM_DATETIME_PARSE_RECOVERY_ONLY",
+    "old_log_sha256": "3405bae5e6f181c53bbd63ed247c5c6ccc2e6eb96b4875553f32d00c3cc20822",
+    "original_control_sha256": "7cb9e92478aafc640462146b8fd49478cf0d416a96e53a353fd38b85695684f4",
+    "new_script_bytes": 15479,
+    "new_script_sha256": "72807892a9284b4a3e8c0ae7884c735206e0756b5d24ffbcfd3f151f3dda954f",
+    "metadata_transferred_again": false,
+    "old_script_preserved": true,
+    "previous_join_calls": 0,
+    "previous_plan_calls": 0
+  },
+  "completion": {
+    "status": "PASS_METADATA_JOIN_REGISTRATION_AND_PURE_PLAN_ONLY",
+    "source_separation": {
+      "path": "/home/inspur/aic_video_work/videoxum_reference_iteration_20261013_v1/twenty_hour_metadata_separation_01/v_fVg3StD8LL0_W000.json",
+      "sha256": "32f3c481164e69cec714f7c80fe49a5f9833198f004d38fb32ca64b2110c8582"
+    },
+    "registration": {
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/local_boundary_v2/registration_smoke_input_01.json",
+      "sha256": "8a67e702fbdaaed334bab8c86e37e85117ec1c851ad494b24431d2f8ba143823"
+    },
+    "plan_completion": {
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/local_boundary_v2/plan_01/completion.json",
+      "sha256": "ae770b6889ebc54debeb37663fd0a0e4d3b6a27a0f88a7cc5e216f587b278f29"
+    },
+    "known_training_clips": 704,
+    "known_training_groups": 602,
+    "known_test_sources": 426,
+    "identity_intersections": 0,
+    "byte_intersections": 0,
+    "requests": [
+      {
+        "side": "start",
+        "window_start": "249/25",
+        "window_end": "399/25",
+        "original_endpoint_exact": "324/25",
+        "same_candidate_inner_anchor_exact": "349/25",
+        "sampled_frames": 64,
+        "new_native_ordinals": 55,
+        "old_native_ordinals_reused": 9
+      },
+      {
+        "side": "end",
+        "window_start": "401/25",
+        "window_end": "551/25",
+        "original_endpoint_exact": "476/25",
+        "same_candidate_inner_anchor_exact": "451/25",
+        "sampled_frames": 64,
+        "new_native_ordinals": 59,
+        "old_native_ordinals_reused": 5
+      }
+    ],
+    "original_case_id": "v_fVg3StD8LL0_W000",
+    "original_interval_exact": [
+      "324/25",
+      "476/25"
+    ],
+    "global_source_independence_verified": false,
+    "new_confirmation": false,
+    "scientific_quality_claim": false,
+    "source_media_read": false,
+    "source_media_rehash": false,
+    "processor_calls": 0,
+    "GPU_calls": 0,
+    "new_model_calls": 0,
+    "actual_future_model_call_budget": 2
+  }
+}

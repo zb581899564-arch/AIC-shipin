@@ -1,0 +1,366 @@
+{
+  "status": "DIAGNOSTIC_EVIDENCE_AUDIT_NOT_TRAINING_ADMISSION",
+  "utc": "2026-10-10T08:24:40.122255+00:00",
+  "actual_model": "gemini-3.8-flash-high",
+  "actual_result_status": "SUCCESS",
+  "actual_result_usage": {
+    "input_tokens": 288549,
+    "output_tokens": 39164,
+    "thinking_tokens": 17447,
+    "cache_read_tokens": 980887,
+    "total_tokens": 327713
+  },
+  "terminal": {
+    "started_utc": "2026-10-10T08:12:58.505494+00:00",
+    "finished_utc": "2026-10-10T08:23:10.635401+00:00",
+    "exit_code": 0,
+    "elapsed_seconds": 612.125,
+    "exit_zero_not_acceptance": true,
+    "outputs": {
+      "student_sealed.json": {
+        "bytes": 41464,
+        "sha256": "5d65c300cf99c060b00544afa4b2089743e7cacef60a1931dba60adf369539cd"
+      }
+    },
+    "new_optimizer_updates": 0,
+    "cash_cost": "UNKNOWN_NOT_ZERO"
+  },
+  "completed_tools": 71,
+  "student_PNGs_delivered": 64,
+  "native_PNGs_delivered": 4,
+  "student_seal_precedes_native": true,
+  "tool_issues": [
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F30_O001327.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F45_O001541.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F51_O001626.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F36_O001413.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F44_O001527.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F46_O001555.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F29_O001313.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F23_O001227.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F19_O001170.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F43_O001512.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F57_O001712.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F18_O001156.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F54_O001669.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F04_O000957.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F12_O001071.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F50_O001612.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F37_O001427.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F15_O001113.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F16_O001128.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F35_O001398.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F47_O001569.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F41_O001484.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F11_O001056.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F58_O001726.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F52_O001641.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F49_O001598.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F60_O001755.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F26_O001270.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F33_O001370.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F05_O000971.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F10_O001042.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F63_O001798.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F24_O001242.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F20_O001185.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F48_O001584.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F21_O001199.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F53_O001655.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F09_O001028.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F07_O000999.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F39_O001455.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F13_O001085.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F14_O001099.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F42_O001498.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F55_O001683.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F62_O001783.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F34_O001384.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F25_O001256.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F28_O001299.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F17_O001142.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F22_O001213.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F61_O001769.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F31_O001341.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F06_O000985.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F56_O001698.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F40_O001470.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F59_O001740.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F08_O001014.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F38_O001441.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F32_O001356.png",
+      "count": 0
+    },
+    {
+      "reason": "MISSING_OR_REPEATED_PNG",
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\frames\\F27_O001284.png",
+      "count": 0
+    }
+  ],
+  "student": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\w01_editorial_diagnostic_v1\\teacher\\student_sealed.json",
+    "sha256": "5d65c300cf99c060b00544afa4b2089743e7cacef60a1931dba60adf369539cd",
+    "issues": [],
+    "observation_rows": 64,
+    "coverage_rows": 17,
+    "coverage_seconds_exact": {
+      "KEEP": "2283/100",
+      "NO": "717/100",
+      "UNKNOWN": "0"
+    },
+    "proposed_event_rows": 11,
+    "presealed_narrative_units": 10,
+    "contiguous_KEEP_union_intervals": 7,
+    "capacity_check_after_seal_only": true,
+    "satisfies_numeric_capacity_only": false,
+    "semantic_correctness": "NOT_CERTIFIED_BY_THIS_AUDIT",
+    "training_admitted": false
+  },
+  "native": {
+    "issues": [
+      "MISSING"
+    ],
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\w01_editorial_diagnostic_v1\\teacher\\native_addendum.json"
+  },
+  "stream_sha256": "be2af6336a4ed36c720adb508fe30ff46992683d47104387f4491a92a8921513",
+  "cash_cost": "UNKNOWN_NOT_ZERO",
+  "blinding": "REQUIRES_SEAL_ATTESTATION_AND_INPUT_AUDIT_NOT_ASSUMED",
+  "new_optimizer_updates": 0,
+  "new_426_calls": 0,
+  "prior_audit_sha256": "9e315a8f8997384ccc888024ba51104ad33e1f5c48e0e55c3433f1cad0481f04",
+  "prior_audit_representation_error_preserved": "event interval dict was incorrectly treated as iterable list; numeric values unchanged"
+}

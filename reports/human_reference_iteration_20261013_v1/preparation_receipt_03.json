@@ -1,0 +1,23 @@
+{
+  "status": "LOCAL_CPU_MAPPING_ENTRY_IMPLEMENTED_NOT_REAL_MEDIA_ACCEPTANCE",
+  "recorded_utc": "2026-10-12T17:51:37.247737+00:00",
+  "previous_receipt": "preparation_receipt_02.json",
+  "execution_contract": "NATIVE_MAPPING_EXECUTION.md",
+  "implementation": "improvement/human_reference_v1/map_sources_remote.py",
+  "checks": [
+    "Synthetic nonzero PTS origin normalized exactly",
+    "Measured positive final frame duration binds exact physical endpoint",
+    "Missing or zero duration, duplicate/missing PTS, missing frame and changed geometry rejected",
+    "Syntax checked for new CPU mapping entry and synthetic checks"
+  ],
+  "checks_are_synthetic_only": true,
+  "completed_media_gate_before_decode": true,
+  "successful_source_decode_reuse_requires_explicit_resume": true,
+  "completed_whole_mapping_rerun_rejected": true,
+  "real_media_downloads": 0,
+  "real_native_decodes": 0,
+  "model_calls": 0,
+  "candidate_comparisons": 0,
+  "new_submission_zips": 0,
+  "pending": "Previously asked specific media download permission has no human approval yet"
+}

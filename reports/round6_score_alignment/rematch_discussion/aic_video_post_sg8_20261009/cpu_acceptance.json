@@ -1,0 +1,79 @@
+{
+  "status": "PASS_INDEPENDENT_PLAN_RECOMPUTATION_AND_15_METADATA_CONTRACTS",
+  "tests": [
+    {
+      "name": "nonzero_origin",
+      "status": "PASS"
+    },
+    {
+      "name": "single_window_identity",
+      "status": "PASS"
+    },
+    {
+      "name": "exact60_identity",
+      "status": "PASS"
+    },
+    {
+      "name": "three_window_identity",
+      "status": "PASS"
+    },
+    {
+      "name": "midpoint_present_unique_right",
+      "status": "PASS"
+    },
+    {
+      "name": "midpoint_absent_no_snap",
+      "status": "PASS"
+    },
+    {
+      "name": "empty_window_reject",
+      "status": "PASS"
+    },
+    {
+      "name": "nan_reject",
+      "status": "PASS"
+    },
+    {
+      "name": "inf_reject",
+      "status": "PASS"
+    },
+    {
+      "name": "old_gap_reject",
+      "status": "PASS"
+    },
+    {
+      "name": "same_source_two_files_one_group",
+      "status": "PASS"
+    },
+    {
+      "name": "forbidden_path",
+      "status": "PASS"
+    },
+    {
+      "name": "diagnostic_does_not_grant_train_or_competition",
+      "status": "PASS"
+    },
+    {
+      "name": "whole_interval_projection_no_trim",
+      "status": "PASS"
+    },
+    {
+      "name": "fraction_to_float_can_change_boundary_detected",
+      "status": "PASS"
+    }
+  ],
+  "all_8_old_and_new_ordinal_hashes_equal": true,
+  "independent_method": "linear Fraction membership and divmod floor64; original planner uses bisect; no planner import",
+  "verification_sha256": "cfd12de62c518604b55e8a1a159fc2fec62e4c4a56b9285930012952617e2dd5",
+  "consumer_boundary": "NOT_RUN_FLOAT_ROUNDTRIP_COUNTEREXAMPLE_RECORDED",
+  "scope": "metadata and synthetic mathematics, not full production admission",
+  "measured_verifier_cpu_seconds": 0.357092713,
+  "measured_verifier_wall_seconds": 0.3570940140634775,
+  "measured_verifier_peak_rss_kib": 18100,
+  "measured_verifier_bytes_read": 1578495,
+  "earlier_checks_CPU_peak": "NOT_INSTRUMENTED_NOT_ASSUMED_ZERO",
+  "new_model_calls": 0,
+  "new_decoder_calls": 0,
+  "new_processor_calls": 0,
+  "new_optimizer_updates": 0
+}

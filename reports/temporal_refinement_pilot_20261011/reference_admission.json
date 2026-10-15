@@ -1,0 +1,67 @@
+{
+  "status": "STOP_REFERENCE_QUALITY_GATE",
+  "original_reference_checks": {
+    "each_source_known_at_least8": false,
+    "total_known_at_least96": true,
+    "keep_sources_at_least4": false,
+    "ordinary_sources_at_least2": true
+  },
+  "original_quality_gate_passed": false,
+  "consensus_known": 97,
+  "total_observations": 384,
+  "consensus_counts": {
+    "KEEP": 59,
+    "ORDINARY": 38,
+    "UNKNOWN": 287
+  },
+  "per_case": [
+    {
+      "case_id": "T01",
+      "KEEP": 9,
+      "ORDINARY": 6,
+      "UNKNOWN": 49
+    },
+    {
+      "case_id": "T02",
+      "KEEP": 0,
+      "ORDINARY": 0,
+      "UNKNOWN": 64
+    },
+    {
+      "case_id": "T03",
+      "KEEP": 0,
+      "ORDINARY": 24,
+      "UNKNOWN": 40
+    },
+    {
+      "case_id": "T04",
+      "KEEP": 0,
+      "ORDINARY": 8,
+      "UNKNOWN": 56
+    },
+    {
+      "case_id": "T05",
+      "KEEP": 26,
+      "ORDINARY": 0,
+      "UNKNOWN": 38
+    },
+    {
+      "case_id": "T06",
+      "KEEP": 24,
+      "ORDINARY": 0,
+      "UNKNOWN": 40
+    }
+  ],
+  "scope": "LIMITED_VISUAL_FACT_MECHANISM_DIAGNOSTIC_ONLY",
+  "limited_mechanism_admitted": true,
+  "max_model_calls": 12,
+  "quality_pass_allowed": false,
+  "training_admitted": false,
+  "rematch_admitted": false,
+  "consensus_sha256": "f99c11d61d4c1e181373781414fa2a2ded98eab41eb7b9eabfb8a08af6c57570",
+  "reviewers": {
+    "reviewer_a.json": "0c49ad1808d531d279ee91883fff8d4745536f97937d8580528b7565ab9c096e",
+    "reviewer_b.json": "44d82eedcfcee4fa5dafd03a399056c2fd4e1b0d4db74bd8dff7b66baa74507e"
+  },
+  "note": "No original quality criterion waived or rewritten. UNKNOWN cases and all six sources retained."
+}

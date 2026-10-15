@@ -1,0 +1,403 @@
+{
+  "schema": "CONSENSUS_FRESH4_COMPLETED_RESULT_RECEIPT_V2",
+  "utc": "2026-10-15T01:58:02.688707+00:00",
+  "chain_completion_ref": {
+    "path": "/home/inspur/aic_video_work/recall_consensus_verify40_46_20261015_v1/confirm/chain_02/completion.json",
+    "sha256": "fcb2e027be631e1c6a88ce16855d3d1e5b1821d580dfc4394e4d9a7b568298d5"
+  },
+  "result_ref": {
+    "path": "/home/inspur/aic_video_work/recall_consensus_verify40_46_20261015_v1/confirm/comparison_01/result.json",
+    "sha256": "0b687aff7bee1409391df7c4bfaf924eb97800cfa2eac1ee387fdaaab7fbb0ec"
+  },
+  "result": {
+    "status": "STOP_CONSENSUS_FRESH_CONFIRM_REJECTED",
+    "group": "confirm",
+    "utc": "2026-10-15T01:56:22.638179+00:00",
+    "conditions": {
+      "full_group": true,
+      "macro_F1_not_lower": true,
+      "macro_recall_gain": true,
+      "every_source_loss_within_gate": true,
+      "macro_precision_not_lower": false,
+      "all_rater_recall_retained": true,
+      "all_baseline_native_frames_retained": true,
+      "real_changed_sources": true
+    },
+    "cases": [
+      {
+        "video_id": "v_rrNJt73BG_8",
+        "baseline": {
+          "f1": {
+            "exact": "88695182100895973782809023994200671169423136607270471/267689417837082463000863896969570413359891118736377305",
+            "value": 0.33133615373199565
+          },
+          "recall": {
+            "exact": "4567312207757/4702475736000",
+            "value": 0.9712569429740487
+          },
+          "precision": {
+            "exact": "2697491/13496310",
+            "value": 0.1998687789477272
+          }
+        },
+        "augmented": {
+          "f1": {
+            "exact": "88695182100895973782809023994200671169423136607270471/267689417837082463000863896969570413359891118736377305",
+            "value": 0.33133615373199565
+          },
+          "recall": {
+            "exact": "4567312207757/4702475736000",
+            "value": 0.9712569429740487
+          },
+          "precision": {
+            "exact": "2697491/13496310",
+            "value": 0.1998687789477272
+          }
+        },
+        "F1_delta_exact": "0",
+        "all_rater_recall_preserved": true,
+        "baseline_native_frames_preserved": true,
+        "added_native_frames": 0,
+        "baseline_selected_frames": 1348,
+        "augmented_selected_frames": 1348,
+        "annotator_count": 10,
+        "baseline_spans": [
+          [
+            "77/100",
+            "2623/100"
+          ],
+          [
+            "1710709/60000",
+            "2882371/60000"
+          ]
+        ],
+        "augmented_spans": [
+          [
+            "77/100",
+            "2623/100"
+          ],
+          [
+            "1710709/60000",
+            "2882371/60000"
+          ]
+        ],
+        "new_KEEP_consensus_spans": [
+          [
+            "15/2",
+            "125777/10000"
+          ],
+          [
+            "179667/10000",
+            "215333/10000"
+          ],
+          [
+            "45/2",
+            "258667/10000"
+          ],
+          [
+            "63/2",
+            "186/5"
+          ],
+          [
+            "75/2",
+            "79/2"
+          ],
+          [
+            "81/2",
+            "475777/10000"
+          ]
+        ]
+      },
+      {
+        "video_id": "v_17nr8u_ze0o",
+        "baseline": {
+          "f1": {
+            "exact": "1003642680390731/4433021343306000",
+            "value": 0.2264014997144696
+          },
+          "recall": {
+            "exact": "155923145385389/741552257952000",
+            "value": 0.2102658898457319
+          },
+          "precision": {
+            "exact": "224257/914400",
+            "value": 0.24525043744531932
+          }
+        },
+        "augmented": {
+          "f1": {
+            "exact": "1120386445020402435942367/4922910575612002060573805",
+            "value": 0.22758618662926236
+          },
+          "recall": {
+            "exact": "157821908678189/741552257952000",
+            "value": 0.21282641511207517
+          },
+          "precision": {
+            "exact": "1135111/4641130",
+            "value": 0.24457642858527986
+          }
+        },
+        "F1_delta_exact": "5170771619014432159735441841956380109/4364673530574966211524185804451139866000",
+        "all_rater_recall_preserved": true,
+        "baseline_native_frames_preserved": true,
+        "added_native_frames": 3,
+        "baseline_selected_frames": 229,
+        "augmented_selected_frames": 232,
+        "annotator_count": 10,
+        "baseline_spans": [
+          [
+            "2121/100",
+            "1173/50"
+          ],
+          [
+            "549863/12000",
+            "614303/12000"
+          ]
+        ],
+        "augmented_spans": [
+          [
+            "2121/100",
+            "1173/50"
+          ],
+          [
+            "549863/12000",
+            "769607/15000"
+          ]
+        ],
+        "new_KEEP_consensus_spans": [
+          [
+            "462333/10000",
+            "769607/15000"
+          ]
+        ]
+      },
+      {
+        "video_id": "v_isUCIXYjOXE",
+        "baseline": {
+          "f1": {
+            "exact": "752024743686065565451370875201102291442316300131693/3950982551393588302875088145235060485964756657057345",
+            "value": 0.1903386648520662
+          },
+          "recall": {
+            "exact": "638994278170003481621254021/2116714005700228879648500000",
+            "value": 0.30188030903051455
+          },
+          "precision": {
+            "exact": "238099/1711670",
+            "value": 0.13910333183382312
+          }
+        },
+        "augmented": {
+          "f1": {
+            "exact": "752024743686065565451370875201102291442316300131693/3950982551393588302875088145235060485964756657057345",
+            "value": 0.1903386648520662
+          },
+          "recall": {
+            "exact": "638994278170003481621254021/2116714005700228879648500000",
+            "value": 0.30188030903051455
+          },
+          "precision": {
+            "exact": "238099/1711670",
+            "value": 0.13910333183382312
+          }
+        },
+        "F1_delta_exact": "0",
+        "all_rater_recall_preserved": true,
+        "baseline_native_frames_preserved": true,
+        "added_native_frames": 0,
+        "baseline_selected_frames": 427,
+        "augmented_selected_frames": 427,
+        "annotator_count": 10,
+        "baseline_spans": [
+          [
+            "170833/10000",
+            "218667/10000"
+          ],
+          [
+            "45/2",
+            "243333/10000"
+          ],
+          [
+            "264167/10000",
+            "369167/10000"
+          ]
+        ],
+        "augmented_spans": [
+          [
+            "170833/10000",
+            "218667/10000"
+          ],
+          [
+            "45/2",
+            "243333/10000"
+          ],
+          [
+            "264167/10000",
+            "369167/10000"
+          ]
+        ],
+        "new_KEEP_consensus_spans": [
+          [
+            "192333/10000",
+            "215667/10000"
+          ],
+          [
+            "45/2",
+            "56443/2500"
+          ]
+        ]
+      },
+      {
+        "video_id": "v_IGamNJ5yIh4",
+        "baseline": {
+          "f1": {
+            "exact": "2750880219700907941409/9054394947675043708800",
+            "value": 0.30381712257949045
+          },
+          "recall": {
+            "exact": "30507960035304048061/96552552306470390400",
+            "value": 0.31597259012343665
+          },
+          "precision": {
+            "exact": "29309/100000",
+            "value": 0.29309
+          }
+        },
+        "augmented": {
+          "f1": {
+            "exact": "10793729565626143683714388055746184389199160752/31863945355013975466627883823569450045676650065",
+            "value": 0.3387442906196074
+          },
+          "recall": {
+            "exact": "1188879449871032206064011/2876783295971285281968000",
+            "value": 0.41326694698761873
+          },
+          "precision": {
+            "exact": "47978/166945",
+            "value": 0.2873880619365659
+          }
+        },
+        "F1_delta_exact": "2516053295090519244702709853886390658674624177586051991849952803/72037140033815784376745729112672900205468520838360328794116694400",
+        "all_rater_recall_preserved": true,
+        "baseline_native_frames_preserved": true,
+        "added_native_frames": 74,
+        "baseline_selected_frames": 225,
+        "augmented_selected_frames": 299,
+        "annotator_count": 10,
+        "baseline_spans": [
+          [
+            "31/4",
+            "12"
+          ],
+          [
+            "362233/12000",
+            "401233/12000"
+          ]
+        ],
+        "augmented_spans": [
+          [
+            "31/4",
+            "12"
+          ],
+          [
+            "293/10",
+            "350667/10000"
+          ]
+        ],
+        "new_KEEP_consensus_spans": [
+          [
+            "49/5",
+            "56/5"
+          ],
+          [
+            "293/10",
+            "194233/6000"
+          ],
+          [
+            "200233/6000",
+            "350667/10000"
+          ]
+        ]
+      }
+    ],
+    "macro": {
+      "f1": {
+        "baseline": 0.26297336021950546,
+        "augmented": 0.2720013239582329,
+        "delta_exact": "18301610807361201372192200319625422935250088086167744383228836950270291825511408548685053480071/2027213592900516898957052248679451777393520721396906780945341136340230722589892092824514195136000",
+        "delta": 0.009027963738727423
+      },
+      "recall": {
+        "baseline": 0.44984393299343295,
+        "augmented": 0.4748076535260643,
+        "delta_exact": "6479537104120933120745827/259558149421325441173584000",
+        "delta": 0.024963720532631333
+      },
+      "precision": {
+        "baseline": 0.21932813705671741,
+        "augmented": 0.21773415032584903,
+        "delta_exact": "-1411653411503573/885611770892550000",
+        "delta": -0.0015939867308683805
+      }
+    },
+    "bindings": {
+      "protocol_sha256": "d71d191c2525402872a866ab513e84c1ee032fdb14858ff9034bdb32f93cb236",
+      "registration_sha256": "731ea64e23cccb18ff4d64b870242fe0937f07ffa6001038a1a4cc84bb7f2a50",
+      "original_registration_sha256": "e69876b2df415d5760ccaae2e6da87771ccd2580a9d19e1442b62df56d665e5b",
+      "cpu_acceptance_sha256": "36cff8e44f6600479302b7d55fb67effab4e0e54fcbcc32a62338cbe53d718da",
+      "verification_export_sha256": "3df964adbad3ef09678f7d4ae8ef10ce29a0d2f5f3ca4394d001a6d6e9046f5f",
+      "first_B0_QA_sha256": "bd668bb35d0adb0be058015983311dac6947636b2b574141c9ab996aa1387091",
+      "reference_completion_sha256": "66249fa416cafc1768718a91447f4e76a277a6d560b0b144d27b4f121a735139"
+    },
+    "candidate": "TWO_DISTINCT_OVERLAP_VIEWS_EXPLICIT_KEEP_INTERSECTION",
+    "scope": "EVENT_TEXT_GUIDED_HUMAN_SUMMARY_PROXY_NOT_HIGHLIGHT_GOLD",
+    "source_metrics_exposed_first_time": true,
+    "online_improvement": "UNKNOWN",
+    "production_admitted": false,
+    "no_426_model_or_package_started": true,
+    "prior_failed_gates_changed": false
+  },
+  "stages": {
+    "B0": {
+      "calls": 32,
+      "first_independent_QA_proofs": 32,
+      "resource_status": "completed",
+      "exit_code": 0,
+      "charged_seconds": 775.899587130174,
+      "sampled_peak_memory_mib": 22380,
+      "model_parameters": 8782459120,
+      "unique_resource_ref": {
+        "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/recall_consensus_fresh4_b0_20261015_v2.resource.json",
+        "sha256": "793fe6f6ac6e31ef38e497b3abff53b7188a14619bbae99f9f67c92841e373f1"
+      },
+      "first_QA_ref": {
+        "path": "/home/inspur/aic_video_work/recall_consensus_verify40_46_20261015_v1/confirm/B0/replay_01/completion.json",
+        "sha256": "bd668bb35d0adb0be058015983311dac6947636b2b574141c9ab996aa1387091"
+      }
+    },
+    "VERIFY": {
+      "calls": 44,
+      "first_independent_QA_proofs": 44,
+      "resource_status": "completed",
+      "exit_code": 0,
+      "charged_seconds": 1068.9671736983582,
+      "sampled_peak_memory_mib": 22380,
+      "model_parameters": 8782459120,
+      "unique_resource_ref": {
+        "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/recall_consensus_fresh4_verify_20261015_v2.resource.json",
+        "sha256": "562d3ba53bead3fc91f69a53dcb90109f0831bf4d1eae8007805fa5a27462a73"
+      },
+      "first_QA_ref": {
+        "path": "/home/inspur/aic_video_work/recall_consensus_verify40_46_20261015_v1/confirm/VERIFY/replay_01/completion.json",
+        "sha256": "b518408d87525cd53cce516db925d3732f0b417524e41032bfb24ab4431a1a5a"
+      }
+    }
+  },
+  "total_actual_model_calls": 76,
+  "total_GPU_charged_seconds": 1844.8667608285323,
+  "actual_model_parameters": 8782459120,
+  "optimizer_updates": 0,
+  "production_admitted": false,
+  "raw_and_media_tensors_kept_on_Linux": true
+}

@@ -1,0 +1,682 @@
+{
+  "status": "AUTHOR_ORIGINAL_ORDINAL_VECTOR_AUDIT_NOT_NATIVE_ADMISSION",
+  "utc": "2026-10-13T01:15:13.987868+00:00",
+  "registration_sha256": "deb7767c268859e910ffe9184891c8cc2504671a2c38268b5e07ec1fe22709af",
+  "author_files": {
+    "G:\\ai\\AIC视频\\reports\\human_reference_iteration_20261013_v1\\summe_original_metadata_01\\README.txt": "1a53eea8c22bd5fe1f65905077ae481bb515c841a7d52b6e8450188556f1b806",
+    "G:\\ai\\AIC视频\\reports\\human_reference_iteration_20261013_v1\\summe_original_metadata_01\\demo.m": "44e08c66e69834c54b00557ce08010cac1c3bfa1eb755652177f576b2ae10659",
+    "G:\\ai\\AIC视频\\reports\\human_reference_iteration_20261013_v1\\summe_original_metadata_01\\matlab\\summe_evaluateSummary.m": "b2376082b0370aa9692fb5ca9df7b183428efe68497fa9d140c7e44db625aec9"
+  },
+  "sources": 20,
+  "rows": [
+    {
+      "source_name": "Bus_in_Rock_Tunnel",
+      "annotation_sha256": "8d2f05fb589a41de949496dd1ba4a43e6cee27838e48285a7b3c5df34d85cd07",
+      "n_frames": 5131,
+      "human_columns": 15,
+      "original_mean_selection_consistent": true,
+      "formula_diagnostics": [
+        {
+          "method": "AUTHOR_FPS_ORDINAL_DIAGNOSTIC",
+          "unequal_id_cells": 0,
+          "unequal_selection_cells": 0,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": [],
+          "diagnostic_only_not_used_to_replace_reference": true
+        },
+        {
+          "method": "CONTAINER_DURATION_STRETCH_DIAGNOSTIC",
+          "unequal_id_cells": 475,
+          "unequal_selection_cells": 475,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": null,
+          "diagnostic_only_not_used_to_replace_reference": true
+        }
+      ]
+    },
+    {
+      "source_name": "Uncut_Evening_Flight",
+      "annotation_sha256": "aa9f49b67d74150be1df89fa264445e4fe1b94ac4cf757b074f708e380ee9c05",
+      "n_frames": 9672,
+      "human_columns": 15,
+      "original_mean_selection_consistent": true,
+      "formula_diagnostics": [
+        {
+          "method": "AUTHOR_FPS_ORDINAL_DIAGNOSTIC",
+          "unequal_id_cells": 0,
+          "unequal_selection_cells": 0,
+          "out_of_vector_segment_endpoints": [
+            {
+              "user_column": 1,
+              "segment_id": 8,
+              "start_ordinal_1based": 0,
+              "end_ordinal_1based": 222
+            },
+            {
+              "user_column": 2,
+              "segment_id": 2,
+              "start_ordinal_1based": 0,
+              "end_ordinal_1based": 241
+            },
+            {
+              "user_column": 4,
+              "segment_id": 1,
+              "start_ordinal_1based": 9668,
+              "end_ordinal_1based": 9676
+            },
+            {
+              "user_column": 7,
+              "segment_id": 1,
+              "start_ordinal_1based": 0,
+              "end_ordinal_1based": 257
+            },
+            {
+              "user_column": 11,
+              "segment_id": 7,
+              "start_ordinal_1based": 0,
+              "end_ordinal_1based": 264
+            }
+          ],
+          "small_original_boundary_discrepancies": [],
+          "diagnostic_only_not_used_to_replace_reference": true
+        },
+        {
+          "method": "CONTAINER_DURATION_STRETCH_DIAGNOSTIC",
+          "unequal_id_cells": 53,
+          "unequal_selection_cells": 52,
+          "out_of_vector_segment_endpoints": [
+            {
+              "user_column": 1,
+              "segment_id": 8,
+              "start_ordinal_1based": 0,
+              "end_ordinal_1based": 222
+            },
+            {
+              "user_column": 2,
+              "segment_id": 2,
+              "start_ordinal_1based": 0,
+              "end_ordinal_1based": 241
+            },
+            {
+              "user_column": 4,
+              "segment_id": 1,
+              "start_ordinal_1based": 9668,
+              "end_ordinal_1based": 9676
+            },
+            {
+              "user_column": 7,
+              "segment_id": 1,
+              "start_ordinal_1based": 0,
+              "end_ordinal_1based": 257
+            },
+            {
+              "user_column": 11,
+              "segment_id": 7,
+              "start_ordinal_1based": 0,
+              "end_ordinal_1based": 263
+            }
+          ],
+          "small_original_boundary_discrepancies": null,
+          "diagnostic_only_not_used_to_replace_reference": true
+        }
+      ]
+    },
+    {
+      "source_name": "Air_Force_One",
+      "annotation_sha256": "0d85998c81235eb99490e6c9b500c88e192df014cb5de5b793e8a8ad7f7b5e1f",
+      "n_frames": 4494,
+      "human_columns": 15,
+      "original_mean_selection_consistent": true,
+      "formula_diagnostics": [
+        {
+          "method": "AUTHOR_FPS_ORDINAL_DIAGNOSTIC",
+          "unequal_id_cells": 3,
+          "unequal_selection_cells": 3,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": [
+            [
+              845,
+              9
+            ],
+            [
+              1859,
+              6
+            ],
+            [
+              1916,
+              5
+            ]
+          ],
+          "diagnostic_only_not_used_to_replace_reference": true
+        },
+        {
+          "method": "CONTAINER_DURATION_STRETCH_DIAGNOSTIC",
+          "unequal_id_cells": 54,
+          "unequal_selection_cells": 54,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": null,
+          "diagnostic_only_not_used_to_replace_reference": true
+        }
+      ]
+    },
+    {
+      "source_name": "Cockpit_Landing",
+      "annotation_sha256": "9ba34923e5f8f6cbd45d3e16dff801f9796e2c0ebed1df7e16d18ce5d112e4c7",
+      "n_frames": 9046,
+      "human_columns": 15,
+      "original_mean_selection_consistent": true,
+      "formula_diagnostics": [
+        {
+          "method": "AUTHOR_FPS_ORDINAL_DIAGNOSTIC",
+          "unequal_id_cells": 0,
+          "unequal_selection_cells": 0,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": [],
+          "diagnostic_only_not_used_to_replace_reference": true
+        },
+        {
+          "method": "CONTAINER_DURATION_STRETCH_DIAGNOSTIC",
+          "unequal_id_cells": 1562,
+          "unequal_selection_cells": 1562,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": null,
+          "diagnostic_only_not_used_to_replace_reference": true
+        }
+      ]
+    },
+    {
+      "source_name": "car_over_camera",
+      "annotation_sha256": "595560197de1117bd2cab99e057619659173070bedcd56a2d3925fb48ce4823a",
+      "n_frames": 4382,
+      "human_columns": 15,
+      "original_mean_selection_consistent": true,
+      "formula_diagnostics": [
+        {
+          "method": "AUTHOR_FPS_ORDINAL_DIAGNOSTIC",
+          "unequal_id_cells": 0,
+          "unequal_selection_cells": 0,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": [],
+          "diagnostic_only_not_used_to_replace_reference": true
+        },
+        {
+          "method": "CONTAINER_DURATION_STRETCH_DIAGNOSTIC",
+          "unequal_id_cells": 55,
+          "unequal_selection_cells": 54,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": null,
+          "diagnostic_only_not_used_to_replace_reference": true
+        }
+      ]
+    },
+    {
+      "source_name": "Bearpark_climbing",
+      "annotation_sha256": "7cf65193d5f08d9025b6d12506119fb640c7156deb6e495712dec652739cc6da",
+      "n_frames": 3341,
+      "human_columns": 15,
+      "original_mean_selection_consistent": true,
+      "formula_diagnostics": [
+        {
+          "method": "AUTHOR_FPS_ORDINAL_DIAGNOSTIC",
+          "unequal_id_cells": 0,
+          "unequal_selection_cells": 0,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": [],
+          "diagnostic_only_not_used_to_replace_reference": true
+        },
+        {
+          "method": "CONTAINER_DURATION_STRETCH_DIAGNOSTIC",
+          "unequal_id_cells": 33,
+          "unequal_selection_cells": 33,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": null,
+          "diagnostic_only_not_used_to_replace_reference": true
+        }
+      ]
+    },
+    {
+      "source_name": "Kids_playing_in_leaves",
+      "annotation_sha256": "b7445f993212548a6abe766c273c0d7d2172b9f818eddce2fab2ff5c5a43d0c4",
+      "n_frames": 3187,
+      "human_columns": 15,
+      "original_mean_selection_consistent": true,
+      "formula_diagnostics": [
+        {
+          "method": "AUTHOR_FPS_ORDINAL_DIAGNOSTIC",
+          "unequal_id_cells": 0,
+          "unequal_selection_cells": 0,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": [],
+          "diagnostic_only_not_used_to_replace_reference": true
+        },
+        {
+          "method": "CONTAINER_DURATION_STRETCH_DIAGNOSTIC",
+          "unequal_id_cells": 36,
+          "unequal_selection_cells": 36,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": null,
+          "diagnostic_only_not_used_to_replace_reference": true
+        }
+      ]
+    },
+    {
+      "source_name": "playing_ball",
+      "annotation_sha256": "529cc3a485be9e5807e0f69d7b9c99c975293cbe8d5e52d348b1e3dcd319c8bc",
+      "n_frames": 3120,
+      "human_columns": 16,
+      "original_mean_selection_consistent": true,
+      "formula_diagnostics": [
+        {
+          "method": "AUTHOR_FPS_ORDINAL_DIAGNOSTIC",
+          "unequal_id_cells": 0,
+          "unequal_selection_cells": 0,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": [],
+          "diagnostic_only_not_used_to_replace_reference": true
+        },
+        {
+          "method": "CONTAINER_DURATION_STRETCH_DIAGNOSTIC",
+          "unequal_id_cells": 42,
+          "unequal_selection_cells": 42,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": null,
+          "diagnostic_only_not_used_to_replace_reference": true
+        }
+      ]
+    },
+    {
+      "source_name": "Cooking",
+      "annotation_sha256": "a1c9baf361db31ad49bf3f0f1bf7e3eb7cfba1a09ac9688d2194b8276c09c2a7",
+      "n_frames": 1286,
+      "human_columns": 17,
+      "original_mean_selection_consistent": true,
+      "formula_diagnostics": [
+        {
+          "method": "AUTHOR_FPS_ORDINAL_DIAGNOSTIC",
+          "unequal_id_cells": 0,
+          "unequal_selection_cells": 0,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": [],
+          "diagnostic_only_not_used_to_replace_reference": true
+        },
+        {
+          "method": "CONTAINER_DURATION_STRETCH_DIAGNOSTIC",
+          "unequal_id_cells": 799,
+          "unequal_selection_cells": 799,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": null,
+          "diagnostic_only_not_used_to_replace_reference": true
+        }
+      ]
+    },
+    {
+      "source_name": "St Maarten Landing",
+      "annotation_sha256": "28a45ab34e2535a7165fad2753f97446bf69be99b406542903448be57a0b98c1",
+      "n_frames": 1751,
+      "human_columns": 17,
+      "original_mean_selection_consistent": true,
+      "formula_diagnostics": [
+        {
+          "method": "AUTHOR_FPS_ORDINAL_DIAGNOSTIC",
+          "unequal_id_cells": 1,
+          "unequal_selection_cells": 1,
+          "out_of_vector_segment_endpoints": [
+            {
+              "user_column": 10,
+              "segment_id": 1,
+              "start_ordinal_1based": 0,
+              "end_ordinal_1based": 61
+            }
+          ],
+          "small_original_boundary_discrepancies": [
+            [
+              928,
+              10
+            ]
+          ],
+          "diagnostic_only_not_used_to_replace_reference": true
+        },
+        {
+          "method": "CONTAINER_DURATION_STRETCH_DIAGNOSTIC",
+          "unequal_id_cells": 1,
+          "unequal_selection_cells": 1,
+          "out_of_vector_segment_endpoints": [
+            {
+              "user_column": 10,
+              "segment_id": 1,
+              "start_ordinal_1based": 0,
+              "end_ordinal_1based": 61
+            }
+          ],
+          "small_original_boundary_discrepancies": [
+            [
+              928,
+              10
+            ]
+          ],
+          "diagnostic_only_not_used_to_replace_reference": true
+        }
+      ]
+    },
+    {
+      "source_name": "Eiffel Tower",
+      "annotation_sha256": "971d934fe1e1279ec29b520571405bd4fd8577cfecead3a2195025037a7a392a",
+      "n_frames": 4971,
+      "human_columns": 15,
+      "original_mean_selection_consistent": true,
+      "formula_diagnostics": [
+        {
+          "method": "AUTHOR_FPS_ORDINAL_DIAGNOSTIC",
+          "unequal_id_cells": 0,
+          "unequal_selection_cells": 0,
+          "out_of_vector_segment_endpoints": [
+            {
+              "user_column": 7,
+              "segment_id": 5,
+              "start_ordinal_1based": 4842,
+              "end_ordinal_1based": 4995
+            },
+            {
+              "user_column": 13,
+              "segment_id": 3,
+              "start_ordinal_1based": 4863,
+              "end_ordinal_1based": 4987
+            }
+          ],
+          "small_original_boundary_discrepancies": [],
+          "diagnostic_only_not_used_to_replace_reference": true
+        },
+        {
+          "method": "CONTAINER_DURATION_STRETCH_DIAGNOSTIC",
+          "unequal_id_cells": 1841,
+          "unequal_selection_cells": 1841,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": null,
+          "diagnostic_only_not_used_to_replace_reference": true
+        }
+      ]
+    },
+    {
+      "source_name": "Playing_on_water_slide",
+      "annotation_sha256": "f68f79b47fd363068632ab189e5cf72daa5e027013e7283b77eaf2b3e58a7cfc",
+      "n_frames": 3065,
+      "human_columns": 15,
+      "original_mean_selection_consistent": true,
+      "formula_diagnostics": [
+        {
+          "method": "AUTHOR_FPS_ORDINAL_DIAGNOSTIC",
+          "unequal_id_cells": 0,
+          "unequal_selection_cells": 0,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": [],
+          "diagnostic_only_not_used_to_replace_reference": true
+        },
+        {
+          "method": "CONTAINER_DURATION_STRETCH_DIAGNOSTIC",
+          "unequal_id_cells": 47,
+          "unequal_selection_cells": 47,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": null,
+          "diagnostic_only_not_used_to_replace_reference": true
+        }
+      ]
+    },
+    {
+      "source_name": "Fire Domino",
+      "annotation_sha256": "091832849dced2154dac79f829da2d015c80c2ff90fece20d5e6da5e9d60e796",
+      "n_frames": 1612,
+      "human_columns": 15,
+      "original_mean_selection_consistent": true,
+      "formula_diagnostics": [
+        {
+          "method": "AUTHOR_FPS_ORDINAL_DIAGNOSTIC",
+          "unequal_id_cells": 0,
+          "unequal_selection_cells": 0,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": [],
+          "diagnostic_only_not_used_to_replace_reference": true
+        },
+        {
+          "method": "CONTAINER_DURATION_STRETCH_DIAGNOSTIC",
+          "unequal_id_cells": 1762,
+          "unequal_selection_cells": 1762,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": null,
+          "diagnostic_only_not_used_to_replace_reference": true
+        }
+      ]
+    },
+    {
+      "source_name": "Saving dolphines",
+      "annotation_sha256": "d3e38042f0c079804ed4e25b9ae0a1ffa9fdca5c6ab16f3bbdce99f5aad37339",
+      "n_frames": 6683,
+      "human_columns": 15,
+      "original_mean_selection_consistent": true,
+      "formula_diagnostics": [
+        {
+          "method": "AUTHOR_FPS_ORDINAL_DIAGNOSTIC",
+          "unequal_id_cells": 0,
+          "unequal_selection_cells": 0,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": [],
+          "diagnostic_only_not_used_to_replace_reference": true
+        },
+        {
+          "method": "CONTAINER_DURATION_STRETCH_DIAGNOSTIC",
+          "unequal_id_cells": 35,
+          "unequal_selection_cells": 35,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": null,
+          "diagnostic_only_not_used_to_replace_reference": true
+        }
+      ]
+    },
+    {
+      "source_name": "Car_railcrossing",
+      "annotation_sha256": "3e4690427bf94bb864e2e34454506948afa4cc2224a1befb53fb2ee4465a7b66",
+      "n_frames": 5075,
+      "human_columns": 16,
+      "original_mean_selection_consistent": true,
+      "formula_diagnostics": [
+        {
+          "method": "AUTHOR_FPS_ORDINAL_DIAGNOSTIC",
+          "unequal_id_cells": 0,
+          "unequal_selection_cells": 0,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": [],
+          "diagnostic_only_not_used_to_replace_reference": true
+        },
+        {
+          "method": "CONTAINER_DURATION_STRETCH_DIAGNOSTIC",
+          "unequal_id_cells": 50,
+          "unequal_selection_cells": 50,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": null,
+          "diagnostic_only_not_used_to_replace_reference": true
+        }
+      ]
+    },
+    {
+      "source_name": "Notre_Dame",
+      "annotation_sha256": "4ae1f67e841456c8968456d8c08d0432f892b18c6ca872b1fc399a18e364d17d",
+      "n_frames": 4608,
+      "human_columns": 15,
+      "original_mean_selection_consistent": true,
+      "formula_diagnostics": [
+        {
+          "method": "AUTHOR_FPS_ORDINAL_DIAGNOSTIC",
+          "unequal_id_cells": 0,
+          "unequal_selection_cells": 0,
+          "out_of_vector_segment_endpoints": [
+            {
+              "user_column": 2,
+              "segment_id": 14,
+              "start_ordinal_1based": 4606,
+              "end_ordinal_1based": 4612
+            }
+          ],
+          "small_original_boundary_discrepancies": [],
+          "diagnostic_only_not_used_to_replace_reference": true
+        },
+        {
+          "method": "CONTAINER_DURATION_STRETCH_DIAGNOSTIC",
+          "unequal_id_cells": 113,
+          "unequal_selection_cells": 113,
+          "out_of_vector_segment_endpoints": [
+            {
+              "user_column": 2,
+              "segment_id": 14,
+              "start_ordinal_1based": 4605,
+              "end_ordinal_1based": 4611
+            }
+          ],
+          "small_original_boundary_discrepancies": null,
+          "diagnostic_only_not_used_to_replace_reference": true
+        }
+      ]
+    },
+    {
+      "source_name": "Excavators river crossing",
+      "annotation_sha256": "78fa75262008ab77bdd4e2f232349ec7e54b74033c9254b603024fd8aa803c56",
+      "n_frames": 9721,
+      "human_columns": 15,
+      "original_mean_selection_consistent": true,
+      "formula_diagnostics": [
+        {
+          "method": "AUTHOR_FPS_ORDINAL_DIAGNOSTIC",
+          "unequal_id_cells": 1,
+          "unequal_selection_cells": 1,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": [
+            [
+              887,
+              2
+            ]
+          ],
+          "diagnostic_only_not_used_to_replace_reference": true
+        },
+        {
+          "method": "CONTAINER_DURATION_STRETCH_DIAGNOSTIC",
+          "unequal_id_cells": 89,
+          "unequal_selection_cells": 89,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": null,
+          "diagnostic_only_not_used_to_replace_reference": true
+        }
+      ]
+    },
+    {
+      "source_name": "Base jumping",
+      "annotation_sha256": "0388cf924d6420a72b0a03e3e40ee8a67eba089b3ea0bace27a32c6ff40704a4",
+      "n_frames": 4729,
+      "human_columns": 18,
+      "original_mean_selection_consistent": true,
+      "formula_diagnostics": [
+        {
+          "method": "AUTHOR_FPS_ORDINAL_DIAGNOSTIC",
+          "unequal_id_cells": 0,
+          "unequal_selection_cells": 0,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": [],
+          "diagnostic_only_not_used_to_replace_reference": true
+        },
+        {
+          "method": "CONTAINER_DURATION_STRETCH_DIAGNOSTIC",
+          "unequal_id_cells": 2862,
+          "unequal_selection_cells": 2846,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": null,
+          "diagnostic_only_not_used_to_replace_reference": true
+        }
+      ]
+    },
+    {
+      "source_name": "Jumps",
+      "annotation_sha256": "f56df5a38031fd58fdcd6e78a189c48ce07e0fb5c863ea1a060408c300eb16b0",
+      "n_frames": 950,
+      "human_columns": 15,
+      "original_mean_selection_consistent": true,
+      "formula_diagnostics": [
+        {
+          "method": "AUTHOR_FPS_ORDINAL_DIAGNOSTIC",
+          "unequal_id_cells": 0,
+          "unequal_selection_cells": 0,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": [],
+          "diagnostic_only_not_used_to_replace_reference": true
+        },
+        {
+          "method": "CONTAINER_DURATION_STRETCH_DIAGNOSTIC",
+          "unequal_id_cells": 900,
+          "unequal_selection_cells": 900,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": null,
+          "diagnostic_only_not_used_to_replace_reference": true
+        }
+      ]
+    },
+    {
+      "source_name": "Scuba",
+      "annotation_sha256": "04601df2f1fd25a49a69ce81e296beee303b2143263dfb9dbb36643b8f0d5b00",
+      "n_frames": 2221,
+      "human_columns": 17,
+      "original_mean_selection_consistent": true,
+      "formula_diagnostics": [
+        {
+          "method": "AUTHOR_FPS_ORDINAL_DIAGNOSTIC",
+          "unequal_id_cells": 0,
+          "unequal_selection_cells": 0,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": [],
+          "diagnostic_only_not_used_to_replace_reference": true
+        },
+        {
+          "method": "CONTAINER_DURATION_STRETCH_DIAGNOSTIC",
+          "unequal_id_cells": 8,
+          "unequal_selection_cells": 8,
+          "out_of_vector_segment_endpoints": [],
+          "small_original_boundary_discrepancies": [
+            [
+              1207,
+              6
+            ],
+            [
+              1727,
+              13
+            ],
+            [
+              1735,
+              14
+            ],
+            [
+              1879,
+              7
+            ],
+            [
+              1993,
+              4
+            ],
+            [
+              2182,
+              12
+            ],
+            [
+              2195,
+              14
+            ],
+            [
+              2220,
+              15
+            ]
+          ],
+          "diagnostic_only_not_used_to_replace_reference": true
+        }
+      ]
+    }
+  ],
+  "original_annotations_changed": false,
+  "labels_resampled": false,
+  "model_outputs_read": false,
+  "all_candidate_quality_gates_unchanged": true,
+  "limitation": "Original frame selection vector is retained. Diagnostic reconstruction is not a replacement GT; small endpoint discrepancies and original interval overflow remain disclosed."
+}

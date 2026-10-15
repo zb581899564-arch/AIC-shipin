@@ -1,0 +1,28 @@
+{
+  "status": "PASS_ORIGINAL_V11_VALIDATOR_AND_ALL_BOUND_BYTES_CPU",
+  "sha256": "a0de013f0407197b129b074e3b20e159726a83ef64b2845e8f2d38998f0afad4",
+  "bytes": 7587828,
+  "labels": 160,
+  "reviews": 28,
+  "receipt_files": 13453,
+  "legacy_proof": [
+    {
+      "window_id": "complete_087af79e4b421be308d6cf6f",
+      "original_file_projection_pass": true,
+      "sorted_JSONL_projection_reproduced_failure": "canonical response is not the exact native ID projection",
+      "original_canonical_sha256": "8fb22067cd548d70687e44ac9e0c8dce5747094a95c8b131e909a1779548303b",
+      "sorted_parsed_serialization_sha256": "a3e7b7bfbca38c2d71368e54ba9cda6f3bf14e299265713afe4a2a930e63a185",
+      "original_and_JSONL_record_objects_equal": true
+    },
+    {
+      "window_id": "complete_8ab21c80e0bff423c3ce016b",
+      "original_file_projection_pass": true,
+      "sorted_JSONL_projection_reproduced_failure": "canonical response is not the exact native ID projection",
+      "original_canonical_sha256": "1190e5caaab8594b049af075221e3369870458b9aecb09680e9aa84e361e1ccb",
+      "sorted_parsed_serialization_sha256": "908307e51c532f0b927271fc81ccfe2928448a17f2cee3a199676809e205145d",
+      "original_and_JSONL_record_objects_equal": true
+    }
+  ],
+  "measured_review_wall_sec": 41.937961,
+  "planned_bytes": 4050398346
+}

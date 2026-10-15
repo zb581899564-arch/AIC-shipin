@@ -1,0 +1,29 @@
+{
+  "status": "ROOT_ACTUAL_ORIGINAL_IMAGE_RECHECK_NOT_NEW_BLIND_INITIAL",
+  "utc": "2026-10-11T10:20:46.975367+00:00",
+  "job_index": 22,
+  "window_id": "Yi4Ij2NM7U4:SLOT6:3",
+  "actual_images": [
+    {
+      "sample_index": 25,
+      "image": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\22_Yi4Ij2NM7U4_W03\\frames\\F25_O002445.png",
+        "sha256": "cf372e508ca755d5a99da4278b372412a321027e9d4bf4b447c100f124efc839"
+      },
+      "visible_static_fact": "White onion held away from the mouth, upper edge irregular; no swallowing or internal transfer established."
+    },
+    {
+      "sample_index": 61,
+      "image": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\22_Yi4Ij2NM7U4_W03\\frames\\F61_O002856.png",
+        "sha256": "c01817815f54c876e0d063c92960939dccd0123ff4c65abb2e2526d6d72ce557"
+      },
+      "visible_static_fact": "Forearm and torso obscure the board and possible knife contact; a completed cut is not visually established."
+    }
+  ],
+  "teacher_completed_content_read_at_recheck": false,
+  "root_direct64_image_review": false,
+  "root_video_view": false,
+  "candidate_prediction_exposure": false,
+  "training_admitted": false
+}

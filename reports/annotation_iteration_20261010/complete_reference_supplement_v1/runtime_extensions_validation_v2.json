@@ -1,0 +1,22 @@
+{
+  "status": "PASS_UNFROZEN_RUNTIME_AST_AND_12_CPU_MATH_TESTS",
+  "utc": "2026-10-10T18:08:47.622627+00:00",
+  "files": {
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\common.py": "99b34d411f87fd33ae4be1009bfd5ebbd646cc534d7cfacb116571c4b08781cd",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\evaluate.py": "0c836507483a7fc9fe3a9d9962608dc02ac7eba9cb9d08e761463e6f90ddb21e",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\freeze_inputs.py": "bccafa558ea36b16b04d6fecf3e708872fac15afe1761360555ec4628e19b07f",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\model_binding.py": "e99c66363d683ac813bf25e5995fc457638baea3eb3c153ced0646330c059bb2",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\native_runtime.py": "30cc62c99dc4e524fb8128a1bad27b30632098ca66e113b9e0e729bb079bb62d",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\objective.py": "118e8eb1cf631019fedf2d77f47532e6fa643cee63893a9d8c4e0761c1a509fe",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\preflight_native_inputs.py": "4c9f035c7ba4e5a53a8b99e72e6584290e2b518aaa8cfc4df94744f4931a2d8e",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\scientific_gate.py": "11b8516df794bdb7f781fd4b82ea54847a0b0ce52c9fc7e02ac57ead925851be",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\test_runtime.py": "cfde0d4713ab88c953b2d140e1dde391d3a9a1aef18ad28c6c446fdd4127e417",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\train.py": "de9191e759e346513ec583afbb29f57177a33fb3520918b57601b489ff374aa6"
+  },
+  "tests": 12,
+  "new_evaluation_reference_coverage_checked_before_gpu": true,
+  "actual_linux_cpu_preflight": false,
+  "actual_model_load": false,
+  "actual_optimizer_updates": 0,
+  "frozen": false
+}

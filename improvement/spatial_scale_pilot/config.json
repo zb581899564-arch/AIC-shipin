@@ -1,0 +1,14 @@
+{
+  "schema": "STATIC_SPATIAL_SCALE_PILOT_V1",
+  "max_input_tokens": 16384,
+  "proposal_prompt": "Create a professional {tw}:{th} crop for this source image. Choose a crop center and scale that preserve the important subjects, avoid cutting faces, hands or essential objects, remove distracting empty areas, and retain context when needed. Coordinates are integer 0..1000 in the ORIGINAL source image. Scale is a percentage of the largest legal crop width, and MUST be one of 100,85,70,55. Output only JSON: {{\"center\":[x,y],\"scale\":s}}.",
+  "rank_prompt": "Choose the best professional {tw}:{th} crop among the numbered candidate images, using the original source for context. Preserve the important subjects and essential objects, avoid awkward truncation, retain meaningful context, and avoid unnecessary empty space. Judge the actual crop composition, not simply which image zooms in most. If quality is tied, prefer the wider view. IDs are exactly the numbers shown. Output ONLY JSON: {{\"choice\":id}}.",
+  "quality_gate": {
+    "mean_iou_delta_min": 0.05,
+    "positive_items_min": 3,
+    "per_item_delta_min": -0.05
+  },
+  "training": false,
+  "rematch": false,
+  "labels_to_inference": false
+}

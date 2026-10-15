@@ -1,0 +1,94 @@
+{
+  "status": "PASS_NEW_SINGLE_GROUP_SCHEMA_TRANSPORT_AST_SHA_NO_MODEL_PENDING_ROOT",
+  "source_binding_sha256": "2da8d2a693a9c329ab1cc90436454677176fb202d7e4dd3b861335f1262ceeec",
+  "routes": [
+    {
+      "CLI": 39,
+      "job": 22,
+      "scope_core128": 128,
+      "window_core126": 126,
+      "science90": 90,
+      "parts19": 19,
+      "max_bytes": 15628,
+      "argv_units": 699
+    },
+    {
+      "CLI": 40,
+      "job": 23,
+      "scope_core128": 128,
+      "window_core126": 126,
+      "science90": 90,
+      "parts19": 19,
+      "max_bytes": 15632,
+      "argv_units": 699
+    }
+  ],
+  "freezes": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_22_23_v1\\call39\\freeze.json",
+      "sha256": "478fa6c71549cb9c101579bc55dfbd7d9e866c903e56db3305cbd4f3b21c0586",
+      "inputs": 1271
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_22_23_v1\\call40\\freeze.json",
+      "sha256": "a90804283ecd6cf4cbfcd86ee6bd57db0b1c9c878a7d6dbd5589d1b091639bbd",
+      "inputs": 1271
+    }
+  ],
+  "AST": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_22_23_v1\\audit.py",
+      "sha256": "a3d58d060af03ca4d312f4802cc1da3bb2cbf30526e4d360a149059e0a556177",
+      "bytes": 11772
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_22_23_v1\\common.py",
+      "sha256": "ccae065ae8d48653d4d0d6e58d7304c2ba81ffde9e6d5f9d73e3445dd92997ed",
+      "bytes": 4677
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_22_23_v1\\controller.py",
+      "sha256": "2758c1823ec1e41d584248d60e0830a1c5f2c10d476a3ed771604aa52a33c82c",
+      "bytes": 3383
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_22_23_v1\\engine.py",
+      "sha256": "f862fcc886a0c038f09c95d0511bab3705dfebd4378b784569bde5097047cf34",
+      "bytes": 21008
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_22_23_v1\\launch.py",
+      "sha256": "b41ae482c9b693f6165ce94dc81a94f2044adbcec1cf6433cc192d4fa35b27c0",
+      "bytes": 10611
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_22_23_v1\\observer.py",
+      "sha256": "ab442d96efce9943601d49dc5c194df8a95b8dc54d2a727aaec8061843824b23",
+      "bytes": 6656
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_22_23_v1\\prepare.py",
+      "sha256": "8b2fd4e17c2998a6a65079776f1b3c31c1de8218a9ccbde19c5a88bdc2f13080",
+      "bytes": 10362
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_22_23_v1\\prompt.py",
+      "sha256": "1b4338573fe5b4bf571842320410fb9cdd85cfc4e9a9b528ea1b2f9a2071600c",
+      "bytes": 8030
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_22_23_v1\\run_call.py",
+      "sha256": "f782b58c3e1aa15bc0f77fa21089fff864484c1b47ca751bc9233af189b4dd08",
+      "bytes": 65
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_22_23_v1\\verify.py",
+      "sha256": "9f87f25f768454b7dc896977745ce106bdea206db7f1bd8c48e6af480813cbae",
+      "bytes": 7293
+    }
+  ],
+  "new_model_calls": 0,
+  "new_decoder_calls": 0,
+  "new_processor_calls": 0,
+  "old51_24_68_repeated": false
+}

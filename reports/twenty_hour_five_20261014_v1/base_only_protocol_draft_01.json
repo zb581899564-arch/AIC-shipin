@@ -1,0 +1,29 @@
+{
+  "schema": "BASE_ONLY_SELECTION_BIAS_PILOT_V1",
+  "hypothesis": "TIME_ADAPTER_SELECTION_BIAS",
+  "calls": 12,
+  "selection": "Original effective accepted12 screen source order, first W000, no GT or new output selection",
+  "same_inputs": "12 cached native64 RGB and prior real CPU tensor/input and independent replay proofs; no new media decode or CPU processor preparation",
+  "loading": "Load unchanged originalB with actual physical8782459120 identity; disable all144 timeLoRA layers during each call; activatedbase8767123696; not unloaded",
+  "gpu_name": "aic20h_base_only12_b0_20261014_v1",
+  "max_gpu_seconds": 1200,
+  "planned_output_bytes": 20971520,
+  "deadline": "2026-10-14T11:56:40+00:00",
+  "prompt_sha256": "FROM_EXISTING_FROZEN_REGISTRATION",
+  "grammar": "original greedy0..5 segments,allow_emptyTrue,output256,input16384",
+  "optimizer_updates": 0,
+  "official_test_input": false,
+  "old_scientific_gates_changed": false,
+  "quality_scope": "already exposed external12 developer diagnostic; no blind or unconditional highlight validation",
+  "developer_gate": {
+    "full_source_mean_all_reviewer_paired_F1_not_below_old_D8": true,
+    "per_source_mean_F1_loss_at_most": 0.05,
+    "invalid": 0,
+    "native_changes_at_least_sources": 3
+  },
+  "publication_before_production": false,
+  "five_zip_goal_admission": false,
+  "source_registration_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/base_only_pilot/registration_input_01.json",
+  "current_rules": "critic/official_rules_01.json",
+  "role_of_empty": "legally allowed output, not automatically correctness or improvement"
+}

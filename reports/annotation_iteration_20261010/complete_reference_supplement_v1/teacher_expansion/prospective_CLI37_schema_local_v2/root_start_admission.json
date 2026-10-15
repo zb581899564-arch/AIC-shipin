@@ -1,0 +1,47 @@
+{
+  "status": "ROOT_APPROVED_START_SCHEMA_LOCAL_FRESH37_FIXED21_23_AFTER_ROOT20_RECOVERY",
+  "utc": "2026-10-11T07:36:06.480864+00:00",
+  "execution_binding_sha256": "26599cf55a47c2c61ad4134127267c4777c9f2e3f23a2181e61335460e964ee8",
+  "dry_run_sha256": "cdca154d3e9483c32583ab037e8e8cfa8fe66c06b76f1f06751f16720fcf22fa",
+  "negative_receipt_sha256": "9d67fdb955d5e519b3aebf7f7001d99b61232e9becdc1b4ab8e1c50b3837c52c",
+  "independent_static_review": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\plan_review\\CLI37_schema_local_v2_independent_static_review.json",
+    "sha256": "5e95917fa8dc995930816e2939326a2beb41dae8d3160d747a292e4b933aa38e"
+  },
+  "ROOT_w20_complete_independent_semantic_recovery_PASS": true,
+  "w20_semantic_recovery_receipt": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_root_semantic_recovery_receipt_v1.json",
+    "sha256": "637c81aaff183ed9777890891259ffdd2f6a72bdc44c0371d5fc5bd1f0195553",
+    "status": "PASS_ROOT20_INDEPENDENT_FINITE_REFERENCE_WITH_UNKNOWN_PRESERVED_NOT_TRAINING"
+  },
+  "w20_reference_binding": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_complete_reference_v1.json",
+    "sha256": "62998d79a1806d8510ac5c23851bf2b699c79bb4c1f44cc015e4c7a4c611dec5",
+    "window_id": "cjibtmSLxQ4:SLOT6:13",
+    "reference_kind": "FINITE_OBSERVATION_SILVER_EDITING_ADVICE_NOT_GOLD",
+    "source_sha256": "43183ef7f35bfcbc39c122be797fdee5031103862c7c7da3b9ab74d222c79c9d",
+    "source_window": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\source_window_plan.json",
+      "sha256": "09ecb28971932bd3bf8ac275c30d0a6fd534345442f2d2ec3529fa3f8e1e4b22"
+    },
+    "training_admitted": false
+  },
+  "old_teacher_scope_pass": false,
+  "old_teacher_proposal_pass": false,
+  "old_whole_CLI36_pass": false,
+  "separate_prospective_root_route": true,
+  "fixed_job_indices": [
+    21,
+    22,
+    23
+  ],
+  "CLI": 37,
+  "no38": true,
+  "no_retry": true,
+  "scientific_batch_training_admission": false,
+  "new_optimizer_updates": 0,
+  "source": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\admit_prospective_cli37_schema_local_v2.py",
+    "sha256": "b3f456b5a8fec1e86f2152e8cbb14969743e85ae773f3bcbcc116acbb26158ce"
+  }
+}

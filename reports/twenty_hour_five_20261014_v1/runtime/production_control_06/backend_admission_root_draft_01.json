@@ -1,0 +1,48 @@
+{
+  "original_frozen_consumers_ref": {
+    "bytes": 464915,
+    "relative": "permanent/frozen_consumers.json",
+    "sha256": "1e8a4a0b69642897fdc79b6b33d793f5523a2e7801a842dce1dff388dd87e57a"
+  },
+  "controller_registration_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_control_v6/registration.json",
+    "sha256": "PENDING_ROOT_FINAL_REGISTRATION_SHA"
+  },
+  "model_algorithm_changed": false,
+  "quiescent_handoff_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/prospective_cache_handoff_01/quiescent_handoff_completion_01.json",
+    "sha256": "PENDING_ROOT_ACTUAL_ALL_CHILD_NATURAL_TERMINALS"
+  },
+  "original_cache_policy_sha256": "8943b2cdd4528b88c9ce8057fa19ec3f1d5e2e2aa07c8389512b3827bb8b5c08",
+  "cache_root": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/production_stream_v5",
+  "release_leases": [],
+  "original_lease_code_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/production_stream_cache_v2/code/leases.py",
+    "sha256": "d2dba673c4187bbac4a1d9a36b4a75314f35b24150fcbfbab6ad33f70e40fa15"
+  },
+  "status": "DRAFT_NO_BACKEND_ACTIVATION_PERMISSION",
+  "first_normal_processor_replay_required": true,
+  "accept_consumers": [],
+  "required_code_refs": [
+    {
+      "bytes": 21556,
+      "sha256": "598f1b580406f1a72bbc7faea7fc61fbd3f71c478e11bad7ae26fa6e52204d32",
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/prospective_cache_backend_v1/code/backend.py"
+    },
+    {
+      "bytes": 8443,
+      "sha256": "0edfc8d9aa0ab0aca5ce9cca9cd661185563e99d842694ad766fb6bbb5894099",
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/prospective_cache_backend_v1/code/close_phase.py"
+    },
+    {
+      "bytes": 16262,
+      "sha256": "5121c49bc778ac600fa4170b86babe16abbd6f09cd6d04dc30559d6732e43707",
+      "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_phase_v1/code/source.py"
+    }
+  ],
+  "schema": "PROSPECTIVE_EXACT_CACHE_BACKEND_V1",
+  "original_graph_membership_and_roles_unchanged": true,
+  "lock_order": "CONSUMER_THEN_VISUAL_THEN_GLOBAL",
+  "producer_consumers": [],
+  "no_old_writer_active": true
+}

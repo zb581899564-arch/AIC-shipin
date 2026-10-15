@@ -1,0 +1,30 @@
+{
+  "status": "PASS_REAL_FIRST_MATCHED_CONTEXTS_AND_INDEPENDENT_CPU_REPLAY",
+  "utc": "2026-10-08T19:23:05.912215+00:00",
+  "event_denominator": 1,
+  "context_denominator": 3,
+  "proofs": [
+    {
+      "done_sha256": "768ef64cc72c0cace44ac9cd67c58b00981c14074de917d933328dba81392924",
+      "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+      "input_tokens": 13120,
+      "new_model_calls": 0
+    },
+    {
+      "done_sha256": "13c57d311b9a8ef62ad5c6e959ae837c4ce0184fe7a1f018ddbcd80fb18ba4a4",
+      "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+      "input_tokens": 13154,
+      "new_model_calls": 0
+    },
+    {
+      "done_sha256": "d447a03ef322df57586bead2ebf4f029da48e0428128c9f79def5bb0575eae78",
+      "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+      "input_tokens": 13161,
+      "new_model_calls": 0
+    }
+  ],
+  "actual_new_32B_calls": 3,
+  "CPU_replay_new_model_calls": 0,
+  "optimizer_updates": 0,
+  "semantic_identity_and_boundary_truth": "UNKNOWN"
+}

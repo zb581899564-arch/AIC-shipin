@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+    "-B",
+    "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/verify_evaluation.py",
+    "--config",
+    "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/config.json",
+    "--lock",
+    "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/source_lock.json",
+    "--expected-lock",
+    "8cbea442c9f40d881fe5892f9dfba07c7825b2f282200eebcf5a0c3279789a76",
+    "--final-receipt",
+    "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/train_01/training_receipt.json",
+    "--expected-final-receipt",
+    "c3a5a89c0a0552d449b0f78c601677b28ac8c950c00d027959665b7b03b721c9",
+    "--evaluation-receipt",
+    "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/evaluation_receipt.json",
+    "--expected-evaluation-receipt",
+    "bbd4d1a5b1ff51f3678fc592166cdf697a1311f4a20b2179f0af39b309d02b9f",
+    "--output",
+    "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/evaluate_01/independent_quality_receipt.json"
+  ],
+  "exit_code": 5,
+  "wall_seconds": 158.49728582706302,
+  "cuda_visible_devices": "",
+  "utc": "2026-10-11T12:05:04.818034+00:00",
+  "actual_process": true,
+  "result_acceptance_is_separate": true
+}

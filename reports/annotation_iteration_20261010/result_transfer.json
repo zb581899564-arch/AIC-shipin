@@ -1,0 +1,78 @@
+{
+  "route": "WINDOWS_MACMINI_PROXYJUMP_LINUX_RECEIPT_DOWNLOAD",
+  "bytes": 320525,
+  "files": {
+    "completion.json": {
+      "bytes": 295,
+      "sha256": "3fd1d9af4dc0ef4ee0aafab62044e74229689f26cb22142136a36f512f1b7407"
+    },
+    "started.json": {
+      "bytes": 839,
+      "sha256": "f74fc9b05e3aba6aebac4c916a0de7a62aaae3ff4dedfce33b071c0a98ca9a22"
+    },
+    "launch.json": {
+      "bytes": 902,
+      "sha256": "66ec6062bc4222b1416df0f9a0dbe45c1742fa20e4562dee6be88c2de8ff316e"
+    },
+    "state.json": {
+      "bytes": 100,
+      "sha256": "e13df5d1a791000259fb0796d3b6de781a937a8035a58fe6a759209a7e6fa422"
+    },
+    "vision_dependency.json": {
+      "bytes": 7167,
+      "sha256": "05fdeaac126cd8ed609f5990875e6693b6e1391c23a0fe31e2b0964a2e65c64a"
+    },
+    "train/training_acceptance.json": {
+      "bytes": 855,
+      "sha256": "401ab25285bd5791e40e4cda2655447536c092f3d25e41f97764e0f434489719"
+    },
+    "train/train_metrics.json": {
+      "bytes": 195,
+      "sha256": "ffe89f97a16ff8de6c9987d3451a22fabdd4ae0eaf9e5cfeccf82632e5dff5ab"
+    },
+    "train/optimizer_observations.jsonl": {
+      "bytes": 93677,
+      "sha256": "cce3a479e78a514ef093074ed8f258a1f3b18a6afdf8f0eca79a243f6c63dd36"
+    },
+    "new_predictions.jsonl": {
+      "bytes": 50965,
+      "sha256": "c2714ca7241559845b4e93118985a53ae4b43b7caa7ac7068611d6d198f864d3"
+    },
+    "base_predictions.jsonl": {
+      "bytes": 50985,
+      "sha256": "f6ecb80e4e3f12337c87d449bb94b75b5a2a0452bea57f1c580d3ee78a7a7189"
+    },
+    "pilot_predictions.jsonl": {
+      "bytes": 50985,
+      "sha256": "d513a09e8b09b3803f14ae781f564858461c83fbd2e98b1c81f1c5d41a9b66af"
+    },
+    "production_B_predictions.jsonl": {
+      "bytes": 51065,
+      "sha256": "7ae15f1765bb16db3153e59daa04c338be3ecc790e4e350b5615759058848379"
+    },
+    "aic_ANNITER10_train_01.resource.json": {
+      "bytes": 1992,
+      "sha256": "4e02ffabda931ebdfbf550acf97aa87b9cda78aa22f38879282e83bd69809215"
+    },
+    "aic_ANNITER10_new_01.resource.json": {
+      "bytes": 2130,
+      "sha256": "d157be62fa9bf42af8450daee0845023307de7f51f6cb5776fa4d40767b92fb1"
+    },
+    "aic_ANNITER10_base_01.resource.json": {
+      "bytes": 2028,
+      "sha256": "9f34993517b590aa47a6456f3ce72c8b98ea0998456125c6e36cd2616f97274d"
+    },
+    "aic_ANNITER10_pilot_01.resource.json": {
+      "bytes": 2141,
+      "sha256": "f5496884599a0403ff6ef4100823a66a4f54598676fdaf99d1fdb63803a6ad30"
+    },
+    "aic_ANNITER10_production_B_01.resource.json": {
+      "bytes": 2204,
+      "sha256": "d455629b931a987802cbc482baddd82d8927a2334cdc1f81cdfa66ddb82ba1ec"
+    },
+    "aic_ANNITER10_vision_01.resource.json": {
+      "bytes": 2000,
+      "sha256": "6e486619915cafaf098b792ac055477c9f4fc424779f85e4f3e64df129f61a49"
+    }
+  }
+}

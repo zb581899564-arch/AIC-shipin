@@ -1,0 +1,32 @@
+{
+  "utc": "2026-10-15T00:36:53.124344+00:00",
+  "host": "inspur-NP5570M5",
+  "disk": [
+    943412031488,
+    822137700352,
+    73274720256
+  ],
+  "memory": "MemTotal:       131643236 kB\nMemFree:        16214128 kB\nMemAvailable:   123576676 kB\nBuffers:          768428 kB\nCached:         105323444 kB\nSwapCached:       152932 kB\nActive:         92011892 kB\nInactive:       16081004 kB\nActive(anon):     536996 kB\nInactive(anon):  1518216 kB\nActive(file):   91474896 kB\nInactive(file): 14562788 kB\nUnevictable:          12 kB\nMlocked:               4 kB\nSwapTotal:      134217724 kB\nSwapFree:       131491580 kB\nDirty:               648 kB\nWriteback:             0 kB\nAnonPages:       1952716 kB\nMapped:           311024 kB\nShmem:             54160 kB\nKReclaimable:    2501172 kB\nSlab:            3393836 kB\nSReclaimable:    2501172 kB\nSUnreclaim:       892664 kB\nKernelStack:       26284 kB\nPageTables:        47416 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    200039340 kB\nCommitted_AS:   13755844 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:      310508 kB\nVmallocChunk:          0 kB\nPercpu:           117120 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:     5993320 kB\nDirectMap2M:    80683008 kB\nDirectMap1G:    49283072 kB\n",
+  "active_commands": [
+    "    PID    PPID STAT %CPU   RSS COMMAND",
+    "   2615       1 Sl   23.4 94788 /opt/teamviewer/tv_bin/teamviewerd -d",
+    "4136510    1316 Ss    4.0  8832 sshd: inspur [priv]",
+    "2624347       1 Ssl   1.9 219456 /opt/todesk/bin/ToDesk_Service",
+    "   1136       1 Ssl   1.7 10292 /usr/lib/policykit-1/polkitd --no-debug",
+    "   3840    3637 SLl   0.9 72884 mongod --keyFile /data/mongodb.key --replSet rs0 --auth --bind_ip_all",
+    "   1115       1 Ss    0.7 145528 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only",
+    "   4869    4654 Ssl   0.6 672332 /usr/bin/gnome-shell",
+    "2923483    4654 Ssl   0.6 35148 /home/inspur/codex-network-test-20261013/easytier-core -c /home/inspur/codex-network-test-20261013/direct-test.toml --rpc-portal 127.0.0.1:15889 --console-log-level warn",
+    "   5245    4855 Sl    0.5 54828 /opt/todesk/bin/ToDesk",
+    "      1       0 Ss    0.4  9272 /sbin/init splash",
+    "   1117       1 Ssl   0.4 10448 /usr/sbin/NetworkManager --no-daemon",
+    "1284919 1244689 Z     0.3     0 [python] <defunct>",
+    "   1290       1 Ssl   0.2 43552 /usr/sbin/tailscaled --state=/var/lib/tailscale/tailscaled.state --socket=/run/tailscale/tailscaled.sock --port=41641",
+    "   3639    3468 Ssl   0.2 42188 mysqld --default-authentication-plugin=mysql_native_password",
+    "    595       1 S<s   0.1 52712 /lib/systemd/systemd-journald"
+  ],
+  "gpu": "0, NVIDIA RTX 6000 Ada Generation, 186, 0\n",
+  "new_model_calls": 0,
+  "retained_media_native": 4,
+  "adopted_plan_views": 32
+}

@@ -1,0 +1,63 @@
+{
+  "control_bytes": 11223,
+  "control_sha256": "28183bd2b9d0cecaf8ae614c10d56c890550a29d05d78ebc18f389317eab2b4c",
+  "result": {
+    "status": "PASS_ONE_COMPLETED_SMOKE_EXACT_STORAGE_PROBE_NOT_PRODUCTION_FIT",
+    "source_path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/local_boundary_v2/cpu_01/SMOKE_ORIGINAL_SCREEN_001.start/encoded_tensors.pt.gz",
+    "source_sha256": "0b2e1a5cc4a65d57e9a2c907c9191650e50de9d3375a48c588eaffa164f29efd",
+    "source_gzip_bytes": 40216453,
+    "logical_tensor_bytes": 236113128,
+    "new_dictionary_gzip_bytes": 26505640,
+    "new_dictionary_sha256": "c065958fc1665c9d322d64ac6f8c48e9969518be7f66935447699bdb2df75488",
+    "ratio_new_to_source_gzip": 0.6590745335000081,
+    "per_tensor_report": {
+      "input_ids": {
+        "storage": "ORIGINAL_TORCH_GZIP",
+        "reason": "NONPIXEL_TENSOR_ORIGINAL"
+      },
+      "attention_mask": {
+        "storage": "ORIGINAL_TORCH_GZIP",
+        "reason": "NONPIXEL_TENSOR_ORIGINAL"
+      },
+      "pixel_values_videos": {
+        "storage": "PIXEL_UINT8_BIT_LUT_V1",
+        "block_unique_counts": [
+          256,
+          256,
+          256
+        ],
+        "original_numeric_dtype": "torch.float32",
+        "model_precision_changed": false,
+        "original_payload_bytes": 235929600,
+        "indexed_payload_bytes": 58985472
+      },
+      "video_grid_thw": {
+        "storage": "ORIGINAL_TORCH_GZIP",
+        "reason": "NONPIXEL_TENSOR_ORIGINAL"
+      }
+    },
+    "pixel_tensor_shape": [
+      38400,
+      1536
+    ],
+    "pixel_tensor_dtype": "torch.float32",
+    "packing_seconds": 2.4930276377126575,
+    "write_seconds": 1.1605629408732057,
+    "load_compare_seconds": 5.286677570082247,
+    "process_peak_RSS_KiB": 1237940,
+    "all_actual_tensor_keys_dtype_shape_stride_alias_and_bitbytes_roundtrip_exact": true,
+    "source_file_body_reads": 1,
+    "source_RGB_or_media_reads": 0,
+    "processor_or_model_calls": 0,
+    "original_source_writes_or_deletes": 0,
+    "model_precision_changed": false,
+    "production_fit_claim": false,
+    "CUDA_initialized": false,
+    "torch_version": "2.5.1+cu124",
+    "code_sha256": {
+      "codec.py": "6cb9787228f59b941ac8bfd6d4ca9f776347081b86bfe7bd3809a3de3332a423",
+      "probe_actual_smoke.py": "43dc6595ea8bc9cab214fb918f30c14ad6b6314a771139afd80014ff3591d0d4",
+      "pixel_dictionary.py": "66283d5ad92abdfaff8f0daaf4bad143953570c54fc1b285de364b814c9904bf"
+    }
+  }
+}

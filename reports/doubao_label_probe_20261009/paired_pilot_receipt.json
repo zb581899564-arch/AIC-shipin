@@ -1,0 +1,32 @@
+{
+  "utc": "2026-10-09T07:29:19.088885+00:00",
+  "status": "PASS_EIGHT_PILOT_CANDIDATES_MERGED_WITHOUT_CHANGING_TEACHER_COORDINATES",
+  "rows": 8,
+  "training_started": false,
+  "teacher_boxes_modified_by_merge": false,
+  "unobserved_frames_auto_negative": false,
+  "source_videos": 1,
+  "output": {
+    "path": "G:\\ai\\AIC视频\\reports\\doubao_label_probe_20261009\\paired_pilot_labels.jsonl",
+    "bytes": 13521,
+    "sha256": "0f0042399615bf0a7bac0236ae925bd4d8e0b3b4e84c8097a63d1b2983ed1735"
+  },
+  "inputs": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\doubao_label_probe_20261009\\input\\keyframes_v1\\manifest.json",
+      "sha256": "4fdbf0ccde56d1e1bf47c935d72ca8b15e113a07e9935fba75ca2f8279685b14"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\doubao_label_probe_20261009\\raw\\image_v3\\crop_keyframes.json",
+      "sha256": "b18c00dc8386a89df9307396066f3c2bddf0ebe71ccdd878252a2fc9b713e4b1"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\annotation_pilot_01\\gemini_labels.jsonl",
+      "sha256": "0d8c7dceb8652d3799c588b59d2eea753040ceb4504b02d1e58ff4a69abf8d2c"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\doubao_label_probe_20261009\\highlight_comparison.json",
+      "sha256": "388806cbffcb3a62e8e2edf0f18e6e1f8e2dec84fb453199f9c417811e4c9634"
+    }
+  ]
+}

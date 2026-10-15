@@ -1,0 +1,85 @@
+{
+  "status": "PASS_INDEPENDENT_FINITE_SCIENTIFIC_STOP_RAW_AGGREGATE_AND_ACCOUNTING",
+  "utc": "2026-10-08T23:13:27.408173+00:00",
+  "source_lock_sha256": "212b0f9a2b66f7837d0f29572e2af2ffdc4044ae3fb5cd0b00718b6cb032da48",
+  "frozen_files": 18607,
+  "raw_reconstructed_records": 104,
+  "source_groups": 96,
+  "windows": 112,
+  "new_developer_calls": 102,
+  "exact_original_calls_reused": 10,
+  "accepted_CPU_done_SHA_count": 102,
+  "developer_CPU_receipt_sha256": "181b5a4a8f013ea0b8f5dbdd8984b259b0c5968cd5bcb0a55225e2982ed58b43",
+  "all104_Q_minus_B0": {
+    "mean": 0.0028675084249248947,
+    "ci95": [
+      -0.03560765390434146,
+      0.038973738491221696
+    ],
+    "resampling_units": 96,
+    "point_estimator": "VIDEO_MACRO_RECOMPUTED_AFTER_SOURCE_GROUP_RESAMPLE",
+    "draws": 10000,
+    "seed": 20261009,
+    "CI_is_report_only": true
+  },
+  "expanded72_Q_minus_B0": {
+    "mean": -0.011370797431947438,
+    "ci95": [
+      -0.05964563371762155,
+      0.03140317901040649
+    ],
+    "resampling_units": 72,
+    "point_estimator": "VIDEO_MACRO_RECOMPUTED_AFTER_SOURCE_GROUP_RESAMPLE",
+    "draws": 10000,
+    "seed": 20261009,
+    "CI_is_report_only": true
+  },
+  "changed_native_sets": 40,
+  "groups_down": 16,
+  "original_fixed_gate_pass": false,
+  "report_sha256": "6b20ec2f62906bc24f5be09390703194632d08a0cff3ad08d439f9efc4f6ceb9",
+  "scientific_stop_sha256": "076311b4da5fd4083f025f563d1002302d88f38cecbeeecafbce14d9771179ee",
+  "resources": {
+    "nontest": {
+      "sha256": "64295b8df181605eacc894fb849dd3f0680193e9c5aae44b8671fba242bcb937",
+      "charged_seconds": 175.13144869171083,
+      "unique_ledger_match": true
+    },
+    "developer": {
+      "sha256": "fff5e42ea88ec3fe61af67cfe8f9b15700a1569bd577bec0ea972e9508ca1cba",
+      "charged_seconds": 710.77324480284,
+      "unique_ledger_match": true
+    }
+  },
+  "ledger_lines": 163,
+  "historical_offset_preserved": 7200,
+  "nontest": {
+    "video_records": 8,
+    "prediction_frames": 449,
+    "checks": {
+      "strict_loader_ok": true,
+      "video_record_set_exact": true,
+      "selected_key_set_exact": true,
+      "ratio_fields_exact": true,
+      "frames_sorted": true,
+      "provenance_key_set_exact": true,
+      "provenance_boxes_match_predictions": true,
+      "provenance_all_legal": true,
+      "provenance_sources_allowed": true,
+      "archive_single_file": true,
+      "archive_roundtrip_exact": true
+    },
+    "zip_bytes": 1961,
+    "zip_sha256": "203344b3d6f8185cb75f664d8c096799ab91f7ea08ba0468a9ac1faa3138ef72",
+    "only_non_test_package": true
+  },
+  "new_decoder_processor_calls": 0,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "new_final_426_ZIP": false,
+  "best_existing_B_score": 37.63,
+  "official_new_score": null,
+  "quality_truth": "UNKNOWN",
+  "finite_registered_input_mechanisms_exhausted": true,
+  "private_receipt_sha256": "a05f23057153e7782d100a42c0c45e58d07cc05664734d33ead7fdbd0585fede"
+}

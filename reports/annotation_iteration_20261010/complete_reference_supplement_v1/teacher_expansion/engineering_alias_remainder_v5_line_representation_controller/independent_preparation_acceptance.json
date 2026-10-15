@@ -1,0 +1,69 @@
+{
+  "status": "PASS_INDEPENDENT_EXACT_LF_CPU_PREPARATION_NO_AGY",
+  "utc": "2026-10-10T23:07:52.880939+00:00",
+  "AST": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v5_line_representation_controller\\common.py",
+      "sha256": "2a1f3d37f9374edac955fa4f2a0f9d31e970cacb6fc38405f3bfa0fe5a4171ea"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v5_line_representation_controller\\controller.py",
+      "sha256": "837b03e221116dfd8a1a681d166e168fb36ffc8a47c958810943916be486651f"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v5_line_representation_controller\\cost.py",
+      "sha256": "97687813453891e07ac6c8314364d1b8eaa9fa985f29080fd6f27e2de455a084"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v5_line_representation_controller\\engine.py",
+      "sha256": "2b599c41b0932d48848c0df2d4b65f134208f8d1751109e88461c52431b63bb9"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v5_line_representation_controller\\observer.py",
+      "sha256": "afd46f066e1b72719b8a9a63d717263bca6aa82b41e6e2b168a32fece90eaf45"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v5_line_representation_controller\\original_engine.py",
+      "sha256": "c22b9bda70e60226e8dfd00bd2858020fe9fca2c48540dc2b6523a741a3ec2f2"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v5_line_representation_controller\\prepare.py",
+      "sha256": "57c59a4210a0c0ac153c5fccdd100836f6e2ea2f6e19e05f0729b89a1e4d2ba1"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v5_line_representation_controller\\progress.py",
+      "sha256": "3523df0f898135c916708707f85fdfd8ad614911d8f8eb10dff4bf2de6f6fbfb"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v5_line_representation_controller\\reconstruct.py",
+      "sha256": "402dbc75d17ac3faf7b131dfad347eea992c734d1e156960e26dd7a6456655c9"
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v5_line_representation_controller\\verify.py",
+      "sha256": "73bc1cf009c6226928a9861579ba05018e4f603ff2c7d7aa9643344a53cd5b1e"
+    }
+  ],
+  "execution_binding_sha256": "5b591d630298d48e8ecb0a0fcb707ff18b0e72acd513a6a909065e9a0d2b5dd8",
+  "dry_run_sha256": "17442cfcb4d61b8a406059c165dcc6fccc0a275989915d74e54192f1edfde01a",
+  "all_prior_frozen_input_count": 1211,
+  "exact_two_representation_source_substitutions_verified": true,
+  "in_memory_negative_cases": [
+    "minus1",
+    "plus1",
+    "wrongbytes",
+    "toolERROR",
+    "range",
+    "wrongACK",
+    "wrongorder",
+    "mediaERROR"
+  ],
+  "no_plus_minus1_tolerance": true,
+  "synthetic_cases_not_actual_observation_evidence": true,
+  "original_actual34_terminal_not_yet_admitted": true,
+  "root_gate_absent": true,
+  "no35_36_started": true,
+  "no37": true,
+  "new_AGY_or_model_calls": 0,
+  "new_video_decode": 0,
+  "cash_cost": "UNKNOWN_NOT_ZERO"
+}

@@ -1,0 +1,141 @@
+{
+  "stage": "STOP_POSITIVE_CONFIRM_REJECTED",
+  "baseline": "TEMPORAL_VERIFY_USER40.46",
+  "baseline_zip_sha256": "86593725c6bad919dc0d342fe98ad65e489a13a6e492da5de3afd247a3226543",
+  "candidate": "OLD_EXPLICIT_KEEP_PLUS_POSITIVE_EVIDENCE_NEW_ADMISSION",
+  "actual_new_model_calls": 81,
+  "actual_new_media": 4,
+  "actual_new_decodes": 4,
+  "actual_new_vision_processor_calls": 56,
+  "actual_new_zips": 0,
+  "production_admitted": false,
+  "old_successful_work_repeated": 0,
+  "old_failed_gates_unchanged": true,
+  "dev_complete_sources": 4,
+  "dev_sources_previously_exposed": true,
+  "dev_complete_new_candidate_denominator": 10,
+  "current_readonly_proposal_inventory": "proposal_inventory_02.json",
+  "old_goal": "complete",
+  "old_aic": "deleted",
+  "active_protocol": "protocol_v2.json",
+  "preexecution_target": "Every novel native part outside baseline; no baseline evidence endorsement",
+  "launch_receipt": "deployment_launch_04.json",
+  "linux_root": "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1",
+  "registration_sha256": "7a72863ffb832f8583d0ad7eb23212afeeea54d34801b053729e90541b8226dd",
+  "active_protocol_sha256": "8736442639beb692eecfd8f3a83404f9c012575f002653e5bdc3cf7811fc00d2",
+  "parent_CUDA": "0",
+  "actual_first_input_QA": 10,
+  "actual_first_output_QA": 10,
+  "dev_conditions": {
+    "full_group": true,
+    "macro_F1_not_lower": true,
+    "macro_recall_gain": true,
+    "every_source_loss_within_gate": true,
+    "macro_precision_not_lower": true,
+    "all_rater_recall_retained": true,
+    "all_baseline_native_frames_retained": true,
+    "real_changed_sources": true
+  },
+  "dev_macro": {
+    "f1": {
+      "baseline": 0.21729596061811673,
+      "baseline_exact": "50245948511994918944931088846444478001588916222663379933146667929243802887949850984745159629396052126983043/231232777494188429013876601193936958892478520847854829009090940272902250331179326682350070710378765554160000",
+      "augmented": 0.22412033471209655,
+      "augmented_exact": "16518431355139971744472078197688671921914826860473719336042923482823354973254605597639290993950523858137177842690288413474599806784652099489775966531/73703403023913183119843231374321784648158830520467512046809007835500355579588621277454976181233009032960764250733014535643841747484221644362511256960",
+      "delta": 0.0068243740939798155,
+      "delta_exact": "28094340671896434785806731469341059771487809226866491622685703049197735617495168993741457346836369431441900616559479974510339098655614849033484228496856703216403296247/4116764451216136808116910501956747944984030593425406571081940461726299250367192264745718906581946666276813143406901446112413407690090927806560184896243184654887170610000"
+    },
+    "recall": {
+      "baseline": 0.40364010325944977,
+      "baseline_exact": "491589060740470805741089895056217321317162761424127568167/1217889542616853539183365489287797759321263947236647040000",
+      "augmented": 0.4329579405658602,
+      "augmented_exact": "263647474104045140983171747333764942723106386619846682761/608944771308426769591682744643898879660631973618323520000",
+      "delta": 0.02931783730641039,
+      "delta_exact": "58109271844683458451323/1982044965914923595904000"
+    },
+    "precision": {
+      "baseline": 0.15091913416061745,
+      "baseline_exact": "148631695765786977/984843284401592000",
+      "augmented": 0.1538992612655214,
+      "augmented_exact": "1266344962343937403593/8228401825523519581760",
+      "delta": 0.0029801271049039665,
+      "delta_exact": "8026724204481089871/2693416730874553684000"
+    }
+  },
+  "dev_decisions": {
+    "UNKNOWN": 7,
+    "KEEP": 3
+  },
+  "dev_GPU_charged_seconds": 293.44747891742736,
+  "dev_completion_receipt": "dev_completion_receipt_06.json",
+  "fresh_confirmation_in_preparation": false,
+  "actual_new_media_bytes": 41763431,
+  "actual_new_native_clock_measurements": 4,
+  "fresh_media_receipt": "fresh_media_launch_13.json",
+  "fresh_chain_receipt": "fresh_chain_launch_15.json",
+  "fresh_registration_sha256": "feb315fbf662e79dbe3119ed041a373451fdf575aab44cfcb440d3f275d2e000",
+  "fresh_actual_new_model_calls": 0,
+  "fresh_actual_reference_sources_accepted": 4,
+  "fresh_scientific_result": "FAILED_FIXED_EIGHT_GATE_CONFIRMATION",
+  "fresh_primary_inputs_completed": 28,
+  "fresh_RGB_sources_completed": 4,
+  "fresh_actual_first_input_QA": 71,
+  "fresh_actual_model_calls": 71,
+  "fresh_original_chain_status": "ENGINEERING_FAILED_BEFORE_FIRST_INPUT_QA_ROLE_VS_SOURCE_ORDER",
+  "fresh_remaining_recovery_receipt": "fresh_remaining_recovery_launch_19.json",
+  "fresh_remaining_recovery_registration_sha256": "dc3de5b47ad949c1be45b6c53b082828c7d3c101b94f8dd1984c0e22548c0a83",
+  "fresh_remaining_state": "fresh_01/confirm/chain_02",
+  "fresh_engineering_failure_evidence": "fresh_remaining_recovery_diagnosis_17.json",
+  "fresh_first_input_QA_status": "PASS_FIRST_INDEPENDENT_FRESH_B0_INPUT_QA_PRE_GPU",
+  "fresh_GPU_job": "recall_positive_fresh4_b0_20261015_v2",
+  "fresh_status_checked_utc": "2026-10-15T05:17:48.366050Z",
+  "fresh_B0_completed_calls": 28,
+  "fresh_actual_first_output_QA": 71,
+  "conditional_fixed40_code": "improvement/recall_positive_fixed40_v1",
+  "conditional_fixed40_review": "positive_fixed40_upper_bound_review_21.md",
+  "fixed40_registered": false,
+  "fresh_conditions": {
+    "full_group": true,
+    "macro_F1_not_lower": false,
+    "macro_recall_gain": true,
+    "every_source_loss_within_gate": false,
+    "macro_precision_not_lower": false,
+    "all_rater_recall_retained": true,
+    "all_baseline_native_frames_retained": true,
+    "real_changed_sources": true
+  },
+  "fresh_macro": {
+    "f1": {
+      "baseline": 0.3311046566788728,
+      "baseline_exact": "34658959747765155181860196087820005455030547673694249440965275957783533590543588935836305905059366619252009774357675717804590459401714160856911043122306175589/104676751137872722279116744619431454325533697437251791629017031859173132734414593831197077052456229507907510521227187313334758282492176238405764483012868563400",
+      "augmented": 0.3278489721142444,
+      "augmented_exact": "29700270301098456620016531373783804912873841514588115363668454639474339699593111707722311738790008418387594074464695963824262826949078970854649988698739797/90591317427552906930118907860466909881971477204247561504879473004728315985569728861996322084537813041375507974908023587860514953885157779566798504732395200",
+      "delta": -0.003255684564628388,
+      "delta_exact": "-92096028704165858114074983642272353121817832838611362089101306227206213093658070291816746768843044602482374305351700629214156068298863160311923814090070986736456535944025181804156129586727753107839746715163/28287761567797320387181682537499130572312301205853231153492069419029112275145669447489264220336081624277630080028342116539715177857840664016342441655897154185916733918604545462380576529836007975162970877170880"
+    },
+    "recall": {
+      "baseline": 0.6379196558992273,
+      "baseline_exact": "23976976332411407256927838903504713341/37586200880756483025922612407366720000",
+      "augmented": 0.7347377950792847,
+      "augmented_exact": "4280669776049865382284450299365136197/5826118929390236737900212897163840000",
+      "delta": 0.09681813918005748,
+      "delta_exact": "277068663561021345812059/2861743325243455340028000"
+    },
+    "precision": {
+      "baseline": 0.23902085463363829,
+      "baseline_exact": "9184483710167831574553/38425449211306037637200",
+      "augmented": 0.21247523800591409,
+      "augmented_exact": "10266427341415653628651/48318229633562735180400",
+      "delta": -0.026545616627724197,
+      "delta_exact": "-1274770665658354603935657204091/48021889396495931083552080161070"
+    }
+  },
+  "fresh_positive_decisions": {
+    "KEEP": 6,
+    "DROP": 2
+  },
+  "fresh_added_native_frames": 571,
+  "fresh_GPU_charged_seconds": 1415.27331233304,
+  "fresh_completion_receipt": "fresh_completion_receipt_20.json",
+  "all_16_external_sources_now_exposed": true
+}

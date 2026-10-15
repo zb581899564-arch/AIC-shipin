@@ -1,0 +1,35 @@
+{
+  "status": "PASS_NEW_W01_COMPLETE_FINITE_SILVER_REFERENCE_NOT_TRAINING_BATCH_ADMISSION",
+  "utc": "2026-10-10T15:19:41.553940+00:00",
+  "verified": {
+    "window_id": "kLxoNp-UchI:SLOT6:1",
+    "role": "train",
+    "source_group": "youtube:kLxoNp-UchI",
+    "admitted": "True",
+    "known_keep_seconds": "85861/7500",
+    "known_no_seconds": "139139/7500",
+    "unknown_seconds": "0"
+  },
+  "reference": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\00_w01_complete_reference.json",
+    "sha256": "09ba0ffa9d4772e7b0673a9089061af423780238a279ea408aa75034d2747015"
+  },
+  "original_contract": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\silver_contract.py",
+    "sha256": "6b9e7a8603d7267fac4e119d5b7817fc91a1d15ec44d9c965be065922b9475ba"
+  },
+  "original_lawful_observation_audit": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\teacher_attempt01_http1\\audit.json",
+    "sha256": "194eb63e3239a02dca9e327d868d74cdc6ac40da9eb10ff5becb16a0875e6cf5"
+  },
+  "prior_v3_preserved": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\independent_highlight_pilot_v3\\acceptance.json",
+    "sha256": "29cb07a037bcaf199367f03028c7bc469a905997b6ec0c953f97796233fb1199"
+  },
+  "historical_exposure_declared": true,
+  "teacher_semantics_not_auto_labels": true,
+  "qualified_windows": 1,
+  "training_batch_admitted": false,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0
+}

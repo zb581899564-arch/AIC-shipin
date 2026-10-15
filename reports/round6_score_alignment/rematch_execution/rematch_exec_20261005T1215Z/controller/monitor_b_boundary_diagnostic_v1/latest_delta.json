@@ -1,0 +1,276 @@
+{
+  "utc": "2026-10-08T19:59:32.822622+00:00",
+  "previous_utc": "2026-10-08T19:44:28.586009+00:00",
+  "added": 832,
+  "changed": 836,
+  "net_bytes": 323499377,
+  "done_count": 42,
+  "previous_done_count": 31,
+  "owned_process_count": 0,
+  "current_stage": "BOUNDARY_DIAGNOSTIC_COMPLETE_AGENT_CONTINUES_FROM_EVIDENCE",
+  "failure_count": 0,
+  "all_done_bound_SHA_pass": true,
+  "source_lock_sha256": "361e94f665be087d0bc81001122e05eecb8bdb33047799da488df5e3c69b5463",
+  "completion": {
+    "status": "PASS_REAL_MATCHED_32B_BOUNDARY_DIAGNOSTIC_AND_CPU_ACCOUNTING",
+    "utc": "2026-10-08T19:56:55.665808+00:00",
+    "events": 16,
+    "context_attempts": 42,
+    "engineering_failures": 0,
+    "all_contexts_unique_temporal_overlap_events": 3,
+    "spread_within_original_sample_gap_events": 3,
+    "independent_weak_direction_events": 2,
+    "external_weak_event_macro_delta": -0.11320021399718093,
+    "reference_coverage_and_semantic_truth": "UNKNOWN",
+    "stability_is_not_boundary_truth": true,
+    "training_admitted": false,
+    "new_optimizer_updates": 0,
+    "new_8B_calls": 0,
+    "actual_new_32B_calls": 42,
+    "actual_GPU_charge_seconds": 1998.8051604395732,
+    "new_CPU_acceptance_model_calls": 0,
+    "other_context_CPU_proofs": [
+      {
+        "done_sha256": "13e07199011655b928b6705ea514312c62a1ba2ca679997eef6d5100b5bba8ea",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13118,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "9dc11a3825f2de3fc61dc59772653c8058ce04f349bb774ad94d7fec7a367a17",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13161,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "fb00edb6a44d05e2545f84715fe60444eb80fda104a8327a5d752f4c68dba1c6",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13167,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "011a21b321f8e3382b3b87bdae97c931b318fa9b2f2c9d75fbc62a750359b21d",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13124,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "e7cca838f2af3327594a6fe0dc84f46eb92be69dba58b36f04abd46c4b48774b",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13194,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "222d05e231942ac479230d1985eb51459ffb6d0c1fd06207608594db95d200de",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13194,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "e779d883d0d424a7a48c4a4fe0e6a03cf44b6157f62dde5405958dd370f5c6e7",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13253,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "f84c3b586f08bf3d10e4551d8c00810f6a0e3c7537afc702955e922812ea15a2",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13295,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "a025e0c66445095293b07528ace956bbc7801de984e82f25d2d9be2a03b67b01",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13297,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "70634b9efc9bd8255ec476d1f3b0576d6322ea12071a2baa24bc1537bc977a91",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13199,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "076dd159f659e55aa2b37d743b1b912fdffc2057c87db6581bf4099217ac1058",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13246,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "7736d44c2c8dadf7556ddcc0a8a58c43d4969ea1959c9dec22ef01b05db5177c",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13246,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "3fdb55d4145d2b92ae303b2120798a0db670e935bc2dc7c916db370f743f52a7",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13236,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "989058ed26bc58cd41c3f882926ee343fa4408d6e49abf7bea8c7f3f37bdc3a7",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13307,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "ff7da1e2523d7744eda820091bfce80181da03838f383a8c2d0f9f92ab77dba7",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 14273,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "ae32962070d6bfe6df345c854d3f25bda5686bb7b66ff5bda1989541ca8ffedc",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 14309,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "66790a11738462510ce2b9eb3c7e24ea33a09d2fe3093fd1fce264dea066790b",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 14314,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "7f44a65a4434acc80d07a46571d8859935b1f74c514d4fbdc167d7f11e8afd7e",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13172,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "40153cc77e1fdb3760b982b1b68c61b72b0cb1c8a80acbf9379cfbc2148e88e2",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13213,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "e09e4dc21ec4749fe3437b34f4a9ebd0c39aa67a15c40f496876d29af01d682e",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 15946,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "1e110d7111ffdd86a72dc12f009721f416b5d123e4d4e7465bd228184babfbb2",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 16001,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "68dcd9001bce01784bcf7309c0a7be806393f0bee21e11e9586f7180b93f72eb",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13073,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "b9b0447daa2a749d27d781f570fdba465b42f85fd9f69841721545bcf824b37f",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13128,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "1eb2f74c9ff983c655196b5453a32bda183a3c317e1f99a8834090c75c1398df",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13208,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "d7116f57a8c5835f1340625eea6d14862114b34b42a061b11eeefbe8121738da",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13266,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "50654da5cabb9ae746a90b619fc8385ae16075c4472f65c56d6d420a1cf11515",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13265,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "15d42964dfedb566a48cf1f34d2ea8b19341f1b42dbd7787b04636eeb530366d",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13306,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "b664014510250ab23d5b59e326057bf133c61f3d627e3e24585109b321e9f3f6",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13371,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "6b74cec5f11f2a978f43dd7214819b6ae01a30eeae68d39a6dfa270704e6b804",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13104,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "8cc25a689750e12ab77893129b8da8a8d9d621bd5c372dfaf542d1b28ad9b422",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13145,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "07b6d9f7e68044cfd817e6fb905be20d0bbdb1e9073bca29cc1b3b36ec1b8235",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13145,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "17da872cbc8d678fcb28c612b1b3bfaa10be9be65e96d09497faed5b48a4fd53",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13193,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "419730ee075f0c3dd01702b05299a1ae50681688ea67cbe6a1162f96692853fd",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13256,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "46ed6d3c2078dd03bc4ae938852b714abce470dd06f92ec071f2c5eddb601605",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13310,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "b2a60819e4008141d0d7d135525942fc0c2a3efed449ab92273132662b876c03",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13351,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "9e1e1a621bde19f1a83a494236338360c5b7e86e50b814e739197d5e9d64978d",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13353,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "ba40b63d207be862a3e0ab27c97c9f83c5d515a1108005a2904249a8b9d5d06c",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13052,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "737d117644d4b70af164e8337017a3d8283bd5a7850b2b56ea1e56d62a31b2d8",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13109,
+        "new_model_calls": 0
+      },
+      {
+        "done_sha256": "ccd21238fb4a9d1dcda6bb6f1e4a761b8a09ff8b795a24872c5b4cd40d3bb50c",
+        "source_native_PNG_RGB_HTTP_prompt_raw_validator_equal": true,
+        "input_tokens": 13109,
+        "new_model_calls": 0
+      }
+    ],
+    "first_context_CPU_proof_sha256": "63247a90c0ef6cd3d34121065c498bc74aac6f99a215cced3e54e34ef3b91423",
+    "ledger_unique_terminal_match": true,
+    "ledger_historical_offset": 7200,
+    "next": "AGENT_DECIDE_CONCRETE_BOUNDARY_REFINEMENT_FROM_MATCHED_AND_INDEPENDENT_DIRECTION_EVIDENCE",
+    "no_final_426_ZIP": true,
+    "no_user_confirmation_required": true
+  },
+  "non_atomic_component_reads": true
+}

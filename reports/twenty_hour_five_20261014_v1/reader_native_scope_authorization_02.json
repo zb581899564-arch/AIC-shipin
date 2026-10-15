@@ -1,0 +1,65 @@
+{
+  "schema": "MAIN_READER_NATIVE_TERMINAL_SCOPE_V4",
+  "status": "FROZEN_NEW_READER_SCOPE_NOT_ACTUAL_DECODE_GPU_ADMISSION",
+  "frozen_utc": "2026-10-13T21:35:27.691439+00:00",
+  "authority": "USER20H_AUTONOMOUS_IMPROVEMENT_AND_ROOT_REVIEW",
+  "source_denominator": 426,
+  "reader_version": "17.1.0",
+  "source_identity_subset_exception": false,
+  "scope": "NEW_PYAV17_READER_NATIVE_TERMINAL_SCOPE_V4_VERIFY_ORDINAL_CONTEXT",
+  "old_D8_recipe_and_clock_refs_unchanged": true,
+  "old_reader_terminal_equality_failures_preserved": [
+    78,
+    79,
+    107,
+    122,
+    159
+  ],
+  "old_equality_failure_count": 5,
+  "old_clock_incorrect_claim": false,
+  "packet_first_measurement_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/native_terminal_packet_witness_v1/run_01/completion.json",
+    "sha256": "4b753f82a818c7c10c1bc0545902e4f11b473f47bca700f01b1b2a695b82dc79"
+  },
+  "new_measurements_must_not_be_repeated": true,
+  "first_new_RGB_decode_gate": [
+    "source_bytes_and_SHA_exact_original",
+    "complete_all_original_frame_PTS_exactly_equal_old",
+    "frame_count_and_origin_exactly_equal_old",
+    "frame_geometry_exactly_equal_old",
+    "actual_last_Frame_duration_positive_in_actual_frame_time_base",
+    "last_Frame_duration_exactly_equals_first_packet_observation_duration"
+  ],
+  "new_terminal_equals_old_Nfps_required": false,
+  "new_terminal_equals_old_native_endticks_required": false,
+  "KEEP_UNKNOWN_recipe_not_changed": true,
+  "native_cut_pivot_not_applied_for_KEEP_UNKNOWN": true,
+  "new_VERIFY_context": "ORIGINAL_ELIGIBLE_SOURCE_ORDINAL_DOMAIN_WITH_ORIGINAL_64_PIXEL_IDENTITY",
+  "padding_or_resampling_old_visual64_allowed": false,
+  "failure_as_UNKNOWN_allowed": false,
+  "old_success_work_modified": false,
+  "test_GT_or_annotation_used": false,
+  "production_prepare_permission": false,
+  "production_GPU_permission": false,
+  "scientific_quality_claim": false,
+  "review_file": "critic/PYAV17_TERMINAL_SCOPE_REVIEW_16.md",
+  "previous_v3_scope_ref": {
+    "path": "reports\\twenty_hour_five_20261014_v1\\reader_native_scope_authorization_01.json",
+    "sha256": "e6ea57c5f4b0987f6cd18ef298bf4fcf8b10354b8ea1fab58280de57454159c9"
+  },
+  "new_VERIFY_timing_support_bound": "EXACT_ORIGINAL_ELIGIBLE_ORDINAL_DOMAIN_NOT_NOMINAL_SECONDS_30",
+  "nominal_B0_window_seconds_limit_is_not_new_VERIFY_timing_gate": true,
+  "original_CV_v2_or_input_v3_seconds_gate_modified": false,
+  "new_VERIFY_visual_frames_changed": false,
+  "new_VERIFY_actual_hi_not_clipped_or_fabricated": true,
+  "new_VERIFY_still_requires": [
+    "SAME_ORIGINAL64_ORDINAL_ORDER_AND_PIXEL_HASH",
+    "ALL_ORIGINAL_SOURCE_PTS_AND_IDENTITY",
+    "ACTUAL_POSITIVE_NATIVE_TERMINAL",
+    "ALL_SAMPLES_AND_NATIVE_CANDIDATE_CUTS_IN_ACTUAL_ORDINAL_SUPPORT",
+    "MAX_INPUT_TOKENS_16384",
+    "FINITE_CONSERVATIVE_KEEP_UNKNOWN_DROP_GRAMMAR",
+    "ENGINEERING_FAILURE_BLOCKS_NO_UNKNOWN_FALLBACK"
+  ],
+  "reason": "Nominal B0 seconds and actual eligible-ordinal timing support are distinct coordinates; mapping the unchanged64 pixels to physical PTS does not create a new visual window or justify a nominal30s gate."
+}

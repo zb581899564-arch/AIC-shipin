@@ -1,0 +1,56 @@
+{
+  "schema": "NATIVE_FAMILY_RISK_APPLICATION_PROTOCOL_V3",
+  "frozen_utc": "2026-10-13T21:13:44.981951+00:00",
+  "arms": [
+    "START",
+    "END",
+    "BOTH",
+    "VERIFY",
+    "VERIFY_BOTH",
+    "SOURCE_START",
+    "SOURCE_END",
+    "SOURCE_BOTH"
+  ],
+  "publication_priority": [
+    "START",
+    "END",
+    "BOTH",
+    "VERIFY",
+    "VERIFY_BOTH",
+    "SOURCE_START",
+    "SOURCE_END",
+    "SOURCE_BOTH"
+  ],
+  "publication_limit": 5,
+  "publication_order_selected_before_formal_new_model_outputs": true,
+  "distinctness_is_content_identity_not_a_quality_score": true,
+  "original_length_padding_preserved": true,
+  "old_recipe_lead_exact": "3/4",
+  "old_recipe_tail_exact": "1/2",
+  "old_recipe_extra_tail_exact": "1/4",
+  "extra_tail_condition": "ORIGINAL_LENGTH_GE_8",
+  "new_source_context_only_on_applied_changed_REFINE_side": true,
+  "source_context_not_used_for_KEEP_UNKNOWN_or_conflict": true,
+  "pair_conflict_preserves_original": true,
+  "empty_source_guard": "PRESERVE_ORIGINAL_D8_SOURCE_SELECTION",
+  "old_spatial_field_preserved": true,
+  "global_roles": {
+    "endpoint": "TIME_ENABLED",
+    "VERIFY": "TIME_ENABLED"
+  },
+  "role_selection_file": "selected_uniform_risk_role_01.json",
+  "test_content_or_leaderboard_parameter_selection": false,
+  "training_or_test_GT_read": false,
+  "old_scientific_failed_gates_changed": false,
+  "scientific_quality_claim": false,
+  "quality_status": "UNVERIFIED_EXPLICIT_RISK",
+  "official_rule_check": "critic/official_rules_01.json",
+  "official_rule_interpretation": "Uniform reproducible original-frame inference and postprocessing under current published rules, not explicit organizer special permission",
+  "source_context_reason": "Existing new views use complete SOURCE support but window-clipped applications can suppress a legitimate cross-window endpoint; preserve baseline recipe for unchanged sides and separately compare native-domain applications",
+  "source_context_risks": [
+    "Additional old fixed padding can include positions beyond the local observation view",
+    "Endpoint semantics lack reachable author highlight confirmation",
+    "No automatic gain or safety claim from retained UNKNOWN"
+  ],
+  "formal_decode_or_processor_or_model_permission": false
+}

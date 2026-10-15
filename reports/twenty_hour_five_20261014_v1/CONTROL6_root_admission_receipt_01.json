@@ -1,0 +1,36 @@
+{
+  "actual_new_model_or_processor_calls": 0,
+  "backend_admission_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_control_v6/backend_admission.json",
+    "sha256": "7ad06d2ac53cb2db11fa568ccd4ed7737daece1c8974de30dce16b805926d7e5"
+  },
+  "close_phase_admission_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_control_v6/close_phase_admission.json",
+    "sha256": "fd9eae5e8f112ab9fb589ffa57f5044dea22be0c968e574222beb9509d1da007"
+  },
+  "handoff_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/prospective_cache_handoff_01/quiescent_handoff_completion_01.json",
+    "sha256": "df9918aaa9b3caeda1c9fb7fb3cd23838d8ff7d3490710b856907d8fa9cd369c"
+  },
+  "main_execution_admission_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_control_v6/main_execution_admission.json",
+    "sha256": "8e8043b0d87df7da1855fc7f2e6bfce9788489ac7828e1be11297a8bb0bd65fc"
+  },
+  "old_CPU_input_reused": 63,
+  "old_GPU_calls_reused": 33,
+  "old_parent_held_no_resume": true,
+  "old_source_reused": 19,
+  "registration_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_control_v6/registration.json",
+    "sha256": "63cce177d3dc407c18e6ef28a5049c8bad4e1a7661d3c6fa7ddf0c69ceeff09a"
+  },
+  "remaining_model_calls": 1959,
+  "remaining_producer_consumers": 1929,
+  "remaining_sources": 407,
+  "source_phase_admission_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_production_control_v6/source_phase_admission.json",
+    "sha256": "8abbd66fe962b0a9999806390c4927fd4fc442c936eac5b2fb71ac9486abd37c"
+  },
+  "status": "PASS_ACTUAL_QUIESCENT_HANDOFF_AND_NEW_ROOT_ADMISSION_NO_NEW_COMPUTE",
+  "utc": "2026-10-14T00:22:29.329463+00:00"
+}

@@ -1,0 +1,37 @@
+{
+  "status": "PASS_ROOT_READ_SELECTED_FACTS_AND_RECHECK_CURRENT_BOUNDINGS_NOT_ALL64_CAPTION_CERTIFICATION",
+  "utc": "2026-10-10T20:32:04.968468+00:00",
+  "window_id": "-esJrBWj2d8:SLOT6:1",
+  "original_blind_review": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\12_-esJrBWj2d8_W01.independent_student64_review_v1.json",
+    "sha256": "e75139af980f4d9480449429dbe9b2a917c4c5bb0b49f6ee06afc8680ca38e56"
+  },
+  "bounded_reinspection": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\12_-esJrBWj2d8_W01.student_bounded_reinspection_v1.json",
+    "sha256": "4a24c98b2bd371924653eef175518f04b6d0cc589e309c1949f91d4cf4d692ef"
+  },
+  "original_review_preserved": true,
+  "root_read_all_selected_fresh_facts": true,
+  "actual_selected_png_rgb_pts_bindings_rechecked": 11,
+  "selected_slots": [
+    0,
+    5,
+    7,
+    15,
+    23,
+    24,
+    25,
+    31,
+    39,
+    47,
+    63
+  ],
+  "detail_qualifications": {
+    "39": "Cat and bowl/box scene core match. Fresh slot shows muzzle near/above the opening with more interior visible; original wording nose/mouth hidden in the box is too definite. Contact/ingestion cannot be concluded from this static slot."
+  },
+  "new_blind_initial": false,
+  "teacher_exposure": false,
+  "root_direct_new_images": 0,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0
+}

@@ -1,0 +1,113 @@
+{
+  "status": "ROOT_SEMANTIC_EVALUATION_ADJUDICATION_COMPLETE",
+  "utc": "2026-10-10T21:54:08.214241+00:00",
+  "window_id": "i3wAGJaaktw:SLOT6:3",
+  "candidate_prediction_exposure": false,
+  "root_read_all64_teacher_facts": true,
+  "root_read_all64_native_and_student_facts": true,
+  "all_NO_ranges_reviewed": true,
+  "selected_preteacher_event_indices": [
+    0,
+    1
+  ],
+  "unknown_local_exact": [
+    [
+      "235933/30000",
+      "556951/60000"
+    ]
+  ],
+  "consequential_unknowns": [
+    "Gray dog paw/tool highlight status at F17..19 remains unresolved; evaluation only."
+  ],
+  "evidence": {
+    "preteacher_main_review": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\15_i3w_w03_main_preteacher_review.json",
+      "sha256": "d5635f46bf58fa21394902b6048fffbda490cb814e99b7dd40dc6747c3945c69"
+    },
+    "teacher_observation_audit": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\15_i3w_w03_composed_observation_completion.json",
+      "sha256": "71eca214614e4754a02945ea4b0d5681f85f85d735c45f3051771960255b0147"
+    },
+    "original_teacher_proposal": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call06\\w15_proposal.json",
+      "sha256": "2d8ec667d272c6510ac3fc9dc55abb895230257fab21bfd8a8a94cec0e6b8ac0"
+    },
+    "original_teacher_program_bound_facts": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\call06\\w15_program_bound_facts.json",
+      "sha256": "389244668b34e89a8732ae2e079cb630ca25a32354c71d149fda4e773638aac1"
+    },
+    "composed_protocol": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\14_15_root_actual_media_composition_protocol_v1.json",
+      "sha256": "7692b2b460c405143c63109f5b0c1f8ea276dc05f3785657694ebfb153635201"
+    },
+    "original_strict_audit": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\call06\\audit.json",
+      "sha256": "8f7f6c1907d38e77407896d3292b7389a2e87804c14edb9411b3b65831983298"
+    },
+    "actual_media_inventory": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\call06\\actual_media_completion_evidence_original_strict_failed.json",
+      "sha256": "63b37ded18dfdab858b3d5dbeb099007cc0385f72e3c0175c36c5fff0e1e7028"
+    },
+    "bounded_student_reinspection": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\15_i3wAGJaaktw_W03.student_bounded_reinspection_v1.json",
+      "sha256": "d06220f6f506dd133378d11ff2524d9b6ece89aaeca55d13842002abade5dee7"
+    },
+    "bounded_student_acceptance": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\15_i3w_w03_bounded_student_acceptance.json",
+      "sha256": "87d545007cb42b8040f46b6fbb5c260d3fea2b73cc23287e19d33c63fc1d9812"
+    }
+  },
+  "differences_adjudicated": [
+    "原生初判保留灰犬工具典型图像，但实际根部接触与工具位置模糊，主控保留该短域UNKNOWN而非把它强行解释成确定操作。",
+    "学生关于完整修剪结束UNKNOWN保留；另选的白毛巾及电推状工具只作有限典型图像，没有补写剪落毛、干燥或整段步骤结束。",
+    "两件相邻典型图像事件保持各自身份与6/7编辑区间，不因最终KEEP归并为一个连续时间区间而减少真实事件数。",
+    "Original CLI32 exact tool-count/sequence audit remains REJECTED for both windows. Separate root media composition uses only its actual64native/clip/effective8 DONE and real facts/proposal;11 reads of the same frozen index are individually retained outside media, and three bare nonmedia error_message records have no known cause. No failed media tool, retry or original PASS is invented.",
+    "Teacher marks all segments NO because it requires a full long action or treats montage as ordinary. Root follows the frozen visual editorial standard: a short clear typical image can be salient without proving an entire physical service is complete. Native64 and actual effective64, not only Gemini8previews, determine student visibility.",
+    "Breed, professional role, audio absence, purpose, rest and eye movement claimed by teacher are not adopted as target facts; observed body, hands, tools and visible static image relations are used.",
+    "Every ordinary/repetitive NO range was reviewed separately; teacher decimal cut ranges do not override exact adjacent-frame editing brackets.",
+    "Towel against brown curly dog and hand/tool near lifted black-brown dog paw are two distinct short visible typical images at F03..06 and F07..10. No dryness, cut hairs, full grooming or paw treatment completion is claimed.",
+    "Teacher F19 asserts scissors trim paw hair. Actual root recheckF19 shows gray-dog lifted forepaw and lower blurred metal object, without clear contact/result. Preteacher F17..19 remains UNKNOWN; no NO/KEEP is assigned to satisfy coverage.",
+    "Partly closed eyes at boundedF31 are a static state, not proven blink movement. Commodity packaging labels and shelf movements do not become audio or purpose targets."
+  ],
+  "actual_root_observation_scope": {
+    "native_sample_indices": [
+      0,
+      2,
+      3,
+      6,
+      7,
+      8,
+      10,
+      11,
+      16,
+      17,
+      18,
+      19,
+      20,
+      44,
+      45,
+      46,
+      50,
+      59,
+      60,
+      63
+    ],
+    "student_sample_indices": [
+      6,
+      8,
+      17,
+      19
+    ],
+    "additional_postteacher_native_samples": [
+      19
+    ],
+    "read_native_static_facts": 64,
+    "read_student_static_facts": 64,
+    "read_teacher_static_facts": 64,
+    "read_bounded_student_facts": 8,
+    "root_direct64_image_review": false,
+    "root_native_video_view": false,
+    "original_Gemini_strict_failed": true
+  },
+  "reference_scope_and_reason": "Evaluation-only finite visual editorial silver from explicitly composed actual media. Clear representative dog/hand/tool images are independently adjudicated, purpose and entire service completion are not targets. Gray-dog blurred tool-contact uncertainty is retained where present. Original strict CLI32 failure remains immutable; not human gold or official quality."
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "ADAPTER_ROLE_SAME_INPUT_EXTERNAL_DEV_ABLATION_V1",
+  "registered_at_utc": "2026-10-15T06:17:22.707286+00:00",
+  "candidate": "BASE_ONLY_POSITIVE_ADMISSION_SAME_INPUT_PAIR",
+  "baseline": "TEMPORAL_VERIFY_USER40.46",
+  "baseline_zip_sha256": "86593725c6bad919dc0d342fe98ad65e489a13a6e492da5de3afd247a3226543",
+  "model_parameters": 8782459120,
+  "activated_new_admission_parameters": 8767123696,
+  "adapter_still_loaded_and_counted": true,
+  "single_factor": "BASE_ONLY_FOR_NEW_ADMISSION_TIME_FOR_PROPOSALS",
+  "hypothesis": "TIME adapter trained mainly nonempty temporal extraction targets may impair abstention in strict positive verification; test the activation role only, do not assume causality",
+  "unchanged": [
+    "original4 exposed development source identities",
+    "all10 original complete short-view explicit KEEP proposals with new native contribution",
+    "all exact original64 RGB/token inputs, prompt and grammar",
+    "original first independent input QA adopted",
+    "candidate endpoints, baseline full native frames and boxes",
+    "all original8 quality gates and all-rater paired metric"
+  ],
+  "all_sources_previously_exposed": true,
+  "source_names": [
+    "v_vfJnUQ9Tax0",
+    "v_8tlLBffNjf8",
+    "v__CMIO5R_OGA",
+    "v_voaGOm-rl9Y"
+  ],
+  "actual_new_model_call_denominator": 10,
+  "maximum_new_GPU_seconds": 1200,
+  "new_media_downloads": 0,
+  "new_decode_calls": 0,
+  "new_processor_or_prompt_encode_calls": 0,
+  "old_successful_model_or_input_QA_repeated": 0,
+  "quality_gates": {
+    "full_group_denominator": 4,
+    "macro_paired_all_rater_duration_F1_delta_min": "0",
+    "per_source_F1_delta_min": "-1/100",
+    "macro_all_rater_recall_delta_min": "1/100",
+    "macro_all_rater_precision_delta_min": "0",
+    "per_rater_baseline_recall_and_frame_retention": "no loss",
+    "minimum_sources_with_real_new_native_frames": 2,
+    "invalid_or_unknown_execution": 0,
+    "new_candidate_UNKNOWN_or_DROP_must_not_add": true,
+    "engineering_failure_is_not_EMPTY_or_UNKNOWN": true,
+    "no_threshold_search_or_confirm_retuning": true,
+    "fixed_40_KEEP_deletion": 0,
+    "fixed_40_ORDINARY_addition": 0,
+    "UNKNOWN_and_old_reference_quality_FAILED_unchanged": true
+  },
+  "confirmation_requires_new_registration_and_unexposed_sources": true,
+  "no_confirm_tuning_or_parameter_scan": true,
+  "production_admitted": false,
+  "fixed40_426_or_package_automatic": false,
+  "new_goal_or_automation": false,
+  "old_positive_confirm_STOP_preserved": true,
+  "reference_scope": "EVENT_TEXT_GUIDED_HUMAN_SUMMARY_PROXY_NO_QUERY_OR_LABELS_TO_MODEL",
+  "reference_limitations": [
+    "Human summary selection is not dense generic highlight or explicit ORDINARY ground truth",
+    "Known identity and byte exclusion cannot establish hidden aliases, subclips or pretraining separation",
+    "Small paired proxy gains do not establish official score improvement"
+  ]
+}

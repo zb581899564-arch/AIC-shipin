@@ -1,0 +1,467 @@
+{
+  "status": "COMPLETE_POST_STOP_DIAGNOSTIC_NOT_TRAINING_ADMISSION",
+  "utc": "2026-10-10T08:42:17.669843+00:00",
+  "preregistration_sha256": "15a2090e339f6d134bf288435332d0a7215e84eff1d02304814a2b985b3065a0",
+  "original_STOP_sha256": "23aa541da75975bccb89f5129cf6704f8f29a541f37e8293be37de27201f2db0",
+  "teacher_stream_records": [
+    {
+      "folder": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\w01_editorial_diagnostic_v1\\teacher",
+      "sha256": "be2af6336a4ed36c720adb508fe30ff46992683d47104387f4491a92a8921513",
+      "completed_tools": 71,
+      "terminal": {
+        "started_utc": "2026-10-10T08:12:58.505494+00:00",
+        "finished_utc": "2026-10-10T08:23:10.635401+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 612.125,
+        "exit_zero_not_acceptance": true,
+        "outputs": {
+          "student_sealed.json": {
+            "bytes": 41464,
+            "sha256": "5d65c300cf99c060b00544afa4b2089743e7cacef60a1931dba60adf369539cd"
+          }
+        },
+        "new_optimizer_updates": 0,
+        "cash_cost": "UNKNOWN_NOT_ZERO"
+      },
+      "result": {
+        "conversation_id": "02b4023e-f38f-44a3-b9a6-09b68243c11e",
+        "status": "SUCCESS",
+        "response": "",
+        "duration_seconds": 536.8410565,
+        "num_turns": 1,
+        "usage": {
+          "input_tokens": 288549,
+          "output_tokens": 39164,
+          "thinking_tokens": 17447,
+          "cache_read_tokens": 980887,
+          "total_tokens": 327713
+        }
+      }
+    },
+    {
+      "folder": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\w01_editorial_diagnostic_v1\\teacher\\engineering_recovery_v2",
+      "sha256": "5958c3301531519dc214670c8515b6c07f43bfd498ba59cf0145b8ad1056807d",
+      "completed_tools": 0,
+      "terminal": {
+        "started_utc": "2026-10-10T08:26:56.331810+00:00",
+        "finished_utc": "2026-10-10T08:27:06.858767+00:00",
+        "exit_code": 1,
+        "elapsed_seconds": 10.515000000001237,
+        "exit_zero_not_completion": true,
+        "student_sha256_after": "5d65c300cf99c060b00544afa4b2089743e7cacef60a1931dba60adf369539cd",
+        "student_seal_bytes_unchanged": true,
+        "output_files": {},
+        "new_optimizer_updates": 0,
+        "new_426_calls": 0,
+        "cash_cost": "UNKNOWN_NOT_ZERO"
+      },
+      "result": {
+        "conversation_id": "",
+        "status": "ERROR",
+        "response": "",
+        "error": "Eligibility check failed: failed to get profile picture: Get \"https://lh3.googleusercontent.com/a/ACg8ocKJn53mHp_MFDqdhR355loiputjkXxuNFh5_8VwBDapftEwoA=s96-c\": EOF",
+        "duration_seconds": 0,
+        "num_turns": 0,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "thinking_tokens": 0,
+          "cache_read_tokens": 0,
+          "total_tokens": 0
+        }
+      }
+    },
+    {
+      "folder": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\w01_editorial_diagnostic_v1\\teacher\\engineering_recovery_v3_transport_retry",
+      "sha256": "f97f2ccdcf4cf997d6e9756df7deb7c3aca1ba321726f906e559860b192ec02d",
+      "completed_tools": 0,
+      "terminal": {
+        "started_utc": "2026-10-10T08:29:24.706098+00:00",
+        "finished_utc": "2026-10-10T08:29:33.527292+00:00",
+        "exit_code": 1,
+        "elapsed_seconds": 8.811999999999898,
+        "exit_zero_not_completion": true,
+        "student_sha256_after": "5d65c300cf99c060b00544afa4b2089743e7cacef60a1931dba60adf369539cd",
+        "student_seal_bytes_unchanged": true,
+        "output_files": {},
+        "new_optimizer_updates": 0,
+        "new_426_calls": 0,
+        "cash_cost": "UNKNOWN_NOT_ZERO"
+      },
+      "result": {
+        "conversation_id": "",
+        "status": "ERROR",
+        "response": "",
+        "error": "Eligibility check failed: failed to get load code assist response: Post \"https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist\": EOF",
+        "duration_seconds": 0,
+        "num_turns": 0,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "thinking_tokens": 0,
+          "cache_read_tokens": 0,
+          "total_tokens": 0
+        }
+      }
+    },
+    {
+      "folder": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\w01_editorial_diagnostic_v1\\teacher\\engineering_recovery_v4_http2",
+      "sha256": "4260f5e930e3012c9a19837b4a0c2f44f0dd498ab84a89b9d16c954bf46e8ee8",
+      "completed_tools": 62,
+      "terminal": {
+        "started_utc": "2026-10-10T08:32:54.446404+00:00",
+        "finished_utc": "2026-10-10T08:42:07.866137+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 553.4220000000005,
+        "exit_zero_not_completion": true,
+        "student_sha256_after": "5d65c300cf99c060b00544afa4b2089743e7cacef60a1931dba60adf369539cd",
+        "student_seal_bytes_unchanged": true,
+        "output_files": {
+          "native_addendum.json": {
+            "bytes": 32193,
+            "sha256": "896ec9c7c550c9f87930f755571c4909ffa087d767839f3de11d8f1a6641eac3"
+          },
+          "seal.json": {
+            "bytes": 1153,
+            "sha256": "0ddc12a76a8b839dedfc44d4158228ec688f69cb9b3aa92602f33117246cca7a"
+          }
+        },
+        "new_optimizer_updates": 0,
+        "new_426_calls": 0,
+        "cash_cost": "UNKNOWN_NOT_ZERO"
+      },
+      "result": {
+        "conversation_id": "02b4023e-f38f-44a3-b9a6-09b68243c11e",
+        "status": "SUCCESS",
+        "response": "本次视频高光编辑诊断任务已完成全部双阶段流程并封存，未执行任何命令行/代码调用、未读取任何外部历史标签或旧答案、未重复读取自身输出文件。\n\n### 交付文件路径与真实范围确认\n\n1. **第一阶段：学生视图封存提案**\n   - 路径：[student_sealed.json](file:///G:/ai/AIC视频/reports/annotation_iteration_20261010/w01_editorial_diagnostic_v1/teacher/student_sealed.json)\n   - 真实阅读范围：通过 [student_index.json](file:///G:/ai/AIC视频/reports/annotation_iteration_20261010/w01_editorial_diagnostic_v1/student_index.json) 逐帧实际读取 64 张学生端采样 PNG（`F00` ~ `F63`，源帧序号 901 ~ 1801）。\n   - 包含内容：64 帧独立观察与直读字幕记录、连续互斥覆盖 `[0, 30)` 的 17 段剪辑建议（`window_coverage`）、11 个保留事件单元（`events`）、`limitations` 及未决项说明（`training_admitted: false`）。\n\n2. **第二阶段：原生视图增补提案**\n   - 路径：[native_addendum.json](file:///G:/ai/AIC视频/reports/annotation_iteration_20261010/w01_editorial_diagnostic_v1/teacher/native_addendum.json)\n   - 真实阅读范围：通过 [native_index.json](file:///G:/ai/AIC视频/reports/annotation_iteration_20261010/w01_editorial_diagnostic_v1/native_index.json) 逐帧实际读取 64 张原生采样 PNG（`F00` ~ `F63`，源帧序号 901 ~ 1801）。\n   - 包含内容：64 帧原生事实观察、对学生阶段已封存结论的逐项比对评估（原生图像虽提高清晰度与边缘细节，但原直读文本与主体动作事实完全一致，剪辑选择 100% 维持不变）、完整的原生全窗 coverage 与 events 结构。\n\n3. **最终封存元数据**\n   - 路径：[seal.json](file:///G:/ai/AIC视频/reports/annotation_iteration_20261010/w01_editorial_diagnostic_v1/teacher/seal.json)\n   - SHA256 字段按规范填入 `\"not_computed_by_teacher\"`，待由外部主控针对原始字节进行封存校验。\n   - 已真实披露：\n     - 经历了前次 CLI 超时中断后的同会话工程恢复过程；\n     - 无未完成项；\n     - 工具调用无失败（`tool_failures: []`）；\n     - 未曾接收旧答案或历史预测；\n     - 不存在任务提示外的预设容量规则；\n     - 数据不可用于模型训练（`training_admitted: false`）。\n",
+        "duration_seconds": 1737.1587354,
+        "num_turns": 2,
+        "usage": {
+          "input_tokens": 733016,
+          "output_tokens": 65760,
+          "thinking_tokens": 25945,
+          "cache_read_tokens": 3163619,
+          "total_tokens": 798776
+        }
+      }
+    }
+  ],
+  "teacher_combined_tool_issues": [],
+  "teacher_completed_student_PNG_reads": 64,
+  "teacher_completed_native_PNG_reads": 64,
+  "teacher_student_write_precedes_native": true,
+  "student_original_bytes_preserved": {
+    "teacher": true,
+    "independent": true
+  },
+  "independent_seal_sha256": "8af40715849fbc994fb9c786f13b0618c37243eb1918e8bcd365dbe8c10d351c",
+  "independent_blinding": "ATTESTED_WITH_PROJECT_CONTEXT_DISCLOSURE_NOT_ABSOLUTE_PROOF",
+  "preregistration_deviation": "Original one-CLI/session cap not met: same proposal required one successful continuation after print timeout and two pre-inference transport failures. Original partial failure and all receipts preserved.",
+  "document_geometry": {
+    "teacher": {
+      "student": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\w01_editorial_diagnostic_v1\\teacher\\student_sealed.json",
+        "sha256": "5d65c300cf99c060b00544afa4b2089743e7cacef60a1931dba60adf369539cd",
+        "geometry_issues": [],
+        "observation_rows": 64,
+        "coverage_rows": 17,
+        "coverage_seconds_exact": {
+          "KEEP": "2283/100",
+          "NO": "717/100",
+          "UNKNOWN": "0"
+        },
+        "event_rows": 11,
+        "presealed_narrative_units": 10,
+        "individual_event_intervals": 11,
+        "contiguous_KEEP_intervals": 7,
+        "KEEP_union_exact": [
+          [
+            "0",
+            "5"
+          ],
+          [
+            "161/25",
+            "417/50"
+          ],
+          [
+            "44/5",
+            "256/25"
+          ],
+          [
+            "1309/100",
+            "351/25"
+          ],
+          [
+            "1451/100",
+            "577/25"
+          ],
+          [
+            "2407/100",
+            "132/5"
+          ],
+          [
+            "684/25",
+            "30"
+          ]
+        ],
+        "numeric_five_units_and_five_intervals_pass": false,
+        "semantic_correctness": "NOT_CERTIFIED_BY_GEOMETRY",
+        "training_admitted": false
+      },
+      "native": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\w01_editorial_diagnostic_v1\\teacher\\native_addendum.json",
+        "sha256": "896ec9c7c550c9f87930f755571c4909ffa087d767839f3de11d8f1a6641eac3",
+        "geometry_issues": [],
+        "observation_rows": 64,
+        "coverage_rows": 17,
+        "coverage_seconds_exact": {
+          "KEEP": "2283/100",
+          "NO": "717/100",
+          "UNKNOWN": "0"
+        },
+        "event_rows": 11,
+        "presealed_narrative_units": 10,
+        "individual_event_intervals": 11,
+        "contiguous_KEEP_intervals": 7,
+        "KEEP_union_exact": [
+          [
+            "0",
+            "5"
+          ],
+          [
+            "161/25",
+            "417/50"
+          ],
+          [
+            "44/5",
+            "256/25"
+          ],
+          [
+            "1309/100",
+            "351/25"
+          ],
+          [
+            "1451/100",
+            "577/25"
+          ],
+          [
+            "2407/100",
+            "132/5"
+          ],
+          [
+            "684/25",
+            "30"
+          ]
+        ],
+        "numeric_five_units_and_five_intervals_pass": false,
+        "semantic_correctness": "NOT_CERTIFIED_BY_GEOMETRY",
+        "training_admitted": false
+      }
+    },
+    "independent": {
+      "student": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\w01_editorial_diagnostic_v1\\independent\\student_sealed.json",
+        "sha256": "b4e17a27622db8bde3cef6a38b170d1fe4fe8e6ea6969cbab9a32392cdf7a45d",
+        "geometry_issues": [],
+        "observation_rows": 64,
+        "coverage_rows": 15,
+        "coverage_seconds_exact": {
+          "KEEP": "1181/50",
+          "NO": "319/50",
+          "UNKNOWN": "0"
+        },
+        "event_rows": 5,
+        "presealed_narrative_units": 5,
+        "individual_event_intervals": 8,
+        "contiguous_KEEP_intervals": 6,
+        "KEEP_union_exact": [
+          [
+            "0",
+            "24/5"
+          ],
+          [
+            "643/100",
+            "38/5"
+          ],
+          [
+            "833/100",
+            "103/10"
+          ],
+          [
+            "261/20",
+            "193/10"
+          ],
+          [
+            "79/4",
+            "116/5"
+          ],
+          [
+            "1201/50",
+            "30"
+          ]
+        ],
+        "numeric_five_units_and_five_intervals_pass": false,
+        "semantic_correctness": "NOT_CERTIFIED_BY_GEOMETRY",
+        "training_admitted": false
+      },
+      "native": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\w01_editorial_diagnostic_v1\\independent\\native_addendum.json",
+        "sha256": "e11fcd9b9f1769bec9e5f596d1e084c289bdf5b3ef0b52fd50d5be09f4caf6dd",
+        "geometry_issues": [],
+        "observation_rows": 64,
+        "coverage_rows": 15,
+        "coverage_seconds_exact": {
+          "KEEP": "1181/50",
+          "NO": "319/50",
+          "UNKNOWN": "0"
+        },
+        "event_rows": 5,
+        "presealed_narrative_units": 5,
+        "individual_event_intervals": 8,
+        "contiguous_KEEP_intervals": 6,
+        "KEEP_union_exact": [
+          [
+            "0",
+            "24/5"
+          ],
+          [
+            "643/100",
+            "38/5"
+          ],
+          [
+            "833/100",
+            "103/10"
+          ],
+          [
+            "261/20",
+            "193/10"
+          ],
+          [
+            "79/4",
+            "116/5"
+          ],
+          [
+            "1201/50",
+            "30"
+          ]
+        ],
+        "numeric_five_units_and_five_intervals_pass": false,
+        "semantic_correctness": "NOT_CERTIFIED_BY_GEOMETRY",
+        "training_admitted": false
+      }
+    }
+  },
+  "student_label_disagreement_seconds_exact": "71/20",
+  "student_label_disagreement_spans": [
+    {
+      "start": "24/5",
+      "end": "5",
+      "labels": {
+        "teacher": "KEEP",
+        "independent": "NO"
+      }
+    },
+    {
+      "start": "643/100",
+      "end": "161/25",
+      "labels": {
+        "teacher": "NO",
+        "independent": "KEEP"
+      }
+    },
+    {
+      "start": "38/5",
+      "end": "833/100",
+      "labels": {
+        "teacher": "KEEP",
+        "independent": "NO"
+      }
+    },
+    {
+      "start": "417/50",
+      "end": "44/5",
+      "labels": {
+        "teacher": "NO",
+        "independent": "KEEP"
+      }
+    },
+    {
+      "start": "256/25",
+      "end": "103/10",
+      "labels": {
+        "teacher": "NO",
+        "independent": "KEEP"
+      }
+    },
+    {
+      "start": "261/20",
+      "end": "1309/100",
+      "labels": {
+        "teacher": "NO",
+        "independent": "KEEP"
+      }
+    },
+    {
+      "start": "351/25",
+      "end": "1451/100",
+      "labels": {
+        "teacher": "NO",
+        "independent": "KEEP"
+      }
+    },
+    {
+      "start": "193/10",
+      "end": "79/4",
+      "labels": {
+        "teacher": "KEEP",
+        "independent": "NO"
+      }
+    },
+    {
+      "start": "577/25",
+      "end": "116/5",
+      "labels": {
+        "teacher": "NO",
+        "independent": "KEEP"
+      }
+    },
+    {
+      "start": "1201/50",
+      "end": "2407/100",
+      "labels": {
+        "teacher": "NO",
+        "independent": "KEEP"
+      }
+    },
+    {
+      "start": "132/5",
+      "end": "684/25",
+      "labels": {
+        "teacher": "NO",
+        "independent": "KEEP"
+      }
+    }
+  ],
+  "factual_error": {
+    "frame_id": "F37",
+    "teacher_student_and_native": "dog with y esconderte,",
+    "independent_student_and_native_and_root_actual_student": "person with siempre puedes ignorar a esas personas",
+    "conclusion": "Confirmed teacher frame-content misassignment in student view; repeated native assertion is not a correction. Root spot receipt retained. Teacher is not accepted as gold."
+  },
+  "safe_baseline": {
+    "bytes": 306167,
+    "sha256": "07730c9e02e68d1a1ce54e7ef5a8aa616346cf8f2f8d78426ed36bc3eb481496",
+    "crc_error": null,
+    "archive_names": [
+      "predictions.jsonl"
+    ],
+    "historical_score": 37.66,
+    "new_score": null
+  },
+  "cash_cost": "UNKNOWN_NOT_ZERO",
+  "new_optimizer_updates": 0,
+  "new_426_calls": 0,
+  "new_decoder_processor_calls": 0,
+  "interpretation": "Evidence supports full-window editorial proposals despite static/text content, with remaining factual and editorial disagreement. Both proposals exceed original five-interval capacity; neither is train-ready.",
+  "training_admitted": false
+}

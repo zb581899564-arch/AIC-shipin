@@ -1,0 +1,19 @@
+{
+  "status": "PASS_NEW_W02_COMPLETE_FINITE_SILVER_REFERENCE_NOT_TRAINING_BATCH_ADMISSION",
+  "verified": {
+    "window_id": "kLxoNp-UchI:SLOT6:2",
+    "role": "train",
+    "source_group": "youtube:kLxoNp-UchI",
+    "admitted": "True",
+    "known_keep_seconds": "51827/7500",
+    "known_no_seconds": "173173/7500",
+    "unknown_seconds": "0"
+  },
+  "reference": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\01_w02_complete_reference.json",
+    "sha256": "8ad45cfa36534397f785fe686d23d3d9847e7ca7952a9e2462dc65b38e3b3968"
+  },
+  "qualified_windows_total": 2,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0
+}

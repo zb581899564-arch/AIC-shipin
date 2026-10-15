@@ -1,0 +1,15 @@
+{
+  "frozen_source_sha256": "5295e8bc0f2b6a651e73321a5798b259816ccbe9a0582753dc3c200b5ef080e0",
+  "frozen_file_count": 16502,
+  "preflight": {
+    "utc": "2026-10-08T12:35:44.806702+00:00",
+    "status": "PASS_FROZEN_V14_PREFLIGHT",
+    "exit_code": 0,
+    "GPU_started": false
+  },
+  "preflight_output": "{\"status\": \"PASS_CPU_SOURCE_SELECTION_ROUTE_AND_PIPELINE_PREFLIGHT\", \"GPU_started\": false}\n",
+  "preflight_errors": "",
+  "live_full_commands": [
+    "1101256       1 1101256       9 99.2  0.0 /home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python -B /home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v14/controller.py"
+  ]
+}

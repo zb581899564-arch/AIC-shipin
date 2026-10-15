@@ -1,0 +1,34 @@
+{
+  "status": "PASS_314_PLUS_SIX_UNAFFECTED_PREDICTION_AND_IDENTITY",
+  "proofs": 314,
+  "pilots": 6,
+  "successful_native_decodes_repeated": 0,
+  "successful_processor_encodes_repeated": 0,
+  "old_tensor_signature_bytes_rewritten": 0,
+  "failed_target_resize_plan": {
+    "adjusted": true,
+    "physical_input_frames": 23,
+    "processor_effective_frames": 24,
+    "original_total_pixel_budget": 25165824,
+    "original_resize_cap": 25165824,
+    "actual_resize_cap": 24117248,
+    "original_predicted_grid": [
+      12,
+      48,
+      86
+    ],
+    "original_predicted_total_pixels": 25362432,
+    "predicted_grid": [
+      12,
+      48,
+      84
+    ],
+    "predicted_total_pixels": 24772608,
+    "installed_odd_temporal_padding_only": true,
+    "new_input_padding_copies": 0,
+    "native_frames_removed": 0,
+    "rule": "FLOOR_BUDGET_TIMES_PHYSICAL_OVER_EFFECTIVE_THEN_BOUNDED_GRID_PREDICTION"
+  },
+  "CPU_only": true,
+  "new_model_calls": 0
+}

@@ -1,0 +1,27 @@
+# 当前接续：新8来源39窗全部完成，确认拒绝
+
+最新准确终态confirmation_05/result.json为STOP_FROZEN_SPARSE50_POST025_NEW8_CONFIRM_REJECTED，current_state.json已同步。39 BEGIN/39 ACCEPTED、39独立CPU重放自然通过，原父链完成06:27:01Z，GPU费用466.4392803879455秒，唯一resource/ledger一致且已释放GPU。269成员证据ZIP1,537,407B/SHA015de257ede86b1380164147a295afa5fe23c8fa3bd0aca3930e14112dfc3ca5完整Linux/Windows bytes/SHA/CRC/member验收通过，禁止再次GPU、CPU、接收或比较。
+
+新8确认宏差-0.000054409608638099406，3來源作用、22新增原帧/总新增3/4秒，宏不降门拒绝，新ZIP0。所有原帧及每评审召回保持也不替代宏门；不调POST025覆盖/长度/边界后再碰这个新8，不回换已拒PRE025，不修改原门/协议或将旧包充数。新8现在也曝光，旧28 VideoXum与SumMe25不可称新盲测。
+
+TASK_ALIGNMENT_AUDIT_06.md已补核作者15%字幕对齐摘要任务与官方高光帧+空间IoU指标的适配限制；原失败不因此改通过。下一步只读核评测/推理/非测试构图证据与公开参考语义许可，不继续盲增同类摘要或启动下一批参数扫描。第三目标仍2/3，未声称全部合理替代已穷尽，小时接续保留。以下运行中为历史快照。
+
+目标仍第三不同合格ZIP，当前2/3，用户反馈D8 40.44为基线。先读current_state.json和PROTOCOL.md；原L8/L16/L32/GAP100与旧D4/A/B/C、40源FAILED/UNKNOWN、全部raw/费用保持。旧VideoXum20已曝光，不作新确认；SumMe25同样已曝光。不要重复任何旧成功模型/CPU/转移/比较。
+
+本独立条件规则在原12开发（明示已曝光）上登记后比较：原窗口选中并集时长<=半窗且单段>=8秒才相对D8额外前扩或后扩1/4秒；两个臂固定，不扫覆盖阈值。两臂40事实都通过，PRE025宏差-0.00007791115633420899/4来源作用拒绝；POST025宏差+0.0003012769355964489/6来源作用通过，bootstrap95[-0.0003912842934431102,0.0011600166248599616]跨0，不证明提分。screen_01/selection_before_new_confirm.json已在新来源模型前冻结唯一SPARSE50_POST025，不能根据新确认回换前扩或改参数。
+
+新来源登记new_confirm_source_registration_01.json：源名盐哈希排序，排除652已知训练/TVSum身份和旧40候选及实际20来源；固定8确认及16工程替补，原标注/预测质量不选源。选中8原视频153,512,358字节，24池上限654,787,067字节，只为原生工程失败预排序替补，不全部自动下载。HEAD24正常发布者CDN路由/ETag/字节已核；原作者9,575,564字节标注文件只复用，24份原十评审秒区间441,287字节Linux/Windows大小SHA校验通过，SHA57d1fa8aead93bdfc835aebbb783be9b52694b084d499fff30e27bfb148b0b80。原reference exporter01重复关键字错误保留，独立02修复成功，不重跑02或下载原标注。Apache仅标注，视频仍原上传者产权/学术来源条件，限内部外部参考验证，不训练、不发布媒体，不宣称作者原始字节或隐藏别名/子片段完全隔离。
+
+CPU控制103,004字节SSH传输SHA5021ebc9f5af62233ec5285a3a885de127769a98becc972b3a466531c2f7c907。初始launch02因Windows Path把Linux根串为反斜杠相对目录，在第一文件绑定前退出；实际media/CPU/model均0，原日志/失败保留。明确恢复03验证全控制成员及无活动子进程，仅将本次所有文件从误建独占目录移回/home/inspur/aic_video_work/sparse_context_iteration_20261013_v1，未再上传控制，也未重复任何成功媒体或CPU。原错误目录没有外部文件，修正后不存在；不要再运行launch02或恢复03。
+
+正确CPU唯一入口new_confirm_CPU_launch_03.json，输出new_confirm_CPU_02/completion.json。全部8实际媒体、8完整原生时钟及原人工端点、39个真实native64 RGB/CPU processor输入已完成；06:15Z actual_owned_commands为空，不能因CPU名称02误当未启动。所有成功proof/cache保持。新共同工具sparse_stage_common_02的BASE只限定本独立根，不复用旧20/5源码锁或路径。
+
+原B唯一父链new_confirm_inference_control_deployment_04.json，Linux准确入口new_confirm_inference_launch_04.json、new_confirm_chain_04/state.json，于06:15:59Z启动code/chain_confirm_04.py一次。它已独立核8来源39输入，在新new_confirm_source_lock_04中冻结原媒体/输入/代码/原B权重和原参考。06:17:04Z经共享gpu_run.py启动唯一sparse_confirm8_original_b_native64_20261013_v1，max2508秒取此前实际880.467秒/92窗代入固定新预算；父实际CUDA0，仅CPU子屏蔽自己。06:20:19Z真实11 BEGIN/10 ACCEPTED，GPU使用22080MiB，无终态/失败；以最新完整argv/PPID/IO/fds与actual终态为准，不看旧PID或pending重启。实际参数8782459120，原base/adapter/CPU-GPU tensor/原grammar256和strict parser不改，optimizer0。
+
+capacity_estimate_typo_04.json另保留冻结控制器容量估计错字：实际planned-output1294336B，原意64MiB+每窗32KiB（39窗68,386,816B），原CPU/GPU输入、模型及质量参数不受影响，GPU前实际free162608689152B且未见容量失败。不为此重启模型、不修改当前已冻结代码/源锁或费用；终态审计实际输出大小，后续控制器仅精确改source-count，不用全局数字替换。保持原04实际参数与回执。
+
+自然GPU completed/exit0且唯一resource/ledger一致后原父链自动replay_confirm_04.py全部39独立CPU tensor/token/grammar/parser/native重放并导出new_confirm_prediction_export.json、new_confirm_export_acceptance.json。后续Windows improvement/sparse_context_v1/receive_confirm_export_05.py仅收完整新8回执，核Linux/Windows大小SHA/CRC/全成员；confirm_fresh8_05.py只在完整实际谱系/8个新身份/原40事实/冻结开发与代码检查通过后评估唯一POST025的新8原十评审平均duration-F1，宏差>=0、逐源下降<=0.01、基线原帧/各评审召回保持、至少3真正原帧变化来源门不改。两个脚本已解析检查，尚未运行；未作新8指标比较、封包或声称提分。
+
+通过新确认才准备独立SPARSE50_POST025 CPU封包入口，不能用失败L16/GAP100封包冒充通过。先核当前官方正文、最新附件与补充通知；只复用426原回答/完整空间场、零426新模型，必须精确保持D8全部122050原帧框及core，426非空完整/原PTS/框来源/独立11strict/8.78245912B/单JSONL/CRC/memberSHA/历史实际差异/Windows交付后给新链接。失败保留、不调参数重碰确认、不旧包充数、不自动官网提交。
+
+小时aic无变化静默，第三目标未完成不删。公开来源直达Linux继续获准不重问，小控制和回执严格既有aic-inspur-home；Windows大上传仍百度网盘，无Mac，不改代理、连接或服务，保护共享外部作业并按实时资源判断。官方测试不标注/训练/逐条手调，不从测试内容或排行榜反向造规则。

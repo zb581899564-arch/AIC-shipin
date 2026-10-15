@@ -1,0 +1,95 @@
+{
+  "utc": "2026-10-10T17:47:36.694737+00:00",
+  "status": "PASS_AST_ACTUAL_BINDINGS_FIXED24_NO_MODEL_PENDING_ROOT_START",
+  "runner": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\continue_capacity_v4_fresh_after_CLI28.py",
+    "sha256": "5c270491001b5a6feb732290bf3ee2c805991e08f0e054ff407c7dfdc4f09d0b"
+  },
+  "binding": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\fresh_continuation_after_CLI28_binding.json",
+    "sha256": "3f0b3f177099c59459d25914bea2044bb2535ece3d713f77bbc3d8942307d604"
+  },
+  "checks": [
+    {
+      "call": 3,
+      "job_indices": [
+        8,
+        9
+      ],
+      "CLI_after": 29,
+      "all_frozen_inputs_SHA_actual_PASS": true
+    },
+    {
+      "call": 4,
+      "job_indices": [
+        10,
+        11
+      ],
+      "CLI_after": 30,
+      "all_frozen_inputs_SHA_actual_PASS": true
+    },
+    {
+      "call": 5,
+      "job_indices": [
+        12,
+        13
+      ],
+      "CLI_after": 31,
+      "all_frozen_inputs_SHA_actual_PASS": true
+    },
+    {
+      "call": 6,
+      "job_indices": [
+        14,
+        15
+      ],
+      "CLI_after": 32,
+      "all_frozen_inputs_SHA_actual_PASS": true
+    },
+    {
+      "call": 7,
+      "job_indices": [
+        16,
+        17
+      ],
+      "CLI_after": 33,
+      "all_frozen_inputs_SHA_actual_PASS": true
+    },
+    {
+      "call": 8,
+      "job_indices": [
+        18,
+        19
+      ],
+      "CLI_after": 34,
+      "all_frozen_inputs_SHA_actual_PASS": true
+    },
+    {
+      "call": 9,
+      "job_indices": [
+        20,
+        21
+      ],
+      "CLI_after": 35,
+      "all_frozen_inputs_SHA_actual_PASS": true
+    },
+    {
+      "call": 10,
+      "job_indices": [
+        22,
+        23
+      ],
+      "CLI_after": 36,
+      "all_frozen_inputs_SHA_actual_PASS": true
+    }
+  ],
+  "fixed_denominator": 24,
+  "identity_count": 24,
+  "root_qualified_refs_at_registry": 5,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "new_426": 0,
+  "previous_sources_and_freezes_unchanged": true,
+  "authenticated_POST_still_not_verified": true,
+  "requires_new_root_admission": true
+}

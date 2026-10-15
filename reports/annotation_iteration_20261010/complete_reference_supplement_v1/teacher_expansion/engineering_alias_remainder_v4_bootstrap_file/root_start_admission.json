@@ -1,0 +1,63 @@
+{
+  "utc": "2026-10-10T23:00:14.367855+00:00",
+  "status": "ROOT_APPROVED_START_BOOTSTRAP_V4_FIXED_CLI34_36",
+  "dry_run_sha256": "248bebafe39a35de93e8d29e83c4a6a36b770bd0f94c5a274371b953e4ead972",
+  "execution_binding_sha256": "1bd521d91ddaf1140bf81f5adff93e30111d0238ea86ac3192f8c8bdf9e66fc5",
+  "root_verifier_source_sha256": "87c800a234bb766f47dc47b758235bc8eff5800a3e2b1a9d90ca9485d04e1825",
+  "root_read_protocol_bootstrap_controller_launch_audit_observer_prepare_verify_common_and_run_call": true,
+  "root_all_frozen_inputs_byte_bindings_verified": true,
+  "root_all479_payload_aliases_byte_exact": true,
+  "root_original_native64_and_preview_and_clock_bindings_unchanged": true,
+  "root_old_full_prompt_byte_exact_and_only_route_path_projection_and_text_reflow_verified": true,
+  "root_actual_old_prespawn_failure_and_unchanged_registration_prefix_verified": true,
+  "readonly_owned_process_check": {
+    "utc": "2026-10-10T23:00:13.824991+00:00",
+    "readonly_old_v3_owned_processes": [],
+    "query_source": "$p = @(Get-CimInstance Win32_Process | Where-Object { $_.Name -match '^(python|pythonw|agy)\\.exe$' -and $_.CommandLine -like '*engineering_alias_remainder_v3*' } | Select-Object ProcessId,ParentProcessId,Name,CommandLine); ConvertTo-Json -InputObject $p -Compress",
+    "no_service_or_account_change": true
+  },
+  "calls": [
+    {
+      "CLI": 34,
+      "jobs": [
+        17,
+        18
+      ],
+      "input_count": 814,
+      "freeze_sha256": "cfca713ca60aad3752f278c088da18204b91627fb986db981737384b6e9394fb",
+      "bootstrap_lines": 212,
+      "argv_utf16_units_including_NUL": 761
+    },
+    {
+      "CLI": 35,
+      "jobs": [
+        19,
+        20
+      ],
+      "input_count": 846,
+      "freeze_sha256": "5f2c1fc27c6b6779ca677fb749488d9b52eb1082b9d1b1daecd094c942998091",
+      "bootstrap_lines": 259,
+      "argv_utf16_units_including_NUL": 761
+    },
+    {
+      "CLI": 36,
+      "jobs": [
+        21,
+        22,
+        23
+      ],
+      "input_count": 919,
+      "freeze_sha256": "c050b6aadbc3ad8fc487d747248bab88bcdd57b401f7734c3acea3c601b68dee",
+      "bootstrap_lines": 376,
+      "argv_utf16_units_including_NUL": 761
+    }
+  ],
+  "registration_recovery_explanation": "The preserved old REGISTERED34 never spawned AGY; recover that not-started model slot once with RECOVERY_REGISTERED34. No ledger rollback or model retry. Request prior_actual_spawned_CLI=33 denotes the fixed historical prespawn recovery checkpoint, not the later live predecessor for 35/36; actual process/request/terminal and tools decide spawned call counts.",
+  "global_cap": 36,
+  "no37": true,
+  "automatic_retry": false,
+  "cash_cost": "UNKNOWN_NOT_ZERO",
+  "new_model_calls_at_gate": 0,
+  "semantic_admission": false,
+  "training_admitted": false
+}

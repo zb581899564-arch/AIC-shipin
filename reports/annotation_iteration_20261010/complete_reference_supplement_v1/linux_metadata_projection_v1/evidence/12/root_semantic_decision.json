@@ -1,0 +1,89 @@
+{
+  "status": "ROOT_SEMANTIC_EVALUATION_ADJUDICATION_COMPLETE",
+  "utc": "2026-10-10T20:39:06.957027+00:00",
+  "window_id": "-esJrBWj2d8:SLOT6:1",
+  "candidate_prediction_exposure": false,
+  "root_read_all64_teacher_facts": true,
+  "root_read_all64_native_and_student_facts": true,
+  "all_NO_ranges_reviewed": true,
+  "selected_preteacher_event_indices": [
+    0,
+    1
+  ],
+  "unknown_local_exact": [],
+  "consequential_unknowns": [],
+  "evidence": {
+    "preteacher_main_review": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\12_esjr_w01_main_preteacher_review.json",
+      "sha256": "8ab48985a5faf66b0ed0aa7fc8840243b6d4ed18f1e375c3c8c5e2fafbf8d0de"
+    },
+    "teacher_observation_audit": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\12_esjr_w01_lawful_observation_completion.json",
+      "sha256": "24d55d42aa9d0a1acbf18f9690d3accdf988b62f758fc60341e97ac63a2d02ab"
+    },
+    "original_teacher_proposal": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call05\\w12_proposal.json",
+      "sha256": "8ddb7fe7fccea0b6bfd3dccafc204562ee990a0d1f3091fd67c004615152bc9c"
+    },
+    "original_teacher_program_bound_facts": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call05\\w12_program_bound_facts_completed_scope.json",
+      "sha256": "e5ab62dc90d7650cd8d282caf8c7708e99c4896f6bbbc1c7f5779bcc1c6a3583"
+    },
+    "bounded_student_reinspection": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\12_-esJrBWj2d8_W01.student_bounded_reinspection_v1.json",
+      "sha256": "4a24c98b2bd371924653eef175518f04b6d0cc589e309c1949f91d4cf4d692ef"
+    },
+    "bounded_student_acceptance": {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\12_esjr_w01_bounded_student_acceptance.json",
+      "sha256": "a5c4d8628d72c5b51288d2a09c0e1d9fe9f5327441f45e71f003196dace3a07d"
+    }
+  },
+  "differences_adjudicated": [
+    "原生初判因遮挡不选开盒，学生把完整进食终止记UNKNOWN；主控保留这些初判，只对实际红封盖→抬盖→撤手敞开盒的可见局部结果作有限编辑裁决，没有标记进食结束。",
+    "原生初判的44..63长期典型画面支持域不等于必须整段剪入；主控保留F52..58毛纹、盒与露出内容的短代表画面，重复低头和换侧机位另列NO。",
+    "Teacher supports opening but describes eager cat, ingestion, cat-food composition and complete feeding interaction. Root retains only observed lid lift/removed cover/withdrawn hand/open container and nearby cat muzzle, without emotions, swallowed food or full feeding completion.",
+    "Root additionally retains the short clear cat/white-rimmed box/brown contents typical image at F52..58; teacher marks the whole post-opening tail NO. F58 actually exposes the contents as the muzzle is above the opening. This finite representative shot is not a claim of licking or swallowing.",
+    "Actual post-teacher rechecks F18/F25/F52/F58 agree with the finite preteacher facts. Bounded student F39 correction withdraws too-definite mouth-inside/contact wording; that ordinary repetitive range remains NO and supplies no ingestion target.",
+    "Teacher8 previews are not actual student64 input. All64 effective views and normalized processor receipt are separate evidence; teacher’s8-only and audio-absence statements are not adopted.",
+    "Original teacher wide decimal uncertainty ranges are preserved as its proposal. Root editing brackets derive from exact actual adjacent samples with widths at most0.5 seconds and are not measured cuts."
+  ],
+  "actual_root_observation_scope": {
+    "native_sample_indices": [
+      4,
+      5,
+      7,
+      14,
+      18,
+      24,
+      25,
+      27,
+      28,
+      44,
+      51,
+      52,
+      58,
+      59,
+      60,
+      63
+    ],
+    "student_sample_indices": [
+      5,
+      18,
+      25,
+      27,
+      58
+    ],
+    "additional_postteacher_native_samples": [
+      18,
+      25,
+      52,
+      58
+    ],
+    "read_native_static_facts": 64,
+    "read_student_static_facts": 64,
+    "read_teacher_static_facts": 64,
+    "read_bounded_student_facts": 11,
+    "root_direct64_image_review": false
+  },
+  "reference_scope_and_reason": "Evaluation-only complete finite visual editing silver: opening has an observed local result, and a separate short clear typical cat/container image. Complete ingestion, emotions and unheard audio remain outside the target. Not gold or official quality."
+}

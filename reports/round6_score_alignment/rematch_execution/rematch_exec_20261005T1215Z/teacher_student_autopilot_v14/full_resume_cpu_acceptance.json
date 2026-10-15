@@ -1,0 +1,50 @@
+{
+  "status": "PASS_V14_EXACT_PILOT_DIAGNOSTIC_STAGE_HANDOFF_CPU",
+  "utc": "2026-10-08T12:28:03.475399+00:00",
+  "original_failure_reproduced": true,
+  "original_consumer_sha256": "7e8b7354a71c15885715685c7779895c95effa6392ddd24c003b5cf0adcf1834",
+  "complete_reviews_checked": 160,
+  "approved_original_pilot_reviews": 24,
+  "original_diagnostic_flags_unchanged": true,
+  "original_full_teacher_manifest_sha256": "e777c7becb8df25051d14181cd7684d23813a51aaf40529583945cb8bd6c8be8",
+  "supported_by_split": {
+    "train": 65,
+    "dev": 14
+  },
+  "supported_positive_by_split": {
+    "train": 55,
+    "dev": 10
+  },
+  "supported_empty_by_split": {
+    "train": 10,
+    "dev": 4
+  },
+  "unknown_count": 81,
+  "UNKNOWN_never_negative": true,
+  "full_selected_denominator": 160,
+  "rejection_tests": 11,
+  "rejection_names": [
+    "altered_reason",
+    "altered_manual_ground_truth",
+    "altered_model_raw_answer",
+    "altered_diagnostic_only",
+    "altered_review_prompt_sha256",
+    "altered_support_class",
+    "altered_teacher_record_sha256",
+    "altered_window_id",
+    "foreign_reviewer_job",
+    "changed_first_record_source",
+    "nonpilot_diagnostic_reclassification"
+  ],
+  "model_input_prompt_validator_and_training_functions_unchanged": true,
+  "new_model_calls": 0,
+  "new_T_updates": 0,
+  "same_teacher_not_human_truth": true,
+  "production_files": {
+    "train_student.py": "7b79a6713e3a406d015bc546fc45ce6172b7cf8d3967592779bfdd8c23a6fe09",
+    "teacher_label.py": "a74671f306980eba6b43c68f42c666bd38490447b3acae3892824c4ee1053b68",
+    "v11_resume.py": "bc921298fc7e9f38cb0a1bfcac2b16acfc633fdf94382657b8766cacf7aaaed0",
+    "v13_full_resume.py": "a102aa23117e0f76fb398c5c8be4d0ca3c8d8a0959776e07853283ce06162ccc",
+    "controller.py": "87ed2e7a3ae2324b646e815a33293a7a55c515024fbd73231e43becc05de6438"
+  }
+}

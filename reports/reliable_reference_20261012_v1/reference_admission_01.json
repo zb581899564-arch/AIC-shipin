@@ -1,0 +1,31 @@
+{
+  "status": "STOP_REFERENCE_COVERAGE_INSUFFICIENT",
+  "reference_quality_pass": false,
+  "candidate_predictions_read": false,
+  "coverage_diagnostic": "coverage_diagnostic_01.json",
+  "coverage": {
+    "sources": 40,
+    "keep_sources": 6,
+    "ordinary_sources": 9,
+    "two_ended_dense_events": 1,
+    "KEEP": 184,
+    "ORDINARY": 222,
+    "UNKNOWN": 2675
+  },
+  "required": {
+    "sources": 20,
+    "keep_sources": 12,
+    "ordinary_sources": 8,
+    "two_ended_dense_events": 12
+  },
+  "supplement_coarse_two_ended_events": 2,
+  "supplemental_dense_preparation": "UNRUN_AFTER_COVERAGE_FAILURE",
+  "reason": "The additional 20 short external windows provide only three agreed KEEP sources. More frame density does not resolve absent editorial or semantic evidence. Neither sparse boundaries nor unselected/unknown footage are promoted to reliable labels.",
+  "reference_level": "AI_REVIEWED_SILVER_NOT_HUMAN_GOLD",
+  "old_formal_quality_failed_preserved": true,
+  "new_competition_model_inference_calls": 0,
+  "optimizer_updates": 0,
+  "new_submission_zips": [],
+  "comparison_policy_preserved": "COMPARISON_POLICY.md",
+  "baseline_user_reported_score": 40.42
+}

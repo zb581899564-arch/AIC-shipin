@@ -1,0 +1,17 @@
+{
+  "status": "PURE_NATIVE_PROFILE_PREPARATION_AND_L32_ACTIVATION_STOP_NOT_REAL_INPUT_ACCEPTANCE",
+  "utc": "2026-10-13T04:07:08.722199+00:00",
+  "window_max_seconds": 30,
+  "native_distinct_frames": 64,
+  "human_screen_candidate": [
+    "L16"
+  ],
+  "L32_stop_reason": "Original single-segment length cannot reach32seconds in a <=30second window; minimum3 changed source admission cannot be met.",
+  "original_L8_fact_rejected": true,
+  "synthetic_exact_window_and_unmodified_endpoint_checks": "PASS",
+  "real_source_media": 0,
+  "real_CPU_decodes": 0,
+  "real_processor_acceptance": false,
+  "new_model_calls": 0,
+  "code_sha256": "f43a4f6f353063c55769b9856a6055b482f11bd65e7a591e94a15b3b864ae894"
+}

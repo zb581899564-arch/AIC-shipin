@@ -1,0 +1,363 @@
+{
+  "schema": "p1b_selection_manifest_v1",
+  "run_id": "round6_p1b_20260917T0615Z",
+  "algorithm": "group by youtube_id; drop groups whose youtube_id appears in the 987 label rows or the 818 split rows; size window 3-40 MB; stable sort by (youtube_id, filename); random.Random(20260917).sample(8 distinct groups)",
+  "seed": 20260917,
+  "candidate_pool": {
+    "corpus_files_total": 11576,
+    "excluded_by_source_group": 3249,
+    "excluded_by_size": 14,
+    "candidates_after_exclusion": 8313,
+    "candidate_source_groups": 2443
+  },
+  "exclusion": {
+    "label_youtube_ids": 863,
+    "mapping_youtube_ids": 863,
+    "split_youtube_ids": 719,
+    "union_youtube_ids": 863,
+    "basis": "union of YouTube-level ids from the 987 label rows, the round-4 mapping and the 818 split rows; exclusion is applied to the YouTube id parsed from the corpus file name",
+    "test_root": "/home/inspur/aic_video_data/test",
+    "test_root_files": 350,
+    "test_root_excluded": true
+  },
+  "target_ratio_assignment": {
+    "rule": "the 8 sampled groups in stable order receive 16:9 x4 then 9:16 x4",
+    "note": "the target ratio is a protocol assignment, not the source aspect ratio",
+    "distribution": {
+      "[16,9]": 4,
+      "[9,16]": 4
+    }
+  },
+  "candidate_list_preserved": "round6_score_alignment/p1b/inventory_raw.json",
+  "samples": [
+    {
+      "sample_id": "P01",
+      "source_group": "0ReDuH0_rpI",
+      "file_name": "0ReDuH0_rpI_210.0_360.0.mp4",
+      "target_ratio_wh": [
+        16,
+        9
+      ],
+      "source_width": 534,
+      "source_height": 300,
+      "fps": 23.976023976023978,
+      "n_frames": 3597,
+      "duration_sec": 150.024875,
+      "sha256_local": "85999bd9326423e801b01b12dfba7e5806042c6c3fae721a8517726a9e545d3d",
+      "sha256_remote": "85999bd9326423e801b01b12dfba7e5806042c6c3fae721a8517726a9e545d3d",
+      "bytes": 12288211,
+      "remote_path": "/home/inspur/aic_video_data/videos/0/0ReDuH0_rpI_210.0_360.0.mp4",
+      "corpus_window_sec": [
+        210.0,
+        360.0
+      ],
+      "files_in_source_group": 4,
+      "split": "pilot_dev",
+      "annotation_status": "UNANNOTATED",
+      "exclusion_checks": {
+        "youtube_id_in_987_labels": false,
+        "youtube_id_in_818_splits": false,
+        "under_test_path": false,
+        "shares_resolution_with_a_test_video": false,
+        "duration_within_50ms_of_a_test_video": false,
+        "note": "all three exclusion sets were built from YouTube-level ids; the last two checks are weak anti-leak heuristics, not proof of distinct source material"
+      },
+      "verification": {
+        "remote_readable": true,
+        "duration_in_5_180": true,
+        "local_sha256_matches_remote": true,
+        "cfr_within_1us": true,
+        "stream_start_is_zero": true
+      }
+    },
+    {
+      "sample_id": "P02",
+      "source_group": "FQEW3xLOa9M",
+      "file_name": "FQEW3xLOa9M_210.0_360.0.mp4",
+      "target_ratio_wh": [
+        16,
+        9
+      ],
+      "source_width": 534,
+      "source_height": 300,
+      "fps": 29.97002997002997,
+      "n_frames": 4496,
+      "duration_sec": 150.016533,
+      "sha256_local": "c32486d888ec80bd105cd08d1ba1c3623bf0d2ce9ded05941ca027389bd69323",
+      "sha256_remote": "c32486d888ec80bd105cd08d1ba1c3623bf0d2ce9ded05941ca027389bd69323",
+      "bytes": 11727174,
+      "remote_path": "/home/inspur/aic_video_data/videos/f/FQEW3xLOa9M_210.0_360.0.mp4",
+      "corpus_window_sec": [
+        210.0,
+        360.0
+      ],
+      "files_in_source_group": 2,
+      "split": "pilot_dev",
+      "annotation_status": "UNANNOTATED",
+      "exclusion_checks": {
+        "youtube_id_in_987_labels": false,
+        "youtube_id_in_818_splits": false,
+        "under_test_path": false,
+        "shares_resolution_with_a_test_video": false,
+        "duration_within_50ms_of_a_test_video": false,
+        "note": "all three exclusion sets were built from YouTube-level ids; the last two checks are weak anti-leak heuristics, not proof of distinct source material"
+      },
+      "verification": {
+        "remote_readable": true,
+        "duration_in_5_180": true,
+        "local_sha256_matches_remote": true,
+        "cfr_within_1us": true,
+        "stream_start_is_zero": true
+      }
+    },
+    {
+      "sample_id": "P03",
+      "source_group": "GYH6HdJ6nao",
+      "file_name": "GYH6HdJ6nao_210.0_360.0.mp4",
+      "target_ratio_wh": [
+        16,
+        9
+      ],
+      "source_width": 534,
+      "source_height": 300,
+      "fps": 25.0,
+      "n_frames": 3750,
+      "duration_sec": 150.0,
+      "sha256_local": "6c0e966e42f86f151bf49cde2e7e00538f70313501f8899818afbd68acbf9647",
+      "sha256_remote": "6c0e966e42f86f151bf49cde2e7e00538f70313501f8899818afbd68acbf9647",
+      "bytes": 9180392,
+      "remote_path": "/home/inspur/aic_video_data/videos/g/GYH6HdJ6nao_210.0_360.0.mp4",
+      "corpus_window_sec": [
+        210.0,
+        360.0
+      ],
+      "files_in_source_group": 3,
+      "split": "pilot_dev",
+      "annotation_status": "UNANNOTATED",
+      "exclusion_checks": {
+        "youtube_id_in_987_labels": false,
+        "youtube_id_in_818_splits": false,
+        "under_test_path": false,
+        "shares_resolution_with_a_test_video": false,
+        "duration_within_50ms_of_a_test_video": false,
+        "note": "all three exclusion sets were built from YouTube-level ids; the last two checks are weak anti-leak heuristics, not proof of distinct source material"
+      },
+      "verification": {
+        "remote_readable": true,
+        "duration_in_5_180": true,
+        "local_sha256_matches_remote": true,
+        "cfr_within_1us": true,
+        "stream_start_is_zero": true
+      }
+    },
+    {
+      "sample_id": "P04",
+      "source_group": "QPcwfuStFnU",
+      "file_name": "QPcwfuStFnU_210.0_360.0.mp4",
+      "target_ratio_wh": [
+        16,
+        9
+      ],
+      "source_width": 534,
+      "source_height": 300,
+      "fps": 23.976023976023978,
+      "n_frames": 3597,
+      "duration_sec": 150.024875,
+      "sha256_local": "6bad7c178fe0e87f3039a6c16b167c2d032da2137d8cdf03593404c3fd97efbe",
+      "sha256_remote": "6bad7c178fe0e87f3039a6c16b167c2d032da2137d8cdf03593404c3fd97efbe",
+      "bytes": 18819556,
+      "remote_path": "/home/inspur/aic_video_data/videos/q/QPcwfuStFnU_210.0_360.0.mp4",
+      "corpus_window_sec": [
+        210.0,
+        360.0
+      ],
+      "files_in_source_group": 5,
+      "split": "pilot_dev",
+      "annotation_status": "UNANNOTATED",
+      "exclusion_checks": {
+        "youtube_id_in_987_labels": false,
+        "youtube_id_in_818_splits": false,
+        "under_test_path": false,
+        "shares_resolution_with_a_test_video": false,
+        "duration_within_50ms_of_a_test_video": false,
+        "note": "all three exclusion sets were built from YouTube-level ids; the last two checks are weak anti-leak heuristics, not proof of distinct source material"
+      },
+      "verification": {
+        "remote_readable": true,
+        "duration_in_5_180": true,
+        "local_sha256_matches_remote": true,
+        "cfr_within_1us": true,
+        "stream_start_is_zero": true
+      }
+    },
+    {
+      "sample_id": "P05",
+      "source_group": "Snpclpo7Ono",
+      "file_name": "Snpclpo7Ono_210.0_360.0.mp4",
+      "target_ratio_wh": [
+        9,
+        16
+      ],
+      "source_width": 534,
+      "source_height": 300,
+      "fps": 25.0,
+      "n_frames": 3750,
+      "duration_sec": 150.0,
+      "sha256_local": "e01cb649f2ff19eb93c8dd5a773e5daa99d57f414ccadab2e380205d68d4fc01",
+      "sha256_remote": "e01cb649f2ff19eb93c8dd5a773e5daa99d57f414ccadab2e380205d68d4fc01",
+      "bytes": 4364219,
+      "remote_path": "/home/inspur/aic_video_data/videos/s/Snpclpo7Ono_210.0_360.0.mp4",
+      "corpus_window_sec": [
+        210.0,
+        360.0
+      ],
+      "files_in_source_group": 2,
+      "split": "pilot_dev",
+      "annotation_status": "UNANNOTATED",
+      "exclusion_checks": {
+        "youtube_id_in_987_labels": false,
+        "youtube_id_in_818_splits": false,
+        "under_test_path": false,
+        "shares_resolution_with_a_test_video": false,
+        "duration_within_50ms_of_a_test_video": false,
+        "note": "all three exclusion sets were built from YouTube-level ids; the last two checks are weak anti-leak heuristics, not proof of distinct source material"
+      },
+      "verification": {
+        "remote_readable": true,
+        "duration_in_5_180": true,
+        "local_sha256_matches_remote": true,
+        "cfr_within_1us": true,
+        "stream_start_is_zero": true
+      }
+    },
+    {
+      "sample_id": "P06",
+      "source_group": "Xm1ouND-aiQ",
+      "file_name": "Xm1ouND-aiQ_210.0_360.0.mp4",
+      "target_ratio_wh": [
+        9,
+        16
+      ],
+      "source_width": 534,
+      "source_height": 300,
+      "fps": 29.97002997002997,
+      "n_frames": 4496,
+      "duration_sec": 150.016533,
+      "sha256_local": "c4375a95f042ebf40889c0a088255dbb1c73342a7f0d25c18191bdf426a1216e",
+      "sha256_remote": "c4375a95f042ebf40889c0a088255dbb1c73342a7f0d25c18191bdf426a1216e",
+      "bytes": 10464938,
+      "remote_path": "/home/inspur/aic_video_data/videos/x/Xm1ouND-aiQ_210.0_360.0.mp4",
+      "corpus_window_sec": [
+        210.0,
+        360.0
+      ],
+      "files_in_source_group": 5,
+      "split": "pilot_dev",
+      "annotation_status": "UNANNOTATED",
+      "exclusion_checks": {
+        "youtube_id_in_987_labels": false,
+        "youtube_id_in_818_splits": false,
+        "under_test_path": false,
+        "shares_resolution_with_a_test_video": false,
+        "duration_within_50ms_of_a_test_video": false,
+        "note": "all three exclusion sets were built from YouTube-level ids; the last two checks are weak anti-leak heuristics, not proof of distinct source material"
+      },
+      "verification": {
+        "remote_readable": true,
+        "duration_in_5_180": true,
+        "local_sha256_matches_remote": true,
+        "cfr_within_1us": true,
+        "stream_start_is_zero": true
+      }
+    },
+    {
+      "sample_id": "P07",
+      "source_group": "dEuxoRj0G5Y",
+      "file_name": "dEuxoRj0G5Y_210.0_360.0.mp4",
+      "target_ratio_wh": [
+        9,
+        16
+      ],
+      "source_width": 534,
+      "source_height": 300,
+      "fps": 30.0,
+      "n_frames": 4500,
+      "duration_sec": 150.0,
+      "sha256_local": "e8c410e21d5d2e75c5533f2b162c6c9ede01e109b6e30316c0395d1ff26be45a",
+      "sha256_remote": "e8c410e21d5d2e75c5533f2b162c6c9ede01e109b6e30316c0395d1ff26be45a",
+      "bytes": 14495915,
+      "remote_path": "/home/inspur/aic_video_data/videos/d/dEuxoRj0G5Y_210.0_360.0.mp4",
+      "corpus_window_sec": [
+        210.0,
+        360.0
+      ],
+      "files_in_source_group": 3,
+      "split": "pilot_dev",
+      "annotation_status": "UNANNOTATED",
+      "exclusion_checks": {
+        "youtube_id_in_987_labels": false,
+        "youtube_id_in_818_splits": false,
+        "under_test_path": false,
+        "shares_resolution_with_a_test_video": false,
+        "duration_within_50ms_of_a_test_video": false,
+        "note": "all three exclusion sets were built from YouTube-level ids; the last two checks are weak anti-leak heuristics, not proof of distinct source material"
+      },
+      "verification": {
+        "remote_readable": true,
+        "duration_in_5_180": true,
+        "local_sha256_matches_remote": true,
+        "cfr_within_1us": true,
+        "stream_start_is_zero": true
+      }
+    },
+    {
+      "sample_id": "P08",
+      "source_group": "vvT-gqzwUxA",
+      "file_name": "vvT-gqzwUxA_60.0_210.0.mp4",
+      "target_ratio_wh": [
+        9,
+        16
+      ],
+      "source_width": 534,
+      "source_height": 300,
+      "fps": 25.0,
+      "n_frames": 3750,
+      "duration_sec": 150.0,
+      "sha256_local": "2f8462e601fd4471dd5779a4fdeea9b72f22e2a89e9cc9b8e825da63cdddc993",
+      "sha256_remote": "2f8462e601fd4471dd5779a4fdeea9b72f22e2a89e9cc9b8e825da63cdddc993",
+      "bytes": 10119652,
+      "remote_path": "/home/inspur/aic_video_data/videos/v/vvT-gqzwUxA_60.0_210.0.mp4",
+      "corpus_window_sec": [
+        60.0,
+        210.0
+      ],
+      "files_in_source_group": 1,
+      "split": "pilot_dev",
+      "annotation_status": "UNANNOTATED",
+      "exclusion_checks": {
+        "youtube_id_in_987_labels": false,
+        "youtube_id_in_818_splits": false,
+        "under_test_path": false,
+        "shares_resolution_with_a_test_video": false,
+        "duration_within_50ms_of_a_test_video": false,
+        "note": "all three exclusion sets were built from YouTube-level ids; the last two checks are weak anti-leak heuristics, not proof of distinct source material"
+      },
+      "verification": {
+        "remote_readable": true,
+        "duration_in_5_180": true,
+        "local_sha256_matches_remote": true,
+        "cfr_within_1us": true,
+        "stream_start_is_zero": true
+      }
+    }
+  ],
+  "not_selected_larger_groups": {
+    "note": "a source group usually has several 150 s windows; the first window in stable file-name order was taken and the window count per group is recorded above"
+  },
+  "no_model_in_selection": true,
+  "selection_not_based_on_expected_score": true,
+  "negatives": {
+    "guaranteed": false,
+    "statement": "no no-highlight sample was fabricated; a negative only counts if an annotator confirms it in the tool"
+  }
+}

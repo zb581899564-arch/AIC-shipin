@@ -1,0 +1,57 @@
+{
+  "saved_utc": "2026-10-13T21:06:07.0207534Z",
+  "receipt_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/d8_native_arithmetic_preflight_v1/metadata_statistics_receipt_03.json",
+    "bytes": 6584,
+    "sha256": "acad81016a8f54479d8584f77d2bb816c84493cd30c84f5ac93d4d10c8d316f8"
+  },
+  "completion_ref": {
+    "path": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/d8_native_arithmetic_preflight_v1/run_03/completion.json",
+    "bytes": 9200,
+    "sha256": "0482b180d98c4a6aec58d51d16bbcea316bbba4650d946ceb6c174f164cb7df4"
+  },
+  "summary": {
+    "status": "COMPLETE_METADATA_STATISTICS03_D8_EXACTLY_REPRODUCED_PRODUCTION_STILL_NOT_ADMITTED",
+    "scope": {
+      "sources": 426,
+      "windows": 521,
+      "original_candidates": 665,
+      "media_GT_processor_model_ZIP_calls": 0
+    },
+    "D8_equality": {
+      "framekeys": 122050,
+      "original_core_framekeys": 102112,
+      "actual_old_normalized_formula": true,
+      "raw_float_KEEP_formula_equal": true,
+      "added": 0,
+      "removed": 0,
+      "original_boxes_canonical_sha256": "5a791c04c7de7373174baa92d4849ec40543217b14337b5cfe308b79647fbbb9",
+      "all_original_boxes_equal": true
+    },
+    "strict_domain_gaps": {
+      "old_CFR_planning_endtick_null_sources": 416,
+      "float_window_end_above_exact_planning_end_windows": 58,
+      "affected_sources": 58,
+      "excess_seconds": {
+        "count": 58,
+        "min_exact": "1/3000000000000000",
+        "max_exact": "1/300000000000000"
+      },
+      "strict_root_rejected_events": 64,
+      "CFR_planning_end_not_above_last_pts_sources": 1,
+      "original_sample64_window_domain_invalid": 1
+    }
+  },
+  "general_contract_diagnosis": {
+    "old_D8_is_not_hypothetical_CFR_ceil": true,
+    "legacy_CFR_ceil_diagnostic_difference_frames": 15,
+    "do_not_replace_D8_with_ceil": true,
+    "potential_source_definition": "Bind existing accepted coarse window-local half-open integer ranges to exact original source ordinals/PTS and original D8 normalized exact windows. Physical terminal remains separately unproven for 416 CFR records until independently measured.",
+    "current_action": "STOP formal preparation; keep strict V2 gates and original outputs/clocks/D8. No epsilon, prediction clipping, test-specific adjustment, or synthetic physical witness."
+  },
+  "local_code": "G:\\ai\\AIC视频\\improvement\\d8_native_arithmetic_preflight_v1\\preflight_statistics_03.py",
+  "actual_execution_count": 1,
+  "production_admitted": false,
+  "old_failures_preserved": true,
+  "no_successful_work_rerun": true
+}

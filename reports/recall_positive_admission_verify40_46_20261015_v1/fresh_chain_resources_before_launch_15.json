@@ -1,0 +1,43 @@
+{
+  "utc": "2026-10-15T04:44:15.337954+00:00",
+  "host": "inspur-NP5570M5",
+  "owned": [],
+  "disk": [
+    943412031488,
+    815689138176,
+    79723282432
+  ],
+  "memory": "MemTotal:       131643236 kB\nMemFree:        12107164 kB\nMemAvailable:   122431056 kB\nBuffers:          828664 kB\nCached:         108211572 kB\nSwapCached:       156384 kB\nActive:         94822272 kB\nInactive:       17362584 kB\nActive(anon):     538908 kB\nInactive(anon):  2659904 kB\nActive(file):   94283364 kB\nInactive(file): 14702680 kB\nUnevictable:          12 kB\nMlocked:               4 kB\nSwapTotal:      134217724 kB\nSwapFree:       131504124 kB\nDirty:               644 kB\nWriteback:             0 kB\nAnonPages:       3093720 kB\nMapped:           390724 kB\nShmem:             54184 kB\nKReclaimable:    2530540 kB\nSlab:            3424140 kB\nSReclaimable:    2530540 kB\nSUnreclaim:       893600 kB\nKernelStack:       26908 kB\nPageTables:        50436 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    200039340 kB\nCommitted_AS:   14862588 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:      311196 kB\nVmallocChunk:          0 kB\nPercpu:           120704 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:     6056808 kB\nDirectMap2M:    80619520 kB\nDirectMap1G:    49283072 kB\n",
+  "tasks": [
+    "    PID    PPID STAT %CPU   RSS COMMAND",
+    " 219420  219419 SNl   348 1125512 java -Xms128m -Xmx1024m -cp /home/inspur/aicomp/zhangbo-v36-rc2-first-visit-20261015/source/runtime/rc2-exploration-state.jar org.uma.jmetal.runner.rc2.V36Rc2FirstVisitRunner --plan /home/inspur/aicomp/zhangbo-v36-rc2-first-visit-20261015/source/outputs/exploration-screen/exploration-plans/RC2FIRST-100_5_3_1-20261015-Q_FIRST_VISIT.properties --execute",
+    "   2615       1 Sl   23.6 95216 /opt/teamviewer/tv_bin/teamviewerd -d",
+    " 219688    1316 Ss    3.0  8768 sshd: inspur [priv]",
+    " 217092  217089 S     2.9 19036 python3 -B /home/inspur/aicomp/zhangbo-v36-rc2-first-visit-20261015/source/scripts/run_rc2_retention_linux.py --first-visit --registry /home/inspur/aicomp/zhangbo-v36-rc2-first-visit-20261015/source/outputs/exploration-screen/exploration-registry.tsv --prior /home/inspur/aicomp/zhangbo-v36-rc2-d50k-20261014/source/outputs/d50k-screen --execute --approval RC2_FIRST_VISIT_7_RUNS_APPROVED --continue-after-first-acceptance",
+    "2624347       1 Ssl   1.9 221256 /opt/todesk/bin/ToDesk_Service",
+    "   1136       1 Rsl   1.7 10340 /usr/lib/policykit-1/polkitd --no-debug",
+    " 214955       1 Ssl   1.6 23392 /usr/lib/packagekit/packagekitd",
+    "   3840    3637 SLl   0.9 73276 mongod --keyFile /data/mongodb.key --replSet rs0 --auth --bind_ip_all",
+    "   1115       1 Ss    0.7 148800 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only",
+    "2923483    4654 Ssl   0.7 35124 /home/inspur/codex-network-test-20261013/easytier-core -c /home/inspur/codex-network-test-20261013/direct-test.toml --rpc-portal 127.0.0.1:15889 --console-log-level warn",
+    "   4869    4654 Ssl   0.6 681380 /usr/bin/gnome-shell",
+    "   5245    4855 Sl    0.5 54876 /opt/todesk/bin/ToDesk",
+    "      1       0 Rs    0.4  9272 /sbin/init splash",
+    "   1117       1 Ssl   0.4 10448 /usr/sbin/NetworkManager --no-daemon",
+    "   1290       1 Ssl   0.2 44936 /usr/sbin/tailscaled --state=/var/lib/tailscale/tailscaled.state --socket=/run/tailscale/tailscaled.sock --port=41641",
+    "   3639    3468 Ssl   0.2 42200 mysqld --default-authentication-plugin=mysql_native_password",
+    "1284919 1244689 Z     0.2     0 [python] <defunct>",
+    "    595       1 S<s   0.1 142024 /lib/systemd/systemd-journald",
+    "   1280       1 Ssl   0.1  5492 /usr/bin/python3 /usr/local/bin/devpi-server --host 0.0.0.0 --port 3141 --serverdir /var/www/devpi"
+  ],
+  "gpu": "0, NVIDIA RTX 6000 Ada Generation, 184, 46068, 0\n",
+  "compute": "",
+  "accepted_ids": [
+    "v_NNuIaUFYGCE",
+    "v_pHZogKGkc9o",
+    "v_5FM_xJGb-Tk",
+    "v_YW3mCNKVaa4"
+  ],
+  "media_bytes": 41763431,
+  "reference_completion_sha256": "3ab3547064df2d4a5b1bc9ce0e874b96a42f17b94d4668e5454f0dcc0a15be93"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "ROOT_SERIALIZATION_ENGINEERING_FAILURE_PRESERVED_NOT_MODEL_FAILURE",
+  "original_verifier": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\accept_teacher_fragment_scope_v8_root.py",
+    "sha256": "2096377bc94dab8a1863907307f7b61ea71e4b1b572339e3b68093d204032cf2"
+  },
+  "partial_output": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\19_j0n_w11_lawful_observation_completion.json",
+    "sha256": "741561eed79762d78252e2492f9200a720056bc29f67c38fb613f33ab1ed540d",
+    "bytes": 294
+  },
+  "actual_exception": "TypeError: Object of type Match is not JSON serializable",
+  "cause": "Regex match variable n shadowed the CLI number before JSON dump",
+  "old_sources_and_raw_unchanged": true,
+  "new_model_calls": 0
+}

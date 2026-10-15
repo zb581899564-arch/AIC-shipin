@@ -1,0 +1,86 @@
+{
+  "utc": "2026-10-10T20:42:17.838139+00:00",
+  "status": "PASS_CPU_ACTUAL_FIVE_PAIR_SHA_EXACT_EMBEDDED_LITERAL_REQUESTS_NO_MODEL",
+  "checks": [
+    {
+      "call": 6,
+      "job_indices": [
+        14,
+        15
+      ],
+      "CLI_after": 32,
+      "original_index_bytes_equal": true,
+      "frozen_all_input_SHA_PASS": true,
+      "request_missing": true,
+      "literal_paths_in_actual_prompt_match_index": true,
+      "literal_paths_allowed_by_whitelist": true,
+      "output_files_not_existing": true
+    },
+    {
+      "call": 7,
+      "job_indices": [
+        16,
+        17
+      ],
+      "CLI_after": 33,
+      "original_index_bytes_equal": true,
+      "frozen_all_input_SHA_PASS": true,
+      "request_missing": true,
+      "literal_paths_in_actual_prompt_match_index": true,
+      "literal_paths_allowed_by_whitelist": true,
+      "output_files_not_existing": true
+    },
+    {
+      "call": 8,
+      "job_indices": [
+        18,
+        19
+      ],
+      "CLI_after": 34,
+      "original_index_bytes_equal": true,
+      "frozen_all_input_SHA_PASS": true,
+      "request_missing": true,
+      "literal_paths_in_actual_prompt_match_index": true,
+      "literal_paths_allowed_by_whitelist": true,
+      "output_files_not_existing": true
+    },
+    {
+      "call": 9,
+      "job_indices": [
+        20,
+        21
+      ],
+      "CLI_after": 35,
+      "original_index_bytes_equal": true,
+      "frozen_all_input_SHA_PASS": true,
+      "request_missing": true,
+      "literal_paths_in_actual_prompt_match_index": true,
+      "literal_paths_allowed_by_whitelist": true,
+      "output_files_not_existing": true
+    },
+    {
+      "call": 10,
+      "job_indices": [
+        22,
+        23
+      ],
+      "CLI_after": 36,
+      "original_index_bytes_equal": true,
+      "frozen_all_input_SHA_PASS": true,
+      "request_missing": true,
+      "literal_paths_in_actual_prompt_match_index": true,
+      "literal_paths_allowed_by_whitelist": true,
+      "output_files_not_existing": true
+    }
+  ],
+  "source_ledger_max": 31,
+  "new_requests": 0,
+  "new_model_calls": 0,
+  "new_decode": 0,
+  "new_optimizer_updates": 0,
+  "old_execution_sources_and_success_failure_artifacts_unchanged": true,
+  "explicit_ERROR_audit_branch_present": true,
+  "separate_root_start_gate_required": true,
+  "execution_binding_sha256": "9aa9a698653d11fe72f0540d4eeffa2e0e203b81153fd57a00984a2140a73883",
+  "dry_run_sha256": "b18d6dc4d565d6206179fac4b1b2805c678b57f6dcd85d61295d1f5fbc5de249"
+}

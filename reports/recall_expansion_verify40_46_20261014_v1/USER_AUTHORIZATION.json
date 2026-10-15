@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-14T12:54:23.527813+00:00",
+  "human_request": "可以，就按这个方向去做，以高光复核40.46为基线，先用外部样本小规模验证补召回，通过后再全量出包，别再围着时间边界反复试了。",
+  "baseline": {
+    "id": "TEMPORAL_VERIFY",
+    "user_score": 40.46,
+    "score_source": "user_feedback_screenshot_not_independent_site_login",
+    "windows_zip": "G:\\ai\\AIC视频\\deliveries\\AIC20H_TEMPORAL_VERIFY_20261014\\candidate_TEMPORAL_VERIFY.zip",
+    "zip_bytes": 380199,
+    "zip_sha256": "86593725c6bad919dc0d342fe98ad65e489a13a6e492da5de3afd247a3226543",
+    "prediction_canonical_sha256": "68f7e3c0c9413fb8ab7def413fce5388679d5fe3600d5be946c593fb9907789a",
+    "sources": 426,
+    "selected_frames": 122002,
+    "linux_zip": "/home/inspur/aic_video_work/twenty_hour_five_20261014_v1/temporal_family_native_package_v3/package_VERIFY/candidate_TEMPORAL_VERIFY.zip"
+  },
+  "authorized": "external small recall-expansion pilot; production only after frozen external development and independent confirmation pass",
+  "new_goal_or_automation_requested": false,
+  "constraints": [
+    "preserve baseline frames and boxes",
+    "add only new candidates explicitly KEEP",
+    "UNKNOWN/DROP does not add; engineering failures never become empty/UNKNOWN",
+    "same existing model; no new model download",
+    "no test GT/manual correction/annotation/training or leaderboard-derived rules",
+    "Linux resident compute and evidence",
+    "no boundary/padding/shrink scans",
+    "no author or peer-chat messaging",
+    "no duplicate successful calls/QA/download/encode/package",
+    "strict existing aic-inspur-tailscale per human network change instruction"
+  ]
+}

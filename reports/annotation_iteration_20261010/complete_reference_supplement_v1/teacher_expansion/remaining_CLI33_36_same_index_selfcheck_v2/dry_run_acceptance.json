@@ -1,0 +1,135 @@
+{
+  "utc": "2026-10-10T21:47:02.176248+00:00",
+  "status": "PASS_AST_SHA_LITERAL_PATHS_INDEX_POLICY_NO_MODEL_PENDING_ROOT_START",
+  "AST": [
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\audit_completed_window.py",
+      "sha256": "3fee0f74ccce39700684d89c9ea494fdcc2ec7a90a829412b97c619a5e3bc4d1",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\audit_pair.py",
+      "sha256": "02ba0caf0385bcc99283cf8c75cd624c3bc8f8b4567e2abc33abfff62384db35",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\controller.py",
+      "sha256": "f6f263daec5de00acab9705e234e3748fc2e4ad8be07470b06055b0f84853cd2",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\launch.py",
+      "sha256": "6a7705936838cbe153642a2099107fef69da646142588da5fdd3e1547badcdd3",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\observe_receipts.py",
+      "sha256": "d4360609f152b3c73699e46afb3c287b2a0f781c5bd37e133d9e93bafac7cabc",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\progress.py",
+      "sha256": "23f54df447d945ddfa0279acc84f9c5444657a90119a42eb40034f7cde54d180",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\prompt.py",
+      "sha256": "bfe2a062ae7c1422665d5948851bb059d6d2cb41c8449d306290bb69a1c044f0",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\run_pair.py",
+      "sha256": "e7e9855a4b1c0b9e719dcacac1d7262d263edffc5527f236834eed3b441bf7d4",
+      "AST_PASS": true
+    },
+    {
+      "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\supply_policy.py",
+      "sha256": "c264c6142851f4386dfd3a02cab440ee5e9e084932fc4cff72833fd933ea5ca1",
+      "AST_PASS": true
+    }
+  ],
+  "calls": [
+    {
+      "call": 7,
+      "jobs": [
+        16,
+        17
+      ],
+      "CLI_after": 33,
+      "input_count": 198,
+      "old_index_sha256": "59407adb54ebaffd8a5819732c3f2f08c61c8460fe5bd3c180039e62e5506e06",
+      "new_index_sha256": "59407adb54ebaffd8a5819732c3f2f08c61c8460fe5bd3c180039e62e5506e06",
+      "freeze_sha256": "8f59047a345a0b9978f872ee03541617cd37636303cab75d21fafe785b69d78b",
+      "prompt_sha256": "81d6a59c69f680fab51cec1cb42083f4e657fa1f5f1f34f270a92fefd72b67dc",
+      "literal_preview_arguments_sha256": "065d9a38020772425bfc02475fd79cc0cf945bb98c3b0bf0b999adb302f6a5a9",
+      "all_old_inputs_SHA_verified": true
+    },
+    {
+      "call": 8,
+      "jobs": [
+        18,
+        19
+      ],
+      "CLI_after": 34,
+      "input_count": 198,
+      "old_index_sha256": "342eb813efcb03e8a9ec7c25d39f8123bda736fee3494c5220c7f8d41e494290",
+      "new_index_sha256": "342eb813efcb03e8a9ec7c25d39f8123bda736fee3494c5220c7f8d41e494290",
+      "freeze_sha256": "cd9133b0482f3651d4209241f288fd5ce852dd1e031fe11035411c6c963a324b",
+      "prompt_sha256": "6e26b7d9e50af1b3f3b5cbd55cbe7b046e37811f158154935bafbe5557b9fb20",
+      "literal_preview_arguments_sha256": "1e50ccb5817cb638ce94d21b9d9dbb40efcb0375210e4b9cc6f86c9095718e52",
+      "all_old_inputs_SHA_verified": true
+    },
+    {
+      "call": 9,
+      "jobs": [
+        20,
+        21
+      ],
+      "CLI_after": 35,
+      "input_count": 198,
+      "old_index_sha256": "83cbf73ef07f79ec4238bbe306e69e559e0280eec3cf0830296503eac0ff575c",
+      "new_index_sha256": "83cbf73ef07f79ec4238bbe306e69e559e0280eec3cf0830296503eac0ff575c",
+      "freeze_sha256": "32131bdb085f4a10168e75ee264192e8a6775e1f22334a137f04ee19a7f898f7",
+      "prompt_sha256": "e5b9945ac66469c96871837c5370447028de76d2f22b9d5f5c0652e198915b1c",
+      "literal_preview_arguments_sha256": "7fc1386ee93cbaad50d261311e9a137a92557496a40863e3f906312ade815590",
+      "all_old_inputs_SHA_verified": true
+    },
+    {
+      "call": 10,
+      "jobs": [
+        22,
+        23
+      ],
+      "CLI_after": 36,
+      "input_count": 198,
+      "old_index_sha256": "09e7051115e27b1ea5ce9432267123a5ac5cc588da1c563e32417319fd1d7df1",
+      "new_index_sha256": "09e7051115e27b1ea5ce9432267123a5ac5cc588da1c563e32417319fd1d7df1",
+      "freeze_sha256": "9860d9f9e20fc5ed154d028e37d910fd63739d032ed16c0259dac2912c1ccaea",
+      "prompt_sha256": "56b45d9c0f5bc9eb120b26773ad6726a9b4123931496a8d6a5e22f6f4996ecb7",
+      "literal_preview_arguments_sha256": "7e1ab5108511795e46261ade8e8d8f0a5f53d7e3b800b1039f2e2239e97093b7",
+      "all_old_inputs_SHA_verified": true
+    }
+  ],
+  "all_original_indices_byte_exact": true,
+  "all_original_media_inputs_SHA_verified": true,
+  "all_original_outputs_paths_preserved": true,
+  "exact_eight_AbsolutePath_arguments_per_window": true,
+  "same_index_filter_no_hard_count_gate_verified": true,
+  "other_path_retained_for_whitelist_rejection": true,
+  "bare_nonmedia_UNKNOWN_and_reported401_distinguished": true,
+  "actual_media_ERROR_still_rejects": true,
+  "old_audits_not_modified": true,
+  "fixed_denominator": 24,
+  "teacher_expansion_denominator": 21,
+  "actual_student_frames": 64,
+  "timeout_seconds": 7200,
+  "model": "gemini-3.8-flash-high",
+  "global_cap": 36,
+  "new_model_calls": 0,
+  "new_decode": 0,
+  "new_optimizer_updates": 0,
+  "new_426": 0,
+  "execution_binding_sha256": "2b6a1e9193d34e481875dd6bc453a96be9c3e4513b0a50124b96f4f3919c66e7",
+  "requires_root_start_admission": true,
+  "cash_cost": "UNKNOWN_NOT_ZERO"
+}

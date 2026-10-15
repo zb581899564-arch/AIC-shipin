@@ -1,0 +1,2202 @@
+{
+  "status": "PASS_LOCAL_SEMANTICALLY_EXACT_LINUX_METADATA_PROJECTION_NOT_TRANSFERRED_NOT_TRAINING",
+  "utc": "2026-10-11T11:30:29.080505+00:00",
+  "windows": 24,
+  "train_windows": 8,
+  "schedule": {
+    "window_ids": [
+      "AwmHb44_ouw:SLOT6:10",
+      "AwmHb44_ouw:SLOT6:11",
+      "HT5vyqe0Xaw:SLOT6:2",
+      "WxtbjNsCQ8A:SLOT6:0",
+      "WxtbjNsCQ8A:SLOT6:5",
+      "byxOvuiIJV0:SLOT6:2",
+      "kLxoNp-UchI:SLOT6:1",
+      "kLxoNp-UchI:SLOT6:2"
+    ],
+    "batches": [
+      {
+        "epoch": 0,
+        "indices": [
+          4,
+          3,
+          6,
+          2
+        ]
+      },
+      {
+        "epoch": 0,
+        "indices": [
+          0,
+          7,
+          1,
+          5
+        ]
+      },
+      {
+        "epoch": 1,
+        "indices": [
+          0,
+          7,
+          3,
+          4
+        ]
+      },
+      {
+        "epoch": 1,
+        "indices": [
+          1,
+          6,
+          2,
+          5
+        ]
+      }
+    ],
+    "source_weights": [
+      "4/5",
+      "4/5",
+      "8/5",
+      "4/5",
+      "4/5",
+      "8/5",
+      "4/5",
+      "4/5"
+    ],
+    "window_ce_coefficient": "1/4",
+    "updates": 4
+  },
+  "evaluation_windows": [
+    "-esJrBWj2d8:SLOT6:1",
+    "-esJrBWj2d8:SLOT6:6",
+    "EYqVtI9YWJA:SLOT6:3",
+    "EYqVtI9YWJA:SLOT6:4",
+    "J0nA4VgnoCo:SLOT6:11",
+    "J0nA4VgnoCo:SLOT6:2",
+    "Yi4Ij2NM7U4:SLOT6:3",
+    "Yi4Ij2NM7U4:SLOT6:6",
+    "cjibtmSLxQ4:SLOT6:13",
+    "cjibtmSLxQ4:SLOT6:16",
+    "i3wAGJaaktw:SLOT6:2",
+    "i3wAGJaaktw:SLOT6:3"
+  ],
+  "original_registry": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\denominator24_v21.json",
+    "sha256": "da413af7014f868c18cb3ce2b56ff1de08d2cd94b80846d89d9b2d7e7b20ca24"
+  },
+  "bindings": [
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\candidate_contract_linux_v1.json",
+      "original_sha256": "1993ebd881969710ebb18e5d21ba4d42c56c1ecd477a27aa07d4d539cefa5a09",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/science/candidate_contract.json",
+      "linux_sha256": "1993ebd881969710ebb18e5d21ba4d42c56c1ecd477a27aa07d4d539cefa5a09",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\frozen_protocol_v2_explicit_empty_gate.json",
+      "original_sha256": "5fd35d48d4caa867f0f53cbd56f76f0e36dcebfd56160f55cff3053a80ff213d",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/science/frozen_protocol_v2_explicit_empty_gate.json",
+      "linux_sha256": "5fd35d48d4caa867f0f53cbd56f76f0e36dcebfd56160f55cff3053a80ff213d",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\source_window_plan.json",
+      "original_sha256": "09ecb28971932bd3bf8ac275c30d0a6fd534345442f2d2ec3529fa3f8e1e4b22",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/science/source_window_plan.json",
+      "linux_sha256": "09ecb28971932bd3bf8ac275c30d0a6fd534345442f2d2ec3529fa3f8e1e4b22",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\actual_processor_binding.json",
+      "original_sha256": "272ab26a6dc9bbe42db40531eec316f91aed5f4073b6ab9d79a2aa80d1294c29",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/science/actual_processor_binding.json",
+      "linux_sha256": "272ab26a6dc9bbe42db40531eec316f91aed5f4073b6ab9d79a2aa80d1294c29",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\quality_contract.py",
+      "original_sha256": "ed92a4ef8111967e088dffc04317a7234b890bc37af059fc81bc7b8577b4080e",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/science/quality_contract.py",
+      "linux_sha256": "ed92a4ef8111967e088dffc04317a7234b890bc37af059fc81bc7b8577b4080e",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\silver_contract.py",
+      "original_sha256": "6b9e7a8603d7267fac4e119d5b7817fc91a1d15ec44d9c965be065922b9475ba",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/science/silver_contract.py",
+      "linux_sha256": "6b9e7a8603d7267fac4e119d5b7817fc91a1d15ec44d9c965be065922b9475ba",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\event_metrics.py",
+      "original_sha256": "460674b2dc600ea4dacdb12445ff09d8b7a7c4f4a50c3b662b04caf2ff60eba2",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/science/event_metrics.py",
+      "linux_sha256": "460674b2dc600ea4dacdb12445ff09d8b7a7c4f4a50c3b662b04caf2ff60eba2",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\00_w01_complete_reference.json",
+      "original_sha256": "09ba0ffa9d4772e7b0673a9089061af423780238a279ea408aa75034d2747015",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/00.json",
+      "linux_sha256": "09ba0ffa9d4772e7b0673a9089061af423780238a279ea408aa75034d2747015",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\teacher_attempt01_http1\\audit.json",
+      "original_sha256": "194eb63e3239a02dca9e327d868d74cdc6ac40da9eb10ff5becb16a0875e6cf5",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/00/teacher_observation_audit.json",
+      "linux_sha256": "194eb63e3239a02dca9e327d868d74cdc6ac40da9eb10ff5becb16a0875e6cf5",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\independent_highlight_pilot_v3\\main_adjudication\\blind_initial_binding.json",
+      "original_sha256": "941a255e07678187dc9af3f8388ba9516c7fcccab71aafd071d62e180594bb7d",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/00/blind_initial.json",
+      "linux_sha256": "941a255e07678187dc9af3f8388ba9516c7fcccab71aafd071d62e180594bb7d",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\independent_highlight_pilot_v3\\blind_student\\proposal.json",
+      "original_sha256": "6a5a96a4596afe081957a05867e29e1d3b46e59a15ba2862e3006a263825a4ee",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/00/blind_student_visibility.json",
+      "linux_sha256": "6a5a96a4596afe081957a05867e29e1d3b46e59a15ba2862e3006a263825a4ee",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\00_kLxoNp-UchI_W01\\student_views\\receipt.json",
+      "original_sha256": "a497bb16f675f32e779d896aca4c997ee1ad19816f1c3011e69d587acd5f355d",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/00/student_processor.json",
+      "linux_sha256": "a497bb16f675f32e779d896aca4c997ee1ad19816f1c3011e69d587acd5f355d",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\independent_highlight_pilot_v3\\main_adjudication\\final_review.json",
+      "original_sha256": "14a5d0353cbaffa12b36316de070d73b4e951762aceac299f5c54ba2120274c3",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/00/final_main_review.json",
+      "linux_sha256": "14a5d0353cbaffa12b36316de070d73b4e951762aceac299f5c54ba2120274c3",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/00.json",
+        "sha256": "09ba0ffa9d4772e7b0673a9089061af423780238a279ea408aa75034d2747015"
+      },
+      "projected_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/references/00.json",
+        "sha256": "9d581a96a919eee8dab7234f44e5c938392be5daccd71d2f4abb61961909f9be"
+      },
+      "operation": "ONLY_TOP_LEVEL_BOUND_EVIDENCE_PATH_PROJECTION",
+      "all_semantic_payload_exact": true,
+      "evidence_file_bytes_exact": true
+    },
+    {
+      "original_sidecar": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\00_w01_target_serialization.json",
+        "sha256": "d6bdbe9a31e9095673493e1b94627c54535e3b9b052c0fe161b9ee1883daf17c"
+      },
+      "projected_sidecar": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/targets/00.json",
+        "sha256": "d4b928714635f194f41630d63a94ce94b11dfa569ac1eeb96c6c239c356d34f2"
+      },
+      "operation": "ONLY_REFERENCE_SHA_PROJECTION",
+      "all_target_literals_and_ranges_exact": true
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\01_w02_complete_reference.json",
+      "original_sha256": "8ad45cfa36534397f785fe686d23d3d9847e7ca7952a9e2462dc65b38e3b3968",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/01.json",
+      "linux_sha256": "8ad45cfa36534397f785fe686d23d3d9847e7ca7952a9e2462dc65b38e3b3968",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\01_kLxoNp-UchI_W02\\teacher_attempt01_http1\\audit.json",
+      "original_sha256": "2886513167ff4c9549bcb2158fb8a3b09077fd89c4922ab35a0a022f5356e318",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/01/teacher_observation_audit.json",
+      "linux_sha256": "2886513167ff4c9549bcb2158fb8a3b09077fd89c4922ab35a0a022f5356e318",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_reviews\\initial\\01_kLxoNp-UchI_W02.independent_initial_blind_v1.json",
+      "original_sha256": "e9a6402f66c5b5e6adb1ce7a8525bdefab9e6b2572f26f0f261baf14e643ef42",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/01/blind_initial.json",
+      "linux_sha256": "e9a6402f66c5b5e6adb1ce7a8525bdefab9e6b2572f26f0f261baf14e643ef42",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_reviews\\initial\\01_kLxoNp-UchI_W02.independent_student_view_review_v1.json",
+      "original_sha256": "f4d9559f727054c4a080946b268c85a6d96f527702bf23e570bf264ea7ceb2bd",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/01/blind_student_visibility.json",
+      "linux_sha256": "f4d9559f727054c4a080946b268c85a6d96f527702bf23e570bf264ea7ceb2bd",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\01_kLxoNp-UchI_W02\\student_views\\receipt.json",
+      "original_sha256": "14fa82a5a88db190f6ba87a298f26c771f1fffeb4a0fa00ad9ce9af4eb892897",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/01/student_processor.json",
+      "linux_sha256": "14fa82a5a88db190f6ba87a298f26c771f1fffeb4a0fa00ad9ce9af4eb892897",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\01_w02_final_main_review.json",
+      "original_sha256": "8a6c0ff7264d396d51ee0dcaa3bb384d861279ac57d6c99939d4750a1c27e42f",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/01/final_main_review.json",
+      "linux_sha256": "8a6c0ff7264d396d51ee0dcaa3bb384d861279ac57d6c99939d4750a1c27e42f",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/01.json",
+        "sha256": "8ad45cfa36534397f785fe686d23d3d9847e7ca7952a9e2462dc65b38e3b3968"
+      },
+      "projected_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/references/01.json",
+        "sha256": "9410e7921d2c9eee7fb2fac0c97ed60aa37bb0df914c3ea3087c180b97c7711c"
+      },
+      "operation": "ONLY_TOP_LEVEL_BOUND_EVIDENCE_PATH_PROJECTION",
+      "all_semantic_payload_exact": true,
+      "evidence_file_bytes_exact": true
+    },
+    {
+      "original_sidecar": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\01_w02_target_serialization.json",
+        "sha256": "b5464d16356c554b56df8a38b732cc9a0134f97f6aba120dd1c84636bc8e4fe5"
+      },
+      "projected_sidecar": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/targets/01.json",
+        "sha256": "045eae31e2ba5145bd53749e48c3666d20d73e72067d19dbc97e81eea80c6e5e"
+      },
+      "operation": "ONLY_REFERENCE_SHA_PROJECTION",
+      "all_target_literals_and_ranges_exact": true
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\02_w10_complete_reference.json",
+      "original_sha256": "d5d088e110c85182af239cf3062abae842bdaa3affcb927f9585cef643df2200",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/02.json",
+      "linux_sha256": "d5d088e110c85182af239cf3062abae842bdaa3affcb927f9585cef643df2200",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\02_AwmHb44_ouw_W10\\teacher_attempt01_http1\\audit.json",
+      "original_sha256": "9ee6827ddb8fbeb3847351ceb5b074525868604a6a8421e02cbfa1b09c4f1b88",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/02/teacher_observation_audit.json",
+      "linux_sha256": "9ee6827ddb8fbeb3847351ceb5b074525868604a6a8421e02cbfa1b09c4f1b88",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_reviews\\initial\\02_AwmHb44_ouw_W10.independent_initial_blind_v1.json",
+      "original_sha256": "a8b6e30dcc4fdd79fe4ef53bc6b2f7605ae06616d62aa9c7faaad9c56e46904d",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/02/blind_initial.json",
+      "linux_sha256": "a8b6e30dcc4fdd79fe4ef53bc6b2f7605ae06616d62aa9c7faaad9c56e46904d",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_reviews\\initial\\02_AwmHb44_ouw_W10.independent_student_view_review_v1.json",
+      "original_sha256": "a736f675f96bcd94958c9123cb629a1aa2db8e71da4f476a78dee746961d8f74",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/02/blind_student_visibility.json",
+      "linux_sha256": "a736f675f96bcd94958c9123cb629a1aa2db8e71da4f476a78dee746961d8f74",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\02_AwmHb44_ouw_W10\\student_views\\receipt.json",
+      "original_sha256": "150d393e9cd5301cdbc645166feea3cd1e398c1a77742f06f0ecc824f561d4c7",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/02/student_processor.json",
+      "linux_sha256": "150d393e9cd5301cdbc645166feea3cd1e398c1a77742f06f0ecc824f561d4c7",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\02_w10_final_main_review.json",
+      "original_sha256": "cf4976696a6057921518967d0b1e799e0b64b3527aa747ecde9e7ac5b4658c5d",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/02/final_main_review.json",
+      "linux_sha256": "cf4976696a6057921518967d0b1e799e0b64b3527aa747ecde9e7ac5b4658c5d",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/02.json",
+        "sha256": "d5d088e110c85182af239cf3062abae842bdaa3affcb927f9585cef643df2200"
+      },
+      "projected_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/references/02.json",
+        "sha256": "4009ff84089b8199fdaad329205b10da2a35307a638d99d0140ea909734e3c15"
+      },
+      "operation": "ONLY_TOP_LEVEL_BOUND_EVIDENCE_PATH_PROJECTION",
+      "all_semantic_payload_exact": true,
+      "evidence_file_bytes_exact": true
+    },
+    {
+      "original_sidecar": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\02_w10_target_serialization.json",
+        "sha256": "6c031b79f9205b50e986a68ed8cc739e981786a2e26bd3beac0c560e58ffe4d6"
+      },
+      "projected_sidecar": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/targets/02.json",
+        "sha256": "1c44ba749b175b1fcc72023f3a6e0332f10918f2375b06b194a7bee0b53cbf30"
+      },
+      "operation": "ONLY_REFERENCE_SHA_PROJECTION",
+      "all_target_literals_and_ranges_exact": true
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\03_w11_complete_reference.json",
+      "original_sha256": "b0375ec902cf3e3620693d040b96955e43202d4cf340ad94cf3da20e2e77561e",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/03.json",
+      "linux_sha256": "b0375ec902cf3e3620693d040b96955e43202d4cf340ad94cf3da20e2e77561e",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\03_w11_lawful_observation_completion.json",
+      "original_sha256": "e9e9641fb5043a2a12907f66469ad28054f1811bcb3bfdfb812bd1ac435ebd08",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/03/teacher_observation_audit.json",
+      "linux_sha256": "e9e9641fb5043a2a12907f66469ad28054f1811bcb3bfdfb812bd1ac435ebd08",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_reviews\\initial\\03_AwmHb44_ouw_W11.independent_initial_blind_v1.json",
+      "original_sha256": "4f4f9a9b38340f778ac6347da26af2e4a3dda6818c373b9840824f118f039afa",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/03/blind_initial.json",
+      "linux_sha256": "4f4f9a9b38340f778ac6347da26af2e4a3dda6818c373b9840824f118f039afa",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\blind_reviews\\initial\\03_AwmHb44_ouw_W11.independent_student_view_review_v1.json",
+      "original_sha256": "5dedac64801609e233ca4d4dad27a4834f8d4dfdfedaae19e1b729085c707dcf",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/03/blind_student_visibility.json",
+      "linux_sha256": "5dedac64801609e233ca4d4dad27a4834f8d4dfdfedaae19e1b729085c707dcf",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\03_AwmHb44_ouw_W11\\student_views\\receipt.json",
+      "original_sha256": "49969b610d5b77df16d49300e61ea61c4e20f7293401a3ad7539af446cbfe37b",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/03/student_processor.json",
+      "linux_sha256": "49969b610d5b77df16d49300e61ea61c4e20f7293401a3ad7539af446cbfe37b",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\03_w11_final_main_review.json",
+      "original_sha256": "6c32b44986908629ca96623e146b676e9a5da09c865923f1231465f5ce771157",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/03/final_main_review.json",
+      "linux_sha256": "6c32b44986908629ca96623e146b676e9a5da09c865923f1231465f5ce771157",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/03.json",
+        "sha256": "b0375ec902cf3e3620693d040b96955e43202d4cf340ad94cf3da20e2e77561e"
+      },
+      "projected_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/references/03.json",
+        "sha256": "a4b0c41c0fc4c13baaab10ee91a33e3f862599afee9f186da3cdc6cc4cef5cd6"
+      },
+      "operation": "ONLY_TOP_LEVEL_BOUND_EVIDENCE_PATH_PROJECTION",
+      "all_semantic_payload_exact": true,
+      "evidence_file_bytes_exact": true
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\04_ht5_w02_complete_reference.json",
+      "original_sha256": "043693be74361fce46b0c77060558f396ffaf243ad23f4c6a6442aa562f4af32",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/04.json",
+      "linux_sha256": "043693be74361fce46b0c77060558f396ffaf243ad23f4c6a6442aa562f4af32",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\04_ht5_w02_lawful_observation_completion.json",
+      "original_sha256": "fd5de41610f812bef5e526d86dd81963c6eafcd1ec0f5f54cab85220718b7abe",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/04/teacher_observation_audit.json",
+      "linux_sha256": "fd5de41610f812bef5e526d86dd81963c6eafcd1ec0f5f54cab85220718b7abe",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\04_ht5_w02_independent_native_blind_binding.json",
+      "original_sha256": "999ac4dfe4f7422c45f0c592a4331bc4cf58e1299fec614c3f6b39078d69d858",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/04/blind_initial.json",
+      "linux_sha256": "999ac4dfe4f7422c45f0c592a4331bc4cf58e1299fec614c3f6b39078d69d858",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\04_HT5vyqe0Xaw_W02.independent_student64_review_v1.json",
+      "original_sha256": "3d24a73b375704f7e9ca1ddcabdbcfa8a608a6ba87f52232fbcc260947476287",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/04/blind_student_visibility.json",
+      "linux_sha256": "3d24a73b375704f7e9ca1ddcabdbcfa8a608a6ba87f52232fbcc260947476287",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\04_HT5vyqe0Xaw_W02\\student_views\\receipt.json",
+      "original_sha256": "ea07f0b2e21a08e4a35430f21fccfb0f09a3132e707902babbe24ec6876f0c5b",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/04/student_processor.json",
+      "linux_sha256": "ea07f0b2e21a08e4a35430f21fccfb0f09a3132e707902babbe24ec6876f0c5b",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\04_ht5_w02_final_main_review.json",
+      "original_sha256": "e6eddb7b5b844b737c2bf071cb9d6466d7b134f3db366f3fa067a68bffff0f0e",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/04/final_main_review.json",
+      "linux_sha256": "e6eddb7b5b844b737c2bf071cb9d6466d7b134f3db366f3fa067a68bffff0f0e",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/04.json",
+        "sha256": "043693be74361fce46b0c77060558f396ffaf243ad23f4c6a6442aa562f4af32"
+      },
+      "projected_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/references/04.json",
+        "sha256": "03fe3596097526e662f52bd859ca11bad598d8b6d759bd742f9c8f0407526143"
+      },
+      "operation": "ONLY_TOP_LEVEL_BOUND_EVIDENCE_PATH_PROJECTION",
+      "all_semantic_payload_exact": true,
+      "evidence_file_bytes_exact": true
+    },
+    {
+      "original_sidecar": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\04_ht5_w02_target_serialization.json",
+        "sha256": "572b22f1dda946118731bcfc4bf04fff381b2b71ce11960f9b80cddb54db9e9b"
+      },
+      "projected_sidecar": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/targets/04.json",
+        "sha256": "893e37aa229ae9500b74c7f4891bb8d7710545ce367b8b645d1eb0c47e01c53a"
+      },
+      "operation": "ONLY_REFERENCE_SHA_PROJECTION",
+      "all_target_literals_and_ranges_exact": true
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\08_wxt_w00_complete_reference.json",
+      "original_sha256": "7fa85aa56975e3a4a633a8b87c46d0bcb61aea2845a26f6a419a90c0679ddaf0",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/08.json",
+      "linux_sha256": "7fa85aa56975e3a4a633a8b87c46d0bcb61aea2845a26f6a419a90c0679ddaf0",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\08_teacher_completed_pair_observation.json",
+      "original_sha256": "162f1f208ff85319aed11075adf337e8fb3e641ee7f160bdf84d76fe357de537",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/08/teacher_observation_audit.json",
+      "linux_sha256": "162f1f208ff85319aed11075adf337e8fb3e641ee7f160bdf84d76fe357de537",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\08_wxt_w00_independent_native_blind_binding.json",
+      "original_sha256": "dba38413cb9dc76fa21ee34121574c198d4fe7e4810f77cae8394a1ea04e33d0",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/08/blind_initial.json",
+      "linux_sha256": "dba38413cb9dc76fa21ee34121574c198d4fe7e4810f77cae8394a1ea04e33d0",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\08_WxtbjNsCQ8A_W00.independent_student64_review_v1.json",
+      "original_sha256": "a32d5050341f5cbe33e2d2578710c73ff5b0eaf038c757cd2d5ab332f344a875",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/08/blind_student_visibility.json",
+      "linux_sha256": "a32d5050341f5cbe33e2d2578710c73ff5b0eaf038c757cd2d5ab332f344a875",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\08_WxtbjNsCQ8A_W00\\student_views\\receipt.json",
+      "original_sha256": "9cf8ca3ebd1c22dae12463b513de0fa992f97baef04085693279c7a5f17c7fbe",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/08/student_processor.json",
+      "linux_sha256": "9cf8ca3ebd1c22dae12463b513de0fa992f97baef04085693279c7a5f17c7fbe",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\08_WxtbjNsCQ8A_W00.student64_fact_errata_reinspection_v1.json",
+      "original_sha256": "ca255ab22bed4b25515d5bcd018574f2ed89cecbaf664d3f6c9138830ace2537",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/08/student_fact_errata.json",
+      "linux_sha256": "ca255ab22bed4b25515d5bcd018574f2ed89cecbaf664d3f6c9138830ace2537",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\08_wxt_w00_student_fact_errata_acceptance.json",
+      "original_sha256": "8def89f1a17a8f54e35b53a5210f746ccd30349b728980f28b1284250e6c0229",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/08/student_fact_errata_acceptance.json",
+      "linux_sha256": "8def89f1a17a8f54e35b53a5210f746ccd30349b728980f28b1284250e6c0229",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\08_wxt_w00_main_preteacher_review.json",
+      "original_sha256": "bffd30536a7f470ee47d2481ca89688531eafe92cb88faac7746593c196f95e9",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/08/preteacher_main_review.json",
+      "linux_sha256": "bffd30536a7f470ee47d2481ca89688531eafe92cb88faac7746593c196f95e9",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\08_wxt_w00_final_main_review.json",
+      "original_sha256": "7ed807922cc0833a01d030b3928971597d6851bbb6cfe659fa3873b103e717e7",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/08/final_main_review.json",
+      "linux_sha256": "7ed807922cc0833a01d030b3928971597d6851bbb6cfe659fa3873b103e717e7",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/08.json",
+        "sha256": "7fa85aa56975e3a4a633a8b87c46d0bcb61aea2845a26f6a419a90c0679ddaf0"
+      },
+      "projected_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/references/08.json",
+        "sha256": "2cd108ca56d6a3b1cb5bb8c63c49837198638dc350474b28368f3d5e29524fd5"
+      },
+      "operation": "ONLY_TOP_LEVEL_BOUND_EVIDENCE_PATH_PROJECTION",
+      "all_semantic_payload_exact": true,
+      "evidence_file_bytes_exact": true
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\09_wxt_w05_complete_reference.json",
+      "original_sha256": "65a48ac5a694944cdaaf4ac256b0c5686814f9463bc26546333e4c435a14056b",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/09.json",
+      "linux_sha256": "65a48ac5a694944cdaaf4ac256b0c5686814f9463bc26546333e4c435a14056b",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\09_teacher_completed_pair_observation.json",
+      "original_sha256": "35378efa833a3b1851615aa5aa744ae6bfe69d2cc084c496289f16b23c005fcd",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/09/teacher_observation_audit.json",
+      "linux_sha256": "35378efa833a3b1851615aa5aa744ae6bfe69d2cc084c496289f16b23c005fcd",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\09_wxt_w05_independent_native_blind_binding.json",
+      "original_sha256": "b7681443b1067731d9d4677e6af34947f2ba7ea96fbe44ee2c0551a8f1f32d5c",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/09/blind_initial.json",
+      "linux_sha256": "b7681443b1067731d9d4677e6af34947f2ba7ea96fbe44ee2c0551a8f1f32d5c",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\09_WxtbjNsCQ8A_W05.independent_student64_review_v1.json",
+      "original_sha256": "192783a14514b165c51e790b6bc132a07e429b13ebaa7fc98da8040e9e863f77",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/09/blind_student_visibility.json",
+      "linux_sha256": "192783a14514b165c51e790b6bc132a07e429b13ebaa7fc98da8040e9e863f77",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\09_WxtbjNsCQ8A_W05\\student_views\\receipt.json",
+      "original_sha256": "bdf680fa418954f00982d53221aefa18917114513750af590bbdaca72a7397e8",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/09/student_processor.json",
+      "linux_sha256": "bdf680fa418954f00982d53221aefa18917114513750af590bbdaca72a7397e8",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\09_WxtbjNsCQ8A_W05.student_bounded_reinspection_v1.json",
+      "original_sha256": "5764f72e14fc702432e03e2339322da96382a32e61ea19aeead65fcfe9253296",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/09/bounded_student_reinspection.json",
+      "linux_sha256": "5764f72e14fc702432e03e2339322da96382a32e61ea19aeead65fcfe9253296",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\09_wxt_w05_bounded_student_acceptance.json",
+      "original_sha256": "018ed4800a6213701435cd605f8274119806a7b552b94385eec865291838bf46",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/09/bounded_student_acceptance.json",
+      "linux_sha256": "018ed4800a6213701435cd605f8274119806a7b552b94385eec865291838bf46",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\09_wxt_w05_main_preteacher_review.json",
+      "original_sha256": "71ad5dc2ebc2e440ddadfbbb8017beaa252e740287e1e17ff44b33f145a03470",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/09/preteacher_main_review.json",
+      "linux_sha256": "71ad5dc2ebc2e440ddadfbbb8017beaa252e740287e1e17ff44b33f145a03470",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call03\\w09_proposal.json",
+      "original_sha256": "627f60db9ede7deb90c9007b5375326b3abab650fcf097335923de53d40c753f",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/09/original_teacher_proposal.json",
+      "linux_sha256": "627f60db9ede7deb90c9007b5375326b3abab650fcf097335923de53d40c753f",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call03\\w09_program_bound_facts.json",
+      "original_sha256": "f19d9710d8157fc6f32aea79ede389f5fcff6eb8e734db22df9ecb9bedd45f83",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/09/original_teacher_program_bound_facts.json",
+      "linux_sha256": "f19d9710d8157fc6f32aea79ede389f5fcff6eb8e734db22df9ecb9bedd45f83",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\09_wxt_w05_final_main_review.json",
+      "original_sha256": "909ffb20561941583c2d65e654feb1a2988c6ec3cdf5ca813059de75a05f7c10",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/09/final_main_review.json",
+      "linux_sha256": "909ffb20561941583c2d65e654feb1a2988c6ec3cdf5ca813059de75a05f7c10",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/09.json",
+        "sha256": "65a48ac5a694944cdaaf4ac256b0c5686814f9463bc26546333e4c435a14056b"
+      },
+      "projected_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/references/09.json",
+        "sha256": "d30d8151985adc0d182ce6a72f5230fabf5441e8886ba811bc3a9361a32a3981"
+      },
+      "operation": "ONLY_TOP_LEVEL_BOUND_EVIDENCE_PATH_PROJECTION",
+      "all_semantic_payload_exact": true,
+      "evidence_file_bytes_exact": true
+    },
+    {
+      "original_sidecar": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\09_wxt_w05_target_serialization.json",
+        "sha256": "22cbd2344e097b38d5d025233bc80390596b8cbc6df1d7cb52554213dd90e329"
+      },
+      "projected_sidecar": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/targets/09.json",
+        "sha256": "841812d597f0accaa07fb78c477ba14599f07cd66561f8fd9b6de86fb7d24ce4"
+      },
+      "operation": "ONLY_REFERENCE_SHA_PROJECTION",
+      "all_target_literals_and_ranges_exact": true
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\10_byx_w02_complete_reference.json",
+      "original_sha256": "0bf8657ced45640a6c5fe9d41e56efeb4b1c4037613db7578a1d48e3593b0896",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/10.json",
+      "linux_sha256": "0bf8657ced45640a6c5fe9d41e56efeb4b1c4037613db7578a1d48e3593b0896",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\10_byx_w02_lawful_observation_completion.json",
+      "original_sha256": "af9a85c34d43d1a78489ca842f2b9c775ec8b751be00b9ca0c8411d961690fde",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/10/teacher_observation_audit.json",
+      "linux_sha256": "af9a85c34d43d1a78489ca842f2b9c775ec8b751be00b9ca0c8411d961690fde",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\10_byx_w02_independent_native_blind_binding.json",
+      "original_sha256": "3422150b09a194c572750e886bffb3a31cf85b738dde32619625bc8162add613",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/10/blind_initial.json",
+      "linux_sha256": "3422150b09a194c572750e886bffb3a31cf85b738dde32619625bc8162add613",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\10_byxOvuiIJV0_W02.independent_student64_review_v1.json",
+      "original_sha256": "7bac9a3bf2e874891249d8a896a24a9b48b41536759b150b0704737e19fd1ab8",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/10/blind_student_visibility.json",
+      "linux_sha256": "7bac9a3bf2e874891249d8a896a24a9b48b41536759b150b0704737e19fd1ab8",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\10_byxOvuiIJV0_W02\\student_views\\receipt.json",
+      "original_sha256": "56a01007677b451cfc53ef6282be71f5a1673d72b6706b90a5cefd1cb8ec7798",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/10/student_processor.json",
+      "linux_sha256": "56a01007677b451cfc53ef6282be71f5a1673d72b6706b90a5cefd1cb8ec7798",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\10_byxOvuiIJV0_W02.student_bounded_reinspection_v1.json",
+      "original_sha256": "1bfbedde85f84710df8c704360e3ccdfce5bf0e335ebdc357872f03ffa72a90b",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/10/bounded_student_reinspection.json",
+      "linux_sha256": "1bfbedde85f84710df8c704360e3ccdfce5bf0e335ebdc357872f03ffa72a90b",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\10_byx_w02_bounded_student_acceptance.json",
+      "original_sha256": "ba48990c6712144846240a7aabd0508078b91eaca69c760c950fb9053b1455aa",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/10/bounded_student_acceptance.json",
+      "linux_sha256": "ba48990c6712144846240a7aabd0508078b91eaca69c760c950fb9053b1455aa",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\10_byx_w02_main_preteacher_review.json",
+      "original_sha256": "974fbd98a50e96229685a044e64ed3ff07cd377f311ffd7f53dde95686b956f1",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/10/preteacher_main_review.json",
+      "linux_sha256": "974fbd98a50e96229685a044e64ed3ff07cd377f311ffd7f53dde95686b956f1",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call04\\w10_proposal.json",
+      "original_sha256": "94e275e9a20b8b56dc53db87278e6e1239254562c2002fe77cf7cbe2945dbd00",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/10/original_teacher_proposal.json",
+      "linux_sha256": "94e275e9a20b8b56dc53db87278e6e1239254562c2002fe77cf7cbe2945dbd00",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call04\\w10_program_bound_facts_completed_scope.json",
+      "original_sha256": "acfb23c8f777655379d48adccb720557141e5bbd6df0f1f6156e702ed9795da3",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/10/original_teacher_program_bound_facts.json",
+      "linux_sha256": "acfb23c8f777655379d48adccb720557141e5bbd6df0f1f6156e702ed9795da3",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\10_byx_w02_boundary_observation_acceptance.json",
+      "original_sha256": "d8463ec385de8fa20584fff26107da6733648f8d66269c8246eb35f73eb0db1e",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/10/boundary_native_observations.json",
+      "linux_sha256": "d8463ec385de8fa20584fff26107da6733648f8d66269c8246eb35f73eb0db1e",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\10_byx_w02_final_main_review.json",
+      "original_sha256": "4668c66f9003e1fd1162fc6ab04544495f188fc2fb995592805249997d80fac1",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/10/final_main_review.json",
+      "linux_sha256": "4668c66f9003e1fd1162fc6ab04544495f188fc2fb995592805249997d80fac1",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/10.json",
+        "sha256": "0bf8657ced45640a6c5fe9d41e56efeb4b1c4037613db7578a1d48e3593b0896"
+      },
+      "projected_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/references/10.json",
+        "sha256": "34ec23d2d19ed612cb0a3ec6dd86dd1bd3fbdc75618c56c565c898cfce231a0a"
+      },
+      "operation": "ONLY_TOP_LEVEL_BOUND_EVIDENCE_PATH_PROJECTION",
+      "all_semantic_payload_exact": true,
+      "evidence_file_bytes_exact": true
+    },
+    {
+      "original_sidecar": {
+        "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\10_byx_w02_target_serialization.json",
+        "sha256": "2cd13256520debba6328304eb50446a894ef08d40b9e76fad891f89576d933e1"
+      },
+      "projected_sidecar": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/targets/10.json",
+        "sha256": "9430fcfb78389075d9e5de4840f0b89b6da1557c7c920b1107412e3f6ef47233"
+      },
+      "operation": "ONLY_REFERENCE_SHA_PROJECTION",
+      "all_target_literals_and_ranges_exact": true
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\12_esjr_w01_complete_reference.json",
+      "original_sha256": "2e39531fb23a8de8a7538f4c0d113c182338235520619ee7caea21676f41cb98",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/12.json",
+      "linux_sha256": "2e39531fb23a8de8a7538f4c0d113c182338235520619ee7caea21676f41cb98",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\12_esjr_w01_main_preteacher_review.json",
+      "original_sha256": "8ab48985a5faf66b0ed0aa7fc8840243b6d4ed18f1e375c3c8c5e2fafbf8d0de",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/12/preteacher_main_review.json",
+      "linux_sha256": "8ab48985a5faf66b0ed0aa7fc8840243b6d4ed18f1e375c3c8c5e2fafbf8d0de",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\12_esjr_w01_lawful_observation_completion.json",
+      "original_sha256": "24d55d42aa9d0a1acbf18f9690d3accdf988b62f758fc60341e97ac63a2d02ab",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/12/teacher_observation_audit.json",
+      "linux_sha256": "24d55d42aa9d0a1acbf18f9690d3accdf988b62f758fc60341e97ac63a2d02ab",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call05\\w12_proposal.json",
+      "original_sha256": "8ddb7fe7fccea0b6bfd3dccafc204562ee990a0d1f3091fd67c004615152bc9c",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/12/original_teacher_proposal.json",
+      "linux_sha256": "8ddb7fe7fccea0b6bfd3dccafc204562ee990a0d1f3091fd67c004615152bc9c",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call05\\w12_program_bound_facts_completed_scope.json",
+      "original_sha256": "e5ab62dc90d7650cd8d282caf8c7708e99c4896f6bbbc1c7f5779bcc1c6a3583",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/12/original_teacher_program_bound_facts.json",
+      "linux_sha256": "e5ab62dc90d7650cd8d282caf8c7708e99c4896f6bbbc1c7f5779bcc1c6a3583",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\12_-esJrBWj2d8_W01.student_bounded_reinspection_v1.json",
+      "original_sha256": "4a24c98b2bd371924653eef175518f04b6d0cc589e309c1949f91d4cf4d692ef",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/12/bounded_student_reinspection.json",
+      "linux_sha256": "4a24c98b2bd371924653eef175518f04b6d0cc589e309c1949f91d4cf4d692ef",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\12_esjr_w01_bounded_student_acceptance.json",
+      "original_sha256": "a5c4d8628d72c5b51288d2a09c0e1d9fe9f5327441f45e71f003196dace3a07d",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/12/bounded_student_acceptance.json",
+      "linux_sha256": "a5c4d8628d72c5b51288d2a09c0e1d9fe9f5327441f45e71f003196dace3a07d",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\12_esjr_w01_independent_native_blind_binding.json",
+      "original_sha256": "f88767e142674e45c9826d3d180fe1c6d88a6ee88a9b423b7ee568695745d561",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/12/blind_initial.json",
+      "linux_sha256": "f88767e142674e45c9826d3d180fe1c6d88a6ee88a9b423b7ee568695745d561",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\12_-esJrBWj2d8_W01.independent_student64_review_v1.json",
+      "original_sha256": "e75139af980f4d9480449429dbe9b2a917c4c5bb0b49f6ee06afc8680ca38e56",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/12/blind_student_visibility.json",
+      "linux_sha256": "e75139af980f4d9480449429dbe9b2a917c4c5bb0b49f6ee06afc8680ca38e56",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\12_-esJrBWj2d8_W01\\student_views\\receipt.json",
+      "original_sha256": "1615838c4c832dd7eea02dce80aa080276849e880a31ef06f378a1b1d8149932",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/12/student_processor.json",
+      "linux_sha256": "1615838c4c832dd7eea02dce80aa080276849e880a31ef06f378a1b1d8149932",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\12_esjr_w01_root_eval_decision.json",
+      "original_sha256": "5c596a6b583f7b3f7d63d653e8953d4a1beec40b8e43eb15fe5cfe96a0546b36",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/12/root_semantic_decision.json",
+      "linux_sha256": "5c596a6b583f7b3f7d63d653e8953d4a1beec40b8e43eb15fe5cfe96a0546b36",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\12_esjr_w01_final_main_review.json",
+      "original_sha256": "44c9048d7b508768262ad4a8dde5c5475278c3551e2dec9561e3083cf5948208",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/12/final_main_review.json",
+      "linux_sha256": "44c9048d7b508768262ad4a8dde5c5475278c3551e2dec9561e3083cf5948208",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/12.json",
+        "sha256": "2e39531fb23a8de8a7538f4c0d113c182338235520619ee7caea21676f41cb98"
+      },
+      "projected_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/references/12.json",
+        "sha256": "57a3366a40ecf1a2bfa3ff86211f12de79db4c7ccc4f91c0fee9029043afc0f9"
+      },
+      "operation": "ONLY_TOP_LEVEL_BOUND_EVIDENCE_PATH_PROJECTION",
+      "all_semantic_payload_exact": true,
+      "evidence_file_bytes_exact": true
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\13_esjr_w06_complete_reference.json",
+      "original_sha256": "24b42eee4497e5e3606692ca59ad704a04565c06a1218600f65ed820669264e2",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/13.json",
+      "linux_sha256": "24b42eee4497e5e3606692ca59ad704a04565c06a1218600f65ed820669264e2",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\13_esjr_w06_main_preteacher_review.json",
+      "original_sha256": "a88f655a2d468656dd4ffbd7130f8454fe0287bbbe2f61838077a6554d218f9d",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/13/preteacher_main_review.json",
+      "linux_sha256": "a88f655a2d468656dd4ffbd7130f8454fe0287bbbe2f61838077a6554d218f9d",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\13_esjr_w06_composed_observation_completion.json",
+      "original_sha256": "5c316bf655a8567589df2d71eb9d3967c78345cec9f3c7f61d1b346442bdb2bf",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/13/teacher_observation_audit.json",
+      "linux_sha256": "5c316bf655a8567589df2d71eb9d3967c78345cec9f3c7f61d1b346442bdb2bf",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call05\\w13_program_bound_facts.json",
+      "original_sha256": "2a89ff3eb3291db51e01fead111a306b9a42d48b0e096b3edcc395e070e9c71e",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/13/original_teacher_program_bound_facts.json",
+      "linux_sha256": "2a89ff3eb3291db51e01fead111a306b9a42d48b0e096b3edcc395e070e9c71e",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\13_esjr_w06_composed_observation_protocol_v1.json",
+      "original_sha256": "771cb75a276576b7c9ee522d8436d285f92703cc655e35751c4bf1f2faae9bdf",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/13/composed_protocol.json",
+      "linux_sha256": "771cb75a276576b7c9ee522d8436d285f92703cc655e35751c4bf1f2faae9bdf",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\13_esjr_w06_root_effective8_actual_observation.json",
+      "original_sha256": "e97f3ecfb35818a80b9b4aa5858a79c927b96fd21e95552f0f430d754a9e8ce3",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/13/root_effective8.json",
+      "linux_sha256": "e97f3ecfb35818a80b9b4aa5858a79c927b96fd21e95552f0f430d754a9e8ce3",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call05\\engineering_wrong_preview_paths_CLI31.json",
+      "original_sha256": "f9a3209f454d840b324259e9426a150c686054982b7f33375fe3453de02ef687",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/13/original_Gemini_failure.json",
+      "linux_sha256": "f9a3209f454d840b324259e9426a150c686054982b7f33375fe3453de02ef687",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\13_-esJrBWj2d8_W06.student_bounded_reinspection_v1.json",
+      "original_sha256": "7a28f24e4a79af1fbeac440c3c7806d7062a28da1e670ed5c618c8088a26c5d7",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/13/bounded_student_reinspection.json",
+      "linux_sha256": "7a28f24e4a79af1fbeac440c3c7806d7062a28da1e670ed5c618c8088a26c5d7",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\13_esjr_w06_bounded_student_acceptance.json",
+      "original_sha256": "bed05833eca6e6497a4375a4389dc4916cc0a9b87acdb8e65b184c47a79e7e91",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/13/bounded_student_acceptance.json",
+      "linux_sha256": "bed05833eca6e6497a4375a4389dc4916cc0a9b87acdb8e65b184c47a79e7e91",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\13_esjr_w06_independent_native_blind_binding.json",
+      "original_sha256": "942911edb35eaa88c27d8351733e952d138bd0eede383557893bdb9ca169978f",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/13/blind_initial.json",
+      "linux_sha256": "942911edb35eaa88c27d8351733e952d138bd0eede383557893bdb9ca169978f",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\13_-esJrBWj2d8_W06.independent_student64_review_v1.json",
+      "original_sha256": "74fd937cb2e81aace223d7583250ade3b629beee8afecc1cdae4fd0d319d7006",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/13/blind_student_visibility.json",
+      "linux_sha256": "74fd937cb2e81aace223d7583250ade3b629beee8afecc1cdae4fd0d319d7006",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\13_-esJrBWj2d8_W06\\student_views\\receipt.json",
+      "original_sha256": "bd765df79a7406b231721b04502ae89a4ba3dfd350a0d3d5c6d1b39c6d09ef5a",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/13/student_processor.json",
+      "linux_sha256": "bd765df79a7406b231721b04502ae89a4ba3dfd350a0d3d5c6d1b39c6d09ef5a",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\13_esjr_w06_root_eval_decision.json",
+      "original_sha256": "5295ef4ae4d59c338eaf8bced389a2e23fe7f8488b2a991cf108f2d28a475fea",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/13/root_semantic_decision.json",
+      "linux_sha256": "5295ef4ae4d59c338eaf8bced389a2e23fe7f8488b2a991cf108f2d28a475fea",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\13_esjr_w06_final_main_review.json",
+      "original_sha256": "ea5135f1614f2a3ec89843a402a9e2467fc7aaf50f9b7a09e17ba3af02fb7b7b",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/13/final_main_review.json",
+      "linux_sha256": "ea5135f1614f2a3ec89843a402a9e2467fc7aaf50f9b7a09e17ba3af02fb7b7b",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/13.json",
+        "sha256": "24b42eee4497e5e3606692ca59ad704a04565c06a1218600f65ed820669264e2"
+      },
+      "projected_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/references/13.json",
+        "sha256": "87ddbe0065f5176573488930d0dc49d75af633f014611d31ed897d6dacedb0ee"
+      },
+      "operation": "ONLY_TOP_LEVEL_BOUND_EVIDENCE_PATH_PROJECTION",
+      "all_semantic_payload_exact": true,
+      "evidence_file_bytes_exact": true
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\14_i3w_w02_complete_reference.json",
+      "original_sha256": "d6b1757a222d790d2dbfa73d93018867ab52b2aba5102e383ca3b4bba69ae845",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/14.json",
+      "linux_sha256": "d6b1757a222d790d2dbfa73d93018867ab52b2aba5102e383ca3b4bba69ae845",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\14_i3w_w02_main_preteacher_review.json",
+      "original_sha256": "8105b0c83d3cb43d82b67497f8fbcd40e84b0c88a901380af858af32985f842b",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/14/preteacher_main_review.json",
+      "linux_sha256": "8105b0c83d3cb43d82b67497f8fbcd40e84b0c88a901380af858af32985f842b",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\14_i3w_w02_composed_observation_completion.json",
+      "original_sha256": "792353b2a83c0f13dc1452db0eca7a358ca842086cdc627ac65afaaebf42275a",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/14/teacher_observation_audit.json",
+      "linux_sha256": "792353b2a83c0f13dc1452db0eca7a358ca842086cdc627ac65afaaebf42275a",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call06\\w14_proposal.json",
+      "original_sha256": "d9721f7bfb6f902ca7fa52e2b389a88e90a322ead5eeb1638ff5828ed082af18",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/14/original_teacher_proposal.json",
+      "linux_sha256": "d9721f7bfb6f902ca7fa52e2b389a88e90a322ead5eeb1638ff5828ed082af18",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\call06\\w14_program_bound_facts.json",
+      "original_sha256": "a4074526171301b96094f1b40bda02871c45c01fecf0b25fdff84d8dac0a4814",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/14/original_teacher_program_bound_facts.json",
+      "linux_sha256": "a4074526171301b96094f1b40bda02871c45c01fecf0b25fdff84d8dac0a4814",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\14_15_root_actual_media_composition_protocol_v1.json",
+      "original_sha256": "7692b2b460c405143c63109f5b0c1f8ea276dc05f3785657694ebfb153635201",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/14/composed_protocol.json",
+      "linux_sha256": "7692b2b460c405143c63109f5b0c1f8ea276dc05f3785657694ebfb153635201",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\call06\\audit.json",
+      "original_sha256": "8f7f6c1907d38e77407896d3292b7389a2e87804c14edb9411b3b65831983298",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/14/original_strict_audit.json",
+      "linux_sha256": "8f7f6c1907d38e77407896d3292b7389a2e87804c14edb9411b3b65831983298",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\call06\\actual_media_completion_evidence_original_strict_failed.json",
+      "original_sha256": "63b37ded18dfdab858b3d5dbeb099007cc0385f72e3c0175c36c5fff0e1e7028",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/14/actual_media_inventory.json",
+      "linux_sha256": "63b37ded18dfdab858b3d5dbeb099007cc0385f72e3c0175c36c5fff0e1e7028",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\14_i3wAGJaaktw_W02.student_bounded_reinspection_v1.json",
+      "original_sha256": "b2b20c89cf02b796467006872462354d61961ed9a24f95b36c64adbc277e3ffb",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/14/bounded_student_reinspection.json",
+      "linux_sha256": "b2b20c89cf02b796467006872462354d61961ed9a24f95b36c64adbc277e3ffb",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\14_i3w_w02_bounded_student_acceptance.json",
+      "original_sha256": "c23a776d16ee541f2d4aec0c9d87fc84a5d790a0876e1e8e9de68defb81f1261",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/14/bounded_student_acceptance.json",
+      "linux_sha256": "c23a776d16ee541f2d4aec0c9d87fc84a5d790a0876e1e8e9de68defb81f1261",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\14_i3w_w02_independent_native_blind_binding.json",
+      "original_sha256": "3ae8b06b1e54b1c43f0a2d2805860469ad2817746b660f152b996a8b942fb5e2",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/14/blind_initial.json",
+      "linux_sha256": "3ae8b06b1e54b1c43f0a2d2805860469ad2817746b660f152b996a8b942fb5e2",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\14_i3wAGJaaktw_W02.independent_student64_review_v1.json",
+      "original_sha256": "15dc0d6dff27ad3545c8b1fbde4e980bf72674e922e6e567ab085fd28cc2ae91",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/14/blind_student_visibility.json",
+      "linux_sha256": "15dc0d6dff27ad3545c8b1fbde4e980bf72674e922e6e567ab085fd28cc2ae91",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\14_i3wAGJaaktw_W02\\student_views\\receipt.json",
+      "original_sha256": "8f517e18b40990a0c8529dbefafe489a2fc2035c8d513c1d18a1fec76bfa6a03",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/14/student_processor.json",
+      "linux_sha256": "8f517e18b40990a0c8529dbefafe489a2fc2035c8d513c1d18a1fec76bfa6a03",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\14_i3w_w02_root_eval_decision.json",
+      "original_sha256": "0694661f7afb30b2436fc2c8e387d6ab79cb58a39f806f76c522a1335a010b78",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/14/root_semantic_decision.json",
+      "linux_sha256": "0694661f7afb30b2436fc2c8e387d6ab79cb58a39f806f76c522a1335a010b78",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\14_i3w_w02_final_main_review.json",
+      "original_sha256": "51ce771a212bed805a8a4671fd74e120824d02228d6aafc34df64fa6a5e1f047",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/14/final_main_review.json",
+      "linux_sha256": "51ce771a212bed805a8a4671fd74e120824d02228d6aafc34df64fa6a5e1f047",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/14.json",
+        "sha256": "d6b1757a222d790d2dbfa73d93018867ab52b2aba5102e383ca3b4bba69ae845"
+      },
+      "projected_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/references/14.json",
+        "sha256": "3c1f4af89aa175f70211c84c0bfeb6472f7568d2d93deb792275443598f2845f"
+      },
+      "operation": "ONLY_TOP_LEVEL_BOUND_EVIDENCE_PATH_PROJECTION",
+      "all_semantic_payload_exact": true,
+      "evidence_file_bytes_exact": true
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\15_i3w_w03_complete_reference.json",
+      "original_sha256": "d3f70f6129fcd2b9254ebecf0dc4e572c5ec1d789583ff9cc86a549bbbf0d62f",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/15.json",
+      "linux_sha256": "d3f70f6129fcd2b9254ebecf0dc4e572c5ec1d789583ff9cc86a549bbbf0d62f",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\15_i3w_w03_main_preteacher_review.json",
+      "original_sha256": "d5635f46bf58fa21394902b6048fffbda490cb814e99b7dd40dc6747c3945c69",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/15/preteacher_main_review.json",
+      "linux_sha256": "d5635f46bf58fa21394902b6048fffbda490cb814e99b7dd40dc6747c3945c69",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\15_i3w_w03_composed_observation_completion.json",
+      "original_sha256": "71eca214614e4754a02945ea4b0d5681f85f85d735c45f3051771960255b0147",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/15/teacher_observation_audit.json",
+      "linux_sha256": "71eca214614e4754a02945ea4b0d5681f85f85d735c45f3051771960255b0147",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call06\\w15_proposal.json",
+      "original_sha256": "2d8ec667d272c6510ac3fc9dc55abb895230257fab21bfd8a8a94cec0e6b8ac0",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/15/original_teacher_proposal.json",
+      "linux_sha256": "2d8ec667d272c6510ac3fc9dc55abb895230257fab21bfd8a8a94cec0e6b8ac0",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\call06\\w15_program_bound_facts.json",
+      "original_sha256": "389244668b34e89a8732ae2e079cb630ca25a32354c71d149fda4e773638aac1",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/15/original_teacher_program_bound_facts.json",
+      "linux_sha256": "389244668b34e89a8732ae2e079cb630ca25a32354c71d149fda4e773638aac1",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\14_15_root_actual_media_composition_protocol_v1.json",
+      "original_sha256": "7692b2b460c405143c63109f5b0c1f8ea276dc05f3785657694ebfb153635201",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/15/composed_protocol.json",
+      "linux_sha256": "7692b2b460c405143c63109f5b0c1f8ea276dc05f3785657694ebfb153635201",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\call06\\audit.json",
+      "original_sha256": "8f7f6c1907d38e77407896d3292b7389a2e87804c14edb9411b3b65831983298",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/15/original_strict_audit.json",
+      "linux_sha256": "8f7f6c1907d38e77407896d3292b7389a2e87804c14edb9411b3b65831983298",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI32_36_literal_paths_v1\\call06\\actual_media_completion_evidence_original_strict_failed.json",
+      "original_sha256": "63b37ded18dfdab858b3d5dbeb099007cc0385f72e3c0175c36c5fff0e1e7028",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/15/actual_media_inventory.json",
+      "linux_sha256": "63b37ded18dfdab858b3d5dbeb099007cc0385f72e3c0175c36c5fff0e1e7028",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\15_i3wAGJaaktw_W03.student_bounded_reinspection_v1.json",
+      "original_sha256": "d06220f6f506dd133378d11ff2524d9b6ece89aaeca55d13842002abade5dee7",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/15/bounded_student_reinspection.json",
+      "linux_sha256": "d06220f6f506dd133378d11ff2524d9b6ece89aaeca55d13842002abade5dee7",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\15_i3w_w03_bounded_student_acceptance.json",
+      "original_sha256": "87d545007cb42b8040f46b6fbb5c260d3fea2b73cc23287e19d33c63fc1d9812",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/15/bounded_student_acceptance.json",
+      "linux_sha256": "87d545007cb42b8040f46b6fbb5c260d3fea2b73cc23287e19d33c63fc1d9812",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\15_i3w_w03_independent_native_blind_binding.json",
+      "original_sha256": "5a9b6fe91de943b30ff650a779d64dd4a6e6d0e48cf43cf498208cee45c764ca",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/15/blind_initial.json",
+      "linux_sha256": "5a9b6fe91de943b30ff650a779d64dd4a6e6d0e48cf43cf498208cee45c764ca",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\15_i3wAGJaaktw_W03.independent_student64_review_v1.json",
+      "original_sha256": "3c598a3f658ebebd89d94815c2f5c7cfb1afb43eacfd47db69169034feeee5bd",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/15/blind_student_visibility.json",
+      "linux_sha256": "3c598a3f658ebebd89d94815c2f5c7cfb1afb43eacfd47db69169034feeee5bd",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\15_i3wAGJaaktw_W03\\student_views\\receipt.json",
+      "original_sha256": "ca30a40895c9d08d5344b8fa4fad5a95e03979f5d37502f64f7d96a1a8ed5517",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/15/student_processor.json",
+      "linux_sha256": "ca30a40895c9d08d5344b8fa4fad5a95e03979f5d37502f64f7d96a1a8ed5517",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\15_i3w_w03_root_eval_decision.json",
+      "original_sha256": "1885af2b74dc80440c196a5febb31adeb18e7bb0476f57d5b1b00696407d0f6b",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/15/root_semantic_decision.json",
+      "linux_sha256": "1885af2b74dc80440c196a5febb31adeb18e7bb0476f57d5b1b00696407d0f6b",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\15_i3w_w03_final_main_review.json",
+      "original_sha256": "d50854a401b3e4cd39db192c63d545cd5bb5c5e803598426dca67695cbdc84bf",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/15/final_main_review.json",
+      "linux_sha256": "d50854a401b3e4cd39db192c63d545cd5bb5c5e803598426dca67695cbdc84bf",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/15.json",
+        "sha256": "d3f70f6129fcd2b9254ebecf0dc4e572c5ec1d789583ff9cc86a549bbbf0d62f"
+      },
+      "projected_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/references/15.json",
+        "sha256": "9c1f47218dd58869dfb8818c5d8b0f16c3d2f2990edebee827a07e3b9f41de46"
+      },
+      "operation": "ONLY_TOP_LEVEL_BOUND_EVIDENCE_PATH_PROJECTION",
+      "all_semantic_payload_exact": true,
+      "evidence_file_bytes_exact": true
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\16_eyq_w03_complete_reference.json",
+      "original_sha256": "df1965362a862c6dfb4e10a7e791fb7dfb0e4cfb0f9c3056a250cab019edfffc",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/16.json",
+      "linux_sha256": "df1965362a862c6dfb4e10a7e791fb7dfb0e4cfb0f9c3056a250cab019edfffc",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\16_eyq_w03_main_preteacher_review_v2.json",
+      "original_sha256": "2b977550c35e11f2285681f5b1701d19c875fe4578475eb152f187bd892466e4",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/16/preteacher_main_review.json",
+      "linux_sha256": "2b977550c35e11f2285681f5b1701d19c875fe4578475eb152f187bd892466e4",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\16_eyq_w03_lawful_observation_completion.json",
+      "original_sha256": "f72b42bd41a9ed1d7fb66b9836d8c79ff6450c353fcf3f24f7486823b53c2fe6",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/16/teacher_observation_audit.json",
+      "linux_sha256": "f72b42bd41a9ed1d7fb66b9836d8c79ff6450c353fcf3f24f7486823b53c2fe6",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\capacity_v4_tool_batches\\call07\\w16_proposal.json",
+      "original_sha256": "ef2730b96dd5e6258b8d030d8b3db3f55cf7360e118137138de44395cf38a442",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/16/original_teacher_proposal.json",
+      "linux_sha256": "ef2730b96dd5e6258b8d030d8b3db3f55cf7360e118137138de44395cf38a442",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\remaining_CLI33_36_same_index_selfcheck_v2\\call07\\w16_program_bound_facts_completed_scope.json",
+      "original_sha256": "408eba9a852221aba65c8e39d859d11fb63d80bc6cffe88964d3f99188b596cc",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/16/original_teacher_program_bound_facts.json",
+      "linux_sha256": "408eba9a852221aba65c8e39d859d11fb63d80bc6cffe88964d3f99188b596cc",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\16_eyq_w03_boundary_observations_acceptance.json",
+      "original_sha256": "6b1f004eee7adfc25bda8d4711d70c1a9d3e0f92cb4595447b3bcf6842d4a89c",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/16/boundary_observations.json",
+      "linux_sha256": "6b1f004eee7adfc25bda8d4711d70c1a9d3e0f92cb4595447b3bcf6842d4a89c",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\16_EYqVtI9YWJA_W03.student_boundary_arithmetic_errata_v1.json",
+      "original_sha256": "0aea5971fdce513bb3e124ac900d677928f29870d7d7f360a4b5c4897193aea8",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/16/student_arithmetic_erratum.json",
+      "linux_sha256": "0aea5971fdce513bb3e124ac900d677928f29870d7d7f360a4b5c4897193aea8",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\16_eyq_w03_independent_native_blind_binding.json",
+      "original_sha256": "955459648cf25695977e01ffd7f02404602dd672ba8c52a0ba355fc80e340e5b",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/16/blind_initial.json",
+      "linux_sha256": "955459648cf25695977e01ffd7f02404602dd672ba8c52a0ba355fc80e340e5b",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\16_EYqVtI9YWJA_W03.independent_student64_review_v1.json",
+      "original_sha256": "0284a35c129723d60d2e1adc8e3eea29ffff00d21a008b5199d948804ac62a37",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/16/blind_student_visibility.json",
+      "linux_sha256": "0284a35c129723d60d2e1adc8e3eea29ffff00d21a008b5199d948804ac62a37",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\16_EYqVtI9YWJA_W03\\student_views\\receipt.json",
+      "original_sha256": "6cce16ba9ab687d4d7712bfd834c71cddaf0ad74482ddb59915473795c464c70",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/16/student_processor.json",
+      "linux_sha256": "6cce16ba9ab687d4d7712bfd834c71cddaf0ad74482ddb59915473795c464c70",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\16_eyq_w03_root_eval_decision.json",
+      "original_sha256": "249a40270f575e7e67901cab26f2dcdd39237fec04c858a77057a55a54fb7b33",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/16/root_semantic_decision.json",
+      "linux_sha256": "249a40270f575e7e67901cab26f2dcdd39237fec04c858a77057a55a54fb7b33",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\16_eyq_w03_final_main_review.json",
+      "original_sha256": "b565c50af11f3026c41fd671274d4ba889abe10ff985bac0fd45b436b259a798",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/16/final_main_review.json",
+      "linux_sha256": "b565c50af11f3026c41fd671274d4ba889abe10ff985bac0fd45b436b259a798",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/16.json",
+        "sha256": "df1965362a862c6dfb4e10a7e791fb7dfb0e4cfb0f9c3056a250cab019edfffc"
+      },
+      "projected_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/references/16.json",
+        "sha256": "8654ece31f2c224f75e6470c7bb8c6c35acdadebe72056081f0084ff0592498e"
+      },
+      "operation": "ONLY_TOP_LEVEL_BOUND_EVIDENCE_PATH_PROJECTION",
+      "all_semantic_payload_exact": true,
+      "evidence_file_bytes_exact": true
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\17_eyq_w04_reference.json",
+      "original_sha256": "66d87cd7d025b88d2ecc1ac9fe42fa16145eace63c00ea4931e61ed85f361436",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/17.json",
+      "linux_sha256": "66d87cd7d025b88d2ecc1ac9fe42fa16145eace63c00ea4931e61ed85f361436",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\17_eyq_w04_main_preteacher_review_v3.json",
+      "original_sha256": "0c2337125d8d3fe541380f04759254857f6b551412228ab7a2a358a2566ecdc0",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/17/preteacher_main_review.json",
+      "linux_sha256": "0c2337125d8d3fe541380f04759254857f6b551412228ab7a2a358a2566ecdc0",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\17_eyq_w04_lawful_observation_completion.json",
+      "original_sha256": "42935413b0a6e77677903159b36d6699d0ed1ab75d55af26093f82cae3dec537",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/17/teacher_observation_audit.json",
+      "linux_sha256": "42935413b0a6e77677903159b36d6699d0ed1ab75d55af26093f82cae3dec537",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v4_bootstrap_file\\call34\\w17_proposal.json",
+      "original_sha256": "a1c94f796931f1d5f23eb7adaca516583cfc31bec78db854e1e6a51ccd7c4d78",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/17/original_teacher_proposal.json",
+      "linux_sha256": "a1c94f796931f1d5f23eb7adaca516583cfc31bec78db854e1e6a51ccd7c4d78",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v4_bootstrap_file\\call34\\w17_completed_scope_audit.json",
+      "original_sha256": "6d7031b2d49ced8e76baa4ac79db9f67acd99ff3057c1c1d0ea7651147708db0",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/17/original_teacher_bound_fact_audit.json",
+      "linux_sha256": "6d7031b2d49ced8e76baa4ac79db9f67acd99ff3057c1c1d0ea7651147708db0",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\17_eyq_w04_boundary_observations_acceptance.json",
+      "original_sha256": "2ef280a7024e16a8590f4268ed2516dab024a415fadade86165dd7235dbc5a65",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/17/boundary_observations.json",
+      "linux_sha256": "2ef280a7024e16a8590f4268ed2516dab024a415fadade86165dd7235dbc5a65",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\17_EYqVtI9YWJA_W04.F57_actual_pixel_errata_v1.json",
+      "original_sha256": "79062de03f06fe6073bcec5ca1590ac18f6f4c7ce27eb9c2144af2777f87e5d1",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/17/student_actual_F57_erratum.json",
+      "linux_sha256": "79062de03f06fe6073bcec5ca1590ac18f6f4c7ce27eb9c2144af2777f87e5d1",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_semantic_crosschecks_v1\\17_EYqVtI9YWJA_W04.teacher_semantic_crosscheck_v1.json",
+      "original_sha256": "83ead61b8e9eea04b9ca6207480df39b3320d919717043ce53fb6223854a4b53",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/17/exposed_independent_semantic_crosscheck.json",
+      "linux_sha256": "83ead61b8e9eea04b9ca6207480df39b3320d919717043ce53fb6223854a4b53",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\17_eyq_w04_root_actual_postteacher_pixels_v1.json",
+      "original_sha256": "f9be18f335934f5c95298a4a51f905d9b9b67711e87d59e007035920741c25a5",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/17/root_actual_postteacher_pixels.json",
+      "linux_sha256": "f9be18f335934f5c95298a4a51f905d9b9b67711e87d59e007035920741c25a5",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\17_eyq_w04_independent_native_blind_binding.json",
+      "original_sha256": "b98f3afa01598c555d11f6e72f860d570599270ee2c2e5c79f4030add7c1764a",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/17/blind_initial.json",
+      "linux_sha256": "b98f3afa01598c555d11f6e72f860d570599270ee2c2e5c79f4030add7c1764a",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\17_EYqVtI9YWJA_W04.independent_student64_review_v1.json",
+      "original_sha256": "048d82144e022c110652195d5d3e4bd8f7b67398d55308e45bd00e96d4d0a538",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/17/blind_student_visibility.json",
+      "linux_sha256": "048d82144e022c110652195d5d3e4bd8f7b67398d55308e45bd00e96d4d0a538",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\17_EYqVtI9YWJA_W04\\student_views\\receipt.json",
+      "original_sha256": "89dfa7c2e23046e98392bf16307cffa858e86505cc4ea2224d00da14de5bd90c",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/17/student_processor.json",
+      "linux_sha256": "89dfa7c2e23046e98392bf16307cffa858e86505cc4ea2224d00da14de5bd90c",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\17_eyq_w04_root_eval_decision.json",
+      "original_sha256": "4e11bb7d4caa816b524bd62411011241428168db1399cc534668f857a77c59f8",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/17/root_semantic_decision.json",
+      "linux_sha256": "4e11bb7d4caa816b524bd62411011241428168db1399cc534668f857a77c59f8",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\17_eyq_w04_final_main_review.json",
+      "original_sha256": "b43c57551c5e131873f2b0596c9fe9010b26def8e124267be9e8924b7133c588",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/17/final_main_review.json",
+      "linux_sha256": "b43c57551c5e131873f2b0596c9fe9010b26def8e124267be9e8924b7133c588",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/17.json",
+        "sha256": "66d87cd7d025b88d2ecc1ac9fe42fa16145eace63c00ea4931e61ed85f361436"
+      },
+      "projected_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/references/17.json",
+        "sha256": "b7b9c1b74659a20f761cc006a60d2795dac7da10e24a9e74cf234ca896882fa3"
+      },
+      "operation": "ONLY_TOP_LEVEL_BOUND_EVIDENCE_PATH_PROJECTION",
+      "all_semantic_payload_exact": true,
+      "evidence_file_bytes_exact": true
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\18_j0n_w02_reference.json",
+      "original_sha256": "d2309479fb8f30325a4819f8041eb3d6870148ada388cfd54a8645f3eebcf453",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/18.json",
+      "linux_sha256": "d2309479fb8f30325a4819f8041eb3d6870148ada388cfd54a8645f3eebcf453",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\18_j0n_w02_main_preteacher_review.json",
+      "original_sha256": "c88180f132fee3902e71b8f8ac10e2f3a6573a74fab0858c2f37e6db7e12f117",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/18/preteacher_main_review.json",
+      "linux_sha256": "c88180f132fee3902e71b8f8ac10e2f3a6573a74fab0858c2f37e6db7e12f117",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\18_j0n_w02_lawful_observation_completion.json",
+      "original_sha256": "93c6df4e18496134b9b72e8a2136714445a6a3ec591510b3a62b48d25efa1ed0",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/18/teacher_observation_audit.json",
+      "linux_sha256": "93c6df4e18496134b9b72e8a2136714445a6a3ec591510b3a62b48d25efa1ed0",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v4_bootstrap_file\\call34\\w18_proposal.json",
+      "original_sha256": "da9af8275018004a8d5be996c073f47514ce86999fdae3bf447bac97c0f52a7c",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/18/original_teacher_proposal.json",
+      "linux_sha256": "da9af8275018004a8d5be996c073f47514ce86999fdae3bf447bac97c0f52a7c",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v4_bootstrap_file\\call34\\w18_completed_scope_audit.json",
+      "original_sha256": "1e65ea853800abf92640c517134e5bf39fa0a2ed7b0f5386a83703794e3ec430",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/18/original_teacher_bound_fact_audit.json",
+      "linux_sha256": "1e65ea853800abf92640c517134e5bf39fa0a2ed7b0f5386a83703794e3ec430",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_semantic_crosschecks_v1\\18_J0nA4VgnoCo_W02.teacher_semantic_crosscheck_v1.json",
+      "original_sha256": "83884166502bab3d1c11f0cfb235ff1d24d2ed6d10d2796197cf1343ead2fdbc",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/18/exposed_independent_semantic_crosscheck.json",
+      "linux_sha256": "83884166502bab3d1c11f0cfb235ff1d24d2ed6d10d2796197cf1343ead2fdbc",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\18_j0n_w02_root_actual_postteacher_pixels_v1.json",
+      "original_sha256": "7fa44b7872a6290c5396094bf5f16ffee030bfd9903bde2dd7107dbc965590e0",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/18/root_actual_postteacher_pixels.json",
+      "linux_sha256": "7fa44b7872a6290c5396094bf5f16ffee030bfd9903bde2dd7107dbc965590e0",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\18_j0n_w02_independent_native_blind_binding.json",
+      "original_sha256": "72af18b180ef9f27568c0071837001b224abd0cac75366630f8048a26211b1ad",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/18/blind_initial.json",
+      "linux_sha256": "72af18b180ef9f27568c0071837001b224abd0cac75366630f8048a26211b1ad",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\18_J0nA4VgnoCo_W02.independent_student64_review_v1.json",
+      "original_sha256": "f64d4fd2160a8e67d922d5a32b7447cbeb8bdd929eb0fab69913437c6e4bc8f1",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/18/blind_student_visibility.json",
+      "linux_sha256": "f64d4fd2160a8e67d922d5a32b7447cbeb8bdd929eb0fab69913437c6e4bc8f1",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\18_J0nA4VgnoCo_W02\\student_views\\receipt.json",
+      "original_sha256": "0ee790a2994c696c2d93467cc804662b33538e1834b756056dd26904554eea64",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/18/student_processor.json",
+      "linux_sha256": "0ee790a2994c696c2d93467cc804662b33538e1834b756056dd26904554eea64",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\18_j0n_w02_root_eval_decision.json",
+      "original_sha256": "19b20b1c80192f065600f74300b292666c1f5f5dd3bee1d3b79913f4388c16e7",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/18/root_semantic_decision.json",
+      "linux_sha256": "19b20b1c80192f065600f74300b292666c1f5f5dd3bee1d3b79913f4388c16e7",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\18_j0n_w02_final_main_review.json",
+      "original_sha256": "a660202ac876cf10fa14c3065ed645c023887ffb8735660b9c435d7ee1da182e",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/18/final_main_review.json",
+      "linux_sha256": "a660202ac876cf10fa14c3065ed645c023887ffb8735660b9c435d7ee1da182e",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/18.json",
+        "sha256": "d2309479fb8f30325a4819f8041eb3d6870148ada388cfd54a8645f3eebcf453"
+      },
+      "projected_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/references/18.json",
+        "sha256": "51af595d66c41f5ab3436d5319f97874bf81ea6909bb773859b0a79ec56d5a71"
+      },
+      "operation": "ONLY_TOP_LEVEL_BOUND_EVIDENCE_PATH_PROJECTION",
+      "all_semantic_payload_exact": true,
+      "evidence_file_bytes_exact": true
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\19_j0n_w11_complete_reference.json",
+      "original_sha256": "108375958d2c04983649d13edf2f77a788c00244dd5c1a87e4bec959e8a26665",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/19.json",
+      "linux_sha256": "108375958d2c04983649d13edf2f77a788c00244dd5c1a87e4bec959e8a26665",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\19_j0n_w11_main_preteacher_review_v2.json",
+      "original_sha256": "e0f0a3eb1e205e805fafb17148cd4cfdb0f97ace36282f487fadd8060e7f356d",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/19/preteacher_main_review.json",
+      "linux_sha256": "e0f0a3eb1e205e805fafb17148cd4cfdb0f97ace36282f487fadd8060e7f356d",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\19_j0n_w11_lawful_observation_completion_v2.json",
+      "original_sha256": "7e8ac43ca9d2de58cc167482f83f485fc8aaf5cf6812217ced2b671620ae73c5",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/19/teacher_observation_audit.json",
+      "linux_sha256": "7e8ac43ca9d2de58cc167482f83f485fc8aaf5cf6812217ced2b671620ae73c5",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\call36\\w19_proposal.json",
+      "original_sha256": "3abb1a8cad2004d52cda457b12e68c2d68e2f99f21fd00062672e61f6c922b17",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/19/original_teacher_proposal.json",
+      "linux_sha256": "3abb1a8cad2004d52cda457b12e68c2d68e2f99f21fd00062672e61f6c922b17",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\call36\\w19_completed_scope_audit.json",
+      "original_sha256": "9b9c7e50e7fd64f339a18279363b6ce0f3b921e4066237be0740a405e331a3ed",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/19/original_teacher_bound_fact_audit.json",
+      "linux_sha256": "9b9c7e50e7fd64f339a18279363b6ce0f3b921e4066237be0740a405e331a3ed",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\19_j0n_w11_boundary_observations_acceptance.json",
+      "original_sha256": "18a214e22c6fa0767d696f186f13a46f4eae8f63706a239a949fe1ec15289697",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/19/boundary_observations.json",
+      "linux_sha256": "18a214e22c6fa0767d696f186f13a46f4eae8f63706a239a949fe1ec15289697",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_semantic_crosschecks_v1\\19_J0nA4VgnoCo_W11.teacher_semantic_crosscheck_v2.json",
+      "original_sha256": "3e514a0a30d00c1f197879fe5d0ebc7b0cb23d4d6d9d28ac909f02d7af380010",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/19/exposed_independent_semantic_crosscheck.json",
+      "linux_sha256": "3e514a0a30d00c1f197879fe5d0ebc7b0cb23d4d6d9d28ac909f02d7af380010",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\19_j0n_w11_root_actual_postteacher_pixels_v1.json",
+      "original_sha256": "0e9ae6ffe55e1445b9e5a86076533dd6731150c8ab74d8696018a574dd6f817b",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/19/root_actual_postteacher_pixels.json",
+      "linux_sha256": "0e9ae6ffe55e1445b9e5a86076533dd6731150c8ab74d8696018a574dd6f817b",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\19_j0n_w11_independent_native_blind_binding.json",
+      "original_sha256": "470f39f1c66697d6522905485a450fdb07848602092a555179f52172245e9045",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/19/blind_initial.json",
+      "linux_sha256": "470f39f1c66697d6522905485a450fdb07848602092a555179f52172245e9045",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\19_J0nA4VgnoCo_W11.independent_student64_review_v1.json",
+      "original_sha256": "efa2e6497bf592c5be1b2d75484cf5fea7540c8133a7313a9323f7ee23a867c5",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/19/blind_student_visibility.json",
+      "linux_sha256": "efa2e6497bf592c5be1b2d75484cf5fea7540c8133a7313a9323f7ee23a867c5",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\19_J0nA4VgnoCo_W11\\student_views\\receipt.json",
+      "original_sha256": "d1822aaa03dbbc8bfae3281cd22f1d516de62bcf5dc8ddd0c741b91f557a1de4",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/19/student_processor.json",
+      "linux_sha256": "d1822aaa03dbbc8bfae3281cd22f1d516de62bcf5dc8ddd0c741b91f557a1de4",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\19_j0n_w11_root_eval_decision.json",
+      "original_sha256": "843615bc8bb1d183a49559435599f0baa79024b0b1aebced50f34dff61387ae9",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/19/root_semantic_decision.json",
+      "linux_sha256": "843615bc8bb1d183a49559435599f0baa79024b0b1aebced50f34dff61387ae9",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\19_j0n_w11_final_main_review.json",
+      "original_sha256": "c217979612c7ddabeeb139bbefa06e3b963e4bcba9f35ffb7e0934ee12482832",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/19/final_main_review.json",
+      "linux_sha256": "c217979612c7ddabeeb139bbefa06e3b963e4bcba9f35ffb7e0934ee12482832",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/19.json",
+        "sha256": "108375958d2c04983649d13edf2f77a788c00244dd5c1a87e4bec959e8a26665"
+      },
+      "projected_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/references/19.json",
+        "sha256": "0bf80a936ad324ab8aee6ea498bea1442e28e51703a8e470ffc186930362ec6e"
+      },
+      "operation": "ONLY_TOP_LEVEL_BOUND_EVIDENCE_PATH_PROJECTION",
+      "all_semantic_payload_exact": true,
+      "evidence_file_bytes_exact": true
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_complete_reference_v1.json",
+      "original_sha256": "62998d79a1806d8510ac5c23851bf2b699c79bb4c1f44cc015e4c7a4c611dec5",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/20.json",
+      "linux_sha256": "62998d79a1806d8510ac5c23851bf2b699c79bb4c1f44cc015e4c7a4c611dec5",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_main_preteacher_review_v2.json",
+      "original_sha256": "404e8a7b9940529842f3878d6f588fbc717e6c7c817b6f5c17cb5729986d7908",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/20/preteacher_main_review.json",
+      "linux_sha256": "404e8a7b9940529842f3878d6f588fbc717e6c7c817b6f5c17cb5729986d7908",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_root_new_reference_geometry_v1.json",
+      "original_sha256": "85ed216ccadeb1191289989f79f58d35b8c7f850b567bc799109952926be2927",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/20/teacher_observation_audit.json",
+      "linux_sha256": "85ed216ccadeb1191289989f79f58d35b8c7f850b567bc799109952926be2927",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_root_actual_postteacher_pixels_v1.json",
+      "original_sha256": "94d7fb7ec99a59d2b7243ef0e545f6b291339db69fc5f91fb716c07ba320cb63",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/20/root_actual_postteacher_pixels.json",
+      "linux_sha256": "94d7fb7ec99a59d2b7243ef0e545f6b291339db69fc5f91fb716c07ba320cb63",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\call36\\w20_proposal.json",
+      "original_sha256": "04ce4e8276de09e380e6559b93e392ffb1b12d6621cd5f67b583f89ada00430e",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/20/original_rejected_teacher_proposal.json",
+      "linux_sha256": "04ce4e8276de09e380e6559b93e392ffb1b12d6621cd5f67b583f89ada00430e",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_CLI36_37_split_fragment_v8v5\\call36\\w20_completed_scope_audit.json",
+      "original_sha256": "69b39eb3aeeab4319c17a5bfb442130ad3ba5377cd5a614a3224902014d077b2",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/20/original_rejected_teacher_bound_fact_audit.json",
+      "linux_sha256": "69b39eb3aeeab4319c17a5bfb442130ad3ba5377cd5a614a3224902014d077b2",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_root_finite_decision_draft_v1.json",
+      "original_sha256": "f8e2d43f033db80f2003fd105f4dc49dc1a4d697fc4801be5cfa53c9b22fa7ef",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/20/new_root_finite_semantic_draft.json",
+      "linux_sha256": "f8e2d43f033db80f2003fd105f4dc49dc1a4d697fc4801be5cfa53c9b22fa7ef",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\plan_review\\root20_observation_v2_independent_narrow_review_v1.json",
+      "original_sha256": "480349e4461d5608b8045f2fde51055433c7d4ed37f3735517e46c3323abc672",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/20/observation_recovery_independent_review.json",
+      "linux_sha256": "480349e4461d5608b8045f2fde51055433c7d4ed37f3735517e46c3323abc672",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\root20_observation_recovery_v1\\bound_fact_rows64_v2.json",
+      "original_sha256": "456f2c6c040f7162d20ca63e3f809fe57100ea02557cd1356faf216777646018",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/20/derived_fact_rows.json",
+      "linux_sha256": "456f2c6c040f7162d20ca63e3f809fe57100ea02557cd1356faf216777646018",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_independent_native_blind_binding_v1.json",
+      "original_sha256": "a2aab7bef43161e12335527670d2721377c1b04420fc6a4a66e0af0e8ef6e0ee",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/20/blind_initial.json",
+      "linux_sha256": "a2aab7bef43161e12335527670d2721377c1b04420fc6a4a66e0af0e8ef6e0ee",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\20_cjibtmSLxQ4_W13.independent_student64_review_v1.json",
+      "original_sha256": "2e5007c4078359d5d10b985190df9b4bd4b20b5fc2a99bd9b19782e9ef5777d3",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/20/blind_student_visibility.json",
+      "linux_sha256": "2e5007c4078359d5d10b985190df9b4bd4b20b5fc2a99bd9b19782e9ef5777d3",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\20_cjibtmSLxQ4_W13\\student_views\\receipt.json",
+      "original_sha256": "a7e25e566cf2ee62497630c867c97aa48c14b68a899c56f8f32ecd64aab6bce7",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/20/student_processor.json",
+      "linux_sha256": "a7e25e566cf2ee62497630c867c97aa48c14b68a899c56f8f32ecd64aab6bce7",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_root_eval_decision_v1.json",
+      "original_sha256": "0f51cdf7d6df3e7c873dd60882cf2df976921684ef1511c50a805bca6cdd438a",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/20/root_semantic_decision.json",
+      "linux_sha256": "0f51cdf7d6df3e7c873dd60882cf2df976921684ef1511c50a805bca6cdd438a",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\20_cjibt_w13_final_main_review_v1.json",
+      "original_sha256": "afae02e9e28db54d952efbeb2c7e5399948fd160114b4b31541215b45fb460ca",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/20/final_main_review.json",
+      "linux_sha256": "afae02e9e28db54d952efbeb2c7e5399948fd160114b4b31541215b45fb460ca",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/20.json",
+        "sha256": "62998d79a1806d8510ac5c23851bf2b699c79bb4c1f44cc015e4c7a4c611dec5"
+      },
+      "projected_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/references/20.json",
+        "sha256": "d9715692d8a1f3960fe2289368e429918122668fc8f7650530bfd366dd4a9953"
+      },
+      "operation": "ONLY_TOP_LEVEL_BOUND_EVIDENCE_PATH_PROJECTION",
+      "all_semantic_payload_exact": true,
+      "evidence_file_bytes_exact": true
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\21_cjibt_w16_complete_reference_CLI38_v1.json",
+      "original_sha256": "21bfb2f7c2558ee0d544f32c957b95164d0d2baeea3c52b2b8a3e4888429cd87",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/21.json",
+      "linux_sha256": "21bfb2f7c2558ee0d544f32c957b95164d0d2baeea3c52b2b8a3e4888429cd87",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\21_cjibt_w16_main_preteacher_review_v2.json",
+      "original_sha256": "3bdf8f0d74751ae4241dd4d1b47f97a1bec0ab9cf585f96b07ee22e03c19c248",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/21/preteacher_main_review.json",
+      "linux_sha256": "3bdf8f0d74751ae4241dd4d1b47f97a1bec0ab9cf585f96b07ee22e03c19c248",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\21_cjibt_w16_lawful_observation_completion_CLI38_v1.json",
+      "original_sha256": "bdde9292c11d953c5acd5dfb455e0199d963f4675a31cce0af755a101ca22355",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/21/teacher_observation_audit.json",
+      "linux_sha256": "bdde9292c11d953c5acd5dfb455e0199d963f4675a31cce0af755a101ca22355",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\manual_CLI38_retry_v1\\call38\\w21_proposal.json",
+      "original_sha256": "acb83d303e6b9ebcc308e9dda77999f50bd1a7fd49514e20190a03f1dee4afd2",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/21/original_teacher_proposal.json",
+      "linux_sha256": "acb83d303e6b9ebcc308e9dda77999f50bd1a7fd49514e20190a03f1dee4afd2",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\manual_CLI38_retry_v1\\call38\\w21_completed_scope_audit.json",
+      "original_sha256": "21a2becde78123aa6416e1d018546edc7b96607980131b1b1e98ff557435fcf1",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/21/original_teacher_bound_fact_audit.json",
+      "linux_sha256": "21a2becde78123aa6416e1d018546edc7b96607980131b1b1e98ff557435fcf1",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\21_cjibt_w16_boundary_observations_acceptance.json",
+      "original_sha256": "dc846b47c70eca1e070041e20fca32474b1798fea4761517af7ec31a71d8e650",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/21/boundary_observations.json",
+      "linux_sha256": "dc846b47c70eca1e070041e20fca32474b1798fea4761517af7ec31a71d8e650",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_semantic_crosschecks_v1\\21_cjibtmSLxQ4_W16.exposed_semantic_crosscheck_CLI38_v1.json",
+      "original_sha256": "f382680c58649dbd889432c437cc1c455ed62657d7891e544e0f84e8251d0ced",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/21/exposed_independent_semantic_crosscheck.json",
+      "linux_sha256": "f382680c58649dbd889432c437cc1c455ed62657d7891e544e0f84e8251d0ced",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\21_cjibt_w16_root_actual_postteacher_pixels_CLI38_v1.json",
+      "original_sha256": "33fd2637dc8058073cb4aedc44b836e3d97d0793f14639d40d8b1a2f0a683fd0",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/21/root_actual_postteacher_pixels.json",
+      "linux_sha256": "33fd2637dc8058073cb4aedc44b836e3d97d0793f14639d40d8b1a2f0a683fd0",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\21_cjibt_w16_independent_native_blind_binding_CLI38_v1.json",
+      "original_sha256": "972f04a8f92c308209d806782ef8d3b486db4cc9fa285c7f0759a710cf7d8b04",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/21/blind_initial.json",
+      "linux_sha256": "972f04a8f92c308209d806782ef8d3b486db4cc9fa285c7f0759a710cf7d8b04",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\21_cjibtmSLxQ4_W16.independent_student64_review_v1.json",
+      "original_sha256": "ac1d55859a1164418fd8a0a5ccdebe3533e245fefd9951321bee68229bb64d8d",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/21/blind_student_visibility.json",
+      "linux_sha256": "ac1d55859a1164418fd8a0a5ccdebe3533e245fefd9951321bee68229bb64d8d",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\21_cjibtmSLxQ4_W16\\student_views\\receipt.json",
+      "original_sha256": "8466d156f114c0a587321842298d830096800860a9fece2e353d35300401379f",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/21/student_processor.json",
+      "linux_sha256": "8466d156f114c0a587321842298d830096800860a9fece2e353d35300401379f",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\21_cjibt_w16_root_eval_decision_CLI38_v1.json",
+      "original_sha256": "d09cfc48891e1ca06980f8bd3de38f49c13146bd57cd5f29def08d88516d7183",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/21/root_semantic_decision.json",
+      "linux_sha256": "d09cfc48891e1ca06980f8bd3de38f49c13146bd57cd5f29def08d88516d7183",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\21_cjibt_w16_final_main_review_CLI38_v1.json",
+      "original_sha256": "2cdc2c430f29e330f62aaa4d1b39b290747a74c0bf98cd9a8ee91b4ec3f2a640",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/21/final_main_review.json",
+      "linux_sha256": "2cdc2c430f29e330f62aaa4d1b39b290747a74c0bf98cd9a8ee91b4ec3f2a640",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/21.json",
+        "sha256": "21bfb2f7c2558ee0d544f32c957b95164d0d2baeea3c52b2b8a3e4888429cd87"
+      },
+      "projected_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/references/21.json",
+        "sha256": "f34fed0793bce336a4f74597f62e7f7babc37f2eb162521d356d16cb452375e2"
+      },
+      "operation": "ONLY_TOP_LEVEL_BOUND_EVIDENCE_PATH_PROJECTION",
+      "all_semantic_payload_exact": true,
+      "evidence_file_bytes_exact": true
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\22_yi4_w03_complete_reference_CLI39_v1.json",
+      "original_sha256": "8cd15646188170a95900095aca7d900723a61de3428df3a10030af0247fe23dc",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/22.json",
+      "linux_sha256": "8cd15646188170a95900095aca7d900723a61de3428df3a10030af0247fe23dc",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\22_yi4_w03_main_preteacher_review_v2.json",
+      "original_sha256": "31e21f1635392e4d4dbbfd9977e4a0c8f9c49b2d144e7b7875e4c82664815193",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/22/preteacher_main_review.json",
+      "linux_sha256": "31e21f1635392e4d4dbbfd9977e4a0c8f9c49b2d144e7b7875e4c82664815193",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\22_yi4_w03_lawful_observation_completion_CLI39_v1.json",
+      "original_sha256": "9635f8ae73ab16a9a6936ceead46fa540d267ce879155d90bb242d23fcf1d34a",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/22/teacher_observation_audit.json",
+      "linux_sha256": "9635f8ae73ab16a9a6936ceead46fa540d267ce879155d90bb242d23fcf1d34a",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_22_23_v1\\call39\\w22_proposal.json",
+      "original_sha256": "e2ea781ff500647158a561db14a84d4564bc1693ad7dbe1c98012f973dc667e9",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/22/original_teacher_proposal.json",
+      "linux_sha256": "e2ea781ff500647158a561db14a84d4564bc1693ad7dbe1c98012f973dc667e9",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_22_23_v1\\call39\\w22_completed_scope_audit.json",
+      "original_sha256": "365a53e0cb0ea7cecedeca0ad4618e0abcc0bb27a34b48591a8152013c77f4e9",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/22/original_teacher_bound_fact_audit.json",
+      "linux_sha256": "365a53e0cb0ea7cecedeca0ad4618e0abcc0bb27a34b48591a8152013c77f4e9",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_semantic_crosschecks_v1\\22_Yi4Ij2NM7U4_W03.exposed_semantic_crosscheck_CLI39_v2.json",
+      "original_sha256": "49b45c3983763128bf587739268dfbde5ce03d892daf09ddba1d330ab7032422",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/22/exposed_independent_semantic_crosscheck.json",
+      "linux_sha256": "49b45c3983763128bf587739268dfbde5ce03d892daf09ddba1d330ab7032422",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\22_yi4_root_actual_pixels_schema_recovery_v1.json",
+      "original_sha256": "f80f6946f0c76973589166b36b60f43cc532e40494602382ff3db3140cfb5c34",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/22/root_actual_precompletion_pixels.json",
+      "linux_sha256": "f80f6946f0c76973589166b36b60f43cc532e40494602382ff3db3140cfb5c34",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\22_yi4_root_actual_postteacher_pixels_CLI39_v1.json",
+      "original_sha256": "6f9e5176736a17e6fd2bd8ce60f14b440ecf2264816f3dbcb73c1a23c264cb2f",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/22/root_actual_postteacher_pixels.json",
+      "linux_sha256": "6f9e5176736a17e6fd2bd8ce60f14b440ecf2264816f3dbcb73c1a23c264cb2f",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\schema_recovery_CLI39_final_selfread_root_recovery_v1.json",
+      "original_sha256": "bf991024d851317d0d4dc7784622119d4e5478ed276c88b3d1e7e0d43fba684c",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/22/actual_scope_engineering_recovery.json",
+      "linux_sha256": "bf991024d851317d0d4dc7784622119d4e5478ed276c88b3d1e7e0d43fba684c",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\22_yi4_w03_independent_native_blind_binding_CLI39_v1.json",
+      "original_sha256": "aa8b1211a270340b496401db0e2bebefbd36940f97be5b7ba1642245a84d7514",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/22/blind_initial.json",
+      "linux_sha256": "aa8b1211a270340b496401db0e2bebefbd36940f97be5b7ba1642245a84d7514",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\22_Yi4Ij2NM7U4_W03.independent_student64_review_v1.json",
+      "original_sha256": "ea27d3b6a125686fbfa43a3ad8253a5b5898ce88e31b1e34f3a4050f348b76e1",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/22/blind_student_visibility.json",
+      "linux_sha256": "ea27d3b6a125686fbfa43a3ad8253a5b5898ce88e31b1e34f3a4050f348b76e1",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\22_Yi4Ij2NM7U4_W03\\student_views\\receipt.json",
+      "original_sha256": "5804abade1a8e154c20b2198e4be5f0f4f713c28af4bc5bda307d2b52b101ad2",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/22/student_processor.json",
+      "linux_sha256": "5804abade1a8e154c20b2198e4be5f0f4f713c28af4bc5bda307d2b52b101ad2",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\22_yi4_w03_root_eval_decision_CLI39_v1.json",
+      "original_sha256": "c51d7f57581a5bf63190dd5cc16c1b9685604284d8ca6fdc4527fec2aaa42c13",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/22/root_semantic_decision.json",
+      "linux_sha256": "c51d7f57581a5bf63190dd5cc16c1b9685604284d8ca6fdc4527fec2aaa42c13",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\22_yi4_w03_final_main_review_CLI39_v1.json",
+      "original_sha256": "7451264252ebfd0655d04dbde30cfce1049ca63594ec23c759f927557b2e92e9",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/22/final_main_review.json",
+      "linux_sha256": "7451264252ebfd0655d04dbde30cfce1049ca63594ec23c759f927557b2e92e9",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/22.json",
+        "sha256": "8cd15646188170a95900095aca7d900723a61de3428df3a10030af0247fe23dc"
+      },
+      "projected_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/references/22.json",
+        "sha256": "343e840ffcb83b6731c9a7c2ca958d79b50aa0bbd50d464fe784825db59196b2"
+      },
+      "operation": "ONLY_TOP_LEVEL_BOUND_EVIDENCE_PATH_PROJECTION",
+      "all_semantic_payload_exact": true,
+      "evidence_file_bytes_exact": true
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\23_yi4_w06_complete_reference_CLI40_v3.json",
+      "original_sha256": "4ef701663e24ff26627006a4245ef568a1b15d544604a07c456888b8cd834c41",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/23.json",
+      "linux_sha256": "4ef701663e24ff26627006a4245ef568a1b15d544604a07c456888b8cd834c41",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\23_yi4_w06_main_preteacher_review_v2.json",
+      "original_sha256": "6d40f6170e05912e795151d7cb9f7b6e7ccd6244231059516c272203bec3e18d",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/23/preteacher_main_review.json",
+      "linux_sha256": "6d40f6170e05912e795151d7cb9f7b6e7ccd6244231059516c272203bec3e18d",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\23_yi4_w06_lawful_observation_completion_CLI40_literal_separator_recovery_v3.json",
+      "original_sha256": "9b96f227bc251c61bde001a773a0a505de69f053bbd1c4b6137b428d990907ca",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/23/teacher_observation_audit.json",
+      "linux_sha256": "9b96f227bc251c61bde001a773a0a505de69f053bbd1c4b6137b428d990907ca",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_23_continuation_v2\\call40\\w23_proposal.json",
+      "original_sha256": "b34b6414f9fe150d70824569b7bd09e983301364d8d620b02c4dc82121e5e369",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/23/original_teacher_proposal.json",
+      "linux_sha256": "b34b6414f9fe150d70824569b7bd09e983301364d8d620b02c4dc82121e5e369",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\schema_recovery_23_continuation_v2\\call40\\w23_completed_scope_audit.json",
+      "original_sha256": "204c463a9087ed53c4be795b100d9fe47a58ca310fe6bed43742b6c6f2c72644",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/23/original_teacher_bound_fact_audit.json",
+      "linux_sha256": "204c463a9087ed53c4be795b100d9fe47a58ca310fe6bed43742b6c6f2c72644",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_semantic_crosschecks_v1\\23_Yi4Ij2NM7U4_W06.exposed_semantic_crosscheck_CLI40_recovery_v3.json",
+      "original_sha256": "e5d3816214e64f7679a997cf5a144373e08c0d0714b73c28c8e98237ccb4924d",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/23/exposed_independent_semantic_crosscheck.json",
+      "linux_sha256": "e5d3816214e64f7679a997cf5a144373e08c0d0714b73c28c8e98237ccb4924d",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\23_yi4_root_actual_pixels_schema_recovery_v1.json",
+      "original_sha256": "f4ec599dbdd870ee64c49fe2bc84f42b2e7e6cbe8f76fa17e097a0f08323a9b0",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/23/root_actual_precompletion_pixels.json",
+      "linux_sha256": "f4ec599dbdd870ee64c49fe2bc84f42b2e7e6cbe8f76fa17e097a0f08323a9b0",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\23_yi4_root_actual_postteacher_pixels_CLI40_v3.json",
+      "original_sha256": "ebfab699326b90aad074fa6237261385ec7ebbaeaf09bf2daa4f27db3f3b49b2",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/23/root_actual_postteacher_pixels.json",
+      "linux_sha256": "ebfab699326b90aad074fa6237261385ec7ebbaeaf09bf2daa4f27db3f3b49b2",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\CLI40_effective_literal_separator_recovery_receipt_v1.json",
+      "original_sha256": "3104c645566707afa89405d8d1d3126df91447da24002b6e9c6553b093ab8d43",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/23/actual_scope_engineering_recovery.json",
+      "linux_sha256": "3104c645566707afa89405d8d1d3126df91447da24002b6e9c6553b093ab8d43",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\23_yi4_w06_independent_native_blind_binding_CLI40_v3.json",
+      "original_sha256": "ef1035483054e0f511a7db1aeeefcfddd7918d98ef547b70be83fb56b8a7888a",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/23/blind_initial.json",
+      "linux_sha256": "ef1035483054e0f511a7db1aeeefcfddd7918d98ef547b70be83fb56b8a7888a",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\student_reviews\\23_Yi4Ij2NM7U4_W06.independent_student64_review_v1.json",
+      "original_sha256": "b56bf77cd303cb5439d8ec15bea62c7d23b07aef1ba6090e7b129ddc55575ab9",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/23/blind_student_visibility.json",
+      "linux_sha256": "b56bf77cd303cb5439d8ec15bea62c7d23b07aef1ba6090e7b129ddc55575ab9",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\slot6_silver24_v1\\observations\\23_Yi4Ij2NM7U4_W06\\student_views\\receipt.json",
+      "original_sha256": "17902a48008d7b09d81fecf8e9aca04afb4c54517866dbf3b403e6db52821df2",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/23/student_processor.json",
+      "linux_sha256": "17902a48008d7b09d81fecf8e9aca04afb4c54517866dbf3b403e6db52821df2",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\23_yi4_w06_root_eval_decision_CLI40_v3.json",
+      "original_sha256": "3038923d5a8823e25445bc9353f8f316f3735e4bc653d6c70af1337043b798e8",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/23/root_semantic_decision.json",
+      "linux_sha256": "3038923d5a8823e25445bc9353f8f316f3735e4bc653d6c70af1337043b798e8",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\23_yi4_w06_final_main_review_CLI40_v3.json",
+      "original_sha256": "90025f78064fa6028a05ec66e26cafefc917b4c3e18f274f2ebc64efe10211bd",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/evidence/23/final_main_review.json",
+      "linux_sha256": "90025f78064fa6028a05ec66e26cafefc917b4c3e18f274f2ebc64efe10211bd",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/original_references/23.json",
+        "sha256": "4ef701663e24ff26627006a4245ef568a1b15d544604a07c456888b8cd834c41"
+      },
+      "projected_reference": {
+        "path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/references/23.json",
+        "sha256": "28ee95659e5b1c989554d87fcb59e3902bb930a0a1bd6c7ea821c17c9a0e2ff3"
+      },
+      "operation": "ONLY_TOP_LEVEL_BOUND_EVIDENCE_PATH_PROJECTION",
+      "all_semantic_payload_exact": true,
+      "evidence_file_bytes_exact": true
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_engine.py",
+      "original_sha256": "8b8a5577225e9dd545aa16ec5f07571566b79ac188555c6ac7f245a8738a41ff",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/candidate_engine.py",
+      "linux_sha256": "8b8a5577225e9dd545aa16ec5f07571566b79ac188555c6ac7f245a8738a41ff",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_package.py",
+      "original_sha256": "23be213fd0b6c7457a9a2f3c3eab69acf7f7b5b0496c4dd4dfd763fad8953e6a",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/candidate_package.py",
+      "linux_sha256": "23be213fd0b6c7457a9a2f3c3eab69acf7f7b5b0496c4dd4dfd763fad8953e6a",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_replay.py",
+      "original_sha256": "86d31088c1a1679a040fc1ef8fe997991eac8ccb324aa9477b28e106c13e5fa6",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/candidate_replay.py",
+      "linux_sha256": "86d31088c1a1679a040fc1ef8fe997991eac8ccb324aa9477b28e106c13e5fa6",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_static_preflight.py",
+      "original_sha256": "c842ba4d71392a82dd7a31056d55f5a73aa4e85bbf2a1a6cb1c5b1eda2e1d19b",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/candidate_static_preflight.py",
+      "linux_sha256": "c842ba4d71392a82dd7a31056d55f5a73aa4e85bbf2a1a6cb1c5b1eda2e1d19b",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_support.py",
+      "original_sha256": "aa47648088d883b68e5f176ce60316b0a748ed5981fd1d9c3475a7cb3adbc21b",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/candidate_support.py",
+      "linux_sha256": "aa47648088d883b68e5f176ce60316b0a748ed5981fd1d9c3475a7cb3adbc21b",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_test.py",
+      "original_sha256": "8ca96c612d2851e846668b0ebe4bb14a3d1ded7f6ebaf1225d0854b20c90a640",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/candidate_test.py",
+      "linux_sha256": "8ca96c612d2851e846668b0ebe4bb14a3d1ded7f6ebaf1225d0854b20c90a640",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\candidate_validate_implementation.py",
+      "original_sha256": "0025af81d916e63fdc33532438290cdfc816072761399835140882422883d364",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/candidate_validate_implementation.py",
+      "linux_sha256": "0025af81d916e63fdc33532438290cdfc816072761399835140882422883d364",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\common.py",
+      "original_sha256": "325e5c4625a4e66f3efd9aa8730ca03d76e1ecfefa9dfd3911d4bc17a32d1e78",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/common.py",
+      "linux_sha256": "325e5c4625a4e66f3efd9aa8730ca03d76e1ecfefa9dfd3911d4bc17a32d1e78",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\evaluate.py",
+      "original_sha256": "5b24d3215cbf5285e78a16d7f85ba1f5478a0c8cc6d1103f2b6b1b8df0da5110",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/evaluate.py",
+      "linux_sha256": "5b24d3215cbf5285e78a16d7f85ba1f5478a0c8cc6d1103f2b6b1b8df0da5110",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\freeze_inputs.py",
+      "original_sha256": "61db1e8670fd6169e76ed74e7797212ebdd21853a06ff3deb3e109577cd1bb98",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/freeze_inputs.py",
+      "linux_sha256": "61db1e8670fd6169e76ed74e7797212ebdd21853a06ff3deb3e109577cd1bb98",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\model_binding.py",
+      "original_sha256": "e99c66363d683ac813bf25e5995fc457638baea3eb3c153ced0646330c059bb2",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/model_binding.py",
+      "linux_sha256": "e99c66363d683ac813bf25e5995fc457638baea3eb3c153ced0646330c059bb2",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\native_runtime.py",
+      "original_sha256": "30cc62c99dc4e524fb8128a1bad27b30632098ca66e113b9e0e729bb079bb62d",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/native_runtime.py",
+      "linux_sha256": "30cc62c99dc4e524fb8128a1bad27b30632098ca66e113b9e0e729bb079bb62d",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\objective.py",
+      "original_sha256": "118e8eb1cf631019fedf2d77f47532e6fa643cee63893a9d8c4e0761c1a509fe",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/objective.py",
+      "linux_sha256": "118e8eb1cf631019fedf2d77f47532e6fa643cee63893a9d8c4e0761c1a509fe",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\pipeline_controller.py",
+      "original_sha256": "295a068c9461df902aed65e8fde47e6dadff09c58112664168ac11c43098cd15",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/pipeline_controller.py",
+      "linux_sha256": "295a068c9461df902aed65e8fde47e6dadff09c58112664168ac11c43098cd15",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\preflight_native_inputs.py",
+      "original_sha256": "4c9f035c7ba4e5a53a8b99e72e6584290e2b518aaa8cfc4df94744f4931a2d8e",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/preflight_native_inputs.py",
+      "linux_sha256": "4c9f035c7ba4e5a53a8b99e72e6584290e2b518aaa8cfc4df94744f4931a2d8e",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\scientific_gate.py",
+      "original_sha256": "01e49f9547497fe36957b5665619f1f49fa81ae1e6f53d78c5dc069b770fabb7",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/scientific_gate.py",
+      "linux_sha256": "01e49f9547497fe36957b5665619f1f49fa81ae1e6f53d78c5dc069b770fabb7",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\test_actual_plan_role_binding.py",
+      "original_sha256": "f7f3c4964f3f534830642802ef98453459d19071d79c0534e7ca7377910ac471",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/test_actual_plan_role_binding.py",
+      "linux_sha256": "f7f3c4964f3f534830642802ef98453459d19071d79c0534e7ca7377910ac471",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\test_evaluation_reconstruction.py",
+      "original_sha256": "162e81553c7c9a70b89128c3426af267157785420ad26ede962c3806a3d803fb",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/test_evaluation_reconstruction.py",
+      "linux_sha256": "162e81553c7c9a70b89128c3426af267157785420ad26ede962c3806a3d803fb",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\test_freeze_candidate_inputs.py",
+      "original_sha256": "4edf2db9919b26afefbd146f29370576f35dc3512fd9385ea7fe98f4053b5a01",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/test_freeze_candidate_inputs.py",
+      "linux_sha256": "4edf2db9919b26afefbd146f29370576f35dc3512fd9385ea7fe98f4053b5a01",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\test_pipeline_costs.py",
+      "original_sha256": "d1c7aa120c832181c5a4dd1de676426e4984778efaa7c2798a6ee6cbdd3e24e4",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/test_pipeline_costs.py",
+      "linux_sha256": "d1c7aa120c832181c5a4dd1de676426e4984778efaa7c2798a6ee6cbdd3e24e4",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\test_runtime.py",
+      "original_sha256": "13bb58c2824793f135307818dd649c3727e356303a886fea48b1b00a3d3065b1",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/test_runtime.py",
+      "linux_sha256": "13bb58c2824793f135307818dd649c3727e356303a886fea48b1b00a3d3065b1",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\train.py",
+      "original_sha256": "de9191e759e346513ec583afbb29f57177a33fb3520918b57601b489ff374aa6",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/train.py",
+      "linux_sha256": "de9191e759e346513ec583afbb29f57177a33fb3520918b57601b489ff374aa6",
+      "operation": "BYTE_EXACT_COPY"
+    },
+    {
+      "original_path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\runtime\\verify_evaluation.py",
+      "original_sha256": "07782fa40fe7f2ee556ec97fc76b93bbe65efe3debfd5de8db7b34f93e6d2ff5",
+      "linux_path": "/home/inspur/aic_video_work/annotation_iteration_20261010/complete_reference_supplement_v1/inputs/runtime/verify_evaluation.py",
+      "linux_sha256": "07782fa40fe7f2ee556ec97fc76b93bbe65efe3debfd5de8db7b34f93e6d2ff5",
+      "operation": "BYTE_EXACT_COPY"
+    }
+  ],
+  "source_upload_still_required": true,
+  "remote_resource_admission_required": true,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0
+}

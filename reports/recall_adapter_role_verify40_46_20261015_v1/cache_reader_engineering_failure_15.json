@@ -1,0 +1,17 @@
+{
+  "status": "FAILED_SYSTEM_PYTHON_BEFORE_TENSOR_LOAD",
+  "error": "ModuleNotFoundError: No module named 'torch'",
+  "old_cache_reads": 0,
+  "new_cache_reads": 0,
+  "model_calls": 0,
+  "processor_calls": 0,
+  "first_input_or_output_QA": 0,
+  "remote_root_exists": false,
+  "current_inference_chain_untouched": true,
+  "counter_definition": {
+    "old_cache_reads": "torch tensor deserializer calls, excludes raw hash/footer reads",
+    "new_cache_reads": "torch tensor deserializer calls"
+  },
+  "source_cache_SHA_read_calls_before_import_failure": 1,
+  "gzip_footer_metadata_bytes_read": 4
+}

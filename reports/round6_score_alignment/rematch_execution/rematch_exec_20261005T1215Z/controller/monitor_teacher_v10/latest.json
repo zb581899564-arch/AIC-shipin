@@ -1,0 +1,3845 @@
+{
+  "snapshot_path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/monitor_aic_linux/comprehensive_teacher_student_autopilot_v10_20261008T055923Z.json",
+  "snapshot": {
+    "utc": "2026-10-08T05:59:23.128613+00:00",
+    "host": "inspur-NP5570M5",
+    "version": "v10",
+    "entry": "teacher_student_autopilot_v10",
+    "processes": [],
+    "owned_servers": [],
+    "process_io": {},
+    "gpu": "0, NVIDIA RTX 6000 Ada Generation, 0 %, 182 MiB, 46068 MiB",
+    "memory": "总计         已用        空闲      共享    缓冲/缓存    可用\n内存：      128557        7086       53361          74       68109      120360\n交换：      131071        1937      129134",
+    "disk": {
+      "total": 943412031488,
+      "used": 694570561536,
+      "free": 200841859072
+    },
+    "window_counts": {
+      "positive": 2,
+      "engineering_failure": 1
+    },
+    "window_receipts": [
+      {
+        "window_id": "complete_087af79e4b421be308d6cf6f",
+        "done_status": "PASS_COMPLETE_ANNOTATION_RECEIPT",
+        "completed_utc": "2026-10-08T05:42:21.081279+00:00",
+        "wall_sec": 35.252787795849144,
+        "failure": null,
+        "status": "PASS_WEAK_COMPLETE_WINDOW_TARGET",
+        "split": "train",
+        "sft_eligible": true,
+        "explicit_no_highlight": false,
+        "uncertain": false,
+        "segment_count": 2,
+        "file_sha_checks": {
+          "annotation.json": true,
+          "validated_record.json": true,
+          "decode_receipt.json": true,
+          "prompt.txt": true,
+          "raw_answer.txt": true,
+          "server_response.json": true,
+          "input_contract.json": true,
+          "runtime_grammar_validation.json": true,
+          "generation_schema.json": true,
+          "processor.log": true,
+          "http/request.json": true,
+          "http/response.bin": true,
+          "http/http_receipt.json": true,
+          "boundary_table.json": true,
+          "model_decision.json": true,
+          "generation_grammar.gbnf": true,
+          "generation_relation_contract.json": true
+        }
+      },
+      {
+        "window_id": "complete_45666feb9bbc3d854e9d05c1",
+        "done_status": null,
+        "completed_utc": null,
+        "wall_sec": null,
+        "failure": {
+          "status": "STOP_ANNOTATION_FAILURE",
+          "window_id": "complete_45666feb9bbc3d854e9d05c1",
+          "failed_utc": "2026-10-08T05:46:16.141407+00:00",
+          "error": "ValueError: every KEEP segment needs a selected physical evidence frame",
+          "failed_or_uncertain_never_empty": true,
+          "automatic_retry": false
+        },
+        "status": null,
+        "split": null,
+        "sft_eligible": null,
+        "explicit_no_highlight": null,
+        "uncertain": null,
+        "segment_count": 0,
+        "file_sha_checks": {}
+      },
+      {
+        "window_id": "complete_8ab21c80e0bff423c3ce016b",
+        "done_status": "PASS_COMPLETE_ANNOTATION_RECEIPT",
+        "completed_utc": "2026-10-08T05:43:00.262948+00:00",
+        "wall_sec": 39.18102522846311,
+        "failure": null,
+        "status": "PASS_WEAK_COMPLETE_WINDOW_TARGET",
+        "split": "dev",
+        "sft_eligible": true,
+        "explicit_no_highlight": false,
+        "uncertain": false,
+        "segment_count": 5,
+        "file_sha_checks": {
+          "annotation.json": true,
+          "validated_record.json": true,
+          "decode_receipt.json": true,
+          "prompt.txt": true,
+          "raw_answer.txt": true,
+          "server_response.json": true,
+          "input_contract.json": true,
+          "runtime_grammar_validation.json": true,
+          "generation_schema.json": true,
+          "processor.log": true,
+          "http/request.json": true,
+          "http/response.bin": true,
+          "http/http_receipt.json": true,
+          "boundary_table.json": true,
+          "model_decision.json": true,
+          "generation_grammar.gbnf": true,
+          "generation_relation_contract.json": true
+        }
+      }
+    ],
+    "all_completed_window_file_sha_pass": true,
+    "new_zip_paths": [],
+    "source_lock_sha256": "b36e260ece5abc0267f24cedf534add67588fb01ebc3c10e1e7f8ea5d65960cc",
+    "launch_receipt": {
+      "status": "LAUNCHED_NOT_ACCEPTED",
+      "utc": "2026-10-08T05:32:57.506841+00:00",
+      "pid": 480562,
+      "pgid": 480562,
+      "command": [
+        "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+        "-B",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v10/controller.py"
+      ],
+      "source_lock_sha256": "b36e260ece5abc0267f24cedf534add67588fb01ebc3c10e1e7f8ea5d65960cc",
+      "automatic_return": false,
+      "uploaded": false
+    },
+    "review_counts": {
+      "pilot_01": {},
+      "teacher_01": {}
+    },
+    "registration": {
+      "pid": 480562,
+      "utc": "2026-10-08T05:34:29.187313+00:00",
+      "source_lock_sha256": "b36e260ece5abc0267f24cedf534add67588fb01ebc3c10e1e7f8ea5d65960cc",
+      "config_sha256": "f12a29224cdeea1c5b69c7200aee027612ee32e76557c82c633e1fdb3f29bd21"
+    },
+    "progress": {
+      "stage": "RUNNING_TEACHER_PILOT",
+      "utc": "2026-10-08T05:43:55.544268+00:00",
+      "pid": 480562,
+      "uploaded": false,
+      "automatic_return": false,
+      "maximum_seconds": 14400,
+      "planned_output_bytes": 13726801920
+    },
+    "completion": {
+      "status": "STOP_AUTOPILOT_PRESERVED",
+      "utc": "2026-10-08T05:46:19.536560+00:00",
+      "last_progress": {
+        "stage": "RUNNING_TEACHER_PILOT",
+        "utc": "2026-10-08T05:43:55.544268+00:00",
+        "pid": 480562,
+        "uploaded": false,
+        "automatic_return": false,
+        "maximum_seconds": 14400,
+        "planned_output_bytes": 13726801920
+      },
+      "error_type": "RuntimeError",
+      "reason": "stage teacher_pilot stopped: {\"status\": \"STOP_REAL_PILOT_PRESERVED\", \"reason\": \"every KEEP segment needs a selected physical evidence frame\", \"completed_review_count\": 0, \"optimizer_steps\": 0, \"no_labels_salvaged_or_removed\": true, \"utc\": \"2026-10-08T05:46:16.141606+00:00\"}",
+      "uploaded": false,
+      "automatic_return": false
+    },
+    "pilot_progress": null,
+    "pilot_completion": {
+      "status": "STOP_REAL_PILOT_PRESERVED",
+      "reason": "every KEEP segment needs a selected physical evidence frame",
+      "completed_review_count": 0,
+      "optimizer_steps": 0,
+      "no_labels_salvaged_or_removed": true,
+      "utc": "2026-10-08T05:46:16.141606+00:00"
+    },
+    "distribution": null,
+    "semantic_quality": null,
+    "teacher_progress": null,
+    "teacher_completion": null,
+    "teacher_semantic_review": null,
+    "teacher_stop": null,
+    "student_progress": null,
+    "student_report": null,
+    "nontest8_package": null,
+    "nontest8_strict": null,
+    "rematch_package": null,
+    "rematch_strict": null,
+    "v8_stage_receipts": {
+      "visual_progress": null,
+      "visual_completion": {
+        "status": "PASS_REAL_SYNTHETIC_VISUAL_INTERFACE",
+        "case_count": 8,
+        "real_model_calls": 8,
+        "cases": [
+          {
+            "case_id": "visible_start",
+            "expected_red_square_frame_ids": [
+              0
+            ],
+            "actual_red_square_frame_ids": [
+              0
+            ],
+            "pass": true,
+            "raw_model_answer_sha256": "934e3306db54f15c887a8d17f14340ce5adac3d043349cd7f62fe2ff4ddfa42e",
+            "actual_input_contract": {
+              "actual_processed_pixels_per_frame": [
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536
+              ],
+              "actual_teacher_processor_grids": [
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                }
+              ],
+              "max_pixels_per_frame": 786432,
+              "max_sequence_length": 65536,
+              "input_sequence_length": 693,
+              "input_contract_sha256": "934f88f79b6c7b9a06a45cc0f12e9e02035abb46bda94d8ea8024ebc6e9d0344",
+              "processor_log_sha256": "1f0330c1e9768671f57e8f2bd1a4d22ad551196da5f66737adb2b3f2c7e8a379",
+              "server_response_sha256": "d9ec05a0072930b9694bdc5e82743af0e0cb24a335c25a906d30441558bf44ca"
+            },
+            "request_sha256": "f24cfb756a1497a9b576bd2956fd0831959489c30a0414329e66b55d3d1c7733",
+            "response_sha256": "d9ec05a0072930b9694bdc5e82743af0e0cb24a335c25a906d30441558bf44ca",
+            "input_receipt_sha256": "35ec418544d34528ee734d538f449fbaae5e5a5bbb207c4dc8c6230b14f0b4cf",
+            "synthetic_never_training_labels": true,
+            "provided_frame_count": 8,
+            "wall_sec": 1.2835636539384723
+          },
+          {
+            "case_id": "visible_middle",
+            "expected_red_square_frame_ids": [
+              4
+            ],
+            "actual_red_square_frame_ids": [
+              4
+            ],
+            "pass": true,
+            "raw_model_answer_sha256": "6dbae702132275ca77a4726f55927e53eb27d261422e3875ff01693a9fa0887f",
+            "actual_input_contract": {
+              "actual_processed_pixels_per_frame": [
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536
+              ],
+              "actual_teacher_processor_grids": [
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                }
+              ],
+              "max_pixels_per_frame": 786432,
+              "max_sequence_length": 65536,
+              "input_sequence_length": 693,
+              "input_contract_sha256": "65ac7e0cbeb84bbfd699f8256c138ca19a0fa3a7e523e7bc074e85867f926e21",
+              "processor_log_sha256": "3d3579f59cc8058bb665cbb1e0153f86ae975390af465b94a8b980ac616ca20e",
+              "server_response_sha256": "09170655ebf7681d14b00fdc9092a0a5c19830de9170eb83d690300ae2a2f2b7"
+            },
+            "request_sha256": "365f5a1bb3b9db50fc98287d643cc48ee5a7fb20679b3556cec6edebf934e615",
+            "response_sha256": "09170655ebf7681d14b00fdc9092a0a5c19830de9170eb83d690300ae2a2f2b7",
+            "input_receipt_sha256": "2dc7311afeafbe624cbbfe4cde6ebc1a09c78d51405ee5b1dc76500de9489bb3",
+            "synthetic_never_training_labels": true,
+            "provided_frame_count": 8,
+            "wall_sec": 1.352468341588974
+          },
+          {
+            "case_id": "visible_end",
+            "expected_red_square_frame_ids": [
+              7
+            ],
+            "actual_red_square_frame_ids": [
+              7
+            ],
+            "pass": true,
+            "raw_model_answer_sha256": "6c641736ea04cf7cbf744c7fa643fba0de8c86838094c43e839953ca4a9aa569",
+            "actual_input_contract": {
+              "actual_processed_pixels_per_frame": [
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536
+              ],
+              "actual_teacher_processor_grids": [
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                }
+              ],
+              "max_pixels_per_frame": 786432,
+              "max_sequence_length": 65536,
+              "input_sequence_length": 693,
+              "input_contract_sha256": "33f9ec589d418d4f2471873a7832d2618e0cce9e4778e4ed499422205006bbd6",
+              "processor_log_sha256": "8a9ed2f314e74408d41b07ef239467eac00c879bb27bec372da94060af859773",
+              "server_response_sha256": "d28bfb5c20ca1fc16c54a0a7128798af172b91228557cbc9d42cd6429613b3e7"
+            },
+            "request_sha256": "7faab749ec126d0b8549fe83256e38d8ae03e4cd9c134c2599bdcb2c52827faf",
+            "response_sha256": "d28bfb5c20ca1fc16c54a0a7128798af172b91228557cbc9d42cd6429613b3e7",
+            "input_receipt_sha256": "0355684a52baed1eb7e36182e371be4791a63f9b20fd0107889bd410bddd446f",
+            "synthetic_never_training_labels": true,
+            "provided_frame_count": 8,
+            "wall_sec": 1.1936152260750532
+          },
+          {
+            "case_id": "changed_image_none",
+            "expected_red_square_frame_ids": [],
+            "actual_red_square_frame_ids": [],
+            "pass": true,
+            "raw_model_answer_sha256": "a67ca8eb257559bb0393d5bb6950f692224304db0a18a03f3c3188bb8fc4157d",
+            "actual_input_contract": {
+              "actual_processed_pixels_per_frame": [
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536
+              ],
+              "actual_teacher_processor_grids": [
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                }
+              ],
+              "max_pixels_per_frame": 786432,
+              "max_sequence_length": 65536,
+              "input_sequence_length": 693,
+              "input_contract_sha256": "54b46ff2524c841cee59d5641abfd60b5ac3e667b17c36ff692ac0a7551949ff",
+              "processor_log_sha256": "fa91ba130995f0fe93fe33ad37f89802e6b5caead38d2feaf1199df00db18301",
+              "server_response_sha256": "08876d25930fe57ea5c9fbf466ff5f1b6b298c6e4fbf31e0d2c9af6b79a1fe08"
+            },
+            "request_sha256": "9e067aff71e7d0985ca7367cb37cbc62daa1bc3eb906975cb872911a085ac2db",
+            "response_sha256": "08876d25930fe57ea5c9fbf466ff5f1b6b298c6e4fbf31e0d2c9af6b79a1fe08",
+            "input_receipt_sha256": "71948a3f51c69ee7c911907d1a57df443f20c63528db4b64618d607d429720ea",
+            "synthetic_never_training_labels": true,
+            "provided_frame_count": 8,
+            "wall_sec": 1.1787142399698496
+          },
+          {
+            "case_id": "same_start_images_reversed",
+            "expected_red_square_frame_ids": [
+              7
+            ],
+            "actual_red_square_frame_ids": [
+              7
+            ],
+            "pass": true,
+            "raw_model_answer_sha256": "6c641736ea04cf7cbf744c7fa643fba0de8c86838094c43e839953ca4a9aa569",
+            "actual_input_contract": {
+              "actual_processed_pixels_per_frame": [
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536
+              ],
+              "actual_teacher_processor_grids": [
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                }
+              ],
+              "max_pixels_per_frame": 786432,
+              "max_sequence_length": 65536,
+              "input_sequence_length": 693,
+              "input_contract_sha256": "33f9ec589d418d4f2471873a7832d2618e0cce9e4778e4ed499422205006bbd6",
+              "processor_log_sha256": "6c8a450ee8c8f1be80570619c51f57536a1494d1c3c148214f04afeec0fc487d",
+              "server_response_sha256": "bf39d7ac0fb0dbc413636cb9f8b3cf4302af2f63c9924e3fab16e854975499ea"
+            },
+            "request_sha256": "7faab749ec126d0b8549fe83256e38d8ae03e4cd9c134c2599bdcb2c52827faf",
+            "response_sha256": "bf39d7ac0fb0dbc413636cb9f8b3cf4302af2f63c9924e3fab16e854975499ea",
+            "input_receipt_sha256": "7ab8e021a20d7f40924a6a3c3402a2624daa46377e4597c0ef53e4526cc4aefc",
+            "synthetic_never_training_labels": true,
+            "provided_frame_count": 8,
+            "wall_sec": 1.1847353782504797
+          },
+          {
+            "case_id": "changed_one_image_position",
+            "expected_red_square_frame_ids": [
+              2,
+              6
+            ],
+            "actual_red_square_frame_ids": [
+              2,
+              6
+            ],
+            "pass": true,
+            "raw_model_answer_sha256": "148740eb763e8b3b3c90d7beb72ab1357cee1169c1fe8c217d1c9b8547e2e176",
+            "actual_input_contract": {
+              "actual_processed_pixels_per_frame": [
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536
+              ],
+              "actual_teacher_processor_grids": [
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                }
+              ],
+              "max_pixels_per_frame": 786432,
+              "max_sequence_length": 65536,
+              "input_sequence_length": 693,
+              "input_contract_sha256": "af02a099c6f0dcf47fbbf96a86d07aba8a0e01e23a0c3a48ce2456eabc738815",
+              "processor_log_sha256": "66d3684c2952bd41016caaccfca0970d2c943fefc408a04328af20826215c08d",
+              "server_response_sha256": "ba2951a45fe1fd27548b10f76cd0c83e969d1a761041d44c3dac3dcce8ed1955"
+            },
+            "request_sha256": "fbf17550e252190aff048ccd7deb2cd432aeaa3c528ca38a49cffc29dead7f09",
+            "response_sha256": "ba2951a45fe1fd27548b10f76cd0c83e969d1a761041d44c3dac3dcce8ed1955",
+            "input_receipt_sha256": "6418fbc7a18e9e852fc273ac1dbe70c1e6374f80d893de37dff1f273756174e7",
+            "synthetic_never_training_labels": true,
+            "provided_frame_count": 8,
+            "wall_sec": 1.4242511382326484
+          },
+          {
+            "case_id": "64frame_tail",
+            "expected_red_square_frame_ids": [
+              63
+            ],
+            "actual_red_square_frame_ids": [
+              63
+            ],
+            "pass": true,
+            "raw_model_answer_sha256": "725cfa7bba86b71444fd267d9ce757c1112576cfc15f68c6408ad60ce4cd8edc",
+            "actual_input_contract": {
+              "actual_processed_pixels_per_frame": [
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536
+              ],
+              "actual_teacher_processor_grids": [
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                }
+              ],
+              "max_pixels_per_frame": 786432,
+              "max_sequence_length": 65536,
+              "input_sequence_length": 5114,
+              "input_contract_sha256": "bde02dc59a52a5be2a7d20e0ea352b5fe923e39896d2cbe922b86a3d6d590b9f",
+              "processor_log_sha256": "d026f031cb09bff735b1a5663f40d35287fad706be7a776cf8928f334ce989f6",
+              "server_response_sha256": "d20a45ae477afb45510452a7a1968be82689e08252f14604ad9b745e255d42d0"
+            },
+            "request_sha256": "d2e92c3a65ca72b96c1523c207df0ee754b33c8a944080c951265609754eeab3",
+            "response_sha256": "d20a45ae477afb45510452a7a1968be82689e08252f14604ad9b745e255d42d0",
+            "input_receipt_sha256": "ce55bfa978d994a059033d6e17d39ad1b70ef2669682d07441ef874f92bc8d7b",
+            "synthetic_never_training_labels": true,
+            "provided_frame_count": 64,
+            "wall_sec": 7.060838088393211
+          },
+          {
+            "case_id": "64frame_same_images_reversed",
+            "expected_red_square_frame_ids": [
+              0
+            ],
+            "actual_red_square_frame_ids": [
+              0
+            ],
+            "pass": true,
+            "raw_model_answer_sha256": "934e3306db54f15c887a8d17f14340ce5adac3d043349cd7f62fe2ff4ddfa42e",
+            "actual_input_contract": {
+              "actual_processed_pixels_per_frame": [
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536,
+                65536
+              ],
+              "actual_teacher_processor_grids": [
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "tensor_copies": 1,
+                  "pixels": 65536
+                }
+              ],
+              "max_pixels_per_frame": 786432,
+              "max_sequence_length": 65536,
+              "input_sequence_length": 5114,
+              "input_contract_sha256": "f900442cdbf3c71a41b345d44e918be8ba0fb965d5b65f94eaf8e5ae8c795d5b",
+              "processor_log_sha256": "7d4e7126d41fd61adbc2be7d31d558ae37ac6203b1045d943c9e879fd87fa431",
+              "server_response_sha256": "51584001efb2efe3f2e28679ca66577e73c4214a32d08810c3eb80860beed9ac"
+            },
+            "request_sha256": "e7914b474b4b788a292849aa17f34cd419a7d451901eb3c37c679cb2ec968b9a",
+            "response_sha256": "51584001efb2efe3f2e28679ca66577e73c4214a32d08810c3eb80860beed9ac",
+            "input_receipt_sha256": "8d53dbb12d5b3d631f6afadfffe3e8e4db3b6b903d0e72386bd70d2c17bcdde4",
+            "synthetic_never_training_labels": true,
+            "provided_frame_count": 64,
+            "wall_sec": 7.879239003174007
+          }
+        ],
+        "teacher_model_id": "Qwen/Qwen3-VL-32B-Instruct-GGUF",
+        "teacher_revision": "e3e1fe0c76de7ee58ea65db420c643adfe2e457c",
+        "runtime_revision": "5ad1c5da0ad7f6176256b823925aad19134f0263",
+        "weight_files": [
+          {
+            "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher32b_linux_download_v1/assets/Qwen3VL-32B-Instruct-Q4_K_M.gguf",
+            "bytes": 19762150432,
+            "sha256": "5cf0136e721d6294718ec71fd8c93b17ab5dd4e2714d6079e83fa46571ad94c8"
+          },
+          {
+            "path": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher32b_linux_download_v1/assets/mmproj-Qwen3VL-32B-Instruct-F16.gguf",
+            "bytes": 1196795040,
+            "sha256": "8617824839df91f84b4840ad5084dcf50a1403a435a1f4cfc4d8c84ce6cac2fc"
+          }
+        ],
+        "job_source_lock_sha256": "b36e260ece5abc0267f24cedf534add67588fb01ebc3c10e1e7f8ea5d65960cc",
+        "synthetic_never_training_labels": true,
+        "synthetic_pass_not_highlight_quality": true,
+        "runtime_or_weights_changed": false,
+        "no_model_retry": true,
+        "wall_sec": 31.135710667818785,
+        "utc": "2026-10-08T05:39:53.146778+00:00"
+      },
+      "pilot_decision": {
+        "status": "STOP_REAL_PILOT_PRESERVED",
+        "reason": "every KEEP segment needs a selected physical evidence frame",
+        "completed_review_count": 0,
+        "optimizer_steps": 0,
+        "no_labels_salvaged_or_removed": true,
+        "utc": "2026-10-08T05:46:16.141606+00:00"
+      },
+      "pilot_semantic": null,
+      "prefix": null,
+      "teacher_probe": {
+        "status": "PASS_REAL_NONTEST_TEACHER_PROBE",
+        "window_ids": [
+          "complete_087af79e4b421be308d6cf6f",
+          "complete_8ab21c80e0bff423c3ce016b"
+        ],
+        "admission_sha256": "e8b182841260acdd1b0c6a00594e52091b778957ea8cad20fe9e6b2e92fd65fe",
+        "probe_receipts": {
+          "complete_087af79e4b421be308d6cf6f": {
+            "done_sha256": "28770e2c99799903728fccc1fb95d3a0bc257ac6269793eed9a7bcd68b056310",
+            "annotation_sha256": "b00829f037648333a835269e0a59477850e4ccd3de89a2db1d5ece3f2e6d8153"
+          },
+          "complete_8ab21c80e0bff423c3ce016b": {
+            "done_sha256": "d1c70a5f957d2b022890d2a31692298915dcf51bb987d4a130e0be615dba746e",
+            "annotation_sha256": "fa5ba1c8e7f961bc370b9a109f66d2bcc857179b5c4a273e53126299fad17466"
+          }
+        },
+        "actual_processor_grids_and_tokens_measured": true,
+        "not_a_supervision_or_training_admission": true,
+        "completed_utc": "2026-10-08T05:43:00.263883+00:00",
+        "wall_sec": 86.94051442295313,
+        "per_window_wall_sec": [
+          35.252787795849144,
+          39.18102522846311
+        ],
+        "max_actual_prompt_tokens": 13675
+      },
+      "teacher_semantic": null
+    },
+    "active_gpu_job": null,
+    "resource_receipts": {
+      "rematch_TAUTO_v10_teacher_pilot.resource.json": {
+        "name": "rematch_TAUTO_v10_teacher_pilot",
+        "command": [
+          "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+          "-B",
+          "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v10/pilot.py"
+        ],
+        "started_utc": "2026-10-08T05:43:55.827486+00:00",
+        "runner_pid": 495327,
+        "reserved_seconds": 14400,
+        "teardown_reserve_seconds": 120,
+        "prior_charged_seconds": 177495.5035387515,
+        "gpu_time_mode": "UNLIMITED",
+        "max_total_gpu_seconds": null,
+        "resource_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
+        "disk_before": {
+          "free_bytes": 200882778112,
+          "work_bytes": 79354040320
+        },
+        "planned_output_bytes": 13726801920,
+        "capacity_reason": "preregistered untouched16train8dev; local evidence and blind weak review; no empty quota, zero student updates",
+        "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+        "project_disk_limit_bytes": null,
+        "project_ram_limit_bytes": null,
+        "project_vram_limit_bytes": null,
+        "runner_source_sha256": "9997d41fbe2bb51726914b4698b874cf939c52aac02048fa9b3bb753c64c6cec",
+        "child_pid": 495333,
+        "finished_utc": "2026-10-08T05:46:19.339113+00:00",
+        "charged_seconds": 143.5117079615593,
+        "exit_code": 1,
+        "stop_reason": null,
+        "sampled_peak_memory_mib": 37098,
+        "status": "failed",
+        "disk_after": {
+          "free_bytes": 200842665984,
+          "work_bytes": 79385640960
+        }
+      },
+      "rematch_TAUTO_v10_teacher_probe.resource.json": {
+        "name": "rematch_TAUTO_v10_teacher_probe",
+        "command": [
+          "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+          "-B",
+          "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v10/teacher_label.py",
+          "--run-dir",
+          "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z",
+          "--out-dir",
+          "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v10/teacher_01",
+          "--selected-train",
+          "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v10/selection_01/selected_train.jsonl",
+          "--selected-dev",
+          "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v10/selection_01/selected_dev.jsonl",
+          "--selection-receipt",
+          "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v10/selection_01/selection_receipt.json",
+          "--teacher-admission",
+          "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v10/teacher_admission.json",
+          "--server-url",
+          "http://127.0.0.1:46839",
+          "--start-server",
+          "--phase",
+          "probe",
+          "--ffprobe",
+          "/home/inspur/anaconda3/envs/Andy/bin/ffprobe"
+        ],
+        "started_utc": "2026-10-08T05:40:43.609292+00:00",
+        "runner_pid": 489574,
+        "reserved_seconds": 3600,
+        "teardown_reserve_seconds": 120,
+        "prior_charged_seconds": 177352.01761304634,
+        "gpu_time_mode": "UNLIMITED",
+        "max_total_gpu_seconds": null,
+        "resource_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
+        "disk_before": {
+          "free_bytes": 200964091904,
+          "work_bytes": 79272873984
+        },
+        "planned_output_bytes": 571950080,
+        "capacity_reason": "two non-test metadata-selected probe windows; raw RGB/PNG/request upper output estimate, no project cap",
+        "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+        "project_disk_limit_bytes": null,
+        "project_ram_limit_bytes": null,
+        "project_vram_limit_bytes": null,
+        "runner_source_sha256": "9997d41fbe2bb51726914b4698b874cf939c52aac02048fa9b3bb753c64c6cec",
+        "child_pid": 489578,
+        "finished_utc": "2026-10-08T05:43:07.095132+00:00",
+        "charged_seconds": 143.48592570517212,
+        "exit_code": 0,
+        "stop_reason": null,
+        "sampled_peak_memory_mib": 37092,
+        "status": "completed",
+        "disk_after": {
+          "free_bytes": 200882831360,
+          "work_bytes": 79354028032
+        }
+      },
+      "rematch_TAUTO_v10_teacher_visual_interface.resource.json": {
+        "name": "rematch_TAUTO_v10_teacher_visual_interface",
+        "command": [
+          "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+          "-B",
+          "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v10/visual_interface_probe.py",
+          "--teacher-admission",
+          "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v10/teacher_admission.json",
+          "--out-dir",
+          "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v10/visual_probe_01",
+          "--start-server"
+        ],
+        "started_utc": "2026-10-08T05:38:32.751836+00:00",
+        "runner_pid": 486999,
+        "reserved_seconds": 7200,
+        "teardown_reserve_seconds": 120,
+        "prior_charged_seconds": 177270.04213527637,
+        "gpu_time_mode": "UNLIMITED",
+        "max_total_gpu_seconds": null,
+        "resource_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
+        "disk_before": {
+          "free_bytes": 200968278016,
+          "work_bytes": 79268806656
+        },
+        "planned_output_bytes": 100000000,
+        "capacity_reason": "eight fixed synthetic interface cases incl64frame order/reverse; never real highlight supervision",
+        "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+        "project_disk_limit_bytes": null,
+        "project_ram_limit_bytes": null,
+        "project_vram_limit_bytes": null,
+        "runner_source_sha256": "9997d41fbe2bb51726914b4698b874cf939c52aac02048fa9b3bb753c64c6cec",
+        "child_pid": 487015,
+        "finished_utc": "2026-10-08T05:39:54.727226+00:00",
+        "charged_seconds": 81.9754777699709,
+        "exit_code": 0,
+        "stop_reason": null,
+        "sampled_peak_memory_mib": 37072,
+        "status": "completed",
+        "disk_after": {
+          "free_bytes": 200964149248,
+          "work_bytes": 79272869888
+        }
+      }
+    },
+    "queue_receipts": {},
+    "visual_case_results": {
+      "64frame_same_images_reversed": {
+        "case_id": "64frame_same_images_reversed",
+        "expected_red_square_frame_ids": [
+          0
+        ],
+        "actual_red_square_frame_ids": [
+          0
+        ],
+        "pass": true,
+        "raw_model_answer_sha256": "934e3306db54f15c887a8d17f14340ce5adac3d043349cd7f62fe2ff4ddfa42e",
+        "actual_input_contract": {
+          "actual_processed_pixels_per_frame": [
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536
+          ],
+          "actual_teacher_processor_grids": [
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            }
+          ],
+          "max_pixels_per_frame": 786432,
+          "max_sequence_length": 65536,
+          "input_sequence_length": 5114,
+          "input_contract_sha256": "f900442cdbf3c71a41b345d44e918be8ba0fb965d5b65f94eaf8e5ae8c795d5b",
+          "processor_log_sha256": "7d4e7126d41fd61adbc2be7d31d558ae37ac6203b1045d943c9e879fd87fa431",
+          "server_response_sha256": "51584001efb2efe3f2e28679ca66577e73c4214a32d08810c3eb80860beed9ac"
+        },
+        "request_sha256": "e7914b474b4b788a292849aa17f34cd419a7d451901eb3c37c679cb2ec968b9a",
+        "response_sha256": "51584001efb2efe3f2e28679ca66577e73c4214a32d08810c3eb80860beed9ac",
+        "input_receipt_sha256": "8d53dbb12d5b3d631f6afadfffe3e8e4db3b6b903d0e72386bd70d2c17bcdde4",
+        "synthetic_never_training_labels": true,
+        "provided_frame_count": 64,
+        "wall_sec": 7.879239003174007
+      },
+      "64frame_tail": {
+        "case_id": "64frame_tail",
+        "expected_red_square_frame_ids": [
+          63
+        ],
+        "actual_red_square_frame_ids": [
+          63
+        ],
+        "pass": true,
+        "raw_model_answer_sha256": "725cfa7bba86b71444fd267d9ce757c1112576cfc15f68c6408ad60ce4cd8edc",
+        "actual_input_contract": {
+          "actual_processed_pixels_per_frame": [
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536
+          ],
+          "actual_teacher_processor_grids": [
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            }
+          ],
+          "max_pixels_per_frame": 786432,
+          "max_sequence_length": 65536,
+          "input_sequence_length": 5114,
+          "input_contract_sha256": "bde02dc59a52a5be2a7d20e0ea352b5fe923e39896d2cbe922b86a3d6d590b9f",
+          "processor_log_sha256": "d026f031cb09bff735b1a5663f40d35287fad706be7a776cf8928f334ce989f6",
+          "server_response_sha256": "d20a45ae477afb45510452a7a1968be82689e08252f14604ad9b745e255d42d0"
+        },
+        "request_sha256": "d2e92c3a65ca72b96c1523c207df0ee754b33c8a944080c951265609754eeab3",
+        "response_sha256": "d20a45ae477afb45510452a7a1968be82689e08252f14604ad9b745e255d42d0",
+        "input_receipt_sha256": "ce55bfa978d994a059033d6e17d39ad1b70ef2669682d07441ef874f92bc8d7b",
+        "synthetic_never_training_labels": true,
+        "provided_frame_count": 64,
+        "wall_sec": 7.060838088393211
+      },
+      "changed_image_none": {
+        "case_id": "changed_image_none",
+        "expected_red_square_frame_ids": [],
+        "actual_red_square_frame_ids": [],
+        "pass": true,
+        "raw_model_answer_sha256": "a67ca8eb257559bb0393d5bb6950f692224304db0a18a03f3c3188bb8fc4157d",
+        "actual_input_contract": {
+          "actual_processed_pixels_per_frame": [
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536
+          ],
+          "actual_teacher_processor_grids": [
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            }
+          ],
+          "max_pixels_per_frame": 786432,
+          "max_sequence_length": 65536,
+          "input_sequence_length": 693,
+          "input_contract_sha256": "54b46ff2524c841cee59d5641abfd60b5ac3e667b17c36ff692ac0a7551949ff",
+          "processor_log_sha256": "fa91ba130995f0fe93fe33ad37f89802e6b5caead38d2feaf1199df00db18301",
+          "server_response_sha256": "08876d25930fe57ea5c9fbf466ff5f1b6b298c6e4fbf31e0d2c9af6b79a1fe08"
+        },
+        "request_sha256": "9e067aff71e7d0985ca7367cb37cbc62daa1bc3eb906975cb872911a085ac2db",
+        "response_sha256": "08876d25930fe57ea5c9fbf466ff5f1b6b298c6e4fbf31e0d2c9af6b79a1fe08",
+        "input_receipt_sha256": "71948a3f51c69ee7c911907d1a57df443f20c63528db4b64618d607d429720ea",
+        "synthetic_never_training_labels": true,
+        "provided_frame_count": 8,
+        "wall_sec": 1.1787142399698496
+      },
+      "changed_one_image_position": {
+        "case_id": "changed_one_image_position",
+        "expected_red_square_frame_ids": [
+          2,
+          6
+        ],
+        "actual_red_square_frame_ids": [
+          2,
+          6
+        ],
+        "pass": true,
+        "raw_model_answer_sha256": "148740eb763e8b3b3c90d7beb72ab1357cee1169c1fe8c217d1c9b8547e2e176",
+        "actual_input_contract": {
+          "actual_processed_pixels_per_frame": [
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536
+          ],
+          "actual_teacher_processor_grids": [
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            }
+          ],
+          "max_pixels_per_frame": 786432,
+          "max_sequence_length": 65536,
+          "input_sequence_length": 693,
+          "input_contract_sha256": "af02a099c6f0dcf47fbbf96a86d07aba8a0e01e23a0c3a48ce2456eabc738815",
+          "processor_log_sha256": "66d3684c2952bd41016caaccfca0970d2c943fefc408a04328af20826215c08d",
+          "server_response_sha256": "ba2951a45fe1fd27548b10f76cd0c83e969d1a761041d44c3dac3dcce8ed1955"
+        },
+        "request_sha256": "fbf17550e252190aff048ccd7deb2cd432aeaa3c528ca38a49cffc29dead7f09",
+        "response_sha256": "ba2951a45fe1fd27548b10f76cd0c83e969d1a761041d44c3dac3dcce8ed1955",
+        "input_receipt_sha256": "6418fbc7a18e9e852fc273ac1dbe70c1e6374f80d893de37dff1f273756174e7",
+        "synthetic_never_training_labels": true,
+        "provided_frame_count": 8,
+        "wall_sec": 1.4242511382326484
+      },
+      "same_start_images_reversed": {
+        "case_id": "same_start_images_reversed",
+        "expected_red_square_frame_ids": [
+          7
+        ],
+        "actual_red_square_frame_ids": [
+          7
+        ],
+        "pass": true,
+        "raw_model_answer_sha256": "6c641736ea04cf7cbf744c7fa643fba0de8c86838094c43e839953ca4a9aa569",
+        "actual_input_contract": {
+          "actual_processed_pixels_per_frame": [
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536
+          ],
+          "actual_teacher_processor_grids": [
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            }
+          ],
+          "max_pixels_per_frame": 786432,
+          "max_sequence_length": 65536,
+          "input_sequence_length": 693,
+          "input_contract_sha256": "33f9ec589d418d4f2471873a7832d2618e0cce9e4778e4ed499422205006bbd6",
+          "processor_log_sha256": "6c8a450ee8c8f1be80570619c51f57536a1494d1c3c148214f04afeec0fc487d",
+          "server_response_sha256": "bf39d7ac0fb0dbc413636cb9f8b3cf4302af2f63c9924e3fab16e854975499ea"
+        },
+        "request_sha256": "7faab749ec126d0b8549fe83256e38d8ae03e4cd9c134c2599bdcb2c52827faf",
+        "response_sha256": "bf39d7ac0fb0dbc413636cb9f8b3cf4302af2f63c9924e3fab16e854975499ea",
+        "input_receipt_sha256": "7ab8e021a20d7f40924a6a3c3402a2624daa46377e4597c0ef53e4526cc4aefc",
+        "synthetic_never_training_labels": true,
+        "provided_frame_count": 8,
+        "wall_sec": 1.1847353782504797
+      },
+      "visible_end": {
+        "case_id": "visible_end",
+        "expected_red_square_frame_ids": [
+          7
+        ],
+        "actual_red_square_frame_ids": [
+          7
+        ],
+        "pass": true,
+        "raw_model_answer_sha256": "6c641736ea04cf7cbf744c7fa643fba0de8c86838094c43e839953ca4a9aa569",
+        "actual_input_contract": {
+          "actual_processed_pixels_per_frame": [
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536
+          ],
+          "actual_teacher_processor_grids": [
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            }
+          ],
+          "max_pixels_per_frame": 786432,
+          "max_sequence_length": 65536,
+          "input_sequence_length": 693,
+          "input_contract_sha256": "33f9ec589d418d4f2471873a7832d2618e0cce9e4778e4ed499422205006bbd6",
+          "processor_log_sha256": "8a9ed2f314e74408d41b07ef239467eac00c879bb27bec372da94060af859773",
+          "server_response_sha256": "d28bfb5c20ca1fc16c54a0a7128798af172b91228557cbc9d42cd6429613b3e7"
+        },
+        "request_sha256": "7faab749ec126d0b8549fe83256e38d8ae03e4cd9c134c2599bdcb2c52827faf",
+        "response_sha256": "d28bfb5c20ca1fc16c54a0a7128798af172b91228557cbc9d42cd6429613b3e7",
+        "input_receipt_sha256": "0355684a52baed1eb7e36182e371be4791a63f9b20fd0107889bd410bddd446f",
+        "synthetic_never_training_labels": true,
+        "provided_frame_count": 8,
+        "wall_sec": 1.1936152260750532
+      },
+      "visible_middle": {
+        "case_id": "visible_middle",
+        "expected_red_square_frame_ids": [
+          4
+        ],
+        "actual_red_square_frame_ids": [
+          4
+        ],
+        "pass": true,
+        "raw_model_answer_sha256": "6dbae702132275ca77a4726f55927e53eb27d261422e3875ff01693a9fa0887f",
+        "actual_input_contract": {
+          "actual_processed_pixels_per_frame": [
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536
+          ],
+          "actual_teacher_processor_grids": [
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            }
+          ],
+          "max_pixels_per_frame": 786432,
+          "max_sequence_length": 65536,
+          "input_sequence_length": 693,
+          "input_contract_sha256": "65ac7e0cbeb84bbfd699f8256c138ca19a0fa3a7e523e7bc074e85867f926e21",
+          "processor_log_sha256": "3d3579f59cc8058bb665cbb1e0153f86ae975390af465b94a8b980ac616ca20e",
+          "server_response_sha256": "09170655ebf7681d14b00fdc9092a0a5c19830de9170eb83d690300ae2a2f2b7"
+        },
+        "request_sha256": "365f5a1bb3b9db50fc98287d643cc48ee5a7fb20679b3556cec6edebf934e615",
+        "response_sha256": "09170655ebf7681d14b00fdc9092a0a5c19830de9170eb83d690300ae2a2f2b7",
+        "input_receipt_sha256": "2dc7311afeafbe624cbbfe4cde6ebc1a09c78d51405ee5b1dc76500de9489bb3",
+        "synthetic_never_training_labels": true,
+        "provided_frame_count": 8,
+        "wall_sec": 1.352468341588974
+      },
+      "visible_start": {
+        "case_id": "visible_start",
+        "expected_red_square_frame_ids": [
+          0
+        ],
+        "actual_red_square_frame_ids": [
+          0
+        ],
+        "pass": true,
+        "raw_model_answer_sha256": "934e3306db54f15c887a8d17f14340ce5adac3d043349cd7f62fe2ff4ddfa42e",
+        "actual_input_contract": {
+          "actual_processed_pixels_per_frame": [
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536,
+            65536
+          ],
+          "actual_teacher_processor_grids": [
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            },
+            {
+              "width": 256,
+              "height": 256,
+              "tensor_copies": 1,
+              "pixels": 65536
+            }
+          ],
+          "max_pixels_per_frame": 786432,
+          "max_sequence_length": 65536,
+          "input_sequence_length": 693,
+          "input_contract_sha256": "934f88f79b6c7b9a06a45cc0f12e9e02035abb46bda94d8ea8024ebc6e9d0344",
+          "processor_log_sha256": "1f0330c1e9768671f57e8f2bd1a4d22ad551196da5f66737adb2b3f2c7e8a379",
+          "server_response_sha256": "d9ec05a0072930b9694bdc5e82743af0e0cb24a335c25a906d30441558bf44ca"
+        },
+        "request_sha256": "f24cfb756a1497a9b576bd2956fd0831959489c30a0414329e66b55d3d1c7733",
+        "response_sha256": "d9ec05a0072930b9694bdc5e82743af0e0cb24a335c25a906d30441558bf44ca",
+        "input_receipt_sha256": "35ec418544d34528ee734d538f449fbaae5e5a5bbb207c4dc8c6230b14f0b4cf",
+        "synthetic_never_training_labels": true,
+        "provided_frame_count": 8,
+        "wall_sec": 1.2835636539384723
+      }
+    },
+    "artifact_activity": {
+      "visual_probe_01": {
+        "cases/64frame_same_images_reversed/case_result.json": {
+          "bytes": 9284,
+          "mtime_ns": 1791437993139059660
+        },
+        "cases/64frame_same_images_reversed/generation_schema.json": {
+          "bytes": 1173,
+          "mtime_ns": 1791437985262978545
+        },
+        "cases/64frame_same_images_reversed/http/http_receipt.json": {
+          "bytes": 417,
+          "mtime_ns": 1791437993067058925
+        },
+        "cases/64frame_same_images_reversed/http/request.json": {
+          "bytes": 75022,
+          "mtime_ns": 1791437985338979333
+        },
+        "cases/64frame_same_images_reversed/input_contract.json": {
+          "bytes": 8483,
+          "mtime_ns": 1791437993135059618
+        },
+        "cases/64frame_same_images_reversed/processor.log": {
+          "bytes": 183621,
+          "mtime_ns": 1791437993071058964
+        },
+        "cases/64frame_same_images_reversed/runtime_grammar_validation.json": {
+          "bytes": 493,
+          "mtime_ns": 1791437993135059618
+        },
+        "cases/64frame_same_images_reversed/server_response.json": {
+          "bytes": 10067,
+          "mtime_ns": 1791437993071058964
+        },
+        "cases/64frame_same_images_reversed/synthetic_input.json": {
+          "bytes": 35773,
+          "mtime_ns": 1791437985262978545
+        },
+        "cases/64frame_tail/case_result.json": {
+          "bytes": 9270,
+          "mtime_ns": 1791437985126977135
+        },
+        "cases/64frame_tail/generation_schema.json": {
+          "bytes": 1173,
+          "mtime_ns": 1791437978066903430
+        },
+        "cases/64frame_tail/http/http_receipt.json": {
+          "bytes": 417,
+          "mtime_ns": 1791437985054976389
+        },
+        "cases/64frame_tail/http/request.json": {
+          "bytes": 75022,
+          "mtime_ns": 1791437978142904228
+        },
+        "cases/64frame_tail/input_contract.json": {
+          "bytes": 8483,
+          "mtime_ns": 1791437985122977094
+        },
+        "cases/64frame_tail/processor.log": {
+          "bytes": 180647,
+          "mtime_ns": 1791437985058976431
+        },
+        "cases/64frame_tail/runtime_grammar_validation.json": {
+          "bytes": 493,
+          "mtime_ns": 1791437985118977053
+        },
+        "cases/64frame_tail/server_response.json": {
+          "bytes": 10049,
+          "mtime_ns": 1791437985058976431
+        },
+        "cases/64frame_tail/synthetic_input.json": {
+          "bytes": 34718,
+          "mtime_ns": 1791437978066903430
+        },
+        "cases/changed_image_none/case_result.json": {
+          "bytes": 2143,
+          "mtime_ns": 1791437975254873810
+        },
+        "cases/changed_image_none/generation_schema.json": {
+          "bytes": 390,
+          "mtime_ns": 1791437974074861339
+        },
+        "cases/changed_image_none/http/http_receipt.json": {
+          "bytes": 417,
+          "mtime_ns": 1791437975174872966
+        },
+        "cases/changed_image_none/http/request.json": {
+          "bytes": 10194,
+          "mtime_ns": 1791437974086861465
+        },
+        "cases/changed_image_none/input_contract.json": {
+          "bytes": 2098,
+          "mtime_ns": 1791437975254873810
+        },
+        "cases/changed_image_none/processor.log": {
+          "bytes": 41096,
+          "mtime_ns": 1791437975174872966
+        },
+        "cases/changed_image_none/runtime_grammar_validation.json": {
+          "bytes": 493,
+          "mtime_ns": 1791437975250873768
+        },
+        "cases/changed_image_none/server_response.json": {
+          "bytes": 5835,
+          "mtime_ns": 1791437975174872966
+        },
+        "cases/changed_image_none/synthetic_input.json": {
+          "bytes": 4968,
+          "mtime_ns": 1791437974074861339
+        },
+        "cases/changed_one_image_position/case_result.json": {
+          "bytes": 2183,
+          "mtime_ns": 1791437977930902001
+        },
+        "cases/changed_one_image_position/generation_schema.json": {
+          "bytes": 390,
+          "mtime_ns": 1791437976506887016
+        },
+        "cases/changed_one_image_position/http/http_receipt.json": {
+          "bytes": 417,
+          "mtime_ns": 1791437977866901328
+        },
+        "cases/changed_one_image_position/http/request.json": {
+          "bytes": 10274,
+          "mtime_ns": 1791437976514887099
+        },
+        "cases/changed_one_image_position/input_contract.json": {
+          "bytes": 2098,
+          "mtime_ns": 1791437977926901959
+        },
+        "cases/changed_one_image_position/processor.log": {
+          "bytes": 46576,
+          "mtime_ns": 1791437977866901328
+        },
+        "cases/changed_one_image_position/runtime_grammar_validation.json": {
+          "bytes": 493,
+          "mtime_ns": 1791437977926901959
+        },
+        "cases/changed_one_image_position/server_response.json": {
+          "bytes": 5873,
+          "mtime_ns": 1791437977866901328
+        },
+        "cases/changed_one_image_position/synthetic_input.json": {
+          "bytes": 5086,
+          "mtime_ns": 1791437976502886974
+        },
+        "cases/same_start_images_reversed/case_result.json": {
+          "bytes": 2169,
+          "mtime_ns": 1791437976474886678
+        },
+        "cases/same_start_images_reversed/generation_schema.json": {
+          "bytes": 390,
+          "mtime_ns": 1791437975286874148
+        },
+        "cases/same_start_images_reversed/http/http_receipt.json": {
+          "bytes": 417,
+          "mtime_ns": 1791437976410886004
+        },
+        "cases/same_start_images_reversed/http/request.json": {
+          "bytes": 10234,
+          "mtime_ns": 1791437975298874275
+        },
+        "cases/same_start_images_reversed/input_contract.json": {
+          "bytes": 2098,
+          "mtime_ns": 1791437976470886636
+        },
+        "cases/same_start_images_reversed/processor.log": {
+          "bytes": 42218,
+          "mtime_ns": 1791437976410886004
+        },
+        "cases/same_start_images_reversed/runtime_grammar_validation.json": {
+          "bytes": 493,
+          "mtime_ns": 1791437976470886636
+        },
+        "cases/same_start_images_reversed/server_response.json": {
+          "bytes": 5865,
+          "mtime_ns": 1791437976410886004
+        },
+        "cases/same_start_images_reversed/synthetic_input.json": {
+          "bytes": 5070,
+          "mtime_ns": 1791437975286874148
+        },
+        "cases/visible_end/case_result.json": {
+          "bytes": 2154,
+          "mtime_ns": 1791437974042861000
+        },
+        "cases/visible_end/generation_schema.json": {
+          "bytes": 390,
+          "mtime_ns": 1791437972850848371
+        },
+        "cases/visible_end/http/http_receipt.json": {
+          "bytes": 417,
+          "mtime_ns": 1791437973978860323
+        },
+        "cases/visible_end/http/request.json": {
+          "bytes": 10234,
+          "mtime_ns": 1791437972858848456
+        },
+        "cases/visible_end/input_contract.json": {
+          "bytes": 2098,
+          "mtime_ns": 1791437974042861000
+        },
+        "cases/visible_end/processor.log": {
+          "bytes": 42218,
+          "mtime_ns": 1791437973978860323
+        },
+        "cases/visible_end/runtime_grammar_validation.json": {
+          "bytes": 493,
+          "mtime_ns": 1791437974042861000
+        },
+        "cases/visible_end/server_response.json": {
+          "bytes": 5863,
+          "mtime_ns": 1791437973978860323
+        },
+        "cases/visible_end/synthetic_input.json": {
+          "bytes": 4920,
+          "mtime_ns": 1791437972850848371
+        },
+        "cases/visible_middle/case_result.json": {
+          "bytes": 2156,
+          "mtime_ns": 1791437972818848032
+        },
+        "cases/visible_middle/generation_schema.json": {
+          "bytes": 390,
+          "mtime_ns": 1791437971466833674
+        },
+        "cases/visible_middle/http/http_receipt.json": {
+          "bytes": 417,
+          "mtime_ns": 1791437972754847353
+        },
+        "cases/visible_middle/http/request.json": {
+          "bytes": 10234,
+          "mtime_ns": 1791437971474833759
+        },
+        "cases/visible_middle/input_contract.json": {
+          "bytes": 2098,
+          "mtime_ns": 1791437972818848032
+        },
+        "cases/visible_middle/processor.log": {
+          "bytes": 42900,
+          "mtime_ns": 1791437972754847353
+        },
+        "cases/visible_middle/runtime_grammar_validation.json": {
+          "bytes": 493,
+          "mtime_ns": 1791437972818848032
+        },
+        "cases/visible_middle/server_response.json": {
+          "bytes": 5859,
+          "mtime_ns": 1791437972754847353
+        },
+        "cases/visible_middle/synthetic_input.json": {
+          "bytes": 4950,
+          "mtime_ns": 1791437971466833674
+        },
+        "cases/visible_start/case_result.json": {
+          "bytes": 2156,
+          "mtime_ns": 1791437971434833334
+        },
+        "cases/visible_start/generation_schema.json": {
+          "bytes": 390,
+          "mtime_ns": 1791437970150819668
+        },
+        "cases/visible_start/http/http_receipt.json": {
+          "bytes": 417,
+          "mtime_ns": 1791437971370832653
+        },
+        "cases/visible_start/http/request.json": {
+          "bytes": 10234,
+          "mtime_ns": 1791437970162819796
+        },
+        "cases/visible_start/input_contract.json": {
+          "bytes": 2098,
+          "mtime_ns": 1791437971430833291
+        },
+        "cases/visible_start/processor.log": {
+          "bytes": 38812,
+          "mtime_ns": 1791437971370832653
+        },
+        "cases/visible_start/runtime_grammar_validation.json": {
+          "bytes": 493,
+          "mtime_ns": 1791437971430833291
+        },
+        "cases/visible_start/server_response.json": {
+          "bytes": 5863,
+          "mtime_ns": 1791437971370832653
+        },
+        "cases/visible_start/synthetic_input.json": {
+          "bytes": 4940,
+          "mtime_ns": 1791437970150819668
+        },
+        "completion.json": {
+          "bytes": 38648,
+          "mtime_ns": 1791437993147059741
+        },
+        "server_session/server.log": {
+          "bytes": 1675793,
+          "mtime_ns": 1791437993151059783
+        },
+        "server_session/server_start_receipt.json": {
+          "bytes": 1187,
+          "mtime_ns": 1791437962010732286
+        },
+        "server_stop_receipt.json": {
+          "bytes": 138,
+          "mtime_ns": 1791437993559063952
+        }
+      },
+      "teacher_01": {
+        "job_registration.json": {
+          "bytes": 1444,
+          "mtime_ns": 1791438093319997968
+        },
+        "models_check_489578/http_receipt.json": {
+          "bytes": 345,
+          "mtime_ns": 1791438101340066142
+        },
+        "probe_selection.json": {
+          "bytes": 38863,
+          "mtime_ns": 1791438105824103842
+        },
+        "server_sessions/probe/server.log": {
+          "bytes": 3858938,
+          "mtime_ns": 1791438180272688515
+        },
+        "server_sessions/probe/server_models.json": {
+          "bytes": 1833,
+          "mtime_ns": 1791438101340066142
+        },
+        "server_sessions/probe/server_start_receipt.json": {
+          "bytes": 1189,
+          "mtime_ns": 1791438093319997968
+        },
+        "server_sessions/probe/server_stop_receipt.json": {
+          "bytes": 146,
+          "mtime_ns": 1791438180776692222
+        },
+        "teacher_admission.json": {
+          "bytes": 3026,
+          "mtime_ns": 1791438180260688427
+        },
+        "teacher_probe_completion.json": {
+          "bytes": 1044,
+          "mtime_ns": 1791438180260688427
+        },
+        "windows/complete_087af79e4b421be308d6cf6f/annotation.json": {
+          "bytes": 58617,
+          "mtime_ns": 1791438141000389547
+        },
+        "windows/complete_087af79e4b421be308d6cf6f/boundary_table.json": {
+          "bytes": 35955,
+          "mtime_ns": 1791438140996389515
+        },
+        "windows/complete_087af79e4b421be308d6cf6f/decode_receipt.json": {
+          "bytes": 36342,
+          "mtime_ns": 1791438114640177106
+        },
+        "windows/complete_087af79e4b421be308d6cf6f/done.json": {
+          "bytes": 1924,
+          "mtime_ns": 1791438141076390144
+        },
+        "windows/complete_087af79e4b421be308d6cf6f/generation_relation_contract.json": {
+          "bytes": 710,
+          "mtime_ns": 1791438114916179383
+        },
+        "windows/complete_087af79e4b421be308d6cf6f/generation_schema.json": {
+          "bytes": 15752,
+          "mtime_ns": 1791438114916179383
+        },
+        "windows/complete_087af79e4b421be308d6cf6f/http/http_receipt.json": {
+          "bytes": 417,
+          "mtime_ns": 1791438140572386173
+        },
+        "windows/complete_087af79e4b421be308d6cf6f/http/request.json": {
+          "bytes": 19974467,
+          "mtime_ns": 1791438115576184817
+        },
+        "windows/complete_087af79e4b421be308d6cf6f/input_contract.json": {
+          "bytes": 9294,
+          "mtime_ns": 1791438140980389388
+        },
+        "windows/complete_087af79e4b421be308d6cf6f/model_decision.json": {
+          "bytes": 873,
+          "mtime_ns": 1791438140996389515
+        },
+        "windows/complete_087af79e4b421be308d6cf6f/processor.log": {
+          "bytes": 1032239,
+          "mtime_ns": 1791438140580386236
+        },
+        "windows/complete_087af79e4b421be308d6cf6f/runtime_grammar_validation.json": {
+          "bytes": 492,
+          "mtime_ns": 1791438140920388916
+        },
+        "windows/complete_087af79e4b421be308d6cf6f/server_response.json": {
+          "bytes": 685185,
+          "mtime_ns": 1791438140580386236
+        },
+        "windows/complete_087af79e4b421be308d6cf6f/validated_record.json": {
+          "bytes": 75255,
+          "mtime_ns": 1791438141016389672
+        },
+        "windows/complete_45666feb9bbc3d854e9d05c1/decode_receipt.json": {
+          "bytes": 36220,
+          "mtime_ns": 1791438349161768304
+        },
+        "windows/complete_45666feb9bbc3d854e9d05c1/failure.json": {
+          "bytes": 303,
+          "mtime_ns": 1791438376137914230
+        },
+        "windows/complete_45666feb9bbc3d854e9d05c1/generation_relation_contract.json": {
+          "bytes": 710,
+          "mtime_ns": 1791438349429769785
+        },
+        "windows/complete_45666feb9bbc3d854e9d05c1/generation_schema.json": {
+          "bytes": 15620,
+          "mtime_ns": 1791438349429769785
+        },
+        "windows/complete_45666feb9bbc3d854e9d05c1/http/http_receipt.json": {
+          "bytes": 417,
+          "mtime_ns": 1791438375717912007
+        },
+        "windows/complete_45666feb9bbc3d854e9d05c1/http/request.json": {
+          "bytes": 15126309,
+          "mtime_ns": 1791438349977772814
+        },
+        "windows/complete_45666feb9bbc3d854e9d05c1/input_contract.json": {
+          "bytes": 9294,
+          "mtime_ns": 1791438376125914167
+        },
+        "windows/complete_45666feb9bbc3d854e9d05c1/processor.log": {
+          "bytes": 1118501,
+          "mtime_ns": 1791438375729912070
+        },
+        "windows/complete_45666feb9bbc3d854e9d05c1/runtime_grammar_validation.json": {
+          "bytes": 492,
+          "mtime_ns": 1791438376077913912
+        },
+        "windows/complete_45666feb9bbc3d854e9d05c1/server_response.json": {
+          "bytes": 684595,
+          "mtime_ns": 1791438375729912070
+        },
+        "windows/complete_8ab21c80e0bff423c3ce016b/annotation.json": {
+          "bytes": 61346,
+          "mtime_ns": 1791438180184687868
+        },
+        "windows/complete_8ab21c80e0bff423c3ce016b/boundary_table.json": {
+          "bytes": 29450,
+          "mtime_ns": 1791438180180687838
+        },
+        "windows/complete_8ab21c80e0bff423c3ce016b/decode_receipt.json": {
+          "bytes": 35789,
+          "mtime_ns": 1791438150176461236
+        },
+        "windows/complete_8ab21c80e0bff423c3ce016b/done.json": {
+          "bytes": 1923,
+          "mtime_ns": 1791438180260688427
+        },
+        "windows/complete_8ab21c80e0bff423c3ce016b/generation_relation_contract.json": {
+          "bytes": 710,
+          "mtime_ns": 1791438150444463311
+        },
+        "windows/complete_8ab21c80e0bff423c3ce016b/generation_schema.json": {
+          "bytes": 15620,
+          "mtime_ns": 1791438150444463311
+        },
+        "windows/complete_8ab21c80e0bff423c3ce016b/http/http_receipt.json": {
+          "bytes": 417,
+          "mtime_ns": 1791438179744684629
+        },
+        "windows/complete_8ab21c80e0bff423c3ce016b/http/request.json": {
+          "bytes": 20225665,
+          "mtime_ns": 1791438151104468423
+        },
+        "windows/complete_8ab21c80e0bff423c3ce016b/input_contract.json": {
+          "bytes": 9294,
+          "mtime_ns": 1791438180160687691
+        },
+        "windows/complete_8ab21c80e0bff423c3ce016b/model_decision.json": {
+          "bytes": 1047,
+          "mtime_ns": 1791438180180687838
+        },
+        "windows/complete_8ab21c80e0bff423c3ce016b/processor.log": {
+          "bytes": 1769241,
+          "mtime_ns": 1791438179752684687
+        },
+        "windows/complete_8ab21c80e0bff423c3ce016b/runtime_grammar_validation.json": {
+          "bytes": 492,
+          "mtime_ns": 1791438180104687279
+        },
+        "windows/complete_8ab21c80e0bff423c3ce016b/server_response.json": {
+          "bytes": 684403,
+          "mtime_ns": 1791438179752684687
+        },
+        "windows/complete_8ab21c80e0bff423c3ce016b/validated_record.json": {
+          "bytes": 80651,
+          "mtime_ns": 1791438180200687985
+        }
+      },
+      "pilot_01": {
+        "completion.json": {
+          "bytes": 260,
+          "mtime_ns": 1791438376137914230
+        },
+        "server.log": {
+          "bytes": 2175879,
+          "mtime_ns": 1791438376141914251
+        },
+        "server_start_receipt.json": {
+          "bytes": 1165,
+          "mtime_ns": 1791438333621681248
+        },
+        "server_stop_receipt.json": {
+          "bytes": 138,
+          "mtime_ns": 1791438376501916155
+        }
+      },
+      "student_01": {},
+      "nontest_01": {},
+      "rematch_01": {}
+    },
+    "production_stage_receipts": {
+      "nontest_01": {},
+      "rematch_01": {}
+    }
+  }
+}

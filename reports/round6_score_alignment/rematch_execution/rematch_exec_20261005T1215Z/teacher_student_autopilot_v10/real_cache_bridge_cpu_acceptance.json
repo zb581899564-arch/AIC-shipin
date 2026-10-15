@@ -1,0 +1,76 @@
+{
+  "status": "PASS_ACTUAL_B2_COMPLETE_CACHE_BRIDGE_CPU",
+  "utc": "2026-10-08T05:21:15.014525+00:00",
+  "actual_production_function": "controller.freeze_z_cache",
+  "production_controller_sha256": "d2379d0060a46fe13a609b7c5aa0122ffb68addad16a4e46da36bbf7513bd431",
+  "original_controller_sha256": "06ce667146c678029cb1ce083f320f0e6ffc50951f87fb7949f5d9ec7f5f0ced",
+  "original_actual_failure_reproduced": true,
+  "same_actual_B2_final_JSON_stage_key_used": true,
+  "actual_cache_models_input_and_all_artifact_SHA_verified": true,
+  "only_output_writes_isolated_into_memory": true,
+  "receipts": {
+    "nontest.json": {
+      "status": "PASS_FROZEN_B2_SOURCE_FIELD_CACHE",
+      "cache": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/nontest_01",
+      "files": {
+        "field_frames.jsonl": "c4b53cb7d95442ecaa4c8fa6b82b027fd5779370230a2b97f8c8796526386aed",
+        "field_shots.jsonl": "cf4a873053bd2baf24343043eb36f835a5853ce232b409489915329f161c0375",
+        "anchor_requests.jsonl": "f630e725ddff54c590a4062c39b98c1b7233773b8c0a391f271378ac157283a7",
+        "anchor_output.jsonl": "1ffd45d72c723ec71f973d6b24f5e72d052ddf3f6e3b51150a2e68bacfc1532d",
+        "schedule.stage.json": "eae86e5278d4ed243ffb6c2fdd67ac0f955065984f76cd2059f4638aed3818a3",
+        "spatial.stage.json": "af197a63aab3518742132efaabe5d56d33756dd1c1c9cdb2defd6cca7e70d5d8",
+        "package.stage.json": "cf487cf020f2a07f2d7af9101f898894cefdb8532952da350b945741955cfbb1",
+        "independent_validation.json": "bf97dc0b3ad887de9de36d4a3ddcb423553ae1571ec38980bfe1b13b2d02786c"
+      },
+      "B2_completion_sha256": "10363fb09a4a2e2b82da4dc28bfcb2b14fced316a5eff2e230f880809b508a0d",
+      "B2_source_lock_sha256": "52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db",
+      "B2_config_sha256": "cb6dc9e877d64d048bb652556f332cfc4b378d731d3526edcc25600714a47d36",
+      "manifest_sha256": "ba34a284183e8a079054ffe811d7ec096e6b47c94e6edf812a37fd11b92d8dd7",
+      "clock_registry_sha256": "7f57785312c94b1658cb002b2432d09b318ae2943e3297a0c45536d1bd8cd3ea",
+      "model_receipt_sha256": "ab3e30b18dc54ceb7cb90b07194eff30449db75653483da5b213807137d8da70",
+      "expected_base_sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+      "base_parameters": 8767123696,
+      "B2_measured_base_receipt_sha256": "d71d74607cb784f661af3b43b168a9e3770120633686bd759aa7717015876700",
+      "base_hash_measured_in_this_scope": false,
+      "historical_cache_binding_sha256": "caa903e0b59c6ee2aadfc5fc5f7bfb46cb48e1382e08e8fc17e21b8d0eac303c",
+      "time_adapter_enabled": false,
+      "temporal_reuse_permitted": false,
+      "utc": "2026-10-08T05:21:14.996914+00:00"
+    },
+    "rematch.json": {
+      "status": "PASS_FROZEN_B2_SOURCE_FIELD_CACHE",
+      "cache": "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/rematch_01",
+      "files": {
+        "field_frames.jsonl": "17ba37aadc4cf705e1ff95a78a58d8befcab9e34f7132ef0775f1ed1df0d8bca",
+        "field_shots.jsonl": "8e81df10c685527145069cd9c65316ab6341c9da7d6e39bb282ed6c60ce12f1e",
+        "anchor_requests.jsonl": "9cb7c4e36597dc8ae723ac3b686b2c3b1f04d5982503478fdf19ee72b18c4798",
+        "anchor_output.jsonl": "8f83cd967d7d1f95243ac4ae3cddc7fdb78abb3d4842a78f81f6b187fb1562ab",
+        "schedule.stage.json": "4c5ad1daf0817e252eca7dc484eb627f9f6ce3933afdd68484883834f32d4603",
+        "spatial.stage.json": "d71d74607cb784f661af3b43b168a9e3770120633686bd759aa7717015876700",
+        "package.stage.json": "4cceef6a2d6a0fc572ee5c8844bc6eee6f9e88c94e194731e76c05438a8d45bc",
+        "independent_validation.json": "db195ac4f821f4313babe803020014295de1faf9443604a5f6657663a21f65ea"
+      },
+      "B2_completion_sha256": "10363fb09a4a2e2b82da4dc28bfcb2b14fced316a5eff2e230f880809b508a0d",
+      "B2_source_lock_sha256": "52363b5a6f452ac01a55474eacf6529b80e7c4e4ec3e99868f7d91162fae27db",
+      "B2_config_sha256": "cb6dc9e877d64d048bb652556f332cfc4b378d731d3526edcc25600714a47d36",
+      "manifest_sha256": "ceb91ee9434ce3de6a55abf727e613b83368b547d3be3d1e71b46414c2f019f8",
+      "clock_registry_sha256": "1058aba02e5e959bc8e4842cbde0eadced192a8201d5c833ae50a7c0aac07909",
+      "model_receipt_sha256": "ab3e30b18dc54ceb7cb90b07194eff30449db75653483da5b213807137d8da70",
+      "expected_base_sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+      "base_parameters": 8767123696,
+      "B2_measured_base_receipt_sha256": "d71d74607cb784f661af3b43b168a9e3770120633686bd759aa7717015876700",
+      "base_hash_measured_in_this_scope": true,
+      "historical_cache_binding_sha256": null,
+      "time_adapter_enabled": false,
+      "temporal_reuse_permitted": false,
+      "utc": "2026-10-08T05:21:14.996970+00:00"
+    }
+  },
+  "GPU_started": false,
+  "old_data_changed": false,
+  "baseline_evidence": {
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v8/completion.json": "843939f0fd3863a8c8fed5255f727682697c112cda947a1d4771936cec320a5c",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/teacher_student_autopilot_v8/source_lock.json": "f67587ae9446a678a888aecc33bdaa609bfafc84d9005fe08fecc97d985b69f6",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/b_score_aligned_package_v4/completion.json": "10363fb09a4a2e2b82da4dc28bfcb2b14fced316a5eff2e230f880809b508a0d"
+  }
+}

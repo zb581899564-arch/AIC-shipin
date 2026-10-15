@@ -1,0 +1,40 @@
+{
+  "status": "FIELD_COMPARISON_PASS_PENDING_MAIN_FACT_REVIEW",
+  "utc": "2026-10-10T14:52:08.093037+00:00",
+  "actual_images_delivered": 20,
+  "group_writes": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "tool_issues": [],
+  "schema_issues": [],
+  "field_differences": [],
+  "bound_rows": 20,
+  "all_frozen_semantic_fields_match": true,
+  "program_bound_facts_sha256": "b3b03b49db1717d2ba9c989c3c5c3f97c345138dbab2316da33e7cbf680e784b",
+  "freeze_sha256": "b5836222ae80445d9a40fcb0b58e5cbc2710238938d7c5bc7e819f8dac31bfe6",
+  "stream_sha256": "9da2988d4ebf22901e7a5c8a2489ae97ed6a4b3e24bae07fdc43fda5e36a1d7d",
+  "terminal_sha256": "36cfc58215d21ce82597e9e6e986487918e85a89b2e84eddad5ff1563ed5da70",
+  "actual_result_status": "SUCCESS",
+  "actual_result_usage": {
+    "input_tokens": 140880,
+    "output_tokens": 14167,
+    "thinking_tokens": 8648,
+    "cache_read_tokens": 1317193,
+    "total_tokens": 155047
+  },
+  "cash_cost": "UNKNOWN_NOT_ZERO",
+  "new_CLI_calls": 1,
+  "total_CLI_after": 23,
+  "global_CLI_cap": 36,
+  "new_training": 0,
+  "new_426": 0,
+  "new_Pro": 0,
+  "full_window_admitted": false,
+  "human_gold": false,
+  "old_v3_STOP_preserved": true,
+  "automatic_retry": false
+}

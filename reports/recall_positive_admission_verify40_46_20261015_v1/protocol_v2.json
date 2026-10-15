@@ -1,0 +1,101 @@
+{
+  "schema": "POSITIVE_ADMISSION_RECALL_PILOT_V2_NOVEL_NATIVE_PARTS",
+  "registered_at_utc": "2026-10-15T04:17:27.5347156+00:00",
+  "candidate": "OLD_EXPLICIT_KEEP_PLUS_POSITIVE_EVIDENCE_NEW_ADMISSION",
+  "baseline": "TEMPORAL_VERIFY_USER40.46",
+  "baseline_zip_sha256": "86593725c6bad919dc0d342fe98ad65e489a13a6e492da5de3afd247a3226543",
+  "model_parameters": 8782459120,
+  "optimizer_updates": 0,
+  "new_models_downloaded": 0,
+  "reference_scope": "EVENT_TEXT_GUIDED_HUMAN_SUMMARY_PROXY_NO_QUERY_OR_LABELS_TO_MODEL",
+  "reference_limitations": [
+    "Human summary selection is not dense generic highlight or explicit ORDINARY ground truth",
+    "Known identity and byte exclusion cannot establish hidden aliases, subclips or pretraining separation",
+    "Small paired proxy gains do not establish official score improvement"
+  ],
+  "single_factor": {
+    "proposal": "All old accepted overlap B0 segments with old conservative VERIFY explicit KEEP",
+    "new_admission": "One strict positive-evidence VERIFY of every native part outside the protected baseline, with unchanged original context and the existing model; an already selected baseline event cannot justify a new surrounding part",
+    "addition": "Only successful canonical new KEEP; UNKNOWN and DROP do not add",
+    "geometry": "Exact original candidate endpoints; no boundary modification or padding",
+    "cross_view_vote": "NONE",
+    "baseline": "All original frames and boxes remain protected; no re-verification or deletion of baseline",
+    "no_effect_omission": "May omit candidates whose complete original native frame contribution is already a subset of baseline; preserve exact set proof, do not use human reference values",
+    "novel_parts": "Compute complete original-candidate native frame runs minus baseline frames without reference labels; include exact local time ranges and visible native sample identities in the prompt; if any new part lacks sufficient shown evidence, decline addition using UNKNOWN",
+    "original_interval_unchanged_after_KEEP": true
+  },
+  "native_frames": 64,
+  "max_input_tokens": 16384,
+  "max_output_tokens": 256,
+  "development": {
+    "prior_root": "/home/inspur/aic_video_work/recall_expansion_verify40_46_20261014_v1",
+    "prior_group": "dev",
+    "source_names": [
+      "v_vfJnUQ9Tax0",
+      "v_8tlLBffNjf8",
+      "v__CMIO5R_OGA",
+      "v_voaGOm-rl9Y"
+    ],
+    "all_sources_previously_exposed": true,
+    "complete_old_B0_count": 26,
+    "complete_old_VERIFY_count": 37,
+    "new_admission_call_count_from_output_only_inventory": 10,
+    "new_candidate_counts_by_source": [
+      2,
+      0,
+      2,
+      6
+    ],
+    "maximum_new_GPU_seconds": 1200,
+    "new_download_or_decode_or_vision_processor_calls": 0,
+    "old_model_or_QA_operations_repeated": 0
+  },
+  "confirmation": {
+    "sources": 4,
+    "first_fresh_confirmation_after_development_pass_and_selection_freeze_only": true,
+    "source_order": "Continue prior source-hash order, exclude all previous media/exposed/known training and test identities and bytes; separate source registration required before new media or model",
+    "before_dev_pass_actual_new_media_or_calls": 0,
+    "same_fixed_quality_gates": true
+  },
+  "quality_gates": {
+    "full_group_denominator": 4,
+    "macro_paired_all_rater_duration_F1_delta_min": "0",
+    "per_source_F1_delta_min": "-1/100",
+    "macro_all_rater_recall_delta_min": "1/100",
+    "macro_all_rater_precision_delta_min": "0",
+    "per_rater_baseline_recall_and_frame_retention": "no loss",
+    "minimum_sources_with_real_new_native_frames": 2,
+    "invalid_or_unknown_execution": 0,
+    "new_candidate_UNKNOWN_or_DROP_must_not_add": true,
+    "engineering_failure_is_not_EMPTY_or_UNKNOWN": true,
+    "no_threshold_search_or_confirm_retuning": true,
+    "fixed_40_KEEP_deletion": 0,
+    "fixed_40_ORDINARY_addition": 0,
+    "UNKNOWN_and_old_reference_quality_FAILED_unchanged": true
+  },
+  "independent_QA": {
+    "adopt_completed_original_vision_cache_and_first_QA": true,
+    "new_prompt_token_input_QA_before_GPU": true,
+    "new_output_token_grammar_parser_native_QA_after_GPU": true,
+    "post_GPU_repeat_vision_processor_or_first_input_QA": false,
+    "input_code_and_adoption_bindings_frozen_before_unique_wrapper": true,
+    "all_raw_failures_success_and_unique_resource_fees_preserved": true
+  },
+  "production_requires": [
+    "PASS_DEVELOPMENT",
+    "FROZEN_SELECTION",
+    "PASS_FRESH_CONFIRMATION",
+    "PASS_FIXED40_FACT_VETO",
+    "NEW_PRODUCTION_SOURCE_INPUT_CODE_RESOURCE_ADMISSION"
+  ],
+  "production_before_required_passes": false,
+  "actual_online_improvement": "UNKNOWN",
+  "new_goal_or_automation": false,
+  "test_or_leaderboard_based_rule_selection": false,
+  "preexecution_design_review": {
+    "prior_protocol": "protocol.json",
+    "prior_protocol_ever_used_for_CPU_prepare_or_model": false,
+    "reason": "Independent review identified that an existing baseline highlight inside a longer proposed candidate must not endorse novel surrounding frames",
+    "old_scientific_gates_changed": false
+  }
+}

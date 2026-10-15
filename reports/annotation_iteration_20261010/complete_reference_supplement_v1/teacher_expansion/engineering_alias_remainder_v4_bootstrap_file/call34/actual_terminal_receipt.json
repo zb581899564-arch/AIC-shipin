@@ -1,0 +1,102 @@
+{
+  "utc": "2026-10-10T23:28:10.358663+00:00",
+  "CLI": 34,
+  "terminal_sha256": "91792dbc3c82f71ed21ddc386a06429ef1850ff33f60de05cf863d811a3bdde7",
+  "raw_sha256": "888b5d71caf5c3f2e4caccd808ffc72049563faa0393730a97063dd899f3461d",
+  "audit_sha256": "2a30a65facdfab6ba2a4c1812befb60d109af7f1d3595c9c5ed63510c44744c2",
+  "actual_exit_code": 0,
+  "actual_wall_seconds": 1613.0160000000033,
+  "actual_result_status": "ERROR",
+  "actual_final_result_usage": {
+    "input_tokens": 987125,
+    "output_tokens": 66612,
+    "thinking_tokens": 35928,
+    "cache_read_tokens": 8693114,
+    "total_tokens": 1053737
+  },
+  "observed_DONE_agent_responses": 66,
+  "observed_DONE_tools": 149,
+  "observed_response_usage_field_sums": {
+    "input_tokens": 987125,
+    "output_tokens": 66612,
+    "thinking_tokens": 35928,
+    "cache_read_tokens": 8693114,
+    "total_tokens": 1053737
+  },
+  "usage_is_not_invoice": true,
+  "windows": [
+    {
+      "job_index": 17,
+      "status": "REJECTED_OR_INCOMPLETE_KEEP_RAW",
+      "bound_rows": 64,
+      "prior_native_facts_transferred": 32,
+      "new_native_frames_planned": 32,
+      "new_fact_groups_DONE": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "proposal_sha256": "a1c94f796931f1d5f23eb7adaca516583cfc31bec78db854e1e6a51ccd7c4d78"
+    },
+    {
+      "job_index": 18,
+      "status": "REJECTED_OR_INCOMPLETE_KEEP_RAW",
+      "bound_rows": 64,
+      "prior_native_facts_transferred": 0,
+      "new_native_frames_planned": 64,
+      "new_fact_groups_DONE": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "proposal_sha256": "da9af8275018004a8d5be996c073f47514ce86999fdae3bf447bac97c0f52a7c"
+    }
+  ],
+  "bootstrap_successful_complete": false,
+  "bootstrap_ack_complete": false,
+  "bootstrap_attempts": [
+    {
+      "conversation_id": "d22d9525-afc8-47a1-9e67-68402f1d141c",
+      "step_index": 2,
+      "state": "DONE",
+      "step_type": "tool",
+      "tool_name": "view_file",
+      "duration_seconds": 2.0105889,
+      "tool_info": {
+        "name": "view_file",
+        "parameters": {
+          "AbsolutePath": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v4_bootstrap_file\\call34\\bootstrap_instruction.txt"
+        },
+        "output": "213 lines, 37626 bytes"
+      }
+    }
+  ],
+  "same_index_read_count": 4,
+  "context_read_steps": {
+    "g:\\ai\\aic视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v3\\prior17\\prior32_facts.json": [
+      8
+    ]
+  },
+  "actual_tool_ERRORS": [],
+  "cash_cost": "UNKNOWN_NOT_ZERO",
+  "automatic_retry": false,
+  "training_admitted": false
+}

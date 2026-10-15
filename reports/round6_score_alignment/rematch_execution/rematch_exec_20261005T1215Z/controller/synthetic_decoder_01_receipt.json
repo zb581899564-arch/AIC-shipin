@@ -1,0 +1,433 @@
+{
+  "GPU_used": false,
+  "contest_media_read": false,
+  "decord_num_threads": 0,
+  "failed_cases": [],
+  "ffmpeg_sha256": "1f74a9d25a8680cac423418573842a37caf1eff4d109943003cee1a0d2733cff",
+  "ffprobe_sha256": "e2024d389cff86bac7b40180c02dfe3b48e1eca6e955ba195346681f6009b444",
+  "images_exported_or_displayed": false,
+  "inference_allowed": false,
+  "labels_read": false,
+  "models_run": false,
+  "pixels_may_be_decoded_internally": true,
+  "records": [
+    {
+      "audit": {
+        "cfr_tolerance_changed": false,
+        "contract_authority": "LOCAL_SOURCE_FRAME_IDENTITY_NOT_OFFICIAL_TIMESTAMP_ORIGIN_REQUIREMENT",
+        "decord_all_frame_binding_checked": true,
+        "decord_all_frame_timestamp_count": 60,
+        "decord_clock_mode": "RAW_AND_RELATIVE_EQUIVALENT_ZERO_ORIGIN",
+        "decord_ends_strictly_monotonic": true,
+        "decord_max_frame_duration_error_sec": 4.169146219889369e-05,
+        "decord_max_normalized_cfr_error_sec": 2.0869572957327165e-05,
+        "decord_max_raw_binding_error_sec": 5.91278075390278e-08,
+        "decord_max_relative_binding_error_sec": 5.91278075390278e-08,
+        "decord_probe_indices": [
+          0,
+          1,
+          2,
+          30,
+          57,
+          58,
+          59
+        ],
+        "decord_probes": {
+          "0": [
+            0.0,
+            0.03331249952316284
+          ],
+          "1": [
+            0.03331249952316284,
+            0.06668750196695328
+          ],
+          "2": [
+            0.06668750196695328,
+            0.10000000149011612
+          ],
+          "30": [
+            1.0,
+            1.0333125591278076
+          ],
+          "57": [
+            1.899999976158142,
+            1.9333125352859497
+          ],
+          "58": [
+            1.9333125352859497,
+            1.9666874408721924
+          ],
+          "59": [
+            1.9666874408721924,
+            2.0
+          ]
+        },
+        "decord_raw_binding_tolerance_sec": 6.25e-05,
+        "decord_raw_clock_frame_precision_resolvable": true,
+        "decord_relative_binding_tolerance_sec": 6.25e-05,
+        "decord_relative_clock_frame_precision_resolvable": true,
+        "decord_starts_strictly_monotonic": true,
+        "failures": [],
+        "max_normalized_cfr_error_sec": 2.0833333333358794e-05,
+        "media_rewritten": false,
+        "one_frame_tolerance_sec": 0.033334333333333334,
+        "origin_contract": "SOURCE_RELATIVE_ZERO_IS_SOURCE_FRAME_0_RAW_PTS_MINUS_FIRST_FRAME_PTS",
+        "pass": true,
+        "raw_first_pts_sec": 0.0,
+        "raw_pts_count": 60,
+        "raw_pts_numeric": true,
+        "raw_pts_strictly_monotonic": true,
+        "source_frame_to_legacy_relative_time": "source_relative_time = frame_index / registered_fps",
+        "source_frame_to_raw_pts": "raw_pts = raw_first_pts + source_relative_pts",
+        "source_relative_first_pts_sec": 0.0,
+        "stream_origin_binding_tolerance_sec": 6.25e-05,
+        "stream_start_metadata_known": true,
+        "stream_start_pts": 0,
+        "stream_start_pts_sec": 0.0,
+        "stream_start_time_sec": 0.0,
+        "stream_time_base": "1/16000"
+      },
+      "case": "cfr_zero",
+      "ffmpeg_command": [
+        "/home/inspur/anaconda3/envs/Andy/bin/ffmpeg",
+        "-nostdin",
+        "-n",
+        "-v",
+        "error",
+        "-f",
+        "lavfi",
+        "-i",
+        "color=c=black:s=64x64:r=30:d=2",
+        "-an",
+        "-c:v",
+        "libx264",
+        "-bf",
+        "0",
+        "-pix_fmt",
+        "yuv420p",
+        "-video_track_timescale",
+        "16000",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/baseline_pts_v3/synthetic_decoder_01/cfr_zero.mp4"
+      ],
+      "numeric_sha256": "46a3324015e11e7d390593f3d0c8c58a4f0985809f886ecd88831d3c06e9bdd7",
+      "pass": true,
+      "source_sha256": "07e4f86a5628e344113fa04013c7ed1b8a2df88cab81923f1453098a2ae647e5"
+    },
+    {
+      "audit": {
+        "cfr_tolerance_changed": false,
+        "contract_authority": "LOCAL_SOURCE_FRAME_IDENTITY_NOT_OFFICIAL_TIMESTAMP_ORIGIN_REQUIREMENT",
+        "decord_all_frame_binding_checked": true,
+        "decord_all_frame_timestamp_count": 60,
+        "decord_clock_mode": "SOURCE_RELATIVE_PTS",
+        "decord_ends_strictly_monotonic": true,
+        "decord_max_frame_duration_error_sec": 4.169146219889369e-05,
+        "decord_max_normalized_cfr_error_sec": 2.0869572957327165e-05,
+        "decord_max_raw_binding_error_sec": 0.0460000591278078,
+        "decord_max_relative_binding_error_sec": 5.9127807761072404e-08,
+        "decord_probe_indices": [
+          0,
+          1,
+          2,
+          30,
+          57,
+          58,
+          59
+        ],
+        "decord_probes": {
+          "0": [
+            0.0,
+            0.03331249952316284
+          ],
+          "1": [
+            0.03331249952316284,
+            0.06668750196695328
+          ],
+          "2": [
+            0.06668750196695328,
+            0.10000000149011612
+          ],
+          "30": [
+            1.0,
+            1.0333125591278076
+          ],
+          "57": [
+            1.899999976158142,
+            1.9333125352859497
+          ],
+          "58": [
+            1.9333125352859497,
+            1.9666874408721924
+          ],
+          "59": [
+            1.9666874408721924,
+            2.0
+          ]
+        },
+        "decord_raw_binding_tolerance_sec": 6.25e-05,
+        "decord_raw_clock_frame_precision_resolvable": true,
+        "decord_relative_binding_tolerance_sec": 6.25e-05,
+        "decord_relative_clock_frame_precision_resolvable": true,
+        "decord_starts_strictly_monotonic": true,
+        "failures": [],
+        "max_normalized_cfr_error_sec": 2.083333333358084e-05,
+        "media_rewritten": false,
+        "one_frame_tolerance_sec": 0.033334333333333334,
+        "origin_contract": "SOURCE_RELATIVE_ZERO_IS_SOURCE_FRAME_0_RAW_PTS_MINUS_FIRST_FRAME_PTS",
+        "pass": true,
+        "raw_first_pts_sec": 0.046,
+        "raw_pts_count": 60,
+        "raw_pts_numeric": true,
+        "raw_pts_strictly_monotonic": true,
+        "source_frame_to_legacy_relative_time": "source_relative_time = frame_index / registered_fps",
+        "source_frame_to_raw_pts": "raw_pts = raw_first_pts + source_relative_pts",
+        "source_relative_first_pts_sec": 0.0,
+        "stream_origin_binding_tolerance_sec": 6.25e-05,
+        "stream_start_metadata_known": true,
+        "stream_start_pts": 736,
+        "stream_start_pts_sec": 0.046,
+        "stream_start_time_sec": 0.046,
+        "stream_time_base": "1/16000"
+      },
+      "case": "cfr_origin_046",
+      "ffmpeg_command": [
+        "/home/inspur/anaconda3/envs/Andy/bin/ffmpeg",
+        "-nostdin",
+        "-n",
+        "-v",
+        "error",
+        "-f",
+        "lavfi",
+        "-i",
+        "color=c=black:s=64x64:r=30:d=2",
+        "-an",
+        "-c:v",
+        "libx264",
+        "-bf",
+        "0",
+        "-pix_fmt",
+        "yuv420p",
+        "-video_track_timescale",
+        "16000",
+        "-output_ts_offset",
+        "0.046",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/baseline_pts_v3/synthetic_decoder_01/cfr_origin_046.mp4"
+      ],
+      "numeric_sha256": "8021c6a213541f24084650df9f2149cd02d733c769c6a2d028a4e27878f7c02a",
+      "pass": true,
+      "source_sha256": "880801244d7a0b3a76efc0c2f2b252d246b4df7709c3182ca3478a548f7893d1"
+    },
+    {
+      "audit": {
+        "cfr_tolerance_changed": false,
+        "contract_authority": "LOCAL_SOURCE_FRAME_IDENTITY_NOT_OFFICIAL_TIMESTAMP_ORIGIN_REQUIREMENT",
+        "decord_all_frame_binding_checked": true,
+        "decord_all_frame_timestamp_count": 60,
+        "decord_clock_mode": "RAW_AND_RELATIVE_EQUIVALENT_ZERO_ORIGIN",
+        "decord_ends_strictly_monotonic": true,
+        "decord_max_frame_duration_error_sec": 0.39331247568130495,
+        "decord_max_normalized_cfr_error_sec": 0.19999997615814213,
+        "decord_max_raw_binding_error_sec": 1.0681152362579382e-07,
+        "decord_max_relative_binding_error_sec": 1.0681152362579382e-07,
+        "decord_probe_indices": [
+          0,
+          1,
+          2,
+          30,
+          57,
+          58,
+          59
+        ],
+        "decord_probes": {
+          "0": [
+            0.0,
+            0.03331249952316284
+          ],
+          "1": [
+            0.03331249952316284,
+            0.06668750196695328
+          ],
+          "2": [
+            0.06668750196695328,
+            0.10000000149011612
+          ],
+          "30": [
+            1.399999976158142,
+            1.4333125352859497
+          ],
+          "57": [
+            2.299999952316284,
+            2.333312511444092
+          ],
+          "58": [
+            2.333312511444092,
+            2.366687536239624
+          ],
+          "59": [
+            2.366687536239624,
+            2.4000000953674316
+          ]
+        },
+        "decord_raw_binding_tolerance_sec": 6.25e-05,
+        "decord_raw_clock_frame_precision_resolvable": true,
+        "decord_relative_binding_tolerance_sec": 6.25e-05,
+        "decord_relative_clock_frame_precision_resolvable": true,
+        "decord_starts_strictly_monotonic": true,
+        "failures": [
+          "NORMALIZED_CFR_ERROR_EXCEEDS_UNCHANGED_ONE_FRAME_TOLERANCE",
+          "DECORD_INTERVAL_END_OR_DURATION_INVALID",
+          "DECORD_NORMALIZED_CFR_ERROR_EXCEEDS_UNCHANGED_ONE_FRAME_TOLERANCE"
+        ],
+        "max_normalized_cfr_error_sec": 0.19999999999999996,
+        "media_rewritten": false,
+        "one_frame_tolerance_sec": 0.040001,
+        "origin_contract": "SOURCE_RELATIVE_ZERO_IS_SOURCE_FRAME_0_RAW_PTS_MINUS_FIRST_FRAME_PTS",
+        "pass": false,
+        "raw_first_pts_sec": 0.0,
+        "raw_pts_count": 60,
+        "raw_pts_numeric": true,
+        "raw_pts_strictly_monotonic": true,
+        "source_frame_to_legacy_relative_time": "source_relative_time = frame_index / registered_fps",
+        "source_frame_to_raw_pts": "raw_pts = raw_first_pts + source_relative_pts",
+        "source_relative_first_pts_sec": 0.0,
+        "stream_origin_binding_tolerance_sec": 6.25e-05,
+        "stream_start_metadata_known": true,
+        "stream_start_pts": 0,
+        "stream_start_pts_sec": 0.0,
+        "stream_start_time_sec": 0.0,
+        "stream_time_base": "1/16000"
+      },
+      "case": "vfr_gap",
+      "ffmpeg_command": [
+        "/home/inspur/anaconda3/envs/Andy/bin/ffmpeg",
+        "-nostdin",
+        "-n",
+        "-v",
+        "error",
+        "-f",
+        "lavfi",
+        "-i",
+        "color=c=black:s=64x64:r=30:d=2",
+        "-an",
+        "-c:v",
+        "libx264",
+        "-bf",
+        "0",
+        "-pix_fmt",
+        "yuv420p",
+        "-video_track_timescale",
+        "16000",
+        "-vf",
+        "setpts=PTS+if(gte(N\\,30)\\,0.4/TB\\,0)",
+        "-vsync",
+        "0",
+        "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/baseline_pts_v3/synthetic_decoder_01/vfr_gap.mp4"
+      ],
+      "numeric_sha256": "79c913cc96b388eb0df025dd8b85c1edcd5096110d21e6f300e1cbf84abdecfa",
+      "pass": true,
+      "source_sha256": "4759a7c9661be787f5dcb059c0763db1d188dbc76dbc553576ee0aae076a38fc"
+    },
+    {
+      "audit": {
+        "cfr_tolerance_changed": false,
+        "contract_authority": "LOCAL_SOURCE_FRAME_IDENTITY_NOT_OFFICIAL_TIMESTAMP_ORIGIN_REQUIREMENT",
+        "decord_all_frame_binding_checked": true,
+        "decord_all_frame_timestamp_count": 60,
+        "decord_clock_mode": "UNCONFIRMED",
+        "decord_ends_strictly_monotonic": true,
+        "decord_max_frame_duration_error_sec": 0.0020208412607510898,
+        "decord_max_normalized_cfr_error_sec": null,
+        "decord_max_raw_binding_error_sec": 0.0460000591278078,
+        "decord_max_relative_binding_error_sec": 0.0020000014901161295,
+        "decord_probe_indices": [
+          0,
+          1,
+          2,
+          30,
+          57,
+          58,
+          59
+        ],
+        "decord_probes": {
+          "0": [
+            0.0,
+            0.03331249952316284
+          ],
+          "1": [
+            0.03331249952316284,
+            0.06668750196695328
+          ],
+          "2": [
+            0.06668750196695328,
+            0.10000000149011612
+          ],
+          "30": [
+            1.0,
+            1.0333125591278076
+          ],
+          "57": [
+            1.899999976158142,
+            1.9333125352859497
+          ],
+          "58": [
+            1.9333125352859497,
+            1.9666874408721924
+          ],
+          "59": [
+            1.9666874408721924,
+            2.0
+          ]
+        },
+        "decord_raw_binding_tolerance_sec": 6.25e-05,
+        "decord_raw_clock_frame_precision_resolvable": true,
+        "decord_relative_binding_tolerance_sec": 6.25e-05,
+        "decord_relative_clock_frame_precision_resolvable": true,
+        "decord_starts_strictly_monotonic": true,
+        "failures": [
+          "DECORD_RAW_OR_SOURCE_RELATIVE_ORIGIN_BINDING_FAILED",
+          "DECORD_NORMALIZED_CFR_ERROR_EXCEEDS_UNCHANGED_ONE_FRAME_TOLERANCE"
+        ],
+        "max_normalized_cfr_error_sec": 2.083333333358084e-05,
+        "media_rewritten": false,
+        "one_frame_tolerance_sec": 0.033334333333333334,
+        "origin_contract": "SOURCE_RELATIVE_ZERO_IS_SOURCE_FRAME_0_RAW_PTS_MINUS_FIRST_FRAME_PTS",
+        "pass": false,
+        "raw_first_pts_sec": 0.046,
+        "raw_pts_count": 60,
+        "raw_pts_numeric": true,
+        "raw_pts_strictly_monotonic": true,
+        "source_frame_to_legacy_relative_time": "source_relative_time = frame_index / registered_fps",
+        "source_frame_to_raw_pts": "raw_pts = raw_first_pts + source_relative_pts",
+        "source_relative_first_pts_sec": 0.0,
+        "stream_origin_binding_tolerance_sec": 6.25e-05,
+        "stream_start_metadata_known": true,
+        "stream_start_pts": 736,
+        "stream_start_pts_sec": 0.046,
+        "stream_start_time_sec": 0.046,
+        "stream_time_base": "1/16000"
+      },
+      "case": "bad_non_probe_timestamp",
+      "corrupted_source_frame": 3,
+      "pass": true,
+      "pass_criterion": "reject a changed all-frame timestamp outside representative probes"
+    }
+  ],
+  "schema": "aic_pts_origin_real_decoder_synthetic_cpu_v1",
+  "source_code": [
+    {
+      "path": "time_origin_core.py",
+      "sha256": "ebfc9e0e9b5978fb8bf4503513120d057aab8190a253b5323b3e1e451b3ad5e5"
+    },
+    {
+      "path": "numeric_source_worker.py",
+      "sha256": "0ab8632ded07c7b3c13c362845d7e46d68f67d721ccd2bd74eff58bb0bd81638"
+    },
+    {
+      "path": "scan_source_origin.py",
+      "sha256": "71352ff3dd7bd9a45427887002c9818400531360ed1cb75dc24cd48399b7453f"
+    }
+  ],
+  "status": "PASS_REAL_DECODER_SYNTHETIC_ONLY",
+  "synthetic_black_media_generated": true,
+  "test_file_sha256": "d76ab810b7d41ea581fe333b4e7fbc76aad8287a21a67fc1a3b117684f7eafd2"
+}

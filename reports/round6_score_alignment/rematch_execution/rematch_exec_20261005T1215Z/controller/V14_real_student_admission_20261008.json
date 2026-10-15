@@ -1,0 +1,34 @@
+{
+  "status": "PASS_REAL_V14_STUDENT_CPU_ADMISSION_NOT_OPTIMIZER_UPDATES_OR_ZIP",
+  "utc": "2026-10-08T12:54:07.082282+00:00",
+  "actual_admission": {
+    "status": "PASS_T_AUTHORITY_INPUT_AND_WEAK_SEMANTIC_ADMISSION",
+    "train": 65,
+    "dev": 14,
+    "total_updates": 15,
+    "prefix_required_updates": 4,
+    "supervision_classes": {
+      "positive": 55,
+      "explicit_no_highlight": 10,
+      "rejection_supervision_available": true,
+      "whole_window_rejection_learning_claim": false,
+      "supervision_role": "ACCEPTED_COMPLETE_WINDOW_WEAK_TEACHER_NOT_HUMAN_TRUTH"
+    },
+    "training_started": false
+  },
+  "admission_log_sha256": "ada2ff5904c7537888768b69f520a67d60c2fe5b18cff8796c0a0f84fab501ed",
+  "student_config_sha256": "930165d859a3f8e0f0bf19dd7338a23ed241f8b165d915cfdf00528fad85b583",
+  "frozen_student_code_sha256": "7b79a6713e3a406d015bc546fc45ce6172b7cf8d3967592779bfdd8c23a6fe09",
+  "source_lock_sha256": "5295e8bc0f2b6a651e73321a5798b259816ccbe9a0582753dc3c200b5ef080e0",
+  "runtime_handoff_sha256": "8a9ffec8311136a00935511505c79699e53bcd840c0349e79b437d4fe82ca934",
+  "original_V13_STOP_preserved": true,
+  "original_pilot_diagnostic_flag_not_rewritten": true,
+  "UNKNOWN_not_negative": true,
+  "new_teacher_model_calls_by_stage": 0,
+  "actual_optimizer_updates_by_check_only": 0,
+  "planned_optimizer_updates": 15,
+  "prefix_required_updates": 4,
+  "science_scope": "same teacher weak support; not human event truth or official score",
+  "successful_teacher_repeated": false,
+  "signals_sent": 0
+}

@@ -1,0 +1,33 @@
+{
+  "name": "orarl_r1_verify2",
+  "command": [
+    "/home/inspur/aic_video_work/orarl_round1/env/orarl_hf/bin/python",
+    "/home/inspur/aic_video_work/orarl_round1/scripts/run_inference.py",
+    "--model",
+    "/home/inspur/aic_video_work/orarl_round1/model/Video-ORA-4B",
+    "--samples",
+    "/home/inspur/aic_video_work/orarl_round1/evidence/sample_manifest.json",
+    "--out",
+    "/home/inspur/aic_video_work/orarl_round1/outputs",
+    "--attn",
+    "sdpa",
+    "--tasks",
+    "spatial_grounding,temporal_grounding,tracking"
+  ],
+  "started_utc": "2026-09-15T15:48:34.461278+00:00",
+  "runner_pid": 2745207,
+  "reserved_seconds": 1740,
+  "teardown_reserve_seconds": 120,
+  "prior_charged_seconds": 35364.20848653233,
+  "disk_before": {
+    "free_bytes": 154280574976,
+    "work_bytes": 39971852288
+  },
+  "child_pid": 2745211,
+  "finished_utc": "2026-09-15T15:49:35.119954+00:00",
+  "charged_seconds": 60.65877516102046,
+  "exit_code": 0,
+  "stop_reason": null,
+  "sampled_peak_memory_mib": 12426,
+  "status": "completed"
+}

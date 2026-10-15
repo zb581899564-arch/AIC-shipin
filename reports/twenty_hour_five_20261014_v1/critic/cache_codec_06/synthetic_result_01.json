@@ -1,0 +1,39 @@
+{
+  "status": "PASS_PURE_SYNTHETIC_CODEC_LEASE_TEST_NOT_PRODUCTION_ADMISSION",
+  "checks": [
+    "exact_tensor_dict_gzip_readback_dtype_shape_stride_tokenmask",
+    "same_visual_actual_bytes_shared_distinct_text_retained",
+    "same_visual_bytes_different_time_identity_not_shared",
+    "successful_canonical_input_overwrite_rejected",
+    "old_absolute_or_nonstaging_path_rejected:../old/frames.npz",
+    "old_absolute_or_nonstaging_path_rejected:/home/inspur/aic_video_work/old/frames.npz",
+    "old_absolute_or_nonstaging_path_rejected:G:/ai/AIC视频/reports/human_reference_iteration_20261013_v1/frames.npz",
+    "old_absolute_or_nonstaging_path_rejected:permanent/inputs/r1.private.pt.gz",
+    "old_absolute_or_nonstaging_path_rejected:staging/../old.bin",
+    "missing_independent_consumer_proof_blocks_release",
+    "nonnatural_failed_resource_blocks_acceptance",
+    "duplicate_terminal_ledger_blocks_acceptance",
+    "second_frozen_consumer_lease_blocks_release",
+    "one_new_synthetic_RGB_release_permanent_inputs_and_historical_SHA_retained",
+    "successful_release_not_repeated",
+    "unaccepted_other_canonical_consumer_blocks_release",
+    "insufficient_capacity_STOP_RETAIN_no_canonical_deletion_or_precision_change"
+  ],
+  "symlink_check": {
+    "status": "SKIPPED_OS_PRIVILEGE_UNAVAILABLE",
+    "error": "[WinError 1314] 客户端没有所需的特权。: 'G:\\\\ai\\\\AIC视频\\\\reports\\\\twenty_hour_five_20261014_v1\\\\critic\\\\cache_codec_06\\\\protected_synthetic_old_01.bin' -> 'G:\\\\ai\\\\AIC视频\\\\reports\\\\twenty_hour_five_20261014_v1\\\\critic\\\\cache_codec_06\\\\synthetic_01\\\\staging\\\\rgb\\\\link.bin'"
+  },
+  "successful_new_temporary_RGB_releases": 1,
+  "original_media_or_old_success_deletions": 0,
+  "real_media_or_processor_or_model_calls": 0,
+  "torch_version": "2.5.1+cpu",
+  "CUDA_initialized": false,
+  "code_sha256": {
+    "check_synthetic.py": "edf093ea7c344660d2bb01d514524159fad04455e15ca58f2d332c13a615a87e",
+    "codec.py": "77d73a7d7c4cc60a0e0f07fa2b12cc3bcf5c900d5a27bacc9d14a11c58c5dd1e",
+    "leases.py": "83dce12eca4f412c36f2f4e1b151f83761d820f58a2045ef2ef978efa4d1bf09"
+  },
+  "fixture_root": "G:\\ai\\AIC视频\\reports\\twenty_hour_five_20261014_v1\\critic\\cache_codec_06\\synthetic_01",
+  "retained_fixture_and_partial_failures": true,
+  "scientific_quality_claim": false
+}

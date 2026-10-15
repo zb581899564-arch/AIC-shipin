@@ -1,0 +1,17 @@
+{
+  "status": "PASS_V8_CPU_STAGE_AND_CONTRACT_TESTS",
+  "utc": "2026-10-08T06:19:21.598042+00:00",
+  "tests": {
+    "teacher_boundary_cpu_tests.py": 0,
+    "student_cpu_tests.py": 0,
+    "student_v8_cpu_tests.py": 0,
+    "selection_cpu_tests.py": 0,
+    "pipeline_cpu_tests.py": 0
+  },
+  "GPU_started": false,
+  "unchanged_prior_successes_not_repeated": [
+    "teacher_boundary_cpu_tests.py",
+    "student_cpu_tests.py"
+  ],
+  "failed_fixture_evidence_preserved": true
+}

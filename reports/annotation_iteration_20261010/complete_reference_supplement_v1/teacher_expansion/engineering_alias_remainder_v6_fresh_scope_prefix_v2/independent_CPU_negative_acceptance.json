@@ -1,0 +1,325 @@
+{
+  "status": "PASS_INDEPENDENT_CPU_NEGATIVES_EXACT_BINDINGS_NO_MODEL_PENDING_ROOT",
+  "sources": {
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\audit.py": "92ed439d8fe45ef4f2742c516c98711744ead7d458a6fb45efec31a1ae54d476",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\common.py": "522ca76bd074a55c71bdcb7933b7e351c8ed47e8fa040df0670597f43645ad9e",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\controller.py": "2904e922048e6955fb49fe882e97390bc120ccf05ef0f258fb6a73ce3645e01b",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\engine.py": "f76d8a416b67cc7c6a063c3d00bc8aff68dcb9373dfb19e1c7f0ba03bd3c2a6f",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\launch.py": "5b1c445a1cc2c3b5f100773cf312d730710f8d139cb59909ebc6b6c7954b2a10",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\observer.py": "d04fbb4c1392edc4da4aec9987a4eea3e4b0c73de40335a73e459e77c5db7cab",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\prepare.py": "97a0d7fc986f572b8652fcc2ac0f78d16dbc2653a50184f8b9e2b154e2b37d7c",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\prompt.py": "b19a367aaf105b614e273f83cf801dcba06530b23792a8775c9a7b51156a6df8",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\run_call.py": "e9570cbb4ab11e9f26302f53573bc5ec14262988b4c72d6e88e4d444a261726d",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\verify.py": "fcb7af83a42e4ef47e48a4666599ace6350131f41e92010bfdb1432a3e4958f0",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\PROTOCOL.md": "ce3f80c5de44a0ac1ab397937a1581373e84374f3c94bb412ca4084446d27551"
+  },
+  "routing": [
+    {
+      "CLI": 35,
+      "jobs": [
+        19,
+        20
+      ],
+      "core": 183,
+      "scope_cores": [
+        93,
+        183
+      ]
+    },
+    {
+      "CLI": 36,
+      "jobs": [
+        21,
+        22,
+        23
+      ],
+      "core": 273,
+      "scope_cores": [
+        93,
+        183,
+        273
+      ]
+    }
+  ],
+  "negative_cases": [
+    {
+      "name": "all_complete_natural_SUCCESS",
+      "eligible": true,
+      "whole_success": true,
+      "issues": [],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "final_network_after_ALL_no_tools_keep_whole_REJECT_allow_fresh36",
+      "eligible": true,
+      "whole_success": false,
+      "issues": [],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "same_network_BEFORE_completion_STOP",
+      "eligible": false,
+      "whole_success": false,
+      "issues": [
+        "EXPLICIT_ERROR_BEFORE_ALL_PROPOSALS",
+        "WHOLE_FAILURE_NOT_ELIGIBLE_POST_COMPLETION_NETWORK_ONLY"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "early_SUCCESS_before_final_proposal_STOP",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "EXPLICIT_ERROR_BEFORE_ALL_PROPOSALS"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "network_timing_unknown_STOP",
+      "eligible": false,
+      "whole_success": false,
+      "issues": [
+        "WHOLE_FAILURE_NOT_ELIGIBLE_POST_COMPLETION_NETWORK_ONLY"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "401_after_completion_STOP",
+      "eligible": false,
+      "whole_success": false,
+      "issues": [
+        "WHOLE_FAILURE_NOT_ELIGIBLE_POST_COMPLETION_NETWORK_ONLY"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "media_ERROR_before_proposal_STOP",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "ACTUAL_TOOL_ERROR_OR_UNFINISHED"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "outside_before_proposal_STOP",
+      "eligible": false,
+      "whole_success": false,
+      "issues": [
+        "ACTUAL_OTHER_TOOL_OR_WHITELIST_FAILURE",
+        "WHOLE_FAILURE_NOT_ELIGIBLE_POST_COMPLETION_NETWORK_ONLY"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "outside_after_all_proposals_STOP_scopes_separate",
+      "eligible": false,
+      "whole_success": false,
+      "issues": [
+        "TOOL_AFTER_FINAL_PROPOSAL_TERMINAL_INSTRUCTION",
+        "ACTUAL_OTHER_TOOL_OR_WHITELIST_FAILURE",
+        "WHOLE_FAILURE_NOT_ELIGIBLE_POST_COMPLETION_NETWORK_ONLY"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "any_tool_after_finalproposal_STOP",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "TOOL_AFTER_FINAL_PROPOSAL_TERMINAL_INSTRUCTION"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "repeated_media_STOP",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "REPEATED_SUCCESSFUL_MEDIA"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "samebyte_output_rewrite_STOP",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "REWRITTEN_SUCCESSFUL_FACT_OR_PROPOSAL"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "output_or_prefix_byte_drift_STOP",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "OUTPUT_OR_PREFIX_BYTE_DRIFT"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "missing_scope_STOP",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "MISSING_OR_REJECTED_IMMUTABLE_SCOPE"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "zero_scopes_STOP",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "MISSING_OR_REJECTED_IMMUTABLE_SCOPE"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "bootstrap_failure_STOP",
+      "eligible": false,
+      "whole_success": false,
+      "issues": [
+        "ACTUAL_OTHER_TOOL_OR_WHITELIST_FAILURE",
+        "WHOLE_FAILURE_NOT_ELIGIBLE_POST_COMPLETION_NETWORK_ONLY"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "network_after_incomplete_core_STOP",
+      "eligible": false,
+      "whole_success": false,
+      "issues": [
+        "WHOLE_FAILURE_NOT_ELIGIBLE_POST_COMPLETION_NETWORK_ONLY"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "reported_error_message_body_STOP",
+      "eligible": false,
+      "whole_success": false,
+      "issues": [
+        "REPORTED_NONMEDIA_ERROR_REQUIRES_STOP",
+        "WHOLE_FAILURE_NOT_ELIGIBLE_POST_COMPLETION_NETWORK_ONLY"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "unfinished_tool_STOP",
+      "eligible": false,
+      "whole_success": true,
+      "issues": [
+        "ACTUAL_TOOL_ERROR_OR_UNFINISHED"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "owned_timeout_STOP",
+      "eligible": false,
+      "whole_success": false,
+      "issues": [
+        "WHOLE_FAILURE_NOT_ELIGIBLE_POST_COMPLETION_NETWORK_ONLY"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "prespawn_failure_STOP",
+      "eligible": false,
+      "whole_success": false,
+      "issues": [
+        "WHOLE_FAILURE_NOT_ELIGIBLE_POST_COMPLETION_NETWORK_ONLY"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "LF_minus1",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "LF_plus1",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "wrongbytes",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "no_tailLF",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "CR_added",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "truncation",
+      "rejected": true,
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "tool_LF_minus1",
+      "rejected": true,
+      "issues": [
+        "BOOTSTRAP_NOT_EXACTLY_ONCE_FIRST_FULL_DONE",
+        "BOOTSTRAP_ACK_MISSING_WRONG_OR_ORDER"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "tool_wrong_first_second_order",
+      "rejected": true,
+      "issues": [
+        "CORE_MEDIA_ORDER_OR_MISSING",
+        "CONTEXT_OR_SUPPLY_ORDER_OR_MISSING",
+        "BOOTSTRAP_NOT_EXACTLY_ONCE_FIRST_FULL_DONE",
+        "BOOTSTRAP_ACK_MISSING_WRONG_OR_ORDER"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "tool_outside_before",
+      "rejected": true,
+      "issues": [
+        "OUTSIDE_READ_WHITELIST_ATTEMPT",
+        "CORE_MEDIA_ORDER_OR_MISSING",
+        "CONTEXT_OR_SUPPLY_ORDER_OR_MISSING",
+        "BOOTSTRAP_ACK_MISSING_WRONG_OR_ORDER"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "bootstrap_toolERROR",
+      "rejected": true,
+      "issues": [
+        "TOOL_ERROR_TERMINAL",
+        "CORE_MEDIA_ORDER_OR_MISSING",
+        "CONTEXT_OR_SUPPLY_ORDER_OR_MISSING",
+        "BOOTSTRAP_NOT_EXACTLY_ONCE_FIRST_FULL_DONE",
+        "BOOTSTRAP_ACK_MISSING_WRONG_OR_ORDER"
+      ],
+      "synthetic_memory_only": true
+    },
+    {
+      "name": "wrong_ACK_marker",
+      "rejected": true,
+      "synthetic_memory_only": true
+    }
+  ],
+  "scope_helper_paths": [
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\audit.py",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\engine.py",
+    "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\complete_reference_supplement_v1\\teacher_expansion\\engineering_alias_remainder_v6_fresh_scope_prefix_v2\\common.py"
+  ],
+  "actual_models_started": 0,
+  "actual_requests35_36": 0,
+  "new_video_decode": 0,
+  "root_review_required": true,
+  "cash_cost": "UNKNOWN_NOT_ZERO"
+}

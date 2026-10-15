@@ -1,0 +1,76 @@
+{
+  "alignment_basis": "exact clip.source_vid basename + provenance SHA-256 + PyAV headers for row evidence; formal source-to-processed temporal transform is unproven",
+  "alignment_verified": false,
+  "audit_script_version": "2026-09-09.data-audit.v1",
+  "candidate_artifacts": {
+    "groups": "candidate_groups.jsonl",
+    "rows": "candidate_splits.jsonl",
+    "warning": "candidate-only planning artifacts; do_not_use_as_training=true"
+  },
+  "checks": {
+    "candidate_split_group_counts": {
+      "dev": 84,
+      "holdout": 85,
+      "train": 694
+    },
+    "candidate_split_label_counts": {
+      "dev": 99,
+      "holdout": 99,
+      "train": 789
+    },
+    "candidate_zero_group_leakage": true,
+    "exact_source_file_rows": 912,
+    "exact_source_metadata_ok_rows": 912,
+    "original_train_val_overlap_groups": 26
+  },
+  "counts": {
+    "dev": {
+      "groups": 84,
+      "isolated": 99,
+      "labels": 99,
+      "trusted_identity": 0
+    },
+    "holdout": {
+      "groups": 85,
+      "isolated": 99,
+      "labels": 99,
+      "trusted_identity": 0
+    },
+    "train": {
+      "groups": 694,
+      "isolated": 789,
+      "labels": 789,
+      "trusted_identity": 0
+    }
+  },
+  "data_root": "/home/inspur/aic_video_data",
+  "generated_at_utc": "2026-09-09T14:34:56Z",
+  "global_counts": {
+    "candidate_zero_group_leakage": true,
+    "hash_mismatch_rows": 912,
+    "label_rows": 987,
+    "metadata_error_rows": 0,
+    "missing_source_rows": 75,
+    "original_train_val_overlap_groups": 26,
+    "source_groups": 863,
+    "trusted_identity_rows": 0,
+    "video_files": 11576
+  },
+  "labels_path": "/home/inspur/aic_video_data/labels/train.jsonl",
+  "passed": false,
+  "reasons": [
+    "formal gate requires an explicit clip-generation/alignment manifest; none was found in the read-only data package",
+    "75 label rows have no exact clip.source_vid basename under videos/",
+    "912 label rows have provenance.video_sha256 mismatches",
+    "0 matched rows lack valid PyAV video metadata",
+    "video_path is empty in 987 label rows, so no alternate path evidence exists",
+    "candidate source-group splits are planning artifacts and are explicitly blocked from training entrypoints"
+  ],
+  "schema_version": "aic_data_training_gate_v1",
+  "seed": 42,
+  "thresholds": {
+    "trusted_dev_min": 50,
+    "trusted_holdout_min": 50,
+    "trusted_train_min": 200
+  }
+}

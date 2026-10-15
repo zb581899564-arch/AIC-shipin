@@ -1,0 +1,1485 @@
+{
+  "utc": "2026-10-09T11:04:26.854251+00:00",
+  "stage": "COMPLETE",
+  "completed": 50,
+  "expected": 50,
+  "receipts": [
+    {
+      "utc": "2026-10-09T08:04:36.293653+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "PJrm840pAUI",
+      "media_sha256": "790c560f5132928d456803ca5e23b03ca38b1eb8d3383b619afbed60dd5be86f",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 8,
+        "UNKNOWN": 1
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\PJrm840pAUI\\attempt_01\\highlights.json",
+        "sha256": "60c77f9f9159a5b5cbfeb1f80074ff0b54bcad6646bc417ccc2c4251541d1251"
+      },
+      "stream_sha256": "922861a380c95c65a3226652e182059ba259fb59d95a64f08abc570f066a6f73",
+      "conversation_id": "65693940-037a-4f97-8f89-37c7ad7c63e4",
+      "usage": {
+        "input_tokens": 136853,
+        "output_tokens": 10833,
+        "thinking_tokens": 8671,
+        "cache_read_tokens": 0,
+        "total_tokens": 147686
+      },
+      "duration_seconds": 155.0340673,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T08:06:13.703479+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "EE-bNr36nyA",
+      "media_sha256": "0e11bb5bb60ac4842b2ee500c9cf985395a083ae92c3f498f1e91f12aa8e1691",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "UNKNOWN": 8,
+        "KEEP": 7
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\EE-bNr36nyA\\attempt_01\\highlights.json",
+        "sha256": "05e090298a818dded8f1a110b26df1e54736fe58759f4e6a76a898a295c37d8d"
+      },
+      "stream_sha256": "f485c988e392e042a9fc368a62a67da06b7f3586e2606d9d5dbb31655580faec",
+      "conversation_id": "1745b2c5-777d-4a0d-9d1f-a42c58949e64",
+      "usage": {
+        "input_tokens": 76682,
+        "output_tokens": 10352,
+        "thinking_tokens": 7744,
+        "cache_read_tokens": 27610,
+        "total_tokens": 87034
+      },
+      "duration_seconds": 85.944646,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T08:08:04.642379+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "Se3oxnaPsz0",
+      "media_sha256": "87bf58a787009bce2add1a743bca81b98b33e7bb8edee80c1ff7c7070ae368e6",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 9,
+        "UNKNOWN": 1
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\Se3oxnaPsz0\\attempt_01\\highlights.json",
+        "sha256": "324bca4d8a95cd7cd89772e352edcf8e99ed7c7ff89529155ca5bac8094b366a"
+      },
+      "stream_sha256": "77b33ac382e26341a50fa86ece40907ddf0d6f7209f591be4bdc2025099cab15",
+      "conversation_id": "4d583aa7-8f9b-4180-9319-74423bc453b2",
+      "usage": {
+        "input_tokens": 110755,
+        "output_tokens": 10522,
+        "thinking_tokens": 8291,
+        "cache_read_tokens": 0,
+        "total_tokens": 121277
+      },
+      "duration_seconds": 97.5604871,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T08:10:28.582489+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "WxtbjNsCQ8A",
+      "media_sha256": "b6c658e4d5258fcba10207b8c49ed624cabfe951ed9c9a96aa4ed6fada96d388",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 13,
+        "UNKNOWN": 1
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\WxtbjNsCQ8A\\attempt_01\\highlights.json",
+        "sha256": "52122823ba6c3052a397816ddfb55a26463681b5443304d67eb0eb7ce2781acd"
+      },
+      "stream_sha256": "42b65d1cbb3134da4005e2fbe4b69b64745f1d3a847ca24212da74cfbb1a8123",
+      "conversation_id": "4f9a9ddb-d57f-4f4a-8a09-22cc5c977cb7",
+      "usage": {
+        "input_tokens": 138810,
+        "output_tokens": 13908,
+        "thinking_tokens": 11449,
+        "cache_read_tokens": 0,
+        "total_tokens": 152718
+      },
+      "duration_seconds": 130.0108541,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T08:13:09.168360+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "oDXZc0tZe04",
+      "media_sha256": "dd2cddeaeb6bc44dea976337af5c8b79b0030abbe2438ed8549fe9304621efd2",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "UNKNOWN": 2,
+        "KEEP": 6
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\oDXZc0tZe04\\attempt_01\\highlights.json",
+        "sha256": "8dbf87e30635e7a00df617b4f477c4d74e3a6d710c27e544c495e1bd2655d593"
+      },
+      "stream_sha256": "76ee721b20988c8d53a15e729beee83611c353cb875430b3151b8c7b44bca5f4",
+      "conversation_id": "4d821aec-c9a2-4a5e-8693-a1cde110ec03",
+      "usage": {
+        "input_tokens": 106763,
+        "output_tokens": 17557,
+        "thinking_tokens": 13365,
+        "cache_read_tokens": 57121,
+        "total_tokens": 124320
+      },
+      "duration_seconds": 148.7377557,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T08:15:37.560240+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "uGu_10sucQo",
+      "media_sha256": "302cfeab45f174688d2a709cc4528087a5ba17d4fb9880ceac8fe8db87007b51",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 8
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\uGu_10sucQo\\attempt_01\\highlights.json",
+        "sha256": "9546c6bb1c9c459bb961354dc1c43c671dbb220e88c24cfc6269c837176040be"
+      },
+      "stream_sha256": "e3b601ef1c165dc830eb297e5d0846405a830e7a3cd02d96e722e14f96caeb39",
+      "conversation_id": "25fcb533-c65a-4139-98df-8c8b26c72344",
+      "usage": {
+        "input_tokens": 122317,
+        "output_tokens": 13945,
+        "thinking_tokens": 11162,
+        "cache_read_tokens": 35146,
+        "total_tokens": 136262
+      },
+      "duration_seconds": 136.4227217,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T08:18:35.704945+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "EYqVtI9YWJA",
+      "media_sha256": "6ffcc966ab00a6096d7b256cffd09408efa7db376df7732644f875b8ff27f390",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "UNKNOWN": 11,
+        "KEEP": 9
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\EYqVtI9YWJA\\attempt_01\\highlights.json",
+        "sha256": "26f65455a0aec4b33e6e83d8e4d75572378eca12648fb85f57108ef186962669"
+      },
+      "stream_sha256": "4799346efc20cb19f87a53fd9d15d0bf96f01525edee8b1bab951f707ef914d2",
+      "conversation_id": "6d52cfe9-1b65-4d8b-9267-348bbb48b294",
+      "usage": {
+        "input_tokens": 88960,
+        "output_tokens": 14122,
+        "thinking_tokens": 10383,
+        "cache_read_tokens": 77057,
+        "total_tokens": 103082
+      },
+      "duration_seconds": 164.4732185,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T08:20:41.438612+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "JgHubY5Vw3Y",
+      "media_sha256": "dff35488cc8dfd1b4962d82d8a96f475a051f163ed7dea4be8a0d10456e5b7c5",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "UNKNOWN": 1,
+        "KEEP": 3
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\JgHubY5Vw3Y\\attempt_01\\highlights.json",
+        "sha256": "6016bd3a2c0dd5d470596c2319fce07c2d78840a5c8868f9354389c6693ae110"
+      },
+      "stream_sha256": "6365202d4ccf0afe0c23a75560c7dd85a720ce6e15d8d9b7f485c795cb904e46",
+      "conversation_id": "8fde30e2-e768-40ba-8bfb-480a112e221d",
+      "usage": {
+        "input_tokens": 84540,
+        "output_tokens": 11713,
+        "thinking_tokens": 9715,
+        "cache_read_tokens": 70195,
+        "total_tokens": 96253
+      },
+      "duration_seconds": 114.1546317,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T08:22:31.908976+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "eQu1rNs0an0",
+      "media_sha256": "7a3daec4c22feace99c4e193ce72e4a3e17bbedd4f0c6feb39e3e9030e6fb05f",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "UNKNOWN": 2,
+        "KEEP": 5
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\eQu1rNs0an0\\attempt_01\\highlights.json",
+        "sha256": "972427228a65df2fd79378606eaa80dea28573ea56ad6553aa229580f14c92f7"
+      },
+      "stream_sha256": "3e74950d5de5e79efdf15e4855b2e3ac50b2cdef6ed5aeb8092d1708ef2eda99",
+      "conversation_id": "553c08be-fa69-4dc2-ad5e-08ef7fca0043",
+      "usage": {
+        "input_tokens": 81650,
+        "output_tokens": 9882,
+        "thinking_tokens": 7651,
+        "cache_read_tokens": 34969,
+        "total_tokens": 91532
+      },
+      "duration_seconds": 98.8158377,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T08:58:38.439413+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "iVt07TCkFM0",
+      "media_sha256": "7c34621e37ff0cc6d7f8838e8c6468e67eea934484e3c7ecf8eca7409c35e3f7",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 5,
+        "UNKNOWN": 1
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\iVt07TCkFM0\\attempt_02\\highlights.json",
+        "sha256": "27b218c72c1ce62e1d2468ff547fba7b67d51cd5742d3c4fa23c4b320daf8eee"
+      },
+      "stream_sha256": "76b1cdb7a08294e44e4a182815bb04dc62bca5aa069a0fa76ebec98947541d4e",
+      "conversation_id": "61377513-b6b8-4670-b5c8-6d83d17312d6",
+      "usage": {
+        "input_tokens": 81077,
+        "output_tokens": 13455,
+        "thinking_tokens": 11166,
+        "cache_read_tokens": 27650,
+        "total_tokens": 94532
+      },
+      "duration_seconds": 114.8586591,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T09:02:14.255248+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "qqR6AEXwxoQ",
+      "media_sha256": "77987b565d016441183ec928ef985f1a1d805b4c36c833a0b0b2705fff6a092d",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 6,
+        "UNKNOWN": 2
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\qqR6AEXwxoQ\\attempt_01\\highlights.json",
+        "sha256": "53d66b3c478b67fb5b5aad5434e6c611415940352a2deb632701c3bc63fd28b1"
+      },
+      "stream_sha256": "e4a04683d6af560b88ce5a300547c5bb7dd6edec1f87bd83d533ae1eeb424fa5",
+      "conversation_id": "7db0bfff-13d7-4f83-b7af-25de0df14f2a",
+      "usage": {
+        "input_tokens": 48397,
+        "output_tokens": 22847,
+        "thinking_tokens": 20656,
+        "cache_read_tokens": 100242,
+        "total_tokens": 71244
+      },
+      "duration_seconds": 205.367459,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T09:04:32.377728+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "-esJrBWj2d8",
+      "media_sha256": "811186cdec40ef58049f0cc951c07a9f6f7d2b5cb27511e01094b829bbd10a9e",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "UNKNOWN": 3,
+        "KEEP": 4
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\-esJrBWj2d8\\attempt_01\\highlights.json",
+        "sha256": "df62c3dd34c4980df7ad98984e4708423b56009bd64ac0a72dffff87b6eb76b4"
+      },
+      "stream_sha256": "6aabf5a32efddf43a6bb085cbcb84b88dee349e47005d045fab60aea9e7b7169",
+      "conversation_id": "166afcd1-cf00-4a19-a40b-b4b32a765461",
+      "usage": {
+        "input_tokens": 91210,
+        "output_tokens": 11895,
+        "thinking_tokens": 10031,
+        "cache_read_tokens": 88423,
+        "total_tokens": 103105
+      },
+      "duration_seconds": 126.9668137,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T09:06:50.168964+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "E11zDS9XGzg",
+      "media_sha256": "f4370b8fd985c3b41bf5590988669b18794ea64fea3921a8109962a91c324986",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 4,
+        "UNKNOWN": 2
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\E11zDS9XGzg\\attempt_01\\highlights.json",
+        "sha256": "898b6878363dd5b00599b9e5c957690b583b07a152c2dcee1f22e83260fa5d2d"
+      },
+      "stream_sha256": "f783f568f7b7bc846ac29ad6ae74e7b38ac27e7f8c92a00a2c44e6bda851ae81",
+      "conversation_id": "305f8a87-c6aa-4abb-8e1a-8bcc485c03c3",
+      "usage": {
+        "input_tokens": 178072,
+        "output_tokens": 8403,
+        "thinking_tokens": 6776,
+        "cache_read_tokens": 0,
+        "total_tokens": 186475
+      },
+      "duration_seconds": 126.241262,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T09:09:41.628072+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "NyBmCxDoHJU",
+      "media_sha256": "6960e8850f04eae077a85e3befddaed36ce1196ac84d9efd8f8560ac90e557b7",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "UNKNOWN": 9,
+        "KEEP": 21
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\NyBmCxDoHJU\\attempt_01\\highlights.json",
+        "sha256": "5e2b9166ac9c8ae2d2164055df919d2d4ad95c7c901421bc989bfb26f3dc103f"
+      },
+      "stream_sha256": "88fd53dda982f943033cd11c708e73a91992eb4f5b9e4daa55c121229534c430",
+      "conversation_id": "773d75c4-51be-41ae-abd3-e91bcb7fdd1f",
+      "usage": {
+        "input_tokens": 89376,
+        "output_tokens": 18431,
+        "thinking_tokens": 13913,
+        "cache_read_tokens": 38999,
+        "total_tokens": 107807
+      },
+      "duration_seconds": 158.7767238,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T09:12:02.055027+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "jcoYJXDG9sw",
+      "media_sha256": "3354cee170c1b9ace768883f058150869874ed27c2b60cf08b9f2272b5aa1db9",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 6,
+        "UNKNOWN": 3
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\jcoYJXDG9sw\\attempt_01\\highlights.json",
+        "sha256": "97655af6b6b66d79be6968ce12953ee9cfd54c9b5a82408d884282ff58c6a39d"
+      },
+      "stream_sha256": "0c29cdf9a76899d01a46ab549ba19bde8a38b22694a7b49b819ada831b57235a",
+      "conversation_id": "c1ca2285-099a-4485-a86c-198fbe54d845",
+      "usage": {
+        "input_tokens": 86276,
+        "output_tokens": 11515,
+        "thinking_tokens": 9309,
+        "cache_read_tokens": 80920,
+        "total_tokens": 97791
+      },
+      "duration_seconds": 129.361082,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T09:14:06.252562+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "kLxoNp-UchI",
+      "media_sha256": "0c91bfa880e3af0e1716e7456ada0a304a97911eef76b1cd4fdce5066a52e8f7",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "UNKNOWN": 3,
+        "KEEP": 7
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\kLxoNp-UchI\\attempt_01\\highlights.json",
+        "sha256": "a8745b25d7a4f5465d21aadb0609efc9e04f623baf1b1050ae902ae1ff51dc8d"
+      },
+      "stream_sha256": "685ccbd5c0437832e30c73d7ee01ebd8a17f9a4b36b58360493328a7821cc195",
+      "conversation_id": "188a849a-87eb-4c9c-94ab-39ea35c5b426",
+      "usage": {
+        "input_tokens": 104475,
+        "output_tokens": 12534,
+        "thinking_tokens": 10156,
+        "cache_read_tokens": 8159,
+        "total_tokens": 117009
+      },
+      "duration_seconds": 113.730726,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T09:17:13.808494+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "JKpqYvAdIsw",
+      "media_sha256": "da63a55d05c49f042699b366f3026ba77c8695208b40eb40b506867604caf905",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "UNKNOWN": 2,
+        "KEEP": 13
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\JKpqYvAdIsw\\attempt_01\\highlights.json",
+        "sha256": "dd2f5415aab3b4afe5afbfa1d4717674385050c1611292f7f8bf24fa4eb15881"
+      },
+      "stream_sha256": "fdcd34c6d08e555fe6cb11747b55334cfc8074e373e3dc2d6932aa8f13cb41d8",
+      "conversation_id": "721dfe89-4d7a-4375-815a-146a53de6796",
+      "usage": {
+        "input_tokens": 109220,
+        "output_tokens": 19560,
+        "thinking_tokens": 15550,
+        "cache_read_tokens": 12238,
+        "total_tokens": 128780
+      },
+      "duration_seconds": 172.0516712,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T09:40:57.854379+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "VuWGsYPqAX8",
+      "media_sha256": "9476a6d8bc6fdcff909fa2885ba82ba7696b3d05fca2f070e313139e434eabe3",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "UNKNOWN": 3,
+        "KEEP": 8
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\VuWGsYPqAX8\\attempt_02\\highlights.json",
+        "sha256": "2625ca402ba1bd4351aabaae11aaef0e39697ac7b94b085b024da0d6315486f4"
+      },
+      "stream_sha256": "57cd7f157d6a1409464f94181e0e178a3496f6f425341d0db34ab61b3dc31f99",
+      "conversation_id": "a8e65c58-f8f0-4af3-950a-48e1bd454a7f",
+      "usage": {
+        "input_tokens": 129162,
+        "output_tokens": 11456,
+        "thinking_tokens": 9022,
+        "cache_read_tokens": 38607,
+        "total_tokens": 140618
+      },
+      "duration_seconds": 148.5102742,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T09:43:42.890312+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "_xMr-HKMfVA",
+      "media_sha256": "1d9cd42e19931934ea362f7509bf69f0e98a13da801414998d58296fca4bcbbe",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "UNKNOWN": 2,
+        "KEEP": 9
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\_xMr-HKMfVA\\attempt_01\\highlights.json",
+        "sha256": "765c6bbce8a4319626fbf875ba57693cb0db3ea1a2de932af6fcb3f48d9df3ed"
+      },
+      "stream_sha256": "2449a24024b0c50c727e53bbf821f4ae24b05859d146939ad7bf2f2fb08a4486",
+      "conversation_id": "4d278c2b-d2d2-488a-a9b4-bc2453d62c7e",
+      "usage": {
+        "input_tokens": 119006,
+        "output_tokens": 14828,
+        "thinking_tokens": 11515,
+        "cache_read_tokens": 0,
+        "total_tokens": 133834
+      },
+      "duration_seconds": 150.5985542,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T09:45:54.154185+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "byxOvuiIJV0",
+      "media_sha256": "b94f772069a7479b54c27b50650bccdfb0b75bb573abf8bda27dba1a5af75abd",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "UNKNOWN": 2,
+        "KEEP": 12
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\byxOvuiIJV0\\attempt_01\\highlights.json",
+        "sha256": "d2ee81c7c881129ba91776eea9caaa6be872b8670f2d3ba1c1af36f025a54745"
+      },
+      "stream_sha256": "04d480d38e0ca502dd1b9e9c73d807a6dcf6ad4289578d5c3329e58063c23976",
+      "conversation_id": "af704dad-42c5-40bc-a3cd-914c43f3ab81",
+      "usage": {
+        "input_tokens": 120256,
+        "output_tokens": 15219,
+        "thinking_tokens": 11798,
+        "cache_read_tokens": 0,
+        "total_tokens": 135475
+      },
+      "duration_seconds": 120.65806860000001,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T09:49:01.301970+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "xmEERLqJ2kU",
+      "media_sha256": "14184d35578cc9e672428f693ae74328ecb54b003d85857ff2afbf8354a90081",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "UNKNOWN": 3,
+        "KEEP": 5
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\xmEERLqJ2kU\\attempt_01\\highlights.json",
+        "sha256": "0ddc4b6ae4a1ebb69c3e6e6c4e786a4ec3cd36346cd125abdd10c0337d9795bb"
+      },
+      "stream_sha256": "689bdfdbf17a8c8be74b1a0c5adea5c07d4489f04ef826de69c6ae9043548148",
+      "conversation_id": "956f2ca3-5ede-454f-b46c-f245e6a5f219",
+      "usage": {
+        "input_tokens": 114165,
+        "output_tokens": 16230,
+        "thinking_tokens": 13693,
+        "cache_read_tokens": 60516,
+        "total_tokens": 130395
+      },
+      "duration_seconds": 169.6457488,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T09:51:27.209029+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "0tmA_C6XwfM",
+      "media_sha256": "63a2f711416d2a911a4f00166fedb7ce01e2eaab18946c0222071322111b961b",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "UNKNOWN": 3,
+        "KEEP": 6
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\0tmA_C6XwfM\\attempt_01\\highlights.json",
+        "sha256": "ade14dbb43923272f237f402569a1395bed21d886d7eb5b38a65840161266cb3"
+      },
+      "stream_sha256": "dbdf5786c906bb4dbbc5f573fcc1375c618160f12a1e8a2f9deefab05fad1e8b",
+      "conversation_id": "a55773ba-432f-490a-8b35-ddb2d8b8e276",
+      "usage": {
+        "input_tokens": 83654,
+        "output_tokens": 13562,
+        "thinking_tokens": 11601,
+        "cache_read_tokens": 31337,
+        "total_tokens": 97216
+      },
+      "duration_seconds": 133.9543883,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T09:54:15.093242+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "3eYKfiOEJNs",
+      "media_sha256": "d8c2669fbd08e8b2f35ebce82dfe5aa6cbf7e8fbee56df9e971ca12b7dd9e322",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "UNKNOWN": 3,
+        "KEEP": 15
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\3eYKfiOEJNs\\attempt_01\\highlights.json",
+        "sha256": "cf443bd46cf5200414e4270575ba57060cbd2453bfce987b1cb2477747dddb06"
+      },
+      "stream_sha256": "f33a9250ef13cb00638c270863d3b33907f77efc3e28b2d643e8a1495efd9d09",
+      "conversation_id": "02296058-7d2a-4968-b9a1-3f11f9236f54",
+      "usage": {
+        "input_tokens": 84498,
+        "output_tokens": 13261,
+        "thinking_tokens": 9867,
+        "cache_read_tokens": 38763,
+        "total_tokens": 97759
+      },
+      "duration_seconds": 153.1595806,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T09:56:34.720982+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "Bhxk-O1Y7Ho",
+      "media_sha256": "a66202fe5943daee0a0984fd708ff3126168ded35750c099a54ae67705e1ff3f",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "UNKNOWN": 4,
+        "KEEP": 4
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\Bhxk-O1Y7Ho\\attempt_01\\highlights.json",
+        "sha256": "0b8c68689de565c664548c97eb7cc126d56de5043b6a5c972889ed348d9a603a"
+      },
+      "stream_sha256": "7dd35eb7e493495422511101c8c002f6e82b2bfdf32af05879ab3baa9fbbadc7",
+      "conversation_id": "7e3425fd-bcb8-4d8b-9939-98b960d3158a",
+      "usage": {
+        "input_tokens": 108053,
+        "output_tokens": 9501,
+        "thinking_tokens": 7427,
+        "cache_read_tokens": 60026,
+        "total_tokens": 117554
+      },
+      "duration_seconds": 128.0926767,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T09:59:15.029690+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "i3wAGJaaktw",
+      "media_sha256": "7a8cc3f5415702ce254200db00650cb42981ba0c0fa5b5ef4a910f7c66c69c21",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "UNKNOWN": 7,
+        "KEEP": 8
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\i3wAGJaaktw\\attempt_01\\highlights.json",
+        "sha256": "0d5998c868b629a8ef24764b52090d4787f9519194fddc8aa725c9d8c431fe07"
+      },
+      "stream_sha256": "f7098e0e6b4e917dca062e4caa255f1cac99db2911366703df4504611a311700",
+      "conversation_id": "32e9af76-ff97-4193-996c-c1185d40e218",
+      "usage": {
+        "input_tokens": 86990,
+        "output_tokens": 16885,
+        "thinking_tokens": 13871,
+        "cache_read_tokens": 35265,
+        "total_tokens": 103875
+      },
+      "duration_seconds": 146.1931666,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:01:57.426619+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "xxdtq8mxegs",
+      "media_sha256": "fe3200fd13dfbf74f5c02d73ec9acd7bd0c1f68eb876968bc74230549320c327",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 2,
+        "UNKNOWN": 1
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\xxdtq8mxegs\\attempt_01\\highlights.json",
+        "sha256": "a7d81f4db2f2b67f592b3f4a7a819a12335dda8307dd1492c150fc43f3d90906"
+      },
+      "stream_sha256": "99703d30dc87fa1893c96feb64235fab56714702a2b2d273342597f26fd867af",
+      "conversation_id": "19ffafc2-cf70-44aa-bc93-7105ed750128",
+      "usage": {
+        "input_tokens": 118939,
+        "output_tokens": 16665,
+        "thinking_tokens": 14238,
+        "cache_read_tokens": 0,
+        "total_tokens": 135604
+      },
+      "duration_seconds": 151.1580841,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:04:56.745812+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "37rzWOQsNIw",
+      "media_sha256": "c4fb034705c03a890fed5cc46ff79d1e9aef5cd9edec1d22dfe7cc653b5fd98a",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "UNKNOWN": 5,
+        "KEEP": 6
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\37rzWOQsNIw\\attempt_01\\highlights.json",
+        "sha256": "ef43101a009683c038ac9e0ed33db4762570d209d5e79fd0ab57c45522ef7830"
+      },
+      "stream_sha256": "9e98210e6ea97e63db7aa8bba91c4f27785abf3aaa7f0c35f12074dcdaecab4f",
+      "conversation_id": "73986699-8001-4bbc-a159-b467a02b15a3",
+      "usage": {
+        "input_tokens": 91840,
+        "output_tokens": 20053,
+        "thinking_tokens": 17502,
+        "cache_read_tokens": 39029,
+        "total_tokens": 111893
+      },
+      "duration_seconds": 168.6224886,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:06:47.607122+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "Hl-__g2gn_A",
+      "media_sha256": "9386d64a62463f36213a043e6e74c76faf5eff746d7ef53035146c7bead40bd1",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 10,
+        "UNKNOWN": 1
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\Hl-__g2gn_A\\attempt_01\\highlights.json",
+        "sha256": "29034377e2c04c4b23556a011393103bbd0200b0b8e3906b55b97499a5df2b88"
+      },
+      "stream_sha256": "46b3915be9ae0085052569f874a4d5a65b0963ef86bf2e7cdd1b68b7015a5720",
+      "conversation_id": "f34cd26a-a5d9-43ff-8494-8e90083c36df",
+      "usage": {
+        "input_tokens": 90588,
+        "output_tokens": 9380,
+        "thinking_tokens": 7061,
+        "cache_read_tokens": 87942,
+        "total_tokens": 99968
+      },
+      "duration_seconds": 98.2472456,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:10:00.819434+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "LRw_obCPUt0",
+      "media_sha256": "ce57a731477468ddf799c29cfcbd11469e30cb96eb844c372a8447a90e1db858",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 9,
+        "UNKNOWN": 5
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\LRw_obCPUt0\\attempt_01\\highlights.json",
+        "sha256": "ac46d4d3b5825b4c600047e6574bea484b9fdee04963eb1127d7ef1c76a7caf2"
+      },
+      "stream_sha256": "c259e811b5eb35b4464bd5824d86817bdc00094b8608094e2880333a7fe16136",
+      "conversation_id": "8ab68bcc-4e50-46aa-bbdb-fa1930db5242",
+      "usage": {
+        "input_tokens": 144270,
+        "output_tokens": 20691,
+        "thinking_tokens": 16277,
+        "cache_read_tokens": 0,
+        "total_tokens": 164961
+      },
+      "duration_seconds": 182.6183949,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:12:50.577662+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "WG0MBPpPC6I",
+      "media_sha256": "0d68d94612da8efd687419dc030a485d61419c30290865d9ec1f9ed1062040f9",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "UNKNOWN": 6,
+        "KEEP": 4
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\WG0MBPpPC6I\\attempt_01\\highlights.json",
+        "sha256": "b8fece981b6863731a8cf088e948e89819ea40e4216b0875c69c7f39caa7fc1c"
+      },
+      "stream_sha256": "88c77c10136037d6f7a9050cc536a6765ebc9a760ac6b75f925da0ab93d5af23",
+      "conversation_id": "8142774d-9346-40a6-a351-f0700e668273",
+      "usage": {
+        "input_tokens": 103987,
+        "output_tokens": 10889,
+        "thinking_tokens": 8664,
+        "cache_read_tokens": 56640,
+        "total_tokens": 114876
+      },
+      "duration_seconds": 153.9739597,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:15:19.742628+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "Yi4Ij2NM7U4",
+      "media_sha256": "26ec9f71ea771e5601a1f5c963fa425681ae2f86b3dfca483a64d58b5a65feb9",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 9,
+        "UNKNOWN": 1
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\Yi4Ij2NM7U4\\attempt_01\\highlights.json",
+        "sha256": "b98eab360f185032274aeb006a76fa1e6cc6109abca8f53f4a5713ebbb7004d6"
+      },
+      "stream_sha256": "a1553868bdf94205a278f4c653c994be42cd4be4372dc18d0a5a10c1f9023ab8",
+      "conversation_id": "da5405d2-67da-4210-8ade-bdec5484d8c9",
+      "usage": {
+        "input_tokens": 104764,
+        "output_tokens": 10494,
+        "thinking_tokens": 8136,
+        "cache_read_tokens": 56572,
+        "total_tokens": 115258
+      },
+      "duration_seconds": 138.4458014,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:15:19.757660+00:00",
+      "status": "EXACT_PRIOR_NATIVE_UI_RECEIPT_REUSED",
+      "source_id": "GsAD1KT1xo8",
+      "media_sha256": "a195fc9d8e5330ee55c62dfc0a99eb5d130bf0444bb412992d1204eecd8f3a86",
+      "model": "Gemini 3.8 Flash High (prior UI)",
+      "states": {
+        "KEEP": 15
+      },
+      "new_model_calls": 0,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\antigravity_label_probe_20261009\\output\\native_video_tvsum_v1\\highlights.json",
+        "sha256": "49ccffb856b1786504c7f1e731dd9a5a5576e5de8f7def111fa0be3ecad4bfd5"
+      },
+      "prior_acceptance": {
+        "path": "G:\\ai\\AIC视频\\reports\\gemini_distillation_data_20261009\\native_video_acceptance.json",
+        "sha256": "2853beb006546718052a01a555d1d2fd877b2b2ff0984d6ad9d4440028b804ab"
+      },
+      "full_source_frame_observation_independently_proven": false,
+      "cli_stream_available": false,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:18:02.081306+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "XkqCExn6_Us",
+      "media_sha256": "ee3e102d0cda34b30c8eadaa162157616c398213dc88d0198ff4cc6476dd5fc9",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 13
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\XkqCExn6_Us\\attempt_02\\highlights.json",
+        "sha256": "7480f49d896abcb75ab20efa6ed20b3155308f54d4fb95899410cfb7d2d873d2"
+      },
+      "stream_sha256": "50c9f3530cc18e496ac2dad95af3318059c4e6fc19957acf5ad10a8771feb8b9",
+      "conversation_id": "de1c5fb8-ac2b-4ef6-8cd2-c314c0fca49c",
+      "usage": {
+        "input_tokens": 84049,
+        "output_tokens": 12073,
+        "thinking_tokens": 9790,
+        "cache_read_tokens": 38787,
+        "total_tokens": 96122
+      },
+      "duration_seconds": 109.9084491,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:20:46.492123+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "b626MiF1ew4",
+      "media_sha256": "66d6dc7720db2ae750c9c85a7f6a0d55416a9a23ce6ca7d151969501d8606e1c",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 19,
+        "UNKNOWN": 9
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\b626MiF1ew4\\attempt_01\\highlights.json",
+        "sha256": "b145fd56fd0777d076854753e20cfad92881830f38549b189cddd292348d7047"
+      },
+      "stream_sha256": "cfda628d272ba6506961bf004bc40328f540af9ce0e9d32af2c4e7dc04e6bd28",
+      "conversation_id": "c9d2c46f-22c7-45a9-8213-f59230b0eacd",
+      "usage": {
+        "input_tokens": 136509,
+        "output_tokens": 17452,
+        "thinking_tokens": 11883,
+        "cache_read_tokens": 0,
+        "total_tokens": 153961
+      },
+      "duration_seconds": 153.524824,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:24:30.017910+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "cjibtmSLxQ4",
+      "media_sha256": "43183ef7f35bfcbc39c122be797fdee5031103862c7c7da3b9ab74d222c79c9d",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 21,
+        "UNKNOWN": 3
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\cjibtmSLxQ4\\attempt_01\\highlights.json",
+        "sha256": "090c1515bc34cf4afb937efd51fe705b150d6dd64619ef02fb71e8fcfce4f87d"
+      },
+      "stream_sha256": "422e0041003d99e7f8c1aad57ad17ca7f31c1857d6c548cec1890a2927760644",
+      "conversation_id": "45f1cbc5-c2b5-41e2-b1de-b849d8296028",
+      "usage": {
+        "input_tokens": 196799,
+        "output_tokens": 18466,
+        "thinking_tokens": 14328,
+        "cache_read_tokens": 12239,
+        "total_tokens": 215265
+      },
+      "duration_seconds": 212.5729108,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:26:48.358675+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "4wU_LUjG5Ic",
+      "media_sha256": "2779762f2c332931c9fb4e61783b81df6e34b487dc3a94c882781c981e6c4869",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 8,
+        "UNKNOWN": 4
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\4wU_LUjG5Ic\\attempt_01\\highlights.json",
+        "sha256": "2ccd7cb729d1990a36b69901d3db71246d61a00e982a911c2ca151e9e0e1c0da"
+      },
+      "stream_sha256": "640a2836019b5c63d40dde10872f612e97f875cc3ddca7037a1c32576fead783",
+      "conversation_id": "fd2fe878-f80a-478b-b056-fff23ca41c4e",
+      "usage": {
+        "input_tokens": 85921,
+        "output_tokens": 14018,
+        "thinking_tokens": 10909,
+        "cache_read_tokens": 35110,
+        "total_tokens": 99939
+      },
+      "duration_seconds": 127.9851456,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:29:36.690624+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "91IHQYk1IQM",
+      "media_sha256": "327f8cd1ff27ecec1de291e396ac7c40521253fa208f2e3c477c5b1e84964f05",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 13,
+        "UNKNOWN": 3
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\91IHQYk1IQM\\attempt_01\\highlights.json",
+        "sha256": "7d05edfba4eefe2ae4bbfd11478bdbac347e418f27bff35c2c51c5b0b4d021eb"
+      },
+      "stream_sha256": "e1afc98d0eb49b57cdfc5679d93bfd7b4127124c390f4c598b1e4bda9ac2380f",
+      "conversation_id": "23895865-adab-45e7-a784-39e1a9503aaf",
+      "usage": {
+        "input_tokens": 86004,
+        "output_tokens": 20454,
+        "thinking_tokens": 16856,
+        "cache_read_tokens": 31718,
+        "total_tokens": 106458
+      },
+      "duration_seconds": 157.9208737,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:32:20.319115+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "RBCABdttQmI",
+      "media_sha256": "2411ac74f1e8a049072063bd579b4aa034e5c01a388c67cdcc7959763562b36b",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 6,
+        "UNKNOWN": 1
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\RBCABdttQmI\\attempt_01\\highlights.json",
+        "sha256": "3bd6d3301d8e24b43c982c8e44cba0885f6e4a046ab439f25748e52c423bc7e9"
+      },
+      "stream_sha256": "320fd17759c66be4a70937343df491bd33428140b77d41ca1f9603623ac04ca5",
+      "conversation_id": "c8ce2d95-8acd-45e7-b525-c7473961c50e",
+      "usage": {
+        "input_tokens": 100670,
+        "output_tokens": 11055,
+        "thinking_tokens": 9316,
+        "cache_read_tokens": 53008,
+        "total_tokens": 111725
+      },
+      "duration_seconds": 151.5001529,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:35:44.761695+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "fWutDQy1nnY",
+      "media_sha256": "d50d740e77517611ea231e844d409ebdf51e05037ef8cd17a22cd983d2464fc3",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 15,
+        "UNKNOWN": 1
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\fWutDQy1nnY\\attempt_01\\highlights.json",
+        "sha256": "f3c817cb4497b9bee437316310e974b270fba24b3d454b0d50c6659c491c2db4"
+      },
+      "stream_sha256": "b04c9d6270013d1d0d620910b8b27cf67bda229b4b85348aa4ccd45320b7ad28",
+      "conversation_id": "97a8e475-b451-4ee6-a3b7-84e969c618bc",
+      "usage": {
+        "input_tokens": 194816,
+        "output_tokens": 14890,
+        "thinking_tokens": 11803,
+        "cache_read_tokens": 0,
+        "total_tokens": 209706
+      },
+      "duration_seconds": 192.0999633,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:38:49.465178+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "z_6gVvQb2d0",
+      "media_sha256": "fe77605cdf8c234219ce423a90a93e44e003e55567bdb9bb87a3fb5fec0063cd",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 11,
+        "UNKNOWN": 2
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\z_6gVvQb2d0\\attempt_01\\highlights.json",
+        "sha256": "8687fe7c5eb50dcfc58ceb799903267f929b98bade06ccb2fc2e853f553d7f1d"
+      },
+      "stream_sha256": "3066f777bf6c86ec4bd256ff86452b1eb3633bd0c4818db6e7379e88a5e6a496",
+      "conversation_id": "9895543b-f274-476d-9b47-86ebe86d09fb",
+      "usage": {
+        "input_tokens": 146498,
+        "output_tokens": 19586,
+        "thinking_tokens": 15710,
+        "cache_read_tokens": 0,
+        "total_tokens": 166084
+      },
+      "duration_seconds": 172.9662207,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:40:56.148618+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "98MoyGZKHXc",
+      "media_sha256": "e293ceb35a8f1ec514707c579ab9b78e678a0c686f895d25945b9a50432c000c",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "UNKNOWN": 2,
+        "KEEP": 8
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\98MoyGZKHXc\\attempt_01\\highlights.json",
+        "sha256": "7d63836c5df2558550ea287e30915b639560698bf91ec80a01b1e57c1faa83c8"
+      },
+      "stream_sha256": "903d320c4fbfac9b24b57fbd3051e194b2492f1c90f3c3735a01452bef5ae4b8",
+      "conversation_id": "9be013ba-789e-48a5-ac09-16fc3561e486",
+      "usage": {
+        "input_tokens": 85840,
+        "output_tokens": 11698,
+        "thinking_tokens": 9251,
+        "cache_read_tokens": 81252,
+        "total_tokens": 97538
+      },
+      "duration_seconds": 112.9021506,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:43:42.938542+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "AwmHb44_ouw",
+      "media_sha256": "82ecca1de0363253060bb3c19e2f5dbd4080bfc0cd790db23c3e73ffd76a602f",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "UNKNOWN": 5,
+        "KEEP": 9
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\AwmHb44_ouw\\attempt_01\\highlights.json",
+        "sha256": "80d6cd958c5247b9865449c52e4126a8d0919b5588ff376d4e104e99a509052d"
+      },
+      "stream_sha256": "e61252d1cef9aa7ba9713c85e8fc0d8f1110ee4aff9ae3d8fed963dd60a39a5e",
+      "conversation_id": "618945d5-d58a-479e-9b2b-0ffd57c0011d",
+      "usage": {
+        "input_tokens": 101929,
+        "output_tokens": 14212,
+        "thinking_tokens": 11299,
+        "cache_read_tokens": 49321,
+        "total_tokens": 116141
+      },
+      "duration_seconds": 154.1628264,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:47:46.326080+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "J0nA4VgnoCo",
+      "media_sha256": "65c9490a2166d17736c38ed077f250290c548b1da8f1801f10ff53fad8e84a5b",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 16,
+        "UNKNOWN": 1
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\J0nA4VgnoCo\\attempt_01\\highlights.json",
+        "sha256": "0346a7498993e2598d10776492bbd77d18284974d6cf33376b0b03bf4e31d673"
+      },
+      "stream_sha256": "8808b4daa12083e70e3c0ff0faa316da09deff52437f8145b2d02450a96f4df7",
+      "conversation_id": "511e6c70-b9c7-4dbd-ba33-ecbc5b4b1600",
+      "usage": {
+        "input_tokens": 208881,
+        "output_tokens": 25294,
+        "thinking_tokens": 19853,
+        "cache_read_tokens": 0,
+        "total_tokens": 234175
+      },
+      "duration_seconds": 232.6362206,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:49:57.179099+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "XzYM3PfTM4w",
+      "media_sha256": "c758df53e237aadc9e893a4389078b25f58000a782d3c69b8490195aae30dac0",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "UNKNOWN": 8,
+        "KEEP": 7
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\XzYM3PfTM4w\\attempt_01\\highlights.json",
+        "sha256": "486463b1c541f819d9995b85eef44e5767d2f8ca5232896dec628a10eaa85c55"
+      },
+      "stream_sha256": "bef9ec45fa46af83f522951068d840e28c13ecc70aab7df89537636aa898cb36",
+      "conversation_id": "627afc60-01fb-404d-8407-508b20d0d2a5",
+      "usage": {
+        "input_tokens": 79980,
+        "output_tokens": 15056,
+        "thinking_tokens": 12145,
+        "cache_read_tokens": 31596,
+        "total_tokens": 95036
+      },
+      "duration_seconds": 119.9991587,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:52:46.944996+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "gzDbaEs1Rlg",
+      "media_sha256": "6682bdee7edc1d697a1807bb3f84f50e3cacd98266fc93d1deb38adbb8d125c2",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 15,
+        "UNKNOWN": 1
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\gzDbaEs1Rlg\\attempt_01\\highlights.json",
+        "sha256": "041ca136377e10410f41135c58a424636610245006c8d9635fb454b230017ed7"
+      },
+      "stream_sha256": "b50a75ffa0f3c1927076e12dfce64dc5a6b43d90771ae5f457d4a5d442fd81a6",
+      "conversation_id": "6b11c7b8-7a70-4fdb-b7ab-9b19da077c5e",
+      "usage": {
+        "input_tokens": 144650,
+        "output_tokens": 16739,
+        "thinking_tokens": 13881,
+        "cache_read_tokens": 0,
+        "total_tokens": 161389
+      },
+      "duration_seconds": 158.1261135,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:55:02.506231+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "HT5vyqe0Xaw",
+      "media_sha256": "85fdd93e61fb670b5437666c9eb90aa1798889edbe07394749c00ca0d044c886",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 7,
+        "UNKNOWN": 1
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\HT5vyqe0Xaw\\attempt_01\\highlights.json",
+        "sha256": "4c9ee6fea4e284cba60381b837579d22cfa837968051dc8997446509501cb044"
+      },
+      "stream_sha256": "e023193ed0b37f20717fba00ace267d61e284251b90bd5c89f482527ecbf53e0",
+      "conversation_id": "9daa5a97-3e6d-453b-b5cf-b7003b35eef1",
+      "usage": {
+        "input_tokens": 96344,
+        "output_tokens": 10300,
+        "thinking_tokens": 8022,
+        "cache_read_tokens": 49401,
+        "total_tokens": 106644
+      },
+      "duration_seconds": 123.4040502,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:56:50.483935+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "akI8YFjEmUw",
+      "media_sha256": "28f8d4d89a14b30f9066ad5146e8b219c67d45291b9a1588af6d1f6c455acffe",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 5,
+        "UNKNOWN": 1
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\akI8YFjEmUw\\attempt_01\\highlights.json",
+        "sha256": "d71ad4e7fe2a06770236e3fcb46edcec73531ab9bcc68fb6339727fb52f09be6"
+      },
+      "stream_sha256": "725a78fce1894721ee687a23b610691d76f299bc8cced9ab4d3c9ca5ffe50578",
+      "conversation_id": "41a83e9d-ad9e-42d4-b449-801f44a21214",
+      "usage": {
+        "input_tokens": 82047,
+        "output_tokens": 10389,
+        "thinking_tokens": 8219,
+        "cache_read_tokens": 66296,
+        "total_tokens": 92436
+      },
+      "duration_seconds": 97.248197,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T10:58:56.409452+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "sTEELN-vY30",
+      "media_sha256": "b6767caf3ddb2a1750672427315fe61c63a854de26ca707f5e5041bf45557d48",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 9,
+        "UNKNOWN": 9
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\sTEELN-vY30\\attempt_01\\highlights.json",
+        "sha256": "59c421d26d79f98976916b2fd8ee29cc593b86d0576bf5577be759b93f9fbd09"
+      },
+      "stream_sha256": "03cd4a0fb07d1760b1be6ed076ae949a3dea935b38b73aa62f1f6ebd545873a4",
+      "conversation_id": "ec734f54-1afd-40ff-9a31-1773f5123a9a",
+      "usage": {
+        "input_tokens": 80414,
+        "output_tokens": 11696,
+        "thinking_tokens": 8912,
+        "cache_read_tokens": 35152,
+        "total_tokens": 92110
+      },
+      "duration_seconds": 114.3856857,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T11:01:48.873135+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "vdmoEJ5YbrQ",
+      "media_sha256": "77f719f5de3ca948691dd34e7dac5ed5783d1b98814fea035aa7cce6d21edb72",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 2,
+        "UNKNOWN": 1
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\vdmoEJ5YbrQ\\attempt_01\\highlights.json",
+        "sha256": "c8912d2033690fc94f8b31bca10bd527da6059fd33fd66bd2151e5548f9c5b2b"
+      },
+      "stream_sha256": "6fab5905b480062d3852eba7d537f542a4ac6512e5dc0ad148e7fe6b2dae9d8f",
+      "conversation_id": "edc5256a-4d45-4422-8c53-cc9065ead96a",
+      "usage": {
+        "input_tokens": 96555,
+        "output_tokens": 9836,
+        "thinking_tokens": 8537,
+        "cache_read_tokens": 102050,
+        "total_tokens": 106391
+      },
+      "duration_seconds": 159.5754797,
+      "no_unobserved_to_negative": true
+    },
+    {
+      "utc": "2026-10-09T11:04:26.849092+00:00",
+      "status": "PASS_NATIVE_VIDEO_TOOL_CALL_AND_EVENT_SCHEMA",
+      "source_id": "xwqBXPGE9pQ",
+      "media_sha256": "71bb39923112962e30006918c9e3a9dbcd248786f275568447e8a29ebdb380ff",
+      "model": "gemini-3.8-flash-high",
+      "states": {
+        "KEEP": 9,
+        "UNKNOWN": 1
+      },
+      "native_video_completed_tool_calls": 1,
+      "full_source_frame_observation_independently_proven": false,
+      "declared_timestamps_are_model_report_not_independent_tool_frame_receipt": true,
+      "raw": {
+        "path": "G:\\ai\\AIC视频\\reports\\qwen8b_annotation_20261009_v1\\raw\\gemini\\xwqBXPGE9pQ\\attempt_01\\highlights.json",
+        "sha256": "96d51ab53b297ba482d9307b82c465725f6d0e447894750af78e9aec1e60acd5"
+      },
+      "stream_sha256": "28b8ecca7110fe4c111cc5d304937b17ca32756e3214355df952682643698005",
+      "conversation_id": "47a0b307-978b-41e6-9164-939455a183b5",
+      "usage": {
+        "input_tokens": 133100,
+        "output_tokens": 14214,
+        "thinking_tokens": 11429,
+        "cache_read_tokens": 0,
+        "total_tokens": 147314
+      },
+      "duration_seconds": 147.1698672,
+      "no_unobserved_to_negative": true
+    }
+  ],
+  "rejected_attempts": [
+    {
+      "source_id": "VuWGsYPqAX8",
+      "attempt": "attempt_01",
+      "error": "AssertionError()",
+      "raw_sha256": "5bc0abdedbacbc5248e08ef98e71b8686f2d833ab36e3d4f8f1eebd777f7b399",
+      "source_duration_seconds": 216.48,
+      "out_of_domain_events": [
+        {
+          "event_index": 4,
+          "start": 215.0,
+          "end": 249.0
+        },
+        {
+          "event_index": 5,
+          "start": 249.0,
+          "end": 318.0
+        },
+        {
+          "event_index": 6,
+          "start": 318.0,
+          "end": 325.0
+        }
+      ],
+      "status": "REJECTED_RAW_PRESERVED_NO_CLIPPING"
+    },
+    {
+      "source_id": "XkqCExn6_Us",
+      "attempt": "attempt_01",
+      "error": "FileNotFoundError(2, 'No such file or directory')",
+      "status": "REJECTED_RAW_PRESERVED",
+      "raw_sha256": null
+    }
+  ],
+  "unresolved": [],
+  "controller": "gemini_resume_v3"
+}

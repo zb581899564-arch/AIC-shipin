@@ -1,0 +1,60 @@
+{
+  "status": "COMPLETE_INTERFACE_SMOKE_NO_NATIVE_PREDICTION_CHANGE_NOT_QUALITY",
+  "utc": "2026-10-13T18:10:20.115228+00:00",
+  "actual_model_calls": 2,
+  "actual_independent_replays": 2,
+  "original_complete_clock_decodes": 0,
+  "old_model_calls_repeated": 0,
+  "charged_seconds": 83.02639091201127,
+  "sampled_peak_memory_mib": 21114,
+  "unique_terminal": "completed/exit0",
+  "resource_sha256": "48f54ce7f56f8b4f3970d9ed68d12afe5de4d55c6a0985dcdeae5da331a291d3",
+  "chain_completion_sha256": "6d7cbb53ae9f3c523f53f6389f8faeb8bb13d6241c9a72a676435261b73a7d63",
+  "replay_completion_sha256": "356d96557775caa478831cf72ac15956ba41f776baa72f5f2659cb60aa05fdfb",
+  "decisions": [
+    {
+      "side": "start",
+      "decision": {
+        "decision": "KEEP"
+      },
+      "endpoint": {
+        "request_id": "SMOKE_ORIGINAL_SCREEN_001.start",
+        "event_id": "SMOKE_ORIGINAL_SCREEN_001",
+        "side": "start",
+        "raw_decision": {
+          "decision": "KEEP"
+        },
+        "applied_decision": "KEEP",
+        "original_endpoint_exact": "324/25",
+        "endpoint_exact": "324/25",
+        "displacement_exact": "0",
+        "changed": false
+      },
+      "seconds": 3.861195187084377,
+      "output_tokens": 6
+    },
+    {
+      "side": "end",
+      "decision": {
+        "decision": "KEEP"
+      },
+      "endpoint": {
+        "request_id": "SMOKE_ORIGINAL_SCREEN_001.end",
+        "event_id": "SMOKE_ORIGINAL_SCREEN_001",
+        "side": "end",
+        "raw_decision": {
+          "decision": "KEEP"
+        },
+        "applied_decision": "KEEP",
+        "original_endpoint_exact": "476/25",
+        "endpoint_exact": "476/25",
+        "displacement_exact": "0",
+        "changed": false
+      },
+      "seconds": 3.375715964473784,
+      "output_tokens": 6
+    }
+  ],
+  "new_ZIPs": 0,
+  "science_quality_claim": false
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Fixed Silver 426 fresh temporal candidate static input contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "plan", "manifest", "clock_registry", "changed_cpu_acceptance", "space", "strict_loader_root"],
+  "properties": {
+    "schema": {"const": "FIXED_SILVER_426_FRESH_TEMPORAL_CANDIDATE_V1"},
+    "plan": {"$ref": "#/definitions/bound"},
+    "manifest": {"$ref": "#/definitions/bound"},
+    "clock_registry": {"$ref": "#/definitions/bound"},
+    "changed_cpu_acceptance": {"$ref": "#/definitions/bound"},
+    "strict_loader_root": {"type": "string"},
+    "space": {
+      "type": "object", "additionalProperties": false,
+      "required": ["field_frames", "field_shots", "anchor_requests", "anchor_output", "schedule_stage", "spatial_stage"],
+      "properties": {
+        "field_frames": {"$ref": "#/definitions/bound"},
+        "field_shots": {"$ref": "#/definitions/bound"},
+        "anchor_requests": {"$ref": "#/definitions/bound"},
+        "anchor_output": {"$ref": "#/definitions/bound"},
+        "schedule_stage": {"$ref": "#/definitions/bound"},
+        "spatial_stage": {"$ref": "#/definitions/bound"}
+      }
+    }
+  },
+  "definitions": {
+    "bound": {
+      "type": "object", "additionalProperties": false, "required": ["path", "sha256"],
+      "properties": {"path": {"type": "string"}, "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+    }
+  }
+}

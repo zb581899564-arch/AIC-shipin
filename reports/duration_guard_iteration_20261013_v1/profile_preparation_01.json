@@ -1,0 +1,30 @@
+{
+  "status": "INDEPENDENT_NEW5_PROFILE_DERIVED_WITH_UNCHANGED_NATIVE64_B_INFERENCE_REPLAY_ALGORITHMS",
+  "original_files": {
+    "improvement\\human_reference_v1\\map_sources_v3.py": "e69264394dd126d877f659c8c9264a24bef62a796f6af719ddefcaa66402700c",
+    "improvement\\human_reference_v1\\native_mapping_v3.py": "2c142aef27665ddd6c273b0ab1de4389dde6d76b80fdef662224baeb0e48cdd7",
+    "improvement\\human_reference_v1\\native_window_plan.py": "8ba176ea84c3ee739f1a57c53d1026b486172d5f271903c5a78741fb40787461",
+    "improvement\\human_reference_v1\\prepare_rgb_v3.py": "abe52edfe47ff20264b9018e5e23adf5e81ebc8b2c0ee5964b6a38fc62294642",
+    "improvement\\human_reference_v1\\prepare_processor_v3.py": "80f63d0cc6024fb26bca6ec49a3ef9f68713c6138a2cf2eab52a0d6b27fa8515",
+    "improvement\\human_reference_v1\\human_run_common.py": "c29153519d489cb85504fc7cac5e2c9af8228997469f14a80b613412fab21df2",
+    "improvement\\human_reference_v1\\infer_human_01.py": "cd473dd7aeacf691ecf96719f9db56b14043fa36097f30d6307ac72a3da5c6d4",
+    "improvement\\human_reference_v1\\replay_human_01.py": "07ee45f0f4e56e454ff82b53b0d20a907e26b4585cb00447873f8356f6eb7488"
+  },
+  "new_files": {
+    "improvement\\duration_guard_v1\\cpu_chain_new5.py": "183667e55031aceb0849ff43b9bdcc8812b6e32a255ea17848bd5c5341299544",
+    "improvement\\duration_guard_v1\\download_new5.py": "7f0d24f630c6955728e67b376cd8ac2d15060d7a342d47ae22fa736753af644c",
+    "improvement\\duration_guard_v1\\infer_new5.py": "c43ba06815333cd144abaf00a566ffd8dfb1f4353bd4fc92714abca509743566",
+    "improvement\\duration_guard_v1\\map_new5.py": "1dd3fcdee36e3c3d8ce48b89dc13d5ed98292657656c62ac2bd64cae77947e9b",
+    "improvement\\duration_guard_v1\\measured_clock_original.py": "85a17855c8ec8a8f64bf99ddcb8cc3c8bfe8738899724417633de10b3aed1571",
+    "improvement\\duration_guard_v1\\native_mapping_v3.py": "2c142aef27665ddd6c273b0ab1de4389dde6d76b80fdef662224baeb0e48cdd7",
+    "improvement\\duration_guard_v1\\native_window_plan.py": "8ba176ea84c3ee739f1a57c53d1026b486172d5f271903c5a78741fb40787461",
+    "improvement\\duration_guard_v1\\new5_common.py": "8f37ef1e31f681836f12d327795599449fa469e0f20563c1717b8f476893f09c",
+    "improvement\\duration_guard_v1\\new5_run_common.py": "21148536d5b322fd3db408656b36035f343fd077d98eaf3dc3963ed96338e65e",
+    "improvement\\duration_guard_v1\\processor_new5.py": "e2134e547f3198c69f5f83c4d8a545754f304f6f08c7f3b43eff2196482547bc",
+    "improvement\\duration_guard_v1\\replay_new5.py": "47192e5411cb9df702f0f13f17532f7dfa79f32183e02cb610d8ed41f0ce3450",
+    "improvement\\duration_guard_v1\\rgb_new5.py": "e862bd55bad3af20a81fd7395632e9bdc3ae273823ff68f89f155737f9ccfc25"
+  },
+  "scope": "Distinct reserved5 path/source count/registration/isolation; no old20 frozen files edited; pure clock/CPU/model/replay algorithms preserved",
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0
+}

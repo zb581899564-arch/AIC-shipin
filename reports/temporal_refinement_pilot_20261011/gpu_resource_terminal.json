@@ -1,0 +1,38 @@
+{
+  "name": "temporal_refinement_fact6_20261011_v2",
+  "command": [
+    "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+    "-B",
+    "/home/inspur/aic_video_work/temporal_refinement_pilot_20261011/dev_01/infer_v2.py"
+  ],
+  "started_utc": "2026-10-11T16:11:43.628613+00:00",
+  "runner_pid": 3581918,
+  "reserved_seconds": 1800,
+  "teardown_reserve_seconds": 120,
+  "prior_charged_seconds": 217689.33726051776,
+  "gpu_time_mode": "UNLIMITED",
+  "max_total_gpu_seconds": null,
+  "resource_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
+  "disk_before": {
+    "free_bytes": 179424997376,
+    "work_bytes": 100932460544
+  },
+  "planned_output_bytes": 134217728,
+  "capacity_reason": "Six existing dev sources; shared GPU has no external task; prior8B measured peaks 17698-23042MiB with actual46068MiB; ample live host memory; prepared105MB plus bounded128MiB new outputs, no fixed resource gate",
+  "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+  "project_disk_limit_bytes": null,
+  "project_ram_limit_bytes": null,
+  "project_vram_limit_bytes": null,
+  "runner_source_sha256": "9997d41fbe2bb51726914b4698b874cf939c52aac02048fa9b3bb753c64c6cec",
+  "child_pid": 3581922,
+  "finished_utc": "2026-10-11T16:13:37.399172+00:00",
+  "charged_seconds": 113.77065153233707,
+  "exit_code": 1,
+  "stop_reason": null,
+  "sampled_peak_memory_mib": 19306,
+  "status": "failed",
+  "disk_after": {
+    "free_bytes": 179396149248,
+    "work_bytes": 100961218560
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schema": "MIDNIGHT_FIVE_VERIFY40_46_V1",
+  "deadline_utc": "2026-10-15T16:00:00Z",
+  "baseline": "USER_VERIFY40.46",
+  "baseline_sha256": "86593725c6bad919dc0d342fe98ad65e489a13a6e492da5de3afd247a3226543",
+  "actual_parameters": 8782459120,
+  "model_role": "BASE_ONLY_WITH_FROZEN_RESIDENT_TIME_ADAPTER_DISABLED_DURING_GENERATION",
+  "new_training_updates": 0,
+  "arms": [
+    "ORDINARY",
+    "REDUNDANT",
+    "ACTION",
+    "REACTION",
+    "INFORMATION"
+  ],
+  "risk_arms_without_offline_effect_quality_evaluation": [
+    "ACTION",
+    "REACTION",
+    "INFORMATION"
+  ],
+  "deletion_quality_gates": {
+    "full_group_denominator": 4,
+    "macro_paired_all_rater_duration_F1_delta_min": "0",
+    "macro_all_rater_precision_delta_min": "0",
+    "per_source_F1_delta_min": "-1/100",
+    "minimum_sources_with_real_changed_native_frames": 1,
+    "maximum_invalid_decisions": 0
+  },
+  "deletion_protocol_is_new_not_a_relaxation_of_old_recall_gates": true,
+  "development_previously_exposed": true,
+  "old_scientific_STOP_results_unchanged": true,
+  "independent_confirmation_required_for_deletion_production": true,
+  "output_schema": "ordinary/redundant candidate index arrays; each recall field [] or [sample_a,sample_b],0<=a<b<=64",
+  "risky_recall_application": "Protected baseline union corresponding category intervals; retain original boxes; new frames use existing accepted continuous spatial field",
+  "deletion_application": "Remove indicated original whole events; union of surviving events intersect protected baseline; preserve original baseline for an otherwise empty source",
+  "production_new_call_maximum": 521,
+  "production_GPU_wall_budget_seconds": 16200,
+  "development_new_calls": 8,
+  "development_GPU_wall_budget_seconds": 900,
+  "external_labels_in_inference": false,
+  "test_labels_or_manual_edits_used": false,
+  "automatic_website_submission": false,
+  "reference_task": "External all-rater event-conditioned human-summary duration proxy, not official unconditional highlight ground truth"
+}

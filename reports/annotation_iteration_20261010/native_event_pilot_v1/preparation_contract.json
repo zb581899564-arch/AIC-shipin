@@ -1,0 +1,20 @@
+{
+  "status": "OBSERVATION_PREPARATION_ONLY_NOT_TRAINING_ADMISSION",
+  "utc": "2026-10-10T05:02:37.584041+00:00",
+  "source_rule": "train-only eligible, exclude two human-count issues and three old native pilot sources; hash EMPTY407-PILOT-20261010|source_group ascending; first two",
+  "windows": [
+    [
+      0,
+      30
+    ],
+    [
+      60,
+      90
+    ]
+  ],
+  "sampling": "first+(N-1)*i//63 for i=0..63",
+  "closed_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "pro_decision_pending": true,
+  "no_human_scores_no_teacher_labels_no_predictions": true
+}

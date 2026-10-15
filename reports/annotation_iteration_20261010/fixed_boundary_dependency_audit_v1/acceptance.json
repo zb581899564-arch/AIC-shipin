@@ -1,0 +1,80 @@
+{
+  "status": "STOP_BOUNDARY_DECODING_DEPENDENCY_NOT_DISCRIMINATIVE_FOR_CURRENT_BLOCKERS",
+  "utc": "2026-10-10T15:02:39.608889+00:00",
+  "ranges": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\fixed_boundary_dependency_audit_v1\\frozen_five_ranges.json",
+    "sha256": "82a3bdc29973f159373d039e0af0ba2d1a342097b93a8527cf84b1f1e462d24f"
+  },
+  "source_identity_verified": true,
+  "old_boundaries_preserved": true,
+  "existing_uncertainties_within_frozen_half_second": true,
+  "existing_consequential_boundary_unknowns": 0,
+  "blockers": [
+    {
+      "component": "v3 complete-reference observation contract",
+      "actual_error": "Unresolved teacher observation contract",
+      "remedy_effect_of_extra_boundary_frames": "None: cannot remove old out-of-whitelist read or retroactively pass old protocol."
+    },
+    {
+      "component": "four-image test free descriptions",
+      "facts": [
+        "F28/F29 language inference from simple",
+        "F60 running inferred from one static image"
+      ],
+      "remedy_effect_of_five_ranges": "None: two captions and F60 motion are outside these fixed gaps; do not select new easier/expanded ranges."
+    },
+    {
+      "component": "complete train/locked references",
+      "qualified_first_window": false,
+      "remedy_effect_of_extra_boundary_frames": "Native cut evidence alone does not resolve highlight preference, independent adjudication or missing denominator."
+    },
+    {
+      "component": "spatial reference",
+      "remedy_effect_of_extra_boundary_frames": "No independent same-frame human crop reference generated."
+    }
+  ],
+  "distinguishing_native_cut_from_edit_choice": "New65 frames could measure where subjects/shots change inside the fixed ranges. They cannot certify high-value selection or the original midpoint edit choices. No new measurements claimed.",
+  "resource_snapshot": {
+    "available_ram_bytes": 2537144320,
+    "free_disk_bytes": 247270277120,
+    "rationale": "Read-only live snapshot. No fixed admission threshold used; no decoder allocated because evidence dependency does not address blockers."
+  },
+  "decoder_budget": {
+    "registered_new_decode_passes": 0,
+    "new_frames_generated": 0,
+    "new_observations": 0,
+    "new_GPU": 0,
+    "new_model_calls": 0,
+    "new_Pro": 0,
+    "new_training": 0
+  },
+  "metadata_range_count": 5,
+  "possible_new_native_frames": 65,
+  "independent_reviewer_started": false,
+  "independent_reviewer_reason": "No new visual evidence to adjudicate; do not repeat old whole-window opinions.",
+  "remaining23_not_expanded": true,
+  "new_zip": false,
+  "total_CLI_unchanged": 23,
+  "cash": "No new model invocation; prior cash remains UNKNOWN_NOT_ZERO",
+  "prior_v3": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\independent_highlight_pilot_v3\\acceptance.json",
+    "sha256": "29cb07a037bcaf199367f03028c7bc469a905997b6ec0c953f97796233fb1199"
+  },
+  "minimum_method": {
+    "path": "G:\\ai\\AIC视频\\reports\\annotation_iteration_20261010\\frame_binding_four_image_v1\\acceptance.json",
+    "sha256": "be312c97d74e05b45d60368fc14b436bbafee68f96467a2068db73235ba63a39"
+  },
+  "baseline": {
+    "path": "G:\\ai\\AIC视频\\deliveries\\ANNOTATION_ITERATION_20261010\\SAFE_37_66\\candidate_SAFE_37_66.zip",
+    "sha256": "07730c9e02e68d1a1ce54e7ef5a8aa616346cf8f2f8d78426ed36bc3eb481496"
+  },
+  "minimal_external_review_if_chosen": {
+    "person": "One independent editor capable of video highlight selection; not necessarily the user.",
+    "material": "Existing same fixed W01 30s source, native64 images and actual student64 images; canonical corrected facts; all selected and rejected ranges; fixed5 endpoint pairs with their native PTS ranges.",
+    "task": "Produce accountable complete highlight/NO/UNKNOWN preference and boundary adjudication under finite observations, disclose exposure and uncertainty. Do not read model preferences before independent initial judgment.",
+    "new_media_upload_required": false,
+    "must_be_human_for_current_time_silver_contract": false,
+    "qualification_note": "Human editor is an alternative reference source, not a newly invented requirement of original finite-silver contract. One reviewed window still does not satisfy 8-12train/at least4sources/locked at least6of8 all4sources; spatial human gold remains separate."
+  },
+  "next_authorized_action_requires": "A reference supplement that adds independent editorial evidence and meets original process, rather than this boundary-only dependency. No contact, paid service or new model run arranged here."
+}

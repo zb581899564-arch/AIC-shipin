@@ -1,0 +1,19 @@
+{
+  "status": "PASS_ACTUAL_NEW_B1_NATIVE_PROCESSOR_AND_EXACT_RESUME",
+  "utc": "2026-10-08T20:11:49.585187+00:00",
+  "original_NONTEST8_five_arm_proof_reused": true,
+  "original_proof_sha256": "884ebb4383b509d45395d441c724bd69bdd7f3ad5ba2c4c64ff9e05aa1477d07",
+  "new_processor_source": "qvh_000584_9x16",
+  "new_processor_window": 0,
+  "input_tokens": {
+    "B1": 5292,
+    "B0": 5329
+  },
+  "B1_B0_actual_video_tensor_equal": true,
+  "original_native_pixel_SHA_equal": true,
+  "actual_B1_empty_rejected": true,
+  "original_parser_cases": 5,
+  "changed_cache_contract_rejections": 3,
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0
+}

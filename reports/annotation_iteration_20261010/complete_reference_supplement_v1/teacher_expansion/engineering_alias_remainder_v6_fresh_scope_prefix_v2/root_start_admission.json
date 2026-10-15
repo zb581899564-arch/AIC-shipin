@@ -1,0 +1,39 @@
+{
+  "status": "ROOT_APPROVED_START_FRESH_SCOPE_V6_FIXED_CLI35_36",
+  "utc": "2026-10-10T23:52:00.889125+00:00",
+  "dry_run_sha256": "4b1770f5eda01fcc4f161610f54b6941d11e03993a74e0c634f91f15aab24fe1",
+  "execution_binding_sha256": "4456f422563da164bbb37fa1ebb0cef94fcf004b5d40d642a797a21896822f51",
+  "negative_receipt_sha256": "1104051d3771877c2471f6d894080c38294d52dce9908d85ea975ba3294cde63",
+  "root_verifier_sha256": "00fcd4c2057df2d01ef8c0716a1faf18caad2262dc3898155dce1664d4b2befb",
+  "actual_pixel_checks": 360,
+  "calls": [
+    {
+      "CLI": 35,
+      "jobs": [
+        19,
+        20
+      ],
+      "inputs": 921,
+      "bootstrap_exact_LF_lines": 261,
+      "argv_UTF16_units": 743,
+      "freeze_sha256": "34077d448a3c1495acf254a7f1fab39aa0ffb76ed19959ed1d1324c0ef4150a7"
+    },
+    {
+      "CLI": 36,
+      "jobs": [
+        21,
+        22,
+        23
+      ],
+      "inputs": 994,
+      "bootstrap_exact_LF_lines": 378,
+      "argv_UTF16_units": 743,
+      "freeze_sha256": "d61968a0ef2c7b0498e47fc798c818d7b7c258e4c16c44b688976633798a5b49"
+    }
+  ],
+  "scope_semantics_and_training_not_admitted": true,
+  "old34_FAILURE_preserved": true,
+  "no34_retry_no37": true,
+  "quality_protocol_unchanged": true,
+  "source_transfer_not_authorized_by_gate": true
+}

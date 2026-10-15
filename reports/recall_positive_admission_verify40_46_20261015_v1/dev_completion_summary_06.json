@@ -1,0 +1,447 @@
+{
+  "utc": "2026-10-15T04:35:14.485841+00:00",
+  "host": "inspur-NP5570M5",
+  "status": "PASS_POSITIVE_DEV_FROZEN_PENDING_FRESH_CONFIRMATION",
+  "actual_new_model_calls": 10,
+  "actual_first_input_QA": 10,
+  "actual_first_output_QA": 10,
+  "unique_ledger_exact": true,
+  "resource": {
+    "name": "recall_positive_novelparts_dev10_20261015_v1",
+    "command": [
+      "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+      "-B",
+      "-u",
+      "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/code/positive_runtime.py",
+      "infer",
+      "--root",
+      "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1",
+      "--group",
+      "dev"
+    ],
+    "started_utc": "2026-10-15T04:27:02.253917+00:00",
+    "runner_pid": 199417,
+    "reserved_seconds": 1200,
+    "teardown_reserve_seconds": 120,
+    "prior_charged_seconds": 269181.4812312457,
+    "gpu_time_mode": "UNLIMITED",
+    "max_total_gpu_seconds": null,
+    "resource_policy_sha256": "34f00bf95e92c1b7a62f3db68eadad2e9fd8a9c530c969e0a299f9b2a5478c71",
+    "disk_before": {
+      "free_bytes": 79946932224,
+      "work_bytes": 199731699712
+    },
+    "planned_output_bytes": 33554432,
+    "capacity_reason": "10 strict new positive-admission calls; retained vision caches, raw and first output QA only.",
+    "resource_admission": "live no-conflict check plus job output estimate; no fixed utilization/free-VRAM/free-disk gate",
+    "project_disk_limit_bytes": null,
+    "project_ram_limit_bytes": null,
+    "project_vram_limit_bytes": null,
+    "runner_source_sha256": "9997d41fbe2bb51726914b4698b874cf939c52aac02048fa9b3bb753c64c6cec",
+    "child_pid": 199473,
+    "finished_utc": "2026-10-15T04:31:55.701296+00:00",
+    "charged_seconds": 293.44747891742736,
+    "exit_code": 0,
+    "stop_reason": null,
+    "sampled_peak_memory_mib": 22388,
+    "status": "completed",
+    "disk_after": {
+      "free_bytes": 79956316160,
+      "work_bytes": 199732498432
+    }
+  },
+  "new_decisions": {
+    "UNKNOWN": 7,
+    "KEEP": 3
+  },
+  "new_media_decodes": 0,
+  "new_vision_processor_calls": 0,
+  "old_success_repeated": false,
+  "production_admitted": false,
+  "fixed40_actual_calls": 0,
+  "production_actual_calls": 0,
+  "new_ZIPs": 0,
+  "result": {
+    "status": "PASS_POSITIVE_DEV_FROZEN_PENDING_FRESH_CONFIRMATION",
+    "group": "dev",
+    "utc": "2026-10-15T04:34:51.089247+00:00",
+    "conditions": {
+      "full_group": true,
+      "macro_F1_not_lower": true,
+      "macro_recall_gain": true,
+      "every_source_loss_within_gate": true,
+      "macro_precision_not_lower": true,
+      "all_rater_recall_retained": true,
+      "all_baseline_native_frames_retained": true,
+      "real_changed_sources": true
+    },
+    "macro": {
+      "f1": {
+        "baseline": 0.21729596061811673,
+        "baseline_exact": "50245948511994918944931088846444478001588916222663379933146667929243802887949850984745159629396052126983043/231232777494188429013876601193936958892478520847854829009090940272902250331179326682350070710378765554160000",
+        "augmented": 0.22412033471209655,
+        "augmented_exact": "16518431355139971744472078197688671921914826860473719336042923482823354973254605597639290993950523858137177842690288413474599806784652099489775966531/73703403023913183119843231374321784648158830520467512046809007835500355579588621277454976181233009032960764250733014535643841747484221644362511256960",
+        "delta": 0.0068243740939798155,
+        "delta_exact": "28094340671896434785806731469341059771487809226866491622685703049197735617495168993741457346836369431441900616559479974510339098655614849033484228496856703216403296247/4116764451216136808116910501956747944984030593425406571081940461726299250367192264745718906581946666276813143406901446112413407690090927806560184896243184654887170610000"
+      },
+      "recall": {
+        "baseline": 0.40364010325944977,
+        "baseline_exact": "491589060740470805741089895056217321317162761424127568167/1217889542616853539183365489287797759321263947236647040000",
+        "augmented": 0.4329579405658602,
+        "augmented_exact": "263647474104045140983171747333764942723106386619846682761/608944771308426769591682744643898879660631973618323520000",
+        "delta": 0.02931783730641039,
+        "delta_exact": "58109271844683458451323/1982044965914923595904000"
+      },
+      "precision": {
+        "baseline": 0.15091913416061745,
+        "baseline_exact": "148631695765786977/984843284401592000",
+        "augmented": 0.1538992612655214,
+        "augmented_exact": "1266344962343937403593/8228401825523519581760",
+        "delta": 0.0029801271049039665,
+        "delta_exact": "8026724204481089871/2693416730874553684000"
+      }
+    },
+    "cases": [
+      {
+        "video_id": "v_vfJnUQ9Tax0",
+        "baseline": {
+          "f1": {
+            "exact": "4508507390406620207069548678106976297803257/12547705371689646280836163905771947786288770",
+            "value": 0.35930931248822545
+          },
+          "recall": {
+            "exact": "153559489268909837693/232669186979380320000",
+            "value": 0.6599906556707856
+          },
+          "precision": {
+            "exact": "352919/1428680",
+            "value": 0.24702452613601367
+          }
+        },
+        "augmented": {
+          "f1": {
+            "exact": "4022147197630704932380850463315852064512092450239142/11038984572138879235219351700013387300335061324972495",
+            "value": 0.36435843997663875
+          },
+          "recall": {
+            "exact": "1179958143728397563/1710802845436620000",
+            "value": 0.6897101830732906
+          },
+          "precision": {
+            "exact": "183947/742465",
+            "value": 0.24775174587354287
+          }
+        },
+        "all_rater_recall_preserved": true,
+        "baseline_native_frames_preserved": true,
+        "baseline_selected_frames": 343,
+        "augmented_selected_frames": 357,
+        "added_native_frames": 14,
+        "annotator_count": 10,
+        "baseline_spans": [
+          [
+            "90833/10000",
+            "31/2"
+          ],
+          [
+            "257/16",
+            "119663/5000"
+          ]
+        ],
+        "augmented_spans": [
+          [
+            "90833/10000",
+            "119663/5000"
+          ]
+        ],
+        "new_positive_KEEP_spans": [
+          [
+            "15",
+            "47/2"
+          ]
+        ],
+        "reference_ref": {
+          "path": "/home/inspur/aic_video_work/recall_expansion_verify40_46_20261014_v1/dev/reference_02/v_vfJnUQ9Tax0/reference.json",
+          "sha256": "eec4712d7198241bb69cbb71d333d437f11ffae54338428a828bdaddcc592e2f"
+        },
+        "clock_ref": {
+          "path": "/home/inspur/aic_video_work/recall_expansion_verify40_46_20261014_v1/dev/reference_02/v_vfJnUQ9Tax0/clock.json",
+          "sha256": "98061263b9697107d9730294c7e2662c75b645ebd2cc99449c1ad8417b33646b"
+        }
+      },
+      {
+        "video_id": "v_8tlLBffNjf8",
+        "baseline": {
+          "f1": {
+            "exact": "6255244916992460661289/67773250597024897535520",
+            "value": 0.09229666368204349
+          },
+          "recall": {
+            "exact": "313965401581693/2739595787460000",
+            "value": 0.11460281951768664
+          },
+          "precision": {
+            "exact": "211703/2740080",
+            "value": 0.07726161279962629
+          }
+        },
+        "augmented": {
+          "f1": {
+            "exact": "6255244916992460661289/67773250597024897535520",
+            "value": 0.09229666368204349
+          },
+          "recall": {
+            "exact": "313965401581693/2739595787460000",
+            "value": 0.11460281951768664
+          },
+          "precision": {
+            "exact": "211703/2740080",
+            "value": 0.07726161279962629
+          }
+        },
+        "all_rater_recall_preserved": true,
+        "baseline_native_frames_preserved": true,
+        "baseline_selected_frames": 273,
+        "augmented_selected_frames": 273,
+        "added_native_frames": 0,
+        "annotator_count": 10,
+        "baseline_spans": [
+          [
+            "2703/400",
+            "116411/10000"
+          ],
+          [
+            "539987/30000",
+            "667487/30000"
+          ]
+        ],
+        "augmented_spans": [
+          [
+            "2703/400",
+            "116411/10000"
+          ],
+          [
+            "539987/30000",
+            "667487/30000"
+          ]
+        ],
+        "new_positive_KEEP_spans": [],
+        "reference_ref": {
+          "path": "/home/inspur/aic_video_work/recall_expansion_verify40_46_20261014_v1/dev/reference_02/v_8tlLBffNjf8/reference.json",
+          "sha256": "8b57c380e54d81c0adf77d6ff5734053fe364d3a6beaf36bcc4468f6787b8984"
+        },
+        "clock_ref": {
+          "path": "/home/inspur/aic_video_work/recall_expansion_verify40_46_20261014_v1/dev/reference_02/v_8tlLBffNjf8/clock.json",
+          "sha256": "da193eddfb5b2dc5ecc727d1c1f4907b40ef532fa396df216da2cc290c45ced5"
+        }
+      },
+      {
+        "video_id": "v__CMIO5R_OGA",
+        "baseline": {
+          "f1": {
+            "exact": "1158141298313743376826628686943/6913385577085934526051738049389",
+            "value": 0.1675215833689855
+          },
+          "recall": {
+            "exact": "926336613463027/3116750544784800",
+            "value": 0.297212304979957
+          },
+          "precision": {
+            "exact": "11129/95334",
+            "value": 0.11673694589548325
+          }
+        },
+        "augmented": {
+          "f1": {
+            "exact": "1158141298313743376826628686943/6913385577085934526051738049389",
+            "value": 0.1675215833689855
+          },
+          "recall": {
+            "exact": "926336613463027/3116750544784800",
+            "value": 0.297212304979957
+          },
+          "precision": {
+            "exact": "11129/95334",
+            "value": 0.11673694589548325
+          }
+        },
+        "all_rater_recall_preserved": true,
+        "baseline_native_frames_preserved": true,
+        "baseline_selected_frames": 357,
+        "augmented_selected_frames": 357,
+        "added_native_frames": 0,
+        "annotator_count": 10,
+        "baseline_spans": [
+          [
+            "99833/10000",
+            "168667/10000"
+          ],
+          [
+            "275833/10000",
+            "35"
+          ]
+        ],
+        "augmented_spans": [
+          [
+            "99833/10000",
+            "168667/10000"
+          ],
+          [
+            "275833/10000",
+            "35"
+          ]
+        ],
+        "new_positive_KEEP_spans": [],
+        "reference_ref": {
+          "path": "/home/inspur/aic_video_work/recall_expansion_verify40_46_20261014_v1/dev/reference_02/v__CMIO5R_OGA/reference.json",
+          "sha256": "e7594315e9491b2922b5da0d0e5bb1f64322aaeb68e2205bad7aa6acb5ee0bde"
+        },
+        "clock_ref": {
+          "path": "/home/inspur/aic_video_work/recall_expansion_verify40_46_20261014_v1/dev/reference_02/v__CMIO5R_OGA/clock.json",
+          "sha256": "25edea48c51b7eb6650ec74b813724079c1d60b179b9e1072ee4a064d6914537"
+        }
+      },
+      {
+        "video_id": "v_voaGOm-rl9Y",
+        "baseline": {
+          "f1": {
+            "exact": "460902737407534397988373181930213/1843195987723439335678943270827500",
+            "value": 0.25005628293321247
+          },
+          "recall": {
+            "exact": "32016404742601718743594471/58988726772061340588796000",
+            "value": 0.5427546328693698
+          },
+          "precision": {
+            "exact": "118981/731500",
+            "value": 0.16265345181134655
+          }
+        },
+        "augmented": {
+          "f1": {
+            "exact": "11787827278442088935201161686070789969553813152786359339789/43289114598758408716403276215655609708659354840842875677765",
+            "value": 0.27230465182071845
+          },
+          "recall": {
+            "exact": "16524877883787966427175299/26217211898693929150576000",
+            "value": 0.6303064546925065
+          },
+          "precision": {
+            "exact": "1659501/9545770",
+            "value": 0.1738467404934332
+          }
+        },
+        "all_rater_recall_preserved": true,
+        "baseline_native_frames_preserved": true,
+        "baseline_selected_frames": 877,
+        "augmented_selected_frames": 953,
+        "added_native_frames": 76,
+        "annotator_count": 10,
+        "baseline_spans": [
+          [
+            "31/4",
+            "12"
+          ],
+          [
+            "59/4",
+            "18"
+          ],
+          [
+            "83/4",
+            "24"
+          ],
+          [
+            "97097/3750",
+            "333019/7500"
+          ]
+        ],
+        "augmented_spans": [
+          [
+            "31/4",
+            "12"
+          ],
+          [
+            "59/4",
+            "18"
+          ],
+          [
+            "188333/10000",
+            "39/2"
+          ],
+          [
+            "83/4",
+            "333019/7500"
+          ]
+        ],
+        "new_positive_KEEP_spans": [
+          [
+            "188333/10000",
+            "39/2"
+          ],
+          [
+            "45/2",
+            "1863/50"
+          ]
+        ],
+        "reference_ref": {
+          "path": "/home/inspur/aic_video_work/recall_expansion_verify40_46_20261014_v1/dev/reference_02/v_voaGOm-rl9Y/reference.json",
+          "sha256": "25fe4c6d00e11a5463c588238f659831641d5d770d669e3222558ae559dca872"
+        },
+        "clock_ref": {
+          "path": "/home/inspur/aic_video_work/recall_expansion_verify40_46_20261014_v1/dev/reference_02/v_voaGOm-rl9Y/clock.json",
+          "sha256": "7776bb8aaf8a3d39c465a77c86a6c293a78f4eca18a214a8e4ad10f55ce961ff"
+        }
+      }
+    ],
+    "candidate": "OLD_EXPLICIT_KEEP_PLUS_POSITIVE_EVIDENCE_NEW_ADMISSION",
+    "bindings": {
+      "protocol_ref": {
+        "path": "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/protocol_v2.json",
+        "sha256": "8736442639beb692eecfd8f3a83404f9c012575f002653e5bdc3cf7811fc00d2"
+      },
+      "registration_ref": {
+        "path": "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/registration.json",
+        "sha256": "7a72863ffb832f8583d0ad7eb23212afeeea54d34801b053729e90541b8226dd"
+      },
+      "verification_export_ref": {
+        "path": "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/dev/POSITIVE/verification_export.json",
+        "sha256": "7b2f1d586f83ccd88843d2e49a54a719d9159d3e804cd5adccc9a1776508536d"
+      },
+      "reference_completion_refs": [
+        {
+          "path": "/home/inspur/aic_video_work/recall_expansion_verify40_46_20261014_v1/reference_completion_dev.json",
+          "sha256": "12561af7927642d2e1343d2999fc672e2a405dbe04d2424d8297ec055aef7775"
+        },
+        {
+          "path": "/home/inspur/aic_video_work/recall_expansion_verify40_46_20261014_v1/dev/reference_02/completion.json",
+          "sha256": "054587fd267677480d67aa76d997235731bc0b23690a137139bf86bf407fa81e"
+        }
+      ],
+      "first_input_QA_ref": {
+        "path": "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/dev/POSITIVE/input_qa_01/completion.json",
+        "sha256": "0747fb91399468fce1bfc947dac09960f0f17f8fca4227d0f21b6bfd9b456837"
+      },
+      "output_QA_completion_ref": {
+        "path": "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/dev/POSITIVE/output_qa_01/completion.json",
+        "sha256": "86153ac0c48075e7b42f72779b8b465e51f6a919f1710372d5ccef1e6d84733f"
+      }
+    },
+    "source_metrics_exposed_first_time": false,
+    "proxy_is_not_highlight_or_ORDINARY_gold": true,
+    "actual_online_improvement": "UNKNOWN",
+    "old_failed_gates_changed": false,
+    "production_admitted": false,
+    "no_fixed40_426_or_package_started": true
+  },
+  "bindings": {
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/dev/chain_01/completion.json": "d2f0762f7d5669f8638e279ed71b8791a9c85dbee393392ea8671860d75b54b9",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/dev/comparison_01/result.json": "c7fdc59b7ffc49772c57fec04a1fd029c8ba612c5983a4cbc3004879d2c3473c",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/dev/POSITIVE/cpu_01/completion.json": "9d7c75f09c2ee99b500288b604353dd4bd9c750149b0b5455bd30afdd90199ec",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/dev/POSITIVE/input_qa_01/completion.json": "0747fb91399468fce1bfc947dac09960f0f17f8fca4227d0f21b6bfd9b456837",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/dev/POSITIVE/gpu_01/completion.json": "67bcff87b6e0b069c09242566c1be8e11b4894aef4cdf7a02794fbaef10104a0",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/dev/POSITIVE/output_qa_01/completion.json": "86153ac0c48075e7b42f72779b8b465e51f6a919f1710372d5ccef1e6d84733f",
+    "/home/inspur/aic_video_work/round6_score_alignment/rematch_execution/rematch_exec_20261005T1215Z/controller/recall_positive_novelparts_dev10_20261015_v1.resource.json": "3f154ae21954909ba57757a78745b31d6bdfbb85cf89ba43c5abe47a998c62cc",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/registration.json": "7a72863ffb832f8583d0ad7eb23212afeeea54d34801b053729e90541b8226dd",
+    "/home/inspur/aic_video_work/recall_positive_admission_verify40_46_20261015_v1/protocol_v2.json": "8736442639beb692eecfd8f3a83404f9c012575f002653e5bdc3cf7811fc00d2"
+  }
+}

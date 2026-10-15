@@ -1,0 +1,15 @@
+{
+  "status": "PASS_EXACT_DOMAIN_END_LITERAL_REPRESENTATION_NO_TEACHER_OR_ENDPOINT_CHANGE",
+  "utc": "2026-10-11T14:15:29.075444+00:00",
+  "old_helper_rejection": "boundary requires known frame or explicit domain endpoint identity",
+  "actual_original_outside_literal": "30",
+  "actual_domain_end_exact": "30",
+  "actual_boundary_side": "end",
+  "actual_boundary_exact": "30",
+  "original_proposal_sha256": "4b3372fd26bcf98a781afbd291fe41000ba4c59a1dfaf4e21805b01a189eaff0",
+  "new_helper_sha256": "478de9f3b2ead5978a7de8d64b398edae189906ee5d28a1df47390cbbe7d7eec",
+  "audit_sha256": "20594c756b04a1c6d955dd7c864c37a6f94309b4ecee45625936f22822d6590e",
+  "new_teacher_calls": 0,
+  "semantic_acceptance": false,
+  "training_admitted": false
+}

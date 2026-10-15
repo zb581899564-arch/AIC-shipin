@@ -1,0 +1,88 @@
+{
+  "status": "PASS_ONE_NEW_BOUNDARY_RISK_ZIP_DELIVERED",
+  "utc": "2026-10-12T00:45:52.029430+00:00",
+  "candidate": "ASYMMETRIC_BOUNDARY_PRE075_POST050_8B",
+  "baseline_score_source": "USER_FEEDBACK_AND_SCREENSHOT",
+  "baseline_user_reported_score": 40.26,
+  "baseline_zip_sha256": "200a3ef337eefd9fe296c781a2335ed16696f3539ee2602601da45f1cceef32b",
+  "local_delivery_receipt": "deliveries\\ASYMMETRIC_BOUNDARY_PRE075_POST050_8B_20261012\\local_delivery_receipt.json",
+  "local_delivery_receipt_sha256": "804b4a856d9186868329727ae0cb2e4171846b4083751c203af39f5ebe5021f4",
+  "completion_receipt": "reports\\boundary_refinement_20261012_v1\\candidate_01\\completion.json",
+  "completion_receipt_sha256": "a08136e2aa749029469455c2852f012b5c5391d77c00b9fe2e72298bd9aff825",
+  "source_lock_sha256": "326958d4925a1715a0c0a2b7229f7e1af0e688a36186a496286ec755d41bef1d",
+  "protocol_sha256": "8ab1c787886f6acfa38598fcc4fb81fb0c5d43ef85d6832b512085acea054c95",
+  "source_freeze_and_launch_claim_preserved": true,
+  "pre_delivery_state_snapshot_sha256": "5e637cba6a2c224f48281049ea2a13cf123c8ddd817af3e3fbdf671f416917f9",
+  "prior_policy_arm": {
+    "status": "CPU_INPUTS_ACCEPTED_FIXED_ASYMMETRIC_RULE_AWAITING_INDEPENDENT_REVIEW",
+    "protocol": "reports/boundary_refinement_20261012_v1/PROTOCOL.json",
+    "baseline_score_user_reported": 40.26,
+    "candidate": "ASYMMETRIC_BOUNDARY_PRE075_POST050_8B",
+    "padding_exact": [
+      "3/4",
+      "1/2"
+    ],
+    "source_quality_gate": "FAILED_PRESERVED",
+    "scientific_quality_pass": false,
+    "official_score": null,
+    "new_training_updates": 0,
+    "new_model_calls": 0,
+    "closed_annotation_retired": true,
+    "heartbeat_restarted": false
+  },
+  "doc_prepend_preserved_original_bytes": {
+    "AGENTS.md": {
+      "prior_sha256": "8fecf55004661ca30376fc4026c472a9710847202087601ab9e105e874fc7b6b",
+      "prior_bytes": 187621,
+      "new_sha256": "39e6fd8713ed599e6eb8813c22ab9c55cf7977fef9cd31e68bb40b88c3c9e616"
+    },
+    "ROADMAP.md": {
+      "prior_sha256": "f80b4aa8f1342ea26c4065400f20fddc663e0d67f40a479e7cb3475ce38d0296",
+      "prior_bytes": 78757,
+      "new_sha256": "ed7f17464d1f6a25f1dd04598f0fb6951dbf07c3e7f5a286b521e7082772d032"
+    }
+  },
+  "development": {
+    "jobs": 104,
+    "source_groups": 96,
+    "original_windows": 112,
+    "predeclared_arms": 5,
+    "baseline_weak_macro_iou": 0.5817563521714227,
+    "selected_weak_macro_iou": 0.5826107066455721,
+    "weak_macro_iou_delta": 0.0008543544741494504,
+    "paired_approx_95_percent_interval": [
+      -0.004290005887454885,
+      0.006440037126810545
+    ],
+    "no_semantic_or_official_gain_claim": true
+  },
+  "verification": {
+    "meaningful_interval_contract_tests_previously_passed": 4,
+    "frozen_interval_code_unchanged_after_tests": true,
+    "independent_review_pass": true,
+    "native_source_acceptance_426_pass": true,
+    "independent_11_strict_pass": true,
+    "delivery_size_sha_crc_member_sha_pass": true,
+    "baseline_all_118027_frames_boxes_preserved": true,
+    "new_candidate_frames": 121266,
+    "added_frames": 3239,
+    "removed_frames": 0,
+    "all_12_historical_zip_sha256_unchanged": true,
+    "distinct_new_zip": true
+  },
+  "scientific_quality_pass": false,
+  "formal_quality_reference": "FAILED_PRESERVED",
+  "official_score": null,
+  "new_model_calls": 0,
+  "new_video_decodes": 0,
+  "new_processor_encodes": 0,
+  "new_optimizer_updates": 0,
+  "test_gt_read": false,
+  "per_test_video_manual_adjustments": false,
+  "automatic_official_submission": false,
+  "closed_annotation_restored": false,
+  "heartbeat_restarted": false,
+  "old_successful_jobs_repeated": false,
+  "owned_local_package_exit_code": 0,
+  "next": "User manual submission of exactly the new linked ZIP."
+}

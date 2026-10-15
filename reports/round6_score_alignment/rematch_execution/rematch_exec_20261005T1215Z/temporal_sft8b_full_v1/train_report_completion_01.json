@@ -1,0 +1,5219 @@
+{
+  "status": "PASS_FULL_INTERVAL_SFT_TRAINING_ENGINEERING",
+  "scope": "TEMPORAL_8B_INTERVAL_SFT_FULL_NONTEST",
+  "quality_claim": false,
+  "full_training_completed": true,
+  "formal_c_bce_admitted": false,
+  "negative_targets_created": false,
+  "config_sha256": "7c05b28c75f2ea4aede7844712d8945b9b79ea8c5402e906514c1cfe755e0de3",
+  "admission_sha256": "cbb8d77f2db85d41dfc8992ce569c2f02bebc96c46d100fad7b6661a64642028",
+  "source_lock_sha256": "88e9767ee875566c7adeb7470d89d0cd3f936c53265d640c37e536a0f98bf9b5",
+  "train_manifest_sha256": "124801624736f960d15074ad65840d4e2850dcb7d8d5d3b16a2cb54e7eee4bc0",
+  "parents": 704,
+  "source_groups": 602,
+  "windows": 724,
+  "epochs": 5,
+  "optimizer_steps": 227,
+  "effective_batches": 3620,
+  "epoch_effective_counts": {
+    "1": 724,
+    "2": 724,
+    "3": 724,
+    "4": 724,
+    "5": 724
+  },
+  "updates": [
+    {
+      "optimizer_step": 1,
+      "effective_batches": 16,
+      "accumulated_batches": 16,
+      "mean_loss": 3.4603754431009293,
+      "gradient_norm": 5.033585071563721,
+      "changed_lora_tensors": 144,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 0
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 2,
+      "effective_batches": 32,
+      "accumulated_batches": 16,
+      "mean_loss": 3.63645039498806,
+      "gradient_norm": 5.360996246337891,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 3,
+      "effective_batches": 48,
+      "accumulated_batches": 16,
+      "mean_loss": 3.7100398540496826,
+      "gradient_norm": 6.14470911026001,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 4,
+      "effective_batches": 64,
+      "accumulated_batches": 16,
+      "mean_loss": 3.3861570805311203,
+      "gradient_norm": 5.616971015930176,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 5,
+      "effective_batches": 80,
+      "accumulated_batches": 16,
+      "mean_loss": 3.1385995894670486,
+      "gradient_norm": 6.303890705108643,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 6,
+      "effective_batches": 96,
+      "accumulated_batches": 16,
+      "mean_loss": 2.6325743347406387,
+      "gradient_norm": 5.319205284118652,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 7,
+      "effective_batches": 112,
+      "accumulated_batches": 16,
+      "mean_loss": 2.253542900085449,
+      "gradient_norm": 4.171640396118164,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 8,
+      "effective_batches": 128,
+      "accumulated_batches": 16,
+      "mean_loss": 1.8581706061959267,
+      "gradient_norm": 4.222418308258057,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 9,
+      "effective_batches": 144,
+      "accumulated_batches": 16,
+      "mean_loss": 1.6768809892237186,
+      "gradient_norm": 3.291245698928833,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 10,
+      "effective_batches": 160,
+      "accumulated_batches": 16,
+      "mean_loss": 1.5209995210170746,
+      "gradient_norm": 2.5045833587646484,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 11,
+      "effective_batches": 176,
+      "accumulated_batches": 16,
+      "mean_loss": 1.2755990475416183,
+      "gradient_norm": 1.8650579452514648,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 12,
+      "effective_batches": 192,
+      "accumulated_batches": 16,
+      "mean_loss": 1.3661823235452175,
+      "gradient_norm": 1.60670804977417,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 13,
+      "effective_batches": 208,
+      "accumulated_batches": 16,
+      "mean_loss": 1.1134628541767597,
+      "gradient_norm": 1.4021587371826172,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 14,
+      "effective_batches": 224,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8599861301481724,
+      "gradient_norm": 0.9912206530570984,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 15,
+      "effective_batches": 240,
+      "accumulated_batches": 16,
+      "mean_loss": 1.1120446026325226,
+      "gradient_norm": 0.9617993831634521,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 16,
+      "effective_batches": 256,
+      "accumulated_batches": 16,
+      "mean_loss": 1.0991852916777134,
+      "gradient_norm": 0.776932418346405,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 17,
+      "effective_batches": 272,
+      "accumulated_batches": 16,
+      "mean_loss": 1.1033300906419754,
+      "gradient_norm": 0.664991557598114,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 18,
+      "effective_batches": 288,
+      "accumulated_batches": 16,
+      "mean_loss": 1.0486214011907578,
+      "gradient_norm": 0.698413074016571,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 19,
+      "effective_batches": 304,
+      "accumulated_batches": 16,
+      "mean_loss": 1.1323630511760712,
+      "gradient_norm": 0.6612939238548279,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 20,
+      "effective_batches": 320,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9156055245548487,
+      "gradient_norm": 0.6626904010772705,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 21,
+      "effective_batches": 336,
+      "accumulated_batches": 16,
+      "mean_loss": 1.114995039999485,
+      "gradient_norm": 0.5084429979324341,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 22,
+      "effective_batches": 352,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9932581260800362,
+      "gradient_norm": 0.5475801825523376,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 23,
+      "effective_batches": 368,
+      "accumulated_batches": 16,
+      "mean_loss": 1.096102513372898,
+      "gradient_norm": 0.6214715242385864,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 24,
+      "effective_batches": 384,
+      "accumulated_batches": 16,
+      "mean_loss": 1.1321593262255192,
+      "gradient_norm": 0.5353395342826843,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 25,
+      "effective_batches": 400,
+      "accumulated_batches": 16,
+      "mean_loss": 1.0048037506639957,
+      "gradient_norm": 0.5588240027427673,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 26,
+      "effective_batches": 416,
+      "accumulated_batches": 16,
+      "mean_loss": 1.0024229139089584,
+      "gradient_norm": 0.49660858511924744,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 27,
+      "effective_batches": 432,
+      "accumulated_batches": 16,
+      "mean_loss": 1.0548282861709595,
+      "gradient_norm": 0.4307830333709717,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 28,
+      "effective_batches": 448,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9881333447992802,
+      "gradient_norm": 0.523076593875885,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 29,
+      "effective_batches": 464,
+      "accumulated_batches": 16,
+      "mean_loss": 0.987333670258522,
+      "gradient_norm": 0.4906195402145386,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 30,
+      "effective_batches": 480,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9143507964909077,
+      "gradient_norm": 0.5381149649620056,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 31,
+      "effective_batches": 496,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9286625571548939,
+      "gradient_norm": 0.43349331617355347,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 32,
+      "effective_batches": 512,
+      "accumulated_batches": 16,
+      "mean_loss": 0.971423327922821,
+      "gradient_norm": 0.4863278269767761,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 33,
+      "effective_batches": 528,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9661813452839851,
+      "gradient_norm": 0.5663585066795349,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 34,
+      "effective_batches": 544,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9469980373978615,
+      "gradient_norm": 0.46420925855636597,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 35,
+      "effective_batches": 560,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9326210059225559,
+      "gradient_norm": 0.5360413789749146,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 36,
+      "effective_batches": 576,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9049637094140053,
+      "gradient_norm": 0.40894776582717896,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 37,
+      "effective_batches": 592,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9189832024276257,
+      "gradient_norm": 0.4644862711429596,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 38,
+      "effective_batches": 608,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9334669783711433,
+      "gradient_norm": 0.5019859075546265,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 39,
+      "effective_batches": 624,
+      "accumulated_batches": 16,
+      "mean_loss": 0.969887550920248,
+      "gradient_norm": 0.47715550661087036,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 40,
+      "effective_batches": 640,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8029168769717216,
+      "gradient_norm": 0.5953093767166138,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 41,
+      "effective_batches": 656,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8731576427817345,
+      "gradient_norm": 0.6549798846244812,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 42,
+      "effective_batches": 672,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9781494215130806,
+      "gradient_norm": 0.5244666934013367,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 43,
+      "effective_batches": 688,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9589203558862209,
+      "gradient_norm": 0.5467087626457214,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 44,
+      "effective_batches": 704,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7994983457028866,
+      "gradient_norm": 0.6779460906982422,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 45,
+      "effective_batches": 720,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9753725007176399,
+      "gradient_norm": 0.7071824073791504,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 46,
+      "effective_batches": 736,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9357079155743122,
+      "gradient_norm": 0.6993051171302795,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 47,
+      "effective_batches": 752,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7995148058980703,
+      "gradient_norm": 0.6283644437789917,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 48,
+      "effective_batches": 768,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9549504071474075,
+      "gradient_norm": 0.5662487149238586,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 49,
+      "effective_batches": 784,
+      "accumulated_batches": 16,
+      "mean_loss": 0.804157629609108,
+      "gradient_norm": 0.7791373133659363,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 50,
+      "effective_batches": 800,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8759361952543259,
+      "gradient_norm": 0.4811990559101105,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 51,
+      "effective_batches": 816,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9022091515362263,
+      "gradient_norm": 0.7220092415809631,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 52,
+      "effective_batches": 832,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8543217685073614,
+      "gradient_norm": 0.49265816807746887,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 53,
+      "effective_batches": 848,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8135126270353794,
+      "gradient_norm": 0.6227331161499023,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 54,
+      "effective_batches": 864,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9060998111963272,
+      "gradient_norm": 0.5499588847160339,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 55,
+      "effective_batches": 880,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7546045696362853,
+      "gradient_norm": 0.7437554001808167,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 56,
+      "effective_batches": 896,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9249027371406555,
+      "gradient_norm": 0.5774021744728088,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 57,
+      "effective_batches": 912,
+      "accumulated_batches": 16,
+      "mean_loss": 0.825539905577898,
+      "gradient_norm": 0.5983399152755737,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 58,
+      "effective_batches": 928,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7946479246020317,
+      "gradient_norm": 0.6747205257415771,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 59,
+      "effective_batches": 944,
+      "accumulated_batches": 16,
+      "mean_loss": 0.842937882989645,
+      "gradient_norm": 0.7445113062858582,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 60,
+      "effective_batches": 960,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7969115395098925,
+      "gradient_norm": 0.5647855401039124,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 61,
+      "effective_batches": 976,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8898243401199579,
+      "gradient_norm": 0.606842577457428,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 62,
+      "effective_batches": 992,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8174292389303446,
+      "gradient_norm": 0.6522882580757141,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 63,
+      "effective_batches": 1008,
+      "accumulated_batches": 16,
+      "mean_loss": 0.708324084058404,
+      "gradient_norm": 0.5736929178237915,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 64,
+      "effective_batches": 1024,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7165281409397721,
+      "gradient_norm": 0.5100215077400208,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 65,
+      "effective_batches": 1040,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7843353040516376,
+      "gradient_norm": 0.538097620010376,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 66,
+      "effective_batches": 1056,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9805097989737988,
+      "gradient_norm": 0.596805989742279,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 67,
+      "effective_batches": 1072,
+      "accumulated_batches": 16,
+      "mean_loss": 0.901857890188694,
+      "gradient_norm": 0.6097831130027771,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 68,
+      "effective_batches": 1088,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8346568485721946,
+      "gradient_norm": 2.2082748413085938,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 69,
+      "effective_batches": 1104,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8538664849475026,
+      "gradient_norm": 0.6073115468025208,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 70,
+      "effective_batches": 1120,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8638623207807541,
+      "gradient_norm": 0.6751695275306702,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 71,
+      "effective_batches": 1136,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8624324016273022,
+      "gradient_norm": 0.5989042520523071,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 72,
+      "effective_batches": 1152,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6716678710654378,
+      "gradient_norm": 0.7546551823616028,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 73,
+      "effective_batches": 1168,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9222063273191452,
+      "gradient_norm": 0.5402635335922241,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 74,
+      "effective_batches": 1184,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7742520943284035,
+      "gradient_norm": 0.6216081976890564,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 75,
+      "effective_batches": 1200,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9059070572257042,
+      "gradient_norm": 0.6763913035392761,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 76,
+      "effective_batches": 1216,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7711761184036732,
+      "gradient_norm": 0.6462478041648865,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 77,
+      "effective_batches": 1232,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8358610663563013,
+      "gradient_norm": 0.5329691171646118,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 78,
+      "effective_batches": 1248,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7041031923145056,
+      "gradient_norm": 0.7110887765884399,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 79,
+      "effective_batches": 1264,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8886227253824472,
+      "gradient_norm": 0.7051820755004883,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 80,
+      "effective_batches": 1280,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7880745325237513,
+      "gradient_norm": 0.6984890103340149,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 81,
+      "effective_batches": 1296,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6028996789827943,
+      "gradient_norm": 0.7167336940765381,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 82,
+      "effective_batches": 1312,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9112606793642044,
+      "gradient_norm": 0.7952582240104675,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 83,
+      "effective_batches": 1328,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8847401682287455,
+      "gradient_norm": 0.8694450855255127,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 84,
+      "effective_batches": 1344,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7935798186808825,
+      "gradient_norm": 1.8389853239059448,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 85,
+      "effective_batches": 1360,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8347537536174059,
+      "gradient_norm": 0.6685978174209595,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 86,
+      "effective_batches": 1376,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9333454668521881,
+      "gradient_norm": 0.7196680307388306,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 87,
+      "effective_batches": 1392,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7869919398799539,
+      "gradient_norm": 0.6339078545570374,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 88,
+      "effective_batches": 1408,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8807464577257633,
+      "gradient_norm": 0.4793239235877991,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 89,
+      "effective_batches": 1424,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9619939662516117,
+      "gradient_norm": 0.6256572604179382,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 90,
+      "effective_batches": 1440,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7653176002204418,
+      "gradient_norm": 0.6676135063171387,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 91,
+      "effective_batches": 1456,
+      "accumulated_batches": 16,
+      "mean_loss": 0.932722270488739,
+      "gradient_norm": 0.5801288485527039,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 92,
+      "effective_batches": 1472,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8062035795301199,
+      "gradient_norm": 0.6768414974212646,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 93,
+      "effective_batches": 1488,
+      "accumulated_batches": 16,
+      "mean_loss": 0.769549717195332,
+      "gradient_norm": 0.6866253018379211,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 94,
+      "effective_batches": 1504,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7272343123331666,
+      "gradient_norm": 0.7010590434074402,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 95,
+      "effective_batches": 1520,
+      "accumulated_batches": 16,
+      "mean_loss": 0.91751404479146,
+      "gradient_norm": 0.6322768926620483,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 96,
+      "effective_batches": 1536,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7713981959968805,
+      "gradient_norm": 0.649354100227356,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 97,
+      "effective_batches": 1552,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8466067649424076,
+      "gradient_norm": 0.5383680462837219,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 98,
+      "effective_batches": 1568,
+      "accumulated_batches": 16,
+      "mean_loss": 0.980023168027401,
+      "gradient_norm": 0.6276592016220093,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 99,
+      "effective_batches": 1584,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8195271398872137,
+      "gradient_norm": 0.6661756038665771,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 100,
+      "effective_batches": 1600,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6887664878740907,
+      "gradient_norm": 0.6613959074020386,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 101,
+      "effective_batches": 1616,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7968918271362782,
+      "gradient_norm": 0.5704295039176941,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 102,
+      "effective_batches": 1632,
+      "accumulated_batches": 16,
+      "mean_loss": 0.769175173714757,
+      "gradient_norm": 0.6446228623390198,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 103,
+      "effective_batches": 1648,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8041072534397244,
+      "gradient_norm": 0.6782206892967224,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 104,
+      "effective_batches": 1664,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7167239915579557,
+      "gradient_norm": 0.8044570684432983,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 105,
+      "effective_batches": 1680,
+      "accumulated_batches": 16,
+      "mean_loss": 0.763695458881557,
+      "gradient_norm": 0.7930144667625427,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 106,
+      "effective_batches": 1696,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6190484706312418,
+      "gradient_norm": 0.8428711295127869,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 107,
+      "effective_batches": 1712,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7812288887798786,
+      "gradient_norm": 0.8846363425254822,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 108,
+      "effective_batches": 1728,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8672529738396406,
+      "gradient_norm": 0.8372088074684143,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 109,
+      "effective_batches": 1744,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7153353290632367,
+      "gradient_norm": 0.6275840997695923,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 110,
+      "effective_batches": 1760,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6782509135082364,
+      "gradient_norm": 0.8185875415802002,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 111,
+      "effective_batches": 1776,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8418349325656891,
+      "gradient_norm": 0.6862907409667969,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 112,
+      "effective_batches": 1792,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6933783758431673,
+      "gradient_norm": 0.7096284031867981,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 113,
+      "effective_batches": 1808,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8690369930118322,
+      "gradient_norm": 1.0967737436294556,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 114,
+      "effective_batches": 1824,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7672529444098473,
+      "gradient_norm": 0.7270947098731995,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 115,
+      "effective_batches": 1840,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7984483260661364,
+      "gradient_norm": 1.1141759157180786,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 116,
+      "effective_batches": 1856,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7179298158735037,
+      "gradient_norm": 0.6914235949516296,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 117,
+      "effective_batches": 1872,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7505326308310032,
+      "gradient_norm": 0.8905779123306274,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 118,
+      "effective_batches": 1888,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7830657847225666,
+      "gradient_norm": 0.7872708439826965,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 119,
+      "effective_batches": 1904,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7502958374097943,
+      "gradient_norm": 0.6984147429466248,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 120,
+      "effective_batches": 1920,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9022997552528977,
+      "gradient_norm": 0.7868089079856873,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 121,
+      "effective_batches": 1936,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7518209218978882,
+      "gradient_norm": 0.7752020359039307,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 122,
+      "effective_batches": 1952,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6647309977561235,
+      "gradient_norm": 0.8423980474472046,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 123,
+      "effective_batches": 1968,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7412419561296701,
+      "gradient_norm": 0.8985809683799744,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 124,
+      "effective_batches": 1984,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7544712238013744,
+      "gradient_norm": 0.7638229727745056,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 125,
+      "effective_batches": 2000,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8135247733443975,
+      "gradient_norm": 0.9327954053878784,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 126,
+      "effective_batches": 2016,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7006442928686738,
+      "gradient_norm": 0.757100522518158,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 127,
+      "effective_batches": 2032,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7046747133135796,
+      "gradient_norm": 0.7915377020835876,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 128,
+      "effective_batches": 2048,
+      "accumulated_batches": 16,
+      "mean_loss": 0.9034410323947668,
+      "gradient_norm": 0.81955486536026,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 129,
+      "effective_batches": 2064,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6436283439397812,
+      "gradient_norm": 0.8618412613868713,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 130,
+      "effective_batches": 2080,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8835169225931168,
+      "gradient_norm": 0.8242886066436768,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 131,
+      "effective_batches": 2096,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8711549248546362,
+      "gradient_norm": 0.9571560025215149,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 132,
+      "effective_batches": 2112,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7530628070235252,
+      "gradient_norm": 0.9766918420791626,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 133,
+      "effective_batches": 2128,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6834219358861446,
+      "gradient_norm": 0.8560934662818909,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 134,
+      "effective_batches": 2144,
+      "accumulated_batches": 16,
+      "mean_loss": 0.786275977268815,
+      "gradient_norm": 0.782541036605835,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 135,
+      "effective_batches": 2160,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7605447638779879,
+      "gradient_norm": 0.8037318587303162,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 136,
+      "effective_batches": 2176,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6966943051666021,
+      "gradient_norm": 0.9515838623046875,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 137,
+      "effective_batches": 2192,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7439971640706062,
+      "gradient_norm": 0.6769860982894897,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 138,
+      "effective_batches": 2208,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6882275100797415,
+      "gradient_norm": 0.8092362284660339,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 139,
+      "effective_batches": 2224,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8428702466189861,
+      "gradient_norm": 0.9760645627975464,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 140,
+      "effective_batches": 2240,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6324807144701481,
+      "gradient_norm": 0.9631895422935486,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 141,
+      "effective_batches": 2256,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7806688938289881,
+      "gradient_norm": 0.8948835730552673,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 142,
+      "effective_batches": 2272,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6667397655546665,
+      "gradient_norm": 1.0968536138534546,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 143,
+      "effective_batches": 2288,
+      "accumulated_batches": 16,
+      "mean_loss": 0.765515998005867,
+      "gradient_norm": 0.9812656044960022,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 144,
+      "effective_batches": 2304,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7651544054970145,
+      "gradient_norm": 1.2094563245773315,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 145,
+      "effective_batches": 2320,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6538907624781132,
+      "gradient_norm": 1.1938174962997437,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 146,
+      "effective_batches": 2336,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7817546483129263,
+      "gradient_norm": 1.1362733840942383,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 147,
+      "effective_batches": 2352,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6885169185698032,
+      "gradient_norm": 1.263262152671814,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 148,
+      "effective_batches": 2368,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6605528509244323,
+      "gradient_norm": 1.607013463973999,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 149,
+      "effective_batches": 2384,
+      "accumulated_batches": 16,
+      "mean_loss": 0.652244670316577,
+      "gradient_norm": 1.2212785482406616,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 150,
+      "effective_batches": 2400,
+      "accumulated_batches": 16,
+      "mean_loss": 0.673177681863308,
+      "gradient_norm": 1.2557810544967651,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 151,
+      "effective_batches": 2416,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7380421643611044,
+      "gradient_norm": 1.1816757917404175,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 152,
+      "effective_batches": 2432,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8583253063261509,
+      "gradient_norm": 1.3207451105117798,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 153,
+      "effective_batches": 2448,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7363157197833061,
+      "gradient_norm": 0.953092098236084,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 154,
+      "effective_batches": 2464,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6027340022847056,
+      "gradient_norm": 1.200774073600769,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 155,
+      "effective_batches": 2480,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7736264411360025,
+      "gradient_norm": 1.0461267232894897,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 156,
+      "effective_batches": 2496,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6671473355963826,
+      "gradient_norm": 1.4077630043029785,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 157,
+      "effective_batches": 2512,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6802398134022951,
+      "gradient_norm": 0.9259616732597351,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 158,
+      "effective_batches": 2528,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7406877325847745,
+      "gradient_norm": 1.0064979791641235,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 159,
+      "effective_batches": 2544,
+      "accumulated_batches": 16,
+      "mean_loss": 0.5894075473770499,
+      "gradient_norm": 1.116544246673584,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 160,
+      "effective_batches": 2560,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6986453291028738,
+      "gradient_norm": 1.1221203804016113,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 161,
+      "effective_batches": 2576,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7373782731592655,
+      "gradient_norm": 1.0353295803070068,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 162,
+      "effective_batches": 2592,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7271581124514341,
+      "gradient_norm": 1.0730431079864502,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 163,
+      "effective_batches": 2608,
+      "accumulated_batches": 16,
+      "mean_loss": 0.8297815434634686,
+      "gradient_norm": 1.102717399597168,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 164,
+      "effective_batches": 2624,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7927365433424711,
+      "gradient_norm": 1.008569359779358,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 165,
+      "effective_batches": 2640,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7424776069819927,
+      "gradient_norm": 1.262011170387268,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 166,
+      "effective_batches": 2656,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7043057326227427,
+      "gradient_norm": 1.2101716995239258,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 167,
+      "effective_batches": 2672,
+      "accumulated_batches": 16,
+      "mean_loss": 0.735157826449722,
+      "gradient_norm": 1.4960492849349976,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 168,
+      "effective_batches": 2688,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7260726559907198,
+      "gradient_norm": 1.3878957033157349,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 169,
+      "effective_batches": 2704,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6563592683523893,
+      "gradient_norm": 1.4391779899597168,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 170,
+      "effective_batches": 2720,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6202765451744199,
+      "gradient_norm": 1.1965618133544922,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 171,
+      "effective_batches": 2736,
+      "accumulated_batches": 16,
+      "mean_loss": 0.5601448528468609,
+      "gradient_norm": 1.2622216939926147,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 172,
+      "effective_batches": 2752,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6864793533459306,
+      "gradient_norm": 1.159441590309143,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 173,
+      "effective_batches": 2768,
+      "accumulated_batches": 16,
+      "mean_loss": 0.5302426489070058,
+      "gradient_norm": 1.1407990455627441,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 174,
+      "effective_batches": 2784,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6162219177931547,
+      "gradient_norm": 1.4701792001724243,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 175,
+      "effective_batches": 2800,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6233497802168131,
+      "gradient_norm": 1.3853638172149658,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 176,
+      "effective_batches": 2816,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6462846864014864,
+      "gradient_norm": 1.2818803787231445,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 177,
+      "effective_batches": 2832,
+      "accumulated_batches": 16,
+      "mean_loss": 0.62314323335886,
+      "gradient_norm": 1.151410460472107,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 178,
+      "effective_batches": 2848,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6606729868799448,
+      "gradient_norm": 1.3858065605163574,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 179,
+      "effective_batches": 2864,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7116914102807641,
+      "gradient_norm": 1.2620649337768555,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 180,
+      "effective_batches": 2880,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6974248047918081,
+      "gradient_norm": 1.146925687789917,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 181,
+      "effective_batches": 2896,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6001806370913982,
+      "gradient_norm": 1.1339191198349,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 182,
+      "effective_batches": 2912,
+      "accumulated_batches": 16,
+      "mean_loss": 0.5996733633801341,
+      "gradient_norm": 1.1737498044967651,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 183,
+      "effective_batches": 2928,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6816265885718167,
+      "gradient_norm": 1.257897138595581,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 184,
+      "effective_batches": 2944,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6554572768509388,
+      "gradient_norm": 1.3014321327209473,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 185,
+      "effective_batches": 2960,
+      "accumulated_batches": 16,
+      "mean_loss": 0.5515888594090939,
+      "gradient_norm": 1.3170892000198364,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 186,
+      "effective_batches": 2976,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6581083294004202,
+      "gradient_norm": 1.166277527809143,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 187,
+      "effective_batches": 2992,
+      "accumulated_batches": 16,
+      "mean_loss": 0.4959128964692354,
+      "gradient_norm": 1.405092477798462,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 188,
+      "effective_batches": 3008,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6466165352612734,
+      "gradient_norm": 1.747794270515442,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 189,
+      "effective_batches": 3024,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6723997481167316,
+      "gradient_norm": 1.5040934085845947,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 190,
+      "effective_batches": 3040,
+      "accumulated_batches": 16,
+      "mean_loss": 0.5686281751841307,
+      "gradient_norm": 1.7387936115264893,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 191,
+      "effective_batches": 3056,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6034426558762789,
+      "gradient_norm": 1.8186393976211548,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 192,
+      "effective_batches": 3072,
+      "accumulated_batches": 16,
+      "mean_loss": 0.5978866973891854,
+      "gradient_norm": 1.8164927959442139,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 193,
+      "effective_batches": 3088,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7227117707952857,
+      "gradient_norm": 1.840695858001709,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 194,
+      "effective_batches": 3104,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6822110787034035,
+      "gradient_norm": 1.4503822326660156,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 195,
+      "effective_batches": 3120,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6739301476627588,
+      "gradient_norm": 1.2500158548355103,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 196,
+      "effective_batches": 3136,
+      "accumulated_batches": 16,
+      "mean_loss": 0.4938951041549444,
+      "gradient_norm": 1.576936960220337,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 197,
+      "effective_batches": 3152,
+      "accumulated_batches": 16,
+      "mean_loss": 0.5591369387693703,
+      "gradient_norm": 1.3574227094650269,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 198,
+      "effective_batches": 3168,
+      "accumulated_batches": 16,
+      "mean_loss": 0.5399203971028328,
+      "gradient_norm": 1.439532995223999,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 199,
+      "effective_batches": 3184,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6017627660185099,
+      "gradient_norm": 1.3647806644439697,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 200,
+      "effective_batches": 3200,
+      "accumulated_batches": 16,
+      "mean_loss": 0.5863783936947584,
+      "gradient_norm": 1.5497252941131592,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 201,
+      "effective_batches": 3216,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6830902621150017,
+      "gradient_norm": 1.3533631563186646,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 202,
+      "effective_batches": 3232,
+      "accumulated_batches": 16,
+      "mean_loss": 0.5258680814877152,
+      "gradient_norm": 1.4042227268218994,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 203,
+      "effective_batches": 3248,
+      "accumulated_batches": 16,
+      "mean_loss": 0.5990048767998815,
+      "gradient_norm": 1.3732367753982544,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 204,
+      "effective_batches": 3264,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6461285576224327,
+      "gradient_norm": 1.4235864877700806,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 205,
+      "effective_batches": 3280,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6643849182873964,
+      "gradient_norm": 1.5646098852157593,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 206,
+      "effective_batches": 3296,
+      "accumulated_batches": 16,
+      "mean_loss": 0.5995771456509829,
+      "gradient_norm": 1.3146204948425293,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 207,
+      "effective_batches": 3312,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6050892826169729,
+      "gradient_norm": 1.474724531173706,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 208,
+      "effective_batches": 3328,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7166116256266832,
+      "gradient_norm": 1.5854460000991821,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 209,
+      "effective_batches": 3344,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7305284943431616,
+      "gradient_norm": 1.6976903676986694,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 210,
+      "effective_batches": 3360,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6869563702493906,
+      "gradient_norm": 1.3226035833358765,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 211,
+      "effective_batches": 3376,
+      "accumulated_batches": 16,
+      "mean_loss": 0.650739923119545,
+      "gradient_norm": 1.319352626800537,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 212,
+      "effective_batches": 3392,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6662030373699963,
+      "gradient_norm": 1.483298420906067,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 213,
+      "effective_batches": 3408,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6868366952985525,
+      "gradient_norm": 1.3946863412857056,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 214,
+      "effective_batches": 3424,
+      "accumulated_batches": 16,
+      "mean_loss": 0.7154134805314243,
+      "gradient_norm": 1.3327876329421997,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 215,
+      "effective_batches": 3440,
+      "accumulated_batches": 16,
+      "mean_loss": 0.5883769998326898,
+      "gradient_norm": 1.6364383697509766,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 216,
+      "effective_batches": 3456,
+      "accumulated_batches": 16,
+      "mean_loss": 0.5734884212724864,
+      "gradient_norm": 1.6999460458755493,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 217,
+      "effective_batches": 3472,
+      "accumulated_batches": 16,
+      "mean_loss": 0.45903523406013846,
+      "gradient_norm": 1.4676111936569214,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 218,
+      "effective_batches": 3488,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6126232743263245,
+      "gradient_norm": 1.2140812873840332,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 219,
+      "effective_batches": 3504,
+      "accumulated_batches": 16,
+      "mean_loss": 0.48733937880024314,
+      "gradient_norm": 2.7072229385375977,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 220,
+      "effective_batches": 3520,
+      "accumulated_batches": 16,
+      "mean_loss": 0.647790091112256,
+      "gradient_norm": 1.4350614547729492,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 221,
+      "effective_batches": 3536,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6080400524660945,
+      "gradient_norm": 1.457619547843933,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 222,
+      "effective_batches": 3552,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6943359356373549,
+      "gradient_norm": 1.434596300125122,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 223,
+      "effective_batches": 3568,
+      "accumulated_batches": 16,
+      "mean_loss": 0.661765418946743,
+      "gradient_norm": 1.6785705089569092,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 224,
+      "effective_batches": 3584,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6112265617121011,
+      "gradient_norm": 1.3174259662628174,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 225,
+      "effective_batches": 3600,
+      "accumulated_batches": 16,
+      "mean_loss": 0.6787540190853179,
+      "gradient_norm": 1.5362138748168945,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 226,
+      "effective_batches": 3616,
+      "accumulated_batches": 16,
+      "mean_loss": 0.5442782379686832,
+      "gradient_norm": 1.6835920810699463,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    },
+    {
+      "optimizer_step": 227,
+      "effective_batches": 3620,
+      "accumulated_batches": 4,
+      "mean_loss": 0.5876903422176838,
+      "gradient_norm": 2.9704792499542236,
+      "changed_lora_tensors": 288,
+      "lora_gradient_evidence": {
+        "lora_A": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        },
+        "lora_B": {
+          "tensors": 144,
+          "connected": 144,
+          "finite": 144,
+          "nonzero": 144
+        }
+      }
+    }
+  ],
+  "initialization": "PINNED_BASE_NEW_LORA_NOT_SMOKE_ADAPTER",
+  "final_checkpoint_only": true,
+  "uploaded": false,
+  "environment": {
+    "python": "/home/inspur/aic_video_work/env/qwen3vl_isolated_20260910/bin/python",
+    "torch": "2.5.1+cu124",
+    "transformers": "4.57.1",
+    "peft": "0.17.1",
+    "decord": "0.6.0"
+  },
+  "parameter_inventory": {
+    "base": 8767123696,
+    "lora": 15335424,
+    "total": 8782459120
+  },
+  "exact_language_targets": [
+    "model.language_model.layers.0.self_attn.q_proj",
+    "model.language_model.layers.0.self_attn.k_proj",
+    "model.language_model.layers.0.self_attn.v_proj",
+    "model.language_model.layers.0.self_attn.o_proj",
+    "model.language_model.layers.1.self_attn.q_proj",
+    "model.language_model.layers.1.self_attn.k_proj",
+    "model.language_model.layers.1.self_attn.v_proj",
+    "model.language_model.layers.1.self_attn.o_proj",
+    "model.language_model.layers.2.self_attn.q_proj",
+    "model.language_model.layers.2.self_attn.k_proj",
+    "model.language_model.layers.2.self_attn.v_proj",
+    "model.language_model.layers.2.self_attn.o_proj",
+    "model.language_model.layers.3.self_attn.q_proj",
+    "model.language_model.layers.3.self_attn.k_proj",
+    "model.language_model.layers.3.self_attn.v_proj",
+    "model.language_model.layers.3.self_attn.o_proj",
+    "model.language_model.layers.4.self_attn.q_proj",
+    "model.language_model.layers.4.self_attn.k_proj",
+    "model.language_model.layers.4.self_attn.v_proj",
+    "model.language_model.layers.4.self_attn.o_proj",
+    "model.language_model.layers.5.self_attn.q_proj",
+    "model.language_model.layers.5.self_attn.k_proj",
+    "model.language_model.layers.5.self_attn.v_proj",
+    "model.language_model.layers.5.self_attn.o_proj",
+    "model.language_model.layers.6.self_attn.q_proj",
+    "model.language_model.layers.6.self_attn.k_proj",
+    "model.language_model.layers.6.self_attn.v_proj",
+    "model.language_model.layers.6.self_attn.o_proj",
+    "model.language_model.layers.7.self_attn.q_proj",
+    "model.language_model.layers.7.self_attn.k_proj",
+    "model.language_model.layers.7.self_attn.v_proj",
+    "model.language_model.layers.7.self_attn.o_proj",
+    "model.language_model.layers.8.self_attn.q_proj",
+    "model.language_model.layers.8.self_attn.k_proj",
+    "model.language_model.layers.8.self_attn.v_proj",
+    "model.language_model.layers.8.self_attn.o_proj",
+    "model.language_model.layers.9.self_attn.q_proj",
+    "model.language_model.layers.9.self_attn.k_proj",
+    "model.language_model.layers.9.self_attn.v_proj",
+    "model.language_model.layers.9.self_attn.o_proj",
+    "model.language_model.layers.10.self_attn.q_proj",
+    "model.language_model.layers.10.self_attn.k_proj",
+    "model.language_model.layers.10.self_attn.v_proj",
+    "model.language_model.layers.10.self_attn.o_proj",
+    "model.language_model.layers.11.self_attn.q_proj",
+    "model.language_model.layers.11.self_attn.k_proj",
+    "model.language_model.layers.11.self_attn.v_proj",
+    "model.language_model.layers.11.self_attn.o_proj",
+    "model.language_model.layers.12.self_attn.q_proj",
+    "model.language_model.layers.12.self_attn.k_proj",
+    "model.language_model.layers.12.self_attn.v_proj",
+    "model.language_model.layers.12.self_attn.o_proj",
+    "model.language_model.layers.13.self_attn.q_proj",
+    "model.language_model.layers.13.self_attn.k_proj",
+    "model.language_model.layers.13.self_attn.v_proj",
+    "model.language_model.layers.13.self_attn.o_proj",
+    "model.language_model.layers.14.self_attn.q_proj",
+    "model.language_model.layers.14.self_attn.k_proj",
+    "model.language_model.layers.14.self_attn.v_proj",
+    "model.language_model.layers.14.self_attn.o_proj",
+    "model.language_model.layers.15.self_attn.q_proj",
+    "model.language_model.layers.15.self_attn.k_proj",
+    "model.language_model.layers.15.self_attn.v_proj",
+    "model.language_model.layers.15.self_attn.o_proj",
+    "model.language_model.layers.16.self_attn.q_proj",
+    "model.language_model.layers.16.self_attn.k_proj",
+    "model.language_model.layers.16.self_attn.v_proj",
+    "model.language_model.layers.16.self_attn.o_proj",
+    "model.language_model.layers.17.self_attn.q_proj",
+    "model.language_model.layers.17.self_attn.k_proj",
+    "model.language_model.layers.17.self_attn.v_proj",
+    "model.language_model.layers.17.self_attn.o_proj",
+    "model.language_model.layers.18.self_attn.q_proj",
+    "model.language_model.layers.18.self_attn.k_proj",
+    "model.language_model.layers.18.self_attn.v_proj",
+    "model.language_model.layers.18.self_attn.o_proj",
+    "model.language_model.layers.19.self_attn.q_proj",
+    "model.language_model.layers.19.self_attn.k_proj",
+    "model.language_model.layers.19.self_attn.v_proj",
+    "model.language_model.layers.19.self_attn.o_proj",
+    "model.language_model.layers.20.self_attn.q_proj",
+    "model.language_model.layers.20.self_attn.k_proj",
+    "model.language_model.layers.20.self_attn.v_proj",
+    "model.language_model.layers.20.self_attn.o_proj",
+    "model.language_model.layers.21.self_attn.q_proj",
+    "model.language_model.layers.21.self_attn.k_proj",
+    "model.language_model.layers.21.self_attn.v_proj",
+    "model.language_model.layers.21.self_attn.o_proj",
+    "model.language_model.layers.22.self_attn.q_proj",
+    "model.language_model.layers.22.self_attn.k_proj",
+    "model.language_model.layers.22.self_attn.v_proj",
+    "model.language_model.layers.22.self_attn.o_proj",
+    "model.language_model.layers.23.self_attn.q_proj",
+    "model.language_model.layers.23.self_attn.k_proj",
+    "model.language_model.layers.23.self_attn.v_proj",
+    "model.language_model.layers.23.self_attn.o_proj",
+    "model.language_model.layers.24.self_attn.q_proj",
+    "model.language_model.layers.24.self_attn.k_proj",
+    "model.language_model.layers.24.self_attn.v_proj",
+    "model.language_model.layers.24.self_attn.o_proj",
+    "model.language_model.layers.25.self_attn.q_proj",
+    "model.language_model.layers.25.self_attn.k_proj",
+    "model.language_model.layers.25.self_attn.v_proj",
+    "model.language_model.layers.25.self_attn.o_proj",
+    "model.language_model.layers.26.self_attn.q_proj",
+    "model.language_model.layers.26.self_attn.k_proj",
+    "model.language_model.layers.26.self_attn.v_proj",
+    "model.language_model.layers.26.self_attn.o_proj",
+    "model.language_model.layers.27.self_attn.q_proj",
+    "model.language_model.layers.27.self_attn.k_proj",
+    "model.language_model.layers.27.self_attn.v_proj",
+    "model.language_model.layers.27.self_attn.o_proj",
+    "model.language_model.layers.28.self_attn.q_proj",
+    "model.language_model.layers.28.self_attn.k_proj",
+    "model.language_model.layers.28.self_attn.v_proj",
+    "model.language_model.layers.28.self_attn.o_proj",
+    "model.language_model.layers.29.self_attn.q_proj",
+    "model.language_model.layers.29.self_attn.k_proj",
+    "model.language_model.layers.29.self_attn.v_proj",
+    "model.language_model.layers.29.self_attn.o_proj",
+    "model.language_model.layers.30.self_attn.q_proj",
+    "model.language_model.layers.30.self_attn.k_proj",
+    "model.language_model.layers.30.self_attn.v_proj",
+    "model.language_model.layers.30.self_attn.o_proj",
+    "model.language_model.layers.31.self_attn.q_proj",
+    "model.language_model.layers.31.self_attn.k_proj",
+    "model.language_model.layers.31.self_attn.v_proj",
+    "model.language_model.layers.31.self_attn.o_proj",
+    "model.language_model.layers.32.self_attn.q_proj",
+    "model.language_model.layers.32.self_attn.k_proj",
+    "model.language_model.layers.32.self_attn.v_proj",
+    "model.language_model.layers.32.self_attn.o_proj",
+    "model.language_model.layers.33.self_attn.q_proj",
+    "model.language_model.layers.33.self_attn.k_proj",
+    "model.language_model.layers.33.self_attn.v_proj",
+    "model.language_model.layers.33.self_attn.o_proj",
+    "model.language_model.layers.34.self_attn.q_proj",
+    "model.language_model.layers.34.self_attn.k_proj",
+    "model.language_model.layers.34.self_attn.v_proj",
+    "model.language_model.layers.34.self_attn.o_proj",
+    "model.language_model.layers.35.self_attn.q_proj",
+    "model.language_model.layers.35.self_attn.k_proj",
+    "model.language_model.layers.35.self_attn.v_proj",
+    "model.language_model.layers.35.self_attn.o_proj"
+  ],
+  "head_added": false,
+  "modules_to_save": null,
+  "freeze_evidence": {
+    "before_training": {
+      "sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+      "parameters": 8767123696,
+      "method": "sorted canonical names and all unique frozen parameter bytes"
+    },
+    "after_training": {
+      "sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+      "parameters": 8767123696,
+      "method": "sorted canonical names and all unique frozen parameter bytes"
+    },
+    "after_reload": {
+      "sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+      "parameters": 8767123696,
+      "method": "sorted canonical names and all unique frozen parameter bytes"
+    },
+    "adapter_off": {
+      "sha256": "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59",
+      "parameters": 8767123696,
+      "method": "sorted canonical names and all unique frozen parameter bytes"
+    }
+  },
+  "last_window_id": "W8EJJqMkqag__r716__w0",
+  "wall_seconds": 16455.064903659746,
+  "base_frozen": true,
+  "vision_frozen": true,
+  "adapter_reload_succeeded": true,
+  "adapter_model_sha256": "8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23",
+  "peak_memory_allocated_mib": 20531.9921875,
+  "loss_finite": true,
+  "quality_evaluation_pending": true,
+  "dev_evaluated": false,
+  "confirm_evaluated": false,
+  "test_inference_started": false,
+  "checked_utc": "2026-10-06T08:51:37.993719+00:00"
+}

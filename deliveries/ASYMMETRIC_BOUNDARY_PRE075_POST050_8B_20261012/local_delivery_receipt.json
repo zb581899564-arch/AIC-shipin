@@ -1,0 +1,52 @@
+{
+  "status": "PASS_NEW_ZIP_LOCAL_DELIVERY_COPY_VERIFIED",
+  "utc": "2026-10-12T00:44:38.042717+00:00",
+  "candidate": "ASYMMETRIC_BOUNDARY_PRE075_POST050_8B",
+  "local_zip": "G:\\ai\\AIC视频\\deliveries\\ASYMMETRIC_BOUNDARY_PRE075_POST050_8B_20261012\\candidate_ASYMMETRIC_BOUNDARY_PRE075_POST050_8B.zip",
+  "zip_bytes": 365298,
+  "zip_sha256": "cbfacd675aca7b6bbc3287ccebfd81e605945501cd1fef392681ff2e9761fec3",
+  "predictions_sha256": "000b85b8d22b1055b42cf6f5ba4c73376cdbcde4f2634eddf63f04d9edb4bb68",
+  "archive_names": [
+    "predictions.jsonl"
+  ],
+  "crc_ok": true,
+  "video_records": 426,
+  "nonempty_video_records": 426,
+  "prediction_frames": 121266,
+  "baseline_frames": 118027,
+  "added_frames": 3239,
+  "removed_frames": 0,
+  "changed_video_records": 341,
+  "all_baseline_boxes_unchanged": true,
+  "record_set_exact": true,
+  "frames_sorted_unique": true,
+  "copied_receipts_sha256": {
+    "completion.json": "a08136e2aa749029469455c2852f012b5c5391d77c00b9fe2e72298bd9aff825",
+    "independent_validation.json": "db1a21afbe5343ee0818f2538bba4fed6cf71401b53a42fa2dda82a953ed2642",
+    "native_selection_acceptance.json": "7422d1c69666c9274244620428f8ac9499f79222d85dd0f8caae731507fb2957"
+  },
+  "all_12_historical_zip_sha256_unchanged": true,
+  "distinct_from_all_12_historical_zips": true,
+  "production_source_lock_sha256": "326958d4925a1715a0c0a2b7229f7e1af0e688a36186a496286ec755d41bef1d",
+  "independent_11_strict": {
+    "strict_loader_ok": true,
+    "video_record_set_exact": true,
+    "selected_key_set_exact": true,
+    "ratio_fields_exact": true,
+    "frames_sorted": true,
+    "provenance_key_set_exact": true,
+    "provenance_boxes_match_predictions": true,
+    "provenance_all_legal": true,
+    "provenance_sources_allowed": true,
+    "archive_single_file": true,
+    "archive_roundtrip_exact": true
+  },
+  "official_score": null,
+  "website_submitted": false,
+  "scientific_quality_pass": false,
+  "risk_probe": true,
+  "new_model_calls": 0,
+  "new_video_decodes": 0,
+  "new_processor_encodes": 0,
+  "new_optimizer_updates": 0
+}
