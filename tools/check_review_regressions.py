@@ -13,6 +13,7 @@ CHECKS = (
     "improvement/midnight_five_package_v1/check_pure.py",
     "improvement/midnight_five_package_v1/check_production_evidence.py",
     "improvement/midnight_production_unique_v3/check_pure.py",
+    "tools/check_publication_updates.py",
 )
 
 

@@ -1,0 +1,61 @@
+{
+  "schema": "AIC_PUBLICATION_UPDATES_V1",
+  "base_manifest_sha256": "80a89c8ef055735af2d6be2b81d09e5c35721070e57fa7dbce1b82c860f5da1c",
+  "base_commit": "5de3fa5bcf88bbdb02e7bf7298edc088e05d00d5",
+  "files": [
+    {
+      "path": "README.md",
+      "previous_sha256": "6e0fb9fb5e87abc494fd837d757d9b2cf6d2baa83cf758e42ff34cdb6808c123",
+      "bytes": 5907,
+      "sha256": "0171085f81bbfa3f7d796d4f48b814f5b88b12d5fe454ddcb9ba876573da8234"
+    },
+    {
+      "path": "docs/reviews/AIC_REVIEW_AND_SPRINT_20261017.md",
+      "previous_sha256": null,
+      "bytes": 31155,
+      "sha256": "f272736091581cfeb36ccd15e7991357aa7151ea520b0cac6d44d3ad7517c06b"
+    },
+    {
+      "path": "improvement/midnight_five_package_v1/check_pure.py",
+      "previous_sha256": "39099fbdc495622fefbd360397f3d123a8eb7ab443250a7875e090d19ba0a09f",
+      "bytes": 9512,
+      "sha256": "105d226bdac9f3a945591a0d34d335eea54db2b2dd3e6d24f06cbf5c66076c11"
+    },
+    {
+      "path": "improvement/midnight_five_package_v1/package_math.py",
+      "previous_sha256": "ef90de183c23aee70ba045dafa87203796179b2e2297795974df29169124dc5c",
+      "bytes": 13238,
+      "sha256": "22e4c267d6ef6c5b989c8e0fc324ed4ef8996d0a849e7f450dc852197687bf0d"
+    },
+    {
+      "path": "improvement/midnight_production_unique_v3/check_pure.py",
+      "previous_sha256": null,
+      "bytes": 2216,
+      "sha256": "8ea875291486e3fb11a20997c044a5a70c813a47b0d377223acc147a61a5deaf"
+    },
+    {
+      "path": "improvement/midnight_production_unique_v3/mf_common.py",
+      "previous_sha256": "10894ff06a514a66c0f136a5151979b039b352b97fa7d73a7922a0fc56cd9fa5",
+      "bytes": 7563,
+      "sha256": "96a782c9fd73bc9ea7554a13b6aabb1d959ed449d3698735bbb340f6dd319bff"
+    },
+    {
+      "path": "tools/check_publication_updates.py",
+      "previous_sha256": null,
+      "bytes": 4279,
+      "sha256": "42ef686cbe60b99798a708f8074a004ca20e2c5c3b796c7211f207bad2e888f5"
+    },
+    {
+      "path": "tools/check_review_regressions.py",
+      "previous_sha256": null,
+      "bytes": 1307,
+      "sha256": "db07e7cbd3836208a0f629776c7b8065bb3046dd8b39fc20dd45ed02058511d2"
+    },
+    {
+      "path": "tools/verify_publication.py",
+      "previous_sha256": null,
+      "bytes": 6303,
+      "sha256": "07684fc0ae26313951dd042eefb235e8fad4893e8df9c48ce489af5032de05e0"
+    }
+  ]
+}
