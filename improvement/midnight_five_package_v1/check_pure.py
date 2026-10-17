@@ -13,12 +13,14 @@ def rejected(function):
 
 
 def main():
-    clocks = {'0': dict(normalized_exact_pts=[str(value) for value in range(128)], physical_end_exact='128')}
+    clocks = {'0': dict(normalized_exact_pts=[str(value) for value in range(128)], physical_end_exact='128',
+                        source_sha256='a' * 64)}
     events = {
         'e0': dict(source_id='0', original_interval_exact=['0', '20'], selected_interval_exact=['0', '20'], decision='KEEP'),
         'e1': dict(source_id='0', original_interval_exact=['10', '30'], selected_interval_exact=['10', '30'], decision='UNKNOWN'),
     }
-    entry = dict(case_id='case0', source_id='0', source_ordinals=list(range(64)), exact_pts=[str(value) for value in range(64)],
+    entry = dict(case_id='case0', source_id='0', source_sha256='a' * 64,
+                 source_ordinals=list(range(64)), exact_pts=[str(value) for value in range(64)],
                  window_exact=['0', '64'], window_native_end_exact='64', window_native_end_ordinal=64,
                  candidate_events=[dict(event_id=key, **{name: value for name, value in event.items() if name != 'source_id'})
                                    for key, event in events.items()],
@@ -38,6 +40,18 @@ def main():
     rejected(lambda: combine([invalid], baseline, clocks, events))
     invalid = deepcopy(entry); invalid['window_native_end_ordinal'] = 65
     rejected(lambda: combine([invalid], baseline, clocks, events))
+    # Different source bytes can share all frame ordinals, PTS and candidate
+    # intervals.  Such a model answer must never be applied to this video.
+    invalid = deepcopy(entry); invalid['source_sha256'] = 'b' * 64
+    rejected(lambda: combine([invalid], baseline, clocks, events))
+    invalid = deepcopy(entry); del invalid['source_sha256']
+    rejected(lambda: combine([invalid], baseline, clocks, events))
+    invalid_clocks = deepcopy(clocks); del invalid_clocks['0']['source_sha256']
+    rejected(lambda: combine([entry], baseline, invalid_clocks, events))
+    for invalid_sha in ('', 'g' * 64, None):
+        invalid, invalid_clocks = deepcopy(entry), deepcopy(clocks)
+        invalid['source_sha256'] = invalid_clocks['0']['source_sha256'] = invalid_sha
+        rejected(lambda: combine([invalid], baseline, invalid_clocks, events))
     invalid = deepcopy(entry); invalid['parsed']['action'] = [[30, 40]]
     rejected(lambda: combine([invalid], baseline, clocks, events))
     invalid = deepcopy(entry); invalid['parsed']['action'] = [30, 65]
@@ -114,7 +128,7 @@ def main():
     invalid = deepcopy(entry); invalid['parsed']['redundant'] = [0, 1]
     rejected(lambda: combine([invalid], baseline, clocks, events, deletion_policy_map=policies))
     assert combine([entry], baseline, clocks, events)['ORDINARY']['deterministic_deletion_policy'] == 'DIRECT_PARSED_ORDINARY'
-    print('PASS_PURE_UNION_ENDPOINT64_STRUCTURAL_SKIPS_AND_FROZEN_DELETION_POLICIES')
+    print('PASS_PURE_SOURCE_BYTES_UNION_ENDPOINT64_STRUCTURAL_SKIPS_AND_FROZEN_DELETION_POLICIES')
 
 
 if __name__ == '__main__':
