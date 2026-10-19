@@ -1,0 +1,123 @@
+{
+  "schema": "AIC_PUBLIC_AGGREGATE_EVIDENCE_20261019_V1",
+  "source_receipt": {
+    "source_workspace_relative_path": "reports/bottleneck_24h_20261019_v1/short_main_review_receipt_27.json",
+    "bytes": 8239,
+    "sha256": "024410cf9f456d896fd3b19bb065e536a61d1b157423d92e2fa95ba9ebaf6b18",
+    "payload_not_published": true
+  },
+  "objective20": {
+    "decision": "STOP_SEVERE_UNDERSELECTION_NO_FORMAL426_OR_PACKAGE",
+    "completed_updates": 559,
+    "successful_micro": 2236,
+    "outputs": 43,
+    "valid_empty_windows": 33,
+    "nonempty_windows": 10,
+    "macro": {
+      "BASELINE_40_47": {
+        "precision": 0.1725386235513195,
+        "recall": 0.6739938691464287,
+        "f1": 0.27173859904138076,
+        "native_frame_coverage": 0.6278635081879367,
+        "sources": 8,
+        "empty_prediction_sources": 0,
+        "selected_native_frames": 22012
+      },
+      "INIT_TIME": {
+        "precision": 0.1685720102207563,
+        "recall": 0.7803035343515865,
+        "f1": 0.2755622615756924,
+        "native_frame_coverage": 0.733097844148952,
+        "sources": 8,
+        "empty_prediction_sources": 0,
+        "selected_native_frames": 25374
+      },
+      "TRAINED": {
+        "precision": 0.15832179176479128,
+        "recall": 0.08250893683528662,
+        "f1": 0.09895396196019902,
+        "native_frame_coverage": 0.06627930679890782,
+        "sources": 8,
+        "empty_prediction_sources": 3,
+        "selected_native_frames": 1210
+      },
+      "MATCHED_SEMANTIC": {
+        "precision": 0.1292231300426891,
+        "recall": 0.08979423208518056,
+        "f1": 0.09582984880462479,
+        "native_frame_coverage": 0.06627930679890782,
+        "sources": 8,
+        "empty_prediction_sources": 3,
+        "selected_native_frames": 1210
+      }
+    },
+    "invalid_outputs": 0
+  },
+  "audio25": {
+    "decision": "NO_PRODUCTION_EVIDENCE_FROM_THIS_FIXED_SPEECH_TEXT_PILOT",
+    "sampled_windows": 8,
+    "sources": 4,
+    "new_original_TIME_calls": 4,
+    "adopted_visual_outputs": 4,
+    "macro_delta": {
+      "precision": -0.005379332675296434,
+      "recall": 0.010136933346513124,
+      "f1": -0.003589791066775594,
+      "native_frame_coverage": 0.01940491591203103
+    },
+    "interpretation": "Small recall increase trades off precision and F1. No support for formal expansion from this pilot. Does not rule out non-speech audio semantics; no WER, event/music recognition or whole-source/official gain measured."
+  },
+  "resources": [
+    {
+      "name": "summary_time_fixed_token_normalizer25_full559_20261019_v20",
+      "unique_ledger_count": 1,
+      "resource_exact_ledger_equal": true,
+      "status": "completed",
+      "exit_code": 0,
+      "charged_seconds": 8442.378718452528,
+      "peak_gpu_mib": 21418,
+      "finished_utc": "2026-10-19T05:49:31.114375+00:00"
+    },
+    {
+      "name": "summary_matched_dev8_fixednorm_final559_43_20261019_v20",
+      "unique_ledger_count": 1,
+      "resource_exact_ledger_equal": true,
+      "status": "completed",
+      "exit_code": 0,
+      "charged_seconds": 235.46236651670188,
+      "peak_gpu_mib": 19142,
+      "finished_utc": "2026-10-19T05:53:45.826909+00:00"
+    },
+    {
+      "name": "audio_semantic23_whisper_text_original_TIME8_20261019_v1",
+      "unique_ledger_count": 1,
+      "resource_exact_ledger_equal": true,
+      "status": "completed",
+      "exit_code": 0,
+      "charged_seconds": 128.45689301937819,
+      "peak_gpu_mib": 19070,
+      "finished_utc": "2026-10-19T05:56:12.596840+00:00"
+    }
+  ],
+  "additional_source_receipts": [
+    {
+      "source_workspace_relative_path": "reports/bottleneck_24h_20261019_v1/short_diagnostic_receipt36.json",
+      "bytes": 4268,
+      "sha256": "3e398228e8b779fcc639bbb5e8eff7765157df9f1966e1ddcbcef69ab5e1713f",
+      "payload_not_published": true
+    },
+    {
+      "source_workspace_relative_path": "reports/bottleneck_24h_20261019_v1/short_one_step_receipt40.json",
+      "bytes": 2787,
+      "sha256": "609f6df2b308373e1b7afa1ff45628fe6bc7349f1edfb9c257ade91ca0a437ac",
+      "payload_not_published": true
+    },
+    {
+      "source_workspace_relative_path": "reports/bottleneck_24h_20261019_v1/five_sprint_windows_delivery43.json",
+      "bytes": 3874,
+      "sha256": "088d5d78dca6e4f7b0365134aeafcf918894dc07b80612761b3d5c53b201bd28",
+      "payload_not_published": true
+    }
+  ],
+  "scope": "Aggregate historical exposed external time proxies; not official joint evaluator, blind confirmation, or new execution."
+}
