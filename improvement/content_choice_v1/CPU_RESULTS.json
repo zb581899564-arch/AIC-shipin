@@ -1,0 +1,52 @@
+{
+  "schema": "AIC_CONTENT_CHOICE_SYNTHETIC_CPU_RESULTS_V1",
+  "status": "PASS_SYNTHETIC_CPU",
+  "utc": "2026-10-19T16:42:35.217618+00:00",
+  "code_identity": {
+    "base_commit": "f343a92da467b0e9f4c2677bd2ab75ff88a09df7",
+    "manifest_ref": {
+      "path": "/workspace/scratch/9f471ac65e6b/AIC-shipin-research-20261019/improvement/content_choice_v1/code_manifest.json",
+      "sha256": "d91ece392be1a59a42027fd9a61c497be002e5a618bb9deb6dc0c74bfba5301b",
+      "bytes": 7372
+    }
+  },
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "tests_run": 111,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 29.213066286996764,
+  "test_groups": [
+    "test_runtime.PureRuntimeChecks",
+    "test_observation.PureObservationTests",
+    "test_selection",
+    "test_critic",
+    "test_evaluate",
+    "test_adoption",
+    "test_render",
+    "test_verification",
+    "test_driver",
+    "test_reuse"
+  ],
+  "log_ref": {
+    "path": "/workspace/scratch/9f471ac65e6b/AIC-shipin-research-20261019/improvement/content_choice_v1/CPU_RESULTS.log",
+    "sha256": "b53196b52df416e7e8116781e0c98051edf3839cd49cceec6ea3346855e4bcd8",
+    "bytes": 22387
+  },
+  "torch_imported": false,
+  "qwen_calls": 0,
+  "model_downloads": 0,
+  "media_decodes": 0,
+  "gpu_updates": 0,
+  "official_sources_processed": 0,
+  "new_submission_zips": 0,
+  "synthetic_renderer_uses_real_inherited_strict_subprocess": true,
+  "boundaries": "Synthetic NumPy/receipt fixtures only; adoption/driver heavy boundaries explicitly mocked",
+  "real_torch_tensor_checks": "NOT_RUN_HERE_SEPARATE_MANDATORY_TORCH_GATE",
+  "actual_private_assets": "NOT_RUN",
+  "actual_candidate_training": "NOT_RUN",
+  "actual_qwen_inference": "NOT_RUN",
+  "mechanism_quality": "NOT_RUN",
+  "official_score": "NOT_MEASURED"
+}
