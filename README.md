@@ -1,10 +1,25 @@
-# AIC视频：40.47保护基线与Pro实施交接
+# AIC视频：40.47保护基线与单机制实施
 
 **最新状态：2026-10-19。用户反馈最佳40.47不变；最新五包全部回退，停止本次双角色摘要/集合融合族。** 本仓库是代码和研究证据镜像，不是带媒体/权重的开箱推理包。
 
-## 本次请Pro实际改代码
+## 本次实际实施：native_preference_v1
 
-从当前分支 **`review/20261017-correctness-and-score-plan`** 的最新提交开始，PR #1尚未合并；单独拉旧main得不到本次更新。用户授权Pro制定下一轮方案并实现，实际Linux/GPU小试由执行Agent接续。
+精确起点：`42c0a72cf49b5d51784d1ee162630f8b74ccd294`。实施分支：`implementation/20261019-bounded-mechanism`，叠在未合并的PR #1分支上，已有修复保留。
+
+最新执行终态：固定32对/16更新/43个新回答已在Linux真实完成，工程验收通过；开发排序62.50%→56.25%，时间宏F1原TIME0.275562→DPO0.275031，按原条件STOP，未生产或出新ZIP。见[真实小试结果](improvement/native_preference_v1/PILOT_RESULT_20261019_01.md)。资产索引/09输入/原43控制采用链的修复保留；[CPU接续记录](improvement/native_preference_v1/LINUX_STATUS_20261019_01.md)及下方81项/缺Torch为相应历史时点，不能替代本轮终态。
+
+- **[NEXT_PLAN.md](NEXT_PLAN.md)**：竞争解释、一个可证伪机制、近期论文取舍、配对规则与停止条件。
+- **[RUNBOOK.md](RUNBOOK.md)**：既有Linux资产接口、逐阶段准确命令、完整调用/训练/时间/磁盘预算与独立生产/封包评审。
+- **[明确入口](improvement/native_preference_v1/run.py)**、**[冻结配置](improvement/native_preference_v1/config.example.json)**：prepare → pilot → review彼此显式调用，生产与封包另需各自admission；没有自动latest、重试、全量生产或官网提交。
+- **[本次真实CPU记录](improvement/native_preference_v1/CPU_RESULTS.json)**：81项合成数学/资产/合同/真实入口模拟检查通过，零失败、零跳过；15份新Python源码编译检查通过。[Torch检查记录](improvement/native_preference_v1/TORCH_CPU_RESULTS.json)为NOT_RUN（缺少Torch，实际退出77）。**真实Linux资产、Qwen训练推理、外部质量和正式封包均未运行**，这些不能被合成测试PASS替代。
+
+唯一主机制：从原TIME初始化，在相同原生帧数、连通段数和实际suffix token数的完整答案之间做固定参考DPO，只更新原语言注意力LoRA。原TIME在同一43窗、同一grammar/greedy条件下作为对照。只训练固定32对/16更新、只保存final；候选概率和完整来源自由生成须分别改善，且同时超过原TIME与40.47外部代理才进入执行评审。40.47原包及旧依赖不改。
+
+合法空与执行失败分别记录；任何正式选择落在冻结空间场之外就停止封包，不能静默删掉未经小试评估的部分。详细约束与尚未解决的任务错配、观察不足和空间误差见NEXT_PLAN。
+
+## 2026-10-19原交接依据
+
+原交接位于 **`review/20261017-correctness-and-score-plan`**，PR #1尚未合并；本次已采用上方精确提交，单独拉旧main得不到这些修复和证据。用户授权Pro制定下一轮方案并实现，实际Linux/GPU小试由执行Agent接续。
 
 1. **[最新状态及阅读入口](reports/pro_implementation_handoff_20261019_v1/START_HERE.md)**
 2. **[可直接发给Pro的实施提示词](reports/pro_implementation_handoff_20261019_v1/ASK_PRO.md)**
@@ -44,7 +59,7 @@ python -B tools/check_review_regressions.py
 python -B tools/verify_publication.py
 ```
 
-## 本次同步边界
+## 原交接快照的同步边界
 
 新增503份Python源码、15份历史审查/复盘及本次交接和聚合回执。3处审查修复保留；19份嵌入部署载荷的生成脚本排除。参见[本次来源清单](reports/pro_implementation_handoff_20261019_v1/publication_scope.json)。
 
