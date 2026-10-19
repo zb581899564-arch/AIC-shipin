@@ -1,0 +1,26 @@
+{
+  "schema": "AIC_NATIVE_PREFERENCE_TORCH_CPU_CHECKS_V1",
+  "status": "NOT_RUN",
+  "checks": 6,
+  "pure_checks": 6,
+  "torch_checks": 0,
+  "pure_passed": true,
+  "torch_passed": false,
+  "device": "cpu",
+  "model_downloads": 0,
+  "qwen_forwards": 0,
+  "code_refs": {
+    "runtime": {
+      "path": "/workspace/scratch/9f471ac65e6b/AIC-shipin-implementation-20261019/improvement/native_preference_v1/runtime.py",
+      "sha256": "a3034ddd9e69d781ce03fddd38a7c37fb94aa9b1f5808b016d3e06d1cc520d45",
+      "bytes": 44664
+    },
+    "torch_checks": {
+      "path": "/workspace/scratch/9f471ac65e6b/AIC-shipin-implementation-20261019/improvement/native_preference_v1/torch_checks.py",
+      "sha256": "631da2a466b431e543c957947f00387d002464b8658afe2432677fa079a86be7",
+      "bytes": 16641
+    }
+  },
+  "reason": "TORCH_UNAVAILABLE",
+  "required_linux_torch_gate": "NOT_PASSED"
+}

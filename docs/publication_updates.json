@@ -10,10 +10,22 @@
       "sha256": "e24cb48edc5760c39a30e3f9a91e19dc0905d2d6a5d3d3408edbb34dadb5f689"
     },
     {
+      "path": "NEXT_PLAN.md",
+      "previous_sha256": null,
+      "bytes": 13792,
+      "sha256": "2140325593468019f9fd6532075297157094bde46b58e20d742ea0f6811d4dde"
+    },
+    {
       "path": "README.md",
       "previous_sha256": "6e0fb9fb5e87abc494fd837d757d9b2cf6d2baa83cf758e42ff34cdb6808c123",
-      "bytes": 4570,
-      "sha256": "da31a79563c914fda3922f5c40eb017b0a089f55c58b4cbc509187e91cabbf62"
+      "bytes": 6563,
+      "sha256": "5fd5cd6ff47ae302e7f61c0b3c7ccc6d0f614df568ab288ed848ab70a510aff8"
+    },
+    {
+      "path": "RUNBOOK.md",
+      "previous_sha256": null,
+      "bytes": 23425,
+      "sha256": "fc38ba8ccaeef09ed3e8d674ac939d653d807fcf6d8d4c6a0cbbabc99ab7cd77"
     },
     {
       "path": "docs/history/README_before_implementation_handoff_20261019.md",
@@ -2120,6 +2132,120 @@
       "previous_sha256": "10894ff06a514a66c0f136a5151979b039b352b97fa7d73a7922a0fc56cd9fa5",
       "bytes": 7563,
       "sha256": "96a782c9fd73bc9ea7554a13b6aabb1d959ed449d3698735bbb340f6dd319bff"
+    },
+    {
+      "path": "improvement/native_preference_v1/CPU_RESULTS.json",
+      "previous_sha256": null,
+      "bytes": 17905,
+      "sha256": "04b98d3c2d33cc6a59abad19dfbc15a4b05bf22366bc652cab1546357cbadbbb"
+    },
+    {
+      "path": "improvement/native_preference_v1/TORCH_CPU_RESULTS.json",
+      "previous_sha256": null,
+      "bytes": 875,
+      "sha256": "d41bee125739750c52b0c92954fd031db111ffa9b60865c53afe96b242d1799a"
+    },
+    {
+      "path": "improvement/native_preference_v1/__init__.py",
+      "previous_sha256": null,
+      "bytes": 83,
+      "sha256": "fc33857ee4464ad9542f055c2175d66120ddea798d1029ad725f1554debfaf25"
+    },
+    {
+      "path": "improvement/native_preference_v1/assets.py",
+      "previous_sha256": null,
+      "bytes": 28029,
+      "sha256": "bf00e4ef5bb965b61c7ea81b9b42eb11910072528642f32c3b4ea3bceabf10dc"
+    },
+    {
+      "path": "improvement/native_preference_v1/check_cpu.py",
+      "previous_sha256": null,
+      "bytes": 2829,
+      "sha256": "380ca8310bb88bb11d866fe03aa3b0468feb7a32fe3181b8a2e0974987f2edd0"
+    },
+    {
+      "path": "improvement/native_preference_v1/code_manifest.json",
+      "previous_sha256": null,
+      "bytes": 1464,
+      "sha256": "09c522c08987878305b8ed473debc1fff9388b7d6b754b4a1088fd9291b3457c"
+    },
+    {
+      "path": "improvement/native_preference_v1/config.example.json",
+      "previous_sha256": null,
+      "bytes": 1157,
+      "sha256": "d9fc20a2374da2f7de2f616b526500ce4796b6af405be4398cfaae6e1307572e"
+    },
+    {
+      "path": "improvement/native_preference_v1/contracts.py",
+      "previous_sha256": null,
+      "bytes": 8947,
+      "sha256": "9e3c21757aafcc2a8008ed27e9fd2a774116665cfe1ecb440820ab9c242aed90"
+    },
+    {
+      "path": "improvement/native_preference_v1/inputs.py",
+      "previous_sha256": null,
+      "bytes": 13684,
+      "sha256": "391296bb94ebfb7f994789f05245b3a3508cec92f76bf53cece89962a351f8b7"
+    },
+    {
+      "path": "improvement/native_preference_v1/preference.py",
+      "previous_sha256": null,
+      "bytes": 18727,
+      "sha256": "8a9fe471fedc68d3ccd3760fd5f25a779fa2f7aaaa53a6ca2cbba5cdeefc4234"
+    },
+    {
+      "path": "improvement/native_preference_v1/render.py",
+      "previous_sha256": null,
+      "bytes": 16771,
+      "sha256": "5f1f89c45e4d1cd66667e60cd330c6c45baa981589b1e03ad89a17a4ab134312"
+    },
+    {
+      "path": "improvement/native_preference_v1/run.py",
+      "previous_sha256": null,
+      "bytes": 45075,
+      "sha256": "9c0d2bba481ae47cdf6e54b344519790d5e26713f9ab7cbd03cddc8d95427297"
+    },
+    {
+      "path": "improvement/native_preference_v1/runtime.py",
+      "previous_sha256": null,
+      "bytes": 44664,
+      "sha256": "a3034ddd9e69d781ce03fddd38a7c37fb94aa9b1f5808b016d3e06d1cc520d45"
+    },
+    {
+      "path": "improvement/native_preference_v1/test_assets.py",
+      "previous_sha256": null,
+      "bytes": 17848,
+      "sha256": "b0770c2d63b875121b3d9ec3507cb0c6dbf9aa40ebcd3dace02d5404649a774b"
+    },
+    {
+      "path": "improvement/native_preference_v1/test_contracts.py",
+      "previous_sha256": null,
+      "bytes": 11810,
+      "sha256": "30d0b271c9067868ca321f9eaedb680506ca3d99a80e37da4b69122b6309ad7a"
+    },
+    {
+      "path": "improvement/native_preference_v1/test_pipeline.py",
+      "previous_sha256": null,
+      "bytes": 10119,
+      "sha256": "49a08adc862ac8d1abeba5eb0768d42c7766c123a7567f3c25087f836c79b4ee"
+    },
+    {
+      "path": "improvement/native_preference_v1/test_preference.py",
+      "previous_sha256": null,
+      "bytes": 13551,
+      "sha256": "ec742b16511bd317fbc287b389a747d012901e3fcd05773e70786303e6a5b0e8"
+    },
+    {
+      "path": "improvement/native_preference_v1/test_runtime_integration.py",
+      "previous_sha256": null,
+      "bytes": 20088,
+      "sha256": "9dda4d8e6561cbbe6b40a18d5a79ae17a4c8e5eb05ae6972651d52313333e04a"
+    },
+    {
+      "path": "improvement/native_preference_v1/torch_checks.py",
+      "previous_sha256": null,
+      "bytes": 16641,
+      "sha256": "631da2a466b431e543c957947f00387d002464b8658afe2432677fa079a86be7"
     },
     {
       "path": "improvement/relative_precision_event_v1/cohort4c_reference_recovery_v2.py",
