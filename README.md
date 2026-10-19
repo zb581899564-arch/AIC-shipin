@@ -1,8 +1,25 @@
-# AIC视频：40.47保护基线与单机制实施
+# AIC视频：40.47保护基线与多候选研发
 
 **最新状态：2026-10-19。用户反馈最佳40.47不变；最新五包全部回退，停止本次双角色摘要/集合融合族。** 本仓库是代码和研究证据镜像，不是带媒体/权重的开箱推理包。
 
-## 本次实际实施：native_preference_v1
+## 当前研发：content_choice_v1（真实 Linux 尚未运行）
+
+已核实并从 PR #2 的 `f343a92da467b0e9f4c2677bd2ab75ff88a09df7` 新建独立分支 `implementation/20261019-multi-candidate-rd`，保留尚未合并的 PR #1、PR #2 全部修复。新一轮按用户授权实现**三个可分别验证的机制**，旧 DPO 的 STOP 保持不变：
+
+| 候选 | 要验证的能力 | 实际实现与独立对照 |
+| --- | --- | --- |
+| `critic`（主要训练候选） | 已有冻结状态能否区分完整来源候选的摘要效用 | 真实生成的四个整源候选；131权重 pairwise ridge；25源LOSO＋8历史跨数据集；shape-only/permuted-hidden对照；零LoRA更新 |
+| `contrast` | 原视觉与时间对应是否提供额外的候选决策信息 | 同池真实/固定时间组移位的完整答案条件差；与同池raw mean logp比较；无训练 |
+| `observation` | 固定视觉预算下更换真实观察是否改善内容判断 | 原uniform PTS分层内按缓存RGB变化选帧；原TIME greedy；同token预算、重新构造实际prefix/四张量；无训练 |
+
+- **[本轮 PLAN](improvement/content_choice_v1/PLAN.md)**：竞争解释、DPO梯度/监督边界、三候选取舍、对照与冻结停止条件。
+- **[本轮 RUNBOOK](improvement/content_choice_v1/RUNBOOK.md)**：精确Linux接口/命令、共享缓存、调用/参数/预算、各候选独立生产及封包条件。
+- **[研究与现行规则核查](improvement/content_choice_v1/RESEARCH.md)**：近期一手论文的支持、反证和迁移限制；空间/音频未实施的理由。
+- **[入口](improvement/content_choice_v1/run.py)**、[配置](improvement/content_choice_v1/config.example.json)、[CPU检查说明](improvement/content_choice_v1/CPU_NOTES.md)：有限阶段，失败不变空，不找latest、不下载、不自动全量或官网提交。
+
+推荐先完成8源/43窗共同候选池和诊断，再决定25源/144窗critic成本；observation保持独立。原43/522成功TIME控制按身份明确采用，不重复生成。多个机制均已实现，**没有任何新候选的真实Linux训练/推理、代理提升、正式426生产或ZIP成绩可报告**；本地合成检查不能代替新Torch及私有资产验收。40.47原包及其复现依赖不改。
+
+## 上一轮已完成并停止：native_preference_v1
 
 精确起点：`42c0a72cf49b5d51784d1ee162630f8b74ccd294`。实施分支：`implementation/20261019-bounded-mechanism`，叠在未合并的PR #1分支上，已有修复保留。
 
@@ -11,7 +28,7 @@
 - **[NEXT_PLAN.md](NEXT_PLAN.md)**：竞争解释、一个可证伪机制、近期论文取舍、配对规则与停止条件。
 - **[RUNBOOK.md](RUNBOOK.md)**：既有Linux资产接口、逐阶段准确命令、完整调用/训练/时间/磁盘预算与独立生产/封包评审。
 - **[明确入口](improvement/native_preference_v1/run.py)**、**[冻结配置](improvement/native_preference_v1/config.example.json)**：prepare → pilot → review彼此显式调用，生产与封包另需各自admission；没有自动latest、重试、全量生产或官网提交。
-- **[本次真实CPU记录](improvement/native_preference_v1/CPU_RESULTS.json)**：81项合成数学/资产/合同/真实入口模拟检查通过，零失败、零跳过；15份新Python源码编译检查通过。[Torch检查记录](improvement/native_preference_v1/TORCH_CPU_RESULTS.json)为NOT_RUN（缺少Torch，实际退出77）。**真实Linux资产、Qwen训练推理、外部质量和正式封包均未运行**，这些不能被合成测试PASS替代。
+- **[本次真实CPU记录](improvement/native_preference_v1/CPU_RESULTS.json)**：81项合成数学/资产/合同/真实入口模拟检查通过，零失败、零跳过；15份新Python源码编译检查通过。[Torch检查记录](improvement/native_preference_v1/TORCH_CPU_RESULTS.json)为NOT_RUN（缺少Torch，实际退出77）。**该CPU开发时点尚未运行Linux**；后续真实训练及STOP以本节上方PILOT_RESULT终态为准，正式封包仍未进行。
 
 唯一主机制：从原TIME初始化，在相同原生帧数、连通段数和实际suffix token数的完整答案之间做固定参考DPO，只更新原语言注意力LoRA。原TIME在同一43窗、同一grammar/greedy条件下作为对照。只训练固定32对/16更新、只保存final；候选概率和完整来源自由生成须分别改善，且同时超过原TIME与40.47外部代理才进入执行评审。40.47原包及旧依赖不改。
 
@@ -27,7 +44,7 @@
 4. [按机制定位代码](reports/pro_implementation_handoff_20261019_v1/CODE_MAP.md)
 5. [明确Linux接口、预算及交接要求](reports/pro_implementation_handoff_20261019_v1/EXECUTION_CONTRACT.md)
 
-下一轮只选择一个可证伪的新能力假设及必要对照。交付应包含代码、CPU检查、明确CLI/配置、有限pilot与独立生产准入；不是换名复活BCE/soft-F1、全源SFT、动量清零、LLM共识或边界扫描。不能将工程成功、外部代理和官方质量混为一谈。
+该交接中的“只选择一个机制”是上一轮历史要求。当前用户已授权多个机制，本页上方content_choice_v1及其PLAN/RUNBOOK是本轮执行依据；不重启旧BCE/soft-F1、全源SFT、动量清零、固定摘要融合或边界扫描。工程完成、外部代理与官方质量分别陈述。
 
 ## 最新五包成绩
 

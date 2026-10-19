@@ -1,0 +1,117 @@
+{
+  "schema": "AIC_CONTENT_CHOICE_TORCH_CPU_CHECKS_V1",
+  "status": "NOT_RUN",
+  "device": "cpu",
+  "model_downloads": 0,
+  "qwen_forwards": 0,
+  "scope": "REAL_TINY_CPU_TORCH_PLUS_NUMPY_AND_EXPLICITLY_SYNTHETIC_GENERATION_TRANSPORT",
+  "checks": 30,
+  "pure_checks": 30,
+  "torch_checks": 0,
+  "pure_test_names": [
+    "observation.test_change_inside_stratum_can_expose_a_missed_real_observation",
+    "observation.test_equal_local_change_ties_prefer_original_uniform",
+    "observation.test_exact_midpoint_is_assigned_to_earlier_nonempty_stratum",
+    "observation.test_excerpt_score_never_uses_outside_neighbours",
+    "observation.test_fixed_endpoints_are_not_replaced_by_high_change_neighbour",
+    "observation.test_invalid_input_or_nan_cannot_turn_into_a_selection",
+    "observation.test_patch_layout_matches_independent_native_grid_quadrants",
+    "observation.test_same_even_budget_endpoints_without_padding",
+    "observation.test_source_descriptor_cache_once_then_detects_mutation",
+    "observation.test_temporal_copy_corruption_and_nonfinite_pixels_are_rejected",
+    "observation.test_vfr_strata_are_native_time_based_and_complete",
+    "runtime.test_duplicate_eos_and_changed_prefix_both_preserve_raw_then_fail",
+    "runtime.test_eos_state_is_before_eos_and_after_all_answer_content",
+    "runtime.test_frozen_guard_rejects_pending_training_or_any_update",
+    "runtime.test_gate_rejects_missing_torch_even_with_all_pure_checks_passed",
+    "runtime.test_gate_rejects_stale_observation_dependency_bytes",
+    "runtime.test_generation_exception_is_recorded_once_without_retry",
+    "runtime.test_identity_counts_original_time_once_and_binds_both_runtime_files",
+    "runtime.test_invalid_seed_or_constraint_fails_before_any_generation",
+    "runtime.test_no_training_checkpoint_or_reference_cache_entry_point",
+    "runtime.test_permutation_rejects_partial_groups_wrong_fields_and_nonfinite",
+    "runtime.test_projection_does_not_depend_on_numpy_rng_or_modify_input",
+    "runtime.test_projection_is_fixed_linear_and_bucket_normalized",
+    "runtime.test_projection_matches_independent_scalar_bucket_sum",
+    "runtime.test_projection_rejects_wrong_dimension_dtype_and_nonfinite",
+    "runtime.test_rng_setup_failure_is_not_counted_as_a_model_call",
+    "runtime.test_single_group_view_is_identity_other_view_still_rotates",
+    "runtime.test_single_sample_records_raw_before_validation_and_passes_fixed_options",
+    "runtime.test_temporal_permutation_keeps_two_views_and_whole_patch_vectors",
+    "runtime.test_truncated_json_with_no_actual_eos_fails_after_raw_and_never_becomes_empty"
+  ],
+  "torch_test_names": [],
+  "pure_passed": true,
+  "torch_passed": false,
+  "skipped_checks": 0,
+  "failed_checks": 0,
+  "code_refs": {
+    "runtime": {
+      "path": "/workspace/scratch/9f471ac65e6b/AIC-shipin-research-20261019/improvement/content_choice_v1/runtime.py",
+      "sha256": "fa997aa5add012a7b2b2084bf737cda415e5ca354dc0cf0298b8c78f755e0716",
+      "bytes": 21533
+    },
+    "test_runtime": {
+      "path": "/workspace/scratch/9f471ac65e6b/AIC-shipin-research-20261019/improvement/content_choice_v1/test_runtime.py",
+      "sha256": "8a91357663e836741bd029bbe15af781ede06bca77ad999f5167b34bf9951776",
+      "bytes": 18389
+    },
+    "torch_checks": {
+      "path": "/workspace/scratch/9f471ac65e6b/AIC-shipin-research-20261019/improvement/content_choice_v1/torch_checks.py",
+      "sha256": "acf9ff15b66b59bcd78ae1fbbca101ed8f09cbd30b0f92bf67fce9f97d2d3c71",
+      "bytes": 22294
+    },
+    "contracts": {
+      "path": "/workspace/scratch/9f471ac65e6b/AIC-shipin-research-20261019/improvement/content_choice_v1/contracts.py",
+      "sha256": "232d6d979a0f6e8188ea860348b31cb298782a05e52d6325d1052cabc9355b1d",
+      "bytes": 6610
+    },
+    "verification": {
+      "path": "/workspace/scratch/9f471ac65e6b/AIC-shipin-research-20261019/improvement/content_choice_v1/verification.py",
+      "sha256": "dfac29c45c9bf40a46ccf3beab18a3de9849e3f7e1d38f7af25c16f0c6660878",
+      "bytes": 9928
+    },
+    "observation": {
+      "path": "/workspace/scratch/9f471ac65e6b/AIC-shipin-research-20261019/improvement/content_choice_v1/observation.py",
+      "sha256": "0a82fdeb344ad09d9dd854cec97e1f816ef54f1f69b94ad6f823e7a0d609dfdf",
+      "bytes": 16826
+    },
+    "test_observation": {
+      "path": "/workspace/scratch/9f471ac65e6b/AIC-shipin-research-20261019/improvement/content_choice_v1/test_observation.py",
+      "sha256": "662b3873b9054a5f2c631bc9e414c0833b6374a6802ca5505faf1c1de34d4bc3",
+      "bytes": 13943
+    },
+    "inherited_runtime": {
+      "path": "/workspace/scratch/9f471ac65e6b/AIC-shipin-research-20261019/improvement/native_preference_v1/runtime.py",
+      "sha256": "a3034ddd9e69d781ce03fddd38a7c37fb94aa9b1f5808b016d3e06d1cc520d45",
+      "bytes": 44664
+    },
+    "inherited_contracts": {
+      "path": "/workspace/scratch/9f471ac65e6b/AIC-shipin-research-20261019/improvement/native_preference_v1/contracts.py",
+      "sha256": "9e3c21757aafcc2a8008ed27e9fd2a774116665cfe1ecb440820ab9c242aed90",
+      "bytes": 8947
+    },
+    "inherited_assets": {
+      "path": "/workspace/scratch/9f471ac65e6b/AIC-shipin-research-20261019/improvement/native_preference_v1/assets.py",
+      "sha256": "3ad5432ca2ed04f0ff16cd13f6152fff65e83877095e663ca1dea3585f33421e",
+      "bytes": 35006
+    },
+    "inherited_inputs": {
+      "path": "/workspace/scratch/9f471ac65e6b/AIC-shipin-research-20261019/improvement/native_preference_v1/inputs.py",
+      "sha256": "391296bb94ebfb7f994789f05245b3a3508cec92f76bf53cece89962a351f8b7",
+      "bytes": 13684
+    },
+    "inherited_summary_contract": {
+      "path": "/workspace/scratch/9f471ac65e6b/AIC-shipin-research-20261019/improvement/bottleneck_24h_v1/summary_contract.py",
+      "sha256": "6e92563ef8bb6553e999aa45eba08bf74c82dc93f7d2239ed5ee166e4ba1705e",
+      "bytes": 10887
+    },
+    "inherited_summary_grammar": {
+      "path": "/workspace/scratch/9f471ac65e6b/AIC-shipin-research-20261019/improvement/bottleneck_24h_v1/summary_grammar6.py",
+      "sha256": "050971e58932e320ad1e880b1312a99e29624848773ff7a2f67a3daff5f5347a",
+      "bytes": 12555
+    }
+  },
+  "reason": "TORCH_UNAVAILABLE",
+  "required_linux_torch_gate": "NOT_PASSED"
+}
