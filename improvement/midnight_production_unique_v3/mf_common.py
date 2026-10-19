@@ -35,7 +35,12 @@ def sha(path):
 def ref(path):return dict(path=str(Path(path).resolve()),sha256=sha(path))
 
 def checked(r):
-    p=Path(r['path']);require(p.is_relative_to(HOME) and sha(p)==r['sha256'],'Bound source SHA/path differs: '+str(p));return p
+    # Check the actual file location before hashing it. Lexical containment
+    # accepts ../ paths and symlinks into another run outside the frozen root.
+    p=Path(r['path']).resolve()
+    require(p.is_relative_to(HOME.resolve()) and p.is_file() and sha(p)==r['sha256'],
+            'Bound source SHA/path differs: '+str(p))
+    return p
 
 def library():
     for directory in (RUN/'baseline_a_pts_v1/vendor',RUN/'baseline_a_pts_v1',RUN/'temporal_sft8b_v1'):

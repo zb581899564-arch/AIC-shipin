@@ -124,6 +124,14 @@ def combine(entries, baseline_keys, source_clocks, expected_events, structural_s
         require(isinstance(case_id, str) and case_id and case_id not in seen_cases, "Duplicate/missing production case")
         seen_cases.add(case_id)
         require(source in points, "Unregistered production source")
+        # Matching ordinals/PTS is insufficient: unrelated videos can have the
+        # same native clock.  Bind the accepted model input to the actual media
+        # bytes of the source receiving its automatic decision.
+        source_sha = entry.get("source_sha256")
+        require(isinstance(source_sha, str) and len(source_sha) == 64 and
+                all(char in "0123456789abcdef" for char in source_sha) and
+                source_sha == source_clocks[source].get("source_sha256"),
+                "Actual model input source bytes differ from accepted native clock")
         pts = points[source]
         ordinals, sample_pts = entry["source_ordinals"], entry["exact_pts"]
         require(isinstance(ordinals, list) and len(ordinals) == 64 and len(sample_pts) == 64 and
