@@ -35,15 +35,15 @@ class Fixture:
         grammar = self.put("old_code/summary_grammar6.py", b"# bound original grammar; never executed\n")
         codec = self.put("old_code/codec.py", b"# synthetic lossless codec; never executed\n")
         dictionary = self.put("old_code/dictionary.py", b"# synthetic dictionary; never executed\n")
-        self.save("generation.json", dict(model_config_ref=cfg, initial_TIME_ref=weights,
+        generation = dict(model_config_ref=cfg, initial_TIME_ref=weights,
             code={"summary_contract.py": contract, "summary_grammar6.py": grammar},
-            pixel_codec_ref=codec, pixel_dictionary_ref=dictionary))
+            pixel_codec_ref=codec, pixel_dictionary_ref=dictionary)
         head = self.put("old_head.pt", b"synthetic inherited head; never loaded")
         self.save("protected_registration.json", dict(selected_head=head,
             actual_resident_parameters=assets.PROTECTED_PIPELINE_PARAMETERS))
         self.protected = self.put("protected.zip", b"synthetic protected bytes; not a deliverable ZIP")
         self.put(assets.RUN_RELATIVE + "/resource_unlimited_v1_20261007/gpu_run.py", b"# Never execute this synthetic wrapper\n")
-        authors, catalogs, requests = [], {}, {}
+        authors, supervised, proofs, catalogs, requests = [], [], [], {}, {}
         for group, sid in (("train", "SYN_T"), ("check", "SYN_C")):
             media = self.put(sid + "/source.fake", ("synthetic source " + ("DUPLICATE" if same_media else sid)).encode())
             clock = self.save(sid + "/clock.json", dict(source_sha256=media["sha256"],
@@ -52,7 +52,25 @@ class Fixture:
             np.savez(label_path, baseline=np.asarray([True, False, False, True]),
                      labels=np.asarray([[True, False], [False, True], [False, True], [False, False]]))
             data = assets.path_ref(label_path)
-            authors.append(dict(sid=sid, name=sid, group=group, media=media, clock_ref=clock, data_ref=data))
+            # Real original registration has raw references, never data_ref.
+            original_clock = self.save(sid + "/original_clock.json", dict(source_sha256=media["sha256"],
+                raw_pts=[100, 101, 102, 103], time_base="1", first_pts=100))
+            author = dict(sid=sid, name=sid, group=group, media=media, clock_ref=original_clock)
+            if group == "train":
+                labels_path = self.root / sid / "original_labels.npy"
+                np.save(labels_path, np.asarray([[1, 0], [0, 1], [0, 1], [0, 0]]))
+                author.update(native_ref=self.put(sid + "/original_native.npz", b"synthetic native bytes"),
+                              labels_ref=assets.path_ref(labels_path))
+                mat = self.put(sid + "/original.mat", b"synthetic original author MAT; never parsed")
+                proofs.append(dict(sid=sid, original_mat_sha256=mat["sha256"], label_ref=author["labels_ref"],
+                    first_human_read_proof=dict(**author["labels_ref"], stage="FIRST_NATIVE_HUMAN_MAT_READ", source=sid)))
+            else:
+                author["reference_ref"] = self.save(sid + "/original_reference.json", [dict(video_id=sid)])
+            authors.append(author)
+            # Real normalized adoption has full NPZ/clock/language, no media.
+            normalized_clock = self.save(sid + "/normalized_clock.json", assets.read_json(clock["path"]))
+            supervised.append(dict(sid=sid, name=sid, group=group, data_ref=data, clock_ref=normalized_clock,
+                language_ref=self.put(sid + "/language.npy", b"synthetic language bytes; never loaded")))
             pixels = self.put(sid + "/patches.pt", b"synthetic patch file; tensor contents deliberately never loaded")
             common = dict(**pixels, samples=[0, 1, 2, 3])
             source = dict(id=sid, name=sid, source_sha256=media["sha256"], clock=clock)
@@ -78,11 +96,24 @@ class Fixture:
                     input_signature=signatures, text=dict(prefix_tokens=2), first_new_pixel_text_native_QA=True,
                     plan=dict(window_start_exact=str(start), window_end_exact=str(end), videos=videos))))
         adoption = self.save("source_adoption.json", dict(sources=authors))
+        provenance = self.save("original_human_label_adoption.json", dict(
+            status="PASS25_ADOPTED_ORIGINAL_AUTHOR_HUMAN_LABEL_BYTES", proofs=proofs,
+            old_protocol_sha256=self.put("old_protocol.json", b"synthetic historical protocol")["sha256"]))
+        normalized = self.save("normalized_supervision_adoption.json", dict(sources=supervised,
+            original_human_adoption_ref=provenance, baseline_ref=self.protected,
+            adopted_raw_input_QA=self.save("old_input_qa.json", dict(status="SYNTHETIC_BOUND_OLD_QA")),
+            adopted_raw_output_QA=self.save("old_output_qa.json", dict(status="SYNTHETIC_BOUND_OLD_QA"))))
         for group in ("train", "check"):
-            registration = self.save(group + "_registration.json", dict(source_registration=adoption))
+            value = dict(source_registration=adoption)
+            if group == "check":
+                value["matched_fullbaseline_source_adoption"] = normalized
+            registration = self.save(group + "_registration.json", value)
             prepared = self.save(group + "_prepared.json", dict(inputs=requests[group], source_catalog=catalogs[group]))
             self.save(group + "_acceptance.json", dict(status="PASS_SYNTHETIC_EXISTING_INPUTS", sources=1, windows=2,
                 prepared=prepared, registration=registration))
+        generation.update(baseline_human_adoption_ref=normalized,
+            first_dev_input_acceptance_ref=assets.path_ref(self.root / "check_acceptance.json"))
+        self.save("generation.json", generation)
         basis = self.put("rights_basis.txt", b"Synthetic test fixture only; no actual media permissions asserted")
         self.save("rights.json", dict(schema="AIC_NATIVE_PREFERENCE_RIGHTS_V1",
             source_registration_sha256=adoption["sha256"], local_research_training_and_evaluation_allowed=True,
@@ -114,17 +145,21 @@ class Fixture:
         with np.load(path, allow_pickle=False) as original:
             baseline, labels = original["baseline"], original["labels"]
         np.savez(path, baseline=baseline, labels=labels, **{key: known})
-        adoption = assets.read_json(self.root / "source_adoption.json")
+        adoption = assets.read_json(self.root / "normalized_supervision_adoption.json")
         next(s for s in adoption["sources"] if s["sid"] == "SYN_C")["data_ref"] = assets.path_ref(path)
-        adoption_ref = self.save("source_adoption.json", adoption)
-        for group in ("train", "check"):
-            registration = self.save(group + "_registration.json", dict(source_registration=adoption_ref))
-            gate = assets.read_json(self.root / (group + "_acceptance.json"))
-            gate["registration"] = registration
-            self.save(group + "_acceptance.json", gate)
-        rights = assets.read_json(self.root / "rights.json")
-        rights["source_registration_sha256"] = adoption_ref["sha256"]
-        self.save("rights.json", rights)
+        self.rebind_normalized(adoption)
+
+    def rebind_normalized(self, adoption):
+        adoption_ref = self.save("normalized_supervision_adoption.json", adoption)
+        registration = assets.read_json(self.root / "check_registration.json")
+        registration["matched_fullbaseline_source_adoption"] = adoption_ref
+        registration_ref = self.save("check_registration.json", registration)
+        gate = assets.read_json(self.root / "check_acceptance.json")
+        gate["registration"] = registration_ref
+        gate_ref = self.save("check_acceptance.json", gate)
+        generation = assets.read_json(self.root / "generation.json")
+        generation.update(baseline_human_adoption_ref=adoption_ref, first_dev_input_acceptance_ref=gate_ref)
+        self.save("generation.json", generation)
 
 
 class AssetTests(unittest.TestCase):
@@ -147,6 +182,12 @@ class AssetTests(unittest.TestCase):
         self.assertEqual(len(store.case_ids), 2)
         self.assertEqual(before, "torch" in sys.modules)
         self.assertEqual(manifest["actual_pipeline_parameters"], 8797892873)
+        original = assets.read_json(manifest["source_registration_ref"]["path"])
+        normalized = assets.read_json(manifest["normalized_supervision_registration_ref"]["path"])
+        self.assertTrue(all("data_ref" not in row for row in original["sources"]))
+        self.assertTrue(all("media" not in row for row in normalized["sources"]))
+        self.assertNotEqual(manifest["scopes"]["train"]["sources"][0]["clock_ref"],
+                            manifest["scopes"]["train"]["sources"][0]["supervision_clock_ref"])
         with self.assertRaises(FileExistsError):
             self.fixture.create()
 
@@ -194,6 +235,96 @@ class AssetTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Complete accepted source/catalog/window"):
             self.fixture.preflight(manifest)
 
+    def test_wrong_normalized_source_adoption_rejected(self):
+        normalized = assets.read_json(self.fixture.root / "normalized_supervision_adoption.json")
+        normalized["sources"][0]["sid"] = "FOREIGN"
+        self.fixture.rebind_normalized(normalized)
+        with self.assertRaisesRegex(ValueError, "Normalized supervision source identities"):
+            self.fixture.create()
+
+    def test_normalized_supervision_native_clock_must_match_accepted_catalog(self):
+        normalized = assets.read_json(self.fixture.root / "normalized_supervision_adoption.json")
+        source = normalized["sources"][0]
+        clock = assets.read_json(source["clock_ref"]["path"])
+        clock["normalized_exact_pts"][1] = "3/2"
+        source["clock_ref"] = self.fixture.save("SYN_T/wrong_normalized_clock.json", clock)
+        self.fixture.rebind_normalized(normalized)
+        with self.assertRaisesRegex(ValueError, "different native source clocks"):
+            self.fixture.create()
+
+    def test_original_label_proof_must_bind_the_original_reference(self):
+        normalized = assets.read_json(self.fixture.root / "normalized_supervision_adoption.json")
+        provenance = assets.read_json(normalized["original_human_adoption_ref"]["path"])
+        provenance["proofs"][0]["label_ref"] = self.fixture.put("wrong_labels.npy", b"other original labels")
+        normalized["original_human_adoption_ref"] = self.fixture.save("original_human_label_adoption.json", provenance)
+        self.fixture.rebind_normalized(normalized)
+        with self.assertRaisesRegex(ValueError, "human-label proof differs"):
+            self.fixture.create()
+
+    def test_distinct_mat_identity_and_exported_npy_proof_are_adopted(self):
+        manifest = self.fixture.create()
+        provenance = assets.read_json(manifest["original_human_label_adoption_ref"]["path"])
+        proof = provenance["proofs"][0]
+        self.assertNotEqual(proof["original_mat_sha256"], proof["label_ref"]["sha256"])
+        self.assertTrue(assets.same_ref(proof["first_human_read_proof"], proof["label_ref"]))
+        self.assertEqual(provenance["old_protocol_sha256"],
+                         assets.sha(self.fixture.root / "old_protocol.json"))
+
+    def test_first_human_npy_proof_path_or_sha_substitution_rejected(self):
+        normalized = assets.read_json(self.fixture.root / "normalized_supervision_adoption.json")
+        original = assets.read_json(normalized["original_human_adoption_ref"]["path"])
+        labels = original["proofs"][0]["label_ref"]
+        copy_ref = self.fixture.put("same_labels_other_path.npy", Path(labels["path"]).read_bytes())
+        for field, value in (("path", copy_ref["path"]), ("sha256", "f" * 64)):
+            with self.subTest(field=field):
+                provenance = copy.deepcopy(original)
+                provenance["proofs"][0]["first_human_read_proof"][field] = value
+                normalized["original_human_adoption_ref"] = self.fixture.save("original_human_label_adoption.json", provenance)
+                self.fixture.rebind_normalized(normalized)
+                with self.assertRaisesRegex(ValueError, "human-label proof differs"):
+                    self.fixture.create()
+
+    def test_first_human_npy_proof_stage_or_source_substitution_rejected(self):
+        normalized = assets.read_json(self.fixture.root / "normalized_supervision_adoption.json")
+        original = assets.read_json(normalized["original_human_adoption_ref"]["path"])
+        for field, value in (("stage", "OTHER_STAGE"), ("source", "OTHER_SOURCE")):
+            with self.subTest(field=field):
+                provenance = copy.deepcopy(original)
+                provenance["proofs"][0]["first_human_read_proof"][field] = value
+                normalized["original_human_adoption_ref"] = self.fixture.save("original_human_label_adoption.json", provenance)
+                self.fixture.rebind_normalized(normalized)
+                with self.assertRaisesRegex(ValueError, "human-label proof differs"):
+                    self.fixture.create()
+
+    def test_check_registration_must_use_the_named_normalized_adoption(self):
+        registration = assets.read_json(self.fixture.root / "check_registration.json")
+        registration["matched_fullbaseline_source_adoption"] = assets.path_ref(self.fixture.root / "source_adoption.json")
+        registration_ref = self.fixture.save("check_registration.json", registration)
+        gate = assets.read_json(self.fixture.root / "check_acceptance.json")
+        gate["registration"] = registration_ref
+        gate_ref = self.fixture.save("check_acceptance.json", gate)
+        generation = assets.read_json(self.fixture.root / "generation.json")
+        generation["first_dev_input_acceptance_ref"] = gate_ref
+        self.fixture.save("generation.json", generation)
+        with self.assertRaisesRegex(ValueError, "another normalized supervision adoption"):
+            self.fixture.create()
+
+    def test_stale07_acceptance_cannot_replace_generation10_dev09_binding(self):
+        gate = assets.read_json(self.fixture.root / "check_acceptance.json")
+        self.fixture.save("summary_dev_inputs_07/input_acceptance.json", gate)
+        self.fixture.kwargs["check_acceptance"] = "summary_dev_inputs_07/input_acceptance.json"
+        with self.assertRaisesRegex(ValueError, "Development acceptance differs"):
+            self.fixture.create()
+
+    def test_cli_defaults_use_the_successful_dev09_chain(self):
+        with patch.object(sys, "argv", ["assets.py", "--output", "unused", "--rights-declaration", "unused"]), \
+             patch.object(assets, "bootstrap", return_value={}) as bootstrap, patch("builtins.print"):
+            assets.main()
+        self.assertEqual(bootstrap.call_args.kwargs["check_registration"],
+                         "bottleneck_24h_20261019_v1/summary_dev_CPU_registration_09.json")
+        self.assertEqual(bootstrap.call_args.kwargs["check_acceptance"],
+                         "bottleneck_24h_20261019_v1/summary_dev_inputs_09/input_acceptance.json")
+
     def test_fit_and_check_cannot_share_source_bytes(self):
         duplicate = Fixture(self.fixture.root / "overlap_fixture", same_media=True)
         with self.assertRaisesRegex(ValueError, "Fit and external check sources overlap"):
@@ -220,7 +351,10 @@ class AssetTests(unittest.TestCase):
         self.fixture.save("rights.json", rights)
         gate = assets.read_json(self.fixture.root / "check_acceptance.json")
         gate["registration"] = assets.path_ref(self.fixture.root / "train_registration.json")
-        self.fixture.save("check_acceptance.json", gate)
+        gate_ref = self.fixture.save("check_acceptance.json", gate)
+        generation = assets.read_json(self.fixture.root / "generation.json")
+        generation["first_dev_input_acceptance_ref"] = gate_ref
+        self.fixture.save("generation.json", generation)
         with self.assertRaisesRegex(ValueError, "another registration"):
             self.fixture.create()
 

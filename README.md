@@ -6,6 +6,8 @@
 
 精确起点：`42c0a72cf49b5d51784d1ee162630f8b74ccd294`。实施分支：`implementation/20261019-bounded-mechanism`，叠在未合并的PR #1分支上，已有修复保留。
 
+执行接续：资产索引已修为原始身份＋独立归一化监督＋成功09开发输入；原43控制回答显式采用，零重复生成。Linux已实际通过93项合成检查（78项首次通过、15项部署缺配置错误补齐后通过）及11项真实Torch CPU检查；模型尚未启动时的记录见[接续状态](improvement/native_preference_v1/LINUX_STATUS_20261019_01.md)。下方81项/缺Torch为Pro提交时的历史记录，不替代本轮Linux结果。
+
 - **[NEXT_PLAN.md](NEXT_PLAN.md)**：竞争解释、一个可证伪机制、近期论文取舍、配对规则与停止条件。
 - **[RUNBOOK.md](RUNBOOK.md)**：既有Linux资产接口、逐阶段准确命令、完整调用/训练/时间/磁盘预算与独立生产/封包评审。
 - **[明确入口](improvement/native_preference_v1/run.py)**、**[冻结配置](improvement/native_preference_v1/config.example.json)**：prepare → pilot → review彼此显式调用，生产与封包另需各自admission；没有自动latest、重试、全量生产或官网提交。

@@ -29,7 +29,7 @@ def main(argv=None):
         compile(path.read_bytes(), str(path), "exec")
         compiled.append(path.name)
     modules = ["test_preference", "test_contracts", "test_assets", "test_pipeline",
-               "test_runtime_integration", "torch_checks.PureChecks"]
+               "test_runtime_integration", "test_reference_adoption", "torch_checks.PureChecks"]
     suite = unittest.defaultTestLoader.loadTestsFromNames(
         ["improvement.native_preference_v1." + module for module in modules])
     transcript = io.StringIO()

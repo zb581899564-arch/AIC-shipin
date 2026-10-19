@@ -138,7 +138,60 @@ def _known_key(keys):
     return "known" if "known" in candidates else None
 
 
-def _scope_from_legacy(group, registration_ref, acceptance_ref, source_adoption, workspace):
+def _supervision_adoption(source_adoption, normalized_adoption, protected_ref, workspace):
+    """Bind the original source identities to the explicitly adopted full NPZs."""
+    original = read_json(check_ref(source_adoption, workspace))
+    normalized = read_json(check_ref(normalized_adoption, workspace))
+    author, supervision = original["sources"], normalized["sources"]
+    require(isinstance(author, list) and isinstance(supervision, list) and author and supervision,
+            "Explicit original and normalized supervision sources required")
+    require(len({s["sid"] for s in author}) == len(author)
+            and len({s["sid"] for s in supervision}) == len(supervision),
+            "Duplicate original or normalized supervision source")
+    require({(s["sid"], s["group"], s["name"]) for s in author}
+            == {(s["sid"], s["group"], s["name"]) for s in supervision}
+            and all(s["group"] in {"train", "check"} for s in author),
+            "Normalized supervision source identities differ from original adoption")
+    require(same_ref(normalized["baseline_ref"], protected_ref),
+            "Normalized supervision does not adopt the protected40.47 baseline")
+    provenance_ref = normalized["original_human_adoption_ref"]
+    provenance = read_json(check_ref(provenance_ref, workspace))
+    require(provenance.get("status") == "PASS25_ADOPTED_ORIGINAL_AUTHOR_HUMAN_LABEL_BYTES"
+            and isinstance(provenance.get("old_protocol_sha256"), str)
+            and re.fullmatch(r"[0-9a-f]{64}", provenance["old_protocol_sha256"]),
+            "Explicit original author human-label adoption is required")
+    proofs = provenance["proofs"]
+    train = {s["sid"]: s for s in author if s["group"] == "train"}
+    require(isinstance(proofs, list) and len(proofs) == len(train)
+            and {p["sid"] for p in proofs} == set(train),
+            "Original human-label adoption does not cover the original training sources")
+    for proof in proofs:
+        # The historical MAT identity is metadata; the first-read proof path
+        # names the exported NPY. Adopt that existing export, never re-decode.
+        require(same_ref(proof["label_ref"], train[proof["sid"]]["labels_ref"])
+                and same_ref(proof["first_human_read_proof"], proof["label_ref"])
+                and isinstance(proof.get("original_mat_sha256"), str)
+                and re.fullmatch(r"[0-9a-f]{64}", proof["original_mat_sha256"])
+                and proof["first_human_read_proof"]["stage"] == "FIRST_NATIVE_HUMAN_MAT_READ"
+                and proof["first_human_read_proof"]["source"] == train[proof["sid"]]["name"],
+                "Original human-label proof differs from original source reference")
+        check_ref(proof["label_ref"], workspace)
+        check_ref(proof["first_human_read_proof"], workspace)
+    for key in ("adopted_raw_input_QA", "adopted_raw_output_QA"):
+        check_ref(normalized[key], workspace)
+    for source in author:
+        check_ref(source["media"], workspace)
+        check_ref(source["clock_ref"], workspace)
+        for key in (("native_ref", "labels_ref") if source["group"] == "train" else ("reference_ref",)):
+            check_ref(source[key], workspace)
+    for source in supervision:
+        for key in ("data_ref", "clock_ref", "language_ref"):
+            check_ref(source[key], workspace)
+    return original, normalized, provenance_ref
+
+
+def _scope_from_legacy(group, registration_ref, acceptance_ref, source_adoption, workspace,
+                       supervision_adoption=None):
     """Normalize the real prepare_summary/prepare_summary_dev/prepared schemas."""
     reg = read_json(check_ref(registration_ref, workspace))
     gate = read_json(check_ref(acceptance_ref, workspace))
@@ -160,6 +213,13 @@ def _scope_from_legacy(group, registration_ref, acceptance_ref, source_adoption,
         author = {s["sid"]: s for s in registered if s["group"] == group}
         require(len(author) == sum(s["group"] == group for s in registered), "Duplicate registered external source")
         require(set(author) == {s["id"] for s in catalog}, "All accepted group sources must be adopted")
+        adopted = read_json(check_ref(supervision_adoption, workspace))["sources"]
+        human = {s["sid"]: s for s in adopted if s["group"] == group}
+        require(len(human) == sum(s["group"] == group for s in adopted) and set(human) == set(author),
+                "Normalized supervision does not cover accepted source identities")
+        if group == "check":
+            require(same_ref(reg["matched_fullbaseline_source_adoption"], supervision_adoption),
+                    "Accepted development registration uses another normalized supervision adoption")
     else:
         author = {}
     sources = []
@@ -172,13 +232,22 @@ def _scope_from_legacy(group, registration_ref, acceptance_ref, source_adoption,
             patch_format="CHUNKS" if "chunks" in source else "CONTEXT_CASES",
             patches=chunks, cells=source.get("feature_cells", source.get("cells")))
         if group != "production":
-            human = author[sid]
-            require(human["media"]["sha256"] == source["source_sha256"], "Author/source media identity differs")
+            original, supervised = author[sid], human[sid]
+            require(original["media"]["sha256"] == source["source_sha256"]
+                    and original["name"] == source["name"] == supervised["name"],
+                    "Author/source media identity differs")
+            source_clock = read_json(check_ref(source["clock"], workspace))
+            label_clock = read_json(check_ref(supervised["clock_ref"], workspace))
+            require(_clock(source_clock) == _clock(label_clock)
+                    and source_clock["source_sha256"] == label_clock["source_sha256"] == source["source_sha256"],
+                    "Normalized supervision and accepted catalog use different native source clocks")
             import numpy as np
-            with np.load(check_ref(human["data_ref"], workspace), allow_pickle=False) as data:
+            with np.load(check_ref(supervised["data_ref"], workspace), allow_pickle=False) as data:
                 known_key = _known_key(data.files)
-            normalized.update(supervision_ref=human["data_ref"], supervision_clock_ref=human["clock_ref"],
-                media_ref=human["media"],
+            normalized.update(supervision_ref=supervised["data_ref"], supervision_clock_ref=supervised["clock_ref"],
+                media_ref=original["media"], original_clock_ref=original["clock_ref"],
+                original_reference_refs={key: original[key] for key in
+                    (("native_ref", "labels_ref") if group == "train" else ("reference_ref",))},
                 supervision_contract=dict(labels_key="labels", baseline_key="baseline", known_key=known_key,
                     dense_all_rater_source_summary_membership=True,
                     unselected_is_not_exhaustive_no_highlight_label=True,
@@ -211,7 +280,8 @@ def _closed_files(directory, suffix=None, *, allowed_root=None):
 def bootstrap(*, workspace_root, output, rights_declaration, train_registration,
               train_acceptance, check_registration, check_acceptance, generation_registration,
               protected_registration, protected_zip, production_registration=None,
-              production_acceptance=None, package_inputs=None, code_root=None):
+              production_acceptance=None, package_inputs=None, code_root=None,
+              reference_completion=None, reference_output_qa=None):
     """Create a private manifest from explicit existing registrations, never execute them."""
     workspace = Path(workspace_root).resolve(strict=True)
     def inside(path):
@@ -229,6 +299,9 @@ def bootstrap(*, workspace_root, output, rights_declaration, train_registration,
             "Train/check must adopt the same explicit original source registration")
     generation_ref = reference(generation_registration)
     generation = read_json(generation_ref["path"])
+    normalized_adoption = generation["baseline_human_adoption_ref"]
+    require(same_ref(generation["first_dev_input_acceptance_ref"], reference(check_acceptance)),
+            "Development acceptance differs from the explicit generation registration")
     cfg_ref = generation["model_config_ref"]
     cfg = read_json(check_ref(cfg_ref, workspace))
     weights = generation["initial_TIME_ref"]
@@ -240,6 +313,7 @@ def bootstrap(*, workspace_root, output, rights_declaration, train_registration,
     protected_ref = reference(protected_zip)
     require(protected_ref["sha256"] == PROTECTED_SHA256 and protected_ref["bytes"] == PROTECTED_BYTES,
             "Protected40.47 ZIP identity differs")
+    _, _, human_provenance_ref = _supervision_adoption(adoption, normalized_adoption, protected_ref, workspace)
     old_prod_ref = reference(protected_registration)
     old_prod = read_json(old_prod_ref["path"])
     head = old_prod["selected_head"]
@@ -257,8 +331,8 @@ def bootstrap(*, workspace_root, output, rights_declaration, train_registration,
     for value in rights["basis_refs"]:
         check_ref(value, workspace)
     scopes = {
-        "train": _scope_from_legacy("train", train_ref, reference(train_acceptance), adoption, workspace),
-        "check": _scope_from_legacy("check", check_reg_ref, reference(check_acceptance), adoption, workspace)}
+        "train": _scope_from_legacy("train", train_ref, reference(train_acceptance), adoption, workspace, normalized_adoption),
+        "check": _scope_from_legacy("check", check_reg_ref, reference(check_acceptance), adoption, workspace, normalized_adoption)}
     require((production_registration is None) == (production_acceptance is None), "Both formal registration and first input acceptance are required")
     if production_registration is not None:
         scopes["production"] = _scope_from_legacy("production", reference(production_registration),
@@ -305,12 +379,19 @@ def bootstrap(*, workspace_root, output, rights_declaration, train_registration,
                         codec=generation["pixel_codec_ref"],
                         dictionary=generation["pixel_dictionary_ref"]),
         rights_declaration_ref=rights_ref, rights_basis_refs=rights["basis_refs"], source_registration_ref=adoption,
+        normalized_supervision_registration_ref=normalized_adoption, original_human_label_adoption_ref=human_provenance_ref,
         scopes=scopes, renderer=renderer, code_root=str(code_directory), code_refs=[path_ref(p) for p in files],
         runtime_python=str(workspace/"env/qwen3vl_isolated_20260910/bin/python"),
         gpu_wrapper_ref=path_ref(workspace/RUN_RELATIVE/"resource_unlimited_v1_20261007/gpu_run.py"),
         exposure="All historical external references exposed; this is not a new blind test",
         no_new_model_downloads=True, no_test_labels=True, production_admitted=False,
         historical_targets_adopted_not_relabelled=True)
+    require((reference_completion is None) == (reference_output_qa is None),
+            "Historical reference completion and first QA must be supplied together")
+    if reference_completion is not None:
+        manifest["reference_generation_origin"] = dict(
+            completion_ref=reference(reference_completion),
+            first_output_qa_ref=reference(reference_output_qa))
     # Structural validation checks source and native-clock membership.  A later
     # preflight independently verifies the full inventory's bytes before use.
     preflight_assets(manifest, verify_files=False)
@@ -358,10 +439,19 @@ def preflight_assets(manifest, scope=None, *, verify_files=True):
             and rights.get("summary_selection_not_exhaustive_highlight_labels") is True
             and rights.get("basis_refs") == manifest["rights_basis_refs"] and bool(rights["basis_refs"]),
             "Adopted source-use/task/exposure declaration differs")
+    generation = read_json(check_ref(manifest["generation_registration_ref"], workspace, verify_hash=False))
+    require(same_ref(generation["baseline_human_adoption_ref"], manifest["normalized_supervision_registration_ref"])
+            and same_ref(generation["first_dev_input_acceptance_ref"], manifest["scopes"]["check"]["input_acceptance_ref"]),
+            "Generation registration normalized supervision/development acceptance differs")
+    _, _, provenance_ref = _supervision_adoption(manifest["source_registration_ref"],
+        manifest["normalized_supervision_registration_ref"], manifest["protected_baseline_ref"], workspace)
+    require(same_ref(provenance_ref, manifest["original_human_label_adoption_ref"]),
+            "Original human-label adoption provenance differs")
     hashes, report = {}, {}
     for name, data in manifest["scopes"].items():
         normalized = _scope_from_legacy(name, data["input_registration_ref"], data["input_acceptance_ref"],
-            manifest["source_registration_ref"] if name != "production" else None, workspace)
+            manifest["source_registration_ref"] if name != "production" else None, workspace,
+            manifest["normalized_supervision_registration_ref"] if name != "production" else None)
         require(normalized == data, "Complete accepted source/catalog/window artifacts differ from inline scope")
         sources = {source["id"]: source for source in data["sources"]}
         require(sources and len(sources) == len(data["sources"]), "Duplicate or empty source catalog")
@@ -440,8 +530,8 @@ def main():
     parser.add_argument("--rights-declaration", required=True)
     parser.add_argument("--train-registration", default="bottleneck_24h_20261019_v1/summary_CPU_registration_05.json")
     parser.add_argument("--train-acceptance", default="bottleneck_24h_20261019_v1/summary_inputs_05/input_acceptance.json")
-    parser.add_argument("--check-registration", default="bottleneck_24h_20261019_v1/summary_dev_CPU_registration_07.json")
-    parser.add_argument("--check-acceptance", default="bottleneck_24h_20261019_v1/summary_dev_inputs_07/input_acceptance.json")
+    parser.add_argument("--check-registration", default="bottleneck_24h_20261019_v1/summary_dev_CPU_registration_09.json")
+    parser.add_argument("--check-acceptance", default="bottleneck_24h_20261019_v1/summary_dev_inputs_09/input_acceptance.json")
     parser.add_argument("--generation-registration", default="bottleneck_24h_20261019_v1/summary_generation_registration_10.json")
     parser.add_argument("--protected-registration", default="semantic_context_production_20261016_v1/production_registration.json")
     parser.add_argument("--protected-zip", default="semantic_context_production_20261016_v1/package/candidate_CONTEXT_SEMANTIC_RESIDUAL.zip")
@@ -449,6 +539,8 @@ def main():
     parser.add_argument("--production-acceptance")
     parser.add_argument("--package-inputs")
     parser.add_argument("--code-root")
+    parser.add_argument("--reference-completion", default="bottleneck_24h_20261019_v1/summary_generation_10/INIT_TIME/completion.json")
+    parser.add_argument("--reference-output-qa", default="bottleneck_24h_20261019_v1/summary_generation_10/INIT_TIME/first_independent_output_QA.json")
     args = vars(parser.parse_args())
     print(json.dumps(dict(status="PRIVATE_MANIFEST_CREATED_NO_EXECUTION", manifest_ref=bootstrap(**args))))
 

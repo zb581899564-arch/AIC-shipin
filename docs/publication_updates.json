@@ -18,14 +18,14 @@
     {
       "path": "README.md",
       "previous_sha256": "6e0fb9fb5e87abc494fd837d757d9b2cf6d2baa83cf758e42ff34cdb6808c123",
-      "bytes": 6563,
-      "sha256": "5fd5cd6ff47ae302e7f61c0b3c7ccc6d0f614df568ab288ed848ab70a510aff8"
+      "bytes": 6971,
+      "sha256": "fda9f128c2b3515095eeae381be7a103e97336956216aa5ffc97840df83b6fcb"
     },
     {
       "path": "RUNBOOK.md",
       "previous_sha256": null,
-      "bytes": 23425,
-      "sha256": "fc38ba8ccaeef09ed3e8d674ac939d653d807fcf6d8d4c6a0cbbabc99ab7cd77"
+      "bytes": 26205,
+      "sha256": "d31abfe9c91542cc2e4b50a660384a26b335757c973d1f2c2968b069663eff37"
     },
     {
       "path": "docs/history/README_before_implementation_handoff_20261019.md",
@@ -2140,6 +2140,12 @@
       "sha256": "04b98d3c2d33cc6a59abad19dfbc15a4b05bf22366bc652cab1546357cbadbbb"
     },
     {
+      "path": "improvement/native_preference_v1/LINUX_STATUS_20261019_01.md",
+      "previous_sha256": null,
+      "bytes": 2193,
+      "sha256": "db31b95f3cf7a8d283a67608978f95bc07f49e9245ff6408f9bcc44d8ea0416e"
+    },
+    {
       "path": "improvement/native_preference_v1/TORCH_CPU_RESULTS.json",
       "previous_sha256": null,
       "bytes": 875,
@@ -2154,20 +2160,20 @@
     {
       "path": "improvement/native_preference_v1/assets.py",
       "previous_sha256": null,
-      "bytes": 28029,
-      "sha256": "bf00e4ef5bb965b61c7ea81b9b42eb11910072528642f32c3b4ea3bceabf10dc"
+      "bytes": 35006,
+      "sha256": "3ad5432ca2ed04f0ff16cd13f6152fff65e83877095e663ca1dea3585f33421e"
     },
     {
       "path": "improvement/native_preference_v1/check_cpu.py",
       "previous_sha256": null,
-      "bytes": 2829,
-      "sha256": "380ca8310bb88bb11d866fe03aa3b0468feb7a32fe3181b8a2e0974987f2edd0"
+      "bytes": 2856,
+      "sha256": "2e2faf283c6b2eab23be883c9db54a6b5d8bf48b826451fd193bb4a32f9636ca"
     },
     {
       "path": "improvement/native_preference_v1/code_manifest.json",
       "previous_sha256": null,
-      "bytes": 1464,
-      "sha256": "09c522c08987878305b8ed473debc1fff9388b7d6b754b4a1088fd9291b3457c"
+      "bytes": 1663,
+      "sha256": "d41ea44ab27b712b770071a3fc9f817c2049e71490c891adbf713755a16f585f"
     },
     {
       "path": "improvement/native_preference_v1/config.example.json",
@@ -2194,6 +2200,12 @@
       "sha256": "8a9fe471fedc68d3ccd3760fd5f25a779fa2f7aaaa53a6ca2cbba5cdeefc4234"
     },
     {
+      "path": "improvement/native_preference_v1/reference_adoption.py",
+      "previous_sha256": null,
+      "bytes": 6405,
+      "sha256": "afaf8458550814bbd9086daf89bdf4aef072180bde9175a2a0ede53e41c8ebcd"
+    },
+    {
       "path": "improvement/native_preference_v1/render.py",
       "previous_sha256": null,
       "bytes": 16771,
@@ -2202,8 +2214,8 @@
     {
       "path": "improvement/native_preference_v1/run.py",
       "previous_sha256": null,
-      "bytes": 45075,
-      "sha256": "9c0d2bba481ae47cdf6e54b344519790d5e26713f9ab7cbd03cddc8d95427297"
+      "bytes": 45906,
+      "sha256": "e5128720c4e387b325e479bac01a9e3ab14a0b88d609a1e028a9ef5f18b1874a"
     },
     {
       "path": "improvement/native_preference_v1/runtime.py",
@@ -2214,8 +2226,8 @@
     {
       "path": "improvement/native_preference_v1/test_assets.py",
       "previous_sha256": null,
-      "bytes": 17848,
-      "sha256": "b0770c2d63b875121b3d9ec3507cb0c6dbf9aa40ebcd3dace02d5404649a774b"
+      "bytes": 27390,
+      "sha256": "4542d9e63f3a6669de9eb9cb26b471b272997931c06463c53e22e72a561e9763"
     },
     {
       "path": "improvement/native_preference_v1/test_contracts.py",
@@ -2234,6 +2246,12 @@
       "previous_sha256": null,
       "bytes": 13551,
       "sha256": "ec742b16511bd317fbc287b389a747d012901e3fcd05773e70786303e6a5b0e8"
+    },
+    {
+      "path": "improvement/native_preference_v1/test_reference_adoption.py",
+      "previous_sha256": null,
+      "bytes": 7295,
+      "sha256": "61968c7f82f0effe6db9452711c0ab17381bea518724284562613d13a3167e7d"
     },
     {
       "path": "improvement/native_preference_v1/test_runtime_integration.py",

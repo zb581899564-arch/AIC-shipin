@@ -424,6 +424,9 @@ def pilot(config, manifest, binding, directory, budget, *, args):
     prepared = validate_prepared(strict_load(args.prepared), config, binding)
     prepared_ref = reference(args.prepared)
     checks_ref = torch_gate(args.torch_checks, manifest["workspace_root"])
+    historical_reference = manifest.get("reference_generation_origin") is not None
+    require(historical_reference or manifest["model_spec"].get("synthetic_unit_test_only") is True,
+            "Real deployment requires explicit historical reference generation adoption")
     stores = {scope: NativeInputStore(manifest, scope) for scope in ("train", "check")}
     require(set(prepared["check_case_ids"]) == set(stores["check"].case_ids), "Accepted check set changed")
     journal = Journal(directory / "events.jsonl")
@@ -450,8 +453,13 @@ def pilot(config, manifest, binding, directory, budget, *, args):
         cache_ref = save_new(directory / "fixed_reference.json", cache)
         grammar = grammar_module(manifest)
         candidates = grammar.ascii_token_candidates(runtime.tokenizer)
-        before = generate_cases(runtime, stores["check"], prepared["check_case_ids"], "reference",
-                                directory, journal, budget, grammar, candidates)
+        if historical_reference:
+            from .reference_adoption import adopt_reference
+            before = adopt_reference(runtime, stores["check"], prepared["check_case_ids"],
+                manifest, directory, journal, budget, grammar, candidates)
+        else:
+            before = generate_cases(runtime, stores["check"], prepared["check_case_ids"], "reference",
+                                    directory, journal, budget, grammar, candidates)
         journal.context = dict(action="fixed_training")
         training = runtime.train_pairs(prepared["train_pairs"], get_input, cache,
             updates=16, grad_accum=2, lr=config["learning_rate"], beta=config["beta"])
@@ -480,8 +488,9 @@ def pilot(config, manifest, binding, directory, budget, *, args):
                                directory, journal, budget, grammar, candidates)
         outputs_ref = save_new(directory / "generation_manifest.json", dict(reference=before, policy=after))
         verification_ref = save_new(directory / "final_verification.json", runtime.verify_final())
+        expected_new_generations = (1 if historical_reference else 2) * len(prepared["check_case_ids"])
         require(runtime.counts["generation_calls"] == runtime.counts["generations_completed"] ==
-                2 * len(prepared["check_case_ids"]) and runtime.counts["optimizer_steps"] == 16
+                expected_new_generations and runtime.counts["optimizer_steps"] == 16
                 and runtime.counts["backward_calls"] == runtime.counts["backwards_completed"] == 64
                 and runtime.counts["sequence_score_calls"] == runtime.counts["sequence_scores_completed"] == 258
                 and runtime.counts["top_level_forward_calls"] == budget.forward_count,
@@ -495,6 +504,8 @@ def pilot(config, manifest, binding, directory, budget, *, args):
             final_adapter_identity_ref=final_identity_ref, heldout_pair_scores_ref=scores_ref,
             generation_manifest_ref=outputs_ref, final_verification_ref=verification_ref,
             event_journal_ref=reference(directory / "events.jsonl"), counts=runtime.counts,
+            historical_reference_generations_adopted=len(before) if historical_reference else 0,
+            new_reference_generation_calls=0 if historical_reference else len(before),
             runtime=runtime.identity(), budget=budget.snapshot(),
             peak_cuda_allocated_bytes=runtime.torch.cuda.max_memory_allocated(),
             peak_cuda_reserved_bytes=runtime.torch.cuda.max_memory_reserved(),

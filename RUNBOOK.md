@@ -6,7 +6,7 @@
 
 ## 1. 拿到这个确切提交，保持旧资产只读
 
-从PR最终交付的**完整commit SHA**检出独立工作目录；不要检出不断移动的main或自动挑最新experiment。PR建立在 `42c0a72cf49b5d51784d1ee162630f8b74ccd294` 上，不能丢掉PR #1已有修复。
+从PR最终交付的**完整commit SHA**采用独立代码；不要检出不断移动的main或自动挑最新experiment。PR建立在 `42c0a72cf49b5d51784d1ee162630f8b74ccd294` 上，不能丢掉PR #1已有修复。容量紧张时只部署本模块全部Python文件、code_manifest和CPU测试引用的原summary_grammar6.py，并逐成员校验；不要求Linux克隆整个历史仓库。下列clone仅为容量充足时的可选部署方式。
 
 下面的变量在同一个Linux shell设置。唯一需要从本次交付消息填入的是 `AIC_IMPLEMENTATION_SHA`；不是模型revision。
 
@@ -42,11 +42,14 @@ cd "$AIC_REPO"
 
 | 入口/资产 | 明确路径 | 用途与限制 |
 | --- | --- | --- |
-| 原始训练登记 | `bottleneck_24h_20261019_v1/summary_CPU_registration_05.json` | 同一source_registration中25个train来源；只按源SHA选择固定8个fit来源 |
+| 原始训练登记 | `bottleneck_24h_20261019_v1/summary_CPU_registration_05.json` | source_registration指向`source_clear_residual_20261018_v1/registration.json`原33来源登记；25个train来源只按源SHA选择固定8个fit来源 |
 | 已接受训练输入 | `bottleneck_24h_20261019_v1/summary_inputs_05/input_acceptance.json` | prepared→144窗、source_catalog、原多评审目标；不运行旧prepare launcher |
-| 原始开发登记 | `bottleneck_24h_20261019_v1/summary_dev_CPU_registration_07.json` | 同一source_registration的8个check来源，全部历史曝光 |
-| 已接受开发输入 | `bottleneck_24h_20261019_v1/summary_dev_inputs_07/input_acceptance.json` | prepared→8来源、43窗；必须完整覆盖每个来源 |
-| 原TIME/BASE身份及pixel helper登记 | `bottleneck_24h_20261019_v1/summary_generation_registration_10.json` | model_config_ref、initial_TIME_ref、code及codec/dictionary；不选择objective20权重 |
+| 原始开发登记 | `bottleneck_24h_20261019_v1/summary_dev_CPU_registration_09.json` | 同一原始source_registration的8个check来源；matched_fullbaseline_source_adoption绑定下方归一化监督登记，全部历史曝光 |
+| 已接受开发输入 | `bottleneck_24h_20261019_v1/summary_dev_inputs_09/input_acceptance.json` | prepared→8来源、43窗；必须等于generation10的first_dev_input_acceptance_ref并完整覆盖每个来源；07/08失败记录不替代此成功链 |
+| 归一化完整监督登记 | `meaningful_residual_20261018_v1/registration.json` | 由generation10的baseline_human_adoption_ref明确引用；data_ref提供完整baseline/labels NPZ，clock_ref提供归一化原生时钟，不含media；baseline_ref必须是保护40.47 |
+| 原作者训练参考采用证明 | `source_clear_residual_20261018_v1/original_human_label_adoption.json` | 归一化登记original_human_adoption_ref指向此证明而非原33来源登记；25个train证明的sid/label_ref须逐项绑定原始labels_ref |
+| 原TIME/BASE身份及pixel helper登记 | `bottleneck_24h_20261019_v1/summary_generation_registration_10.json` | 同时绑定model_config_ref、initial_TIME_ref、code、codec/dictionary及上述监督和开发接受链；不选择objective20权重 |
+| 原TIME43控制及首次输出验收 | `bottleneck_24h_20261019_v1/summary_generation_10/INIT_TIME/{completion.json,first_independent_output_QA.json}` | 显式采用同09输入、原TIME/BASE、原grammar6的已成功回答；不重复原43模型调用 |
 | 保护生产登记 | `semantic_context_production_20261016_v1/production_registration.json` | 采用selected_head和旧真实参数清点；其中baseline字段可能仍指40.46，不能当40.47包 |
 | 保护40.47包 | `semantic_context_production_20261016_v1/package/candidate_CONTEXT_SEMANTIC_RESIDUAL.zip` | 只读；384630B，SHA256见下文 |
 | 正式输入登记，只有生产评审时才采用 | `five_summary_sprint_20261019_v41/input_registration41.json` | 原426来源；不执行旧全量launcher |
@@ -60,6 +63,10 @@ b37c4a2e6593fc800f54ecce2f860fee5e7d5dc74e17ce280f9ee6722afbccd3
 ```
 
 私有manifest不是手填几十个模型/patch SHA。bootstrap沿显式旧ref读取、计算和核对；登记不存在或schema不同就停，把实际差异回报给制定方案的Agent，不自动glob/latest或改指别的实验。没有复制17GB模型、重新下载权重、解码全部媒体或重提特征的步骤。
+
+原33来源登记负责来源身份和用途声明：train使用原`native_ref/labels_ref`，check使用原`reference_ref`，两组均保留`media/clock_ref`。它不提供`data_ref`。归一化监督登记负责既有完整NPZ与归一化时钟；两层完整sid/group/name集合必须一致，媒体SHA取原始登记，归一化监督时钟须与已接受source catalog逐原生PTS及物理终点精确一致。原始clock只保留字节和来源追溯，不把其原始schema当成归一化时钟，也不重新标注或转换参考。
+
+原训练参考采用证明中的`first_human_read_proof.path/sha256`指向已导出的NPY，必须等于`label_ref`，并核原source及读取stage。`original_mat_sha256`是不同原始MAT的历史身份，保留完整证明ref/status/old_protocol_sha256，不与NPY哈希比较，也不声称本轮重读或重新导出MAT。
 
 ### 外部来源用途声明
 
@@ -94,7 +101,9 @@ b37c4a2e6593fc800f54ecce2f860fee5e7d5dc74e17ce280f9ee6722afbccd3
 
 - `model_spec`：现有model_dir、revision、canonical base SHA、原TIME权重与配置ref。完整model_files同时绑定逻辑文件名和解析后的文件字节，支持工作区内已有HF blob symlink。
 - `input_code`：实际旧summary_contract、summary_grammar6、codec、dictionary的ref。
-- `scopes.train/check`：完整source catalog、request refs、原生clock refs、retained patches、来源SHA、原始监督ref。
+- `source_registration_ref`：原33来源身份与用途声明绑定；`normalized_supervision_registration_ref`和`original_human_label_adoption_ref`分别保留完整NPZ登记与原作者训练参考证明。
+- `reference_generation_origin`：bootstrap默认绑定上表原43控制的completion和first QA。真实运行缺少该项会在模型加载前停止；核原输出/token文件、模型/输入/时钟、当前tokenizer/grammar及原生集合后明确标记历史采用，不能说成新生成。
+- `scopes.train/check`：完整source catalog、request refs、原生clock refs、retained patches、来源SHA、归一化监督ref，以及原始clock/native/labels或reference refs。
 - `source_supervision(sid)`：`baseline[native]` 与 `labels[native,reviewer]` 的原NPZ，转换成全部原评审的完整原生帧集合。显式known列保留UNKNOWN；不声明的known列拒绝，不填成零。
 - `NativeInputStore.case(uid)`：request、四个CPU张量、完整clock；重建并核实际两视图plan和四张量shape/dtype/字节SHA。只保留当前来源patch缓存，不缓存整个训练集。
 - `renderer`：只在生产manifest中登记。正式来源不提供supervision接口，源SHA不得与train/check重合。
@@ -160,7 +169,7 @@ CUDA_VISIBLE_DEVICES=0 "$AIC_PY" "$AIC_GPU_WRAPPER" \
 | 优化更新 | 16次，grad_accum=2 | AdamW lr1e-5、β0.1、weight decay0、clip1、dropout0；32对只过1遍 |
 | Final check teacher-forced | 16对×2=32前向 | final存盘并重载后的真实候选排序 |
 | **完整teacher-forced合计** | **258前向** | completion同时核发起/完成计数 |
-| 自由生成 | 现有43窗×2角色=86次generate | 原TIME全部完成后才训练；final重载后生成；每次≤512 tokens |
+| 自由生成 | 历史43控制采用＋新policy43次generate | 零重复原TIME生成；final重载后生成43次；每次≤512 tokens；仅合成单测保留模拟86路径 |
 | pilot顶层forward保护 | ≤66000 | 最多64窗时2×64×512+258=65794；含逐token模型调用，不含层级checkpoint内部重算 |
 | pilot执行预算 | 3600秒终止阈值 | 全部preflight、模型载入、原参考、训练、两角色生成、存盘重载和最终hash均计入；另记录原wrapper清理时间 |
 | prepare / CPU review | 各≤1800秒 | 外层timeout与进程内检查；实机成本未测 |
