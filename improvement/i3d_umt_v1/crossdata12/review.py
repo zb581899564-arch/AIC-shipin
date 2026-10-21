@@ -1,15 +1,15 @@
 """First held-dataset review after freezing, with matched coverage and controls."""
 import numpy as np
 import torch
-from common import ENGINEERING, ROOT, checked, clock, mean_pair_f1, rank_mask, read, reference, write_new
+from common import (ENGINEERING, ROOT, checked, clock, comparison_targets,
+                    mean_pair_f1, rank_mask, read, reference, write_new)
 from runtime import make_models, score_features
 from train import load_features
 
 
 def example(row):
     with np.load(checked(row['comparison_ref']),allow_pickle=False) as data:
-        baseline = data['baseline'].astype(bool)
-        labels = data['labels'].astype(bool)
+        baseline, labels = comparison_targets(data)
     c,pts,_ = clock(row)
     inherited = read(checked(row['comparison_clock_ref']))
     assert inherited['source_sha256'] == row['media']['sha256']

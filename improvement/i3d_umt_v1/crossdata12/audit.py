@@ -1,19 +1,32 @@
 """Independent CPU arithmetic on first saved scores; no model calls or refitting."""
 import json
 import numpy as np
-import torch
-import torch.nn.functional as F
 
 from common import ROOT, checked, read, reference, write_new
 
 
 def manual_f1(scores, baseline, labels):
+    # Deliberately independent of common.mean_pair_f1/binary_membership.
+    # Validate raw arrays before any bool conversion can hide unknowns.
+    baseline, labels = np.asarray(baseline), np.asarray(labels)
+    for name, value, ndim in (('baseline', baseline, 1), ('labels', labels, 2)):
+        if (value.ndim != ndim or not value.size or value.dtype.kind not in 'bifu'
+                or not np.isfinite(value).all()
+                or not ((value == 0) | (value == 1)).all()):
+            raise ValueError(f'Invalid binary {name} for independent F1')
+    if len(labels) != len(baseline):
+        raise ValueError('Independent F1 requires equal native-frame domains')
     n,k = len(baseline),int(baseline.sum())
     if scores is None:
         selected = set(np.flatnonzero(baseline).tolist())
     else:
-        assert len(scores)==(n+63)//64 and np.isfinite(scores).all()
-        selected = set(sorted(range(n),key=lambda i:(-float(scores[i//64]),i))[:k])
+        scores = np.asarray(scores)
+        if (scores.ndim != 1 or scores.dtype.kind not in 'fiu'
+                or len(scores) != (n+63)//64 or not np.isfinite(scores).all()):
+            raise ValueError('Invalid independent native-cell scores')
+        # Python scalar ints negate exactly, including uint64 and signed minima;
+        # coercing to float here could erase distinct large integer scores.
+        selected = set(sorted(range(n),key=lambda i:(-scores[i//64].item(),i))[:k])
     total = 0.0
     for col in range(labels.shape[1]):
         human = set(np.flatnonzero(labels[:,col]).tolist())
@@ -23,6 +36,9 @@ def manual_f1(scores, baseline, labels):
 
 
 def main():
+    import torch
+    import torch.nn.functional as F
+
     result=read(ROOT/'review.json')
     frozen=read(ROOT/'frozen_final.json')
     checked(frozen['checkpoint'])
@@ -32,7 +48,14 @@ def main():
     for row in result['dev']+result['results']:
         s=sources[row['sid']]
         original=np.load(checked(s['comparison_ref']),allow_pickle=False)
-        baseline,labels=original['baseline'].astype(bool),original['labels'].astype(bool)
+        baseline,labels=original['baseline'],original['labels']
+        known_keys={key for key in original.files if 'known' in key.lower()}
+        if not known_keys <= {'known'}:
+            raise ValueError('Unregistered known-label mask in independent audit')
+        if 'known' in known_keys:
+            known=original['known']
+            if known.dtype != np.bool_ or known.shape != labels.shape or not known.all():
+                raise ValueError('Unknown reviewer labels cannot enter complete-source audit')
         groups=np.load(ROOT/'inputs'/row['sid']/'groups.npy',allow_pickle=False)
         assert np.array_equal(groups,np.arange(len(baseline))//64)
         primary=np.load(ROOT/'outputs'/f'{row["sid"]}.npz',allow_pickle=False)
