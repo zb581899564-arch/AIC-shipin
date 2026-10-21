@@ -1,0 +1,3 @@
+本轮已自然STOP，不重跑任何下载、准备、模型或104项复核。Linux同名根completion.json、review.json、independent_cpu_audit.json及唯一GPU账本为权威终态。RESULT04.md说明含义，short_result04.json为小量传输结果。
+
+下一独立X-CLIP视频语义比较只按reports/video_text_grounding_20261021_v1的固定协议执行；旧门和失败不改。人工宽事件文本对齐不是自动生成查询，也不是精简高光或官网得分。40.47保护，无Goal/定时/自动官网提交/作者或跨聊天消息。

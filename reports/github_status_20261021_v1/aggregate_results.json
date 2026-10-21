@@ -1,0 +1,638 @@
+{
+  "schema": "AIC_AGGREGATE_STATUS_20261021_V1",
+  "created_utc": "2026-10-21T09:04:09.601728+00:00",
+  "code_ancestor": "cb6095cc3156319054f23e5a3ad5baeb5ed9d0c1",
+  "protected_baseline": {
+    "score": 40.47,
+    "score_source": "HUMAN_REPORTED",
+    "bytes": 384630,
+    "sha256": "b37c4a2e6593fc800f54ecce2f860fee5e7d5dc74e17ce280f9ee6722afbccd3",
+    "pipeline_parameters": 8782557449,
+    "preserved": true,
+    "archive_not_newly_published": true
+  },
+  "latest_stage": "STOP_FIXED_FULL_VIEW_PROFILE",
+  "overall_improvement_complete": false,
+  "new_experiments_or_submissions_for_publication": 0,
+  "results": {
+    "content_choice": {
+      "implementation_sha": "cb6095cc3156319054f23e5a3ad5baeb5ed9d0c1",
+      "common_collection": {
+        "status": "completed_exit0",
+        "sources": 8,
+        "windows": 43,
+        "original_controls_adopted": 43,
+        "new_generations": 86,
+        "new_TF": 330,
+        "optimizer_steps": 0,
+        "charged_seconds": 945.8990529477596,
+        "peak_memory_mib": 19068
+      },
+      "contrast": {
+        "status": "ELIGIBLE_FOR_EXECUTION_REVIEW",
+        "F1": 0.2766548680291985,
+        "original_TIME_F1": 0.2755622615756924,
+        "protected_proxy_F1": 0.2717385990413807,
+        "ranking": 0.7499999999999999,
+        "raw_ranking": 0.7291666666666666,
+        "add": 954,
+        "delete": 927,
+        "source_wins": 3,
+        "source_losses": 1,
+        "source_ties": 4,
+        "new_false_empty_sources": [],
+        "difference_interval": [
+          -0.008965069495143606,
+          0.009645745797385363
+        ],
+        "official_joint_score": "UNKNOWN"
+      },
+      "fixed_pool": {
+        "distinct_candidates_each_source": 4,
+        "sources": 8,
+        "headroom_sources": 6,
+        "oracle_macro": 0.2896701030487111,
+        "ranking_coverage": 8,
+        "oracle_is_not_predictor": true
+      },
+      "critic": {
+        "status": "STOP_MECHANISM",
+        "review_sha256": "77a416acb1462b23e442d497b14e456cfee280247b98e19b8a414a5075a7f565",
+        "stop_reasons": [
+          "CROSS_UTILITY_ORDERING_DID_NOT_BEAT_SHAPE_CONTROL",
+          "CROSS_UTILITY_ORDERING_DID_NOT_BEAT_PERMUTED_CONTROL",
+          "LOSO_UTILITY_ORDERING_DID_NOT_BEAT_SHAPE_ONLY_CONTROL"
+        ],
+        "cross_F1": 0.28205835363557347,
+        "cross_ranking": 0.7291666666666667,
+        "shape_ranking": 0.7708333333333335,
+        "permuted_ranking": 0.75,
+        "LOSO_ranking": 0.7799999999999998,
+        "LOSO_shape_ranking": 0.7866666666666667,
+        "actual_closed_form_solves": 78,
+        "deployed_weights": 131,
+        "formal_production": "PROHIBITED_FOR_THIS_STOPPED_CRITIC",
+        "cpu_reuse11": "LOCAL_PREPARATION_ONLY_NOT_ADMITTED_OR_EXECUTED"
+      },
+      "observation_gpu_completion": {
+        "status": "completed_exit0",
+        "changed_input_windows": 43,
+        "new_generations": 43,
+        "adopted_unchanged": 0,
+        "charged_seconds": 473.31860567536205,
+        "peak_memory_mib": 19068,
+        "CPU_quality_review": "STOP_MECHANISM",
+        "F1": 0.27369707858114345,
+        "original_TIME_F1": 0.2755622615756924,
+        "source_wins": 2,
+        "source_losses": 6,
+        "formal_production": "PROHIBITED_FOR_THIS_STOPPED_OBSERVATION"
+      },
+      "train_collection_completion": {
+        "sources": 25,
+        "windows": 144,
+        "generations": 432,
+        "TF": 1064,
+        "backward_updates": 0,
+        "natural_status": "completed_exit0",
+        "charged_seconds": 3127.52463024389,
+        "peak_memory_mib": 19572
+      },
+      "package_contrast": {
+        "original09": "FAILED_ENDPOINT_POLICY_COMPARISON_PRESERVED",
+        "first_all522_output_QA": "PASS_ADOPTED_NOT_REPEATED",
+        "field_domain": "PASS_NO_EXCLUSION",
+        "remaining19": "COMPLETE_CPU_COMPOSITION_11STRICT_WINDOWS_ACCEPTED",
+        "clock_bridge": "ALL426_EXACT_PTS_AND_ALL_SELECTED_POINTS_VALID_IN_BOTH_ENDPOINT_DOMAINS",
+        "endpoint_policy_differences": 11,
+        "selection_changed_by_recovery": false,
+        "model_or_replay_repeated": false
+      },
+      "latest_user_feedback": {
+        "score": 33.33,
+        "zip_sha256": "a586ba91de9232dd4d362143a022a5ad743ce9988212e386c1e678e672f8e539",
+        "source": "HUMAN_REPORTED_NO_LOGIN",
+        "adopted_as_baseline": false
+      },
+      "final_delivery": {
+        "bytes": 473904,
+        "sha256": "a586ba91de9232dd4d362143a022a5ad743ce9988212e386c1e678e672f8e539",
+        "records": 426,
+        "frames": 155941,
+        "added_frames": 59385,
+        "removed_frames": 26950,
+        "successful_empty_sources": 61,
+        "strict_checks_passed": 11,
+        "actual_pipeline_parameters": 8782557449
+      }
+    },
+    "official_temporal_probe4": [
+      {
+        "index": "01",
+        "submission_name": "round6-P01",
+        "method": "BASELINE_PLUS_TRIPLE",
+        "zip_bytes": 569352,
+        "zip_sha256": "65ff08878d9ac183da6d15e92393b618f4c11e1afc4dc8f6f37b5361485e4279",
+        "official_score": 38.63,
+        "status": "DONE",
+        "official_scoring_time_Asia_Taipei": "2026-10-20 23:30:46",
+        "failure_reason": "-",
+        "difference_from_40_47": -1.84,
+        "adopt_as_baseline": false,
+        "source": "INDEPENDENT_OFFICIAL_EDGE_UI_OBSERVATION"
+      },
+      {
+        "index": "02",
+        "submission_name": "round6-P02",
+        "method": "BASELINE_UNANIMOUS_REJECT",
+        "zip_bytes": 361837,
+        "zip_sha256": "10043b49ea370c93c9130399ce40dc134f051745129c6d77db58484a57f61ac1",
+        "official_score": 40.36,
+        "status": "DONE",
+        "official_scoring_time_Asia_Taipei": "2026-10-20 23:32:50",
+        "failure_reason": "-",
+        "difference_from_40_47": -0.11,
+        "adopt_as_baseline": false,
+        "source": "INDEPENDENT_OFFICIAL_EDGE_UI_OBSERVATION"
+      },
+      {
+        "index": "03",
+        "submission_name": "round6-P03",
+        "method": "WINDOW_CONDITIONAL_CHOICE",
+        "zip_bytes": 462178,
+        "zip_sha256": "ab16fb45f6369876ca7d9e28c62c086c82bdf6eb19fb67a3afcb17f87cdfef09",
+        "official_score": 33.47,
+        "status": "DONE",
+        "official_scoring_time_Asia_Taipei": "2026-10-20 23:32:55",
+        "failure_reason": "-",
+        "difference_from_40_47": -7.0,
+        "adopt_as_baseline": false,
+        "source": "INDEPENDENT_OFFICIAL_EDGE_UI_OBSERVATION"
+      },
+      {
+        "index": "04",
+        "submission_name": "round6-P04",
+        "method": "CONTENT_CRITIC_RISK",
+        "zip_bytes": 552522,
+        "zip_sha256": "8cc1f894cebed7d70f774902ba649642459b3165e18c7bf31a3e975e3495f411",
+        "official_score": 37.7,
+        "status": "DONE",
+        "official_scoring_time_Asia_Taipei": "2026-10-20 23:32:58",
+        "failure_reason": "-",
+        "difference_from_40_47": -2.77,
+        "adopt_as_baseline": false,
+        "source": "INDEPENDENT_OFFICIAL_EDGE_UI_OBSERVATION"
+      }
+    ],
+    "official_center_ablation": {
+      "status": "OFFICIAL_DONE_FIXED_CENTER_REJECTED_KEEP40_47",
+      "score": 35.0,
+      "protected_baseline_score": 40.47,
+      "delta": -5.47,
+      "official_state": "DONE",
+      "official_scoring_time_displayed": "2026-10-21 07:03:32",
+      "exact_change": {
+        "selected_frames": 123506,
+        "frames_added": 0,
+        "frames_deleted": 0,
+        "width_changes": 0,
+        "position_changes": 60705,
+        "changed_sources": 266
+      },
+      "conclusion": "The complete fixed-center method is worse. Original learned/interpolated positions are valuable relative to this replacement; no claim of universal optimality or hidden GT.",
+      "stop": "Do not scan center blends/strength/per-source switches or alter40.47 based on this total score."
+    },
+    "acoustic": {
+      "review_status": "STOP_FIXED_WHISPER_POOLED_LINEAR_FUSION",
+      "stop_reasons": [
+        "FUSED_REAL_ACCURACY_BELOW_POINT75",
+        "NO_ACCURACY_ADVANTAGE_OVER_VIDEO",
+        "TOO_FEW_SOURCE_ACCURACY_GAINS"
+      ],
+      "logical_cases": 88,
+      "actual_encoder_calls": 85,
+      "CPU_model_wall_seconds": 39.04756191186607,
+      "actual_CPU_Newton_updates": 12,
+      "metrics": {
+        "video": {
+          "train": {
+            "source_macro_accuracy": 0.7333333333333333,
+            "source_macro_brier": 0.10711317931911708,
+            "sources": 15,
+            "pairs": 30
+          },
+          "check": {
+            "source_macro_accuracy": 0.5625,
+            "source_macro_brier": 0.12232603542032769,
+            "sources": 8,
+            "pairs": 14
+          }
+        },
+        "audio": {
+          "train": {
+            "source_macro_accuracy": 0.8666666666666667,
+            "source_macro_brier": 0.09342073660525593,
+            "sources": 15,
+            "pairs": 30
+          },
+          "check": {
+            "source_macro_accuracy": 0.5,
+            "source_macro_brier": 0.11975295742800421,
+            "sources": 8,
+            "pairs": 14
+          }
+        },
+        "fused": {
+          "train": {
+            "source_macro_accuracy": 0.8666666666666667,
+            "source_macro_brier": 0.09559982493739486,
+            "sources": 15,
+            "pairs": 30
+          },
+          "check": {
+            "source_macro_accuracy": 0.4375,
+            "source_macro_brier": 0.11961240630963271,
+            "sources": 8,
+            "pairs": 14
+          }
+        },
+        "permuted_audio": {
+          "train": {
+            "source_macro_accuracy": 0.8333333333333334,
+            "source_macro_brier": 0.10321919787233032,
+            "sources": 15,
+            "pairs": 30
+          },
+          "check": {
+            "source_macro_accuracy": 0.3125,
+            "source_macro_brier": 0.12653479998707054,
+            "sources": 8,
+            "pairs": 14
+          }
+        }
+      }
+    },
+    "single_coupled_correction": {
+      "status": "STOP_FIXED_SINGLE_CORRECTION_ACTUAL_MAP_TRANSFER",
+      "macro": {
+        "fit": {
+          "baseline_F1": 0.3185304926661674,
+          "arms": {
+            "real": {
+              "F1": 0.3243267006716805,
+              "original_TIME_F1": 0.26243193552415844,
+              "gain": 0.06189476514752209,
+              "improved_sources": 2,
+              "changed_sources": 4
+            },
+            "shifted": {
+              "F1": 0.09898163241300864,
+              "original_TIME_F1": 0.2624439722337909,
+              "gain": -0.16346233982078226,
+              "improved_sources": 0,
+              "changed_sources": 4
+            }
+          }
+        },
+        "process": {
+          "baseline_F1": 0.3072365723993907,
+          "arms": {
+            "real": {
+              "F1": 0.2451844701828808,
+              "original_TIME_F1": 0.25092356073284594,
+              "gain": -0.0057390905499651035,
+              "improved_sources": 1,
+              "changed_sources": 2
+            },
+            "shifted": {
+              "F1": 0.24130649088052375,
+              "original_TIME_F1": 0.2451270444451284,
+              "gain": -0.0038205535646046243,
+              "improved_sources": 1,
+              "changed_sources": 3
+            }
+          }
+        }
+      },
+      "actual_forwards": 330,
+      "actual_updates": 1,
+      "charged_seconds": 547.4403420845047
+    },
+    "visual_readout": {
+      "scientific_status": "STOP_FIXED_PRE_LANGUAGE_VISUAL_READOUT",
+      "stop_reasons": [
+        "REAL_ACCURACY_BELOW_POINT75",
+        "NOT_BETTER_THAN_PRIOR_BEST_PREFILL_CONTROL",
+        "SOFT_TARGET_BRIER_NOT_BETTER_THAN_PRIOR_CONTROL",
+        "CONTENT_PERMUTATION_CONTROL_NOT_SURPASSED"
+      ],
+      "metrics": {
+        "train": {
+          "source_macro_accuracy": 0.9722222222222222,
+          "source_macro_brier": 0.09080089644555185,
+          "pairs": 36,
+          "sources": 18
+        },
+        "check": {
+          "source_macro_accuracy": 0.5625,
+          "source_macro_brier": 0.11715135352058496,
+          "pairs": 14,
+          "sources": 8
+        },
+        "permuted_content": {
+          "source_macro_accuracy": 0.75,
+          "source_macro_brier": 0.11741281106479458,
+          "pairs": 14,
+          "sources": 8
+        }
+      },
+      "actual_visual_forwards": 100,
+      "backbone_updates": 0,
+      "actual_new_CPU_heads": 1,
+      "charged_seconds": 171.87734604999423
+    },
+    "visual_adaptation_TIME43": {
+      "status": "STOP_FIXED_VISUAL_ADAPTATION_AND_TIME_TRANSFER_NO_PRODUCTION",
+      "pilot_status": "STOP",
+      "pilot_stop_reasons": [
+        "REAL_ACCURACY_BELOW_POINT75",
+        "NOT_BETTER_THAN_PRIOR_LM_CONTROL",
+        "BRIER_NOT_BETTER_THAN_PRIOR_LM_CONTROL",
+        "CONTENT_PERMUTATION_CONTROL_NOT_SURPASSED"
+      ],
+      "pilot_metrics": {
+        "train": {
+          "source_macro_accuracy": 0.9722222222222222,
+          "source_macro_brier": 0.0907244694877188,
+          "pairs": 36,
+          "sources": 18
+        },
+        "check": {
+          "source_macro_accuracy": 0.5625,
+          "source_macro_brier": 0.11702556903808012,
+          "pairs": 14,
+          "sources": 8
+        },
+        "permuted_content": {
+          "source_macro_accuracy": 0.75,
+          "source_macro_brier": 0.11732674256157832,
+          "pairs": 14,
+          "sources": 8
+        }
+      },
+      "time_status": "STOP_TIME_TRANSFER66",
+      "time_stop_reasons": [
+        "REAL_NOT_BETTER_THAN_ORIGINAL_TIME",
+        "FEWER_THAN_TWO_SOURCES_IMPROVED_VS_ORIGINAL_TIME"
+      ],
+      "time_macro": {
+        "greedy": {
+          "f1": 0.2755622615756924,
+          "precision": 0.16857201022075627,
+          "recall": 0.7803035343515866
+        },
+        "protected_proxy": {
+          "f1": 0.2717385990413807,
+          "precision": 0.17253862355131946,
+          "recall": 0.6739938691464287
+        },
+        "vision_real": {
+          "f1": 0.27417543838682706,
+          "precision": 0.16665918900766277,
+          "recall": 0.7968109051594403
+        },
+        "vision_shift": {
+          "f1": 0.25816951192197884,
+          "precision": 0.15948944841614227,
+          "recall": 0.7085654995115618
+        }
+      },
+      "time_effects": {
+        "vision_real": {
+          "added": 286,
+          "removed": 8,
+          "changed": 294,
+          "source_wins": 1,
+          "source_losses": 4,
+          "source_ties": 3,
+          "false_empty_sources": [],
+          "source_delta_interval": {
+            "low": -0.0038049962972442064,
+            "high": 5.531609450784569e-05,
+            "draws": 4096,
+            "unit": "complete_source",
+            "seed": 20261019,
+            "confidence": 0.95,
+            "admission_test": false,
+            "caveat": "Historically exposed small source sample; LOSO folds share training data"
+          }
+        },
+        "vision_shift": {
+          "added": 4693,
+          "removed": 5465,
+          "changed": 10158,
+          "source_wins": 3,
+          "source_losses": 5,
+          "source_ties": 0,
+          "false_empty_sources": [],
+          "source_delta_interval": {
+            "low": -0.06480436974899376,
+            "high": 0.03901487780190354,
+            "draws": 4096,
+            "unit": "complete_source",
+            "seed": 20261019,
+            "confidence": 0.95,
+            "admission_test": false,
+            "caveat": "Historically exposed small source sample; LOSO folds share training data"
+          }
+        }
+      },
+      "engineering": "Actual173visual/36backward/18updates plus86greedy/1949nativeforwards; all100featureQA and86token-grammar-nativeQA passed; natural unique ledger",
+      "limitations": [
+        "All external sources historically exposed, not blind or official jointGT",
+        "No pre/post shift difference-in-differences",
+        "No claim that all visual learning is impossible"
+      ],
+      "actual_GPU_charged_seconds_including_failed66": 826.5221339408308
+    },
+    "i3d_umt": {
+      "status": "STOP_CROSS_DATASET_TRANSFER",
+      "gates": {
+        "existing": false,
+        "ridge": true,
+        "content": false,
+        "sources": false,
+        "worst": false,
+        "noncollapse": true
+      },
+      "macro_mean_pair_F1": {
+        "umt": 0.26030018855905523,
+        "content_shift": 0.2590913590374728,
+        "ridge": 0.24910302242974913,
+        "inherited_external_control": 0.27173859904138076
+      },
+      "updates": 400,
+      "held_improved_sources": 3,
+      "held_selected_total": 22012,
+      "held_changed_frames_total": 10680,
+      "actual_I3D_forward_batches": 293,
+      "new_gpu_charged_seconds": 43.00572309270501
+    },
+    "static_clip": {
+      "status": "STOP_FROZEN_SEMANTIC_GROUNDING",
+      "source_macro_AP": {
+        "correct": 0.48862911810597387,
+        "within_query_swap": 0.3838111775207689,
+        "cross_video_query_swap": 0.40960921397060424,
+        "temporal_shift": 0.3795614066673366,
+        "constant": 0.34293405612161093
+      },
+      "tests": {
+        "within": true,
+        "cross": true,
+        "content": true,
+        "constant": true,
+        "sources": false
+      },
+      "charged_seconds": 10.747025026008487,
+      "actual_clip_parameters": 151277313,
+      "combined_parameters": 8933834762,
+      "image_embeddings": 4096,
+      "image_forward_batches": 131,
+      "text_forward_batches": 1,
+      "scope": "Human ActivityNet broad-event query AP, not shortened highlights or official quality"
+    },
+    "video_xclip": {
+      "status": "STOP_FROZEN_VIDEO_SEMANTIC_GROUNDING",
+      "tests": {
+        "within": true,
+        "cross": false,
+        "shifted": true,
+        "constant": true,
+        "sources": false,
+        "versus_static": false,
+        "order_evidence": false
+      },
+      "source_macro_AP": {
+        "correct": 0.42363876359487895,
+        "reverse": 0.42455210782343145,
+        "within_query_swap": 0.37273064835002845,
+        "cross_video_query_swap": 0.3898817882277722,
+        "temporal_shift": 0.36992274146529036,
+        "constant": 0.34293405612161093
+      },
+      "static_clip_macro": 0.48862911810597387,
+      "parameters": 196585729,
+      "combined_parameters": 8979143178,
+      "charged_seconds": 21.54146711807698,
+      "video_forward_batches": 134,
+      "text_forward_batches": 1,
+      "real_cells": 512,
+      "reverse_cells": 512,
+      "all_sources_historically_exposed": true,
+      "target": "Human ActivityNet broad events, not shortened highlights or official combined score"
+    },
+    "same_native_view": {
+      "status": "STOP_FIXED_FULL_VIEW_PROFILE",
+      "tests": {
+        "support": true,
+        "macro_gain": false,
+        "sources": false,
+        "no_large_loss": false
+      },
+      "macro_AP": {
+        "center": 0.6563926681783826,
+        "center_next_query": 0.5607322373393803,
+        "full": 0.6413529856387,
+        "full_next_query": 0.5486678004535147
+      },
+      "full_minus_center": -0.015039682539682575,
+      "improved_sources": 3,
+      "support": {
+        "valid_sources": 6,
+        "valid_queries": 16,
+        "supported": true
+      },
+      "charged_seconds": 10.715188216418028,
+      "torch_peak_allocated_bytes": 461966336,
+      "new_image_forward_batches": 4,
+      "new_image_embeddings": 112,
+      "reused_text_embeddings": 26,
+      "new_text_calls": 0,
+      "new_inverses": 49,
+      "adopted_inverse7": 7,
+      "combined_model_parameters": 8933834762
+    }
+  },
+  "source_receipt_bindings": [
+    {
+      "source_relative_path": "reports/content_choice_execution_20261020_v1/current_state.json",
+      "bytes": 10045,
+      "sha256": "2a866a8a0f7a88648eaa6c7bfd31742c5b571b5c6445afffa3e9e3760102c8cf",
+      "complete_private_runtime_not_distributed": true
+    },
+    {
+      "source_relative_path": "reports/online_temporal_probe4_20261020_v1/official_submission_scores26.json",
+      "bytes": 3512,
+      "sha256": "b48b00607950f2b77d28768e5a14e9189f334eae4cc43879c337408f603c857b",
+      "complete_private_runtime_not_distributed": true
+    },
+    {
+      "source_relative_path": "reports/evidence_reset_goal_20261020_v1/short_acoustic15_receipt.json",
+      "bytes": 4549,
+      "sha256": "ebea5648b4df679b9b3b06df2505892f293c095904428e442ac0ff842b22cf88",
+      "complete_private_runtime_not_distributed": true
+    },
+    {
+      "source_relative_path": "reports/evidence_reset_goal_20261020_v1/short_completion36.json",
+      "bytes": 3227,
+      "sha256": "05fa479924645823f9df47b61593bffc66c92d385829fec0c0e30cf30c633cc2",
+      "complete_private_runtime_not_distributed": true
+    },
+    {
+      "source_relative_path": "reports/evidence_reset_goal_20261020_v1/short_vision_receipt53.json",
+      "bytes": 1859,
+      "sha256": "ecb5eee3ed9b81fbafabce5b32808bee2093d327beb6b135584dc9c1b8aeb778",
+      "complete_private_runtime_not_distributed": true
+    },
+    {
+      "source_relative_path": "reports/evidence_reset_goal_20261020_v1/main_decision68.json",
+      "bytes": 5292,
+      "sha256": "5ee587b8606b5dbc3c964bdca17b07b62f7dd2424c27db9b3eca0ba7cb97dc62",
+      "complete_private_runtime_not_distributed": true
+    },
+    {
+      "source_relative_path": "reports/evidence_reset_goal_20261020_v1/official_result51.json",
+      "bytes": 1610,
+      "sha256": "6eb03fb16ca43a84d9de3a85081d94e7e24824554a54a255e3cd14261700a106",
+      "complete_private_runtime_not_distributed": true
+    },
+    {
+      "source_relative_path": "reports/i3d_umt_cross_domain_20261021_v1/short_result14.json",
+      "bytes": 5023,
+      "sha256": "8b80165d2ec9e96029090c94ae865b419b8aa7b71b78e57cecf14de52e80c53d",
+      "complete_private_runtime_not_distributed": true
+    },
+    {
+      "source_relative_path": "reports/independent_text_grounding_20261021_v1/short_result04.json",
+      "bytes": 2614,
+      "sha256": "14c10e73296beb37a9590829f7b59001e66319dbe7a2f5bfec5e6cfb4624d911",
+      "complete_private_runtime_not_distributed": true
+    },
+    {
+      "source_relative_path": "reports/video_text_grounding_20261021_v1/short_result08.json",
+      "bytes": 5815,
+      "sha256": "799ee99243e7848e0c7eb5f405aee022867225d662b21fbc2e9886bb44ed8cdb",
+      "complete_private_runtime_not_distributed": true
+    },
+    {
+      "source_relative_path": "reports/full_view_context_20261021_v1/short_result.json",
+      "bytes": 3867,
+      "sha256": "0a0a0438b9f398725a29b2863ad043fc76d75b42133b2e1fcddacaff6945f9b4",
+      "complete_private_runtime_not_distributed": true
+    }
+  ],
+  "interpretation": "Proxy metrics, engineering completion and official total scores are different evidence. All completed scientific STOPs remain stopped.",
+  "runtime_scope": "Last read-only completion snapshot:2026-10-21 16:41 Asia/Taipei, no active owned GPU; not continuous monitoring.",
+  "privacy": "No new media, labels, predictions, raw, tensors, weights, full input/source locks, credentials or private discussions distributed."
+}
