@@ -1,0 +1,9 @@
+当前X-CLIP已经自然结束，不按旧pending或PID启动。Linux同名根completion.json、review.json、independent_cpu_audit.json及唯一资源账本为权威终态：STOP_FROZEN_VIDEO_SEMANTIC_GROUNDING。正确宏AP.423639低于旧CLIP.488629，倒序.424552；仅1/8胜旧CLIP，同视频优势5/8未达6/8。所有原门保持，不调prompt/阈值/checkpoint或追加训练挽救。禁止重跑下载、CPU准备、134视频批/1文本批和130项AP复核。
+
+权重786503179B/SHAe300e1829012557f6ceab12c3ac010382302d8ce3df42aec7c0f7aa0fd6d451f，CRC及443张量严格加载过，参数196585729，加保护基线8979143178≤9B。唯一GPU自然completed/exit0/21.541467118秒，父链退出、GPU184MiB/0%。旧超时、受控网络停止、04的3段403及08仅补3段的成功都保留；下载已经结束，不再刷新链接或重拉范围。
+
+RESULT08.md、short_result08.json和current_state.json为本地结果。后续posthoc_diagnostic09仅说明正反排序98.54%一致；中心输入保留缩放视野50.12%，不能证明裁剪是失败根因。
+
+实际有界准备已完成：full_view_cache_inventory10登记273同原生帧/7源、固定哈希选56；V05采样相位无交集，不近邻替代。input_inverse11_acceptance已恢复每源首个选中帧，共7个Qwen缩放缓存视图；独立合成processor及实际张量反变换通过。0新媒体解码、0真实processor重跑、0新模型。不是原分辨率RGB或新质量证据，后续必须采用这些成功RGB。
+
+下一只按NEXT_VIEW_PROFILE12进行同重建源视野对照准备。GPU样本/渲染/输入锁/预算和解释须另冻结；当前没有新模型或全量准入。short_preparation12.json为2447B/SHAbab29b888210e73a660af40ee64cd86a1e06390c917efba1ba0f1a9dfd9e05e7。完整图像/tensor仍留Linux，40.47及原时空字段不动；无新ZIP/官网提交/Goal/定时/作者或跨聊天消息，CONTROL5永不恢复。整体改进未完成，不宣称所有方向耗尽。

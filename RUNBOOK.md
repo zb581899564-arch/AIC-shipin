@@ -1,3 +1,5 @@
+> 历史方案提示（2026-10-21）：本文件保留原DPO实施历史。当前真实终态请先读 [最新状态](reports/github_status_20261021_v1/START_HERE.md)；不要按历史待执行条目重启。
+
 # 执行交接：native_preference_v1
 
 **本轮交付代码与真实合成CPU检查；本文件中的Linux资产准备、Torch gate、Qwen调用、训练、实际评分、正式推理和封包均未运行。** 最佳仍为用户反馈40.47。先读 [NEXT_PLAN.md](NEXT_PLAN.md)，再按本文件逐阶段执行；不把README中的历史任务或旧PASS当成本轮准入。

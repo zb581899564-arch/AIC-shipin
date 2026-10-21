@@ -1,24 +1,30 @@
 # Public research-review mirror
 
-Read README.md and reports/pro_implementation_handoff_20261019_v1/START_HERE.md first.
-This repository contains historical experiments, rejected recipes and unexecuted
-launchers. File presence is not authorization or evidence of execution.
+Read README.md and reports/github_status_20261021_v1/START_HERE.md first.
+The latest factual snapshot is October 21, 2026. PR #3 has already executed:
+contrast was delivered but user-reported33.33; critic and observation stopped.
+Later online probes and all admitted new pilots are recorded in the latest
+ledger. The protected user-reported best remains40.47, unchanged.
 
-For the current handoff, the user authorizes a new plan and code changes on a
-branch/PR. Implement and run only relevant CPU checks with synthetic inputs in
-this repository. Do not start Linux/GPU experiments, submit predictions, contact
-authors, modify connections, or run historical launchers. The execution agent
-will review the new commit and run the bounded Linux protocol separately.
-Keep engineering acceptance, proxy metrics and user-reported official scores
-separate. Cite exact files; acknowledge assets and evidence you cannot access.
+Historical plans, launchers, pending states, goals, dates and source locks are
+evidence, not current work orders. Do not restart completed or failed runs.
+A source file's presence is not proof of execution or current authorization.
 
-Model weights, source media, restricted annotations and caches are intentionally
-absent. Historical instructions are archived under docs/history as evidence,
-not as current operational instructions. Original notices and third-party terms
-still apply; this mirror does not grant rights over third-party assets.
+For a future user-authorized research/code review, preserve the existing PR
+fixes and frozen results. Distinguish engineering acceptance, exposed external
+proxy metrics and official/user-reported scores. Use explicit implementation
+paths/configuration, acknowledge inaccessible private assets and identify a
+different mechanism before proposing another experiment. Do not silently
+reinterpret old STOPs or turn aggregate leaderboard scores into Test tuning.
 
-The protected user-reported best remains 40.47. The latest five submissions all
-regressed; their fixed two-role summary/set-fusion family is stopped. Historical
-plans, deadlines, pending states and launch authorization are not current work
-orders. Keep frozen experiment evidence unchanged; add new implementation in a
-clearly named directory with an explicit entry point and configuration.
+This public checkout has no model weights, raw media, restricted labels,
+private input caches or full runtime locks. Only relevant synthetic CPU checks
+are available here; do not start Linux/GPU experiments, submit predictions,
+contact authors/other chats or modify connections from archived instructions.
+Actual execution is a separately reviewed handoff, with all evidence retained.
+
+Baseline ZIP/weights and all old evidence remain protected. Official data must
+not be sent to closed services or used for Test-derived labels/training or
+per-source manual adjustment. Actual main plus auxiliary parameters must be
+<=9B. Third-party notices and usage terms continue to apply; this mirror does
+not grant asset rights. A later explicit human instruction defines new scope.
