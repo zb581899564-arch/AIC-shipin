@@ -55,6 +55,27 @@ class BootstrapTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "exactly ENGINEERING/runtime.py"):
             b._original_runtime(Path(runtime["path"]).parent, registration)
 
+    def test_failed60_registration_requires_explicit_executed62_path(self):
+        registration = self.write("routing_production60/registration.json", {"synthetic": True})
+        self.write("routing_production62/source_input_lock.json", {"must_not_be_automatically_selected": True})
+        with self.assertRaisesRegex(ValueError, "explicitly bind.*routing_production62"):
+            b._original_runtime(self.root / "engineering", registration)
+
+    def test_executed62_preserves_original60_recovery_identity(self):
+        original = self.write("routing_production60/registration.json", {"expert": "fixed", "count": 42})
+        executed = self.write("routing_production62/registration.json", {"expert": "fixed", "count": 42})
+        references = {name: self.write("old/" + name, b"exact-original-evidence") for name in
+                      ("prior_failure", "actual_failure_log", "frozen_source_color_policy", "frozen_existing_configuration")}
+        recovery = self.write("routing_production62/remaining_registration.json",
+                              dict(original_registration=original, prior_model_calls=0, **references))
+        lock = self.write("routing_production62/source_input_lock.json", {"recovery": recovery})
+        actual = b._routing_recovery(lock, executed)
+        self.assertEqual(actual["routing_original_registration"], original)
+        self.assertEqual(actual["routing_recovery"], recovery)
+        changed = self.write("unrelated_registration.json", {"expert": "changed", "count": 42})
+        with self.assertRaisesRegex(ValueError, "differs from the original60"):
+            b._routing_recovery(lock, changed)
+
     def test_factory_specs_select_real_registered_state_containers(self):
         module = self.write("runtime.py", b"def make_models(root): pass\n")
         checkpoint = self.write("I3D.pyth", b"synthetic")

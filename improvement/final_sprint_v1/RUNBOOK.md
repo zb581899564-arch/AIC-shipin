@@ -1,12 +1,12 @@
-# GPT-6.1-sol Linux RUNBOOK：固定提交、真实冒烟、完整426、独立封包
+# GPT-6.1-sol Linux RUNBOOK：审查修订版，先出完整风险包
 
 ## 0. 先读结论与边界
 
-执行的是本轮**新的生产风险探索**，不是恢复122/123、CONTROL5或旧训练协议。首先读根目录 [FINAL_SPRINT_PLAN_20261023.md](../../FINAL_SPRINT_PLAN_20261023.md)、[candidates.json](candidates.json)、[VALIDATION.md](VALIDATION.md)，再读最新 [START_HERE](../../reports/github_status_20261023_v1/START_HERE.md) 和 [RESULT122_123](../../reports/t_branch_execution_20261022_v1/RESULT122_123.md)。本轮代码主流程已经实现，缺少的是本机现存私有资产的精确绑定和真实首次运行。
+执行的是本轮**新的生产风险探索**，不是恢复122/123、CONTROL5或旧训练协议。首先读 [REVIEW_AUDIT.md](REVIEW_AUDIT.md)、根目录 [FINAL_SPRINT_PLAN_20261023.md](../../FINAL_SPRINT_PLAN_20261023.md)、[candidates.json](candidates.json)、[VALIDATION.md](VALIDATION.md)，再读最新 [START_HERE](../../reports/github_status_20261023_v1/START_HERE.md) 和 [RESULT122_123](../../reports/t_branch_execution_20261022_v1/RESULT122_123.md)。本轮代码主流程已经实现，缺少的是本机现存私有资产的精确绑定和真实首次运行。
 
-目标：先交 `g_subject` 的一个工程完整且真正不同的ZIP和小交付清单，然后按实际共享GPU吞吐选择R/M。没有任何新包被证明超过40.48。新候选不新增F1/五折/人工标注门；首个真实工程冒烟必须执行，模型/映射/全空崩塌故障先修。官方视频不外发、不训练、不转为伪标签；不人工改选片或框，不自动官网提交。
+目标：先交 `g_subject` 的一个工程完整且真正不同的ZIP和小交付清单，然后按实际共享GPU吞吐优先选择资产已齐的M，否则选择R。没有任何新包被证明超过40.48。新候选不新增F1/五折/人工标注门；首个真实工程冒烟必须执行，模型/映射/全空崩塌故障先修。官方视频不外发、不训练、不转为伪标签；不人工改选片或框，不自动官网提交。
 
-时间：用户消息提供剩余24小时和两天各5次；具体账户余额及日界在执行端查看。保守预算终点先按本轮接单时刻约 `2026-10-23 04:05 UTC` 加24小时，即 `2026-10-24T04:05:00+00:00`。这是本轮预算锚点，**不是独立核实的官方延期**；若用户实际窗口或账户显示更早，以更早为准，不能每次恢复都改成“现在+24h”。累计全部模型命令墙时≤18h，至少4h收尾；共享GPU等待也消耗实际日历窗口。
+时间：用户消息提供剩余24小时和两天各5次；具体账户余额及日界在执行端查看。本次接替审查的固定规划锚点为 `2026-10-23T06:10:00+00:00`（台北14:10），按用户本条24小时信息规划到 `2026-10-24T06:10:00+00:00`（次日14:10）。**这不是独立核实的官方延期**；账户实际时限或已锁定更早deadline优先，不能每次恢复改成“现在+24h”。之前PR #7的运行若已经开始，保留其原始资产锁和成功/失败记录，不迁移或覆盖。累计全部模型命令墙时≤18h，至少4h收尾；共享GPU等待也消耗实际日历窗口。
 
 ## 1. 第一条命令：只读真实资源
 
@@ -29,7 +29,7 @@ GPU有外部任务时，等待其自然完成，或使用现有调度器对本ru
 
 ## 2. 固定源码，使用现有解释器
 
-从本次交付消息复制**完整40位最终commit**到 `FSV1_COMMIT`。不要自行用最新branch head替代它。PR目标分支是 `sync/20261023-t-branch-results`，精确基点必须为 `e8224c4339007790a1be383be19fdb200cc817bc`；main不够新。
+从本次交付消息复制**完整40位最终commit**到 `FSV1_COMMIT`。不要自行用最新branch head替代它。新PR目标分支是 `sync/20261023-t-branch-results`；本次新分支包含PR #7的 `60bcec3c6f058acf31352dfa771a48b81b9e5bd9` 及此次后续修复，精确基点必须为 `e8224c4339007790a1be383be19fdb200cc817bc`；main不够新。
 
 下面变量中，现存私有工作根和Python采用已发布代码记录的真实接口。`FSV1_OUTPUT_PARENT` 是步骤1确认有容量的现成获准目录；可以与原工作根不同。`FSV1_GIT_SOURCE` 是本机已存在的该仓库Git checkout，执行者只需填实际路径，不必改主流程。没有Linux checkout时，可从Windows部署这次必要的小代码及固定Git对象到现有获准工作目录；不反向搬媒体/raw/tensor来方便审计。
 
@@ -40,15 +40,16 @@ export FSV1_PYTHON="$FSV1_WORK/env/qwen3vl_isolated_20260910/bin/python"
 : "${FSV1_COMMIT:?从本次PR交付消息复制完整40位SHA}"
 : "${FSV1_GIT_SOURCE:?填入Linux现存AIC-shipin Git checkout绝对路径}"
 : "${FSV1_OUTPUT_PARENT:?填入已核实容量的现成获准输出父目录}"
+export FSV1_COMMIT FSV1_GIT_SOURCE FSV1_OUTPUT_PARENT
 test "${#FSV1_COMMIT}" -eq 40
 test -x "$FSV1_PYTHON"
-export FSV1_REPO="$FSV1_OUTPUT_PARENT/final_sprint_checkout_20261023"
-export FSV1_RUN="$FSV1_OUTPUT_PARENT/final_sprint_production_20261023_v1"
+export FSV1_REPO="$FSV1_OUTPUT_PARENT/final_sprint_reviewed_checkout_20261023"
+export FSV1_RUN="$FSV1_OUTPUT_PARENT/final_sprint_reviewed_production_20261023_v2"
 export FSV1_BIND="${FSV1_RUN}_binding"
 export FSV1_MAPPING="$FSV1_BIND/mapping.json"
 export FSV1_ASSETS="$FSV1_RUN/assets.json"
 export FSV1_SCRATCH=/dev/shm
-export FSV1_DEADLINE=2026-10-24T04:05:00+00:00
+export FSV1_DEADLINE="${FSV1_DEADLINE:-2026-10-24T06:10:00+00:00}"
 ```
 
 只有本机已确认合法直连GitHub时才执行fetch；已有精确对象可直接采用，不必下载。代理/未知中转先询问用户，不修改配置来绕过限制。安全的checkout操作：
@@ -79,7 +80,7 @@ export FSV1_CONFIG="$FSV1_OLD_RUN/b_score_aligned_package_v4/config.json"
 export FSV1_INPUTS="$FSV1_WORK/twenty_hour_five_20261014_v1/temporal_family_native_package_v3/package_inputs.json"
 export FSV1_SEM_REG="$FSV1_WORK/semantic_context_production_20261016_v1/production_registration.json"
 export FSV1_I3D_ACCEPT="$FSV1_WORK/i3d_umt_cross_domain_20261021_v1/weight_acceptance.json"
-export FSV1_UMT_REG="$FSV1_WORK/general_highlight_supervision_20261021_v1/routing_production60/registration.json"
+export FSV1_UMT_REG="$FSV1_WORK/general_highlight_supervision_20261021_v1/routing_production62/registration.json"
 export FSV1_ZIP48="$FSV1_WORK/general_highlight_supervision_20261021_v1/routing_package63/source_remove/candidate_SPORT_ROUTE_REMOVE_8B.zip"
 export FSV1_ZIP47="$FSV1_WORK/semantic_context_production_20261016_v1/package/candidate_CONTEXT_SEMANTIC_RESIDUAL.zip"
 CUDA_VISIBLE_DEVICES='' OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 \
@@ -100,7 +101,9 @@ CUDA_VISIBLE_DEVICES='' OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 OPENBLAS_NUM_THREADS
 | 原TIME | config `b_adapter`/adapter_model.safetensors，原SHA必须为 `8e2cca463d8aac39f7a709bdf562373e3e47a3a8da490991c303d5e03b803b23` | materialize实际LoRA A/B参数，15,335,424；不是量化后磁盘数 |
 | semantic | 原 `production_registration.selected_head`；`SEM/code/monotone_head06.py` | `ResidualHead(12289,8)`，严格state，98,329 |
 | I3D | 原weight_acceptance引用的实际文件 | 原SHA锁定 `ENGINEERING/runtime.py:make_models(...)[0]`，`model_state` |
-| SportUMT | 原routing_production60注册 `expert_checkpoint`及source_input_lock | 同一原factory `[1]`，`model`；I3D+UMT合计34,252,497 |
+| SportUMT | 实际成功routing_production62注册（绑定原60→62恢复证据） `expert_checkpoint`及source_input_lock | 同一原factory `[1]`，`model`；I3D+UMT合计34,252,497 |
+
+**旧60在source_input_lock写入前已失败；不要改回60、创建伪锁或重跑60/62。** bootstrap采用62真实锁，并验证原60注册、原零模型准备失败与色彩修复的SHA。
 
 代码不import旧launcher、不恢复旧训练、不执行历史质量门。成功库存存在时只核验采用。四个实际辅助参数总数应为49,686,250，完整原8B仍在后续GPU加载中实际清点。原BASE canonical冻结SHA必须为 `74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59`，真实8,767,123,696个参数；仅同架构同参数量不算身份一致。
 
@@ -129,9 +132,9 @@ CUDA_VISIBLE_DEVICES=0 "$FSV1_PYTHON" -m improvement.final_sprint_v1.supervise \
   --assets "$FSV1_ASSETS" --expected-commit "$FSV1_COMMIT" --action smoke --candidate g_subject
 ```
 
-实际index不是0时同步替换上述前缀。bind会核验426媒体SHA、原生时钟、两原ZIP、当前模型完整文件树和原色彩修复配置；不复制媒体、不自动找目录。现有log316输入修复按原SHA和完整policy保留，这是已采用的工程转换，不是新加测试来源特例。
+实际index不是0时同步替换上述前缀。bind会核验426媒体SHA、原生时钟及原点/正终点证明、两原ZIP、当前模型完整文件树和原色彩修复配置；不复制媒体、不自动找目录。现有log316输入修复按原SHA和完整policy保留，这是已采用的工程转换，不是新加测试来源特例。
 
-preflight检查当前磁盘、tmpfs/物理RAM、GPU空闲/外部任务、实际Python依赖；要求现有Transformers4.57.1。不要为可选路线大规模重装环境。新推理使用本机原Qwen BF16/sdpa，禁自动Hub下载、禁外部推理。真实空间冒烟在仅按媒体元数据选择的一源上执行16个相邻原生帧，验证decode→Qwen主体→GrabCut/LK→合法框；不是质量筛选，不看官方标签。
+preflight检查当前磁盘、tmpfs/物理RAM、GPU空闲/外部任务、实际Python依赖；要求现有Transformers4.57.1。不要为可选路线大规模重装环境。新推理使用本机原Qwen BF16/sdpa，禁自动Hub下载、禁外部推理。真实空间冒烟在仅按媒体元数据选择的一源上执行恰好16个相邻原生帧（起点过近结尾时只调整冒烟起点），验证decode→Qwen主体→GrabCut/LK→合法框；不是质量筛选，不看官方标签。
 
 预期 `smoke/grounding/completion.json: REAL_ENGINEERING_SMOKE_PASS`，带实际参数清单/真实输入证据/耗时、`quality_evaluated:false`。公开CPU检查不能代替此状态。模型身份、EOS/JSON、native PTS、真实图片/空间证据或参数数错误都停止，不转为空或默认框。
 
@@ -150,7 +153,7 @@ CUDA_VISIBLE_DEVICES=0 "$FSV1_PYTHON" -m improvement.final_sprint_v1.supervise \
 
 `supervise`是所有smoke/run的生产入口，直接CLI会拒绝没有wrapper的GPU执行。它严格拥有一个新子进程组，累计预算或阶段超时时只终止本组并wait，绝不按旧PID终止外部任务。自然完成不额外发信号。CPU派生也用同一有界入口，但不会加载GPU。
 
-G最大3h命令墙时。`forecast`按真实全量时钟估算，冷加载分开；R/M估计包含新空间开销。正常生产先完成5个来源，用实际墙时/物理时长推算剩余×1.2；预计无法在阶段或最终预留前完成就STOP，已成功调用全部保留。该规则是成本控制，不是效果挑选。不要因成本STOP改口“模型质量失败”。
+G最大3h命令墙时。`forecast`按真实全量时钟估算，冷加载分开；R/M估计包含新空间开销。forecast先输出从真实原生PTS计算的G最低定位次数及每源512上限冲突；512是每源上限，绝非全426调用数。出现固定上限必然不足须在GPU前处理明确成本故障，不能到该源时用原框顶替失败。正常生产先完成5个来源，用实际墙时/物理时长推算剩余×1.2；预计无法在阶段或最终预留前完成就STOP，已成功调用全部保留。该规则是成本控制，不是效果挑选。不要因成本STOP改口“模型质量失败”。
 
 首个交付里程碑：
 
@@ -160,20 +163,22 @@ $FSV1_RUN/candidates/g_subject/package/delivery.json
 $FSV1_RUN/candidates/g_subject/package/package_receipt.json  （完整内部回执留Linux）
 ```
 
-预期完整source状态为 `SUCCESS_NONEMPTY` 或 `SUCCESS_EMPTY`，失败没有source成功文件。封包终态 `ENGINEERING_ACCEPTED_QUALITY_UNVALIDATED`，每包完整426条、单JSONL、CRC/memberSHA通过、对40.48/40.47的加帧/删帧/改框/改变来源数明确。G必须加帧0/删帧0，实际框差异若为0会按重复基线拒绝，不能仅改ZIP名。
+预期完整source状态为 `SUCCESS_NONEMPTY` 或 `SUCCESS_EMPTY`，失败没有source成功文件。封包终态 `ENGINEERING_ACCEPTED_QUALITY_UNVALIDATED`，每包完整426条、单JSONL、CRC/memberSHA通过、对40.48/40.47的加帧/删帧/改框/改变来源数明确。G必须加帧0/删帧0（封包代码硬检查G_TEMPORAL_DRIFT），实际框差异若为0会按重复基线拒绝，不能仅改ZIP名。
 
 独立 `package` 命令在新进程重新读取全部source成功账本和原生证据，0新模型调用。426有一条缺失/失败、全空/全选、非法框、参数超9B或与任何已封新包同预测都会拒绝。它可在最后4h收尾期运行，不要求再次抢GPU。
 
 ## 6. 后续候选：先看真实吞吐，再用预登记配置
 
-G父包完成后，几何对照不需要新GPU：
+G父包完成后，两个不同问题的空间对照不需要新GPU、解码或Qwen调用。先原始语义范围对照，再固定中心的尺度对照；只有预测SHA不同才可提交：
 
 ```bash
+CUDA_VISIBLE_DEVICES=0 "$FSV1_PYTHON" -m improvement.final_sprint_v1.supervise \
+  --assets "$FSV1_ASSETS" --expected-commit "$FSV1_COMMIT" --action run --candidate g_semantic_extent_control
 CUDA_VISIBLE_DEVICES=0 "$FSV1_PYTHON" -m improvement.final_sprint_v1.supervise \
   --assets "$FSV1_ASSETS" --expected-commit "$FSV1_COMMIT" --action run --candidate g_center_control
 ```
 
-R一次冒烟包含真实物理局部输入和缓存分支/完整无padding参考比较；常规32帧片约17物理forward，冒烟额外8参考。容差固定，失败不能绕过或用参考结果替换原分支。
+R一次冒烟包含真实物理局部输入和缓存分支/完整无padding参考比较；实际主要forward数为每片1+真实两帧组数，最多17；冒烟首末组另加实际完整参考，通常8次，单组时4次。容差固定，失败不能绕过或用参考结果替换原分支。
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 "$FSV1_PYTHON" -m improvement.final_sprint_v1.supervise \
@@ -186,7 +191,7 @@ CUDA_VISIBLE_DEVICES=0 "$FSV1_PYTHON" -m improvement.final_sprint_v1.supervise \
   --assets "$FSV1_ASSETS" --expected-commit "$FSV1_COMMIT" --action run --candidate r_phase_apex
 ```
 
-若一次R冒烟预测超过可用8h或剩余日历时间，停止R，切已绑定M；不继续生成半套426。R 1ms保守DP成本量化可能舍弃恰好占满25%上限的事件，尤其VFR/短源；这是固定规则风险，不临时改比例或强制填满。apex只采用父包选中的相同事件和已存在空间子集，缺父成功时会拒绝启动新模型。
+若一次R冒烟预测超过可用8h或剩余日历时间，停止R，切已绑定M；不继续生成半套426。R使用持续时间积分效用（秒×语义优势−0.15 nat·s的事件启动成本），不再用平均优势奖励碎片；初始允许resolution但不补造apex。R 1ms保守DP成本量化可能舍弃恰好占满25%上限的事件，尤其VFR/短源；这是固定规则风险，不临时改比例或强制填满。apex只采用父包选中的相同事件和已存在空间子集，缺父成功时会拒绝启动新模型。
 
 M只有在首次bind已包含合法资产时执行。先主包后通用查询对照：
 
@@ -217,9 +222,11 @@ CUDA_VISIBLE_DEVICES=0 "$FSV1_PYTHON" -m improvement.final_sprint_v1.supervise \
 | `success.json`存在、terminal丢失 | 同一命令会验证并采用成功、补终态，0新模型 |
 | `returned_result.json`完整，写success前中断 | 自动采用原始完整返回值，0新模型 |
 | 完整返回值与后续failure共存 | 用本次精确wrapper终态reconcile；原failure保留，另写adoption，0新模型 |
+| claim先写但state/index未完成 | 由精确owned-wrapper终态恢复；未决预算仍完整占用，不据此推定成功 |
+| 账本最后一行写裂、成功工件完整 | 在账本锁内归档原始中断字节并恢复完整行；随后仍只按精确claim/success校验采用，0新模型 |
 | claim未完成、显式failure、旧PID/超时 | 不自动重试；先读本次wrapper的实际completion和失败位置 |
 | 前N源成功、N+1失败 | 解决N+1工程故障后，仅继续未完成部分；前N源与已成功子调用不重跑 |
-| 426全成功、封包失败/中断 | 单独 `cli package`；不重启GPU或完整推理 |
+| 426全成功、封包失败/中断 | 单独 `cli package`；保留写裂的.PENDING，按成功结果重建确定字节；不重启GPU或完整推理 |
 | 包已完整成功 | `run`也会先采用完整包并独立复核，不重新申请GPU |
 
 在真实wrapper完成后才执行：
@@ -248,4 +255,4 @@ python verify_received.py --manifest delivery.json --zip candidate_FINAL_G_SUBJE
 
 执行Agent汇报每包：candidate_id、完整Git SHA、实际模型全部参数、改变范围、实际工程终态、ZIP bytes/SHA/memberSHA、预测identity、相对两原包差异、真实运行墙时/physicalforward、失败费用、共享GPU等待、质量是否验证。`command_budget`统计完整子进程加载/核验/解码/推理/失败/封包墙时，和`journal`里的逻辑任务数分开；嵌套任务墙时不重复求和。这里没有购买外部资源的货币账单，不把墙时叫独立测得的GPU内核时间。
 
-保留两原包SHA复核结果。新风险包分数低就放弃该固定路线；不能用平台总分恢复测试标签、为某源改规则或扫同阈值。最多六个有差异的注册包，不要求耗尽十次；最后4h停止新GPU路线，预留验收、传输及平台算分。
+保留两原包SHA复核结果。新风险包分数低就放弃该固定路线；不能用平台总分恢复测试标签、为某源改规则或扫同阈值。最多七个有差异的注册包，不要求耗尽十次；最后4h停止新GPU路线，预留验收、传输及平台算分。

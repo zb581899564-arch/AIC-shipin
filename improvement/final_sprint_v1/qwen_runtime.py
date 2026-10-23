@@ -21,6 +21,9 @@ PHASES = ("ordinary", "setup", "apex", "resolution")
 ORIGINAL_BASE_PARAMETERS = 8_767_123_696
 ORIGINAL_BASE_CANONICAL_SHA256 = "74bcce81cfcb0893cf4b4c25ae36ec908d6ea669583aedd0f3940063080b8b59"
 TRANSITIONS = {
+    # A physically isolated clip may begin inside an event. Do not force its
+    # observed resolution to become a new apex merely because context starts.
+    "start": PHASES,
     "ordinary": ("ordinary", "setup", "apex"),
     "setup": ("ordinary", "setup", "apex"),
     "apex": ("ordinary", "apex", "resolution"),
@@ -123,6 +126,47 @@ def _tensor_signature(values):
     return dict(tensors=output, sha256=_digest(output))
 
 
+def _validate_local_observation(observation):
+    """Bind the actual RGB buffer to the local native-frame request.
+
+    This check runs before tokenization. A caller cannot supply one clip's
+    pixels alongside another clip's timestamps and then claim physical local
+    isolation merely because the resulting token tensor has a hash.
+    """
+    import numpy as np
+    clip, rgb = observation["clip"], observation["rgb"]
+    indices = clip["sample_ordinals"]
+    points = [Fraction(value) for value in clip["sample_pts_exact"]]
+    start, stop = Fraction(clip["start_exact"]), Fraction(clip["end_exact"])
+    _require(0 <= start < stop and stop - start <= 8,
+             "Physical local input interval must be positive and at most8seconds")
+    _require(type(observation["source_n_frames"]) is int and observation["source_n_frames"] > 0
+             and 0 <= clip["first"] < clip["stop"] <= observation["source_n_frames"],
+             "Physical local frame range differs from source bounds")
+    _require(1 <= len(indices) <= 32 and len(indices) == len(points)
+             and all(type(value) is int and clip["first"] <= value < clip["stop"] for value in indices)
+             and all(a < b for a, b in zip(indices, indices[1:]))
+             and all(start <= value < stop for value in points)
+             and all(a < b for a, b in zip(points, points[1:])),
+             "Local observations are not unique chronological native samples in their physical interval")
+    groups = [indices[offset:offset + 2] for offset in range(0, len(indices), 2)]
+    _require([cell["observed_ordinals"] for cell in clip["cells"]] == groups,
+             "Semantic action cells differ from the actual two-frame visual groups")
+    _require(isinstance(rgb, np.ndarray) and rgb.dtype == np.uint8 and rgb.ndim == 4
+             and rgb.shape[0] == len(indices) and rgb.shape[-1] == 3
+             and min(rgb.shape[1:3]) > 0,
+             "Actual local uint8 RGB/native sample inventory differs")
+    actual = [hashlib.sha256(frame.tobytes(order="C")).hexdigest() for frame in rgb]
+    _require(actual == observation["pixel_sha256"], "Actual local RGB bytes differ from decoded pixel evidence")
+    _require(isinstance(observation["source_id"], str) and observation["source_id"]
+             and re.fullmatch(r"[0-9a-f]{64}", observation["source_sha256"]) is not None,
+             "Exact physical source identity is missing")
+    return dict(source_id=observation["source_id"], source_sha256=observation["source_sha256"],
+                interval_exact=[str(start), str(stop)], native_ordinals=list(indices),
+                sample_pts_exact=[str(value) for value in points], pixel_sha256=actual,
+                buffer_shape=list(rgb.shape), only_registered_local_pixels=True)
+
+
 @contextmanager
 def _native_timestamps(processor, observation):
     """Instance-local native PTS encoding; validate actual video timestamps."""
@@ -169,6 +213,7 @@ def phase_prompt(observation):
         "revelation or emotional payoff itself; resolution = its immediate visible outcome. "
         "An ordinary clip may have only ordinary groups. Do not invent an event, enforce "
         "a quota, or use camera motion alone as evidence. A new event begins after ordinary. "
+        "The first group may already be a resolution if the event began before this clip. "
         "Output only the words ordinary, setup, apex or resolution, one per group."
     )
 
@@ -373,13 +418,10 @@ class QwenRuntime:
                                     role=metadata.get("role", "base"))
 
     def _encode_clip(self, observation):
-        import numpy as np
         torch = self.torch
+        local_proof = _validate_local_observation(observation)
         rgb = observation["rgb"]
-        _require(isinstance(rgb, np.ndarray) and rgb.dtype == np.uint8 and rgb.ndim == 4,
-                 "Actual local RGB video array required")
         clip = observation["clip"]
-        _require(len(rgb) == len(clip["sample_ordinals"]), "Local RGB/native sample count differs")
         array = torch.from_numpy(rgb).permute(0, 3, 1, 2)
         indices = list(clip["sample_ordinals"])
         if len(indices) == 1:
@@ -406,7 +448,7 @@ class QwenRuntime:
             "Actual processor timestamp text differs from native PTS")
         return encoded, dict(native=native, input_identity=self._check_encoded(encoded),
                              video_grid_thw=grid, physical_source_sha256=observation["source_sha256"],
-                             pixel_sha256=observation["pixel_sha256"])
+                             pixel_sha256=observation["pixel_sha256"], local_input=local_proof)
 
     def _suffixes(self, logical_ids):
         tokenizer = self.processor.tokenizer
@@ -482,7 +524,7 @@ class QwenRuntime:
             del result
             self.counts["video_prefills"] += 1
             phase_rows, reference_checks = [], []
-            previous_phase = "ordinary"
+            previous_phase = "start"
             for group, cell in enumerate(observation["clip"]["cells"]):
                 suffixes = self._suffixes(logical_ids)
                 maximum = max(map(len, suffixes))

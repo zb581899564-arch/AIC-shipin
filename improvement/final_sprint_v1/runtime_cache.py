@@ -12,7 +12,7 @@ from pathlib import Path
 import time
 
 from .contracts import atomic_new, checked, ref, require, stable_key, strict_load, utc_now
-from .state import TaskClaim, TaskStore, UnresolvedClaim
+from .state import TaskClaim, TaskStore, UnresolvedClaim, _owned_terminal
 
 
 class CallJournal:
@@ -93,6 +93,18 @@ class CallJournal:
         the next explicit call; elapsed time and PID state never authorize it.
         """
         task = self.store._task(task_id)
+        if not (task / "state.json").exists():
+            # A terminated child may have published its claim but died before
+            # the initial state pointer. The wrapper carries the exact claim;
+            # no timestamp, PID or latest-attempt search is used to recover it.
+            proof = strict_load(checked(wrapper_terminal_ref))
+            require(isinstance(proof.get("claim_ref"), dict), "Exact orphan claim_ref required")
+            orphan = strict_load(checked(proof["claim_ref"]))
+            orphan_binding = orphan.get("binding")
+            require(isinstance(orphan_binding, dict) and orphan_binding.get("base") == self.base_binding and
+                    orphan_binding == self._binding(orphan_binding.get("call")),
+                    "Orphan recovery differs from current exact code/config/model base")
+            self.store.recover_orphan_pointer(task_id, orphan_binding, wrapper_terminal_ref)
         pointer = strict_load(task / "state.json")
         directory = task / "attempts" / str(pointer["active_attempt"])
         claim_path = directory / "claim.json"
@@ -115,12 +127,7 @@ class CallJournal:
             return {"status": "SUCCESS", "recovery_action": "ADOPTED_EXISTING_SUCCESS",
                     "task_id": task_id, "result_ref": existing[1], "model_calls": 0}
 
-        proof = strict_load(checked(wrapper_terminal_ref))
-        require(proof.get("task_id") == task_id and proof.get("work_terminated") is True
-                and proof.get("no_external_task_signaled") is True
-                and proof.get("claim_sha256") == ref(claim_path)["sha256"]
-                and proof.get("termination_basis") == "owned_wrapper_terminal",
-                "Explicit owned-wrapper terminal proof required; PID/timeout is insufficient")
+        _owned_terminal(wrapper_terminal_ref, claim_path, task_id)
         raw = directory / "returned_result.json"
         if raw.exists():
             packet = self._packet(raw, task_id, binding_sha)

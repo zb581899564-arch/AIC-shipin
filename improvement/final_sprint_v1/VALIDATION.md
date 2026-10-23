@@ -1,50 +1,54 @@
-# 首批代码验收边界（2026-10-23，公开审计环境）
+# 接替审查后的实际验证边界（2026-10-23）
+
+## 当前结论
+
+**135项合成CPU契约测试：131通过、4因OpenCV缺失明确跳过。没有真实Linux模型加载、媒体推理、训练、全426出包、独立质量验证或新官方分数。** 数字表示代码检查数量，不是135个真实来源、模型调用或科研样本。
+
+精确基底 `e8224c4339007790a1be383be19fdb200cc817bc`，采用其直接后继PR #7 `60bcec3c6f058acf31352dfa771a48b81b9e5bd9` 后审查修订。PR #7先前的100项/96通过/4跳过属于它当时的验证记录；本页记录接替版本实际完整重跑，不能据此改写任何历史质量结果。
 
 ## 已实际执行
 
-本轮在 `e8224c4339007790a1be383be19fdb200cc817bc` 新建独立分支实现。没有采用旧工作区快照覆盖当前源码，没有运行旧训练/推理来刷新历史结果。
-
-| 检查 | 实际结果 | 能说明什么 |
+| 检查 | 实际结果 | 证据的适用范围 |
 |---|---|---|
-| `python -m unittest discover -s tests -p 'test_final_sprint_*.py' -v` | 最终72项通过（其中最后新增的2项wrapper故障注入单独执行通过） | 原生时钟、模型参数逻辑/身份、失败与合法空、source/调用恢复、资源/资产绑定、确定性收据、完整性/封包契约、SIGTERM只清理本次子进程与累计预算拒绝 |
-| `python -m unittest improvement.final_sprint_v1.test_spatial improvement.final_sprint_v1.test_specialist -v` | 28项中24通过、4跳过 | 精确几何、语义JSON解析、原生单元、模型失败不转空、无损float32缓存、token契约、参数收据与source返回接口 |
-| 新目录与tests `compileall` | 通过 | Python语法可解析，不证明CUDA/API实际可运行 |
-| CLI、bootstrap help | 通过 | 命令入口与参数解析可调用 |
-| RUNBOOK的13个bash块、OPTIONAL_SPECIALIST的8个bash块；全部Python heredoc | `bash -n` / AST通过 | 命令文本语法成立；没有执行下载或私有资产调用 |
-| Lighthouse公开源码固定checkout | commit `3e841d3d662c8440afed514908566fed2d5e82a7`，tree `271085c23c2619f0336186304e7eeb5be328e4cd`真实核验 | 只核验公开源码，不证明checkpoint、训练机依赖或质量 |
+| `python -m unittest discover -s tests -p 'test_final_sprint_*.py' -v` | 99项全部通过 | 原生时钟、完整参数并集/身份、失败与合法空、426封包契约、资产绑定、source/调用恢复、资源预算、owned wrapper和本轮回归 |
+| `python -m unittest improvement.final_sprint_v1.test_spatial improvement.final_sprint_v1.test_specialist -v` | 36项：32通过、4跳过 | 精确几何/持续四边形、语义JSON、原生单元、无损float32缓存、CLIP token/EOT/训练前缀契约、CPU对照 |
+| `python -m compileall -q improvement/final_sprint_v1 tests` | 通过 | 新源码和测试可编译；不证明CUDA或第三方真实API可运行 |
+| `git diff --check` | 通过 | 无新增空白/冲突文本错误 |
+| RUNBOOK及OPTIONAL_SPECIALIST全部shell代码块 | 21个 `bash -n` 通过；6个内嵌Python AST通过；1个JSON块通过 | 文档命令语法及入口一致；没有执行里面的下载或私有资产调用 |
+| CLI、bootstrap、supervise、verify_received模块 `--help` | 4个通过 | 真实命令入口/选项可解析 |
+| Lighthouse固定公开checkout | commit `3e841d3d662c8440afed514908566fed2d5e82a7`、tree `271085c23c2619f0336186304e7eeb5be328e4cd` | 已读原作者源码/API/特征路径；不证明权重加载、运行依赖或赛事质量 |
 
-合计 **100项新CPU契约测试：96通过、4明确跳过**。这些全部是合成CPU工程检查，包含有意注入的失败，不是100次真实模型/来源验证，不是F1、IoU、Linux训练或官方成绩。
+`python tools/verify_publication.py` 已实际返回 `PASS_PUBLICATION`：7717个有效清单文件、4377个Python语法文件、8个原有历史归档；源SHA、历史ZIP CRC、排除资产及凭据模式检查全部通过。原冻结清单字节不变，只登记增量文件。原有历史脚本产生一条无效转义SyntaxWarning，不影响通过，未为清除历史警告修改旧源码。历史归档完整不等于本轮已生成新提交包。
 
-## 明确未运行
+## 本次回归实际覆盖的故障
 
-- 两份私有原ZIP/其真实依赖、426媒体、完整时钟/输入锁的现场SHA校验。
-- 原TIME、monotone_head06、I3D、UMT实际CPU权重加载和库存；公开测试只验证规格及采用逻辑。
-- 原Qwen3-VL8B模型加载、canonical冻结张量哈希、实际safetensors键对应、显存峰值。
-- 实际PyAV codec/PTS与原色彩修复链；公共环境缺PyAV。
-- 真实GrabCut/LK与完整空间链；公共环境缺OpenCV，4项检查因该原因跳过。
-- 真实Qwen tokenizer前缀round-trip、native video timestamp callback、四候选缓存分支与完整无padding参考；公共环境无Torch/Transformers/CUDA。
-- CLIP/CG-DETR实际权重加载、完整参数预算、GPU forward、模型质量；没有下载这些权重。
-- 自有Linux当前可用GPU/磁盘/RAM、直连路由、全426推理和封包、最终传输、平台提交或成绩。
+- 实际62注册恢复60的准确SHA链，失败60缺锁时明确停止，不搜索新目录。
+- 模型目录新增优先权重、tokenizer软链接改指向均拒绝；CPU库存import不写原依赖bytecode。
+- 逐步旋转不再因重复轴对齐外包扩大范围；对照精确保留父中心，原语义范围对照完全CPU派生。
+- 短/长原生clip按真实分组计前向；G每源512上限以前置元数据检查确定的必要定位下界，不误称全426只512次。
+- 稀疏长展示帧、非零PTS原点、原生正终点、全部帧几何和实际RGB分组一致性。
+- resolution-only合法拒选、缺失/失败clip不变空，DP时间积分不偏奖短碎片，注册参数进入真实执行。
+- CLIP正文token0不当padding，完整CLIP编码后明确采用CG训练查询前缀；不虚称未截断。
+- claim早于state/index的中断、returned_result早于success的中断、撕裂账本末行、撕裂封包临时文件；均保留证据后按精确终态恢复，不因超时/PID重做成功。
+- G固定时间成员硬约束；合法空也必须有本候选和输入证据；全空、全选、非法框/时钟、假空间、重复预测、漏辅助参数拒包。
+- 总费用、同盘output/scratch峰值、tmpfs与真实RAM区别、过期共享GPU授权、SIGTERM仅处理本次实际启动进程组。
 
-这些检查已落入Linux bootstrap/preflight/smoke/production/package/receiver入口，执行Agent无需重新实现主体。工程冒烟结果不用于F1筛选，不恢复旧科学门。
+这些是有意构造的CPU数据和故障注入，不是任务质量筛选。完整修复说明见 [REVIEW_AUDIT.md](REVIEW_AUDIT.md)。
 
-## 联审修复的具体生产故障
+## 明确未运行，Linux首次执行仍须验证
 
-1. 参数/来源证据首写父目录缺失，已补不可覆盖写入前建目录。
-2. 原颜色配置层级与全局转换字段丢失，现绑定原config并完整规范化；没有给新测试来源添加人工特例。
-3. 同盘output+scratch峰值未合并、tmpfs被误当物理RAM、过期共享GPU授权可误用，现严格检查。
-4. raw BASE只有形状/数量身份不足，现实际canonical冻结哈希；四辅助必须绑定原注册/原权重/完成收据。
-5. 参数收据包含每次load不同耗时导致跨候选误判，已剔除非确定字段，运行耗时仍计账。
-6. 不同语义词长造成右padding KV残留，现选中分支后crop，强制cache/逻辑token长度一致，真实数值QA仍待Linux。
-7. CPU派生可因缺缓存意外启动GPU，现cached_only硬拒绝；父source文件必须等于持久成功调用，不能重新绑定被修改文件。
-8. 完整返回值与后续failure共存时无法采用，现精确wrapper终态后另建adoption、保留原failure，不重新推理。
-9. 模型加载被逐片放大、R/M缺新空间成本，现冷启动单列、全链成本估算，并在正常生产前5源后执行成本止损。
-10. wrapper收到SIGTERM或写claim失败可能留下子进程，现只处理自己实际启动的进程组、wait后发布终态；超时受累计剩余额与最后4h预留约束。
-11. normalized1000坐标浮点误越界，现用精确Fraction映射；不靠epsilon放过非法框。
-12. 专家特征大JSON、重复源码manifest与每源完整参数清单浪费磁盘，现无损float32字节缓存、完整参数清单只存一次、全局asset lock固定完整spec，调用引用其SHA。
+1. 两份私有40.48/40.47原ZIP与所有依赖、426媒体、完整输入锁和原生时钟现场SHA；不得按公开规格重建原包。
+2. 原TIME、monotone_head06、I3D、UMT真实CPU权重库存；Qwen原BASE实际加载、canonical冻结张量SHA、safetensors键/参数对应、A6000显存峰值。公开测试用合成张量接口，不能代替实数。
+3. PyAV实际codec/色彩修复/原始PTS及终点。本环境无PyAV。
+4. 真实GrabCut/LK与主体链。本环境无OpenCV，4项测试跳过；未绕过未知网络安装依赖。
+5. Qwen tokenizer真实前缀round-trip、4.57.1 native视频timestamp callback、四分支KV crop及无padding参考数值QA。本环境无Torch/Transformers/CUDA；读官方源码不等于真实前向。
+6. CLIP/CG-DETR实际作者权重、Torch加载、完整参数并集、GPU forward与真实显著性。未在本环境下载权重；新M组合不能套用G的参数总数。
+7. 自有Linux当前GPU/磁盘/tmpfs/RAM与必要下载实际直连、全部来源吞吐/证据增长、426包、最终ZIP传输及接收端验收、人工官网提交与算分。
 
-## 仍有实际风险
+实际入口已包含上述工程门：bootstrap/inventory → bind → preflight → 一次smoke → forecast → 有限run → 独立package → verify_received。缺私有资产不构成伪造替代数据的授权；也不要求执行Agent补写主流程。执行Agent按RUNBOOK绑定现存资产即可开始真实检查。
 
-G主体语义与比赛构图偏好可能不同；GrabCut不足时保留已观测的语义范围，不编造像素支持；主体分散/无法包容时会采用有真实语义证据的场景策略，不能把这种策略当已证明更优。R词平均似然与阶段语法是固定解码先验，不是训练或校准后的高光后验；1ms保守DP有极短/VFR舍入风险。M作者任务域和自动查询可能不适合本赛题。任何路线都可能大幅掉分。
+## 仍有研究风险
 
-完整质量比较只来自未来人工正式整包提交，目标约43.5没有保证。保留/放弃算法仅用总分，不逐测试源反构规则。公共代码检查通过后，应直接完成一次真实工程冒烟和有界生产，不再花数小时新增一个不出包的本地质量评估闭环。
+G主体定位或前景收紧可能错误，包含真实像素不等于更符合隐藏构图。原范围对照以同一父跟踪为条件，不是独立证据。R阶段词有语言先验与自回归惯性，独立短窗不能确保局部视觉相关；积分效用是明确决策规则，不是校准的高光后验。M作者任务域和自动事件查询可能不适合比赛。三条主线均可能显著掉分。
+
+正式总分只能决定保留或放弃预登记自动路线，不得恢复测试标签/逐源人工规则。目标约43.5没有保证；0.01显示变化不称突破。本轮质量前置按用户风险授权跳过，真实工程故障仍先修，不用坏包耗次数。

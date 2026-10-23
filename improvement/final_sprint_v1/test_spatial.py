@@ -6,15 +6,38 @@ model smoke, a crop-IoU experiment, or evidence of official score improvement.
 from __future__ import annotations
 
 from dataclasses import replace
+import copy
+import hashlib
 import importlib.util
 import json
+import math
 import unittest
 
 from .spatial import (SpatialConfig, SubjectTracker, crop_from_subjects,
-                      parse_grounding, pixel_subjects, process_source, validate_box)
+                      parse_grounding, pixel_subjects, process_source, semantic_extent_control,
+                      transport_polygon, validate_box)
 
 
 class GeometryTests(unittest.TestCase):
+    def test_rotation_round_trip_does_not_accumulate_bounding_box_growth(self):
+        original = [[70., 80.], [130., 80.], [130., 120.], [70., 120.]]
+        polygon = original
+        angle = math.radians(5)
+        cosine, sine = math.cos(angle), math.sin(angle)
+        affine = [[cosine, -sine, 100 * (1 - cosine + sine)],
+                  [sine, cosine, 100 * (1 - cosine - sine)]]
+        for _ in range(72):
+            polygon = transport_polygon(polygon, affine, [200, 200], [200, 200])
+        for expected, actual in zip(original, polygon):
+            self.assertAlmostEqual(actual[0], expected[0], places=9)
+            self.assertAlmostEqual(actual[1], expected[1], places=9)
+
+    def test_polygon_transport_uses_actual_thumbnail_axes(self):
+        polygon = [[20, 30], [60, 30], [60, 70], [20, 70]]
+        transformed = transport_polygon(polygon, [[1, 0, 2], [0, 1, 3]],
+                                        [600, 400], [300, 100])
+        self.assertEqual(transformed, [[24., 42.], [64., 42.], [64., 82.], [24., 82.]])
+
     def test_subject_extent_changes_scale_and_position(self):
         cfg = SpatialConfig()
         native = (1920, 1080)
@@ -91,6 +114,88 @@ class ParserTests(unittest.TestCase):
                     'prefix {"mode":"whole_scene","boxes":[]}']:
             with self.subTest(raw=raw), self.assertRaises((ValueError, json.JSONDecodeError)):
                 parse_grounding(raw)
+
+
+class SemanticControlTests(unittest.TestCase):
+    def fixture(self):
+        source = {"video_id": "synthetic", "media": {"sha256": "d" * 64},
+                  "width": 240, "height": 160, "targetRatioWH": [16, 9],
+                  "n_frames": 2, "normalized_exact_pts": ["0", "1/30"]}
+        raw = '{"mode":"subject","boxes":[[250,250,650,650]]}'
+        raw_sha = hashlib.sha256(raw.encode()).hexdigest()
+        anchor = {"frame": 0, "native_pts": "0", "pixel_sha256": "b" * 64,
+                  "input_sha256": "a" * 64, "raw_text": raw, "raw_sha256": raw_sha,
+                  "mode": "subject", "subjects_normalized": [[250, 250, 650, 650]]}
+        affine = [[1., 0., 4.], [0., 1., 2.]]
+        polygon = transport_polygon([[70., 45.], [110., 45.], [110., 80.], [70., 80.]],
+                                    affine, [240, 160], [240, 160])
+        rows = []
+        for frame, measured in enumerate(([[70., 45., 110., 80.]], [[74., 47., 114., 82.]])):
+            box, _ = crop_from_subjects(measured, 240, 160, [16, 9], [0, 0, 240], SpatialConfig())
+            rows.append({"frame": frame, "native_pts": source["normalized_exact_pts"][frame],
+                         "bboxes": box, "box_xyw": box, "pixel_sha256": ("b" if frame == 0 else "c") * 64,
+                         "ground_anchor_frame": 0, "ground_anchor_raw_sha256": raw_sha,
+                         "same_frame_grounding": frame == 0, "subjects_xyxy": measured,
+                         "previous_observed_frame": 0, "previous_pixel_sha256": "b" * 64,
+                         "tracking": {"tracking_status": "ANCHOR_DUE"} if frame == 0 else {
+                             "tracking_status": "MEASURED_FORWARD_BACKWARD_FLOW", "subjects": [{
+                                 "geometry": "PERSISTENT_GROUNDED_QUADRILATERAL",
+                                 "affine_thumbnail": affine, "thumbnail_wh": [240, 160],
+                                 "subject_polygon_xy": polygon}]}})
+        proof = {"schema": "AIC_FINAL_SPATIAL_EVIDENCE_V1", "video_id": "synthetic",
+                 "source_sha256": "d" * 64,
+                 "frames": [{"frame": row["frame"], "bboxes": row["bboxes"]} for row in rows],
+                 "observed_pixel_evidence": {"frame_evidence": rows, "groundings": [anchor]}}
+        return source, proof, {0: [0, 0, 240], 1: [0, 0, 240]}
+
+    def test_control_reuses_raw_extents_and_exact_measured_motion_without_calls(self):
+        source, proof, baseline = self.fixture()
+        result = semantic_extent_control(source, proof, baseline)
+        self.assertEqual(result["spatial_evidence"][0]["visible_semantic_extents"], [[60., 40., 156., 104.]])
+        self.assertEqual(result["spatial_evidence"][1]["visible_semantic_extents"], [[64., 42., 160., 106.]])
+        self.assertEqual(result["diagnostics"]["new_neural_calls"], 0)
+        self.assertFalse(result["diagnostics"]["new_independent_tracking"])
+        self.assertEqual([p["frame"] for p in result["predictions"]], [0, 1])
+        self.assertEqual(result["diagnostics"]["changed_parent_boxes"], 2)
+        for row in result["predictions"]:
+            validate_box(row["bboxes"], 240, 160, [16, 9])
+
+    def test_changed_affine_anchor_clock_or_membership_is_rejected(self):
+        source, proof, baseline = self.fixture()
+        corruptions = [
+            lambda p: p.update(source_sha256="e" * 64),
+            lambda p: p["observed_pixel_evidence"]["frame_evidence"][1].update(native_pts="1/29"),
+            lambda p: p["observed_pixel_evidence"]["frame_evidence"][1].update(previous_pixel_sha256="f" * 64),
+            lambda p: p["observed_pixel_evidence"]["frame_evidence"][1]["tracking"]["subjects"][0]["affine_thumbnail"][0].__setitem__(2, 5.),
+            lambda p: p["observed_pixel_evidence"]["groundings"][0].update(subjects_normalized=[[250, 250, 600, 600]]),
+            lambda p: p["frames"].pop(),
+        ]
+        for corrupt in corruptions:
+            changed = copy.deepcopy(proof)
+            corrupt(changed)
+            with self.assertRaises(ValueError):
+                semantic_extent_control(source, changed, baseline)
+
+    def test_legal_empty_source_control_has_no_synthetic_observations(self):
+        source, proof, _ = self.fixture()
+        proof["frames"] = []
+        proof["observed_pixel_evidence"] = {"frame_evidence": [], "groundings": []}
+        result = semantic_extent_control(source, proof, {})
+        self.assertEqual(result["predictions"], [])
+        self.assertEqual(result["diagnostics"]["new_neural_calls"], 0)
+
+    def test_explicit_whole_scene_control_keeps_each_exact_baseline(self):
+        source, proof, baseline = self.fixture()
+        raw = '{"mode":"whole_scene","boxes":[]}'
+        raw_sha = hashlib.sha256(raw.encode()).hexdigest()
+        detail = proof["observed_pixel_evidence"]
+        detail["groundings"][0].update(raw_text=raw, raw_sha256=raw_sha,
+                                       mode="whole_scene", subjects_normalized=[])
+        for row in detail["frame_evidence"]:
+            row.update(subjects_xyxy=[], ground_anchor_raw_sha256=raw_sha)
+        detail["frame_evidence"][1]["tracking"] = {"tracking_status": "WHOLE_SCENE_CONTINUATION"}
+        result = semantic_extent_control(source, proof, baseline)
+        self.assertEqual(result["predictions"], [{"frame": frame, "bboxes": box} for frame, box in baseline.items()])
 
 
 HAS_CV2 = importlib.util.find_spec("cv2") is not None

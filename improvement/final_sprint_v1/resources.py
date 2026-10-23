@@ -147,13 +147,36 @@ def _replace_index(path, value):
     temporary = path.with_name(path.name + ".partial-" + uuid.uuid4().hex)
     atomic_new(temporary, value)
     os.replace(temporary, path)
+    descriptor = os.open(path.parent, os.O_RDONLY)
+    try:
+        os.fsync(descriptor)
+    finally:
+        os.close(descriptor)
 
 
-def _command_totals(directory, *, exclude=None):
+def _command_ids(directory):
+    """Include durable claims even if death interrupted the following index write.
+
+    This scans only exact claim files in this sprint's accounting directory,
+    never model/assets or a latest experiment. An orphan reserves its entire
+    cap until its owned wrapper terminal is reconciled.
+    """
     index_path = directory / "index.json"
     identifiers = strict_load(index_path)["command_ids"] if index_path.exists() else []
     require(isinstance(identifiers, list) and len(set(identifiers)) == len(identifiers),
             "Command cost registry duplicated or malformed")
+    orphan_ids = []
+    for path in sorted(directory.glob("*/claim.json")):
+        command_id = path.parent.name
+        claim = strict_load(path)
+        require(claim.get("command_id") == command_id, "Durable command claim identity differs")
+        if command_id not in identifiers:
+            orphan_ids.append(command_id)
+    return identifiers + orphan_ids
+
+
+def _command_totals(directory, *, exclude=None):
+    identifiers = _command_ids(directory)
     confirmed, unresolved, open_commands = 0.0, 0.0, []
     for command_id in identifiers:
         require(isinstance(command_id, str) and len(command_id) == 32 and
@@ -173,7 +196,10 @@ def _command_totals(directory, *, exclude=None):
         else:
             # It is a reservation, not an invented actual GPU charge. A killed
             # command is resolved only from its owned wrapper terminal.
-            unresolved += claim["cap_seconds"]
+            cap = claim["cap_seconds"]
+            require(type(cap) in (int, float) and math.isfinite(cap) and cap > 0,
+                    "Unresolved command cap must be finite and positive")
+            unresolved += cap
             open_commands.append(command_id)
     return {"confirmed_command_wall_seconds": confirmed,
             "unresolved_reserved_seconds": unresolved, "unresolved_command_ids": open_commands,
@@ -224,8 +250,7 @@ class Budget:
                 "owned_wrapper_id": os.environ.get("AIC_FINAL_WRAPPER_ID"),
                 "run_root": assets["run_root"]})
             index_path = self.directory / "index.json"
-            index = strict_load(index_path) if index_path.exists() else {"command_ids": []}
-            index["command_ids"].append(self.command_id)
+            index = {"command_ids": _command_ids(self.directory)}
             _replace_index(index_path, index)
 
     def __enter__(self):
@@ -289,8 +314,7 @@ def resolve_command_budget(assets, command_id, wrapper_terminal_ref):
     """Reconcile a killed owned command from its exact wrapper terminal, never PID age."""
     directory = Path(assets["run_root"]) / "command_budget"
     with _accounting_lock(directory):
-        index = strict_load(directory / "index.json")
-        require(command_id in index["command_ids"], "Unknown cost claim")
+        require(command_id in _command_ids(directory), "Unknown cost claim")
         folder = directory / command_id
         if (folder / "completion.json").exists():
             return strict_load(folder / "completion.json")
@@ -301,6 +325,9 @@ def resolve_command_budget(assets, command_id, wrapper_terminal_ref):
                 proof.get("no_external_task_signaled") is True and
                 proof.get("claim_sha256") == ref(folder / "claim.json")["sha256"],
                 "Exact owned wrapper-terminal accounting proof required")
+        if claim.get("owned_wrapper_id") is not None:
+            require(proof.get("owned_wrapper_id") == claim["owned_wrapper_id"],
+                    "Cost terminal came from a different owned wrapper")
         seconds = proof.get("wall_seconds_including_load_decode_failures")
         require(type(seconds) in (float, int) and math.isfinite(seconds) and seconds >= 0,
                 "Actual wrapper-measured command wall seconds required")

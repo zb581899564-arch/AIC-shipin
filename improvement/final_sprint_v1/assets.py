@@ -65,6 +65,25 @@ def _tree(directory):
                                                for p in paths]}
 
 
+def _validate_tree(tree):
+    """Check loader-visible names and symlink targets as well as old file bytes.
+
+    Hashing only the original resolved targets misses a retargeted tokenizer
+    symlink or a newly added model.safetensors file that from_pretrained could
+    prefer to the bound shards. The exact directory view is part of identity.
+    """
+    root = Path(tree["directory"]).resolve(strict=True)
+    expected = {identity["relative_path"]: identity for identity in tree["files"]}
+    require(len(expected) == len(tree["files"]), "Duplicate registered asset-tree name")
+    actual = {str(path.relative_to(root)): path for path in root.rglob("*") if path.is_file() and
+              ".git" not in path.relative_to(root).parts and "__pycache__" not in path.relative_to(root).parts}
+    require(set(actual) == set(expected), "Loader-visible asset-tree members changed after binding")
+    for name, path in actual.items():
+        require(path.resolve(strict=True) == Path(expected[name]["path"]),
+                "Loader-visible asset symlink target changed after binding: " + name)
+        checked(expected[name])
+
+
 def _qwen_spec(mapping):
     value = dict(mapping)
     model_dir = Path(value["model_dir"]).resolve(strict=True)
@@ -260,8 +279,7 @@ def load(path, *, expected_commit=None):
                       "run_root": value["run_root"], "source_commit": value["source_commit"]},
             "Sprint run-root ownership differs")
     for tree in [value["qwen"]["asset_tree"]] + ([value["specialist"]["source_tree"]] if value.get("specialist") else []):
-        for identity in tree["files"]:
-            checked(identity)
+        _validate_tree(tree)
     return value
 
 

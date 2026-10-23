@@ -122,9 +122,18 @@ def main(argv=None):
             runner.check_baseline_auxiliaries(assets, args.candidate)
             validate_sources(assets["sources"], verify_media=True)
             from .resources import snapshot
+            plan = None
+            if args.candidate.startswith("g_"):
+                plan = runner.grounding_plan(runner.enriched_sources(assets),
+                    runner.baseline_frames(assets["protected_baselines"])["40.48"],
+                    asset_api.candidate_registry()["shared_spatial_configuration"])
+                require(not plan["sources_impossible_under_fixed_cap"],
+                        "FIXED_GROUNDING_CAP_INSUFFICIENT: native metadata proves this recipe cannot finish; "
+                        "inspect forecast before any GPU work, do not substitute baseline frames on failure")
             result = {"status": "ENGINEERING_PREFLIGHT_PASS_NO_MODEL_INFERENCE",
                       "candidate": args.candidate, "runtime_versions": dependencies(args.candidate),
                       "resources": snapshot(assets, require_gpu=args.gpu),
+                      "grounding_plan": plan,
                       "quality_validated": False}
         elif args.action == "forecast":
             result = runner.forecast(assets)

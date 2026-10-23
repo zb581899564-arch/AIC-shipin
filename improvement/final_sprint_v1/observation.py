@@ -41,8 +41,10 @@ def exact_clock(source):
 def plan_clips(source, *, clip_seconds=8, samples_per_clip=32):
     """Partition actual source time; select native frames at exact time targets.
 
-    At least four time partitions, limited by available native frames, keep
-    nominal clip lengths within the registered 25% source budget.  Uneven PTS
+    At least four time partitions keep nominal clip lengths within the
+    registered 25% source budget. Empty time partitions are skipped; their
+    absence never lengthens a physical input window beyond the clip limit.
+    Uneven PTS
     or a source with fewer than four frames can still make a whole native atom
     exceed that budget; no forced selection repairs such a legal empty result.
     One-frame observations are padded only by the model processor; the unique
@@ -50,9 +52,9 @@ def plan_clips(source, *, clip_seconds=8, samples_per_clip=32):
     """
     points, end = exact_clock(source)
     duration = Fraction(str(clip_seconds))
-    _require(duration > 0 and type(samples_per_clip) is int and samples_per_clip >= 2,
-             "Positive clip length and >=2 sample budget required")
-    count = min(len(points), max(4, math.ceil(end / duration)))
+    _require(0 < duration <= 8 and type(samples_per_clip) is int and 2 <= samples_per_clip <= 32,
+             "Physical clip length must be in(0,8] seconds and sample budget in[2,32]")
+    count = max(4, math.ceil(end / duration))
     boundaries = [end * index / count for index in range(count + 1)]
     output = []
     for index, (start, stop) in enumerate(zip(boundaries, boundaries[1:])):
@@ -92,6 +94,8 @@ def plan_clips(source, *, clip_seconds=8, samples_per_clip=32):
                            sample_pts_exact=[str(points[value]) for value in sampled],
                            cells=cells, physical_observations=len(sampled),
                            implicit_last_frame_padding=len(sampled) % 2))
+    _require(all(Fraction(clip["end_exact"]) - Fraction(clip["start_exact"]) <= duration
+                 for clip in output), "A physical local input window exceeds its registered duration")
     _require(output and output[0]["first"] == 0 and output[-1]["stop"] == len(points),
              "Local observations do not cover the complete source")
     _require(all(left["stop"] == right["first"] for left, right in zip(output, output[1:])),
@@ -119,6 +123,37 @@ def _convert(frame, source):
         frame.color_trc = previous
 
 
+def validate_native_terminal(source, *, origin, last_point, measured_duration):
+    """Compare this decode with the exact inherited native clock witness.
+
+    When the decoder exposes a terminal duration, it must reproduce the bound
+    endpoint exactly. If that API does not expose a duration, the old measured
+    clock remains the endpoint authority; no FPS/container-duration estimate
+    replaces it and the returned proof does not claim a fresh measurement.
+    """
+    points, end = exact_clock(source)
+    expected_origin = source.get("first_original_pts_exact")
+    if expected_origin is not None:
+        _require(Fraction(str(expected_origin)) == origin,
+                 "Actual original PTS origin differs from inherited native clock")
+    _require(last_point == points[-1], "Actual final native PTS differs from inherited clock")
+    witness = source.get("physical_endpoint_evidence")
+    if witness is not None:
+        _require(witness.get("kind") == "LAST_NATIVE_FRAME_PTS_PLUS_POSITIVE_DURATION",
+                 "Inherited endpoint is not a positive native-frame-duration witness")
+        bound_duration = Fraction(str(witness["last_frame_duration_exact"]))
+        _require(bound_duration > 0 and Fraction(str(witness["last_normalized_pts_exact"])) == last_point
+                 and last_point + bound_duration == end,
+                 "Inherited positive native endpoint witness contradicts the full clock")
+    if measured_duration is not None:
+        _require(measured_duration > 0 and last_point + measured_duration == end,
+                 "Actual terminal frame duration/endpoint differs from inherited native clock")
+    return dict(original_pts_exact=str(origin), last_normalized_pts_exact=str(last_point),
+                physical_end_exact=str(end), endpoint_duration_remeasured=measured_duration is not None,
+                inherited_endpoint_witness_checked=witness is not None,
+                no_fps_or_container_duration_estimation=True)
+
+
 def decode_native_frames(source, *, ordinals=None):
     """Yield exact decoded RGB frames; consume the iterator to verify EOF.
 
@@ -141,15 +176,23 @@ def decode_native_frames(source, *, ordinals=None):
         stream = container.streams.video[0]
         stream.thread_type = "NONE"
         stream.codec_context.thread_count = 1
-        origin = None
+        origin, last_point, last_duration = None, None, None
         for ordinal, frame in enumerate(container.decode(stream)):
             _require(ordinal < len(points) and frame.pts is not None and frame.time_base is not None,
                      "Extra decoded frame or missing native PTS")
             raw = Fraction(frame.pts) * Fraction(frame.time_base)
             if origin is None:
                 origin = raw
+                expected_origin = source.get("first_original_pts_exact")
+                _require(expected_origin is None or Fraction(str(expected_origin)) == origin,
+                         "Actual original PTS origin differs from inherited native clock")
             point = raw - origin
             _require(point == points[ordinal], f"Native PTS mismatch at ordinal {ordinal}")
+            _require((frame.width, frame.height) == (source["width"], source["height"]),
+                     "Native frame geometry differs from inherited source metadata")
+            native_duration = getattr(frame, "duration", None)
+            last_point = point
+            last_duration = None if native_duration is None else Fraction(native_duration) * Fraction(frame.time_base)
             actual_count += 1
             if wanted is not None and ordinal not in wanted:
                 continue
@@ -161,6 +204,7 @@ def decode_native_frames(source, *, ordinals=None):
                        pixel_sha256=hashlib.sha256(rgb.tobytes(order="C")).hexdigest())
     after = path.stat()
     _require(actual_count == len(points), "Decoded native frame count differs")
+    validate_native_terminal(source, origin=origin, last_point=last_point, measured_duration=last_duration)
     _require((before.st_size, before.st_mtime_ns, before.st_ino)
              == (after.st_size, after.st_mtime_ns, after.st_ino),
              "Media changed during native decoding")

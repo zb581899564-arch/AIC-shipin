@@ -174,9 +174,38 @@ def native_clock(clock, expected_sha):
     require(all(isinstance(v, (str, int)) and not isinstance(v, bool) for v in values),
             "PTS must use exact rationals, never rounded float seconds")
     pts = [Fraction(value) for value in values]
-    end = Fraction(clock["physical_end_exact"])
-    require(pts[0] >= 0 and all(a < b for a, b in zip(pts, pts[1:])) and end > pts[-1],
+    end_value = clock.get("physical_end_exact")
+    require(isinstance(end_value, (str, int)) and not isinstance(end_value, bool),
+            "Physical endpoint must use an exact rational")
+    end = Fraction(end_value)
+    require(pts[0] == 0 and all(a < b for a, b in zip(pts, pts[1:])) and end > pts[-1],
             "Native PTS must increase strictly before a physical endpoint")
+    if "first_original_pts_exact" in clock:
+        origin = clock["first_original_pts_exact"]
+        require(isinstance(origin, (str, int)) and not isinstance(origin, bool),
+                "Original PTS origin must use an exact rational")
+        origin = Fraction(origin)
+    else:
+        origin = None
+    if "original_exact_pts" in clock:
+        original = clock["original_exact_pts"]
+        require(origin is not None and isinstance(original, list) and len(original) == len(pts) and
+                all(isinstance(value, (str, int)) and not isinstance(value, bool) for value in original),
+                "Original exact PTS require their explicit origin and complete native list")
+        require([Fraction(value) - origin for value in original] == pts,
+                "Original PTS origin/normalization differs from the registered native clock")
+    if "physical_endpoint_evidence" in clock:
+        witness = clock["physical_endpoint_evidence"]
+        require(isinstance(witness, dict) and
+                witness.get("kind") == "LAST_NATIVE_FRAME_PTS_PLUS_POSITIVE_DURATION",
+                "Explicit positive last-native-frame duration evidence required")
+        for name in ("last_normalized_pts_exact", "last_frame_duration_exact"):
+            require(isinstance(witness.get(name), (str, int)) and not isinstance(witness.get(name), bool),
+                    "Physical endpoint evidence must use exact rationals")
+        duration = Fraction(witness["last_frame_duration_exact"])
+        require(Fraction(witness["last_normalized_pts_exact"]) == pts[-1] and duration > 0 and
+                pts[-1] + duration == end,
+                "Physical endpoint differs from its positive original native-duration witness")
     return pts, end
 
 

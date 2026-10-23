@@ -10,9 +10,10 @@ import zipfile
 from types import SimpleNamespace
 
 from improvement.final_sprint_v1.contracts import (
-    atomic_new, checked, inspect_loaded_parameters, ref, save_new, stable_key,
+    atomic_new, checked, inspect_loaded_parameters, native_clock, ref, save_new, stable_key,
     strict_load, strict_loads, total_parameters, validate_sources)
-from improvement.final_sprint_v1.packaging import build_package, prediction_identity, verify_transfer
+from improvement.final_sprint_v1.packaging import (
+    _candidate_contract, build_package, prediction_identity, verify_transfer)
 from improvement.final_sprint_v1.state import TaskStore, UnresolvedClaim
 
 
@@ -57,12 +58,17 @@ class Fixture:
             "binding_sha256": stable_key(self.binding), "model_components": ["tiny"],
             "input_refs": [self.sources[0]["media"]], "algorithm": "synthetic_test_only"}
         proof = save_new(root / "spatial_evidence.json", evidence)
+        empty_evidence = dict(evidence, video_id="1", frames=[],
+            source_sha256=self.sources[1]["media"]["sha256"], input_refs=[self.sources[1]["media"]])
+        empty_proof = save_new(root / "empty_source_evidence.json", empty_evidence)
         self.results = [
             {"video_id": "0", "source_sha256": self.sources[0]["media"]["sha256"],
              "status": "SUCCESS_NONEMPTY", "predictions": frames,
+             "binding_sha256": stable_key(self.binding), "evidence": proof,
              "spatial_provenance": [{"frame": 0, "kind": "grounded", "evidence": proof,
                                      "source_sha256": self.sources[0]["media"]["sha256"]}]},
             {"video_id": "1", "source_sha256": self.sources[1]["media"]["sha256"],
+             "binding_sha256": stable_key(self.binding), "evidence": empty_proof,
              "status": "SUCCESS_EMPTY", "predictions": [], "spatial_provenance": []}]
 
     def package(self, candidate="a", output=None, **kwargs):
@@ -111,6 +117,22 @@ class ContractTests(unittest.TestCase):
         fixture.sources[0]["clock"] = save_new(path, clock)
         with self.assertRaisesRegex(ValueError, "exact rationals"):
             validate_sources(fixture.sources, expected_count=2)
+
+    def test_original_pts_origin_and_positive_terminal_witness_cannot_disagree(self):
+        clock = {"source_sha256": "a" * 64, "normalized_exact_pts": ["0", "1/30"],
+                 "physical_end_exact": "1/15", "first_original_pts_exact": "-1/10",
+                 "original_exact_pts": ["-1/10", "-1/15"],
+                 "physical_endpoint_evidence": {"kind": "LAST_NATIVE_FRAME_PTS_PLUS_POSITIVE_DURATION",
+                     "last_normalized_pts_exact": "1/30", "last_frame_duration_exact": "1/30"}}
+        native_clock(clock, "a" * 64)
+        bad_origin = copy.deepcopy(clock)
+        bad_origin["first_original_pts_exact"] = "0"
+        with self.assertRaisesRegex(ValueError, "origin/normalization"):
+            native_clock(bad_origin, "a" * 64)
+        bad_end = copy.deepcopy(clock)
+        bad_end["physical_endpoint_evidence"]["last_frame_duration_exact"] = "1/15"
+        with self.assertRaisesRegex(ValueError, "native-duration witness"):
+            native_clock(bad_end, "a" * 64)
 
     def test_parameter_sharing_is_tensor_identity_not_whole_model(self):
         fixture = Fixture(self.root)
@@ -189,6 +211,21 @@ class ResumeTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.store.claim("source0", self.binding)
 
+    def test_torn_ledger_does_not_block_adoption_or_invent_repeat_work(self):
+        claim = self.store.claim("source0", self.binding)
+        artifact = save_new(self.root / "result.json", {"native": [1]})
+        claim.complete({"result": artifact}, {"accounting": {"gpu_seconds": 12}})
+        ledger = self.store.root / "ledger.jsonl"
+        original = ledger.read_bytes() + b'{"event":"SUCC'
+        ledger.write_bytes(original)  # Inject a torn subsequent log write.
+        reused = self.store.claim("source0", self.binding)
+        self.assertTrue(reused.reused)
+        self.assertEqual(reused.result["artifacts"]["result"], artifact)
+        self.assertEqual(ledger.read_text().count('"event":"SUCCESS"'), 1)
+        archives = list((self.store.root / "ledger_recovery").glob("interrupted_*.jsonl"))
+        self.assertEqual(len(archives), 1)
+        self.assertEqual(archives[0].read_bytes(), original)
+
     def test_claim_without_terminal_does_not_restart_from_old_pid(self):
         claim = self.store.claim("source0", self.binding)
         with self.assertRaises(UnresolvedClaim):
@@ -238,6 +275,20 @@ class PackageTests(unittest.TestCase):
         self.assertEqual(rows[0]["video_file"], "0.mp4")
         self.assertEqual(rows[1]["predictions"], [])
 
+    def test_torn_own_package_write_is_preserved_and_rebuilt_without_inference(self):
+        output = self.root / "a"
+        output.mkdir()
+        torn_jsonl = output / "predictions.jsonl.PENDING"
+        torn_zip = output / "candidate_FINAL_A.zip.PENDING"
+        torn_jsonl.write_bytes(b'{"video_id":')
+        torn_zip.write_bytes(b"PK\\x03")
+        result = self.fixture.package()
+        leftovers = sorted(output.glob("*.PENDING.interrupted-*"))
+        self.assertEqual(len(leftovers), 2)
+        self.assertEqual({p.read_bytes() for p in leftovers}, {b'{"video_id":', b"PK\\x03"})
+        self.assertEqual(result["status"], "SYNTHETIC_TEST_ONLY")
+        self.assertEqual(self.fixture.package(), result)
+
     def test_failed_source_is_not_legal_empty(self):
         self.fixture.results[1]["status"] = "FAILED"
         with self.assertRaisesRegex(ValueError, "Failed/incomplete"):
@@ -268,6 +319,9 @@ class PackageTests(unittest.TestCase):
     def test_all_empty_not_submitted(self):
         for result in self.fixture.results:
             result.update(status="SUCCESS_EMPTY", predictions=[], spatial_provenance=[])
+            evidence = strict_load(result["evidence"]["path"])
+            evidence["frames"] = []
+            result["evidence"] = save_new(self.root / (result["video_id"] + "_empty_evidence.json"), evidence)
         with self.assertRaisesRegex(ValueError, "ALL_EMPTY"):
             self.fixture.package()
 
@@ -279,10 +333,24 @@ class PackageTests(unittest.TestCase):
                 "binding_sha256": stable_key(self.fixture.binding), "model_components": ["tiny"],
                 "input_refs": [source["media"]], "algorithm": "synthetic_test_only"}
             proof = save_new(self.root / (source["video_id"] + ".proof.json"), evidence)
-            result.update(status="SUCCESS_NONEMPTY", predictions=frames, spatial_provenance=[
+            result.update(status="SUCCESS_NONEMPTY", predictions=frames, evidence=proof, spatial_provenance=[
                 {"frame": i, "kind": "grounded", "evidence": proof,
                  "source_sha256": source["media"]["sha256"]} for i in range(3)])
         with self.assertRaisesRegex(ValueError, "ALL_SELECTED"):
+            self.fixture.package()
+
+    def test_legal_empty_still_requires_exact_candidate_and_input_proof(self):
+        empty = self.fixture.results[1]
+        old_binding = empty["binding_sha256"]
+        empty["binding_sha256"] = "f" * 64
+        with self.assertRaisesRegex(ValueError, "different exact candidate binding"):
+            self.fixture.package()
+        empty["binding_sha256"] = old_binding
+        empty["evidence"] = self.fixture.results[0]["evidence"]
+        with self.assertRaisesRegex(ValueError, "Spatial proof"):
+            self.fixture.package()
+        del empty["evidence"]
+        with self.assertRaisesRegex(ValueError, "including empty"):
             self.fixture.package()
 
     def test_identical_prediction_under_new_name_rejected(self):
@@ -302,6 +370,20 @@ class PackageTests(unittest.TestCase):
         self.fixture.binding["required_model_components"].append("missing_aux")
         with self.assertRaisesRegex(ValueError, "lacks actual parameter"):
             self.fixture.package()
+
+    def test_g_geometry_candidate_must_keep_every_protected_temporal_frame(self):
+        rows = [{"video_id": "0", "targetRatioWH": [1, 1],
+                 "predictions": [{"frame": 0, "bboxes": [10, 5, 50]}]}]
+        baseline = copy.deepcopy(rows)
+        baseline[0]["predictions"][0]["bboxes"] = [0, 0, 70]
+        binding = {"candidate": {"selection": "protected40.48"}}
+        _candidate_contract("g_semantic_extent_control", binding, rows, {"40.48": baseline})
+        changed = copy.deepcopy(rows)
+        changed[0]["predictions"][0]["frame"] = 1
+        with self.assertRaisesRegex(ValueError, "G_TEMPORAL_DRIFT"):
+            _candidate_contract("g_subject", binding, changed, {"40.48": baseline})
+        with self.assertRaisesRegex(ValueError, "explicitly bind"):
+            _candidate_contract("g_subject", {}, rows, {"40.48": baseline})
 
     def test_native_source_identity_not_optional(self):
         del self.fixture.results[0]["source_sha256"]

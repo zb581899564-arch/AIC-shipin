@@ -39,6 +39,7 @@ AUTHOR_CHECKPOINT_URL = "https://zenodo.org/records/13363606/files/clip_cg_detr_
 OPENAI_CLIP_SHA256 = "40d365715913c9da98579312b702a82c18be219cc2a73407c4526f58eba950af"
 OPENAI_CLIP_URL = "https://openaipublic.azureedge.net/clip/models/" + OPENAI_CLIP_SHA256 + "/ViT-B-32.pt"
 OPENAI_CLIP_PARAMETERS = 151277313
+QUERY_FEATURE_PROFILE = "CLIP_CAUSAL77_EOT_PADDING_CG_TRAINED_PREFIX_V2"
 
 
 @dataclass(frozen=True)
@@ -284,6 +285,27 @@ def validate_clip_tokens(tokens: Any) -> list[list[int]]:
     return tokens
 
 
+def clip_query_layout(tokens: list[list[int]], maximum_query_tokens: int) -> dict[str, Any]:
+    """Match actual EOT padding and the frozen CG training prefix length.
+
+    OpenAI's vocabulary contains token 0 (``!``), so ``token != 0`` deletes
+    real content before EOT.  The training dataset takes ``[:max_q_l]`` from
+    its real token descriptors.  We encode the full CLIP context first, then
+    expose the same bounded prefix to CG, recording any prefix truncation.
+    This never repairs a malformed model answer or invents a shorter query.
+    """
+    row = validate_clip_tokens(tokens)[0]
+    require(type(maximum_query_tokens) is int and 2 <= maximum_query_tokens <= 77,
+            "Actual checkpoint query feature bound must be between 2 and77")
+    actual = row.index(49407) + 1
+    retained = min(actual, maximum_query_tokens)
+    return {"profile": QUERY_FEATURE_PROFILE, "clip_context_tokens": 77,
+            "actual_query_tokens_with_sot_eot": actual, "checkpoint_max_q_l": maximum_query_tokens,
+            "retained_feature_tokens": retained, "trained_prefix_truncated": retained < actual,
+            "retained_token_indices": list(range(retained)),
+            "attention_mask": [[float(index < actual) for index in range(77)]]}
+
+
 def _clip_runtime_identity(clip_module: Any, torch_module: Any) -> dict[str, Any]:
     """Deterministic implementation/tokenizer identity; no clocks or PID fields."""
     import numpy as np
@@ -297,7 +319,8 @@ def _clip_runtime_identity(clip_module: Any, torch_module: Any) -> dict[str, Any
     files = {name: ref(package / name) for name in names}
     return {"clip_package_files": files, "torch": str(torch_module.__version__),
             "numpy": np.__version__, "pillow": PIL.__version__,
-            "tokenizer_contract": "OPENAI_BPE_49408_SOT49406_EOT49407_CONTEXT77_NO_TRUNCATION"}
+            "tokenizer_contract": "OPENAI_BPE_49408_SOT49406_EOT49407_CONTEXT77_NO_CLIP_TRUNCATION",
+            "query_feature_profile": QUERY_FEATURE_PROFILE}
 
 
 def _git(source: Path, *arguments: str) -> str:
@@ -348,6 +371,7 @@ class SpecialistRuntime:
         self.call_cache = call_cache
         self.query_forwards = 0
         self.runtime_identity: dict[str, Any] = {}
+        self.maximum_query_tokens: int | None = None
 
     def _cached(self, kind: str, payload: Mapping[str, Any], compute) -> dict[str, Any]:
         bound = dict(payload, specialist_spec_sha256=stable_key(self.spec),
@@ -398,6 +422,9 @@ class SpecialistRuntime:
                 and args.get("a_feat_dim", 0) == 0 and args["clip_length"] == 2
                 and args["span_loss_type"] == "l1" and args["max_v_l"] >= 75
                 and args["dset_name"] == "qvhighlight", "Wrong checkpoint feature/model identity")
+        require(type(args.get("max_q_l")) is int and 2 <= args["max_q_l"] <= 77,
+                "Missing or incompatible trained query feature bound")
+        runtime_identity["checkpoint_max_q_l"] = args["max_q_l"]
         args.device = self.device
         author = importlib.import_module("lighthouse.common.cg_detr")
         require(Path(author.__file__).resolve() == source / "lighthouse/common/cg_detr.py",
@@ -428,6 +455,7 @@ class SpecialistRuntime:
         # Publish the loaded state only after every identity/count gate passed.
         self.model, self.clip_model, self.torch, self.clip = model, clip_model, torch, clip
         self.runtime_identity, self.parameter_inventory = runtime_identity, inventory
+        self.maximum_query_tokens = args["max_q_l"]
         return self
 
     def parameter_receipts(self) -> list[dict[str, Any]]:
@@ -506,12 +534,13 @@ class SpecialistRuntime:
         require(count == len(cells), "Missing CLIP center observations")
         return {"rows": collected, "features": pack_float32(np.concatenate(blocks, axis=0))}
 
-    def _encode_query(self, query: str) -> tuple[Any, Any, str]:
+    def _encode_query(self, query: str) -> tuple[Any, Any, str, dict[str, Any]]:
         require(isinstance(query, str) and query.strip() and len(query) <= 1000, "Source-grounded nonempty query required")
         torch = self.torch
         # No silent CLIP truncation; root's fixed overview request asks <=30 words.
         token_list = validate_clip_tokens(self.clip.tokenize(query, context_length=77, truncate=False).tolist())
         token_sha = stable_key(token_list)
+        layout = clip_query_layout(token_list, self.maximum_query_tokens)
         def compute():
             tokens = torch.tensor(token_list, dtype=torch.long, device=self.device)
             dtype = self.clip_model.visual.conv1.weight.dtype
@@ -525,24 +554,26 @@ class SpecialistRuntime:
                     hidden = self.clip_model.transformer(hidden.permute(1, 0, 2)).permute(1, 0, 2)
                     hidden = self.clip_model.ln_final(hidden).float()
                     hidden = hidden / (torch.linalg.vector_norm(hidden, dim=-1, keepdim=True) + 1e-5)
-                    mask = (tokens != 0).float()
+                    mask = torch.tensor(layout["attention_mask"], dtype=torch.float32, device=self.device)
                 require(bool(torch.isfinite(hidden).all()), "Non-finite actual CLIP query hidden features")
                 torch.cuda.synchronize(self.device)
                 return {"hidden": pack_float32(hidden.cpu().numpy()), "mask": mask.cpu().tolist(),
-                        "token_sha256": token_sha, "gpu_seconds": time.monotonic() - started,
+                        "token_sha256": token_sha, "query_layout": layout, "gpu_seconds": time.monotonic() - started,
                         "physical_model_forwards": 1}
             finally:
                 self.gpu_seconds += time.monotonic() - started
-        result = self._cached("clip_query", {"query": query, "token_sha256": token_sha}, compute)
+        result = self._cached("clip_query", {"query": query, "token_sha256": token_sha,
+                                            "query_layout": layout}, compute)
         require(result["token_sha256"] == token_sha, "Cached CLIP query token identity differs")
         hidden = torch.from_numpy(unpack_float32(result["hidden"], (1, 77, 512))).to(self.device)
         mask = torch.tensor(result["mask"], dtype=torch.float32, device=self.device)
         require(hidden.shape == (1, 77, 512) and mask.shape == (1, 77)
                 and bool(torch.isfinite(hidden).all()) and bool(((mask == 0) | (mask == 1)).all()),
                 "Cached CLIP query features/mask invalid")
-        require(result["mask"] == [[float(token != 0) for token in token_list[0]]],
-                "Cached CLIP padding mask differs from actual author tokenizer")
-        return hidden, mask, token_sha
+        require(result["mask"] == layout["attention_mask"] and result.get("query_layout") == layout,
+                "Cached CLIP padding mask or trained prefix differs from actual token positions")
+        count = layout["retained_feature_tokens"]
+        return hidden[:, :count], mask[:, :count], token_sha, layout
 
     def score_source(self, source: Mapping[str, Any], feature_table: Mapping[str, Any], query: str) -> dict[str, Any]:
         self._ready()
@@ -564,7 +595,7 @@ class SpecialistRuntime:
         norms = np.linalg.norm(values, axis=1)
         require(bool(((norms > .99) & (norms <= 1.00001)).all()),
                 "Visual features are not the normalized trained CG-DETR input profile")
-        text, text_mask, query_token_sha = self._encode_query(query)
+        text, text_mask, query_token_sha, query_layout = self._encode_query(query)
         outputs = []
         for window in planned:
             first, stop = window["first_cell"], window["stop_cell"]
@@ -576,7 +607,7 @@ class SpecialistRuntime:
                       "src_vid_mask": torch.ones((1, count), device=self.device),
                       "src_txt": text, "src_txt_mask": text_mask, "src_aud": None, "vid": None, "qid": None}
             input_sha = stable_key(hashlib.sha256(values[first:stop].tobytes(order="C")).hexdigest(),
-                                   tef.cpu().tolist(), query_token_sha)
+                                   tef.cpu().tolist(), query_token_sha, query_layout)
             def compute():
                 require(self.forward_windows < self.config.maximum_forward_windows, "Specialist forward budget reached")
                 self.forward_windows += 1
@@ -607,6 +638,7 @@ class SpecialistRuntime:
         selection = select_native(source, cells, outputs, self.config)
         return dict(selection, cells=cells, window_outputs=outputs,
                     query=query, query_tokens_sha256=query_token_sha,
+                    query_feature_layout=query_layout,
                     feature_table_sha256=stable_key(feature_table),
                     source_sha256=source["media"]["sha256"],
                     # Complete canonical inventories live once in the outer

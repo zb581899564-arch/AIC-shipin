@@ -1,6 +1,6 @@
 # 可选 M 路线：冻结 CG-DETR 资产准备与 Linux 接入
 
-本文件只补充第三条候选 `m_specialist` / `m_generic_control` 的资产与接口。先执行主 RUNBOOK 的资源核查、固定提交与现存资产盘点。所有命令在自有 Linux 上运行；本轮公共审计没有下载下述权重、没有执行这些模型，也没有验证选片收益。
+本文件只补充独立时序候选 `m_specialist` / `m_generic_control` 的资产与接口。先执行主 RUNBOOK 的资源核查、固定提交与现存资产盘点。所有命令在自有 Linux 上运行；本轮公共审计没有下载下述权重、没有执行这些模型，也没有验证选片收益。
 
 **在首次 `bind` 前决定是否准备 M。** 如果直接来源、磁盘或依赖不满足，省略 mapping 的 `specialist`，继续 G/R。不要等 M 阻塞第一包。已绑定的 mapping、asset lock、run root 不可改写；后来补 M 要另建 mapping 和 run root，原有 Qwen/空间调用缓存不能自动跨锁复用，新增成本必须登记，通常不值得在最后窗口这样做。
 
@@ -19,26 +19,27 @@
 
 该路线是冻结的、预训练的跨模态 moment/saliency 模型，不是旧的自训 UMT/I3D 小头、原始 CLIP 相似度或把摘要未选部分当成负例。Qwen BASE 只基于真实概览帧为每源生成一句最多 30 个英文词的自动查询，并承担真实空间定位。`m_generic_control` 复用完全相同的视觉特征，用注册文件中的固定通用查询比较自动查询的贡献。
 
-实现遵循作者训练输入：每 2 秒单元取实际原生中心帧，短边 224、中央裁剪、CLIP RGB 标准化；图像与逐 token 文本特征按 `norm + 1e-5` 归一化。文本不是 pooled embedding。固定 75 单元、步长 60；重叠 saliency 平均；只在前景概率至少 0.5 的预测 moment 内按 saliency 选择，最多占来源**实际时长**的 25%，不强制填满。未预测出前景是合法空结果；模型、输入或 schema 异常是失败。源码中的 `BasePredictor` 有自动下载、75 单元拒绝和计算归一化后仍拼接未归一化图像特征的问题，本项目不调用它。
+实现遵循作者训练输入：每 2 秒单元取实际原生中心帧，短边 224、中央裁剪、CLIP RGB 标准化；图像与逐 token 文本特征按 `norm + 1e-5` 归一化。文本不是 pooled embedding。CLIP仍完整编码77上下文，掩码按EOT位置构造（EOT前token 0是内容）。向CG传入至多checkpoint.max_q_l个真实hidden前缀，与作者训练相同；是否截取、原始与实际长度在query_feature_layout中明确记录，缓存profile为CLIP_CAUSAL77_EOT_PADDING_CG_TRAINED_PREFIX_V2。固定 75 单元、步长 60；重叠 saliency 平均；只在前景概率至少 0.5 的预测 moment 内按 saliency 选择，最多占来源**实际时长**的 25%，不强制填满。未预测出前景是合法空结果；模型、输入或 schema 异常是失败。源码中的 `BasePredictor` 有自动下载、75 单元拒绝和计算归一化后仍拼接未归一化图像特征的问题，本项目不调用它。
 
 ## 2. 路径与动态容量
 
-以下沿用主 RUNBOOK 已确定的 `FSV1_REPO`、`FSV1_PYTHON`、`FSV1_MAPPING`、`FSV1_WORK`、`FSV1_SCRATCH`、`FSV1_COMMIT`。这些变量必须是本机真实路径。`FSV1_CLIP` 指向盘点确认的现存原始文件；若确实缺失，指向本节新目录中的 `ViT-B-32.pt`，不得指向需要覆盖的旧文件。
+以下沿用主 RUNBOOK 已确定的 `FSV1_REPO`、`FSV1_PYTHON`、`FSV1_MAPPING`、`FSV1_WORK`、`FSV1_OUTPUT_PARENT`、`FSV1_SCRATCH`、`FSV1_COMMIT`。这些变量必须是本机真实路径。`FSV1_CLIP` 指向盘点确认的现存原始文件；若确实缺失，指向本节新目录中的 `ViT-B-32.pt`，不得指向需要覆盖的旧文件。
 
 ```bash
 set -euo pipefail
 : "${FSV1_REPO:?主RUNBOOK中的固定仓库路径}"
 : "${FSV1_PYTHON:?主RUNBOOK中的现存Python解释器}"
 : "${FSV1_MAPPING:?尚未bind的新mapping路径}"
-: "${FSV1_WORK:?已获准使用的现存Linux工作盘}"
-export FSV1_OPTIONAL="$FSV1_WORK/final_sprint_optional_assets_20261023"
+: "${FSV1_OUTPUT_PARENT:?主RUNBOOK已核实容量并用于mapping.workspace_root的现成获准目录}"
+export FSV1_OPTIONAL="$FSV1_OUTPUT_PARENT/final_sprint_optional_assets_20261023"
 export FSV1_LIGHTHOUSE="$FSV1_OPTIONAL/lighthouse-3e841d3d662c8440afed514908566fed2d5e82a7"
 export FSV1_CG="$FSV1_OPTIONAL/clip_cg_detr_qvhighlight.ckpt"
 : "${FSV1_CLIP:?填入已盘点的原始ViT-B-32.pt；确实缺失时选择FSV1_OPTIONAL内的新文件}"
+export FSV1_CLIP
 cd "$FSV1_REPO"
 "$FSV1_PYTHON" - <<'PY'
 import json, os, pathlib, shutil
-work = pathlib.Path(os.environ['FSV1_WORK']).resolve(strict=True)
+work = pathlib.Path(os.environ['FSV1_OUTPUT_PARENT']).resolve(strict=True)
 root = pathlib.Path(os.environ['FSV1_OPTIONAL']).resolve()
 assert root.is_relative_to(work) and root != work
 mapping = json.loads(pathlib.Path(os.environ['FSV1_MAPPING']).read_text())
@@ -71,12 +72,25 @@ PY
 
 ## 3. 先验证客户端直连，再获取
 
-这段只发送公开站点 HEAD，不下载权重。代理环境、Git URL 重写、代理配置、私网目的地址、CONNECT、重定向、TLS/连接失败或未知 curl 结果均 STOP。不要清空代理变量、改代理配置或换镜像来使检查通过；把具体阻塞交给用户决定，G/R 可以继续。
+仅对本次确实需要下载的公开资产检查原站；现存完整资产采用不要求联网。这段只发送公开站点 HEAD，不下载权重。代理环境、Git URL 重写、代理配置、私网目的地址、CONNECT、重定向、TLS/连接失败或未知 curl 结果均 STOP。不要清空代理变量、改代理配置或换镜像来使检查通过；把具体阻塞交给用户决定，G/R 可以继续。
 
 ```bash
 "$FSV1_PYTHON" - <<'PY'
-import ipaddress, json, os, pathlib, re, socket, subprocess
+import importlib.util, ipaddress, json, os, pathlib, re, socket, subprocess
 from urllib.parse import urlsplit
+urls = []
+if not pathlib.Path(os.environ['FSV1_LIGHTHOUSE']).exists():
+    urls.append('https://github.com/line/lighthouse')
+if not pathlib.Path(os.environ['FSV1_CG']).is_file():
+    urls.append('https://zenodo.org/records/13363606/files/clip_cg_detr_qvhighlight.ckpt?download=1')
+if not pathlib.Path(os.environ['FSV1_CLIP']).is_file():
+    urls.append('https://openaipublic.azureedge.net/clip/models/40d365715913c9da98579312b702a82c18be219cc2a73407c4526f58eba950af/ViT-B-32.pt')
+clip_source = pathlib.Path(os.environ['FSV1_OPTIONAL'])/'openai-clip-dcba3cb2e2827b402d2701e7e1c7d9fed8a20ef1'
+if importlib.util.find_spec('clip') is None and not clip_source.exists():
+    urls.append('https://github.com/openai/CLIP')
+if not urls:
+    print(json.dumps({'status':'EXISTING_ASSETS_ONLY_NO_NETWORK_REQUIRED'}))
+    raise SystemExit(0)
 bad = [k for k,v in os.environ.items() if v and k.lower() in {'http_proxy','https_proxy','all_proxy','ftp_proxy'}]
 assert not bad, 'STOP: 当前存在代理变量（仅报告名字）: ' + ','.join(bad)
 check = subprocess.run(['git','config','--get-regexp',r'(^http\..*proxy$|^https\..*proxy$|^url\..*insteadof$)'], capture_output=True, text=True)
@@ -87,10 +101,6 @@ if os.environ.get('CURL_HOME'):
 for path in curl_configs:
     if path.is_file():
         assert not re.search(r'(?im)^\s*(?:--)?(?:proxy|preproxy|socks\S*)\b',path.read_text()), 'STOP: curl代理配置需核实'
-urls = ['https://github.com/line/lighthouse',
-        'https://zenodo.org/records/13363606/files/clip_cg_detr_qvhighlight.ckpt?download=1']
-if not pathlib.Path(os.environ['FSV1_CLIP']).is_file():
-    urls.append('https://openaipublic.azureedge.net/clip/models/40d365715913c9da98579312b702a82c18be219cc2a73407c4526f58eba950af/ViT-B-32.pt')
 for url in urls:
     # -q不读curl默认参数；前面已检查代理，绝不靠忽略一个已知代理继续下载。
     result = subprocess.run(['curl','-q','--head','--fail','--silent','--show-error','--noproxy','*',
@@ -208,7 +218,7 @@ fi
 test "$(git -C "$FSV1_CLIP_SOURCE" rev-parse HEAD)" = dcba3cb2e2827b402d2701e7e1c7d9fed8a20ef1
 test -z "$(git -C "$FSV1_CLIP_SOURCE" status --porcelain)"
 if [ ! -e "$FSV1_OPTIONAL/python/clip" ]; then
-  PIP_DISABLE_PIP_VERSION_CHECK=1 "$FSV1_PYTHON" -m pip install --no-deps --no-build-isolation --no-compile --target "$FSV1_OPTIONAL/python" "$FSV1_CLIP_SOURCE"
+  PIP_DISABLE_PIP_VERSION_CHECK=1 PIP_NO_INDEX=1 "$FSV1_PYTHON" -m pip install --no-index --no-deps --no-build-isolation --no-compile --target "$FSV1_OPTIONAL/python" "$FSV1_CLIP_SOURCE"
 fi
 export PYTHONPATH="$FSV1_OPTIONAL/python${PYTHONPATH:+:$PYTHONPATH}"
 ```

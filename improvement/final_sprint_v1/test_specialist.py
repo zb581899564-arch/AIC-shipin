@@ -7,7 +7,7 @@ import unittest
 from .contracts import canonical_bytes, ref
 from .specialist import (SpecialistConfig, SpecialistRuntime, normalize_features, plan_cells,
                          pack_float32, plan_windows, preprocess_clip_image, select_native,
-                         unpack_float32, validate_clip_tokens)
+                         unpack_float32, validate_clip_tokens, clip_query_layout)
 
 
 def source(points, end):
@@ -89,6 +89,25 @@ class NativeTimeTests(unittest.TestCase):
 
 
 class CLIPProfileTests(unittest.TestCase):
+    def test_literal_zero_token_before_eot_is_content_not_padding(self):
+        tokens = [[49406, 320, 0, 49407] + [0] * 73]
+        layout = clip_query_layout(tokens, 32)
+        self.assertEqual(layout["attention_mask"], [[1., 1., 1., 1.] + [0.] * 73])
+        self.assertEqual(layout["retained_feature_tokens"], 4)
+        self.assertFalse(layout["trained_prefix_truncated"])
+
+    def test_frozen_training_prefix_is_explicit_and_preserves_full_clip_tokens(self):
+        tokens = [[49406] + [320] * 40 + [49407] + [0] * 35]
+        layout = clip_query_layout(tokens, 32)
+        self.assertEqual(layout["actual_query_tokens_with_sot_eot"], 42)
+        self.assertEqual(layout["retained_token_indices"], list(range(32)))
+        self.assertTrue(layout["trained_prefix_truncated"])
+        self.assertEqual(sum(layout["attention_mask"][0]), 42)
+        self.assertEqual(tokens[0][41], 49407)
+        for invalid in [None, True, 0, 78]:
+            with self.assertRaises(ValueError):
+                clip_query_layout(tokens, invalid)
+
     def test_compact_float32_round_trip_is_bit_exact(self):
         import numpy as np
         values = np.random.default_rng(19).standard_normal((16, 512)).astype(np.float32)

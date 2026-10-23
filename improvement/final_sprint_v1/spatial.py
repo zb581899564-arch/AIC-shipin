@@ -231,6 +231,26 @@ def pixel_sha256(rgb: Any) -> str:
     return hashlib.sha256(data.tobytes(order="C")).hexdigest()
 
 
+def transport_polygon(polygon: Sequence[Sequence[float]], affine: Sequence[Sequence[float]],
+                      native_wh: Sequence[int], thumbnail_wh: Sequence[int]) -> list[list[float]]:
+    """Move the persistent subject quadrilateral in the measured thumbnail.
+
+    Replacing a rotated polygon with its axis-aligned bounding box *before*
+    the next transport inflates its area at every frame.  Only the final
+    composition may take an axis-aligned bound; tracking retains all four
+    transformed vertices, including their orientation, until regrounding.
+    """
+    if (len(polygon) != 4 or any(len(point) != 2 or any(not _number(v) for v in point) for point in polygon)
+            or len(affine) != 2 or any(len(row) != 3 or any(not _number(v) for v in row) for row in affine)
+            or len(native_wh) != 2 or len(thumbnail_wh) != 2
+            or any(type(v) is not int or v <= 0 for v in (*native_wh, *thumbnail_wh))):
+        raise ValueError("Finite subject quadrilateral and actual image transform required")
+    sx, sy = thumbnail_wh[0] / native_wh[0], thumbnail_wh[1] / native_wh[1]
+    return [[(affine[0][0] * x * sx + affine[0][1] * y * sy + affine[0][2]) / sx,
+             (affine[1][0] * x * sx + affine[1][1] * y * sy + affine[1][2]) / sy]
+            for x, y in polygon]
+
+
 class SubjectTracker:
     """Bounded, deterministic measured transport; uncertainty requests a model.
 
@@ -249,6 +269,7 @@ class SubjectTracker:
         self.previous = None
         self.previous_shape = None
         self.boxes: list[list[float]] = []
+        self.polygons: list[list[list[float]]] = []
 
     def foreground_support(self, rgb: Any, boxes: Sequence[Sequence[float]]) -> tuple[list[list[float]], list[dict[str, Any]]]:
         """Measure same-frame foreground support inside semantic extents.
@@ -320,6 +341,8 @@ class SubjectTracker:
         self.previous = self.gray(rgb)
         self.previous_shape = rgb.shape[:2]
         self.boxes = [list(map(float, box)) for box in boxes]
+        self.polygons = [[[left, top], [right, top], [right, bottom], [left, bottom]]
+                         for left, top, right, bottom in self.boxes]
 
     def transport(self, rgb: Any) -> tuple[list[list[float]] | None, dict[str, Any]]:
         np, cv2, cfg = self.np, self.cv2, self.config
@@ -334,8 +357,10 @@ class SubjectTracker:
             return [], {"tracking_status": "WHOLE_SCENE_CONTINUATION", "image_mad": mad}
         height, width = rgb.shape[:2]
         sy, sx = current.shape[0] / height, current.shape[1] / width
-        results, witnesses = [], []
-        for subject in self.boxes:
+        results, polygons, witnesses = [], [], []
+        if len(self.polygons) != len(self.boxes):
+            raise ValueError("Subject tracker polygon state does not match grounding")
+        for subject, polygon in zip(self.boxes, self.polygons):
             mask = np.zeros_like(self.previous, dtype=np.uint8)
             left, top, right, bottom = subject
             x0, y0 = max(0, math.floor(left * sx)), max(0, math.floor(top * sy))
@@ -369,18 +394,19 @@ class SubjectTracker:
             scale = float(math.hypot(affine[0, 0], affine[1, 0]))
             if inlier_fraction < cfg.minimum_inlier_fraction or not 1 / cfg.maximum_step_scale <= scale <= cfg.maximum_step_scale:
                 return None, {"tracking_status": "NEED_SAME_FRAME_GROUNDING", "reason": "UNTRUSTED_SUBJECT_TRANSFORM", "scale": scale, "inlier_fraction": inlier_fraction}
-            corners = np.array([[left * sx, top * sy, 1], [right * sx, top * sy, 1],
-                                [right * sx, bottom * sy, 1], [left * sx, bottom * sy, 1]])
-            transformed = corners @ affine.T
-            moved = [float(transformed[:, 0].min() / sx), float(transformed[:, 1].min() / sy),
-                     float(transformed[:, 0].max() / sx), float(transformed[:, 1].max() / sy)]
+            transformed = transport_polygon(polygon, affine.tolist(), [width, height],
+                                            [current.shape[1], current.shape[0]])
+            moved = [min(point[0] for point in transformed), min(point[1] for point in transformed),
+                     max(point[0] for point in transformed), max(point[1] for point in transformed)]
             if not (0 <= moved[0] < moved[2] <= width and 0 <= moved[1] < moved[3] <= height):
                 return None, {"tracking_status": "NEED_SAME_FRAME_GROUNDING", "reason": "SUBJECT_REACHED_IMAGE_BOUNDARY"}
             results.append(moved)
+            polygons.append(transformed)
             witnesses.append({"affine_thumbnail": affine.tolist(), "thumbnail_wh": [current.shape[1], current.shape[0]],
+                              "subject_polygon_xy": transformed, "geometry": "PERSISTENT_GROUNDED_QUADRILATERAL",
                               "accepted_points": len(before), "inlier_fraction": inlier_fraction,
                               "forward_backward_error_max": float(fb_error[valid].max()), "step_scale": scale})
-        self.previous, self.boxes = current, results
+        self.previous, self.boxes, self.polygons = current, results, polygons
         return results, {"tracking_status": "MEASURED_FORWARD_BACKWARD_FLOW", "subjects": witnesses, "image_mad": mad}
 
 
@@ -534,3 +560,131 @@ def process_source(observations: Iterable[Mapping[str, Any]], selected_frames: S
                             "additional_learned_parameters": 0, "config": asdict(config),
                             "offline_quality_validation": "NOT_RUN",
                             "official_quality": "UNKNOWN"}}
+
+
+def _rectangle_polygons(boxes: Sequence[Sequence[float]]) -> list[list[list[float]]]:
+    return [[[left, top], [right, top], [right, bottom], [left, bottom]]
+            for left, top, right, bottom in boxes]
+
+
+def _visible_polygon_boxes(polygons: Sequence[Sequence[Sequence[float]]], width: int,
+                           height: int) -> list[list[float]]:
+    """Intersect transported *visible* extents with the current image domain."""
+    boxes = [[max(0., min(p[0] for p in polygon)), max(0., min(p[1] for p in polygon)),
+              min(float(width), max(p[0] for p in polygon)), min(float(height), max(p[1] for p in polygon))]
+             for polygon in polygons]
+    if any(box[0] >= box[2] or box[1] >= box[3] for box in boxes):
+        raise ValueError("Transported semantic extent has no visible support; control cannot invent a box")
+    return boxes
+
+
+def _control_anchor(anchor: Mapping[str, Any], row: Mapping[str, Any], width: int,
+                    height: int) -> list[list[list[float]]]:
+    raw = anchor["raw_text"]
+    if (not isinstance(raw, str) or hashlib.sha256(raw.encode()).hexdigest() != anchor["raw_sha256"]
+            or row["ground_anchor_raw_sha256"] != anchor["raw_sha256"]
+            or anchor["frame"] != row["frame"] or anchor["native_pts"] != row["native_pts"]
+            or anchor["pixel_sha256"] != row["pixel_sha256"]
+            or not re.fullmatch(r"[0-9a-f]{64}", anchor["input_sha256"])):
+        raise ValueError("Semantic control anchor does not match the actual parent observation")
+    parsed = parse_grounding(raw)
+    if parsed["mode"] != anchor["mode"] or parsed["boxes"] != anchor["subjects_normalized"]:
+        raise ValueError("Semantic control anchor differs from its complete raw answer")
+    boxes = pixel_subjects(parsed, width, height)
+    if len(boxes) != len(row["subjects_xyxy"]):
+        raise ValueError("Semantic control and parent subject identities differ")
+    return _rectangle_polygons(boxes)
+
+
+def semantic_extent_control(source: Mapping[str, Any], parent_proof: Mapping[str, Any],
+                            baseline_boxes: Mapping[int, Sequence[float]],
+                            config: SpatialConfig | None = None) -> dict[str, Any]:
+    """Remove GrabCut tightening using the exact successful parent's observations.
+
+    Qwen answers, frame membership and measured LK affines are reused.  These
+    affines were measured inside the parent's refined extents, so this is a
+    *geometry* control, not an independently tracked or newly inferred model.
+    It uses no image decoding, parameter loading or additional neural calls.
+    The caller must verify the parent file SHA and durable SUCCESS binding.
+    """
+    config = config or SpatialConfig()
+    config.validate()
+    width, height, ratio = source["width"], source["height"], source["targetRatioWH"]
+    if (parent_proof.get("schema") != "AIC_FINAL_SPATIAL_EVIDENCE_V1"
+            or parent_proof.get("video_id") != source["video_id"]
+            or parent_proof.get("source_sha256") != source["media"]["sha256"]):
+        raise ValueError("Semantic control requires the exact parent source proof")
+    detail = parent_proof["observed_pixel_evidence"]
+    rows, anchors = detail["frame_evidence"], detail["groundings"]
+    frame_ids = sorted(baseline_boxes)
+    parent_predictions = parent_proof["frames"]
+    if ([row["frame"] for row in rows] != frame_ids
+            or [row["frame"] for row in parent_predictions] != frame_ids
+            or any(type(frame) is not int or not 0 <= frame < source["n_frames"] for frame in frame_ids)):
+        raise ValueError("Semantic control must preserve the complete protected frame membership")
+    anchor_map = {anchor["frame"]: anchor for anchor in anchors}
+    if len(anchor_map) != len(anchors):
+        raise ValueError("Duplicate semantic control anchor")
+    predictions, evidence = [], []
+    polygons, pixel_polygons, previous, active_anchor = [], [], None, None
+    used_anchors = set()
+    for row, parent_prediction in zip(rows, parent_predictions):
+        frame = row["frame"]
+        if (row["native_pts"] != source["normalized_exact_pts"][frame]
+                or row["bboxes"] != parent_prediction["bboxes"]
+                or row.get("box_xyw") != parent_prediction["bboxes"]
+                or type(row["same_frame_grounding"]) is not bool
+                or not re.fullmatch(r"[0-9a-f]{64}", row["pixel_sha256"])):
+            raise ValueError("Semantic control parent frame/PTS/box/pixel witness differs")
+        anchor_id = row["ground_anchor_frame"]
+        if row["same_frame_grounding"]:
+            if anchor_id != frame or anchor_id not in anchor_map:
+                raise ValueError("Missing same-frame semantic control anchor")
+            polygons = _control_anchor(anchor_map[anchor_id], row, width, height)
+            pixel_polygons = _rectangle_polygons(row["subjects_xyxy"])
+            active_anchor = anchor_id
+            used_anchors.add(anchor_id)
+        else:
+            if (previous is None or frame != previous["frame"] + 1 or anchor_id != active_anchor
+                    or row.get("previous_observed_frame") != previous["frame"]
+                    or row.get("previous_pixel_sha256") != previous["pixel_sha256"]
+                    or row["ground_anchor_raw_sha256"] != anchor_map[anchor_id]["raw_sha256"]):
+                raise ValueError("Broken semantic control native tracking chain")
+            tracking = row["tracking"]
+            if not polygons:
+                if tracking["tracking_status"] != "WHOLE_SCENE_CONTINUATION" or row["subjects_xyxy"]:
+                    raise ValueError("Whole-scene control has unexpected subject transport")
+            else:
+                transforms = tracking.get("subjects", [])
+                if tracking["tracking_status"] != "MEASURED_FORWARD_BACKWARD_FLOW" or len(transforms) != len(polygons):
+                    raise ValueError("Semantic control lacks actual parent measured affines")
+                for index, transform in enumerate(transforms):
+                    if transform.get("geometry") != "PERSISTENT_GROUNDED_QUADRILATERAL":
+                        raise ValueError("Old re-bounded tracker geometry cannot enter this control")
+                    args = (transform["affine_thumbnail"], [width, height], transform["thumbnail_wh"])
+                    pixel_polygons[index] = transport_polygon(pixel_polygons[index], *args)
+                    if pixel_polygons[index] != transform["subject_polygon_xy"]:
+                        raise ValueError("Parent affine does not reproduce its measured subject polygon")
+                    polygons[index] = transport_polygon(polygons[index], *args)
+        subjects = _visible_polygon_boxes(polygons, width, height)
+        box, composition = crop_from_subjects(subjects, width, height, ratio, baseline_boxes[frame], config)
+        predictions.append({"frame": frame, "bboxes": box})
+        evidence.append({"frame": frame, "native_pts": row["native_pts"], "bboxes": box,
+            "pixel_sha256": row["pixel_sha256"], "ground_anchor_frame": anchor_id,
+            "ground_anchor_raw_sha256": row["ground_anchor_raw_sha256"],
+            "semantic_polygon_xy": polygons, "visible_semantic_extents": subjects,
+            "composition": composition, "parent_bbox": parent_prediction["bboxes"],
+            "tracking_origin": "EXACT_PARENT_GRABCUT_SUBJECT_MEASURED_AFFINES",
+            "new_neural_calls": 0, "new_independent_tracking": False})
+        # Snapshot the nested polygon lists: later transport updates must not
+        # mutate an already emitted frame's witness.
+        polygons = [[list(point) for point in polygon] for polygon in polygons]
+        previous = row
+    if used_anchors != set(anchor_map):
+        raise ValueError("Unused or foreign parent anchor in semantic control")
+    return {"predictions": predictions, "spatial_evidence": evidence,
+            "diagnostics": {"control": "RAW_SEMANTIC_EXTENT_WITH_PARENT_MEASURED_MOTION",
+                "selected_frames": len(predictions), "changed_parent_boxes": sum(
+                    a["bboxes"] != b["bboxes"] for a, b in zip(predictions, parent_predictions)),
+                "new_neural_calls": 0, "new_independent_tracking": False,
+                "config": asdict(config), "offline_quality_validation": "NOT_RUN", "official_quality": "UNKNOWN"}}

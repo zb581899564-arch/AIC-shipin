@@ -34,11 +34,19 @@ def _event(rows, clip_id, ordinal):
                 cells=[row["cell"] for row in rows], phases=[row["phase"] for row in rows],
                 apex_cells=[row["cell"] for row in peaks],
                 evidence_mean_margin=weighted / float(duration),
+                duration_exact=str(duration), evidence_integral_nat_seconds=weighted,
                 first=rows[0]["cell"]["first"], stop=rows[-1]["cell"]["stop"],
                 start_exact=rows[0]["cell"]["start_exact"], end_exact=rows[-1]["cell"]["end_exact"],
                 has_setup=any(row["phase"] == "setup" for row in rows),
                 has_resolution=any(row["phase"] == "resolution" for row in rows),
                 completeness="OBSERVED_PHASE_ARC_NOT_A_GUARANTEE_OF_COMPLETE_REAL_WORLD_EVENT")
+
+
+def _rejected_arc(rows, clip_id):
+    return dict(clip_id=clip_id,
+                reason=("SETUP_WITHOUT_OBSERVED_APEX" if any(row["phase"] == "setup" for row in rows)
+                        else "RESOLUTION_WITHOUT_OBSERVED_APEX"),
+                first=rows[0]["cell"]["first"], stop=rows[-1]["cell"]["stop"])
 
 
 def assemble_events(source, clip_results, *, clip_seconds=8, samples_per_clip=32):
@@ -55,7 +63,10 @@ def assemble_events(source, clip_results, *, clip_seconds=8, samples_per_clip=32
                  "Actual local input belongs to another physical source")
         rows = result["phases"]
         _require(len(rows) == len(plan["cells"]), "One actual phase per native temporal group required")
-        previous, current, arc = "ordinary", [], 0
+        _require(result["status"] == ("LEGAL_EMPTY" if all(row["phase"] == "ordinary" for row in rows)
+                                      else "MODEL_OK"),
+                 "Local legal-empty status contradicts actual model phase decisions")
+        previous, current, arc = "start", [], 0
         for group, (row, cell) in enumerate(zip(rows, plan["cells"])):
             _require(row["group"] == group and row["cell"] == cell and row["phase"] in PHASES,
                      "Native action-phase output is not aligned to actual cells")
@@ -69,7 +80,8 @@ def assemble_events(source, clip_results, *, clip_seconds=8, samples_per_clip=32
                          for value in alternatives), "Incomplete semantic full-vocabulary likelihood evidence")
             for value in alternatives:
                 token_sum = sum(value["token_log_probabilities"])
-                _require(all(_finite(item) for item in value["token_log_probabilities"])
+                _require(all(_finite(item) and item <= 0 for item in value["token_log_probabilities"])
+                         and all(type(item) is int and item >= 0 for item in value["token_ids"])
                          and abs(token_sum - value["log_probability_sum"]) <= 1e-10
                          and abs(token_sum / len(value["token_ids"]) - value["mean_log_probability"]) <= 1e-10,
                          "Stored complete semantic likelihood is internally inconsistent")
@@ -82,9 +94,7 @@ def assemble_events(source, clip_results, *, clip_seconds=8, samples_per_clip=32
             if row["phase"] == "ordinary":
                 if current:
                     value = _event(current, plan["clip_id"], arc)
-                    (events if value else rejected).append(value if value else dict(
-                        clip_id=plan["clip_id"], reason="SETUP_WITHOUT_OBSERVED_APEX",
-                        first=current[0]["cell"]["first"], stop=current[-1]["cell"]["stop"]))
+                    (events if value else rejected).append(value if value else _rejected_arc(current, plan["clip_id"]))
                     arc += 1
                     current = []
             else:
@@ -92,18 +102,21 @@ def assemble_events(source, clip_results, *, clip_seconds=8, samples_per_clip=32
             previous = row["phase"]
         if current:
             value = _event(current, plan["clip_id"], arc)
-            (events if value else rejected).append(value if value else dict(
-                clip_id=plan["clip_id"], reason="SETUP_WITHOUT_OBSERVED_APEX",
-                first=current[0]["cell"]["first"], stop=current[-1]["cell"]["stop"]))
+            (events if value else rejected).append(value if value else _rejected_arc(current, plan["clip_id"]))
     return events, rejected
 
 
 def select_event_budget(events, source_duration, *, fraction=Fraction(1, 4), segment_penalty=0.15,
-                        cost_resolution_ms=1, max_frontier=50000):
+                        cost_resolution_ms=1, max_frontier=50000, event_utility="duration_integral"):
     """Exact0/1 DP on conservative millisecond costs, not a threshold scan.
 
     Rounding each event cost up and the budget down guarantees the actual
-    duration cap.  Pareto pruning is exact for these registered costs.  An
+    duration cap. The reward integrates the recorded semantic advantage over
+    native frame support in seconds; the event-start penalty has nat-second
+    units. Giving every event one mean-margin reward would systematically
+    favor short fragments despite identical evidence. This integral is an
+    uncalibrated decision utility, not expected F1 or event probability.
+    Pareto pruning is exact for these registered costs. An
     excessive frontier raises a computational failure; it never changes the
     cap, drops arbitrary states or silently uses an approximate selection.
     """
@@ -112,6 +125,8 @@ def select_event_budget(events, source_duration, *, fraction=Fraction(1, 4), seg
     _require(duration > 0 and 0 < fraction <= 1 and _finite(segment_penalty)
              and segment_penalty >= 0 and type(cost_resolution_ms) is int and cost_resolution_ms > 0,
              "Invalid registered source budget")
+    _require(event_utility == "duration_integral", "Only the registered duration-integral event utility is supported")
+    _require(type(max_frontier) is int and max_frontier > 0, "Positive fixed DP frontier bound required")
     quantum = Fraction(cost_resolution_ms, 1000)
     budget = math.floor(duration * fraction / quantum)
     frontier = [(0, 0.0, ())]
@@ -120,7 +135,7 @@ def select_event_budget(events, source_duration, *, fraction=Fraction(1, 4), seg
         event_duration = Fraction(event["end_exact"]) - Fraction(event["start_exact"])
         _require(event_duration > 0 and _finite(event["evidence_mean_margin"]), "Invalid event arc")
         cost = math.ceil(event_duration / quantum)
-        utility = event["evidence_mean_margin"] - segment_penalty
+        utility = float(event_duration) * event["evidence_mean_margin"] - segment_penalty
         costs.append(cost)
         utilities.append(utility)
         extended = frontier + [(spent + cost, score + utility, selected + (index,))
@@ -142,13 +157,15 @@ def select_event_budget(events, source_duration, *, fraction=Fraction(1, 4), seg
     return indices, dict(budget_fraction=str(fraction), duration_budget_exact=str(duration * fraction),
                          actual_event_duration_exact=str(actual), cost_resolution_ms=cost_resolution_ms,
                          segment_penalty=segment_penalty, objective=chosen[1],
+                         event_utility=event_utility, utility_units="nat_seconds",
                          selected_event_ids=[events[index]["event_id"] for index in indices],
                          event_costs=costs, event_utilities=utilities,
                          fixed_risk_prior_not_validated_optimum=True, minimum_selection_enforced=False)
 
 
 def select_source(source, clip_results, *, policy="event", clip_seconds=8, samples_per_clip=32,
-                  fraction=Fraction(1, 4), segment_penalty=0.15):
+                  fraction=Fraction(1, 4), segment_penalty=0.15, cost_resolution_ms=1,
+                  event_utility="duration_integral"):
     """Return exact native frame ordinals and policy provenance for rendering.
 
     Both policies select the same event identities using the full arc cost.
@@ -160,7 +177,9 @@ def select_source(source, clip_results, *, policy="event", clip_seconds=8, sampl
     events, rejected = assemble_events(source, clip_results, clip_seconds=clip_seconds,
                                        samples_per_clip=samples_per_clip)
     selected, budget = select_event_budget(events, end, fraction=fraction,
-                                           segment_penalty=segment_penalty)
+                                           segment_penalty=segment_penalty,
+                                           cost_resolution_ms=cost_resolution_ms,
+                                           event_utility=event_utility)
     cells = [cell for index in selected
              for cell in (events[index]["cells"] if policy == "event" else events[index]["apex_cells"])]
     frames = sorted({frame for cell in cells for frame in range(cell["first"], cell["stop"])})

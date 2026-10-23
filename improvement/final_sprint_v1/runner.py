@@ -17,11 +17,12 @@ import time
 from . import assets as asset_api
 from .contracts import (atomic_new, checked, ref, require, stable_key, strict_load,
                         total_parameters, utc_now, validate_sources)
+from .controls import maximum_width_at_fixed_center
 from .observation import decode_native_frames, iter_decoded_clips, plan_clips
 from .packaging import baseline_frames, build_package
 from .resources import Budget, gpu_lease, snapshot
 from .runtime_cache import CallJournal
-from .spatial import SpatialConfig, process_source
+from .spatial import SpatialConfig, process_source, semantic_extent_control
 from .temporal import select_source
 
 
@@ -47,7 +48,8 @@ def enriched_sources(assets):
             clock = clock[identity["source_key"]]
         result.append(dict(source, normalized_exact_pts=clock["normalized_exact_pts"],
                            physical_end_exact=clock["physical_end_exact"],
-                           first_original_pts_exact=clock.get("first_original_pts_exact")))
+                           first_original_pts_exact=clock.get("first_original_pts_exact"),
+                           physical_endpoint_evidence=clock.get("physical_endpoint_evidence")))
     return sorted(result, key=lambda row: stable_key("source-order20261023", row["media"]["sha256"]))
 
 
@@ -57,6 +59,32 @@ def route_family(candidate_id):
     if candidate_id.startswith("r_"):
         return "phase"
     return "specialist"
+
+
+DERIVED_CANDIDATES = {"r_phase_apex", "g_center_control", "g_semantic_extent_control"}
+
+
+def phase_options(candidate):
+    """Execute the registered recipe, rather than similar function defaults."""
+    config = candidate["configuration"]
+    return {"clip_seconds": config["clip_seconds"], "samples_per_clip": config["samples_per_clip"],
+            "fraction": Fraction(config["duration_fraction"]),
+            "segment_penalty": config["event_start_penalty"],
+            "cost_resolution_ms": config["cost_resolution_ms"],
+            "event_utility": config["event_utility"]}
+
+
+def specialist_options(candidate):
+    from .specialist import SpecialistConfig
+    config = candidate["configuration"]
+    result = SpecialistConfig(cell_seconds=str(config["cell_seconds"]),
+        maximum_window_cells=config["max_cells"], window_stride_cells=config["stride_cells"],
+        maximum_duration_fraction=config["duration_fraction"],
+        foreground_probability=config["foreground_probability"],
+        image_batch_size=config["image_batch_size"],
+        maximum_forward_windows=config["maximum_forward_windows"])
+    result.validate()
+    return result
 
 
 class Engine:
@@ -76,7 +104,8 @@ class Engine:
         self._qwen = None
         self._specialist = None
         self.ground_refs = []
-        self.spatial_config = SpatialConfig(max_ground_calls=512)
+        self.spatial_config = SpatialConfig(**asset_api.candidate_registry()["shared_spatial_configuration"])
+        self.spatial_config.validate()
         self.model_initialization_seconds = 0.0
         self.specialist_spec_sha256 = stable_key(self.assets.get("specialist"))
 
@@ -106,7 +135,8 @@ class Engine:
                                 "specialist_spec_sha256": self.specialist_spec_sha256}
                 return self.journal.call(call_id, call_binding, compute)
 
-            self._specialist = SpecialistRuntime(self.assets["specialist"], call_cache=cache).load()
+            self._specialist = SpecialistRuntime(self.assets["specialist"],
+                config=specialist_options(self.candidate), call_cache=cache).load()
             for receipt in self._specialist.parameter_receipts():
                 write_adopt(self.root / "model_parameters" / (receipt["component_id"] + ".json"), receipt)
             self.model_initialization_seconds += time.monotonic() - started
@@ -151,7 +181,9 @@ class Engine:
         return result
 
     def phases(self, source, *, smoke=False, cached_only=False):
-        plans = plan_clips(source)
+        options = phase_options(self.candidate)
+        plans = plan_clips(source, clip_seconds=options["clip_seconds"],
+                           samples_per_clip=options["samples_per_clip"])
         if smoke:
             plans = plans[:1]
         results, pending, bindings = {}, [], {}
@@ -159,7 +191,7 @@ class Engine:
             task_id = "phase_" + source["video_id"] + "_" + plan["clip_id"]
             call_binding = {"source": source["media"], "clock": source["clock"], "clip": plan,
                             "model": self.assets["qwen"]["asset_tree"],
-                            "algorithm": "NATIVE_ACTION_PHASE_SEMANTIC_WORDS_V1"}
+                            "algorithm": "NATIVE_ACTION_PHASE_SEMANTIC_WORDS_V2"}
             bindings[plan["clip_id"]] = (task_id, call_binding)
             cached = self.journal.get(task_id, call_binding)
             if cached is None:
@@ -201,7 +233,7 @@ class Engine:
 
     def specialist_selection(self, source):
         from .specialist import plan_cells
-        cells = plan_cells(source)
+        cells = plan_cells(source, specialist_options(self.candidate))
         binding = {"source": source["media"], "clock": source["clock"], "cells": cells,
                    "specialist_spec_sha256": self.specialist_spec_sha256}
         task_id = "clip_features_" + source["video_id"]
@@ -256,7 +288,7 @@ class Engine:
         if self.candidate_id == "r_phase_apex":
             parent, parent_ref = self.parent_source("r_phase_event", source)
             phases, refs = self.phases(source, cached_only=True)
-            selection = select_source(source, phases, policy="apex")
+            selection = select_source(source, phases, policy="apex", **phase_options(self.candidate))
             chosen = set(selection["frames"])
             predictions = [p for p in parent["predictions"] if p["frame"] in chosen]
             require({p["frame"] for p in predictions} == chosen,
@@ -264,23 +296,26 @@ class Engine:
             return self._finish_source(source, predictions, {"exact_parent_subset": True},
                                        [parent_ref, parent["evidence"], *refs], selection)
         parent, parent_ref = self.parent_source("g_subject", source)
-        predictions = []
-        rw, rh = source["targetRatioWH"]
-        width = min(source["width"], math.floor(Fraction(source["height"] * rw, rh)))
-        # With integer width, rational-fit y rounding downward prevents an
-        # epsilon from creating a bbox just outside a ratio-derived edge.
-        height = Fraction(width * rh, rw)
+        if self.candidate_id == "g_semantic_extent_control":
+            proof = strict_load(checked(parent["evidence"]))
+            control = semantic_extent_control(source, proof, self.base[source["video_id"]], self.spatial_config)
+            return self._finish_source(source, control["predictions"],
+                {"frame_evidence": control["spatial_evidence"], "diagnostics": control["diagnostics"]},
+                [parent_ref, parent["evidence"]], {"protected40.48_frames": True,
+                "actual_change": "RAW_SEMANTIC_EXTENT_WITH_SAME_MEASURED_PARENT_TRANSFORMS",
+                "no_new_model_calls": True, "independent_tracking_evidence": False})
+        require(self.candidate_id == "g_center_control", "Unimplemented derived candidate")
+        predictions, geometry = [], []
         for prediction in parent["predictions"]:
-            x, y, old_width = map(Fraction, map(str, prediction["bboxes"]))
-            cx, cy = x + old_width / 2, y + old_width * rh / rw / 2
-            nx = max(Fraction(0), min(cx - Fraction(width, 2), source["width"] - width))
-            ny = max(Fraction(0), min(cy - height / 2, source["height"] - height))
-            predictions.append({"frame": prediction["frame"], "bboxes": [math.floor(nx), math.floor(ny), width]})
-        return self._finish_source(source, predictions, {"maximum_width_subject_center_control": True},
+            box, witness = maximum_width_at_fixed_center(prediction["bboxes"], source)
+            predictions.append({"frame": prediction["frame"], "bboxes": box})
+            geometry.append(dict(frame=prediction["frame"], **witness))
+        return self._finish_source(source, predictions,
+                                   {"maximum_width_subject_center_control": True, "geometry": geometry},
                                    [parent_ref, parent["evidence"]], {"protected40.48_frames": True})
 
     def produce_source(self, source):
-        if self.candidate_id in {"r_phase_apex", "g_center_control"}:
+        if self.candidate_id in DERIVED_CANDIDATES:
             return self.derive_source(source)
         references, original_boxes = [], {}
         if self.candidate_id == "g_subject":
@@ -290,7 +325,7 @@ class Engine:
             references.append(self.assets["protected_baselines"]["40.48"])
         elif self.candidate_id == "r_phase_event":
             phases, references = self.phases(source)
-            selection = select_source(source, phases, policy="event")
+            selection = select_source(source, phases, policy="event", **phase_options(self.candidate))
             frames = selection["frames"]
         else:
             frames, selection, references = self.specialist_selection(source)
@@ -407,6 +442,7 @@ def smoke(assets, assets_path, candidate_id):
         first = 0
         if family == "grounding" and engine.base[source["video_id"]]:
             first = min(engine.base[source["video_id"]])
+        first = min(first, source["n_frames"] - 16)
         # Adjacent real frames exercise grounding, flow and legal native output.
         frames = list(range(first, min(first + 16, source["n_frames"])))
         start = time.monotonic()
@@ -427,6 +463,9 @@ def smoke(assets, assets_path, candidate_id):
                   "source_native_frames": source["n_frames"], "ground_model_seconds": ground_seconds,
                   "model_initialization_seconds": initialization_seconds,
                   "phase_model_seconds_including_reference_qa": sum(p.get("gpu_seconds", 0.0) for p in phases),
+                  "phase_actual_groups": sum(len(p["phases"]) for p in phases),
+                  "phase_primary_forwards": sum(1 + len(p["phases"]) for p in phases),
+                  "phase_reference_forwards": sum(p.get("independent_reference_forwards", 0) for p in phases),
                   "spatial_ground_calls": spatial["diagnostics"]["same_frame_groundings"],
                   "accounting": budget.receipt(), "quality_evaluated": False,
                   "no_f1_no_labels_no_quality_gate": True, "completed_at": utc_now()}
@@ -436,28 +475,49 @@ def smoke(assets, assets_path, candidate_id):
         return result
 
 
+def grounding_plan(sources, baseline, configuration):
+    """A metadata-only lower bound; tracking failures can only add calls."""
+    interval = Fraction(configuration["ground_interval_seconds"])
+    count, maximum, over_cap = 0, 0, []
+    for source in sources:
+        last, previous, local = None, None, 0
+        pts = list(map(Fraction, source["normalized_exact_pts"]))
+        for frame in sorted(baseline[source["video_id"]]):
+            if last is None or frame != previous + 1 or pts[frame] - last >= interval:
+                local += 1
+                last = pts[frame]
+            previous = frame
+        count += local
+        maximum = max(maximum, local)
+        if local > configuration["max_ground_calls"]:
+            over_cap.append({"video_id": source["video_id"], "mandatory_calls": local})
+    return {"minimum_ground_calls": count, "maximum_source_minimum_calls": maximum,
+            "per_source_call_cap": configuration["max_ground_calls"],
+            "sources_impossible_under_fixed_cap": over_cap,
+            "not_an_upper_bound_or_completion_guarantee": True}
+
+
 def forecast(assets):
     sources = enriched_sources(assets)
     duration = sum((Fraction(s["physical_end_exact"]) for s in sources), Fraction(0))
-    clips = sum(len(plan_clips(s)) for s in sources)
+    registry = asset_api.candidate_registry()
+    phase_config = phase_options(registry["candidates"]["r_phase_event"])
+    plans = [plan_clips(s, clip_seconds=phase_config["clip_seconds"],
+                       samples_per_clip=phase_config["samples_per_clip"]) for s in sources]
+    clips = sum(map(len, plans))
+    primary_forwards = sum(1 + len(clip["cells"]) for source_plans in plans for clip in source_plans)
     baseline = baseline_frames(assets["protected_baselines"])["40.48"]
     selected = sum(len(v) for v in baseline.values())
     root = Path(assets["run_root"])
     output = {"sources": 426, "total_native_frames": sum(s["n_frames"] for s in sources),
               "source_duration_seconds": float(duration), "phase_clips": clips,
+              "phase_primary_forwards_from_actual_groups": primary_forwards,
               "phase_primary_forward_upper_bound": clips * 17, "baseline_selected_frames": selected,
               "estimates": {}, "shared_gpu_wait_not_hidden": True}
     # Minimum periodic/gap grounding count under successful transport. Cuts or
     # tracking loss add calls. This is a planning estimate, not an admission gate.
-    base_anchors = 0
-    for source in sources:
-        last, previous = None, None
-        pts = list(map(Fraction, source["normalized_exact_pts"]))
-        for frame in sorted(baseline[source["video_id"]]):
-            if last is None or frame != previous + 1 or pts[frame] - last >= 2:
-                base_anchors += 1
-                last = pts[frame]
-            previous = frame
+    output["grounding_plan"] = grounding_plan(sources, baseline, registry["shared_spatial_configuration"])
+    base_anchors = output["grounding_plan"]["minimum_ground_calls"]
     for family in ("grounding", "phase", "specialist"):
         path = root / "smoke" / family / "completion.json"
         if not path.exists():
@@ -474,7 +534,7 @@ def forecast(assets):
         temporal_seconds = 0.0
         if family == "phase":
             model = proof["phase_model_seconds_including_reference_qa"]
-            temporal_seconds = model / max(1, proof["phase_clips"]) * clips + \
+            temporal_seconds = model / max(1, proof["phase_primary_forwards"]) * primary_forwards + \
                 max(0.0, proof["phase_seconds"] - model) / proof["source_native_frames"] * output["total_native_frames"]
         elif family == "specialist":
             temporal_seconds = proof["specialist_seconds"] / float(Fraction(proof["source_duration_exact"])) * float(duration)
@@ -484,7 +544,7 @@ def forecast(assets):
             "one_time_load_seconds": proof["model_initialization_seconds"],
             "temporal_component_seconds": temporal_seconds, "spatial_component_seconds": spatial_seconds,
             "assumed_periodic_and_gap_groundings": anchors,
-            "limits": "One engineering source;phase referenceQA retained as conservative cost;cuts,flow loss,event fragmentation,VFR and sharedGPU vary. All R/M spatial cost is INCLUDED. Not a completion guarantee."}
+            "limits": "One engineering source;phase referenceQA retained as conservative cost and weighted by real group count, not old122 timing;cuts,flow loss,event fragmentation,VFR and sharedGPU vary. All R/M spatial cost is INCLUDED. Not a completion guarantee."}
     return output
 
 
@@ -531,7 +591,7 @@ def delivery_manifest(receipt, assets):
 def run(assets, assets_path, candidate_id):
     candidate = asset_api.candidate_registry()["candidates"][candidate_id]
     family = route_family(candidate_id)
-    derived = candidate_id in {"r_phase_apex", "g_center_control"}
+    derived = candidate_id in DERIVED_CANDIDATES
     check_baseline_auxiliaries(assets, candidate_id)
     package_path = Path(assets["run_root"]) / "candidates" / candidate_id / "package" / "package_receipt.json"
     if package_path.exists():

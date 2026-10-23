@@ -61,6 +61,10 @@ def _cpu_factory_environment(roots, code_files):
     require(not torch.cuda.is_initialized(), "Inherited inventory must not share a running GPU process")
     torch.set_num_threads(2)
     before_path, before_modules = list(sys.path), set(sys.modules)
+    before_bytecode = sys.dont_write_bytecode
+    # Adopted constructors/dependencies are immutable. Importing them must not
+    # create __pycache__ files inside the protected historical asset trees.
+    sys.dont_write_bytecode = True
     old_offline = {name: os.environ.get(name) for name in ("HF_HUB_OFFLINE", "TRANSFORMERS_OFFLINE")}
     prior_init = torch.cuda._lazy_init
 
@@ -89,6 +93,7 @@ def _cpu_factory_environment(roots, code_files):
                 checked(code_files[path])
     finally:
         sys.path[:] = before_path
+        sys.dont_write_bytecode = before_bytecode
         torch.cuda._lazy_init = prior_init
         for name, value in old_offline.items():
             if value is None:

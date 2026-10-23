@@ -92,6 +92,24 @@ class ResourceTests(unittest.TestCase):
         self.assertEqual(after["confirmed_command_wall_seconds"], 7.5)
         self.assertEqual(after["unresolved_reserved_seconds"], 0)
 
+    def test_claim_before_index_crash_still_reserves_and_reconciles_exact_cost(self):
+        budget = resources.Budget(self.assets, "production", 20)
+        (budget.directory / "index.json").unlink()  # Durable claim preceded index publication.
+        before = resources.cumulative_execution(self.assets)
+        self.assertEqual(before["unresolved_reserved_seconds"], 20)
+        proof = save_new(self.root / "orphan_command_terminal.json", {"command_id": budget.command_id,
+            "work_terminated": True, "termination_basis": "owned_wrapper_terminal",
+            "no_external_task_signaled": True, "claim_sha256": ref(budget.folder / "claim.json")["sha256"],
+            "wall_seconds_including_load_decode_failures": 4.5})
+        resources.resolve_command_budget(self.assets, budget.command_id, proof)
+        after = resources.cumulative_execution(self.assets)
+        self.assertEqual(after["confirmed_command_wall_seconds"], 4.5)
+        self.assertEqual(after["unresolved_reserved_seconds"], 0)
+        another = resources.Budget(self.assets, "next", 5)
+        self.assertEqual(set(strict_load(another.directory / "index.json")["command_ids"]),
+                         {budget.command_id, another.command_id})
+        another.finish()
+
     def test_cumulative_cap_and_negative_next_estimate(self):
         self.assets["resources"]["total_execution_seconds"] = 2
         budget = resources.Budget(self.assets, "source", 5)
@@ -135,6 +153,31 @@ class AssetHelperTests(unittest.TestCase):
     def test_incomplete_color_policy_does_not_silently_disable_repair(self):
         with self.assertRaisesRegex(ValueError, "Incomplete original"):
             assets.normalize_color_policy({"sources": {"a" * 64: {}}})
+
+    def test_model_loader_visible_symlink_retarget_is_detected(self):
+        model = self.root / "model"
+        model.mkdir()
+        first = self.root / "first.json"
+        second = self.root / "second.json"
+        first.write_text('{"processor":"original"}')
+        second.write_text('{"processor":"changed"}')
+        link = model / "tokenizer_config.json"
+        link.symlink_to(first)
+        tree = assets._tree(model)
+        assets._validate_tree(tree)
+        link.unlink()
+        link.symlink_to(second)
+        with self.assertRaisesRegex(ValueError, "symlink target changed"):
+            assets._validate_tree(tree)
+
+    def test_new_preferred_weight_file_cannot_bypass_bound_shards(self):
+        model = self.root / "model"
+        model.mkdir()
+        (model / "model-00001.safetensors").write_bytes(b"bound shard")
+        tree = assets._tree(model)
+        (model / "model.safetensors").write_bytes(b"new preferred unbound model")
+        with self.assertRaisesRegex(ValueError, "members changed"):
+            assets._validate_tree(tree)
 
     def test_inventory_success_reused_without_torch_or_factory_reload(self):
         weights = self.root / "tiny.weights"

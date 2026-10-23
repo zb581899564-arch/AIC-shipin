@@ -17,6 +17,7 @@ import math
 import os
 from pathlib import Path
 import re
+import uuid
 import zipfile
 
 from .contracts import (atomic_new, canonical_bytes, checked, ensure_output_isolated,
@@ -134,9 +135,18 @@ def validate_results(sources, source_results, *, baselines, binding, allowed_com
                 "Successful-empty/nonempty terminal contradicts output")
         require(result.get("source_sha256") == source["media"]["sha256"],
                 "Prediction source media identity differs")
+        require(result.get("binding_sha256") == binding_sha,
+                "Source execution result belongs to a different exact candidate binding")
         frames = [p.get("frame") for p in predictions]
         require(all(type(frame) is int and 0 <= frame < source["n_frames"] for frame in frames) and
                 frames == sorted(set(frames)), "Predictions must use sorted unique native frame ordinals")
+        # Empty is an explicit model/selection outcome, never the absence of
+        # proof. Validate its source/config/input evidence before iterating
+        # frame-level provenance, whose loop is empty for a legal empty source.
+        require(isinstance(result.get("evidence"), dict),
+                "Every successful source, including empty, requires its exact execution evidence")
+        declared = _evidence_document(result["evidence"], source, binding_sha, allowed_components, proof_cache)
+        require(set(declared) == set(frames), "Source execution evidence frame set differs from predictions")
         provenance = result.get("spatial_provenance")
         require(isinstance(provenance, list) and len(provenance) == len(predictions),
                 "Every predicted frame requires real spatial provenance")
@@ -201,14 +211,25 @@ def _publish_bytes(path, data):
         return ref(path)
     temporary = path.with_name(path.name + ".PENDING")
     if temporary.exists():
-        require(temporary.read_bytes() == data, "Partial package bytes differ from deterministic reconstruction")
-    else:
+        if temporary.read_bytes() != data:
+            # The enclosing history lock excludes another package writer. A
+            # torn own-output write is preserved for inspection; the complete
+            # deterministic result has already been rebuilt from durable
+            # source successes, so recovery performs no new model inference.
+            interrupted = temporary.with_name(temporary.name + ".interrupted-" + uuid.uuid4().hex)
+            os.rename(temporary, interrupted)
+    if not temporary.exists():
         with temporary.open("xb") as stream:
             stream.write(data)
             stream.flush()
             os.fsync(stream.fileno())
     os.link(temporary, path)
     temporary.unlink()
+    descriptor = os.open(path.parent, os.O_RDONLY)
+    try:
+        os.fsync(descriptor)
+    finally:
+        os.close(descriptor)
     return ref(path)
 
 
@@ -219,6 +240,18 @@ def _differences(rows, baseline):
     changed_sources = {sid for sid, _ in added | removed | changed}
     return {"added_frames": len(added), "removed_frames": len(removed),
             "changed_boxes": len(changed), "changed_sources": len(changed_sources)}
+
+
+def _candidate_contract(candidate_id, binding, rows, baselines):
+    """A declared spatial-only comparison must actually hold temporal choices fixed."""
+    candidate = binding.get("candidate", {})
+    if candidate_id.startswith("g_") or candidate.get("selection") == "protected40.48":
+        require(candidate.get("selection") == "protected40.48",
+                "G candidates must explicitly bind protected40.48 temporal selection")
+        current = set(frame_boxes(rows))
+        original = set(frame_boxes(baselines["40.48"]))
+        require(current == original,
+                "G_TEMPORAL_DRIFT: spatial candidate added/deleted protected40.48 native frames")
 
 
 def build_package(*, candidate_id, sources, source_results, parameter_receipts,
@@ -234,6 +267,8 @@ def build_package(*, candidate_id, sources, source_results, parameter_receipts,
     require(binding.get("protected_baselines") == protected_baselines,
             "Package binding must include the exact two protected baselines")
     if expected_count == 426:
+        require(binding.get("candidate_id") == candidate_id and isinstance(binding.get("candidate"), dict),
+                "Production package must bind this exact registered candidate ID/configuration")
         protected_paths = check_protected(protected_baselines)
     else:
         require(binding.get("synthetic_test_only") is True, "Reduced denominator is synthetic-test-only")
@@ -254,6 +289,7 @@ def build_package(*, candidate_id, sources, source_results, parameter_receipts,
                 "Target ratios differ from protected original indices")
     rows, checks = validate_results(sources, source_results, baselines=baselines,
                                     binding=binding, allowed_components=set(budget["components"]))
+    _candidate_contract(candidate_id, binding, rows, baselines)
     for row in rows:
         row["model_params_b"] = budget["total_elements"] / 1e9
     digest = prediction_identity(rows)

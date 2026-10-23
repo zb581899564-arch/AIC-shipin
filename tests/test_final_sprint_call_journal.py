@@ -1,7 +1,9 @@
 """Durable-call recovery tests; no model execution or quality assertions."""
 from pathlib import Path
+import os
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from improvement.final_sprint_v1.contracts import atomic_new, checked, ref, stable_key, strict_load
 from improvement.final_sprint_v1.runtime_cache import CallJournal
@@ -119,6 +121,41 @@ class CallJournalContracts(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "current exact"):
             other.reconcile("phase_source_clip", evidence)
         self.assertFalse((claim.directory / "adopted_returned_success.json").exists())
+        self.assertFalse((claim.directory / "resolution.json").exists())
+
+    def test_orphan_initial_pointer_requires_exact_terminal_then_preserves_result(self):
+        claim, proof = self._interrupted(returned=True)
+        pointer = self.root / "tasks/phase_source_clip/state.json"
+        pointer.unlink()  # Inject claim-before-state crash window.
+        proof["claim_ref"] = ref(claim.directory / "claim.json")
+        evidence = atomic_new(self.root / "orphan_terminal.json", proof)
+        with self.assertRaisesRegex(UnresolvedClaim, "without its state pointer"):
+            self.journal.call("phase_source_clip", self.binding, lambda: self.fail("Orphan rerun"))
+        recovered = self.journal.reconcile("phase_source_clip", evidence)
+        self.assertEqual(recovered["model_calls"], 0)
+        self.assertEqual(recovered["recovery_action"], "ADOPTED_RETURNED_RESULT_AFTER_FAILURE")
+        actual = self.journal.call("phase_source_clip", self.binding, lambda: self.fail("Successful result repeated"))
+        self.assertEqual(actual["physical_model_forwards"], 17)
+        self.assertEqual(len(list((self.root / "tasks/phase_source_clip/attempts").iterdir())), 1)
+
+    def test_orphan_without_return_requires_terminated_claim_before_retry(self):
+        claim, proof = self._interrupted(returned=False)
+        (self.root / "tasks/phase_source_clip/state.json").unlink()
+        proof["claim_ref"] = ref(claim.directory / "claim.json")
+        evidence = atomic_new(self.root / "orphan_terminal.json", proof)
+        self.assertEqual(self.journal.reconcile("phase_source_clip", evidence)["status"], "RESOLVED_RETRY_ALLOWED")
+        calls = []
+        self.journal.call("phase_source_clip", self.binding, lambda: calls.append(True) or {"frames": []})
+        self.assertEqual(calls, [True])
+        self.assertTrue((self.root / "tasks/phase_source_clip/attempts/2/success.json").exists())
+
+    def test_correct_claim_hash_but_wrong_wrapper_does_not_authorize_retry(self):
+        with patch.dict(os.environ, {"AIC_FINAL_WRAPPER_ID": "a" * 32}):
+            claim, proof = self._interrupted(returned=False)
+        proof["owned_wrapper_id"] = "b" * 32
+        evidence = atomic_new(self.root / "wrong_wrapper.json", proof)
+        with self.assertRaisesRegex(ValueError, "different owned wrapper"):
+            self.journal.reconcile("phase_source_clip", evidence)
         self.assertFalse((claim.directory / "resolution.json").exists())
 
 

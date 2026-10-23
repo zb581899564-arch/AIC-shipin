@@ -59,8 +59,18 @@ def _code_root(path, *, package=None):
 
 
 def _original_runtime(engineering, umt_registration_ref):
-    """Use routing_production60's explicit source lock, not an import search."""
+    """Use the explicitly selected executed routing registration's source lock.
+
+    routing_production60 failed during input preparation, before its source
+    lock existed.  The completed production chain is routing_production62;
+    selecting60 must produce an actionable failure, never a latest-directory
+    search or an invented lock.
+    """
     lock_path = Path(umt_registration_ref["path"]).parent / "source_input_lock.json"
+    require(lock_path.is_file(),
+            "Executed UMT source_input_lock.json is missing beside the selected registration. "
+            "Historical routing_production60 stopped before that lock; explicitly bind the "
+            "completed routing_production62/registration.json and its original recovery evidence.")
     lock_ref = ref(lock_path)
     lock = strict_load(checked(lock_ref))
     registered = registered_ref(lock["registration"], "UMT source lock registration")
@@ -73,6 +83,27 @@ def _original_runtime(engineering, umt_registration_ref):
     require(len(matches) == 1, "Original source lock must bind exactly ENGINEERING/runtime.py")
     runtime_ref = registered_ref(matches[0], "Original I3D/UMT constructor")
     return runtime_ref, lock_ref
+
+
+def _routing_recovery(lock_ref, registration_ref):
+    """Bind the original60 -> executed62 recovery when the real source lock records it."""
+    lock = strict_load(checked(lock_ref))
+    if "recovery" not in lock:
+        require(Path(registration_ref["path"]).parent.name != "routing_production62",
+                "Executed routing_production62 must preserve its original60 recovery binding")
+        return {}
+    recovery_ref = registered_ref(lock["recovery"], "Executed routing recovery")
+    recovery = strict_load(checked(recovery_ref))
+    original_ref = registered_ref(recovery["original_registration"], "Original failed routing registration")
+    require(strict_load(checked(original_ref)) == strict_load(checked(registration_ref)),
+            "Executed routing registration differs from the original60 parameters/assets")
+    require(recovery.get("prior_model_calls") == 0,
+            "Routing recovery must retain the actual zero-model-call preparation failure")
+    references = {"routing_recovery": recovery_ref, "routing_original_registration": original_ref}
+    for name in ("prior_failure", "actual_failure_log", "frozen_source_color_policy",
+                 "frozen_existing_configuration"):
+        references["routing_" + name] = registered_ref(recovery[name], "Original routing recovery " + name)
+    return references
 
 
 def _original_semantic_roots(semantic):
@@ -136,6 +167,7 @@ def _registered_assets(config_path, package_inputs, semantic_registration, i3d_a
     semantic = Path(registrations["semantic_registration"]["path"]).parent
     runtime_ref, runtime_lock = _original_runtime(engineering, registrations["umt_registration"])
     registrations["umt_source_input_lock"] = runtime_lock
+    registrations.update(_routing_recovery(runtime_lock, registrations["umt_registration"]))
     weights = {"original_time": time_weight, "semantic_residual": semantic_weight,
                "i3d": i3d_weight, "sport_umt": umt_weight}
     provenance = {"schema": "AIC_FINAL_BASELINE_DEPENDENCIES_V1",

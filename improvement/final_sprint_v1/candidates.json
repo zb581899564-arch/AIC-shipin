@@ -42,7 +42,7 @@
         "expected_if_exact_baseline_reused": 8816809946,
         "actual_tensor_union_required": true
       },
-      "mechanism": "Predict semantic subject extents with raw BASE; refine with observed foreground pixels; compute legal containment crop; transport extents with checked optical flow and reground on uncertainty",
+      "mechanism": "Predict semantic subject extents with raw BASE; refine observed foreground; content-dependent legal containment crop; transport persistent quadrilaterals with checked optical flow to avoid iterative bounding-box inflation; reground on uncertainty",
       "changes": "All40.48 native selected frames held fixed; content-dependent centers and widths may change across426 sources",
       "risk": "HIGH_SPATIAL_UNVALIDATED",
       "stage_seconds_cap": 10800,
@@ -52,11 +52,13 @@
       },
       "entry": "python -m improvement.final_sprint_v1.supervise --action run --candidate g_subject",
       "output": "${run_root}/candidates/g_subject/package/candidate_FINAL_G_SUBJECT.zip",
-      "first_submission_slot": "DAY1_SLOT1_IF_READY"
+      "first_submission_slot": "DAY1_SLOT1_IF_READY",
+      "quality_status": "NOT_RUN_ON_LINUX_NO_QUALITY_CLAIM",
+      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults"
     },
     "r_phase_event": {
       "implementation_status": "IMPLEMENTED",
-      "priority": 2,
+      "priority": 3,
       "route": "native_action_phase",
       "selection": "phase_event",
       "spatial": "semantic_grabcut_transport",
@@ -72,7 +74,7 @@
         "expected_base_only": 8767123696,
         "actual_tensor_union_required": true
       },
-      "mechanism": "Physically re-encode independent<=8s clips with<=32 native observations; autoregressively decode ordinary/setup/apex/resolution semantic words; select observed-apex event arcs by duration-constrained DP",
+      "mechanism": "Physically re-encode independent<=8s clips with<=32 actual native observations; native RGB/PTS proofs; semantic ordinary/setup/apex/resolution sequence with start state; duration-integrated whole-event utility and registered source-duration-constrained Pareto DP",
       "changes": "Independent full426 temporal selection and observed-pixel spatial construction; no inherited TIME/Sport decision outputs",
       "risk": "VERY_HIGH_FULL_REPLACEMENT_UNVALIDATED",
       "stage_seconds_cap": 28800,
@@ -82,15 +84,19 @@
         "duration_fraction": "1/4",
         "event_start_penalty": 0.15,
         "cost_resolution_ms": 1,
-        "phase_policy": "event"
+        "phase_policy": "event",
+        "event_utility": "duration_integral",
+        "event_start_penalty_units": "nat_seconds"
       },
       "entry": "python -m improvement.final_sprint_v1.supervise --action run --candidate r_phase_event",
       "output": "${run_root}/candidates/r_phase_event/package/candidate_FINAL_R_PHASE_EVENT.zip",
-      "first_submission_slot": "DAY1_SLOT2_IF_READY"
+      "first_submission_slot": "DAY1_SLOT3_IF_M_UNAVAILABLE_OR_SLOT5_OR_DAY2_SLOT1_IF_READY",
+      "quality_status": "NOT_RUN_ON_LINUX_NO_QUALITY_CLAIM",
+      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults"
     },
     "m_specialist": {
       "implementation_status": "IMPLEMENTED",
-      "priority": 3,
+      "priority": 2,
       "route": "pretrained_crossmodal_decoder",
       "selection": "specialist_auto_query",
       "spatial": "semantic_grabcut_transport",
@@ -107,7 +113,11 @@
       "parameter_budget": {
         "limit": 9000000000,
         "estimate": "8.767B_BASE+0.151B_CLIP+actual_CG_DETR;no_inherited_TIME_or_Sport",
-        "actual_tensor_union_required": true
+        "actual_tensor_union_required": true,
+        "expected_base_parameters": 8767123696,
+        "expected_complete_clip_parameters": 151277313,
+        "expected_base_clip_subtotal": 8918401009,
+        "remaining_for_actual_cg_and_other_parameters": 81598991
       },
       "mechanism": "One automatic source-grounded event query; pretrained CG-DETR joint learned temporal foreground and saliency over native2s CLIP cells; <=75cell windows,stride60; learned proposals plus fixed25% duration cap",
       "changes": "Independent full426 temporal and semantic spatial output; new pretrained specialist, no test training",
@@ -118,11 +128,17 @@
         "max_cells": 75,
         "stride_cells": 60,
         "duration_fraction": "1/4",
-        "query_policy": "automatic_visual_event"
+        "query_policy": "automatic_visual_event",
+        "foreground_probability": 0.5,
+        "image_batch_size": 16,
+        "maximum_forward_windows": 6000,
+        "text_feature_profile": "FULL_CLIP_ENCODER_THEN_EOT_MASK_AND_CHECKPOINT_TRAINED_QUERY_PREFIX"
       },
       "entry": "python -m improvement.final_sprint_v1.supervise --action run --candidate m_specialist",
       "output": "${run_root}/candidates/m_specialist/package/candidate_FINAL_M_SPECIALIST.zip",
-      "first_submission_slot": "DAY1_SLOT3_OR_DAY2_SLOT1_IF_READY"
+      "first_submission_slot": "DAY1_SLOT3_OR_SLOT5_OR_DAY2_SLOT1_IF_READY",
+      "quality_status": "NOT_RUN_ON_LINUX_NO_QUALITY_CLAIM",
+      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults"
     },
     "r_phase_apex": {
       "implementation_status": "IMPLEMENTED",
@@ -151,18 +167,23 @@
         "samples_per_clip": 32,
         "duration_fraction": "1/4",
         "event_start_penalty": 0.15,
-        "phase_policy": "apex"
+        "phase_policy": "apex",
+        "cost_resolution_ms": 1,
+        "event_utility": "duration_integral",
+        "event_start_penalty_units": "nat_seconds"
       },
       "entry": "python -m improvement.final_sprint_v1.supervise --action run --candidate r_phase_apex",
       "output": "${run_root}/candidates/r_phase_apex/package/candidate_FINAL_R_PHASE_APEX.zip",
-      "first_submission_slot": "DAY1_SLOT4_OR_DAY2_SLOT2_IF_DISTINCT"
+      "first_submission_slot": "DAY1_SLOT4_OR_DAY2_SLOT2_IF_DISTINCT",
+      "quality_status": "NOT_RUN_ON_LINUX_NO_QUALITY_CLAIM",
+      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults"
     },
     "g_center_control": {
       "implementation_status": "IMPLEMENTED",
-      "priority": 5,
+      "priority": 6,
       "route": "subject_center_scale_control",
       "selection": "protected40.48",
-      "spatial": "subject_center_max_legal_width",
+      "spatial": "maximum_contained_width_at_exact_parent_center",
       "required_model_components": [
         "qwen_base",
         "original_time",
@@ -179,21 +200,24 @@
         "limit": 9000000000,
         "actual_tensor_union_required": true
       },
-      "mechanism": "Adopt actual subject/foreground evidence and selected frame set from g_subject, use its subject-derived crop center with maximum legal ratio width; tests whether extent-derived scale contributes",
-      "changes": "Subject-centered spatial control; no new neural calls or threshold scan",
+      "mechanism": "Expand crop width as much as it fits about the exact parent center, on integer2*target_ratio_w width steps that preserve both center coordinates. No clipped-center translation; same real subject observations and native temporal frame set.",
+      "changes": "Only scale changes on fixed40.48 temporal frames and exact parent centers. A control can be identical for edge-touching or already maximal crops; duplicate predictions are rejected.",
       "risk": "HIGH_PREDECLARED_GEOMETRY_ABLATION",
       "stage_seconds_cap": 1800,
       "configuration": {
-        "width": "maximum_legal",
-        "center": "g_subject_actual_center"
+        "width": "maximum_contained_about_exact_parent_center",
+        "center": "exact_g_subject_center",
+        "width_step": "2*target_ratio_w"
       },
       "entry": "python -m improvement.final_sprint_v1.supervise --action run --candidate g_center_control",
       "output": "${run_root}/candidates/g_center_control/package/candidate_FINAL_G_CENTER_CONTROL.zip",
-      "first_submission_slot": "DAY1_SLOT5_OR_DAY2_SLOT3_IF_DISTINCT"
+      "first_submission_slot": "DAY1_SLOT4_OR_DAY2_SLOT4_IF_DISTINCT",
+      "quality_status": "NOT_RUN_ON_LINUX_NO_QUALITY_CLAIM",
+      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults"
     },
     "m_generic_control": {
       "implementation_status": "IMPLEMENTED",
-      "priority": 6,
+      "priority": 7,
       "route": "specialist_query_control",
       "selection": "specialist_generic_query",
       "spatial": "semantic_grabcut_transport",
@@ -210,7 +234,11 @@
       "new_weights": false,
       "parameter_budget": {
         "limit": 9000000000,
-        "actual_tensor_union_required": true
+        "actual_tensor_union_required": true,
+        "expected_base_parameters": 8767123696,
+        "expected_complete_clip_parameters": 151277313,
+        "expected_base_clip_subtotal": 8918401009,
+        "remaining_for_actual_cg_and_other_parameters": 81598991
       },
       "mechanism": "Same pretrained specialist and cached source features with one fixed generic event query; distinguishes automatic query value from specialist's learned temporal prior",
       "changes": "Different learned foreground/temporal selection may require genuinely new spatial grounding; never claimed zero inference by reusing features",
@@ -221,11 +249,83 @@
         "max_cells": 75,
         "stride_cells": 60,
         "duration_fraction": "1/4",
-        "query_policy": "The most meaningful action, informative demonstration, surprising event or emotional payoff."
+        "query_policy": "The most meaningful action, informative demonstration, surprising event or emotional payoff.",
+        "foreground_probability": 0.5,
+        "image_batch_size": 16,
+        "maximum_forward_windows": 6000,
+        "text_feature_profile": "FULL_CLIP_ENCODER_THEN_EOT_MASK_AND_CHECKPOINT_TRAINED_QUERY_PREFIX"
       },
       "entry": "python -m improvement.final_sprint_v1.supervise --action run --candidate m_generic_control",
       "output": "${run_root}/candidates/m_generic_control/package/candidate_FINAL_M_GENERIC_CONTROL.zip",
-      "first_submission_slot": "DAY2_SLOT4_IF_TIME_AND_DIFFERENCE"
+      "first_submission_slot": "DAY2_SLOT3_IF_TIME_AND_DIFFERENCE",
+      "quality_status": "NOT_RUN_ON_LINUX_NO_QUALITY_CLAIM",
+      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults"
+    },
+    "g_semantic_extent_control": {
+      "implementation_status": "IMPLEMENTED",
+      "priority": 5,
+      "route": "semantic_extent_without_foreground_refinement",
+      "selection": "protected40.48",
+      "spatial": "raw_semantic_extent_with_exact_parent_affines",
+      "required_model_components": [
+        "qwen_base",
+        "original_time",
+        "semantic_residual",
+        "i3d",
+        "sport_umt"
+      ],
+      "model_assets": [
+        "g_subject_successes",
+        "baseline_parameter_receipts"
+      ],
+      "new_weights": false,
+      "parameter_budget": {
+        "limit": 9000000000,
+        "expected_if_exact_baseline_reused": 8816809946,
+        "actual_tensor_union_required": true
+      },
+      "mechanism": "Reconstruct full raw semantic subject extents at the existing G anchors; transport their persistent quadrilaterals with the exact parent measured affine transforms; apply the same fixed containment geometry. Isolates extent refinement conditionally on the parent tracking, not independent observations.",
+      "changes": "All40.48 selected native frames held fixed; only foreground-derived extent versus raw subject extent changes. Zero new model/image calls; legal scene continuation uses exact original boxes.",
+      "risk": "HIGH_PREDECLARED_CONDITIONAL_FOREGROUND_ABLATION",
+      "stage_seconds_cap": 1800,
+      "configuration": {
+        "extent": "raw_qwen_subject_boxes",
+        "tracking": "exact_g_subject_affines",
+        "geometry": "shared_spatial_configuration",
+        "minimum_selection_enforced": false
+      },
+      "entry": "python -m improvement.final_sprint_v1.supervise --action run --candidate g_semantic_extent_control",
+      "output": "${run_root}/candidates/g_semantic_extent_control/package/candidate_FINAL_G_SEMANTIC_EXTENT_CONTROL.zip",
+      "first_submission_slot": "DAY1_SLOT2_OR_DAY2_SLOT4_IF_DISTINCT",
+      "quality_status": "NOT_RUN_ON_LINUX_NO_QUALITY_CLAIM",
+      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; immutable parent proofs"
     }
-  }
+  },
+  "implementation_revision": "REVIEWED_PRODUCTION_V2_20261023",
+  "predecessor_commit_reviewed": "60bcec3c6f058acf31352dfa771a48b81b9e5bd9",
+  "shared_spatial_configuration": {
+    "context_fraction": 0.2,
+    "minimum_width_fraction": 0.55,
+    "ground_interval_seconds": "2",
+    "tracker_long_edge": 480,
+    "max_subjects": 3,
+    "foreground_iterations": 2,
+    "foreground_expansion": 0.15,
+    "minimum_foreground_support": 0.08,
+    "min_track_points": 8,
+    "forward_backward_error": 1.5,
+    "minimum_inlier_fraction": 0.65,
+    "maximum_step_scale": 1.2,
+    "cut_mean_absolute_difference": 0.22,
+    "max_ground_calls": 512
+  },
+  "primary_dispatch_order": [
+    "g_subject",
+    "m_specialist",
+    "r_phase_event"
+  ],
+  "dispatch_policy": "G first; M next only with already bound lawful/direct assets and fitting measured forecast; otherwise R. Compare remaining actual shared-GPU calendar and command budget before each full route. Controls adopt complete exact parents.",
+  "budget_anchor_utc": "2026-10-23T06:10:00+00:00",
+  "planning_deadline_utc": "2026-10-24T06:10:00+00:00",
+  "deadline_basis": "Latest user message provides24h; anchored once at this review start, not independently verified official extension. Preserve any earlier actual account deadline."
 }
