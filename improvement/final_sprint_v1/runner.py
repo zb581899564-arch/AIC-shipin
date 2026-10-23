@@ -108,6 +108,8 @@ class Engine:
             from .inherited_grounding import validate_manifest
             self.inherited_grounding = validate_manifest(assets, assets["inherited_grounding"])
         self.ground_refs = []
+        self.adopted_ground_calls = 0
+        self.adopted_ground_seconds = 0.0
         self.spatial_config = SpatialConfig(**asset_api.candidate_registry()["shared_spatial_configuration"])
         self.spatial_config.validate()
         self.model_initialization_seconds = 0.0
@@ -184,6 +186,8 @@ class Engine:
             adopted = adopt_result(self.inherited_grounding, task_id, call_binding)
             if adopted is not None:
                 result, identity = adopted
+                self.adopted_ground_calls += 1
+                self.adopted_ground_seconds += result["gpu_seconds"]
                 self.ground_refs.append(identity)
                 return result
         result = self.journal.call(task_id, call_binding,
@@ -471,6 +475,8 @@ def smoke(assets, assets_path, candidate_id):
                   "phase_seconds": phase_seconds, "phase_clips": len(phases),
                   "specialist_seconds": specialist_seconds, "source_duration_exact": source["physical_end_exact"],
                   "spatial_seconds": spatial_seconds, "spatial_frames": len(frames),
+                  "adopted_ground_calls": engine.adopted_ground_calls,
+                  "adopted_historical_gpu_seconds_not_new_charges": engine.adopted_ground_seconds,
                   "source_native_frames": source["n_frames"], "ground_model_seconds": ground_seconds,
                   "model_initialization_seconds": initialization_seconds,
                   "phase_model_seconds_including_reference_qa": sum(p.get("gpu_seconds", 0.0) for p in phases),
@@ -538,7 +544,10 @@ def forecast(assets):
         # The smoke fully scans one native source; CPU time also includes its
         # selected-frame foreground/flow work. Sparse selection extrapolation
         # is uncertain and is replaced by actual production accounting.
-        native_cpu = max(0.0, proof["spatial_seconds"] - proof["ground_model_seconds"])
+        # Adopted calls cost no new GPU time, but their original duration must
+        # be restored for a cold production forecast, not subtracted as CPU.
+        equivalent = proof["spatial_seconds"] + proof.get("adopted_historical_gpu_seconds_not_new_charges", 0.0)
+        native_cpu = max(0.0, equivalent - proof["ground_model_seconds"])
         decode_cpu = native_cpu / proof["source_native_frames"] * output["total_native_frames"]
         anchors = base_anchors if family == "grounding" else math.ceil(float(duration) / 8) + 426 * 2
         spatial_seconds = ground_per_call * anchors + decode_cpu
