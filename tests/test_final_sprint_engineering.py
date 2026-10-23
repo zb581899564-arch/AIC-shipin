@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 import zipfile
 from types import SimpleNamespace
 
@@ -100,6 +101,27 @@ class ContractTests(unittest.TestCase):
         path.write_bytes(b"abd")
         with self.assertRaisesRegex(ValueError, "SHA256"):
             checked(identity)
+
+    def test_recent_large_file_with_coarse_stat_is_rehashed(self):
+        path = self.root / "recent-large"
+        payload = b"a" * ((1 << 20) + 1)
+        path.write_bytes(payload)
+        identity = ref(path)
+        original_stat = Path.stat
+        frozen_stat = path.stat()
+
+        def coarse_stat(candidate, *args, **kwargs):
+            if candidate == path:
+                return frozen_stat
+            return original_stat(candidate, *args, **kwargs)
+
+        tick_now = max(frozen_stat.st_mtime_ns, frozen_stat.st_ctime_ns) + 1_000_000_000
+        with patch.object(Path, "stat", coarse_stat), patch(
+                "improvement.final_sprint_v1.contracts.time.time_ns", return_value=tick_now):
+            checked(identity)
+            path.write_bytes(b"b" * len(payload))
+            with self.assertRaisesRegex(ValueError, "SHA256"):
+                checked(identity)
 
     def test_complete_aggregate_native_clock_and_bad_source_key(self):
         fixture = Fixture(self.root)

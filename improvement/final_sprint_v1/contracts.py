@@ -13,6 +13,7 @@ import math
 import os
 from pathlib import Path
 import re
+import time
 
 BASE_COMMIT = "e8224c4339007790a1be383be19fdb200cc817bc"
 MAX_PARAMETERS = 9_000_000_000
@@ -80,7 +81,12 @@ def ref(path):
 
 
 def checked(identity, root=None):
-    """Hash each immutable file once per unchanged inode/stat identity in this process."""
+    """Reuse hashes only for large files outside the filesystem timestamp tick.
+
+    Some Linux filesystems give successive small writes the same mtime/ctime.
+    Rehash small metadata unconditionally, and do not cache recently written
+    large files. Older immutable model/media files still avoid repeated scans.
+    """
     require(isinstance(identity, dict) and {"path", "sha256", "bytes"} <= identity.keys(),
             "Explicit absolute path, byte count and SHA256 required")
     require(isinstance(identity["path"], str) and Path(identity["path"]).is_absolute(),
@@ -95,10 +101,17 @@ def checked(identity, root=None):
     stat = path.stat()
     require(stat.st_size == identity["bytes"], "Asset byte count changed: " + str(path))
     key = (str(path), stat.st_dev, stat.st_ino, stat.st_size, stat.st_mtime_ns, stat.st_ctime_ns)
-    actual = _VERIFIED.get(key)
+    old_enough = max(stat.st_mtime_ns, stat.st_ctime_ns) < time.time_ns() - 2_000_000_000
+    cacheable = stat.st_size > (1 << 20) and old_enough
+    actual = _VERIFIED.get(key) if cacheable else None
     if actual is None:
         actual = sha256(path)
-        _VERIFIED[key] = actual
+        after = path.stat()
+        require((after.st_dev, after.st_ino, after.st_size, after.st_mtime_ns, after.st_ctime_ns) ==
+                (stat.st_dev, stat.st_ino, stat.st_size, stat.st_mtime_ns, stat.st_ctime_ns),
+                "Asset changed while computing SHA256: " + str(path))
+        if cacheable:
+            _VERIFIED[key] = actual
     require(actual == identity["sha256"], "Asset SHA256 changed: " + str(path))
     return path
 
