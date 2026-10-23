@@ -1,0 +1,177 @@
+{
+  "summary": {
+    "source_count": 426,
+    "totals": {
+      "frames": {
+        "all_native": 234159,
+        "baseline": 123479,
+        "nonordinary": 48453,
+        "has_apex_events": 48250,
+        "event_after_budget": 29869,
+        "event_final": 29869,
+        "apex_final": 15341
+      },
+      "seconds": {
+        "all_native": 8472.41378536002,
+        "baseline": 4446.18803273392,
+        "nonordinary": 1838.714245214466,
+        "has_apex_events": 1830.6875785477994,
+        "event_after_budget": 1118.4776607936346,
+        "event_final": 1118.4776607936346,
+        "apex_final": 570.5830148155003
+      },
+      "baseline_kept": {
+        "all_native": 123479,
+        "baseline": 123479,
+        "nonordinary": 27117,
+        "has_apex_events": 27103,
+        "event_after_budget": 16799,
+        "event_final": 16799,
+        "apex_final": 8768
+      },
+      "empty": {
+        "all_native": 0,
+        "baseline": 0,
+        "nonordinary": 50,
+        "has_apex_events": 50,
+        "event_after_budget": 116,
+        "event_final": 116,
+        "apex_final": 116
+      },
+      "phase": {
+        "clips": 1911,
+        "role_base": 1911,
+        "all_ordinary_clips": 448,
+        "cells_ordinary": 24625,
+        "frames_ordinary": 185706,
+        "first_cells": 1911,
+        "ordinary_first": 1715,
+        "mean_sum_argmax_differ": 1503,
+        "unconstrained_winner_ordinary": 24453,
+        "transition_blocked_argmax": 262,
+        "transition_blocked_to_ordinary": 172,
+        "tokens_ordinary_2": 30528,
+        "tokens_setup_2": 30528,
+        "tokens_apex_3": 30528,
+        "tokens_resolution_2": 30528,
+        "later_cells": 28617,
+        "ordinary_later": 22910,
+        "transition_ordinary_ordinary": 21685,
+        "cells_apex": 3049,
+        "frames_apex": 23969,
+        "unconstrained_winner_apex": 3270,
+        "transition_ordinary_apex": 1741,
+        "cells_resolution": 1902,
+        "frames_resolution": 17221,
+        "unconstrained_winner_resolution": 1812,
+        "transition_apex_resolution": 1288,
+        "transition_resolution_ordinary": 1224,
+        "cells_setup": 952,
+        "frames_setup": 7263,
+        "unconstrained_winner_setup": 993,
+        "transition_ordinary_setup": 662,
+        "transition_setup_apex": 823,
+        "transition_resolution_resolution": 613,
+        "transition_setup_ordinary": 1,
+        "transition_apex_apex": 452,
+        "transition_setup_setup": 128
+      },
+      "events": {
+        "assembled": 2597,
+        "selected": 1595,
+        "rejected_partial_arcs": 2,
+        "cap_binding_sources": 106,
+        "positive_utility_exceeds_budget_sources": 100,
+        "underfilled_sources": 326
+      },
+      "event_rejection": {
+        "selected": 1595,
+        "nonpositive_net_utility": 450,
+        "positive_but_not_selected_under_cap": 541,
+        "too_long_for_source_cap": 11
+      },
+      "empty_causes": {
+        "no_event_selected_by_budget_utility": 66,
+        "all_groups_ordinary": 50
+      }
+    },
+    "distributions": {
+      "clip_seconds": {
+        "min": 0.825,
+        "median": 3.86,
+        "max": 7.966666666666667,
+        "p10": 1.85,
+        "p90": 7.6
+      },
+      "selected_margin": {
+        "min": 0.0,
+        "median": 0.0,
+        "max": 14.238439759239554,
+        "p10": 0.0,
+        "p90": 3.564661055803299
+      },
+      "event_seconds": {
+        "min": 0.03333333333333333,
+        "median": 0.4,
+        "max": 7.76,
+        "p10": 0.16,
+        "p90": 1.32
+      }
+    },
+    "package_vs_cached_source_mismatches": 0,
+    "common_baseline_box_mismatches": 0,
+    "all_phase_cells_partition_full_native_clock": true,
+    "apex_is_exact_parent_subset": true,
+    "evidence_limit": "Baseline overlap is not recall against hidden official GT; language scores are not calibrated highlight probabilities."
+  },
+  "macro_addendum": {
+    "baseline": {
+      "macro_frame_coverage": 0.5306146145301229,
+      "macro_baseline_frame_retention": 1.0,
+      "macro_duration_coverage": 0.5297690230457951,
+      "zero_baseline_overlap_sources": 0
+    },
+    "nonordinary": {
+      "macro_frame_coverage": 0.18304207187989693,
+      "macro_baseline_frame_retention": 0.21107326116585645,
+      "macro_duration_coverage": 0.18310064722623826,
+      "zero_baseline_overlap_sources": 62
+    },
+    "has_apex_events": {
+      "macro_frame_coverage": 0.18275685734400315,
+      "macro_baseline_frame_retention": 0.21104338493879712,
+      "macro_duration_coverage": 0.18281543269034448,
+      "zero_baseline_overlap_sources": 62
+    },
+    "event_final": {
+      "macro_frame_coverage": 0.1074382992613257,
+      "macro_baseline_frame_retention": 0.13719794135355498,
+      "macro_duration_coverage": 0.1074744580898102,
+      "zero_baseline_overlap_sources": 130
+    },
+    "apex_final": {
+      "macro_frame_coverage": 0.05624739626009523,
+      "macro_baseline_frame_retention": 0.0695117257839652,
+      "macro_duration_coverage": 0.05629039219740992,
+      "zero_baseline_overlap_sources": 131
+    },
+    "baseline_duration_above_registered_quarter_cap_sources": 388,
+    "event_sources_losing_at_least_90pct_baseline": 225,
+    "apex_sources_losing_at_least_90pct_baseline": 300,
+    "first_smoke_numerical_reference": {
+      "word_checks": 8,
+      "max_token_error": 5.7220458984375e-05,
+      "max_mean_score_error": 1.9073486328125e-05,
+      "scope": "Only first successful actual smoke endpoints, not every production cell"
+    }
+  },
+  "empty_selector_detail": {
+    "selector_empty_causes": {
+      "budget_empty_sources": 66,
+      "feasible_events_all_nonpositive_net_utility": 66
+    },
+    "registered_penalty": 0.15,
+    "registered_fraction": "1/4",
+    "no_new_scores_or_selection_computed": true
+  }
+}

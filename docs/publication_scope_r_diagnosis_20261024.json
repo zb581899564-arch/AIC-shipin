@@ -1,0 +1,18 @@
+{
+  "schema": "AIC_DIAGNOSIS_PUBLIC_INCREMENT_V1",
+  "parent_results_commit": "565348161912c281b12e9f655757d74f3a21dff9",
+  "purpose": "Read-only causal accounting of frozen failed outputs, historical evidence and next proposal; no new experiment or performance claim",
+  "files": [
+    "reports/github_status_20261024_v1/R_SELECTION_FAILURE_DIAGNOSIS.md",
+    "reports/github_status_20261024_v1/R_SELECTION_FAILURE_AGGREGATE.json",
+    "reports/github_status_20261023_v1/START_HERE.md",
+    "docs/publication_scope_r_diagnosis_20261024.json",
+    "reports/github_status_20261024_v1/analyze_cached_r.py"
+  ],
+  "excluded": [
+    "Per-source test prediction counts",
+    "Media, model/tensor/raw/phase probability packets",
+    "Screenshots and account details",
+    "Private baseline and submission ZIPs"
+  ]
+}

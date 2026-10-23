@@ -1,3 +1,7 @@
+## Follow-up diagnosis — no new candidate
+
+The R01/R02 scores10.74/6.96 have now been traced through the actual frozen caches and native clocks. The major measured effect is severe temporal reduction:234159 native frames→48453 nonordinary→48250 apex-containing pool→29869 event output→15341 apex output. Only13.6%/7.1% of40.48 frames remain. All116 empty sources are explicit decisions:50 allordinary and66 with feasible but nonpositive penalized events. No source-to-ZIP, common-box or native-partition mismatch was found. Retention is not hidden-GT recall. Read [full diagnosis and evidence-bounded next plan](../github_status_20261024_v1/R_SELECTION_FAILURE_DIAGNOSIS.md) and [aggregate receipts](../github_status_20261024_v1/R_SELECTION_FAILURE_AGGREGATE.json). The next spatial-only external diagnostic is a proposal, not a registered GPU/production run. No new model/ZIP/submission occurred in this diagnosis.
+
 ## Latest: seven official DONE results — 2026-10-24
 
 The requested5+2 sprint is complete: seven distinct426-source ZIPs passed engineering/independent11strict/Windows checks and were actually uploaded through the user-authorized Edge session. Official scores by frozen order:22.12/19.64/39.21/16.59/14.38 onOct23, then10.74/6.96 onOct24 at00:01:16/00:03:44. All are below the protected40.48; original40.47 and both dependency chains remain intact. This is completion of submissions, not improvement or the45-point goal.
