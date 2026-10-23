@@ -27,6 +27,8 @@ import math
 import re
 from typing import Any, Callable, Iterable, Mapping, Sequence
 
+from .visible_geometry import polygon_bounds, visible_polygon
+
 
 @dataclass(frozen=True)
 class SpatialConfig:
@@ -396,14 +398,18 @@ class SubjectTracker:
                 return None, {"tracking_status": "NEED_SAME_FRAME_GROUNDING", "reason": "UNTRUSTED_SUBJECT_TRANSFORM", "scale": scale, "inlier_fraction": inlier_fraction}
             transformed = transport_polygon(polygon, affine.tolist(), [width, height],
                                             [current.shape[1], current.shape[0]])
-            moved = [min(point[0] for point in transformed), min(point[1] for point in transformed),
-                     max(point[0] for point in transformed), max(point[1] for point in transformed)]
-            if not (0 <= moved[0] < moved[2] <= width and 0 <= moved[1] < moved[3] <= height):
-                return None, {"tracking_status": "NEED_SAME_FRAME_GROUNDING", "reason": "SUBJECT_REACHED_IMAGE_BOUNDARY"}
+            visible = visible_polygon(transformed, width, height)
+            if not visible:
+                return None, {"tracking_status": "NEED_SAME_FRAME_GROUNDING", "reason": "SUBJECT_HAS_NO_VISIBLE_AREA"}
+            moved = polygon_bounds(visible)
             results.append(moved)
+            # Preserve the full transported quad, including off-image vertices.
+            # Only composition and next-frame feature selection use visibility.
             polygons.append(transformed)
             witnesses.append({"affine_thumbnail": affine.tolist(), "thumbnail_wh": [current.shape[1], current.shape[0]],
                               "subject_polygon_xy": transformed, "geometry": "PERSISTENT_GROUNDED_QUADRILATERAL",
+                              "visible_polygon_xy": visible, "visible_subject_xyxy": moved,
+                              "visibility_geometry": "POSITIVE_AREA_POLYGON_IMAGE_INTERSECTION",
                               "accepted_points": len(before), "inlier_fraction": inlier_fraction,
                               "forward_backward_error_max": float(fb_error[valid].max()), "step_scale": scale})
         self.previous, self.boxes, self.polygons = current, results, polygons
@@ -570,11 +576,12 @@ def _rectangle_polygons(boxes: Sequence[Sequence[float]]) -> list[list[list[floa
 def _visible_polygon_boxes(polygons: Sequence[Sequence[Sequence[float]]], width: int,
                            height: int) -> list[list[float]]:
     """Intersect transported *visible* extents with the current image domain."""
-    boxes = [[max(0., min(p[0] for p in polygon)), max(0., min(p[1] for p in polygon)),
-              min(float(width), max(p[0] for p in polygon)), min(float(height), max(p[1] for p in polygon))]
-             for polygon in polygons]
-    if any(box[0] >= box[2] or box[1] >= box[3] for box in boxes):
-        raise ValueError("Transported semantic extent has no visible support; control cannot invent a box")
+    boxes = []
+    for polygon in polygons:
+        visible = visible_polygon(polygon, width, height)
+        if not visible:
+            raise ValueError("Transported semantic extent has no visible support; control cannot invent a box")
+        boxes.append(polygon_bounds(visible))
     return boxes
 
 

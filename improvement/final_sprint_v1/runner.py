@@ -101,6 +101,11 @@ class Engine:
         self.base_binding = {"asset_lock": ref(assets_path), "code": assets["source_commit"],
                              "no_training": True, "seed": 20261023}
         self.journal = CallJournal(self.root / "journal", self.base_binding, budget)
+        if assets.get("pure_call_adoption"):
+            require(route_family(candidate_id) != "phase", "FP32 phase cannot inherit BF16 calls")
+            from .pure_call_adoption import PureCallJournal, validate_manifest
+            entries = validate_manifest(assets, assets["pure_call_adoption"])
+            self.journal = PureCallJournal(self.journal, entries)
         self._qwen = None
         self._specialist = None
         self.inherited_grounding = {}
@@ -120,7 +125,12 @@ class Engine:
             from .qwen_runtime import QwenRuntime
             self.budget.check()
             started = time.monotonic()
-            self._qwen = QwenRuntime(self.assets["qwen"])
+            specification = dict(self.assets["qwen"])
+            profile = self.candidate["configuration"].get("arithmetic_profile")
+            if profile:
+                require(route_family(self.candidate_id) == "phase", "Only R uses registered FP32 arithmetic")
+                specification["arithmetic_profile"] = profile
+            self._qwen = QwenRuntime(specification)
             self._qwen.load()
             identity = self._qwen.parameter_receipt()
             write_adopt(self.root / "model_parameters" / "qwen_base.json", identity)
@@ -363,6 +373,8 @@ class Engine:
             reused = self.journal.has(task_id, bind)
             started = time.monotonic()
             load_before = self.model_initialization_seconds
+            historical_before = (self.adopted_ground_seconds +
+                                 getattr(self.journal, "historical_seconds_for_forecast", 0.0))
             result = self.journal.call(task_id, bind, lambda s=source: self.produce_source(s))
             write_adopt(self.directory / "sources" / sid / "result.json", result)
             results.append(result)
@@ -373,6 +385,11 @@ class Engine:
                 fresh_duration += Fraction(source["physical_end_exact"])
                 fresh_seconds += max(0.0, time.monotonic() - started -
                                      (self.model_initialization_seconds - load_before))
+                # Exact prior successes cost no new inference. Restore their
+                # historical durations only to the cold throughput forecast.
+                historical_after = (self.adopted_ground_seconds +
+                                    getattr(self.journal, "historical_seconds_for_forecast", 0.0))
+                fresh_seconds += historical_after - historical_before
             if fresh_sources >= 5:
                 remaining = sum((Fraction(s["physical_end_exact"]) for s in self.sources[len(results):]), Fraction(0))
                 estimate = fresh_seconds / float(fresh_duration) * float(remaining) * 1.2
@@ -449,9 +466,11 @@ def smoke(assets, assets_path, candidate_id):
             phase_seconds = time.monotonic() - start
         if family == "specialist":
             start = time.monotonic()
+            adopted_before = getattr(engine.journal, "historical_seconds_for_forecast", 0.0)
             _, selection, refs = engine.specialist_selection(source)
             references.extend(refs)
-            specialist_seconds = time.monotonic() - start
+            specialist_seconds = (time.monotonic() - start +
+                                  getattr(engine.journal, "historical_seconds_for_forecast", 0.0) - adopted_before)
         else:
             specialist_seconds = 0.0
         first = 0
@@ -475,8 +494,8 @@ def smoke(assets, assets_path, candidate_id):
                   "phase_seconds": phase_seconds, "phase_clips": len(phases),
                   "specialist_seconds": specialist_seconds, "source_duration_exact": source["physical_end_exact"],
                   "spatial_seconds": spatial_seconds, "spatial_frames": len(frames),
-                  "adopted_ground_calls": engine.adopted_ground_calls,
-                  "adopted_historical_gpu_seconds_not_new_charges": engine.adopted_ground_seconds,
+                  "adopted_ground_calls": engine.adopted_ground_calls + getattr(engine.journal, "adopted_ground_calls", 0),
+                  "adopted_historical_gpu_seconds_not_new_charges": engine.adopted_ground_seconds + getattr(engine.journal, "adopted_ground_seconds", 0.0),
                   "source_native_frames": source["n_frames"], "ground_model_seconds": ground_seconds,
                   "model_initialization_seconds": initialization_seconds,
                   "phase_model_seconds_including_reference_qa": sum(p.get("gpu_seconds", 0.0) for p in phases),

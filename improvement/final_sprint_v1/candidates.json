@@ -54,7 +54,8 @@
       "output": "${run_root}/candidates/g_subject/package/candidate_FINAL_G_SUBJECT.zip",
       "first_submission_slot": "DAY1_SLOT1_IF_READY",
       "quality_status": "NOT_RUN_ON_LINUX_NO_QUALITY_CLAIM",
-      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults"
+      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults",
+      "spatial_visibility_profile": "PERSISTENT_QUAD_POSITIVE_VISIBLE_INTERSECTION_V2"
     },
     "r_phase_event": {
       "implementation_status": "IMPLEMENTED",
@@ -86,13 +87,15 @@
         "cost_resolution_ms": 1,
         "phase_policy": "event",
         "event_utility": "duration_integral",
-        "event_start_penalty_units": "nat_seconds"
+        "event_start_penalty_units": "nat_seconds",
+        "arithmetic_profile": "LOSSLESS_BF16_WEIGHTS_FP32_ARITHMETIC_V1"
       },
       "entry": "python -m improvement.final_sprint_v1.supervise --action run --candidate r_phase_event",
       "output": "${run_root}/candidates/r_phase_event/package/candidate_FINAL_R_PHASE_EVENT.zip",
       "first_submission_slot": "DAY1_SLOT3_IF_M_UNAVAILABLE_OR_SLOT5_OR_DAY2_SLOT1_IF_READY",
       "quality_status": "NOT_RUN_ON_LINUX_NO_QUALITY_CLAIM",
-      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults"
+      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults",
+      "spatial_visibility_profile": "PERSISTENT_QUAD_POSITIVE_VISIBLE_INTERSECTION_V2"
     },
     "m_specialist": {
       "implementation_status": "IMPLEMENTED",
@@ -138,7 +141,8 @@
       "output": "${run_root}/candidates/m_specialist/package/candidate_FINAL_M_SPECIALIST.zip",
       "first_submission_slot": "DAY1_SLOT3_OR_SLOT5_OR_DAY2_SLOT1_IF_READY",
       "quality_status": "NOT_RUN_ON_LINUX_NO_QUALITY_CLAIM",
-      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults"
+      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults",
+      "spatial_visibility_profile": "PERSISTENT_QUAD_POSITIVE_VISIBLE_INTERSECTION_V2"
     },
     "r_phase_apex": {
       "implementation_status": "IMPLEMENTED",
@@ -170,13 +174,15 @@
         "phase_policy": "apex",
         "cost_resolution_ms": 1,
         "event_utility": "duration_integral",
-        "event_start_penalty_units": "nat_seconds"
+        "event_start_penalty_units": "nat_seconds",
+        "arithmetic_profile": "LOSSLESS_BF16_WEIGHTS_FP32_ARITHMETIC_V1"
       },
       "entry": "python -m improvement.final_sprint_v1.supervise --action run --candidate r_phase_apex",
       "output": "${run_root}/candidates/r_phase_apex/package/candidate_FINAL_R_PHASE_APEX.zip",
       "first_submission_slot": "DAY1_SLOT4_OR_DAY2_SLOT2_IF_DISTINCT",
       "quality_status": "NOT_RUN_ON_LINUX_NO_QUALITY_CLAIM",
-      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults"
+      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults",
+      "spatial_visibility_profile": "PERSISTENT_QUAD_POSITIVE_VISIBLE_INTERSECTION_V2"
     },
     "g_center_control": {
       "implementation_status": "IMPLEMENTED",
@@ -213,7 +219,8 @@
       "output": "${run_root}/candidates/g_center_control/package/candidate_FINAL_G_CENTER_CONTROL.zip",
       "first_submission_slot": "DAY1_SLOT4_OR_DAY2_SLOT4_IF_DISTINCT",
       "quality_status": "NOT_RUN_ON_LINUX_NO_QUALITY_CLAIM",
-      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults"
+      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults",
+      "spatial_visibility_profile": "PERSISTENT_QUAD_POSITIVE_VISIBLE_INTERSECTION_V2"
     },
     "m_generic_control": {
       "implementation_status": "IMPLEMENTED",
@@ -259,7 +266,8 @@
       "output": "${run_root}/candidates/m_generic_control/package/candidate_FINAL_M_GENERIC_CONTROL.zip",
       "first_submission_slot": "DAY2_SLOT3_IF_TIME_AND_DIFFERENCE",
       "quality_status": "NOT_RUN_ON_LINUX_NO_QUALITY_CLAIM",
-      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults"
+      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults",
+      "spatial_visibility_profile": "PERSISTENT_QUAD_POSITIVE_VISIBLE_INTERSECTION_V2"
     },
     "g_semantic_extent_control": {
       "implementation_status": "IMPLEMENTED",
@@ -298,10 +306,11 @@
       "output": "${run_root}/candidates/g_semantic_extent_control/package/candidate_FINAL_G_SEMANTIC_EXTENT_CONTROL.zip",
       "first_submission_slot": "DAY1_SLOT2_OR_DAY2_SLOT4_IF_DISTINCT",
       "quality_status": "NOT_RUN_ON_LINUX_NO_QUALITY_CLAIM",
-      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; immutable parent proofs"
+      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; immutable parent proofs",
+      "spatial_visibility_profile": "PERSISTENT_QUAD_POSITIVE_VISIBLE_INTERSECTION_V2"
     }
   },
-  "implementation_revision": "REVIEWED_PRODUCTION_V2_20261023",
+  "implementation_revision": "ENGINEERING_VISIBLE_QUAD_AND_LOSSLESS_FP32_V3_20261023",
   "predecessor_commit_reviewed": "60bcec3c6f058acf31352dfa771a48b81b9e5bd9",
   "shared_spatial_configuration": {
     "context_fraction": 0.2,

@@ -237,6 +237,10 @@ def bind(mapping_path, output_path, *, expected_commit=None):
             "other_routes_proofs_and_journal_allowance_bytes": 1 << 30,
             "basis": "8192*sum(ceil(native_duration/2))+300000*427;lossless_f32_base64;not_weight_downloads",
             "first_production_sources_must_check_actual_growth": True}
+    if mapping.get("pure_call_adoption"):
+        value["pure_call_adoption"] = _identity(mapping["pure_call_adoption"])
+        from .pure_call_adoption import validate_manifest
+        validate_manifest(value, value["pure_call_adoption"])
     if dependencies:
         validate_baseline_auxiliaries(value)
     # Dedicated sprint output ownership, without changing any adopted model tree.

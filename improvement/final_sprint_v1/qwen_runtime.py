@@ -220,7 +220,10 @@ def phase_prompt(observation):
 
 class QwenRuntime:
     def __init__(self, model_spec, *, device="cuda:0"):
+        from .numeric_precision import requested_profile
         self.spec = dict(model_spec)
+        self.arithmetic_profile = requested_profile(self.spec)
+        self.arithmetic_conversion = None
         self.device = device
         self.model = self.processor = self.torch = None
         self._grounding_grammar = None
@@ -262,6 +265,10 @@ class QwenRuntime:
                  == ORIGINAL_BASE_PARAMETERS,
                  "Actual BASE logical parameter count differs")
         original_base_identity = _original_base_identity(base, torch)
+        arithmetic_conversion = None
+        if self.arithmetic_profile:
+            from .numeric_precision import lossless_fp32_conversion
+            arithmetic_conversion = lossless_fp32_conversion(base, torch, original_base_identity)
         model = base
         if self.spec.get("adapter_dir"):
             from peft import PeftModel
@@ -293,15 +300,28 @@ class QwenRuntime:
         self.model, self.processor = model, processor
         self.inventory, self.versions = inventory, versions
         self.original_base_identity = original_base_identity
+        self.arithmetic_conversion = arithmetic_conversion
         return self.identity()
 
     def identity(self):
         _require(self.model is not None, "Model has not been loaded")
-        return dict(model_id=self.spec.get("model_id", "original_qwen3vl_8b"),
+        result = dict(model_id=self.spec.get("model_id", "original_qwen3vl_8b"),
                     revision=self.spec["revision"], files=self.spec["files"], versions=self.versions,
                     parameter_inventory=self.inventory, role="shared_BASE_and_optional_TIME",
                     original_base_identity=self.original_base_identity,
                     parameter_count=self.inventory["parameter_count"], counts=dict(self.counts))
+        if self.arithmetic_conversion is not None:
+            result["arithmetic_conversion"] = self.arithmetic_conversion
+        return result
+
+    def _arithmetic_context(self):
+        if not self.arithmetic_profile:
+            return nullcontext()
+        torch = self.torch
+        _require(not torch.backends.cuda.matmul.allow_tf32 and not torch.backends.cudnn.allow_tf32
+                 and torch.get_float32_matmul_precision() == "highest",
+                 "Lossless FP32 profile backend was changed after loading")
+        return torch.autocast(device_type="cuda", enabled=False)
 
     def _role(self, role):
         _require(role in ("base", "time"), "Only explicit BASE or original TIME roles supported")
@@ -349,10 +369,13 @@ class QwenRuntime:
         fields = ("sha256", "parameters", "method", "expected_sha256", "verified_before_adapter",
                   "hash_calls_this_load", "hash_function", "hash_function_file")
         proof = {key: self.original_base_identity[key] for key in fields}
-        return dict(local_only=True, strict_BASE_loading_info_checked=True,
+        result = dict(local_only=True, strict_BASE_loading_info_checked=True,
                     revision=self.spec["revision"], all_runtime_parameter_keys_bound=True,
                     original_base_identity=proof,
                     optional_TIME_loaded=bool(self.spec.get("adapter_dir")))
+        if self.arithmetic_conversion is not None:
+            result["arithmetic_conversion"] = self.arithmetic_conversion
+        return result
 
     def close(self):
         """Release this process's owned model/cache before another GPU stage."""
@@ -362,6 +385,7 @@ class QwenRuntime:
             self.processor = None
             self.inventory = None
             self.original_base_identity = None
+            self.arithmetic_conversion = None
             import gc
             gc.collect()
             self.torch.cuda.empty_cache()
@@ -522,7 +546,7 @@ class QwenRuntime:
         gpu = encoded.to(self.device)
         started = time.monotonic()
         forwards_before = self.counts["physical_model_forwards"]
-        with self._role(role), torch.inference_mode():
+        with self._role(role), torch.inference_mode(), self._arithmetic_context():
             result = self.model(**gpu, use_cache=True, logits_to_keep=1, return_dict=True)
             cache = result.past_key_values
             _require(cache is not None and result.rope_deltas is not None
