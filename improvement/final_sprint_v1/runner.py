@@ -61,7 +61,26 @@ def route_family(candidate_id):
     return "specialist"
 
 
-DERIVED_CANDIDATES = {"r_phase_apex", "g_center_control", "g_semantic_extent_control"}
+DERIVED_CANDIDATES = {"r_phase_apex", "g_center_control", "g_semantic_extent_control",
+                      "m_time_prune", "m_time_add", "m_time_generic_prune", "r_time_apex"}
+
+
+def make_engine(assets, assets_path, candidate_id, budget):
+    from .temporal_isolation import enabled, TemporalFieldEngine
+    candidate = asset_api.candidate_registry()["candidates"][candidate_id]
+    cls = TemporalFieldEngine if enabled(candidate) else Engine
+    return cls(assets, assets_path, candidate_id, budget)
+
+
+def package_and_accept(engine, results, params):
+    from .temporal_isolation import enabled, package_history, strict_accept
+    receipt = build_package(candidate_id=engine.candidate_id, sources=engine.assets["sources"],
+        source_results=results, parameter_receipts=params,
+        protected_baselines=engine.assets["protected_baselines"], binding=engine.binding,
+        output_dir=engine.directory / "package", history_path=package_history(engine))
+    if enabled(engine.candidate):
+        strict_accept(engine, receipt)
+    return receipt
 
 
 def phase_options(candidate):
@@ -426,7 +445,8 @@ class Engine:
 
 
 def check_baseline_auxiliaries(assets, candidate_id):
-    if not candidate_id.startswith("g_"):
+    candidate = asset_api.candidate_registry()["candidates"][candidate_id]
+    if not candidate_id.startswith("g_") and not candidate.get("spatial_policy"):
         return
     receipts = assets.get("baseline_parameter_receipts", [])
     require(receipts, "Bind actual original TIME/semantic/I3D/UMT inventories before G smoke")
@@ -461,6 +481,9 @@ def _smoke_source(engine):
 
 def smoke(assets, assets_path, candidate_id):
     require(candidate_id in asset_api.candidate_registry()["candidates"], "Unknown candidate")
+    if asset_api.candidate_registry()["candidates"][candidate_id].get("spatial_policy"):
+        from .temporal_smoke_adoption import smoke as adopt_smoke
+        return adopt_smoke(assets, assets_path, candidate_id)
     check_baseline_auxiliaries(assets, candidate_id)
     family = route_family(candidate_id)
     output = Path(assets["run_root"]) / "smoke" / family / "completion.json"
@@ -618,7 +641,7 @@ def package_only(assets, assets_path, candidate_id):
     class NoModelBudget:
         def check(self, *unused):
             raise ValueError("Packaging may adopt completed calls only; inference is forbidden")
-    engine = Engine(assets, assets_path, candidate_id, NoModelBudget())
+    engine = make_engine(assets, assets_path, candidate_id, NoModelBudget())
     results = []
     for source in engine.sources:
         task_id = "source_" + candidate_id + "_" + source["video_id"]
@@ -629,9 +652,7 @@ def package_only(assets, assets_path, candidate_id):
         write_adopt(path, result)
         results.append(result)
     params = engine.parameters(require_complete=True)
-    receipt = build_package(candidate_id=candidate_id, sources=assets["sources"], source_results=results,
-        parameter_receipts=params, protected_baselines=assets["protected_baselines"], binding=engine.binding,
-        output_dir=engine.directory / "package", history_path=engine.root / "package_history.jsonl")
+    receipt = package_and_accept(engine, results, params)
     delivery = delivery_manifest(receipt, assets)
     return {"status": receipt["status"], "candidate_id": candidate_id, "zip_ref": receipt["zip_ref"],
             "package_receipt": ref(engine.directory / "package" / "package_receipt.json"),
@@ -665,13 +686,11 @@ def run(assets, assets_path, candidate_id):
     from contextlib import nullcontext
     with (nullcontext() if derived else gpu_lease(assets)):
         with Budget(assets, "run_" + candidate_id, candidate["stage_seconds_cap"]) as budget:
-            engine = Engine(assets, assets_path, candidate_id, budget)
+            engine = make_engine(assets, assets_path, candidate_id, budget)
             results = engine.run_sources()
             params = engine.parameters(require_complete=True)
             engine.close()
-            receipt = build_package(candidate_id=candidate_id, sources=assets["sources"], source_results=results,
-                parameter_receipts=params, protected_baselines=assets["protected_baselines"], binding=engine.binding,
-                output_dir=engine.directory / "package", history_path=engine.root / "package_history.jsonl")
+            receipt = package_and_accept(engine, results, params)
             delivery = delivery_manifest(receipt, assets)
             return {"status": receipt["status"], "candidate_id": candidate_id, "zip_ref": receipt["zip_ref"],
                     "package_receipt": ref(engine.directory / "package" / "package_receipt.json"),

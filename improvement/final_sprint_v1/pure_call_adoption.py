@@ -12,7 +12,8 @@ from .contracts import checked, iter_refs, ref, require, stable_key, strict_load
 
 SCHEMA = "AIC_FINAL_PURE_CALL_ADOPTION_V1"
 OLD_COMMIT = "04731cab0d1d805608924e38aa64e7ab5083ab0b"
-ALLOWED_OLD_COMMITS = frozenset((OLD_COMMIT, "083d437e2ea3f0b12e83e0d11f982252b7bdc83d"))
+ALLOWED_OLD_COMMITS = frozenset((OLD_COMMIT, "083d437e2ea3f0b12e83e0d11f982252b7bdc83d",
+                               "2c799839c44bb1c2a7f2ebf3e6937b190c7d8f62"))
 PREFIXES = ("ground_", "query_", "clip_features_", "specialist_")
 COMMON = ("qwen", "sources", "protected_baselines", "baseline_parameter_receipts")
 

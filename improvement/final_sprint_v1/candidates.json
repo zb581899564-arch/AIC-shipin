@@ -7,7 +7,7 @@
   "engineering_gate": "MANDATORY_REAL_SMOKE_NATIVE426_PROVENANCE_PARAMETERS_DIFFERENCE_ZIP_TRANSFER",
   "total_gpu_wall_budget_seconds": 64800,
   "finalization_reserve_seconds": 14400,
-  "no_automatic_official_submission": true,
+  "no_automatic_official_submission": false,
   "protected_baselines": {
     "40.48": {
       "bytes": 384482,
@@ -308,6 +308,388 @@
       "quality_status": "NOT_RUN_ON_LINUX_NO_QUALITY_CLAIM",
       "runtime_configuration_source": "candidates.json + shared_spatial_configuration; immutable parent proofs",
       "spatial_visibility_profile": "PERSISTENT_QUAD_POSITIVE_VISIBLE_INTERSECTION_V2"
+    },
+    "m_time_select": {
+      "implementation_status": "IMPLEMENTED",
+      "priority": 2,
+      "route": "pretrained_crossmodal_decoder",
+      "selection": "specialist_auto_query",
+      "spatial": "accepted_continuous_native_field",
+      "required_model_components": [
+        "qwen_base",
+        "clip_vit_b32",
+        "cg_detr",
+        "original_time",
+        "semantic_residual",
+        "i3d",
+        "sport_umt"
+      ],
+      "model_assets": [
+        "qwen",
+        "specialist"
+      ],
+      "new_weights": "AUTHOR_CG_DETR_CLIP_ONLY143.4MB_AND_CLIP_IF_MISSING",
+      "parameter_budget": {
+        "limit": 9000000000,
+        "estimate": "8.767B_BASE+0.151B_CLIP+actual_CG_DETR;no_inherited_TIME_or_Sport",
+        "actual_tensor_union_required": true,
+        "expected_base_parameters": 8767123696,
+        "expected_complete_clip_parameters": 151277313,
+        "expected_base_clip_subtotal": 8918401009,
+        "remaining_for_actual_cg_and_other_parameters": 81598991,
+        "expected_total": 8980108294
+      },
+      "mechanism": "One automatic source-grounded event query; pretrained CG-DETR joint learned temporal foreground and saliency over native2s CLIP cells; <=75cell windows,stride60; learned proposals plus fixed25% duration cap",
+      "changes": "Uniformly hold existing native spatial field fixed; replace temporal mechanism or apply the preregistered set operator. No per-source fallback.",
+      "risk": "HIGH_MODEL_DOMAIN_AND_ASSET_UNVALIDATED",
+      "stage_seconds_cap": 14400,
+      "configuration": {
+        "cell_seconds": 2,
+        "max_cells": 75,
+        "stride_cells": 60,
+        "duration_fraction": "1/4",
+        "query_policy": "automatic_visual_event",
+        "foreground_probability": 0.5,
+        "image_batch_size": 16,
+        "maximum_forward_windows": 6000,
+        "text_feature_profile": "FULL_CLIP_ENCODER_THEN_EOT_MASK_AND_CHECKPOINT_TRAINED_QUERY_PREFIX"
+      },
+      "entry": "python -m improvement.final_sprint_v1.supervise --action run --candidate m_time_select",
+      "output": "${run_root}/candidates/m_time_select/package/candidate_FINAL_M_TIME_SELECT.zip",
+      "first_submission_slot": "DAY1_SLOT3_OR_SLOT5_OR_DAY2_SLOT1_IF_READY",
+      "quality_status": "NOT_RUN_ON_LINUX_NO_QUALITY_CLAIM",
+      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults",
+      "spatial_visibility_profile": "PERSISTENT_QUAD_POSITIVE_VISIBLE_INTERSECTION_V2",
+      "spatial_policy": "FROZEN_EXISTING_SOURCE_FIELD",
+      "selection_operator": "replacement",
+      "prior_registered_candidate": "m_specialist",
+      "domain_policy": "Only exact frozen field support; unsupported proposals are recorded UNKNOWN before output; no synthesized support."
+    },
+    "m_time_generic": {
+      "implementation_status": "IMPLEMENTED",
+      "priority": 7,
+      "route": "specialist_query_control",
+      "selection": "specialist_generic_query",
+      "spatial": "accepted_continuous_native_field",
+      "required_model_components": [
+        "qwen_base",
+        "clip_vit_b32",
+        "cg_detr",
+        "original_time",
+        "semantic_residual",
+        "i3d",
+        "sport_umt"
+      ],
+      "model_assets": [
+        "qwen",
+        "specialist",
+        "shared_native_clip_features"
+      ],
+      "new_weights": false,
+      "parameter_budget": {
+        "limit": 9000000000,
+        "actual_tensor_union_required": true,
+        "expected_base_parameters": 8767123696,
+        "expected_complete_clip_parameters": 151277313,
+        "expected_base_clip_subtotal": 8918401009,
+        "remaining_for_actual_cg_and_other_parameters": 81598991,
+        "expected_total": 8980108294
+      },
+      "mechanism": "Same pretrained specialist and cached source features with one fixed generic event query; distinguishes automatic query value from specialist's learned temporal prior",
+      "changes": "Uniformly hold existing native spatial field fixed; replace temporal mechanism or apply the preregistered set operator. No per-source fallback.",
+      "risk": "HIGH_PREDECLARED_QUERY_CONTROL",
+      "stage_seconds_cap": 7200,
+      "configuration": {
+        "cell_seconds": 2,
+        "max_cells": 75,
+        "stride_cells": 60,
+        "duration_fraction": "1/4",
+        "query_policy": "The most meaningful action, informative demonstration, surprising event or emotional payoff.",
+        "foreground_probability": 0.5,
+        "image_batch_size": 16,
+        "maximum_forward_windows": 6000,
+        "text_feature_profile": "FULL_CLIP_ENCODER_THEN_EOT_MASK_AND_CHECKPOINT_TRAINED_QUERY_PREFIX"
+      },
+      "entry": "python -m improvement.final_sprint_v1.supervise --action run --candidate m_time_generic",
+      "output": "${run_root}/candidates/m_time_generic/package/candidate_FINAL_M_TIME_GENERIC.zip",
+      "first_submission_slot": "DAY2_SLOT3_IF_TIME_AND_DIFFERENCE",
+      "quality_status": "NOT_RUN_ON_LINUX_NO_QUALITY_CLAIM",
+      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults",
+      "spatial_visibility_profile": "PERSISTENT_QUAD_POSITIVE_VISIBLE_INTERSECTION_V2",
+      "spatial_policy": "FROZEN_EXISTING_SOURCE_FIELD",
+      "selection_operator": "replacement",
+      "prior_registered_candidate": "m_generic_control",
+      "domain_policy": "Only exact frozen field support; unsupported proposals are recorded UNKNOWN before output; no synthesized support."
+    },
+    "m_time_prune": {
+      "implementation_status": "IMPLEMENTED",
+      "priority": 2,
+      "route": "pretrained_crossmodal_decoder",
+      "selection": "specialist_auto_query",
+      "spatial": "accepted_continuous_native_field",
+      "required_model_components": [
+        "qwen_base",
+        "clip_vit_b32",
+        "cg_detr",
+        "original_time",
+        "semantic_residual",
+        "i3d",
+        "sport_umt"
+      ],
+      "model_assets": [
+        "qwen",
+        "specialist"
+      ],
+      "new_weights": "AUTHOR_CG_DETR_CLIP_ONLY143.4MB_AND_CLIP_IF_MISSING",
+      "parameter_budget": {
+        "limit": 9000000000,
+        "estimate": "8.767B_BASE+0.151B_CLIP+actual_CG_DETR;no_inherited_TIME_or_Sport",
+        "actual_tensor_union_required": true,
+        "expected_base_parameters": 8767123696,
+        "expected_complete_clip_parameters": 151277313,
+        "expected_base_clip_subtotal": 8918401009,
+        "remaining_for_actual_cg_and_other_parameters": 81598991,
+        "expected_total": 8980108294
+      },
+      "mechanism": "One automatic source-grounded event query; pretrained CG-DETR joint learned temporal foreground and saliency over native2s CLIP cells; <=75cell windows,stride60; learned proposals plus fixed25% duration cap",
+      "changes": "Uniformly hold existing native spatial field fixed; replace temporal mechanism or apply the preregistered set operator. No per-source fallback.",
+      "risk": "HIGH_MODEL_DOMAIN_AND_ASSET_UNVALIDATED",
+      "stage_seconds_cap": 1800,
+      "configuration": {
+        "cell_seconds": 2,
+        "max_cells": 75,
+        "stride_cells": 60,
+        "duration_fraction": "1/4",
+        "query_policy": "automatic_visual_event",
+        "foreground_probability": 0.5,
+        "image_batch_size": 16,
+        "maximum_forward_windows": 6000,
+        "text_feature_profile": "FULL_CLIP_ENCODER_THEN_EOT_MASK_AND_CHECKPOINT_TRAINED_QUERY_PREFIX"
+      },
+      "entry": "python -m improvement.final_sprint_v1.supervise --action run --candidate m_time_prune",
+      "output": "${run_root}/candidates/m_time_prune/package/candidate_FINAL_M_TIME_PRUNE.zip",
+      "first_submission_slot": "DAY1_SLOT3_OR_SLOT5_OR_DAY2_SLOT1_IF_READY",
+      "quality_status": "NOT_RUN_ON_LINUX_NO_QUALITY_CLAIM",
+      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults",
+      "spatial_visibility_profile": "PERSISTENT_QUAD_POSITIVE_VISIBLE_INTERSECTION_V2",
+      "spatial_policy": "FROZEN_EXISTING_SOURCE_FIELD",
+      "selection_operator": "intersection",
+      "prior_registered_candidate": "m_specialist",
+      "domain_policy": "Only exact frozen field support; unsupported proposals are recorded UNKNOWN before output; no synthesized support.",
+      "parent_candidate": "m_time_select"
+    },
+    "m_time_add": {
+      "implementation_status": "IMPLEMENTED",
+      "priority": 2,
+      "route": "pretrained_crossmodal_decoder",
+      "selection": "specialist_auto_query",
+      "spatial": "accepted_continuous_native_field",
+      "required_model_components": [
+        "qwen_base",
+        "clip_vit_b32",
+        "cg_detr",
+        "original_time",
+        "semantic_residual",
+        "i3d",
+        "sport_umt"
+      ],
+      "model_assets": [
+        "qwen",
+        "specialist"
+      ],
+      "new_weights": "AUTHOR_CG_DETR_CLIP_ONLY143.4MB_AND_CLIP_IF_MISSING",
+      "parameter_budget": {
+        "limit": 9000000000,
+        "estimate": "8.767B_BASE+0.151B_CLIP+actual_CG_DETR;no_inherited_TIME_or_Sport",
+        "actual_tensor_union_required": true,
+        "expected_base_parameters": 8767123696,
+        "expected_complete_clip_parameters": 151277313,
+        "expected_base_clip_subtotal": 8918401009,
+        "remaining_for_actual_cg_and_other_parameters": 81598991,
+        "expected_total": 8980108294
+      },
+      "mechanism": "One automatic source-grounded event query; pretrained CG-DETR joint learned temporal foreground and saliency over native2s CLIP cells; <=75cell windows,stride60; learned proposals plus fixed25% duration cap",
+      "changes": "Uniformly hold existing native spatial field fixed; replace temporal mechanism or apply the preregistered set operator. No per-source fallback.",
+      "risk": "HIGH_MODEL_DOMAIN_AND_ASSET_UNVALIDATED",
+      "stage_seconds_cap": 1800,
+      "configuration": {
+        "cell_seconds": 2,
+        "max_cells": 75,
+        "stride_cells": 60,
+        "duration_fraction": "1/4",
+        "query_policy": "automatic_visual_event",
+        "foreground_probability": 0.5,
+        "image_batch_size": 16,
+        "maximum_forward_windows": 6000,
+        "text_feature_profile": "FULL_CLIP_ENCODER_THEN_EOT_MASK_AND_CHECKPOINT_TRAINED_QUERY_PREFIX"
+      },
+      "entry": "python -m improvement.final_sprint_v1.supervise --action run --candidate m_time_add",
+      "output": "${run_root}/candidates/m_time_add/package/candidate_FINAL_M_TIME_ADD.zip",
+      "first_submission_slot": "DAY1_SLOT3_OR_SLOT5_OR_DAY2_SLOT1_IF_READY",
+      "quality_status": "NOT_RUN_ON_LINUX_NO_QUALITY_CLAIM",
+      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults",
+      "spatial_visibility_profile": "PERSISTENT_QUAD_POSITIVE_VISIBLE_INTERSECTION_V2",
+      "spatial_policy": "FROZEN_EXISTING_SOURCE_FIELD",
+      "selection_operator": "union",
+      "prior_registered_candidate": "m_specialist",
+      "domain_policy": "Only exact frozen field support; unsupported proposals are recorded UNKNOWN before output; no synthesized support.",
+      "parent_candidate": "m_time_select"
+    },
+    "m_time_generic_prune": {
+      "implementation_status": "IMPLEMENTED",
+      "priority": 7,
+      "route": "specialist_query_control",
+      "selection": "specialist_generic_query",
+      "spatial": "accepted_continuous_native_field",
+      "required_model_components": [
+        "qwen_base",
+        "clip_vit_b32",
+        "cg_detr",
+        "original_time",
+        "semantic_residual",
+        "i3d",
+        "sport_umt"
+      ],
+      "model_assets": [
+        "qwen",
+        "specialist",
+        "shared_native_clip_features"
+      ],
+      "new_weights": false,
+      "parameter_budget": {
+        "limit": 9000000000,
+        "actual_tensor_union_required": true,
+        "expected_base_parameters": 8767123696,
+        "expected_complete_clip_parameters": 151277313,
+        "expected_base_clip_subtotal": 8918401009,
+        "remaining_for_actual_cg_and_other_parameters": 81598991,
+        "expected_total": 8980108294
+      },
+      "mechanism": "Same pretrained specialist and cached source features with one fixed generic event query; distinguishes automatic query value from specialist's learned temporal prior",
+      "changes": "Uniformly hold existing native spatial field fixed; replace temporal mechanism or apply the preregistered set operator. No per-source fallback.",
+      "risk": "HIGH_PREDECLARED_QUERY_CONTROL",
+      "stage_seconds_cap": 1800,
+      "configuration": {
+        "cell_seconds": 2,
+        "max_cells": 75,
+        "stride_cells": 60,
+        "duration_fraction": "1/4",
+        "query_policy": "The most meaningful action, informative demonstration, surprising event or emotional payoff.",
+        "foreground_probability": 0.5,
+        "image_batch_size": 16,
+        "maximum_forward_windows": 6000,
+        "text_feature_profile": "FULL_CLIP_ENCODER_THEN_EOT_MASK_AND_CHECKPOINT_TRAINED_QUERY_PREFIX"
+      },
+      "entry": "python -m improvement.final_sprint_v1.supervise --action run --candidate m_time_generic_prune",
+      "output": "${run_root}/candidates/m_time_generic_prune/package/candidate_FINAL_M_TIME_GENERIC_PRUNE.zip",
+      "first_submission_slot": "DAY2_SLOT3_IF_TIME_AND_DIFFERENCE",
+      "quality_status": "NOT_RUN_ON_LINUX_NO_QUALITY_CLAIM",
+      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults",
+      "spatial_visibility_profile": "PERSISTENT_QUAD_POSITIVE_VISIBLE_INTERSECTION_V2",
+      "spatial_policy": "FROZEN_EXISTING_SOURCE_FIELD",
+      "selection_operator": "intersection",
+      "prior_registered_candidate": "m_generic_control",
+      "domain_policy": "Only exact frozen field support; unsupported proposals are recorded UNKNOWN before output; no synthesized support.",
+      "parent_candidate": "m_time_generic"
+    },
+    "r_time_event": {
+      "implementation_status": "IMPLEMENTED",
+      "priority": 3,
+      "route": "native_action_phase",
+      "selection": "phase_event",
+      "spatial": "accepted_continuous_native_field",
+      "required_model_components": [
+        "qwen_base",
+        "original_time",
+        "semantic_residual",
+        "i3d",
+        "sport_umt"
+      ],
+      "model_assets": [
+        "qwen"
+      ],
+      "new_weights": false,
+      "parameter_budget": {
+        "limit": 9000000000,
+        "expected_base_only": 8767123696,
+        "actual_tensor_union_required": true,
+        "expected_total": 8816809946
+      },
+      "mechanism": "Physically re-encode independent<=8s clips with<=32 actual native observations; native RGB/PTS proofs; semantic ordinary/setup/apex/resolution sequence with start state; duration-integrated whole-event utility and registered source-duration-constrained Pareto DP",
+      "changes": "Uniformly hold existing native spatial field fixed; replace temporal mechanism or apply the preregistered set operator. No per-source fallback.",
+      "risk": "VERY_HIGH_FULL_REPLACEMENT_UNVALIDATED",
+      "stage_seconds_cap": 28800,
+      "configuration": {
+        "clip_seconds": 8,
+        "samples_per_clip": 32,
+        "duration_fraction": "1/4",
+        "event_start_penalty": 0.15,
+        "cost_resolution_ms": 1,
+        "phase_policy": "event",
+        "event_utility": "duration_integral",
+        "event_start_penalty_units": "nat_seconds",
+        "arithmetic_profile": "LOSSLESS_BF16_WEIGHTS_FP32_ARITHMETIC_V1"
+      },
+      "entry": "python -m improvement.final_sprint_v1.supervise --action run --candidate r_time_event",
+      "output": "${run_root}/candidates/r_time_event/package/candidate_FINAL_R_TIME_EVENT.zip",
+      "first_submission_slot": "DAY1_SLOT3_IF_M_UNAVAILABLE_OR_SLOT5_OR_DAY2_SLOT1_IF_READY",
+      "quality_status": "NOT_RUN_ON_LINUX_NO_QUALITY_CLAIM",
+      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults",
+      "spatial_visibility_profile": "PERSISTENT_QUAD_POSITIVE_VISIBLE_INTERSECTION_V2",
+      "spatial_policy": "FROZEN_EXISTING_SOURCE_FIELD",
+      "selection_operator": "replacement",
+      "prior_registered_candidate": "r_phase_event",
+      "domain_policy": "Only exact frozen field support; unsupported proposals are recorded UNKNOWN before output; no synthesized support."
+    },
+    "r_time_apex": {
+      "implementation_status": "IMPLEMENTED",
+      "priority": 4,
+      "route": "native_action_phase_structural_control",
+      "selection": "phase_apex",
+      "spatial": "accepted_continuous_native_field",
+      "required_model_components": [
+        "qwen_base",
+        "original_time",
+        "semantic_residual",
+        "i3d",
+        "sport_umt"
+      ],
+      "model_assets": [
+        "qwen",
+        "r_phase_event_successes"
+      ],
+      "new_weights": false,
+      "parameter_budget": {
+        "limit": 9000000000,
+        "actual_tensor_union_required": true,
+        "expected_total": 8816809946
+      },
+      "mechanism": "Keep the exact same selected event identities and scoring as r_phase_event; retain only apex native cells to test event-completion contribution",
+      "changes": "Uniformly hold existing native spatial field fixed; replace temporal mechanism or apply the preregistered set operator. No per-source fallback.",
+      "risk": "HIGH_PREDECLARED_STRUCTURAL_ABLATION",
+      "stage_seconds_cap": 1800,
+      "configuration": {
+        "clip_seconds": 8,
+        "samples_per_clip": 32,
+        "duration_fraction": "1/4",
+        "event_start_penalty": 0.15,
+        "phase_policy": "apex",
+        "cost_resolution_ms": 1,
+        "event_utility": "duration_integral",
+        "event_start_penalty_units": "nat_seconds",
+        "arithmetic_profile": "LOSSLESS_BF16_WEIGHTS_FP32_ARITHMETIC_V1"
+      },
+      "entry": "python -m improvement.final_sprint_v1.supervise --action run --candidate r_time_apex",
+      "output": "${run_root}/candidates/r_time_apex/package/candidate_FINAL_R_TIME_APEX.zip",
+      "first_submission_slot": "DAY1_SLOT4_OR_DAY2_SLOT2_IF_DISTINCT",
+      "quality_status": "NOT_RUN_ON_LINUX_NO_QUALITY_CLAIM",
+      "runtime_configuration_source": "candidates.json + shared_spatial_configuration; not unsynchronized function defaults",
+      "spatial_visibility_profile": "PERSISTENT_QUAD_POSITIVE_VISIBLE_INTERSECTION_V2",
+      "spatial_policy": "FROZEN_EXISTING_SOURCE_FIELD",
+      "selection_operator": "exact_parent_apex",
+      "prior_registered_candidate": "r_phase_apex",
+      "domain_policy": "Only exact frozen field support; unsupported proposals are recorded UNKNOWN before output; no synthesized support.",
+      "parent_candidate": "r_time_event"
     }
   },
   "implementation_revision": "ENGINEERING_VISIBLE_QUAD_AND_LOSSLESS_FP32_V3_20261023",
@@ -336,5 +718,24 @@
   "dispatch_policy": "G first; M next only with already bound lawful/direct assets and fitting measured forecast; otherwise R. Compare remaining actual shared-GPU calendar and command budget before each full route. Controls adopt complete exact parents.",
   "budget_anchor_utc": "2026-10-23T06:10:00+00:00",
   "planning_deadline_utc": "2026-10-24T06:10:00+00:00",
-  "deadline_basis": "Latest user message provides24h; anchored once at this review start, not independently verified official extension. Preserve any earlier actual account deadline."
+  "deadline_basis": "Latest user message provides24h; anchored once at this review start, not independently verified official extension. Preserve any earlier actual account deadline.",
+  "submission_authorization": "USER_EXPLICIT_EDGE_UPLOAD_AND_SCORE_RECORD_20261023",
+  "temporal_isolation_amendment": {
+    "registered_before_new_model_calls": true,
+    "basis": "Both G and M real spatial throughput cost stopped; R FP32 numerical QA passed. Isolate existing temporal mechanisms with uniformly frozen accepted spatial field.",
+    "old_failures_and_costs_immutable": true,
+    "new_quality_gate": "ENGINEERING_ONLY_QUALITY_UNVALIDATED",
+    "no_feedback_threshold_scan": true,
+    "tonight": [
+      "m_time_select",
+      "m_time_prune",
+      "m_time_add",
+      "m_time_generic",
+      "m_time_generic_prune"
+    ],
+    "tomorrow": [
+      "r_time_event",
+      "r_time_apex"
+    ]
+  }
 }

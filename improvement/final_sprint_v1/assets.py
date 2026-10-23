@@ -241,6 +241,21 @@ def bind(mapping_path, output_path, *, expected_commit=None):
         value["pure_call_adoption"] = _identity(mapping["pure_call_adoption"])
         from .pure_call_adoption import validate_manifest
         validate_manifest(value, value["pure_call_adoption"])
+    if mapping.get("phase_call_adoption"):
+        value["phase_call_adoption"] = _identity(mapping["phase_call_adoption"])
+        from .phase_call_adoption import validate_manifest
+        validate_manifest(value, value["phase_call_adoption"])
+    if mapping.get("frozen_spatial_field"):
+        value["frozen_spatial_field"] = _identity(mapping["frozen_spatial_field"])
+        from .frozen_field import load_cache
+        load_cache(strict_load(checked(value["frozen_spatial_field"])), value)
+        value["temporal_smoke_adoption"] = mapping["temporal_smoke_adoption"]
+        for key in ("old_assets", "smoke_receipt"):
+            value["temporal_smoke_adoption"][key] = _identity(value["temporal_smoke_adoption"][key])
+        history = Path(mapping["global_package_history"]).resolve()
+        require(history.is_relative_to(workspace) and not history.is_relative_to(root),
+                "Shared new-candidate history must remain outside individual run roots")
+        value["global_package_history"] = str(history)
     if dependencies:
         validate_baseline_auxiliaries(value)
     # Dedicated sprint output ownership, without changing any adopted model tree.

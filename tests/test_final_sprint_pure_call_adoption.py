@@ -274,11 +274,12 @@ class PureCallAdoptionTests(unittest.TestCase):
         self.assertEqual(entries["ground_a"]["returned"], refs["ground_a"])
         self.assertEqual(entries["ground_a"]["historical_wall_seconds"], 4.0)
 
-    def test_exact_083d_parent_is_allowed_but_arbitrary_implementation_is_rejected(self):
-        self.old["source_commit"]["commit"] = "083d437e2ea3f0b12e83e0d11f982252b7bdc83d"
-        self.old_ref = save_new(self.root / "old_assets_083d.json", self.old)
-        entries = self.manifest([self.parent()[0]])[2]
-        self.assertIn("ground_a", entries)
+    def test_exact_083d_and_2c7998_parents_are_allowed_but_arbitrary_implementation_is_rejected(self):
+        for commit in ("083d437e2ea3f0b12e83e0d11f982252b7bdc83d", "2c799839c44bb1c2a7f2ebf3e6937b190c7d8f62"):
+            self.old["source_commit"]["commit"] = commit
+            self.old_ref = save_new(self.root / ("old_assets_" + commit + ".json"), self.old)
+            entries = self.manifest([self.parent()[0]])[2]
+            self.assertIn("ground_a", entries)
         self.old["source_commit"]["commit"] = "b" * 40
         self.old_ref = save_new(self.root / "old_assets_unreviewed.json", self.old)
         with self.assertRaisesRegex(ValueError, "Unaudited old source"):
