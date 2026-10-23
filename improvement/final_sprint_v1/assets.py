@@ -50,8 +50,15 @@ def git_identity(expected_commit=None):
 def _identity(value):
     if isinstance(value, str):
         return ref(value)
-    checked(value)
-    return dict(value)
+    require(isinstance(value, dict) and {"path", "sha256"} <= value.keys(),
+            "An original registered path and SHA256 are required")
+    identity = dict(value)
+    if "bytes" not in identity:
+        # Old package_inputs uses path/SHA pairs. Measure only the missing
+        # size; never replace the inherited SHA or rewrite the original lock.
+        identity["bytes"] = Path(identity["path"]).stat().st_size
+    checked(identity)
+    return identity
 
 
 def _tree(directory):

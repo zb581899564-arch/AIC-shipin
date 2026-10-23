@@ -130,6 +130,18 @@ class ResourceTests(unittest.TestCase):
 
 
 class AssetHelperTests(unittest.TestCase):
+    def test_legacy_path_sha_measures_size_without_replacing_identity(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "original.json"
+            path.write_text('{"original":true}')
+            complete = ref(path)
+            legacy = {key: complete[key] for key in ("path", "sha256")}
+            self.assertEqual(assets._identity(legacy), complete)
+            self.assertNotIn("bytes", legacy)
+            wrong = dict(legacy, sha256="0" * 64)
+            with self.assertRaisesRegex(ValueError, "SHA256"):
+                assets._identity(wrong)
+
     def setUp(self):
         self.temporary = tempfile.TemporaryDirectory()
         self.root = Path(self.temporary.name)
