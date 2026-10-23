@@ -103,6 +103,10 @@ class Engine:
         self.journal = CallJournal(self.root / "journal", self.base_binding, budget)
         self._qwen = None
         self._specialist = None
+        self.inherited_grounding = {}
+        if assets.get("inherited_grounding"):
+            from .inherited_grounding import validate_manifest
+            self.inherited_grounding = validate_manifest(assets, assets["inherited_grounding"])
         self.ground_refs = []
         self.spatial_config = SpatialConfig(**asset_api.candidate_registry()["shared_spatial_configuration"])
         self.spatial_config.validate()
@@ -175,6 +179,13 @@ class Engine:
                         "request": metadata, "model": self.assets["qwen"]["asset_tree"],
                         "spatial_config": asdict(self.spatial_config)}
         task_id = "ground_" + stable_key(call_binding)[:48]
+        if self.inherited_grounding:
+            from .inherited_grounding import adopt_result
+            adopted = adopt_result(self.inherited_grounding, task_id, call_binding)
+            if adopted is not None:
+                result, identity = adopted
+                self.ground_refs.append(identity)
+                return result
         result = self.journal.call(task_id, call_binding,
                                    lambda: self.qwen().ground_image(image, metadata))
         self.ground_refs.append(self.journal.result_ref(task_id, call_binding))

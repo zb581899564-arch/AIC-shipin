@@ -207,6 +207,10 @@ def bind(mapping_path, output_path, *, expected_commit=None):
              "resources": dict(mapping["resources"]),
              "offline_quality_gate": "EXPLICITLY_SKIPPED_NEW_PRODUCTION_RISK_EXPLORATION",
              "automatic_website_submission": False}
+    if mapping.get("inherited_grounding"):
+        value["inherited_grounding"] = _identity(mapping["inherited_grounding"])
+        from .inherited_grounding import validate_manifest
+        validate_manifest(value, value["inherited_grounding"])
     if mapping.get("specialist"):
         expert = dict(mapping["specialist"])
         expert["source_tree"] = _tree(expert["source_dir"])

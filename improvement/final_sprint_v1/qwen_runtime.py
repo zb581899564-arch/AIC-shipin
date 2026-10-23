@@ -223,6 +223,7 @@ class QwenRuntime:
         self.spec = dict(model_spec)
         self.device = device
         self.model = self.processor = self.torch = None
+        self._grounding_grammar = None
         self.inventory = None
         self.original_base_identity = None
         self.counts = dict(image_generations=0, video_prefills=0, phase_branch_batches=0,
@@ -375,7 +376,7 @@ class QwenRuntime:
         _require(bool((encoded["attention_mask"] == 1).all()), "Initial local prefix must be unpadded")
         return _tensor_signature(encoded)
 
-    def generate_images(self, images, prompt, max_new_tokens=192, *, role="base"):
+    def generate_images(self, images, prompt, max_new_tokens=192, *, role="base", grounding=False):
         self.load()
         import numpy as np
         from PIL import Image
@@ -391,11 +392,20 @@ class QwenRuntime:
         signature = self._check_encoded(encoded)
         gpu = encoded.to(self.device)
         length = gpu["input_ids"].shape[1]
+        generation_options = {}
+        if grounding:
+            from .grounding_grammar import GroundingGrammar
+            if self._grounding_grammar is None:
+                self._grounding_grammar = GroundingGrammar(self.processor.tokenizer)
+            eos = self.model.generation_config.eos_token_id
+            eos = [eos] if isinstance(eos, int) else list(eos)
+            generation_options["prefix_allowed_tokens_fn"] = self._grounding_grammar.constraint(
+                gpu["input_ids"][0].tolist(), eos)
         started = time.monotonic()
         forwards_before = self.counts["physical_model_forwards"]
         with self._role(role), self.torch.inference_mode():
             result = self.model.generate(**gpu, do_sample=False, max_new_tokens=max_new_tokens,
-                                         return_dict_in_generate=True)
+                                         return_dict_in_generate=True, **generation_options)
         self.torch.cuda.synchronize()
         ids = result.sequences[0, length:]
         eos = self.model.generation_config.eos_token_id
@@ -415,7 +425,7 @@ class QwenRuntime:
 
     def ground_image(self, image, metadata):
         return self.generate_images([image], metadata["prompt"], metadata.get("max_new_tokens", 192),
-                                    role=metadata.get("role", "base"))
+                                    role=metadata.get("role", "base"), grounding=True)
 
     def _encode_clip(self, observation):
         torch = self.torch
