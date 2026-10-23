@@ -1,0 +1,24 @@
+{
+  "schema": "AIC_FINAL_RESULTS_PUBLIC_INCREMENT_V1",
+  "previous_results_commit": "a23bb7fa7149daf98e0572de256b879062509b2a",
+  "runtime_commit": "8dcde128be0ffe2df3ccba75d69929b7a9769a6f",
+  "recovery_commit": "df429691e623666fd94264ebeb8fb7b55d3dd1a9",
+  "branch": "execution/20261023-final-mechanisms",
+  "purpose": "Actual seven official scores, compact costs and explicit cached-only remaining recovery; no new quality claim",
+  "files": [
+    "improvement/final_sprint_v1/runner.py",
+    "improvement/final_sprint_recovery_v1/apex_resume.py",
+    "tests/test_final_sprint_derived_forecast.py",
+    "reports/github_status_20261023_v1/FINAL_SPRINT_V6_ACTUAL_RESULTS.md",
+    "reports/github_status_20261023_v1/START_HERE.md",
+    "reports/github_status_20261023_v1/R_TWO_DELIVERY_COSTS_V6.json",
+    "docs/publication_scope_final_results_20261024.json"
+  ],
+  "excluded": [
+    "Private predictions and ZIPs",
+    "Screenshots with account identifiers",
+    "Media, labels, models, tensors and raw/proof directories",
+    "SSH, network configuration and signed download metadata"
+  ],
+  "no_scientific_success_or_new_experiment_claim": true
+}

@@ -1,3 +1,11 @@
+## Latest: seven official DONE results — 2026-10-24
+
+The requested5+2 sprint is complete: seven distinct426-source ZIPs passed engineering/independent11strict/Windows checks and were actually uploaded through the user-authorized Edge session. Official scores by frozen order:22.12/19.64/39.21/16.59/14.38 onOct23, then10.74/6.96 onOct24 at00:01:16/00:03:44. All are below the protected40.48; original40.47 and both dependency chains remain intact. This is completion of submissions, not improvement or the45-point goal.
+
+Read [actual full sprint results](FINAL_SPRINT_V6_ACTUAL_RESULTS.md), [M costs and differences](M_FIVE_DELIVERY_COSTS_V6.json), and [R costs, recovery and official scores](R_TWO_DELIVERY_COSTS_V6.json). Latest terminals supersede historical pending snapshots below. Do not rerun, retune or resubmit these seven frozen recipes. No new Goal, automation or experiment is created by this handoff.
+
+The user confirmed a QQ extension, and the account actually accepted the five entries after the old20:00 notice and the two entries after midnight. Runtime/source locks stay8dcde128be0ffe2df3ccba75d69929b7a9769a6f; explicit remaining-only CPU recovery controllerdf429691e623666fd94264ebeb8fb7b55d3dd1a9 reused all old successes with0newmodel calls and preserved all failed attempts/costs. The separately committed general forecast fix was not hot-patched into v6. All owned chains exited; GPU released; CONTROL5 untouched. No network/service or external-contact changes. Files published in this last increment are listed in [publication scope](../../docs/publication_scope_final_results_20261024.json).
+
 # 2026-10-23最新事实与审查入口
 
 本次同步包括10月21日上次公开快照之后的源码、固定协议和聚合结果。基于已采纳PR #5精确提交`72533ece44cb490c48cea88fab41463bdf14eb3c`，保留此前审查修复，不合并或改写其他分支。

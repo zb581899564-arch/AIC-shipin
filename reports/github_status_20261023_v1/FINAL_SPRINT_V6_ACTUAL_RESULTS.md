@@ -1,4 +1,4 @@
-# Final sprint v6 actual results — 2026-10-23
+# Final sprint v6 actual results — completed 2026-10-24
 
 Runtime implementation: `8dcde128be0ffe2df3ccba75d69929b7a9769a6f`. This status update does not alter the pinned Linux checkout or any historical protocol.
 
@@ -24,10 +24,21 @@ The unchanged continuous source field is applied uniformly; unsupported native p
 
 No offline quality/F1 admission was claimed. Frozen candidates and ordering preceded the new official scores; these poor results do not authorize a feedback threshold scan. The original G/M spatial throughput STOPs, real FP32 R numerical smoke success, controlled owned R spatial-stop intervention and all charges remain immutable.
 
-## Remaining registered work
+## R full engineering results and actual official scores
 
-The distinct R event/apex temporal mechanism is in real Linux production after asset/native/parameter/preflight and audited successful FP32 smoke adoption. Snapshot at2026-10-23T12:47:26Z:71/426 complete. This is not a terminal, quality pass or ZIP delivery. Runtime/first successful phase calls must not be restarted. R full event and exact parent-apex candidates still require complete426, independent acceptance and Windows byte checks before next-day submissions.
+The full R event run naturally completed all426 sources with exit0 in11341.288526 whole-command seconds; independent package command78.098606s. Selected29869 native frames,116 explicit successful empty sources, zero errors converted to empties. Relative to40.48:+13070/-106680 frames,0 changed boxes.
 
-The user confirms a QQ extension; the public old notice still says20:00, while the actual account accepted entries at20:12:22. Five current-day slots are now used. Next two are planned after2026-10-23T16:00Z and before2026-10-24T04:00Z, subject to real account availability. No new Goal/automation, network/service changes or external author/chat messaging.
+Exact parent-apex derivation selected15341 frames,116 successful empty sources; relative to40.48:+6573/-114711 frames,0 changed boxes. Both full parameter unions are8,816,809,946. Original independent11strict, exact native field provenance, ZIP/member identity and Windows receive all passed. Their two ZIPs total153102 bytes. These large selection changes were preregistered risk exploration, with no offline quality/F1 claim. Both are now officially DONE and strongly worse than the protected baseline.
 
-Detailed ZIP hashes, counts, costs and exact differences: [M_FIVE_DELIVERY_COSTS_V6.json](M_FIVE_DELIVERY_COSTS_V6.json). Official scores are observed platform results, not offline estimates.
+| Candidate | Official name | Score | Scoring time +08 |
+|---|---|---:|---|
+|r_time_event|FS-R01-EVENT|10.74|2026-10-24 00:01:16|
+|r_time_apex|FS-R02-APEX|6.96|2026-10-24 00:03:44|
+
+The first apex attempt naturally costSTOPped after five successful CPU sources because its forecast added adopted historical GPU phase costs to a cached-only CPU computation. The original failure93.513673 whole-command seconds is preserved. An explicit remaining recovery first failed before source work because its CUDA environment violated the frozen CLI contract (85.465751s), also retained. The corrected recovery reused the original five source successes unchanged, completed the remaining CPU derivation in146.694593 whole-command seconds, then independent packaging76.834252s; no new model/phase attempt was created. It finished before the original absolute30-minute end15:56:14Z, without extending the cap or changing the candidate.
+
+The general forecast fix has two targeted pure-function regression checks passed on Windows. It is committed for future executions but NOT injected into this frozen v6 run. Runtime, source bindings, source producer and predictions remain pinned to8dcde128. The separate explicit recovery controller isdf429691. Original v6 six-ready completion and all old failures remain immutable; the new recovery completion proves the seventh delivery.
+
+The user confirms a QQ extension; the public old notice still says20:00, while the actual account accepted entries at20:12:22. Five entries were accepted onOct23; exactly two more were accepted and scored after the actual midnight reset onOct24. All seven requested distinct packages are delivered and officiallyDONE. None improves40.48; all seven fixed recipes are stopped, with no tuning/resubmission or new experiment authorized by this report. No new Goal/automation, network/service changes or external author/chat messaging.
+
+Detailed actual R receipts: [R_TWO_DELIVERY_COSTS_V6.json](R_TWO_DELIVERY_COSTS_V6.json). Actual visible unique-name rows and their scoring times were bound to the final ZIP identities. Complete UI screenshots remain private on Windows. Seven final ZIPs total1,173,898 bytes; all media, tensors, raw answers and full Linux proofs stay private.

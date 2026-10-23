@@ -1,0 +1,123 @@
+{
+  "rows": [
+    {
+      "candidate": "r_time_event",
+      "zip_bytes": 97344,
+      "zip_sha256": "0d114eb7428fc01feef010640d748f39792ca1d6342bc5995e016fa18fc7a279",
+      "member_sha256": "1683dd4b86069ec5661c3a842628cda4ca1679c31a219fb747580653b04ddff4",
+      "actual_parameter_union": 8816809946,
+      "selected_frames": 29869,
+      "empty_sources": 116,
+      "changes_from_40_48": {
+        "added_frames": 13070,
+        "changed_boxes": 0,
+        "changed_sources": 426,
+        "removed_frames": 106680
+      },
+      "independent_11strict": "PASS_INDEPENDENT_STRICT_VALIDATION",
+      "failed_sources_converted_to_empty": 0,
+      "protected_baselines_unchanged": true
+    },
+    {
+      "candidate": "r_time_apex",
+      "zip_bytes": 55758,
+      "zip_sha256": "1c7d2c0c894e5d7a3ca4b35e2be101305ef20ab3a64c4a3ce6a0b6406800df6d",
+      "member_sha256": "a50d84af96883787ecab0f1dcf181dbfe01f0081112de7c465cf608e7f0dcdb8",
+      "actual_parameter_union": 8816809946,
+      "selected_frames": 15341,
+      "empty_sources": 116,
+      "changes_from_40_48": {
+        "added_frames": 6573,
+        "changed_boxes": 0,
+        "changed_sources": 426,
+        "removed_frames": 114711
+      },
+      "independent_11strict": "PASS_INDEPENDENT_STRICT_VALIDATION",
+      "failed_sources_converted_to_empty": 0,
+      "protected_baselines_unchanged": true
+    }
+  ],
+  "terminals": {
+    "original_r_time_event_run_terminal.json": {
+      "exit_code": 0,
+      "wall_seconds": 11341.288526339456
+    },
+    "original_r_time_event_package_terminal.json": {
+      "exit_code": 0,
+      "wall_seconds": 78.09860648494214
+    },
+    "original_r_time_apex_run_terminal.json": {
+      "exit_code": 1,
+      "wall_seconds": 93.51367314904928
+    },
+    "environment_failure_run_terminal.json": {
+      "exit_code": 1,
+      "wall_seconds": 85.46575107891113
+    },
+    "remaining_run_terminal.json": {
+      "exit_code": 0,
+      "wall_seconds": 146.69459342770278
+    },
+    "remaining_package_terminal.json": {
+      "exit_code": 0,
+      "wall_seconds": 76.83425240311772
+    },
+    "remaining_completion.json": {
+      "delivery": {
+        "actual_parameters": 8816809946,
+        "candidate_id": "r_time_apex",
+        "changes_from_baselines": {
+          "40.47": {
+            "added_frames": 6567,
+            "changed_boxes": 0,
+            "changed_sources": 426,
+            "removed_frames": 114732
+          },
+          "40.48": {
+            "added_frames": 6573,
+            "changed_boxes": 0,
+            "changed_sources": 426,
+            "removed_frames": 114711
+          }
+        },
+        "commit": "8dcde128be0ffe2df3ccba75d69929b7a9769a6f",
+        "member_sha256": "a50d84af96883787ecab0f1dcf181dbfe01f0081112de7c465cf608e7f0dcdb8",
+        "prediction_sha256": "80f1d805300dfba84c2a6fd2c4fa9a20954a3986ae82d1d2f7387956fe242a78",
+        "quality_validated": false,
+        "schema": "AIC_FINAL_DELIVERY_V1",
+        "source_count": 426,
+        "status": "ENGINEERING_ACCEPTED_QUALITY_UNVALIDATED",
+        "website_submitted": false,
+        "zip_bytes": 55758,
+        "zip_filename": "candidate_FINAL_R_TIME_APEX.zip",
+        "zip_sha256": "1c7d2c0c894e5d7a3ca4b35e2be101305ef20ab3a64c4a3ce6a0b6406800df6d"
+      },
+      "new_model_calls": 0,
+      "old_five_successes_unchanged": true,
+      "original_budget_not_extended": true
+    }
+  },
+  "total_final_zip_bytes": 153102,
+  "all_predictions_and_full_proof_stay_linux": true,
+  "new_model_calls_for_apex": 0,
+  "official_results": [
+    {
+      "candidate": "r_time_event",
+      "submission_name": "FS-R01-EVENT",
+      "score": 10.74,
+      "status": "DONE",
+      "platform_scoring_time": "2026-10-24 00:01:16",
+      "zip_sha256": "0d114eb7428fc01feef010640d748f39792ca1d6342bc5995e016fa18fc7a279",
+      "zip_bytes": 97344
+    },
+    {
+      "candidate": "r_time_apex",
+      "submission_name": "FS-R02-APEX",
+      "score": 6.96,
+      "status": "DONE",
+      "platform_scoring_time": "2026-10-24 00:03:44",
+      "zip_sha256": "1c7d2c0c894e5d7a3ca4b35e2be101305ef20ab3a64c4a3ce6a0b6406800df6d",
+      "zip_bytes": 55758
+    }
+  ]
+}
