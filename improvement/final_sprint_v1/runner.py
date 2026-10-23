@@ -118,6 +118,15 @@ def fresh_throughput_sample(candidate_id, reused_source, adopted_entries, source
                  "clip_features_" + source_id in adopted_entries))
 
 
+def historical_forecast_delta(candidate_id, before, after):
+    """Cached-only derivation does not repeat its parent's historical inference.
+
+    The original charges stay in their ledger. This changes only the estimate
+    of work still to perform, never a stage cap or actual command accounting.
+    """
+    return 0.0 if candidate_id in DERIVED_CANDIDATES else after - before
+
+
 class Engine:
     def __init__(self, assets, assets_path, candidate_id, budget):
         self.assets, self.assets_path, self.candidate_id = assets, assets_path, candidate_id
@@ -421,7 +430,8 @@ class Engine:
                 # historical durations only to the cold throughput forecast.
                 historical_after = (self.adopted_ground_seconds +
                                     getattr(self.journal, "historical_seconds_for_forecast", 0.0))
-                fresh_seconds += historical_after - historical_before
+                fresh_seconds += historical_forecast_delta(
+                    self.candidate_id, historical_before, historical_after)
             elif not reused:
                 print(f"COST_SAMPLE_ADOPTED_TEMPORAL source={sid} "
                       "fresh_decode_cost=UNMEASURED_CHARGE_RETAINED", flush=True)
