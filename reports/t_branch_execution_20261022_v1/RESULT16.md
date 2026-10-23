@@ -1,0 +1,8 @@
+# T来源与输入阶段16
+
+最新16：12份原作者MTurk标签/clip均按固定Git blob与镜像逐项相等，12原视频98028813B实际Linux CDN直连和首次原生13806帧全部成功，原注册5fit/1dev/6confirm，保守64bit草图无疑似重复；端点约定未证实，故不是完整训练准入。原15摘要来源与9fit/2dev/4新确认保持。CPU12的17项真实Torch/原生/奖励检查及CPU13的4项提示词检查均通过，禁止重复运行成功项。archive11限时FAILED及353509B成功范围保留，14只采用旧范围后补437230B所需元数据自然成功，不再扫归档或下载已成功成员。
+
+重要新纠正10：旧baseline57的14VERIFY实际编码全为EMPTY_PROMPT，缺候选特定VERIFY文本；旧59完整外部40.47复现结论不能用于新阶段准入。只保留旧raw/279.398666费用/失败与59历史，不修改原官方40.47ZIP。新独立prompt_contract13验证请求SHA和实际token包含全文。后续只允许首次正确任务编码/调用，采用旧RGB/视频tensor和74BASE特征，不能重跑旧错误任务或把旧成功模型当新结果。
+
+人类已批准本次Windows<=2MiB仅API/清单/CDN地址元数据，实际6773B且0媒体；authorization在windows_metadata10。媒体仍Linux实核公网TLS/物理eno2直连。source_manifest15及media_native16均自然终态，author_timing17只取2041B原作者code目录且无端点证据，不要重复启动。Goal active，模型/训练/新ZIP0。下一推进真正任务匹配的强控制与单个整来源策略小试，不盲长训或再找十轮数据。
+

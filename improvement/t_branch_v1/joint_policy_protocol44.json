@@ -1,0 +1,127 @@
+{
+  "schema": "T_WHOLE_SOURCE_COUNTERFACTUAL_SELF_SAMPLE_V44",
+  "registered_before_any_T1_optimizer_update": true,
+  "protected_baseline": {
+    "score_user_reported": 40.47,
+    "bytes": 384630,
+    "sha256": "b37c4a2e6593fc800f54ecce2f860fee5e7d5dc74e17ce280f9ee6722afbccd3",
+    "unchanged": true
+  },
+  "source_cohort": "pilot_profile21/registration.json",
+  "training_sources": [
+    "L7ddd6bf6c93a",
+    "N865eb00aa784"
+  ],
+  "development_sources": [
+    "Lf27fb5bf66ad",
+    "N68272a683236"
+  ],
+  "confirmation": "All four original fresh publishers in source_registry09; quality not yet exposed, once after final candidate freeze",
+  "historical_exposure": "Fit/dev original summaries and original-coarse control metrics exposed; not blind",
+  "available_supervision": "Original all-reviewer timestamp summary preference; not semantic dense HL/NHL",
+  "modality_limit": "LVSum annotators can use speech/transcript; silent native64 can only learn visually predictable component. This profile does not add ASR and must beat fixed content-shift controls.",
+  "mturk12_training": "NOT_ADMITTED: endpoints still unresolved; labels/votes preserved and never converted to ordinary",
+  "method": {
+    "name": "Whole current-source counterfactual self-sampled sequence surrogate",
+    "policy": "Original BASE plus an exact copy of actual inference TIME, same r16/qkvo; no new head or backbone updates",
+    "source_episodes": 4,
+    "episode_source_order": [
+      "L7ddd6bf6c93a",
+      "N865eb00aa784",
+      "L7ddd6bf6c93a",
+      "N865eb00aa784"
+    ],
+    "max_optimizer_updates": 4,
+    "sample": "Generate one independent legal JSON trajectory per every window, unchanged actor throughout whole source",
+    "greedy": "Current actor greedy each window; adopt original controls only while actor exactly equals original TIME",
+    "reward": "Native union of complete current-source samples; mean P/R/F1 across every original reviewer",
+    "per_window_advantage": "R(all current samples) - R(other current samples union this window current greedy)",
+    "provenance": "Overlap contributions retained; successful LEGAL_EMPTY distinct from execution failure",
+    "objective": "Sum_i(-stopgrad(A_i)*sum(grammar_conditional_TF_logp_i) + 0.02/N_windows * mean_allowed_KL_i)",
+    "caveat": "Low-precision full-TF and incremental decoder differ numerically; surrogate is not claimed an exact physical rollout Jacobian. Actual whole-source greedy transfer is mandatory.",
+    "kl_reference": "Frozen original TIME on the same sampled token trajectory and actual allowed grammar actions",
+    "old_method_not_repeated": "No closed candidate pool/count program/fixedK reader or human-JSON teacher forcing. Old expectedJ/MAP bridge failures remain.",
+    "seed": 7319,
+    "optimizer": "AdamW",
+    "learning_rate": 5e-06,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "epsilon": 1e-08,
+    "weight_decay": 0.0,
+    "global_gradient_clip": 1.0,
+    "actor_lora_dropout": 0.0,
+    "vision_and_BASE_frozen": true,
+    "sampling": {
+      "do_sample": true,
+      "temperature": 1.0,
+      "top_k": 0,
+      "top_p": 1.0,
+      "repetition_penalty": 1.0,
+      "num_beams": 1,
+      "max_new_tokens": 256
+    },
+    "greedy_generation": "Original options do_sample=False/max_new_tokens256, same original grammar allow_empty=True",
+    "source_update": "Accumulate all window gradients before one source update; no weights change during source rollout or TF replay",
+    "zero_signal": "If every source counterfactual advantage is0, record NO_SOURCE_SIGNAL and no optimizer step; never count a fictitious update",
+    "checkpoint": "Only final episode state; exact FP32 adapter save/reload through lossless PEFT loading. No checkpoint selection or dose retry",
+    "causal_dependencies": [
+      "joint_contract43/completion.json",
+      "policy_remaining42/completion.json",
+      "pilot_input_qa29/completion.json",
+      "summary_targets28/completion.json",
+      "pilot_review37/completion.json"
+    ]
+  },
+  "engineering_gates": [
+    "Actual finite actor-only gradients with source reward, BASE/reference bytes unchanged",
+    "Exact final save/reload and parameter count including original TIME/new actor/head<=9B",
+    "All source windows output complete, legal-empty and failures separate",
+    "At least both training sources provide nonzero counterfactual signal and real actor parameter change; otherwise stop this profile"
+  ],
+  "development_gates": {
+    "predictions": "Full free greedy source, actual originalD8/VERIFY/frozen-semantic downstream for original and trained; not coarse proxy admission",
+    "controls": [
+      "Original TIME original content",
+      "Trained TIME original content",
+      "Original TIME fixed half temporal-group content shift",
+      "Trained TIME same fixed shift"
+    ],
+    "quality": [
+      "Mean candidate F1 > originalTIME and actual complete40.47",
+      "Both development publishers improve against complete40.47",
+      "Correct content mean > shifted content",
+      "Gain on correct content > gain on fixedshift",
+      "No new entirely-empty source or invalid execution"
+    ],
+    "no_old_proxy_hard_gate": true,
+    "no_threshold_parameter_or_prompt_scan": true
+  },
+  "confirmation_gates": [
+    "Freeze final adapter before first four-source quality evaluation",
+    "Mean paired native F1 > actual complete40.47, at least2/4 sources improve",
+    "No newly empty whole source or engineering failure",
+    "No tuning or switching confirmation sources after results"
+  ],
+  "budgets": {
+    "T1_cumulative_GPU_seconds_max": 10800,
+    "T1_plus_T2_original_GPU_seconds_max": 43200,
+    "train_GPU_seconds_max": 2400,
+    "development_GPU_seconds_max": 2400,
+    "confirmation": "Only actual unspent T1 budget; never exceed or pretend incomplete confirmation passed",
+    "all_actual_fees_include_failures": true,
+    "T2": "No automatic additional updates in this profile"
+  },
+  "production": [
+    "Only supported final candidate, current official rules check before production/package",
+    "Unique shared BASE with originalVERIFY TIME and trainedcoarse TIME; actual integrated parameters8797892873 before extra models",
+    "Reuse identity-bound426 media/PTS/full spatial fields and BASE semantic features; recompute occupancy-dependent transform/head",
+    "Fixed known40 factual veto and UNKNOWN/oldFAILED retained",
+    "426 nonempty/PTS/real box provenance/11strict/singleJSONL/CRC/memberSHA/actual history difference and final Windows agreement",
+    "All computation/evidence Linux, small control/short receipts/finalZIP only, no automatic official submission"
+  ],
+  "execution_status": "PROTOCOL_FIXED_IMPLEMENTATION_NEXT_NOT_LAUNCHED",
+  "new_training_updates": 0,
+  "new_packages": 0
+}

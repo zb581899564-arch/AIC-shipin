@@ -1,0 +1,20 @@
+{
+  "schema": "T_WHOLE_SOURCE_SPEECH_WITH_SAME_NATIVE_VIDEO_60",
+  "registered_before_first_new_Qwen_generation": true,
+  "prior_profile": "joint_policy_protocol44.json remains STOP; no dose or checkpoint retry",
+  "mechanism": "Add actual whole-source chronological speech observations to the unchanged native visual TIME input, rather than assign0..3 ASR block ranks or pool latents",
+  "models": {"original_BASE_TIME_frozen": true, "training_updates": 0, "Whisper_tiny_parameters": 37184640, "actual_full_main_and_auxiliary_parameters": 8819742089},
+  "development_sources": ["Lf27fb5bf66ad", "N68272a683236"],
+  "historical_exposure": "Both development sources exposed; no blind claim",
+  "conditions": ["original no-speech50 control and complete40.47 masks adopted", "same native video plus complete chronological sourceASR", "same native video plus fixed half-block-rotated sourceASR content with original timestamps"],
+  "information": {"ASR_is_unverified_machine_observation_not_label": true, "only30sec_chunk_timing": true, "word_alignment_claim": false, "all_blocks_preserved": true, "no_speech_or_uncertain_is_not_ordinary": true, "no_reference_labels_in_model": true},
+  "generation": {"same_original_prompt_verbatim": true, "one_fixed_evidence_serialization": true, "do_sample": false, "max_new_tokens": 256, "context_limit_including_output": 16384, "truncate_evidence": false, "original_grammar_allow_empty": true},
+  "downstream": "Unchanged correct-native originalTIME VERIFY and original BASE semantic field/head; occupancy recomputed, old identical successful tasks adopted",
+  "first_QA": ["51 newASR token-to-text replay", "all100 new real prefixes and visual/timestamp token identity", "all100 first generated token/grammar/input replay", "only first newVERIFY replay; old success QA adopted", "complete native masks frozen before all-original-reviewer source metrics"],
+  "development_gates": ["mean full-source F1 exceeds exact complete40.47 and raw originalTIME", "both fixed development publishers improve", "correctly timedASR beats same-source shiftedASR", "no newly empty source or invalid execution"],
+  "confirmation": "Only after developmentPASS and candidate freeze, all original four fresh publishers once; mean pairedF1 above full40.47 and at least2/4 improve, no newly empty source; no source switching or threshold/prompt tuning",
+  "budgets": {"new_information_profile_total_GPU_seconds_max": 7200, "development_aggregate_GPU_seconds_max": 2400, "confirmation": "Only actual unspent7200 budget and full four-source cost admission", "all_goal_GPU_ceiling_including_old_failures": 43200, "old_joint4_total_seconds_preserved": 6404.41972579807, "no_automatic_new_training": true},
+  "deadline": "Official result submission2026-10-23T20:00:00+08:00; production, QA and delivery require a separate cost decision",
+  "production": "No admission from CPU information or development only; keep40.47 ZIP and dependencies, official rules and all independent426/PTS/box/parameter/format/ZIP/Windows gates remain",
+  "network_and_data": "Linux resident; no downloads or closed service; approved small control only, finalZIP route independently checked; no new timer or automatic website submission"
+}

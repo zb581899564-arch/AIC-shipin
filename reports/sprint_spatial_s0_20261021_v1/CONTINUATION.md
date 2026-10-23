@@ -1,0 +1,15 @@
+# S0独立裁剪评分器接续
+
+**最新自然终态优先：先读RESULT.md/current_state。** v8首次80真实前向/400候选评分及独立CPU复核完成，质量均值0.799572→0.776504、最差10%差-.221711，固定门失败，STOP，不确认或生产。实际2911753参数/完整8785469202；80成功不重跑，原输入和完整权重采用。唯一GPU先有0前向导入失败10.723秒，v8明确路径修复后首次成功10.728秒，总21.451秒、账本一致；所有旧失败保持。模型权重完整接受06、源码配对修复07及模块路径恢复08均已完成，下方下载中/0前向/旧参数2909961是先前快照。下一T监督资产门至多60分钟，A0逐时声音事件另行；不调S0网格补考。40.47不动、新ZIP0、GPU已释放、CONTROL5同startticks仍T。
+
+最高入口PROJECT_PRIMARY_PLAN_20261021.md。用户要求在S1之后继续，当前有界S0根为/home/inspur/aic_video_work/sprint_spatial_s0_20261021_v1，registration.json登记UTC11:20:29开始、13:20:29两小时兼容截止。不要把上限当必须用满。
+
+作者精确344e86fb54b4b083d83c405aa63d7fbeeed4fcdc的14必要源码73187B已经实际公网/eno2/空ProxyHandler直连取得，source_files.jsonl记录逐文件gitblob和SHA。原README链接的lld533兼容实现f6f925dadaf3c975f84c422ad575e0c92dc87320直接签入了原demo默认mobilenet权重11836113B/gitblob eff7f8bc0da999c58c278b8c8e42a8ffb0e3bf0f；两仓库MIT元数据/实际LICENSE相同，不拿它替代训练图片或GNMC用途许可。
+
+Google原权重页面HEAD两条直连失败、0body，记录保留；随后GitHub blob直连响应中断，weight_failure02.json与5242880B weight_payload.json.partial保留。weight_recovery_registration03.json明确仅从partial JSON中提取可解码raw prefix，再向同一精确commit的raw.githubusercontent.com按剩余Range续接，完整gitblob不匹配前不接受/加载；无200或整文件fallback，每次实际公网/eno2核查，逐段weight_ranges03.jsonl留成功/失败。先查weight_acceptance03.json/weight_failure03.json及实际任务，不重复原下载、恢复claim或已成功字节。不能经代理补模型。
+
+8组纯Torch ROI/ROD对作者原C循环parity已完成。原compat随后在无关ShuffleNet文件TabError失败，保持old code/trace；code_v2只排除未使用ShuffleNet导入，采用已过8组parity不重跑，并首次构建MobileNet架构成功。原上游fc_layers还引用未定义dropout，兼容namespace补同索引Dropout(.5)，eval为identity且不改模型参数；显式loadweightFalse避免另外自动下载ImageNet。实际架构2909961参数，加40.47完整流程为8785467410≤9B。这里只证明算子/架构，没有加载训练权重或真实模型输出，compat_cpu_acceptance_v2.json准确。
+
+后续实际完整权重接受后，用code_v2/runtime.py的strict load(weights_only=True)。若模型键不匹配，记录实际失败，不猜测或silent nonstrict。固定authorRGB/256、RGBmean/std、短边256且长宽round到32倍；不默认改为/255或换ROIAlign。模型候选在原冻结中心处、16:9最大合法宽度的固定分数网格，包含原框，去重后不得空候选，不套原面积>.4过滤。先复用S1成功RGB/原中心，仅做新评分器首次必要预处理，不重解码或重复Qwen。新的固定开发/选择/预算和首次独立质量复核要在真实评分前登记；当前无该GPU启动。
+
+40.47、时间和原中心/9:16保护；S1原PASS和限制结论不改，不扩S2。所有数据/权重/raw留Linux。既有授权Tailscale仅小控制，下载必须实际直连；不改网络服务、不联系作者/其他聊天、不自动官网提交、不新Goal/定时、CONTROL5永不恢复。总体任务未完成，不能把工程可加载当质量或提分。

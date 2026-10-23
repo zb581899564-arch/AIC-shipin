@@ -1,0 +1,168 @@
+{
+  "schema": "AIC_PUBLIC_AGGREGATE_20261023_V1",
+  "created_UTC": "2026-10-23T03:51:14.718932+00:00",
+  "implementation_parent": "72533ece44cb490c48cea88fab41463bdf14eb3c",
+  "latest_stage": "STOP_FIXED_LOCAL_VISIBILITY122_FIT_DIAGNOSIS_REAL25_AND_ALL_CPU_COMPLETE",
+  "new_T_ZIPs": 0,
+  "T_GPU_seconds": 21279.932354744524,
+  "T_logical8B_tasks": 3646,
+  "T_optimizer_updates": 19,
+  "goal_tool_status": "blocked",
+  "goal_objective_achieved": false,
+  "protected_original_score": 40.47,
+  "current_best_user_reported_score": 40.48,
+  "independently_verified_official_score": false,
+  "latest_score_feedback": [
+    {
+      "policy": "source_rerank",
+      "user_reported_score": "40.12",
+      "bytes": 384575,
+      "sha256": "f9bd8474b07365893498d27b16c16fa21f5e7ea677e37e125b2437c50f455a6f",
+      "changed_sources": 11,
+      "added_frames": 724,
+      "removed_frames": 724,
+      "parameter_count": 8816809946
+    },
+    {
+      "policy": "source_remove",
+      "user_reported_score": "40.48",
+      "bytes": 384482,
+      "sha256": "85778a086f3fb0152947ece40b8dc258c7fef717b40519fe3e23fd4f7b0fabbe",
+      "changed_sources": 3,
+      "added_frames": 0,
+      "removed_frames": 27,
+      "parameter_count": 8816809946
+    }
+  ],
+  "latest_actual_pilot": {
+    "GPU_seconds": 314.60934892110527,
+    "actual_first_CPU_cases": 25,
+    "actual_new_logical_windows": 25,
+    "actual_new_physical_forwards": 50,
+    "actual_new_native_decisions": 800,
+    "metrics": {
+      "correct": {
+        "mean_summary_F1": 0.08151272985763566,
+        "selected_native_frames": 590,
+        "selected_fraction": 0.032362459546925564
+      },
+      "local_shift16_alias": {
+        "mean_summary_F1": 0.07315271710775459,
+        "selected_native_frames": 592,
+        "selected_fraction": 0.03247216279962701
+      }
+    },
+    "ranking": {
+      "correct": {
+        "source_summary_task_weighted_AUC": 0.5546367994033108,
+        "independently_exhaustive_pairwise_AUC": 0.5546367994033107,
+        "within_window_summary_task_weighted_AUC": 0.5219223129804831,
+        "summary_positive_weighted_margin": -0.7867131328814305,
+        "summary_omission_weighted_margin": -0.9529727486501969,
+        "fixed_anchor_column_fraction_of_unweighted_margin_variance": 0.0009435562853387589,
+        "whole_window_row_fraction_of_unweighted_margin_variance": 0.9678606146441275,
+        "fixed_anchor_effect_is_diagnostic_not_proof_of_causal_token_bias": true
+      },
+      "local_shift16_alias": {
+        "source_summary_task_weighted_AUC": 0.5473456323499908,
+        "independently_exhaustive_pairwise_AUC": 0.5473456323499908,
+        "within_window_summary_task_weighted_AUC": 0.4834405572223069,
+        "summary_positive_weighted_margin": -0.7964210904739003,
+        "summary_omission_weighted_margin": -0.9501959039577099,
+        "fixed_anchor_column_fraction_of_unweighted_margin_variance": 0.0009435562853387589,
+        "whole_window_row_fraction_of_unweighted_margin_variance": 0.9678606146441275,
+        "fixed_anchor_effect_is_diagnostic_not_proof_of_causal_token_bias": true
+      }
+    },
+    "original_unmasked120_metrics_adopted": {
+      "correct": {
+        "mean_summary_F1": 0.11514283972170296,
+        "selected_native_frames": 2150,
+        "selected_fraction": 0.1179309966540508
+      },
+      "local_shift16_alias": {
+        "mean_summary_F1": 0.12553493284592723,
+        "selected_native_frames": 2132,
+        "selected_fraction": 0.11694366737973781
+      }
+    },
+    "gate": {
+      "within_window_AUC_at_least": 0.55,
+      "within_window_AUC_gain_over_local_shift_at_least": 0.03,
+      "native_summary_F1_above_unmasked120": true,
+      "interpretation": "Necessary fitting diagnostic to consider further development; not proof of independent quality, official benefit or training admission"
+    },
+    "gate_pass": false,
+    "confirmation_sources_read": 0,
+    "new_training_updates": 0
+  },
+  "parameter_accounting": {
+    "actual_original8B_TIME_loaded": 8782459120,
+    "complete_inference_pipeline_budget_with_existing_auxiliaries": 8853994586,
+    "latest_pilot_did_not_rerun_auxiliary_models": true
+  },
+  "evidence_bindings": [
+    {
+      "source_relative_path": "reports/sprint_spatial_s1_20261021_v1/current_state.json",
+      "bytes": 3487,
+      "sha256": "8493e41d9ef13c51e9b179cf29cba0a306db1311ddcbdb13e4d4db0962d46364",
+      "complete_private_asset_not_distributed": true
+    },
+    {
+      "source_relative_path": "reports/sprint_spatial_s0_20261021_v1/current_state.json",
+      "bytes": 4000,
+      "sha256": "938b75618129e81e99c6c15f4544b0d1fe3decb7e1f97613f055c1172bd59d14",
+      "complete_private_asset_not_distributed": true
+    },
+    {
+      "source_relative_path": "reports/sprint_audio_events_20261021_v1/current_state.json",
+      "bytes": 2005,
+      "sha256": "aeb2cefa436d5ee3de680aecbe6ffff1de0c9113c375462846bac708d2679d21",
+      "complete_private_asset_not_distributed": true
+    },
+    {
+      "source_relative_path": "reports/sprint_temporal_asset_gate_20261021_v1/current_state.json",
+      "bytes": 338,
+      "sha256": "ee9f5866792fbb163493e8f4cc737ceb05fec976a980a05852268db8cf5bc676",
+      "complete_private_asset_not_distributed": true
+    },
+    {
+      "source_relative_path": "reports/highlight_source_admission_20261021_v1/current_state.json",
+      "bytes": 3066,
+      "sha256": "cf4d0b05ae643729a8dc5705c06b24a2f0a77c42e196dfebc7a9f912ec0663bc",
+      "complete_private_asset_not_distributed": true
+    },
+    {
+      "source_relative_path": "reports/general_highlight_supervision_20261021_v1/current_state.json",
+      "bytes": 4197,
+      "sha256": "bb35ee7fa783b34f8f09ed3157c893734f41ff0a7a45769d6d93dc6c57b5c4af",
+      "complete_private_asset_not_distributed": true
+    },
+    {
+      "source_relative_path": "reports/overnight_candidates_20261022_v1/current_state.json",
+      "bytes": 5643,
+      "sha256": "f833d27b6f37af9d5c47ee8deb0aebc49c58e0cc2baaf4460701544c5e2f7563",
+      "complete_private_asset_not_distributed": true
+    },
+    {
+      "source_relative_path": "reports/t_branch_execution_20261022_v1/current_state.json",
+      "bytes": 53522,
+      "sha256": "51b27c4806058dd57e3dd2cc7e257d80ebe7c822dc7b42b9a793d6c56e59f94d",
+      "complete_private_asset_not_distributed": true
+    },
+    {
+      "source_relative_path": "reports/t_branch_execution_20261022_v1/short_localized122_123.json",
+      "bytes": 5790,
+      "sha256": "04a4620110d4aca709ac63d52a7e79384d748a4b5b8d9401bca8754db2c3fc2b",
+      "complete_private_asset_not_distributed": true
+    },
+    {
+      "source_relative_path": "reports/overnight_candidates_20261022_v1/user_score_feedback_40_12_40_48_20261022_68.json",
+      "bytes": 3556,
+      "sha256": "22def7c012f4a9e4fb38e8694479bf59f3bde2bb8235ab9014f49b4be7e50744",
+      "complete_private_asset_not_distributed": true
+    }
+  ],
+  "privacy": "No new official/external media, restricted labels, frame predictions, submission ZIP, raw text, tensor, model weight, full input/source locks, signed CDN metadata or credentials published.",
+  "execution": "Latest pilot natural completed/exit0 and all25 firstCPU complete; no active owned pilot GPU. No experiment rerun, submission or service/network modification for publication."
+}

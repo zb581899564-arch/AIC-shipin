@@ -1,0 +1,52 @@
+"""Exact four-source confirmation plan/cost inventory; no labels, model or decode."""
+import os
+os.environ['CUDA_VISIBLE_DEVICES'] = ''
+from fractions import Fraction
+import traceback
+
+from t_io import ROOT, check, identity, read, save
+from t_runtime39 import runtime
+
+OUT = ROOT / 'confirmation_inventory52'
+
+
+def main():
+    OUT.mkdir()
+    runtime()
+    from time_control50_prepare import source_windows
+    import torch
+    registry = ROOT / 'source_registry09/registration.json'
+    sources = [row for row in read(registry)['sources'] if row['role'] == 'confirmation']
+    if len(sources) != 4 or len({row['publisher'] for row in sources}) != 4:
+        raise ValueError('Original fixed four fresh publisher set differs')
+    planned = []
+    for source in sources:
+        clock, points, windows = source_windows(source)
+        origin = Fraction(clock['first_PTS_exact'])
+        duration = Fraction(clock['physical_end_exact']) - origin
+        cells = len({int(point * 2) for point in points})
+        planned.append(dict(source=source, exact_original_windows=windows, native_frames=len(points),
+            physical_duration_exact=str(duration), semantic_occupied_halfseconds=cells,
+            semantic_context_batches=(cells + 7) // 8,
+            original_and_trained_greedy_calls=2 * len(windows)))
+    if torch.cuda.is_initialized():
+        raise ValueError('CPU inventory initialized CUDA')
+    save(OUT / 'completion.json', dict(state='FOUR_FRESH_PUBLISHER_FULL_NATIVE_CONFIRMATION_INVENTORY_ONLY',
+        original_source_registration=identity(registry), planned=planned,
+        total_windows=sum(len(row['exact_original_windows']) for row in planned),
+        original_and_trained_greedy_calls=sum(row['original_and_trained_greedy_calls'] for row in planned),
+        semantic_queries=sum(row['semantic_occupied_halfseconds'] for row in planned),
+        semantic_batches=sum(row['semantic_context_batches'] for row in planned),
+        VERIFY_calls='Only know after actual greedy; deduplicate identical task/input, no guessed bound',
+        labels_read=False, media_decode=0, processor_calls=0, model_calls=0,
+        confirmation_quality_unexposed=True, no_GPU_or_input_or_production_admission=True,
+        budget_gate='Use actual unspent T1; no partial-source confirmation or shorter subset to fit time')))
+
+
+if __name__ == '__main__':
+    try:
+        main()
+    except Exception:
+        if OUT.exists():
+            save(OUT / 'failure.json', dict(traceback=traceback.format_exc()))
+        raise
