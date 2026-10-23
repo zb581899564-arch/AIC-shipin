@@ -1,4 +1,20 @@
-# AIC视频：40.48反馈最佳与2026-10-23完整T分支终态
+# AIC视频：最后24小时生产探索，接替审查修订（2026-10-23）
+
+本轮在用户最新授权下，基于精确 `e8224c4339007790a1be383be19fdb200cc817bc`，采用并审查修订PR #7直接后继 `60bcec3c6f058acf31352dfa771a48b81b9e5bd9`。已实现三条主机制和四个固定对照，共七候选。首个执行目标为 `g_subject` 全426可提交包；M资产齐备且吞吐允许时第二优先M，否则转R。新候选跳过新增离线质量门，保留一次真实工程冒烟和全部封包检查。**当前仅公开CPU工程检查通过，尚无本轮真实Linux推理、质量验证、新ZIP或新成绩。**
+
+- [冲刺计划：失败地图、八项研究筛选、七候选与24小时安排](FINAL_SPRINT_PLAN_20261023.md)
+- [接替审查：具体故障、完整修复与研究边界](improvement/final_sprint_v1/REVIEW_AUDIT.md)
+- [给GPT-6.1-sol的Linux RUNBOOK](improvement/final_sprint_v1/RUNBOOK.md)
+- [机器候选注册](improvement/final_sprint_v1/candidates.json)
+- [已运行/未运行检查与首跑风险](improvement/final_sprint_v1/VALIDATION.md)
+- [可选CG-DETR/CLIP精确资产与直连步骤](improvement/final_sprint_v1/OPTIONAL_SPECIALIST.md)
+- [此次审查修订的公开范围](docs/publication_scope_reviewed_sprint_20261023.json)
+
+两份40.48/40.47原ZIP及依赖不动；不恢复CONTROL5和旧科学失败，不上传私有媒体、权重、raw、tensor、完整输入锁或新预测ZIP。赛程24小时与两天各5次来自用户最新消息，没有独立核实延期。正式提交由用户/执行端人工完成。
+
+---
+
+# 已完成历史：40.48反馈最佳与2026-10-23完整T分支终态
 
 **最新同步2026-10-23：40.48删弱包为当前用户反馈最佳，原40.47及两者依赖均保护。真实局部注意力25窗8B小试与全部独立QA已完成，但选片退化；新T ZIP仍0。**
 
