@@ -1,0 +1,34 @@
+{
+  "schema": "EXPLICIT_NATIVE98_REMAINING_ENGINEERING_INPUT_REUSE103",
+  "original_protocol": "native_action_protocol98.json",
+  "actual_initial_sequential_cost_STOP": "native_first_micro101/completion.json",
+  "original5600_and7200_and43200_caps_unchanged": true,
+  "original101_firstgreedy_teacher_gradient_RNG_adopted_no_repeat": true,
+  "scientific_recipe_all217_five_publisher_updates_and200dev_unchanged": true,
+  "only_engineering_change": "One CPU-validated input load and actual GPU transfer per case shared by greedy and teacher; bounded one-worker next-input prefetch; exact storage/version+non-tensor mutation guard; no batching, precision change, sampling, label/prompt/codec/dose changes.",
+  "old101_measured_seconds": {
+    "greedy_model": 7.0953482603654265,
+    "greedy_all": 10.509972455911338,
+    "teacher_all": 12.797510761767626,
+    "teacher_forward_backward_and_firstCPU": 10.22234258800745,
+    "firstCPU": 1.7312852935865521
+  },
+  "cost_evidence": "101 repeated data materialization measured ~5.99seconds per micro across load paths, plus sequential IO. Shared same actual GPU inputs removes second complete load/transfer; next CPU load overlaps GPU. CPU lifecycle must pass before bounded actual remaining cases2and3; first actual optimized projection must fit complete remaining scope before any further cases.",
+  "bounded_remaining_probe": {
+    "fixed_next_cases": [
+      2,
+      3
+    ],
+    "max_new_greedy": 2,
+    "max_new_teacher_backward": 2,
+    "optimizer_updates": 0,
+    "GPU_seconds_max": 600,
+    "fees_deducted_from_original_caps": true
+  },
+  "if_cost_still_fails": "STOP this fixed native profile; do not reduce data, comparisons, updates or extend cap",
+  "no_confirmation_or_production_or_package_admission": true,
+  "unexecuted_prototypes": [
+    "native_step102.py",
+    "native_recovery102.py"
+  ]
+}

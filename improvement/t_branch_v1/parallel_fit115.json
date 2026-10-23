@@ -1,0 +1,20 @@
+{
+  "schema": "FIRST_FROZEN_FINAL_FIT_DIAGNOSIS115",
+  "purpose": "Distinguish failure to fit native actions from domain transfer; not a candidate or retest of105 gates",
+  "source": "Entire first publisher in the original105 SHA schedule; one source L7ddd6bf6c93a,25windows. Selection fixed by the old schedule before any final-fit output.",
+  "initial_control": "Adopt all original P1 pre-update selections and original first CPU proofs; those all used the exact initial actor, never repeat them",
+  "new_calls": 25,
+  "weights": "Only exact108 final FP32 actor; original BASE/TIME unchanged; no training, checkpoint choice, thresholds or prompt changes",
+  "inputs": "All25 accepted106 native64 query/AV inputs and original CPU signatures adopted; no decode, processor or ASR",
+  "evaluation": "First native source/all-original-reviewer action F1, source-balanced training loss and selected fraction before versus final, independent set arithmetic. Coarse fitting diagnostic only, no complete40.48 qualification.",
+  "estimated_GPU_seconds": 232.15005910024047,
+  "diagnostic_GPU_seconds_max_all_failures": 420,
+  "proposed_artifact_bytes": 2000000,
+  "all_goal_settled_before": 19956.281254156493,
+  "Goal_GPU_seconds_max": 43200,
+  "actual_complete_model_parameters": 8869330010,
+  "old105_quality_STOP_unchanged": true,
+  "new_training_or_confirmation_or_production": false,
+  "no_test_or_confirmation_labels": true,
+  "no_automatic_followup_job": true
+}

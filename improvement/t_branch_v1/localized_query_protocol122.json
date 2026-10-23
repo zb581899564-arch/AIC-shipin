@@ -1,0 +1,27 @@
+{
+  "version": "fixed_local_native_visibility122",
+  "entry": "localized_query122.py",
+  "source": "Entire original first ESA fitting source, all25 accepted windows and all10 original reviewers; already exposed, not independent validation",
+  "single_factor": "Query attention retains own real temporal visual group plus every nonvisual prefix position; other31 visual groups masked. Original full prefix, task text, visual pooling, identical query positions, native cells and original BASE/TIME unchanged",
+  "new_GPU_seconds_max_all_failures": 800,
+  "Goal_GPU_seconds_before": 20965.32300582342,
+  "Goal_GPU_seconds_max": 43200,
+  "actual_complete_parameters": 8853994586,
+  "new_training_updates": 0,
+  "adopt": ["119all25 original prefix/input/native CPU", "120all25 unmasked outputs and metrics", "121all25 serialized visibility masks and CPU proofs"],
+  "actual_new_logical_windows": 25,
+  "actual_new_physical_forwards": 50,
+  "actual_new_native_decisions": 800,
+  "counterfactual": "Fixed16-row local shift alias moves pooled vector and matching visibility together; exact independent-branch permutation, no additional model forward",
+  "local_information_gate": {
+    "within_window_AUC_at_least": 0.55,
+    "within_window_AUC_gain_over_local_shift_at_least": 0.03,
+    "native_summary_F1_above_unmasked120": true,
+    "interpretation": "Necessary fitting diagnostic to consider further development; not proof of independent quality, official benefit or training admission"
+  },
+  "first_CPU": "Independent121 masked concatenated reference for actual first/last branch QKV, original119 twoULP+2e-6 bound, independent feature pooling/full LM/native mapping; every new window checked",
+  "temporary_retirement": "Only this new profile full internal activation files under /dev/shm/aic_T_localized_query122, after all first independent CPU proofs; permanent projected witnesses/raw/operator masks and old evidence retained",
+  "no_automatic": ["training", "confirmation", "426production", "packaging", "official_submission"],
+  "protected_scores": [40.48, 40.47],
+  "deadline": "2026-10-23T20:00:00+08:00"
+}

@@ -1,0 +1,110 @@
+{
+  "schema": "PARALLEL_NATIVE_QUERY_SELECTION_105",
+  "registered_before_first_new_GPU": true,
+  "source_scope": {
+    "sources": 9,
+    "publishers": 5,
+    "original_reviewers": 86,
+    "whole_native_windows": 217,
+    "actual_cells": 6944,
+    "inventory": "summary_content81/completion.json",
+    "native_reference": "native_action_feasibility97/completion.json"
+  },
+  "development": {
+    "sources": [
+      "Lf27fb5bf66ad",
+      "N68272a683236"
+    ],
+    "whole_windows": 50,
+    "historically_exposed": true
+  },
+  "confirmation": "Original four unexposed publisher groups,198native windows. Freeze one final method before first quality; no source replacement or retest after results.",
+  "native_partition": "32 actual stored video_grid_thw temporal pairs,2original sampled frames each. Native cell boundaries are exact native-index cuts at sampled-pair midpoints, clipped only by the already registered eligible source domain. No frame-label interpolation, FPS stretching or64-feature assumption.",
+  "supervision": "All original timestamped human summaries on native frames. Per-review/source summary-selected and observed summary-task domain remain distinct from semantic HL/NHL/UNKNOWN. Omitted summary content remains semantically UNKNOWN; no-reference/task-unobserved units have zero loss.",
+  "loss": "For each original reviewer over the whole source, balance total selected-task frame mass and nonselected-for-this-summary task mass to1/2 each (positive-only or negative-only observed tasks use unit total; no observed task gives zero). Sum exact native counts into each cell, then average all original reviewers. Do not renormalize each window or drop blank windows. Conditional binary log-softmax only at32choice positions, weighted by those coefficients and equal sources within publisher.",
+  "new_mechanism": "One full multimodal prefill reads32 independent static cell queries. No sequential generated choices and no previous human answers in train or inference. Same complete original8B attention+new originalTIME-cloned languageLoRA; existing Yes/No LM rows are frozen, no new head. Native98greedy+teacher recipe costSTOP preserved, its weights/gradients not used.",
+  "input": "Same accepted native64/PTS and clipped localWhisper; fixed query task+32 static letter/question-mark pairs. Targets only enter source-global preference loss after forward. No learned summary85 or query-answer text supplied.",
+  "prediction": "All32 actual query-terminal logits, conditional Yes/No argmax with minimum-token-ID tie. AllNo is successful legal empty; missing/nonfinite tensors are execution failures. No threshold, coverage calibration, topk or forced nonempty.",
+  "training": {
+    "initialization": "ExactFP32 originalTIME clone, no failed adapter or gradient reuse",
+    "rank": 16,
+    "alpha": 32,
+    "dropout": 0.0,
+    "modules": "144language q/k/v/o,288FP32 tensors,15335424parameters",
+    "seed": 7405,
+    "epochs": 1,
+    "publisher_updates": 5,
+    "whole_windows": 217,
+    "teacher": "One full-prefill loss/backward per actual window at the same32 independent query terminals used by inference; no generation or prior answer tokens",
+    "optimizer": "AdamW",
+    "lr": 5e-05,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "epsilon": 1e-08,
+    "weight_decay": 0.0,
+    "gradient_clip": 1.0,
+    "final_checkpoint_only": true,
+    "publisher_order": "Original99fixed publisherSHA schedule and source/native window order"
+  },
+  "input_arm_keys": [
+    "original_TIME_native_codec_AV_correct",
+    "trained_native_AV_correct",
+    "trained_native_joint_AV_shift",
+    "trained_native_video_shift_ASR_correct"
+  ],
+  "development_matrix": [
+    "original_TIME_parallel_AV_correct",
+    "trained_parallel_AV_correct",
+    "trained_parallel_joint_AV_shift",
+    "trained_parallel_video_shift_ASR_correct"
+  ],
+  "counterfactual": "Only trained diagnostic views: roll actual measured video temporal groups by16, retaining timestamps/cell anchors; for joint shift also swap only ASR words by fixed half-source native-window permutation. Correct ASR is unchanged in video-only diagnostic. No new ASR or pixel decoding.",
+  "development_gates": [
+    "Both development publishers improve complete-source all-original-reviewer native F1 over actual full40.48",
+    "Trained correct macro beats originalTIME native-codec control and fixed joint AV shift",
+    "No newly entirely-empty source, illegal action, incomplete denominator or engineering failure",
+    "Actual all-model parameters<=9B, confirmation+full426+QA+transfer fit actual remaining Goal/deadline"
+  ],
+  "confirmation_gates": [
+    "One frozen final adapter/method; all four original fresh sources once",
+    "Mean complete-source paired F1 beats actual40.48 and at least2/4sources improve",
+    "Correct content beats fixed joint AV shift; no new empty or invalid source",
+    "No post-confirm source, threshold, dose or format retry"
+  ],
+  "video_only_shift": "Diagnostic only; no post-result architecture selection",
+  "initial_control": "First50 originalTIME parallelquery correct outputs before any update, same exact new inputs. These do not replace strongest actual full40.48 controls.",
+  "profile_GPU_seconds_max_all_failures": 5400,
+  "training_and_development_GPU_seconds_max": 3600,
+  "first_control50_and_micro_GPU_seconds_max": 750,
+  "first_cost_gate": "First actual50 initial controls and one training forward/backward/gradient+RNG/independentCPU. Use actual bounded prefetch/transfer/forward/gradient time and complete remaining216+150dev scope. If it does not fit3600remaining, preserve successes and stop; no data/dose/comparison/cap changes.",
+  "Goal_GPU_seconds_already_settled": 16070.190017867833,
+  "Goal_GPU_seconds_max": 43200,
+  "components": {
+    "BASE_and_original_TIME": 8782459120,
+    "new_native_actor": 15335424,
+    "fixed_semantic_head": 98329,
+    "local_Whisper_tiny": 37184640,
+    "fixed_I3D": 28043472,
+    "fixed_UMT": 6209025
+  },
+  "expected_full_method_parameters": 8869330010,
+  "protected_original": {
+    "path": "/home/inspur/aic_video_work/semantic_context_production_20261016_v1/package/candidate_CONTEXT_SEMANTIC_RESIDUAL.zip",
+    "bytes": 384630,
+    "sha256": "b37c4a2e6593fc800f54ecce2f860fee5e7d5dc74e17ce280f9ee6722afbccd3"
+  },
+  "protected_best": {
+    "path": "/home/inspur/aic_video_work/general_highlight_supervision_20261021_v1/routing_package63/source_remove/candidate_SPORT_ROUTE_REMOVE_8B.zip",
+    "bytes": 384482,
+    "sha256": "85778a086f3fb0152947ece40b8dc258c7fef717b40519fe3e23fd4f7b0fabbe"
+  },
+  "downstream": "Merge contiguous selected cells into exact native supports; preserve original D8/VERIFY/semantic/current40.48 route and fixed spatial source field. First missing VERIFY only, all accepted identical outputs/BASE/head/route/QA adopted. Complete source masks before labels; no coarse-only qualification.",
+  "old_native98_cost_STOP_preserved": true,
+  "old_summary85_or_native98_actor_or_gradient_used": false,
+  "all_4_confirmation_labels_unread": true,
+  "production": "No automatic426 or package from CPU/training success. Frozen full source validation first; all426native/source/spatial/parameter/independent11strict/CRC/memberSHA/real difference/Windows integrity gates. Current rules before production/package; no automatic website submission.",
+  "constraints": "Linux resident, actual direct download/receive evidence or specific authorization; no new downloads, authors/otherchats/automations/website submission/network changes;CONTROL5neverresume. Current official rules23receipt,<=9B, no test annotation/training/manual or leaderboard reverse construction.",
+  "temporary": "Only first new full-vocabulary logits retire after first independent CPU proof; keep all other raw/proofs/gradient/RNG/final adapters and old artifacts."
+}

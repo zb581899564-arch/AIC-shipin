@@ -1,0 +1,20 @@
+{
+  "schema": "HUMAN_CONTENT_MODALITY_AND_BASE_TIME_DIAGNOSTIC_V67",
+  "registered_before_first_model_score": true,
+  "protected40_47_unchanged": true,
+  "cohort": "description_inventory63 fixed16fit and8dev,7fit recordings/5publishers; original four confirmation not read",
+  "labels": "Original human descriptions of selected complete original intervals, not new machine labels or ordinary negatives; descriptions mix visual events and spoken facts",
+  "real_inputs": "48 first native64 correct/disjoint same-source views64 and48 first clipASR65; all CPU mapping/serialization/token gates passed",
+  "matrix": ["V_correct", "V_wrong", "AV_correct", "AV_wrong"],
+  "roles": ["BASE with original TIME disabled", "Original frozen TIME enabled"],
+  "question": "One fixed generic content description question for both modalities; target human words are separate conditional supervised targets, never injected as the question",
+  "dedup": "Identical actual input signature and target token sequence share one score per role, including unavailable ASR cases; no repeated successful TF",
+  "budget": {"first_causal_TF_max": 192, "actual_CPU_matrix_TF_max": 186, "GPU_seconds_max_including_load_first_CPU_checks": 1500, "all_Goal_GPU_seconds_max": 43200},
+  "probabilities": "Full-vocabulary unconstrained human-text conditional log likelihood, not grammar-policy probabilities or actual free selection",
+  "first_independent_QA": "Separate CUDA-masked CPU NumPy float64 full-vocabulary reduction for every new TF, target/input/role binding, unchanged weights and unique resource ledger",
+  "raw": "Retain per-token target logits, full-vocabulary log-normalizers, target log-probabilities and independent CPU proofs permanently; one full-vocabulary temporary evaluator activation is retired only after its first complete CPU verification with hash/retirement receipt, no old raw removed",
+  "report": "Per-example and source-level matched-minus-misaligned margins for each role/modality; no official F1, new blind or highlight-quality claim",
+  "no_automatic_training_or_candidate": true,
+  "next": "Use actual content observability and BASE/TIME differences to decide one supported mechanism; only actual complete-source free generation and original frozen confirmation can admit production",
+  "old44_60_STOPs_and_all_fees_preserved": true
+}

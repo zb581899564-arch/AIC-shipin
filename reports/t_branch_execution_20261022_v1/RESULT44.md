@@ -1,0 +1,9 @@
+# T真实梯度与整源小试固定里程碑44
+
+最新44：27/29完整97输入与首次独立QA全过；30剩余93原TIME实际GPUcompletedexit0/785.246022秒，CPU语法导入顺序失败后37仅补首次输出重放，97完整整源参考已通过。38的4个causal TF成功，actor精确复制门失败/75.273890秒保留；40采用4TF独立标量重放过，41实核当前PEFT附加adapter装载舍入，42只剩余一次真实8B actor反向/118.760302秒及独立CPU完整通过，288张量非零梯度、norm87.2293，原BASE/TIME逐byte不改、actual8797892873参数、Torch峰24949078528B、0optimizer。43整源反事实/原runtime一次绑定数学与CPU契约通过，不重跑。
+
+当前无研究进程/GPU释放，CONTROL5原startticks仍T；无训练/新ZIP，Goal active未完成。准确joint_policy_protocol44.json已6890B/SHA d9f01805183ab0a40028f0cc173053f6470083659cf0e17c14f848bfc7e849c7固定并部署Linux code/，但trainer尚未实现/未启动，勿把protocol当launcher。下一直接实现4个完整来源episode：2fit各两次，整源采样/greedy权重不变，每窗优势来自全source sample只替换此窗greedy的反事实，累积所有窗梯度后一次source更新；不是旧16局部更新草案。t_runtime39负责只初始化一次后导入grammar；actor_copy41从actualdefault逐值复制，普通PEFT load_adapter不能当精确复制。所有旧失败/raw/费用保持。
+
+额外限制：LVSum是视听摘要，静音视图不能保证识别所有讲话语义，本profile只小试视觉可预测偏好，不悄悄加ASR或改源。低精度causal/incremental存在2/103 argmax差异，不假称精确rollout梯度；必须实际greedy内容/错位和完整40.47/新四确认通过才生产。旧闭池expectedJ→固定K失败经验继续约束，不凭loss/概率J/梯度大小封包。原40.47ZIP及所有依赖不动。
+
+截至本里程碑全部已记账GPU秒（含failed）1302.8305039964616；尚无实际T1 optimizer更新、新候选或官网提交。
