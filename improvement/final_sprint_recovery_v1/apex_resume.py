@@ -17,7 +17,7 @@ WORK = Path('/home/inspur/aic_video_work')
 REPO = WORK / 'final_sprint_temporal_field_checkout_20261023_v6'
 RUN = WORK / 'final_sprint_temporal_r_production_20261023_v6'
 OLD = WORK / 'final_sprint_temporal_field_chain_20261023_v6'
-CONTROL = WORK / 'final_sprint_r_apex_remaining_recovery_20261023_v7'
+CONTROL = WORK / 'final_sprint_r_apex_remaining_recovery_20261023_v8'
 COMMIT = '8dcde128be0ffe2df3ccba75d69929b7a9769a6f'
 PYTHON = WORK / 'env/qwen3vl_isolated_20260910/bin/python'
 WRAPPER = 'edb481022ce2407082d7c2a496853ed1'
@@ -42,6 +42,11 @@ def main():
     assert 'Stage wall-time budget exhausted' in (RUN / 'wrappers' / WRAPPER / 'command.log').read_text()
     failed = read(OLD / 'r_time_apex_run_terminal.json')
     assert failed['exit_code'] == 1
+    env_failure = WORK / 'final_sprint_r_apex_remaining_recovery_20261023_v7'
+    failed['wall_seconds'] += read(env_failure / 'run_terminal.json')['wall_seconds']
+    prior_env = read(RUN / 'wrappers/d544b7268f7a429886f0cda75456d3ab/completion.json')
+    assert prior_env['child_exit_code'] == 1 and not prior_env['task_terminals']
+    assert 'CUDA_VISIBLE_DEVICES must equal' in (RUN / 'wrappers/d544b7268f7a429886f0cda75456d3ab/command.log').read_text()
     original_start = datetime.fromisoformat(read(OLD / 'r_time_apex_run_started.json')['at'])
     absolute_end = original_start + timedelta(seconds=1800)
     successful = sorted((RUN / 'candidates/r_time_apex/sources').glob('*/result.json'))
@@ -53,7 +58,9 @@ def main():
         old_failed_wrapper=WRAPPER, old_cost_seconds=failed['wall_seconds'],
         original_absolute_end=absolute_end.isoformat(), already_successful_sources=5,
         no_new_inference=True, at=datetime.now(timezone.utc).isoformat(), pid=os.getpid()))
-    env = dict(os.environ, CUDA_VISIBLE_DEVICES='', OMP_NUM_THREADS='2', MKL_NUM_THREADS='2',
+    # The frozen CLI explicitly requires physical GPU0 even for cached-only
+    # derivation. That path takes no GPU lease and cannot create phase calls.
+    env = dict(os.environ, CUDA_VISIBLE_DEVICES='0', OMP_NUM_THREADS='2', MKL_NUM_THREADS='2',
         OPENBLAS_NUM_THREADS='2', NUMEXPR_NUM_THREADS='2', TOKENIZERS_PARALLELISM='false',
         HF_HUB_OFFLINE='1', TRANSFORMERS_OFFLINE='1', PYTHONDONTWRITEBYTECODE='1',
         PYTHONPATH=str(WORK / 'final_sprint_optional_assets_20261023/python') + os.pathsep + str(REPO))
