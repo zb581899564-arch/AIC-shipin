@@ -87,6 +87,18 @@ def specialist_options(candidate):
     return result
 
 
+def fresh_throughput_sample(candidate_id, reused_source, adopted_entries, source_id):
+    """Cached temporal observations cannot measure fresh decode/encoder cost.
+
+    The fixed source order and all real charges remain unchanged. The M cost
+    guard needs five genuinely new temporal observations, rather than treating
+    adopted CPU work as a measured zero or repeating it solely for a benchmark.
+    """
+    return (not reused_source and
+            not (route_family(candidate_id) == "specialist" and
+                 "clip_features_" + source_id in adopted_entries))
+
+
 class Engine:
     def __init__(self, assets, assets_path, candidate_id, budget):
         self.assets, self.assets_path, self.candidate_id = assets, assets_path, candidate_id
@@ -380,7 +392,8 @@ class Engine:
             results.append(result)
             print(f"SOURCE_COMPLETE candidate={self.candidate_id} sources={len(results)}/426 "
                   f"frames={len(result['predictions'])} status={result['status']}", flush=True)
-            if not reused:
+            if fresh_throughput_sample(self.candidate_id, reused,
+                                       getattr(self.journal, "entries", {}), sid):
                 fresh_sources += 1
                 fresh_duration += Fraction(source["physical_end_exact"])
                 fresh_seconds += max(0.0, time.monotonic() - started -
@@ -390,6 +403,9 @@ class Engine:
                 historical_after = (self.adopted_ground_seconds +
                                     getattr(self.journal, "historical_seconds_for_forecast", 0.0))
                 fresh_seconds += historical_after - historical_before
+            elif not reused:
+                print(f"COST_SAMPLE_ADOPTED_TEMPORAL source={sid} "
+                      "fresh_decode_cost=UNMEASURED_CHARGE_RETAINED", flush=True)
             if fresh_sources >= 5:
                 remaining = sum((Fraction(s["physical_end_exact"]) for s in self.sources[len(results):]), Fraction(0))
                 estimate = fresh_seconds / float(fresh_duration) * float(remaining) * 1.2
@@ -467,10 +483,16 @@ def smoke(assets, assets_path, candidate_id):
         if family == "specialist":
             start = time.monotonic()
             adopted_before = getattr(engine.journal, "historical_seconds_for_forecast", 0.0)
+            cpu_before = set(getattr(engine.journal, "historical_forecast_cpu_bounds", {}))
             _, selection, refs = engine.specialist_selection(source)
             references.extend(refs)
             specialist_seconds = (time.monotonic() - start +
                                   getattr(engine.journal, "historical_seconds_for_forecast", 0.0) - adopted_before)
+            # Only a conservative upper bound is available for adopted outer
+            # CPU work. It is not a new charge or a measured warm CPU zero.
+            cpu_bounds = getattr(engine.journal, "historical_forecast_cpu_bounds", {})
+            specialist_seconds += sum(value[1] for name, value in cpu_bounds.items()
+                                      if name not in cpu_before)
         else:
             specialist_seconds = 0.0
         first = 0
@@ -493,6 +515,8 @@ def smoke(assets, assets_path, candidate_id):
                   "evidence_refs": references, "parameter_receipts": parameters,
                   "phase_seconds": phase_seconds, "phase_clips": len(phases),
                   "specialist_seconds": specialist_seconds, "source_duration_exact": source["physical_end_exact"],
+                  "adopted_specialist_cpu_bounds": getattr(engine.journal, "historical_forecast_cpu_bounds", {}),
+                  "adopted_specialist_cold_uncertainty": getattr(engine.journal, "historical_forecast_cold_reasons", {}),
                   "spatial_seconds": spatial_seconds, "spatial_frames": len(frames),
                   "adopted_ground_calls": engine.adopted_ground_calls + getattr(engine.journal, "adopted_ground_calls", 0),
                   "adopted_historical_gpu_seconds_not_new_charges": engine.adopted_ground_seconds + getattr(engine.journal, "adopted_ground_seconds", 0.0),

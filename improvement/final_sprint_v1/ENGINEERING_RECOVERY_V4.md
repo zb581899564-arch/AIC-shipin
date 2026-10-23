@@ -33,6 +33,18 @@ wall costs stay separate. Outer specialist calls conservatively retain wall
 time and explicitly flag possible cold-load uncertainty; it must not be labelled
 warm GPU time or hidden when deciding whether M fits its original route budget.
 
+The M follow-up exactly matches image-pixel batches, query tokens/layout and CG
+window/input identities to the nested successful calls. Their warm model times
+are counted once; unseparated CPU/loading cost remains an explicit interval.
+The M cold forecast uses that interval's conservative upper bound. Its production
+throughput guard uses the first five sources with genuinely new temporal
+observations, in the original fixed source order: already adopted observations
+cannot measure fresh decode/encoder CPU time and are not rerun for benchmarking.
+All actual work is charged and the original route/overall caps still apply.
+The exact reviewed 083d G wrappers may also contribute new independent grounding
+calls after natural termination. Both old/new BF16 loader ASTs are normalized by
+the same exact opt-in statements; arbitrary old commits remain disallowed.
+
 ## Phase numerical repair
 
 R's original cached/full-prefix QA failed. An output-head-only FP32 diagnostic

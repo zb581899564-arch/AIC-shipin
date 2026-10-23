@@ -12,12 +12,13 @@ from .contracts import checked, iter_refs, ref, require, stable_key, strict_load
 
 SCHEMA = "AIC_FINAL_PURE_CALL_ADOPTION_V1"
 OLD_COMMIT = "04731cab0d1d805608924e38aa64e7ab5083ab0b"
+ALLOWED_OLD_COMMITS = frozenset((OLD_COMMIT, "083d437e2ea3f0b12e83e0d11f982252b7bdc83d"))
 PREFIXES = ("ground_", "query_", "clip_features_", "specialist_")
 COMMON = ("qwen", "sources", "protected_baselines", "baseline_parameter_receipts")
 
 
 def compatible_assets(old, new):
-    require(old["source_commit"]["commit"] == OLD_COMMIT, "Unaudited old source implementation")
+    require(old["source_commit"]["commit"] in ALLOWED_OLD_COMMITS, "Unaudited old source implementation")
     require("arithmetic_profile" not in old["qwen"] and "arithmetic_profile" not in new["qwen"],
             "Pure-call adoption requires unchanged default BF16 arithmetic")
     for key in COMMON:
@@ -29,7 +30,7 @@ def compatible_assets(old, new):
 def parent_documents(parent):
     old = strict_load(checked(parent["old_assets"]))
     wrapper = strict_load(checked(parent["wrapper"]))
-    require(old["source_commit"]["commit"] == OLD_COMMIT, "Unaudited old source implementation")
+    require(old["source_commit"]["commit"] in ALLOWED_OLD_COMMITS, "Unaudited old source implementation")
     require(wrapper.get("schema") == "AIC_FINAL_OWNED_WRAPPER_V1"
             and wrapper.get("asset_lock") == parent["old_assets"]
             and wrapper.get("work_terminated") is True
@@ -111,6 +112,99 @@ def validate_row(row):
                 forecast_includes_cold_load=row["task_id"].startswith(("clip_features_", "specialist_source_")))
 
 
+def _nested_components(task_id, entries, values, sources):
+    """Match saved producer requests, never infer dependencies from durations."""
+    entry, value = entries[task_id], values[task_id]
+    binding = entry["call_binding"]
+    spec = binding["specialist_spec_sha256"]
+    source = sources[stable_key(binding["source"])]
+    require(source["clock"] == binding["clock"], "Outer native clock differs")
+    dependencies = {}
+
+    def match(kind, predicate):
+        matches = []
+        for name, candidate in entries.items():
+            request = candidate["call_binding"]
+            if request.get("kind") != kind or request.get("specialist_spec_sha256") != spec:
+                continue
+            payload = request["payload"]
+            key = stable_key(kind, payload)
+            require(request["key"] == key and payload["specialist_spec_sha256"] == spec
+                    and name == "specialist_" + kind + "_" + stable_key(key, payload)[:36],
+                    "Nested specialist cache request identity differs")
+            if predicate(payload, values[name]):
+                matches.append(name)
+        require(len(matches) == 1, "Missing or ambiguous exact nested " + kind + " success")
+        name = matches[0]
+        seconds = values[name].get("gpu_seconds")
+        require(type(seconds) in (int, float) and math.isfinite(seconds) and seconds >= 0,
+                "Nested successful producer lacks finite measured GPU time")
+        dependencies[name] = float(seconds)
+        return values[name]
+
+    if task_id.startswith("clip_features_"):
+        rows = value["features"]["rows"]
+        require(rows and len(rows) == len(binding["cells"]), "Incomplete outer feature/native row table")
+        for row, cell in zip(rows, binding["cells"]):
+            require(row["cell_id"] == cell["cell_id"] and row["frame"] == cell["sample_frame"]
+                    and row["pts"] == cell["sample_pts_exact"] and row["source_id"] == source["video_id"]
+                    and row["source_sha256"] == source["media"]["sha256"], "Feature/native source row differs")
+        first = 0
+        while first < len(rows):
+            def image_batch(payload, output):
+                size = payload["fixed_recipe"]["image_batch_size"]
+                require(type(size) is int and 1 <= size <= 64, "Invalid nested image batch recipe")
+                chunk = rows[first:first + size]
+                return (payload["pixel_sha256"] == [row["pixel_sha256"] for row in chunk]
+                        and payload["shapes"] == [[source["height"], source["width"], 3]] * len(chunk)
+                        and payload["preprocess"] == "native_rgb_short224_floor_center_bicubic_clip_norm_l2_plus1e-5"
+                        and output["image_count"] == len(chunk))
+            output = match("clip_images", image_batch)
+            first += output["image_count"]
+    else:
+        features = [name for name, item in entries.items() if item["returned"] == binding["features_ref"]]
+        require(len(features) == 1 and features[0].startswith("clip_features_"), "Exact old feature packet dependency missing")
+        feature_entry = entries[features[0]]
+        require(all(feature_entry["call_binding"][key] == binding[key] for key in
+                    ("source", "clock", "cells", "specialist_spec_sha256"))
+                and value["feature_table_sha256"] == stable_key(values[features[0]]["features"])
+                and value["source_sha256"] == source["media"]["sha256"]
+                and value["query"] == binding["query"] and value["cells"] == binding["cells"],
+                "Scoring source/query/features dependency differs")
+        match("clip_query", lambda payload, output:
+              payload["query"] == binding["query"]
+              and payload["token_sha256"] == output["token_sha256"] == value["query_tokens_sha256"]
+              and payload["query_layout"] == output["query_layout"] == value["query_feature_layout"])
+        windows = value["window_outputs"]
+        require(windows and len({window["window_id"] for window in windows}) == len(windows),
+                "Incomplete or duplicate scoring window table")
+        for window in windows:
+            match("cg_window", lambda payload, output:
+                  payload["source_sha256"] == source["media"]["sha256"]
+                  and payload["model_input_sha256"] == window["model_input_sha256"]
+                  and payload["window"] == {key: window[key] for key in payload["window"]}
+                  and _semantic(output) == _semantic(window))
+    return dependencies
+
+
+def _bind_nested_forecasts(entries, assets):
+    outer = [name for name in entries if name.startswith(("clip_features_", "specialist_source_"))]
+    values = {name: strict_load(checked(item["returned"]))["result"] for name, item in entries.items()
+              if name in outer or item["call_binding"].get("kind") in ("clip_images", "clip_query", "cg_window")}
+    sources = {stable_key(source["media"]): source for source in assets["sources"]}
+    for name in outer:
+        entry = entries[name]
+        try:
+            components = _nested_components(name, entries, values, sources)
+        except (ValueError, KeyError, TypeError, IndexError) as error:
+            entry["forecast_blocker"] = "Exact warm dependency proof unavailable: " + str(error)
+            continue
+        entry.update(forecast_components=components, forecast_seconds=sum(components.values()),
+                     forecast_includes_cold_load=False, forecast_basis="EXACT_NESTED_WARM_GPU",
+                     forecast_cpu_seconds_bounds=[0.0, entry["historical_wall_seconds"]],
+                     forecast_cpu_basis="CPU/load not separately metered; interval, never an assumed zero")
+
+
 def validate_manifest(assets, identity):
     from .prepare_pure_adoption import audit_sources
     manifest = strict_load(checked(identity))
@@ -140,6 +234,7 @@ def validate_manifest(assets, identity):
                 and previous["semantic_sha256"] == entry["semantic_sha256"],
                 "Duplicate task has conflicting request or semantic output")
     require(result, "No complete independent calls eligible for adoption")
+    _bind_nested_forecasts(result, assets)
     return result
 
 
@@ -149,6 +244,9 @@ class PureCallJournal:
         self.historical_seconds_for_forecast = self.adopted_ground_seconds = 0.0
         self.historical_wall_seconds_for_forecast = 0.0
         self.historical_forecast_cold_uncertainty, self.historical_forecast_cold_tasks = False, []
+        self.historical_forecast_cold_reasons, self.historical_forecast_cpu_bounds = {}, {}
+        self.historical_forecast_cpu_uncertainty = False
+        self._forecast_used = set()
         self.adopted_ground_calls, self._used = 0, set()
 
     def __getattr__(self, name):
@@ -167,11 +265,19 @@ class PureCallJournal:
             self._used.add(task_id)
             # Individual GPU timings begin after load; outer calls include cold
             # loading and nested calls. Flag their wall timing before projection.
-            self.historical_seconds_for_forecast += entry["forecast_seconds"]
+            components = entry.get("forecast_components", {task_id: entry["forecast_seconds"]})
+            for name, seconds in components.items():
+                if name not in self._forecast_used:
+                    self._forecast_used.add(name)
+                    self.historical_seconds_for_forecast += seconds
             self.historical_wall_seconds_for_forecast += entry["historical_wall_seconds"]
+            if "forecast_cpu_seconds_bounds" in entry:
+                self.historical_forecast_cpu_uncertainty = True
+                self.historical_forecast_cpu_bounds[task_id] = entry["forecast_cpu_seconds_bounds"]
             if entry["forecast_includes_cold_load"]:
                 self.historical_forecast_cold_uncertainty = True
                 self.historical_forecast_cold_tasks.append(task_id)
+                self.historical_forecast_cold_reasons[task_id] = entry.get("forecast_blocker", "Unseparated outer wall time")
             if task_id.startswith("ground_"):
                 self.adopted_ground_calls += 1
                 self.adopted_ground_seconds += entry["ground_gpu_seconds"]

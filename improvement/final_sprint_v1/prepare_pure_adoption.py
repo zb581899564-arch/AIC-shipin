@@ -93,8 +93,9 @@ def audit_sources(old, old_directory, new_sources):
             fingerprints[name + ":" + dotted] = stable_key(old_ast)
     for method in OPT_IN:
         before, after = [_node(tree, "QwenRuntime." + method) for tree in trees["qwen_runtime.py"]]
-        require(_dump(before) == _default_bf16(after, method), "Default BF16 loader changed: " + method)
-        fingerprints["qwen_runtime.py:default_BF16_" + method] = stable_key(_dump(before))
+        old_default, new_default = [_default_bf16(node, method) for node in (before, after)]
+        require(old_default == new_default, "Default BF16 loader changed: " + method)
+        fingerprints["qwen_runtime.py:default_BF16_" + method] = stable_key(old_default)
     prompts = [_prompt(ast.parse(checked(files["spatial.py"]).read_text(encoding="utf-8")))
                for files in (old_sources, new_sources)]
     configurations = [strict_load(checked(files["candidates.json"]))["shared_spatial_configuration"]

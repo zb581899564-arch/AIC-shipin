@@ -53,7 +53,7 @@ class PureCallAdoptionTests(unittest.TestCase):
                                for name in ("model", "media", "clock")]
         self.old = dict(source_commit=dict(commit=OLD_COMMIT, code=dict(files=self._hashes(self.old_dir))),
                         qwen=dict(asset_tree={"files": [model]}, revision="exact"),
-                        sources=[dict(media=media, clock=clock)], protected_baselines={"40.48": model},
+                        sources=[dict(video_id="0", width=12, height=10, media=media, clock=clock)], protected_baselines={"40.48": model},
                         baseline_parameter_receipts=[model], specialist=dict(checkpoint=model))
         self.old_ref = save_new(self.root / "old_assets.json", self.old)
         self.new = deepcopy(self.old)
@@ -181,12 +181,108 @@ class PureCallAdoptionTests(unittest.TestCase):
         self.assertTrue(journal.historical_forecast_cold_uncertainty)
         self.assertEqual(journal.historical_forecast_cold_tasks, ["specialist_source_0"])
 
+    def m_tasks(self, *, missing_window=False, wrong_pixel=False, wrong_query=False):
+        spec = stable_key(self.old["specialist"])
+        cells = [dict(cell_id=i, sample_frame=i * 2, sample_pts_exact=str(i)) for i in range(3)]
+        binding = dict(source=self.binding["source"], clock=self.binding["clock"], cells=cells,
+                       specialist_spec_sha256=spec)
+        rows = [dict(cell_id=i, frame=i * 2, pts=str(i), source_id="0",
+                     source_sha256=binding["source"]["sha256"], pixel_sha256=str(i) * 64) for i in range(3)]
+        features = dict(rows=rows, features={"opaque_tensor_fixture": "unchanged bytes"})
+        def nested(kind, payload, result):
+            payload = dict(payload, specialist_spec_sha256=spec, fixed_recipe={"image_batch_size": 2},
+                           runtime_identity={"version": "fixed"})
+            key = stable_key(kind, payload)
+            name = "specialist_" + kind + "_" + stable_key(key, payload)[:36]
+            request = dict(kind=kind, key=key, payload=payload, specialist_spec_sha256=spec)
+            return name, request, result, result["gpu_seconds"] + .2, True
+        tasks = []
+        for first, seconds in ((0, 1.25), (2, .75)):
+            chunk = rows[first:first + 2]
+            pixels = [row["pixel_sha256"] for row in chunk]
+            if wrong_pixel and first == 0:
+                pixels[0] = "f" * 64
+            tasks.append(nested("clip_images", dict(pixel_sha256=pixels, shapes=[[10, 12, 3]] * len(chunk),
+                preprocess="native_rgb_short224_floor_center_bicubic_clip_norm_l2_plus1e-5"),
+                dict(image_count=len(chunk), features={"opaque": str(first)}, gpu_seconds=seconds)))
+        tasks.append(("clip_features_0", binding, {"features": features}, 65.0, True))
+        tasks.append(("query_0", self.binding, {"raw_text": "fixture action", "gpu_seconds": 2.0}, 3.0, True))
+        layout, token_sha = {"profile": "fixed", "retained_feature_tokens": 3}, "a" * 64
+        tasks.append(nested("clip_query", dict(query="other" if wrong_query else "fixture action", token_sha256=token_sha,
+                                             query_layout=layout), dict(token_sha256=token_sha, query_layout=layout, gpu_seconds=.3)))
+        windows = []
+        for index, seconds in enumerate((.5, .75)):
+            window = dict(window_id="cg_" + str(index), first_cell=index, stop_cell=index + 2,
+                          start_exact=str(index), end_exact=str(index + 2))
+            output = dict(window, model_input_sha256=str(index) * 64, gpu_seconds=seconds, saliency=[index, index + 1])
+            windows.append(output)
+            if not (missing_window and index == 1):
+                tasks.append(nested("cg_window", dict(source_sha256=binding["source"]["sha256"], window=window,
+                    model_input_sha256=output["model_input_sha256"]), output))
+        score = dict(selected_frames=[0], cells=cells, query="fixture action", query_tokens_sha256=token_sha,
+                     query_feature_layout=layout, feature_table_sha256=stable_key(features),
+                     source_sha256=binding["source"]["sha256"], window_outputs=windows,
+                     diagnostics={"gpu_seconds_this_runtime": 9999.0})
+        tasks.append(("specialist_source_0", lambda refs: dict(binding, query="fixture action", features_ref=refs["clip_features_0"]),
+                      score, 1.9, True))
+        return tasks, binding
+
+    def test_real_m_shape_matches_warm_nested_gpu_and_never_multiplies_cold_load(self):
+        tasks, binding = self.m_tasks()
+        parent, refs = self.parent(tasks)
+        entries = self.manifest([parent])[2]
+        journal = PureCallJournal(Delegate(), entries)
+        journal.call("clip_features_0", binding, lambda: self.fail("Repeated image producer"))
+        journal.call("query_0", self.binding, lambda: self.fail("Repeated query"))
+        score_binding = dict(binding, query="fixture action", features_ref=refs["clip_features_0"])
+        journal.call("specialist_source_0", score_binding, lambda: self.fail("Repeated CG producer"))
+        self.assertAlmostEqual(journal.historical_seconds_for_forecast, 5.55)
+        self.assertAlmostEqual(journal.historical_wall_seconds_for_forecast, 69.9)
+        self.assertFalse(journal.historical_forecast_cold_uncertainty)
+        self.assertEqual(journal.historical_forecast_cpu_bounds["clip_features_0"], [0.0, 65.0])
+        for name, entry in entries.items():
+            if entry["call_binding"].get("kind"):
+                journal.get(name, entry["call_binding"])
+        self.assertAlmostEqual(journal.historical_seconds_for_forecast, 5.55)
+        self.assertEqual(journal.budget.calls, 0)
+        inner_first = PureCallJournal(Delegate(), entries)
+        for name, entry in entries.items():
+            if entry["call_binding"].get("kind"):
+                inner_first.get(name, entry["call_binding"])
+        inner_first.get("clip_features_0", binding)
+        inner_first.get("specialist_source_0", score_binding)
+        inner_first.get("query_0", self.binding)
+        self.assertAlmostEqual(inner_first.historical_seconds_for_forecast, 5.55)
+
+    def test_missing_or_wrong_nested_dependencies_keep_explicit_cost_blocker(self):
+        for options, task, kind in (({"missing_window": True}, "specialist_source_0", "cg_window"),
+                                    ({"wrong_pixel": True}, "clip_features_0", "clip_images"),
+                                    ({"wrong_query": True}, "specialist_source_0", "clip_query")):
+            with self.subTest(options=options):
+                tasks, _ = self.m_tasks(**options)
+                parent, _ = self.parent(tasks)
+                entries = self.manifest([parent])[2]
+                journal = PureCallJournal(Delegate(), entries)
+                journal.get(task, entries[task]["call_binding"])
+                self.assertTrue(journal.historical_forecast_cold_uncertainty)
+                self.assertIn(kind, journal.historical_forecast_cold_reasons[task])
+
     def test_identical_duplicate_semantics_pin_first_parent_and_keep_original_cost(self):
         first, refs = self.parent()
         second = self.parent([("ground_a", self.binding, {"raw_text": "ok", "gpu_seconds": 9.0}, 10.0, True)])[0]
         entries = self.manifest([first, second])[2]
         self.assertEqual(entries["ground_a"]["returned"], refs["ground_a"])
         self.assertEqual(entries["ground_a"]["historical_wall_seconds"], 4.0)
+
+    def test_exact_083d_parent_is_allowed_but_arbitrary_implementation_is_rejected(self):
+        self.old["source_commit"]["commit"] = "083d437e2ea3f0b12e83e0d11f982252b7bdc83d"
+        self.old_ref = save_new(self.root / "old_assets_083d.json", self.old)
+        entries = self.manifest([self.parent()[0]])[2]
+        self.assertIn("ground_a", entries)
+        self.old["source_commit"]["commit"] = "b" * 40
+        self.old_ref = save_new(self.root / "old_assets_unreviewed.json", self.old)
+        with self.assertRaisesRegex(ValueError, "Unaudited old source"):
+            prepare_manifest([self.parent()[0]], "a" * 40, self.new_dir)
 
     def test_duplicate_conflicting_semantic_output_or_binding_fails(self):
         first = self.parent()[0]
