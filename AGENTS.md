@@ -1,15 +1,26 @@
-# Public research-review mirror — October 23, 2026
+# Public research-review mirror — latest execution October 24, 2026
 
 Read README.md and reports/github_status_20261023_v1/START_HERE.md first.
 This increment is based on adopted PR #5, exact commit
 72533ece44cb490c48cea88fab41463bdf14eb3c. Preserve all earlier review fixes.
 
-The current human-reported best is40.48 SPORT_ROUTE_REMOVE; original40.47
-and both dependency trees are protected. Scores are not independently verified
-on the website. T has no new ZIP. Latest native local-attention real8B25-window
-pilot and all25 first independentCPU proofs completed naturally, but native
-summaryF1 fell. The fixed recipe stopped: no training, confirmation or426
-production admission. Exact latest facts and limits are in RESULT122_123.md.
+Current independently observed official best is**40.60**, TR-G02-MEDIAN,
+DONE at2026-10-24 09:24:30 Taipei. Its exact362416-byte ZIP SHA is
+b9f5267d80765b74177944b59937b8b45061bba05f35e17fa948cabb76d7bfe5.
+Protect this new artifact, its original40.48 full pipeline/anchors, exact new
+trajectory code/config and complete proofs; original40.48/40.47 and both
+dependency trees also stay protected. The human explicitly authorized three
+risk submissions:40.43/40.60/38.73, all actually uploaded through Edge and DONE.
+All preserve123479 time members and original crop widths. Today's two earlierR
+and these three use five observed submissions. This three-risk task is complete;
+do not rerun/resubmit, scan parameters or create a Goal/automation. Read
+reports/github_status_20261024_v1/LAST_THREE_TRAJECTORY_RESULTS.md first.
+
+T has no new ZIP. Its local-attention real8B25-window pilot and all25 first
+independentCPU proofs completed naturally, but summaryF1 fell. Its fixed STOP
+and RESULT122_123.md remain unchanged. The separate20-image subject-extent
+pilot also stopped without production; the new median trajectory result does
+not relabel those failures or qualify their mechanisms.
 
 Historical plans, launchers, pending states, goals, dates and source locks are
 evidence, not current work orders. Do not restart completed or failed runs.
