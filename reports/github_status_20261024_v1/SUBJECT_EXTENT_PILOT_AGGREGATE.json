@@ -1,0 +1,123 @@
+{
+  "schema": "SUBJECT_EXTENT_EXTERNAL20_ACTUAL_TERMINAL_V1",
+  "stage": "STOP_FIXED_SUBJECT_EXTENT",
+  "linux_root": "/home/inspur/aic_video_work/subject_extent_pilot_20261024_v1",
+  "human_deadline_utc": "2026-10-24T04:00:00+00:00",
+  "result": {
+    "status": "STOP_FIXED_SUBJECT_EXTENT",
+    "metrics": {
+      "baseline_mean_iou": 0.8062850638938778,
+      "candidate_mean_iou": 0.8010883552331078,
+      "mean_delta": -0.005196708660770022,
+      "median_delta": 0.0,
+      "content_minus_shift": -0.005196708660770022,
+      "losses_over_010": 1,
+      "changed": 3,
+      "invalid": 0
+    },
+    "fixed_gates": {
+      "mean_delta_min": 0.01,
+      "content_minus_shift_min": 0.01,
+      "losses_over_010_max": 2,
+      "changed_min": 5,
+      "median_delta_min": 0,
+      "invalid": 0
+    },
+    "rows": 20,
+    "dev_exposed": true,
+    "original_source_independence": "UNKNOWN",
+    "video_tracking_quality": "NOT_TESTED",
+    "production_admitted": false,
+    "review": {
+      "path": "/home/inspur/aic_video_work/subject_extent_pilot_20261024_v1/dev_first_cpu_review.json",
+      "bytes": 35334,
+      "sha256": "d292f6054e20ebe926f0bd90bed1abb648a4647cd31f11ca67ae7b7391cd22d0"
+    }
+  },
+  "completion": {
+    "status": "STOP_FIXED_SUBJECT_EXTENT",
+    "result": {
+      "path": "/home/inspur/aic_video_work/subject_extent_pilot_20261024_v1/dev_result.json",
+      "bytes": 894,
+      "sha256": "072aa8b7b8c45270f1998a18ec08aa4f59a5ed4cadb81327ddc5242cbc3a4d8e"
+    },
+    "actual_new_answers": 20,
+    "adopted_old_baselines": 20,
+    "confirmation_started": false,
+    "production_admitted": false,
+    "baseline_4048_unchanged": true
+  },
+  "containment_diagnosis": {
+    "status": "POST_RESULT_EXPLANATORY_ONLY_NO_RESCORING_OR_PARAMETER_SELECTION",
+    "subject_answers": 18,
+    "human_exactly_contains_model_extent_union": 4,
+    "mean_human_retained_fraction_of_model_extent_union": 0.9139632025463006,
+    "not_actual_pixel_subject_mask_or_official_truth": true,
+    "old_gates_and_outputs_unchanged": true,
+    "no_new_model_or_decode": true
+  },
+  "new_model_calls": 20,
+  "adopted_old_baseline_answers": 20,
+  "actual_output_tokens": 629,
+  "physical_model_forwards": 629,
+  "generic_generate_images_counter_not_used": "Pilot executes directly against the same loaded model; actual calls are the20 durable raw records, not unused convenience-method counters",
+  "GPU_status": "completed",
+  "GPU_exit_code": 0,
+  "GPU_charged_seconds": 134.73713754303753,
+  "GPU_command_wall_seconds": 139.1799328289926,
+  "peak_gpu_mib": 17412,
+  "CPU_review_seconds": 34.7605896666646,
+  "protected_baselines": {
+    "40.48": {
+      "path": "/home/inspur/aic_video_work/general_highlight_supervision_20261021_v1/routing_package63/source_remove/candidate_SPORT_ROUTE_REMOVE_8B.zip",
+      "bytes": 384482,
+      "sha256": "85778a086f3fb0152947ece40b8dc258c7fef717b40519fe3e23fd4f7b0fabbe"
+    },
+    "40.47": {
+      "path": "/home/inspur/aic_video_work/semantic_context_production_20261016_v1/package/candidate_CONTEXT_SEMANTIC_RESIDUAL.zip",
+      "bytes": 384630,
+      "sha256": "b37c4a2e6593fc800f54ecce2f860fee5e7d5dc74e17ce280f9ee6722afbccd3"
+    }
+  },
+  "control": {
+    "control_bytes": 24962,
+    "control_sha256": "8ad337b2d483993ebe853a7bbd07f104634771f6f7c6504dc309650beb5cd45a",
+    "members": {
+      "code/common.py": {
+        "bytes": 2227,
+        "sha256": "74cb471d5ce91cec28dbfec13aae6f9b0ce042391b301581cb50e0e3c5834867"
+      },
+      "code/controller.py": {
+        "bytes": 4209,
+        "sha256": "246eff33c1c9960406b198b631189e95173855ab40f480de364bb285509cbdc6"
+      },
+      "code/evaluate.py": {
+        "bytes": 5409,
+        "sha256": "afe0f6affc6c49c7c69fecbc9d45ff088ba9798f5466258c0ff75e727735ae96"
+      },
+      "code/infer.py": {
+        "bytes": 3330,
+        "sha256": "78e59cd7c796d70a827a50a0f161670fa164373c84363912182bfe792c0ff6b1"
+      },
+      "code/prepare.py": {
+        "bytes": 6069,
+        "sha256": "15ffac7865af53699b8889a1193e3d4801f88d3be56a038ffab76cfc748fbf60"
+      },
+      "protocol.json": {
+        "bytes": 2262,
+        "sha256": "720969d9055fe19e9881fa30f88735f53f61df81d0893ff7f91eadbb8c9aa3fa"
+      },
+      "historical_protected.json": {
+        "bytes": 26022,
+        "sha256": "98769f20e16cf980aa983d4c4a5f7b12c02677b043c4b12ebda1eaa579f2c139"
+      }
+    }
+  },
+  "confirmation_model_calls": 0,
+  "new_media_downloads": 0,
+  "new_production_calls": 0,
+  "new_ZIP": 0,
+  "all_raw_and_original_failures_preserved": true,
+  "new_goal": false,
+  "new_automation": false
+}
